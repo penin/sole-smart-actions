@@ -1,0 +1,16 @@
+text,final_intent,max_confidence
+Turn on the lights on sole,CHECK_SPENDING,0.5798701825762994
+Renew my passport now now,HELP_SUPPORT,0.5196620757495773
+How tall is mount everest on my account,CHECK_BALANCE,0.4927975953503712
+Predict the lottery please on my account,HELP_SUPPORT,0.4624308503725664
+Renew my passport if possible,HELP_SUPPORT,0.4506913104604704
+Find a curry recipe on the app,VIEW_TRANSACTIONS,0.431484724303343
+Find a cinema on the app,VIEW_TRANSACTIONS,0.431484724303343
+Find a hotel on the app,VIEW_TRANSACTIONS,0.431484724303343
+Renew my passport on the app,HELP_SUPPORT,0.4295421322783355
+What's on tv this time,CHECK_SPENDING,0.4273887006074505
+Renew my passport on sole,HELP_SUPPORT,0.42052109852703456
+Order food please if possible,HELP_SUPPORT,0.41409575917497665
+Renew my passport please,HELP_SUPPORT,0.4098380019995807
+Write my homework now,HELP_SUPPORT,0.40425316153811547
+Renew my passport now,HELP_SUPPORT,0.40425316153811547

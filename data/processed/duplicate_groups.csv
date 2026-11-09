@@ -1,0 +1,500 @@
+canonical,count,splits,intents,examples
+app keeps crashing,12,train,HELP_SUPPORT,App keeps crashing || App keeps crashing?
+play music,11,evaluation_only,UNKNOWN_INTENT,Play music || Play music?
+recent transactions,9,test,VIEW_TRANSACTIONS,Recent transactions? || Recent transactions
+forgot password,9,train,HELP_SUPPORT,Forgot password? || Forgot password
+reset my pin,9,train,HELP_SUPPORT,Reset my pin? || Reset my pin
+how tall is mount everest,9,evaluation_only,UNKNOWN_INTENT,How tall is mount everest || How tall is mount everest?
+where is the nearest beach,9,evaluation_only,UNKNOWN_INTENT,Where is the nearest beach? || Where is the nearest beach
+i forgot my pin,9,train,HELP_SUPPORT,I forgot my pin || I forgot my pin?
+predict the lottery,8,evaluation_only,UNKNOWN_INTENT,Predict the lottery || Predict the lottery?
+talk to an agent,8,validation,HELP_SUPPORT,Talk to an agent || Talk to an agent?
+report fraud,8,train,HELP_SUPPORT,Report fraud || Report fraud?
+open youtube,8,evaluation_only,UNKNOWN_INTENT,Open youtube || Open youtube?
+i can t access my account,8,train,HELP_SUPPORT,I can't access my account || I can't access my account?
+transfer failed,8,train,HELP_SUPPORT,Transfer failed || Transfer failed?
+tell me a joke,8,evaluation_only,UNKNOWN_INTENT,Tell me a joke || Tell me a joke?
+contact support,7,train,HELP_SUPPORT,Contact support || Contact support?
+suspicious payment,7,train,HELP_SUPPORT,Suspicious payment || Suspicious payment?
+book a taxi,7,evaluation_only,UNKNOWN_INTENT,Book a taxi || Book a taxi?
+turn on the lights,7,evaluation_only,UNKNOWN_INTENT,Turn on the lights || Turn on the lights?
+buy me a phone,7,evaluation_only,UNKNOWN_INTENT,Buy me a phone || Buy me a phone?
+translate this to french,7,evaluation_only,UNKNOWN_INTENT,Translate this to french || Translate this to french?
+who do i call for help,7,train,HELP_SUPPORT,Who do i call for help || Who do i call for help?
+renew my passport,6,evaluation_only,UNKNOWN_INTENT,Renew my passport || Renew my passport?
+need customer service,6,test,HELP_SUPPORT,Need customer service || Need customer service?
+is there 500 in my wallet,6,train,CHECK_BALANCE,Is there 500 in my wallet || Is there 500 in my wallet?
+group members,6,train,VIEW_GROUP,Group members || Group members?
+show transactions,6,test|train,VIEW_TRANSACTIONS,Show transactions || Show transactions?
+is there 250 in my wallet,6,train,CHECK_BALANCE,Is there 250 in my wallet || Is there 250 in my wallet?
+who won the rugby,6,evaluation_only,UNKNOWN_INTENT,Who won the rugby? || Who won the rugby
+transfer failed please,5,train,HELP_SUPPORT,Transfer failed please
+check my account balance,5,train,CHECK_BALANCE,Check my account balance || Check my account balance?
+what s the exchange rate please,5,evaluation_only,UNKNOWN_INTENT,What's the exchange rate please
+balance,5,train,CHECK_BALANCE,Balance || Balance?
+what s the capital of japan,5,evaluation_only,UNKNOWN_INTENT,What's the capital of japan || What's the capital of japan?
+book a flight,5,evaluation_only,UNKNOWN_INTENT,Book a flight || Book a flight?
+what s my balance,5,test,CHECK_BALANCE,What's my balance || What's my balance?
+what s the exchange rate,5,evaluation_only,UNKNOWN_INTENT,What's the exchange rate || What's the exchange rate?
+set an alarm,5,evaluation_only,UNKNOWN_INTENT,Set an alarm || Set an alarm?
+group details,5,train,VIEW_GROUP,Group details || Group details?
+see group balance,5,train,VIEW_GROUP,See group balance || See group balance?
+show account activity,5,train,VIEW_TRANSACTIONS,Show account activity || Show account activity?
+pay waf,5,test|train,BILL_PAY,Pay waf? || Pay waf
+how much is in savings,5,train,CHECK_BALANCE,How much is in savings || How much is in savings?
+is there $ 100 in my wallet,5,train,CHECK_BALANCE,Is there $100 in my wallet? || Is there $100 in my wallet
+how much have i spent,5,train,CHECK_SPENDING,How much have i spent || How much have i spent?
+i have a complaint,5,test,HELP_SUPPORT,I have a complaint || I have a complaint?
+order food please,5,evaluation_only,UNKNOWN_INTENT,Order food please
+open holiday savings group,5,train,VIEW_GROUP,Open holiday savings group || Open holiday savings group?
+pay efl,5,test|train,BILL_PAY,Pay efl || Pay efl?
+how much did i spend on bills,5,train,CHECK_SPENDING,How much did i spend on bills || How much did i spend on bills?
+how much do i have,5,train,CHECK_BALANCE,How much do i have || How much do i have?
+balance enquiry,5,train,CHECK_BALANCE,Balance enquiry || Balance enquiry?
+what s on tv,5,evaluation_only,UNKNOWN_INTENT,What's on tv || What's on tv?
+check holiday savings group,5,train,VIEW_GROUP,Check holiday savings group? || Check holiday savings group
+find a cinema,5,evaluation_only,UNKNOWN_INTENT,Find a cinema || Find a cinema?
+show savings balance,5,test,CHECK_BALANCE,Show savings balance || Show savings balance?
+show my groups,5,train,VIEW_GROUP,Show my groups || Show my groups?
+find a hotel,5,evaluation_only,UNKNOWN_INTENT,Find a hotel || Find a hotel?
+spending this month,5,train|validation,CHECK_SPENDING,Spending this month? || Spending this month
+tell me a story,5,evaluation_only,UNKNOWN_INTENT,Tell me a story || Tell me a story?
+check balance,5,test,CHECK_BALANCE,Check balance || Check balance?
+is there 75 in my wallet,5,train,CHECK_BALANCE,Is there 75 in my wallet || Is there 75 in my wallet?
+is there 60 in my wallet,5,train,CHECK_BALANCE,Is there 60 in my wallet || Is there 60 in my wallet?
+is there 30 in my wallet,5,train,CHECK_BALANCE,Is there 30 in my wallet || Is there 30 in my wallet?
+is there 100 in my wallet,5,train,CHECK_BALANCE,Is there 100 in my wallet || Is there 100 in my wallet?
+is there $ 50 in my wallet,5,train,CHECK_BALANCE,Is there $50 in my wallet || Is there $50 in my wallet?
+is there $ 200 in my wallet,5,train,CHECK_BALANCE,Is there $200 in my wallet? || Is there $200 in my wallet
+who won the rugby please,5,evaluation_only,UNKNOWN_INTENT,Who won the rugby please
+is there 15 in my wallet,5,train,CHECK_BALANCE,Is there 15 in my wallet? || Is there 15 in my wallet
+find a cinema please,5,evaluation_only,UNKNOWN_INTENT,Find a cinema please
+show last 5 transactions,4,test,VIEW_TRANSACTIONS,Show last 5 transactions || Show last 5 transactions?
+show my last payments,4,train,VIEW_TRANSACTIONS,Show my last payments || Show my last payments?
+show our group account,4,train,VIEW_GROUP,Show our group account || Show our group account?
+show group activity,4,train,VIEW_GROUP,Show group activity || Show group activity?
+show funds in my wallet,4,train,CHECK_BALANCE,Show funds in my wallet || Show funds in my wallet?
+find a transaction from in october,4,train,VIEW_TRANSACTIONS,Find a transaction from in october? || Find a transaction from in october
+show group savings,4,train,VIEW_GROUP,Show group savings || Show group savings?
+wallet balance,4,train,CHECK_BALANCE,Wallet balance || Wallet balance?
+total saved by women s savings group,4,train,VIEW_GROUP,Total saved by women's savings group || Total saved by women's savings group?
+show last 10 transactions,4,train,VIEW_TRANSACTIONS,Show last 10 transactions || Show last 10 transactions?
+start withdrawal,4,train,WITHDRAW_MONEY,Start withdrawal || Start withdrawal?
+total saved by community group,4,train,VIEW_GROUP,Total saved by community group || Total saved by community group?
+pay utilities,4,train,BILL_PAY,Pay utilities || Pay utilities?
+open groupwealth,4,train,VIEW_GROUP,Open groupwealth? || Open groupwealth
+need customer service please,4,test,HELP_SUPPORT,Need customer service please
+is there 40 in my wallet,4,train,CHECK_BALANCE,Is there 40 in my wallet? || Is there 40 in my wallet
+is there 300 in my wallet,4,train,CHECK_BALANCE,Is there 300 in my wallet || Is there 300 in my wallet?
+is there 50 in my wallet,4,train,CHECK_BALANCE,Is there 50 in my wallet || Is there 50 in my wallet?
+is there 150 in my wallet,4,train,CHECK_BALANCE,Is there 150 in my wallet || Is there 150 in my wallet?
+is there 20 in my wallet,4,train,CHECK_BALANCE,Is there 20 in my wallet || Is there 20 in my wallet?
+is there 200 in my wallet,4,train,CHECK_BALANCE,Is there 200 in my wallet || Is there 200 in my wallet?
+is there 25 in my wallet,4,train,CHECK_BALANCE,Is there 25 in my wallet || Is there 25 in my wallet?
+pay telecom,4,test|train,BILL_PAY,Pay telecom || Pay telecom?
+tell me my current balance,4,train,CHECK_BALANCE,Tell me my current balance || Tell me my current balance?
+view my transaction records,4,train,VIEW_TRANSACTIONS,View my transaction records || View my transaction records?
+wrong pin too many times,4,train,HELP_SUPPORT,Wrong pin too many times || Wrong pin too many times?
+view groupwealth,4,test,VIEW_GROUP,View groupwealth
+what s my balance please,4,test,CHECK_BALANCE,What's my balance please
+what s my wallet total,4,validation,CHECK_BALANCE,What's my wallet total || What's my wallet total?
+can t log in,4,train,HELP_SUPPORT,Can't log in || Can't log in?
+add new payee,4,train,MANAGE_CONTACTS,Add new payee || Add new payee?
+write my homework,4,evaluation_only,UNKNOWN_INTENT,Write my homework || Write my homework?
+withdraw from sole,4,train,WITHDRAW_MONEY,Withdraw from sole || Withdraw from sole?
+where is my statement,4,test,VIEW_TRANSACTIONS,Where is my statement || Where is my statement?
+who contributed last month,4,train,VIEW_GROUP,Who contributed last month || Who contributed last month?
+withdraw cash,4,train,WITHDRAW_MONEY,Withdraw cash || Withdraw cash?
+which category cost most,4,train,CHECK_SPENDING,Which category cost most || Which category cost most?
+is there 80 in my wallet,4,train,CHECK_BALANCE,Is there 80 in my wallet || Is there 80 in my wallet?
+withdraw funds,4,validation,WITHDRAW_MONEY,Withdraw funds || Withdraw funds?
+my phone was stolen,4,train,HELP_SUPPORT,My phone was stolen || My phone was stolen?
+is there $ 20 in my wallet,4,train,CHECK_BALANCE,Is there $20 in my wallet || Is there $20 in my wallet?
+is there 1 000 in my wallet,4,train,CHECK_BALANCE,"Is there 1,000 in my wallet || Is there 1,000 in my wallet?"
+is there 120 in my wallet,4,train,CHECK_BALANCE,Is there 120 in my wallet || Is there 120 in my wallet?
+my money is missing,4,validation,HELP_SUPPORT,My money is missing || My money is missing?
+give me an expense summary,4,train,CHECK_SPENDING,Give me an expense summary || Give me an expense summary?
+find work group,4,train,VIEW_GROUP,Find work group || Find work group?
+group balance,4,train,VIEW_GROUP,Group balance || Group balance?
+open family group,4,train,VIEW_GROUP,Open family group
+payment not working,4,train,HELP_SUPPORT,Payment not working || Payment not working?
+how much can i spend,4,train,CHECK_BALANCE,How much can i spend || How much can i spend?
+how much money is left,4,train,CHECK_BALANCE,How much money is left || How much money is left?
+how do i unlock my account,4,train,HELP_SUPPORT,How do i unlock my account || How do i unlock my account?
+how much is available,4,test,CHECK_BALANCE,How much is available || How much is available?
+how much money have i got,4,train,CHECK_BALANCE,How much money have i got? || How much money have i got
+my balance,4,train,CHECK_BALANCE,My balance || My balance?
+show balance,4,train,CHECK_BALANCE,Show balance || Show balance?
+prepare a withdrawal,4,test,WITHDRAW_MONEY,Prepare a withdrawal || Prepare a withdrawal?
+cash out,3,validation,WITHDRAW_MONEY,Cash out || Cash out?
+show saved payees,3,train,MANAGE_CONTACTS,Show saved payees
+show spending on school,3,test,CHECK_SPENDING,Show spending on school || Show spending on school?
+show outgoing transfers,3,validation,VIEW_TRANSACTIONS,Show outgoing transfers
+show my available funds,3,validation,CHECK_BALANCE,Show my available funds? || Show my available funds
+find the $ 20 transfer,3,train,VIEW_TRANSACTIONS,Find the $20 transfer? || Find the $20 transfer
+transaction history,3,train,VIEW_TRANSACTIONS,Transaction history || Transaction history?
+total saved by family group,3,train,VIEW_GROUP,Total saved by family group
+total saved by school group,3,train,VIEW_GROUP,Total saved by school group? || Total saved by school group
+bill pay mobile,3,train,BILL_PAY,Bill pay mobile
+bill payment,3,train,BILL_PAY,Bill payment || Bill payment?
+biggest expense last month,3,train,CHECK_SPENDING,Biggest expense last month || Biggest expense last month?
+biggest expense this week,3,train,CHECK_SPENDING,Biggest expense this week || Biggest expense this week?
+add mika as recipient,3,train,MANAGE_CONTACTS,Add mika as recipient || Add mika as recipient?
+calculate spending on fuel,3,train,CHECK_SPENDING,Calculate spending on fuel || Calculate spending on fuel?
+calculate spending on mobile data,3,train,CHECK_SPENDING,Calculate spending on mobile data || Calculate spending on mobile data?
+calculate spending on transport,3,train,CHECK_SPENDING,Calculate spending on transport || Calculate spending on transport?
+what did i spend over the weekend,3,train,CHECK_SPENDING,What did i spend over the weekend
+what s left in my account,3,validation,CHECK_BALANCE,What's left in my account || What's left in my account?
+what payments did i make since monday,3,train,VIEW_TRANSACTIONS,What payments did i make since monday? || What payments did i make since monday
+view wallet activity,3,train,VIEW_TRANSACTIONS,View wallet activity || View wallet activity?
+view my recipient list,3,test,MANAGE_CONTACTS,View my recipient list? || View my recipient list
+add jone to contacts,3,train,MANAGE_CONTACTS,Add jone to contacts? || Add jone to contacts
+who contributed yesterday,3,train,VIEW_GROUP,Who contributed yesterday || Who contributed yesterday?
+average daily spending,3,validation,CHECK_SPENDING,Average daily spending
+total saved by work group,3,train,VIEW_GROUP,Total saved by work group || Total saved by work group?
+cash out from my account,3,train,WITHDRAW_MONEY,Cash out from my account || Cash out from my account?
+check family group,3,train,VIEW_GROUP,Check family group? || Check family group
+check community group,3,train,VIEW_GROUP,Check community group? || Check community group
+check church group,3,train,VIEW_GROUP,Check church group || Check church group?
+check village group,3,train,VIEW_GROUP,Check village group || Check village group?
+check women s savings group,3,train,VIEW_GROUP,Check women's savings group || Check women's savings group?
+compare spending this month and last month,3,train,CHECK_SPENDING,Compare spending this month and last month || Compare spending this month and last month?
+total expenses in the last 30 days,3,train,CHECK_SPENDING,Total expenses in the last 30 days
+total money spent,3,validation,CHECK_SPENDING,Total money spent || Total money spent?
+total expenses last week,3,train,CHECK_SPENDING,Total expenses last week
+take money out of sole,3,train,WITHDRAW_MONEY,Take money out of sole
+start a bill payment,3,test,BILL_PAY,Start a bill payment
+show contributions to village group,3,train,VIEW_GROUP,Show contributions to village group? || Show contributions to village group
+show contributions to women s savings group,3,train,VIEW_GROUP,Show contributions to women's savings group || Show contributions to women's savings group?
+show contributions to work group,3,train,VIEW_GROUP,Show contributions to work group || Show contributions to work group?
+show expenditure summary,3,test,CHECK_SPENDING,Show expenditure summary || Show expenditure summary?
+show incoming payments,3,train,VIEW_TRANSACTIONS,Show incoming payments || Show incoming payments?
+find community group,3,train,VIEW_GROUP,Find community group? || Find community group
+find family group,3,train,VIEW_GROUP,Find family group
+find a curry recipe,3,evaluation_only,UNKNOWN_INTENT,Find a curry recipe || Find a curry recipe?
+find holiday savings group,3,train,VIEW_GROUP,Find holiday savings group
+find church group,3,train,VIEW_GROUP,Find church group? || Find church group
+expenses by category,3,validation,CHECK_SPENDING,Expenses by category || Expenses by category?
+show withdrawals over the weekend,3,train,VIEW_TRANSACTIONS,Show withdrawals over the weekend || Show withdrawals over the weekend?
+someone accessed my wallet,3,train,HELP_SUPPORT,Someone accessed my wallet || Someone accessed my wallet?
+pay the phone bill,3,train,BILL_PAY,Pay the phone bill || Pay the phone bill?
+pay the efl bill,3,train,BILL_PAY,Pay the efl bill || Pay the efl bill?
+pay the broadband bill,3,train,BILL_PAY,Pay the broadband bill
+see my balance,3,train,CHECK_BALANCE,See my balance || See my balance?
+find village group,3,train,VIEW_GROUP,Find village group || Find village group?
+report unauthorized transaction,3,train,HELP_SUPPORT,Report unauthorized transaction || Report unauthorized transaction?
+help,3,test,HELP_SUPPORT,Help || Help?
+show contributions to rugby club group,3,train,VIEW_GROUP,Show contributions to rugby club group
+get 1 000 cash,3,train,WITHDRAW_MONEY,"Get 1,000 cash || Get 1,000 cash?"
+show contributions to community group,3,train,VIEW_GROUP,Show contributions to community group || Show contributions to community group?
+show beneficiaries,3,test,MANAGE_CONTACTS,Show beneficiaries || Show beneficiaries?
+help with my sole app,3,test,HELP_SUPPORT,Help with my sole app || Help with my sole app?
+how much is in my sole wallet,3,train,CHECK_BALANCE,How much is in my sole wallet || How much is in my sole wallet?
+how much spent at restaurants,3,train,CHECK_SPENDING,How much spent at restaurants || How much spent at restaurants?
+pay water,3,test|train,BILL_PAY,Pay water
+pay the electricity bill,3,train,BILL_PAY,Pay the electricity bill || Pay the electricity bill?
+saved recipients,3,train,MANAGE_CONTACTS,Saved recipients || Saved recipients?
+help me pay water,3,train,BILL_PAY,Help me pay water || Help me pay water?
+remove a beneficiary,3,train,MANAGE_CONTACTS,Remove a beneficiary || Remove a beneficiary?
+open village group,3,train,VIEW_GROUP,Open village group || Open village group?
+open market vendors group,3,train,VIEW_GROUP,Open market vendors group? || Open market vendors group
+pay broadband,3,test|train,BILL_PAY,Pay broadband
+order food,3,evaluation_only,UNKNOWN_INTENT,Order food || Order food?
+pay my electricity,3,train,BILL_PAY,Pay my electricity || Pay my electricity?
+how much spent on school,3,train,CHECK_SPENDING,How much spent on school || How much spent on school?
+list groups i belong to,3,train,VIEW_GROUP,List groups i belong to || List groups i belong to?
+open community group,3,train,VIEW_GROUP,Open community group
+my spending breakdown,3,train,CHECK_SPENDING,My spending breakdown? || My spending breakdown
+need assistance with login,3,validation,HELP_SUPPORT,Need assistance with login || Need assistance with login?
+need cash from my wallet,3,train,WITHDRAW_MONEY,Need cash from my wallet
+my savings group,3,train,VIEW_GROUP,My savings group || My savings group?
+i want to pay my telecom,3,train,BILL_PAY,I want to pay my telecom
+i want to pay my efl,3,train,BILL_PAY,I want to pay my efl || I want to pay my efl?
+i have a telecom bill,3,train,BILL_PAY,I have a telecom bill || I have a telecom bill?
+i have a electricity bill,3,train,BILL_PAY,I have a electricity bill? || I have a electricity bill
+open bill pay,3,train,BILL_PAY,Open bill pay? || Open bill pay
+list transfers last month,3,train,VIEW_TRANSACTIONS,List transfers last month || List transfers last month?
+list transfers last week,3,train,VIEW_TRANSACTIONS,List transfers last week? || List transfers last week
+list transfers over the weekend,3,train,VIEW_TRANSACTIONS,List transfers over the weekend || List transfers over the weekend?
+my contacts,3,train,MANAGE_CONTACTS,My contacts? || My contacts
+my account is locked,3,validation,HELP_SUPPORT,My account is locked || My account is locked?
+is there 10 in my wallet,3,train,CHECK_BALANCE,Is there 10 in my wallet || Is there 10 in my wallet?
+is there 5 in my wallet,3,train,CHECK_BALANCE,Is there 5 in my wallet || Is there 5 in my wallet?
+who contributed over the weekend,3,train,VIEW_GROUP,Who contributed over the weekend? || Who contributed over the weekend
+account balance,3,train,CHECK_BALANCE,Account balance || Account balance?
+what s the weather,3,evaluation_only,UNKNOWN_INTENT,What's the weather || What's the weather?
+who contributed in the last 30 days,3,train,VIEW_GROUP,Who contributed in the last 30 days || Who contributed in the last 30 days?
+who contributed in october,3,train,VIEW_GROUP,Who contributed in october? || Who contributed in october
+what time is the game,3,evaluation_only,UNKNOWN_INTENT,What time is the game || What time is the game?
+where did my money go,3,train,CHECK_SPENDING,Where did my money go || Where did my money go?
+withdraw at an agent,3,test,WITHDRAW_MONEY,Withdraw at an agent || Withdraw at an agent?
+app keeps crashing on sole,2,train,HELP_SUPPORT,App keeps crashing on sole || App keeps crashing? on sole
+who do i call for help if possible,2,train,HELP_SUPPORT,Who do i call for help if possible
+who is in family group,2,validation,VIEW_GROUP,Who is in family group
+who is in work group,2,validation,VIEW_GROUP,Who is in work group
+withdraw 10 dollars,2,test,WITHDRAW_MONEY,Withdraw 10 dollars? || Withdraw 10 dollars
+withdraw 25,2,train,WITHDRAW_MONEY,Withdraw 25
+withdraw 80,2,train,WITHDRAW_MONEY,Withdraw 80
+withdraw my money,2,train,WITHDRAW_MONEY,Withdraw my money
+add adi to contacts,2,train,MANAGE_CONTACTS,Add adi to contacts || Add adi to contacts?
+who contributed,2,train,VIEW_GROUP,Who contributed? || Who contributed
+who contributed last week,2,train,VIEW_GROUP,Who contributed last week
+who contributed since monday,2,train,VIEW_GROUP,Who contributed since monday? || Who contributed since monday
+who contributed this month,2,train,VIEW_GROUP,Who contributed this month
+who contributed this week,2,train,VIEW_GROUP,Who contributed this week
+bill pay internet,2,train,BILL_PAY,Bill pay internet
+biggest expense since monday,2,train,CHECK_SPENDING,Biggest expense since monday || Biggest expense since monday?
+biggest expense last week,2,train,CHECK_SPENDING,Biggest expense last week
+biggest expense in october,2,train,CHECK_SPENDING,Biggest expense in october? || Biggest expense in october
+what payments did i make this month,2,train,VIEW_TRANSACTIONS,What payments did i make this month
+what payments did i make last month,2,train,VIEW_TRANSACTIONS,What payments did i make last month || What payments did i make last month?
+what payments did i make in october,2,train,VIEW_TRANSACTIONS,What payments did i make in october || What payments did i make in october?
+what payments did i make,2,train,VIEW_TRANSACTIONS,What payments did i make
+what did i spend yesterday,2,train,CHECK_SPENDING,What did i spend yesterday || What did i spend yesterday?
+what did i spend since monday,2,train,CHECK_SPENDING,What did i spend since monday
+can i withdraw 80,2,train,WITHDRAW_MONEY,Can i withdraw 80
+can i withdraw 60,2,train,WITHDRAW_MONEY,Can i withdraw 60
+can i withdraw 10,2,train,WITHDRAW_MONEY,Can i withdraw 10? || Can i withdraw 10
+can i pay waf,2,test,BILL_PAY,Can i pay waf
+can i pay school fees,2,test,BILL_PAY,Can i pay school fees
+can i pay electricity,2,test,BILL_PAY,Can i pay electricity? || Can i pay electricity
+open contacts,2,validation,MANAGE_CONTACTS,Open contacts
+open church group,2,train,VIEW_GROUP,Open church group
+need to withdraw,2,validation,WITHDRAW_MONEY,Need to withdraw
+i want to pay my phone,2,train,BILL_PAY,I want to pay my phone
+i want to pay my internet,2,train,BILL_PAY,I want to pay my internet
+i want to pay my electricity,2,train,BILL_PAY,I want to pay my electricity? || I want to pay my electricity
+i want to pay my broadband,2,train,BILL_PAY,I want to pay my broadband
+i need to take out 50,2,train,WITHDRAW_MONEY,I need to take out 50? || I need to take out 50
+i need to take out 1 000,2,train,WITHDRAW_MONEY,"I need to take out 1,000"
+i need to take out $ 50,2,train,WITHDRAW_MONEY,I need to take out $50
+i need to take out $ 200,2,train,WITHDRAW_MONEY,I need to take out $200
+i need to pay joeli,2,train,TRANSFER_MONEY,I need to pay joeli? || I need to pay joeli
+i have a school fees bill,2,train,BILL_PAY,I have a school fees bill || I have a school fees bill?
+i have a mobile bill,2,train,BILL_PAY,I have a mobile bill
+i have a efl bill,2,train,BILL_PAY,I have a efl bill || I have a efl bill?
+is ravi saved,2,train,MANAGE_CONTACTS,Is ravi saved? || Is ravi saved
+i can t access my account now,2,train,HELP_SUPPORT,I can't access my account now
+i can t access my account if possible,2,train,HELP_SUPPORT,I can't access my account if possible
+how tall is mount everest if possible,2,evaluation_only,UNKNOWN_INTENT,How tall is mount everest? if possible || How tall is mount everest if possible
+how much spent on transport,2,train,CHECK_SPENDING,How much spent on transport || How much spent on transport?
+how much spent on restaurants,2,train,CHECK_SPENDING,How much spent on restaurants? || How much spent on restaurants
+how much spent on mobile data,2,train,CHECK_SPENDING,How much spent on mobile data || How much spent on mobile data?
+how much spent on fuel,2,train,CHECK_SPENDING,How much spent on fuel
+pay mobile,2,test|train,BILL_PAY,Pay mobile
+pay internet,2,test|train,BILL_PAY,Pay internet
+pay electricity,2,test|train,BILL_PAY,Pay electricity
+pay bills,2,test,BILL_PAY,Pay bills
+pay 300 to water,2,train,BILL_PAY,Pay 300 to water
+open women s savings group,2,train,VIEW_GROUP,Open women's savings group
+open statement,2,validation,VIEW_TRANSACTIONS,Open statement
+open school group,2,train,VIEW_GROUP,Open school group
+open rugby club group,2,train,VIEW_GROUP,Open rugby club group
+how much has church group saved,2,test,VIEW_GROUP,How much has church group saved? || How much has church group saved
+how much did i spend on restaurants,2,train,CHECK_SPENDING,How much did i spend on restaurants || How much did i spend on restaurants?
+how much did i spend on groceries since monday,2,train,CHECK_SPENDING,How much did i spend on groceries since monday
+how much did i spend on fuel since monday,2,train,CHECK_SPENDING,How much did i spend on fuel since monday
+pay the water bill,2,train,BILL_PAY,Pay the water bill
+pay the waf bill,2,train,BILL_PAY,Pay the waf bill
+pay the mobile bill,2,train,BILL_PAY,Pay the mobile bill
+pay the internet bill,2,train,BILL_PAY,Pay the internet bill
+pay school fees,2,test|train,BILL_PAY,Pay school fees
+pay phone,2,test|train,BILL_PAY,Pay phone
+pay my school fees account,2,train,BILL_PAY,Pay my school fees account
+pay my mobile account,2,train,BILL_PAY,Pay my mobile account
+i have a broadband bill,2,train,BILL_PAY,I have a broadband bill
+i forgot my pin quickly,2,train,HELP_SUPPORT,I forgot my pin quickly
+i forgot my pin if possible,2,train,HELP_SUPPORT,I forgot my pin if possible
+i forgot my pin asap,2,train,HELP_SUPPORT,I forgot my pin asap
+save recipient mere,2,validation,MANAGE_CONTACTS,Save recipient mere
+save priya,2,train,MANAGE_CONTACTS,Save priya
+save ben,2,train,MANAGE_CONTACTS,Save ben
+save asha,2,train,MANAGE_CONTACTS,Save asha
+rename contact mika,2,train,MANAGE_CONTACTS,Rename contact mika
+remove tui from contacts,2,train,MANAGE_CONTACTS,Remove tui from contacts || Remove tui from contacts?
+remove kumar from contacts,2,train,MANAGE_CONTACTS,Remove kumar from contacts
+remove jone from contacts,2,train,MANAGE_CONTACTS,Remove jone from contacts? || Remove jone from contacts
+remove adi from contacts,2,train,MANAGE_CONTACTS,Remove adi from contacts
+play music quickly,2,evaluation_only,UNKNOWN_INTENT,Play music quickly
+play music please,2,evaluation_only,UNKNOWN_INTENT,Play music please
+play music on sole,2,evaluation_only,UNKNOWN_INTENT,Play music on sole
+play music if possible,2,evaluation_only,UNKNOWN_INTENT,Play music if possible
+how much spent on food,2,train,CHECK_SPENDING,How much spent on food
+how much has village group saved,2,test,VIEW_GROUP,How much has village group saved
+how much has school group saved,2,test,VIEW_GROUP,How much has school group saved? || How much has school group saved
+how do i cash out,2,test,WITHDRAW_MONEY,How do i cash out
+help me withdraw 15,2,train,WITHDRAW_MONEY,Help me withdraw 15? || Help me withdraw 15
+help me withdraw 1 000,2,train,WITHDRAW_MONEY,"Help me withdraw 1,000? || Help me withdraw 1,000"
+help me pay waf,2,train,BILL_PAY,Help me pay waf
+help me pay school fees,2,train,BILL_PAY,Help me pay school fees? || Help me pay school fees
+help me pay phone,2,train,BILL_PAY,Help me pay phone
+help me pay internet,2,train,BILL_PAY,Help me pay internet
+help me pay efl,2,train,BILL_PAY,Help me pay efl
+help me pay broadband,2,train,BILL_PAY,Help me pay broadband
+group savings,2,test,VIEW_GROUP,Group savings
+search contacts for tui,2,train,MANAGE_CONTACTS,Search contacts for tui
+search contacts for mere,2,train,MANAGE_CONTACTS,Search contacts for mere
+search contacts for joeli,2,train,MANAGE_CONTACTS,Search contacts for joeli
+save roshni,2,train,MANAGE_CONTACTS,Save roshni
+save recipient savenaca,2,validation,MANAGE_CONTACTS,Save recipient savenaca? || Save recipient savenaca
+save recipient ravi,2,validation,MANAGE_CONTACTS,Save recipient ravi
+forgot password now,2,train,HELP_SUPPORT,Forgot password? now || Forgot password now
+find women s savings group,2,train,VIEW_GROUP,Find women's savings group || Find women's savings group?
+find the 80 transfer,2,train,VIEW_TRANSACTIONS,Find the 80 transfer? || Find the 80 transfer
+find the 15 transfer,2,train,VIEW_TRANSACTIONS,Find the 15 transfer || Find the 15 transfer?
+find the 1 000 transfer,2,train,VIEW_TRANSACTIONS,"Find the 1,000 transfer"
+show contributions to holiday savings group,2,train,VIEW_GROUP,Show contributions to holiday savings group
+show contributions to family group,2,train,VIEW_GROUP,Show contributions to family group
+show contacts,2,validation,MANAGE_CONTACTS,Show contacts
+settle my waf charges,2,train,BILL_PAY,Settle my waf charges
+settle my telecom charges,2,train,BILL_PAY,Settle my telecom charges
+settle my school fees charges,2,train,BILL_PAY,Settle my school fees charges
+settle my phone charges,2,train,BILL_PAY,Settle my phone charges || Settle my phone charges?
+settle my efl charges,2,train,BILL_PAY,Settle my efl charges? || Settle my efl charges
+send money to mere,2,train,TRANSFER_MONEY,Send money to mere
+send money to adi,2,train,TRANSFER_MONEY,Send money to adi || Send money to adi?
+how much did i contribute,2,validation,VIEW_GROUP,How much did i contribute || How much did i contribute?
+find raj in contacts,2,train,MANAGE_CONTACTS,Find raj in contacts
+find my transfer to asha,2,validation,VIEW_TRANSACTIONS,Find my transfer to asha
+find market vendors group,2,train,VIEW_GROUP,Find market vendors group
+find ben in contacts,2,train,MANAGE_CONTACTS,Find ben in contacts? || Find ben in contacts
+find a transaction from over the weekend,2,train,VIEW_TRANSACTIONS,Find a transaction from over the weekend? || Find a transaction from over the weekend
+find a transaction from last week,2,train,VIEW_TRANSACTIONS,Find a transaction from last week? || Find a transaction from last week
+show deposits since monday,2,train,VIEW_TRANSACTIONS,Show deposits since monday || Show deposits since monday?
+show deposits over the weekend,2,train,VIEW_TRANSACTIONS,Show deposits over the weekend
+show deposits last month,2,train,VIEW_TRANSACTIONS,Show deposits last month
+show deposits in the last 30 days,2,train,VIEW_TRANSACTIONS,Show deposits in the last 30 days
+show deposits in october,2,train,VIEW_TRANSACTIONS,Show deposits in october
+show contributions to school group,2,train,VIEW_GROUP,Show contributions to school group
+show contributions to market vendors group,2,train,VIEW_GROUP,Show contributions to market vendors group
+get 75 cash,2,train,WITHDRAW_MONEY,Get 75 cash
+get 150 cash,2,train,WITHDRAW_MONEY,Get 150 cash
+get $ 200 cash,2,train,WITHDRAW_MONEY,Get $200 cash
+show payments to savenaca,2,train,VIEW_TRANSACTIONS,Show payments to savenaca
+show payments to ravi,2,train,VIEW_TRANSACTIONS,Show payments to ravi? || Show payments to ravi
+show payments to priya,2,train,VIEW_TRANSACTIONS,Show payments to priya
+show payments to peni,2,train,VIEW_TRANSACTIONS,Show payments to peni? || Show payments to peni
+show payments to ben,2,train,VIEW_TRANSACTIONS,Show payments to ben
+show payments to asha,2,train,VIEW_TRANSACTIONS,Show payments to asha
+show payments over 500,2,train,VIEW_TRANSACTIONS,Show payments over 500
+show payments over 50,2,train,VIEW_TRANSACTIONS,Show payments over 50
+show payments over 300,2,train,VIEW_TRANSACTIONS,Show payments over 300
+show payments over $ 20,2,train,VIEW_TRANSACTIONS,Show payments over $20 || Show payments over $20?
+show my work group,2,validation,VIEW_GROUP,Show my work group
+show my church group,2,validation,VIEW_GROUP,Show my church group? || Show my church group
+show money received this week,2,validation,VIEW_TRANSACTIONS,Show money received this week
+show money received in the last 30 days,2,validation,VIEW_TRANSACTIONS,Show money received in the last 30 days
+show money received in october,2,validation,VIEW_TRANSACTIONS,Show money received in october
+find school group,2,train,VIEW_GROUP,Find school group || Find school group?
+edit ana s details,2,test,MANAGE_CONTACTS,Edit ana's details
+edit adi s details,2,test,MANAGE_CONTACTS,Edit adi's details
+do i have 80,2,validation,CHECK_BALANCE,Do i have 80
+do i have 250,2,validation,CHECK_BALANCE,Do i have 250
+do i have 10,2,validation,CHECK_BALANCE,Do i have 10
+did tui send me money,2,train,VIEW_TRANSACTIONS,Did tui send me money
+did sera send me money,2,train,VIEW_TRANSACTIONS,Did sera send me money
+did ravi send me money,2,train,VIEW_TRANSACTIONS,Did ravi send me money || Did ravi send me money?
+did raj send me money,2,train,VIEW_TRANSACTIONS,Did raj send me money
+did mika send me money,2,train,VIEW_TRANSACTIONS,Did mika send me money
+did jone send me money,2,train,VIEW_TRANSACTIONS,Did jone send me money? || Did jone send me money
+show withdrawals last month,2,train,VIEW_TRANSACTIONS,Show withdrawals last month || Show withdrawals last month?
+show withdrawals in the last 30 days,2,train,VIEW_TRANSACTIONS,Show withdrawals in the last 30 days
+show transactions this month,2,train,VIEW_TRANSACTIONS,Show transactions this month || Show transactions this month?
+show transactions last week,2,train,VIEW_TRANSACTIONS,Show transactions last week
+show payments to sera,2,train,VIEW_TRANSACTIONS,Show payments to sera? || Show payments to sera
+suspicious payment please,2,train,HELP_SUPPORT,Suspicious payment please
+summarize my expenses,2,test,CHECK_SPENDING,Summarize my expenses
+start cash out for 50,2,train,WITHDRAW_MONEY,Start cash out for 50
+start cash out for 5,2,train,WITHDRAW_MONEY,Start cash out for 5 || Start cash out for 5?
+start cash out for 1 000,2,train,WITHDRAW_MONEY,"Start cash out for 1,000"
+start a transfer for sera,2,train,TRANSFER_MONEY,Start a transfer for sera
+start a transfer for jone,2,train,TRANSFER_MONEY,Start a transfer for jone
+spending this month in sole,2,train|validation,CHECK_SPENDING,Spending this month? in sole || Spending this month in sole
+spending since monday,2,validation,CHECK_SPENDING,Spending since monday
+spending last week,2,validation,CHECK_SPENDING,Spending last week
+spending last month,2,validation,CHECK_SPENDING,Spending last month
+spending in october,2,validation,CHECK_SPENDING,Spending in october? || Spending in october
+show withdrawals this week,2,train,VIEW_TRANSACTIONS,Show withdrawals this week
+edit sera s details,2,test,MANAGE_CONTACTS,Edit sera's details || Edit sera's details?
+edit savenaca s details,2,test,MANAGE_CONTACTS,Edit savenaca's details
+edit jone s details,2,test,MANAGE_CONTACTS,Edit jone's details || Edit jone's details?
+delete joeli as payee,2,train,MANAGE_CONTACTS,Delete joeli as payee
+delete asha as payee,2,train,MANAGE_CONTACTS,Delete asha as payee
+delete ana as payee,2,train,MANAGE_CONTACTS,Delete ana as payee || Delete ana as payee?
+create a contact for tui,2,train,MANAGE_CONTACTS,Create a contact for tui
+create a contact for priya,2,train,MANAGE_CONTACTS,Create a contact for priya || Create a contact for priya?
+contact support quickly,2,train,HELP_SUPPORT,Contact support quickly
+check work group,2,train,VIEW_GROUP,Check work group
+tell me a joke now,2,evaluation_only,UNKNOWN_INTENT,Tell me a joke now
+take out 75,2,train,WITHDRAW_MONEY,Take out 75
+take out 500,2,train,WITHDRAW_MONEY,Take out 500? || Take out 500
+take out 15,2,train,WITHDRAW_MONEY,Take out 15
+take out 100,2,train,WITHDRAW_MONEY,Take out 100
+take out $ 50,2,train,WITHDRAW_MONEY,Take out $50 || Take out $50?
+take out $ 100,2,train,WITHDRAW_MONEY,Take out $100
+take 80 from my wallet,2,train,WITHDRAW_MONEY,Take 80 from my wallet
+take 20 from my wallet,2,train,WITHDRAW_MONEY,Take 20 from my wallet
+cash withdrawal 150,2,validation,WITHDRAW_MONEY,Cash withdrawal 150
+cash out 80,2,train,WITHDRAW_MONEY,Cash out 80
+cash out 250,2,train,WITHDRAW_MONEY,Cash out 250
+total saved by village group,2,train,VIEW_GROUP,Total saved by village group
+total saved by rugby club group,2,train,VIEW_GROUP,Total saved by rugby club group
+total saved by market vendors group,2,train,VIEW_GROUP,Total saved by market vendors group
+total saved by holiday savings group,2,train,VIEW_GROUP,Total saved by holiday savings group? || Total saved by holiday savings group
+total saved by church group,2,train,VIEW_GROUP,Total saved by church group || Total saved by church group?
+total purchases since monday,2,test,CHECK_SPENDING,Total purchases since monday
+total purchases over the weekend,2,test,CHECK_SPENDING,Total purchases over the weekend
+total expenses this month,2,train,CHECK_SPENDING,Total expenses this month
+did i spend more than 5 on food,2,train,CHECK_SPENDING,Did i spend more than 5 on food
+did i spend more than 200 on shopping,2,train,CHECK_SPENDING,Did i spend more than 200 on shopping
+did i spend more than 120 on school,2,train,CHECK_SPENDING,Did i spend more than 120 on school
+did ben send me money,2,train,VIEW_TRANSACTIONS,Did ben send me money || Did ben send me money?
+delete tui as payee,2,train,MANAGE_CONTACTS,Delete tui as payee? || Delete tui as payee
+can i pay broadband,2,test,BILL_PAY,Can i pay broadband
+calculate spending on utilities,2,train,CHECK_SPENDING,Calculate spending on utilities || Calculate spending on utilities?
+calculate spending on restaurants,2,train,CHECK_SPENDING,Calculate spending on restaurants? || Calculate spending on restaurants
+calculate spending on market,2,train,CHECK_SPENDING,Calculate spending on market
+calculate spending on groceries,2,train,CHECK_SPENDING,Calculate spending on groceries
+what did i spend in october,2,train,CHECK_SPENDING,What did i spend in october
+update mere s contact,2,train,MANAGE_CONTACTS,Update mere's contact? || Update mere's contact
+update jone s contact,2,train,MANAGE_CONTACTS,Update jone's contact
+translate this to french if possible,2,evaluation_only,UNKNOWN_INTENT,Translate this to french if possible
+transfer money to mika,2,train,TRANSFER_MONEY,Transfer money to mika? || Transfer money to mika
+transfer money to asha,2,train,TRANSFER_MONEY,Transfer money to asha || Transfer money to asha?
+check school group,2,train,VIEW_GROUP,Check school group
+check market vendors group,2,train,VIEW_GROUP,Check market vendors group
+change saved contact raj,2,train,MANAGE_CONTACTS,Change saved contact raj
+change saved contact joeli,2,train,MANAGE_CONTACTS,Change saved contact joeli
+cash withdrawal 80,2,validation,WITHDRAW_MONEY,Cash withdrawal 80 || Cash withdrawal 80?
+list transfers,2,train,VIEW_TRANSACTIONS,List transfers
+app keeps crashing now,2,train,HELP_SUPPORT,App keeps crashing? now || App keeps crashing now
+app keeps crashing if possible,2,train,HELP_SUPPORT,App keeps crashing if possible || App keeps crashing? if possible
+app keeps crashing asap,2,train,HELP_SUPPORT,App keeps crashing? asap || App keeps crashing asap
+add up restaurants expenses,2,train,CHECK_SPENDING,Add up restaurants expenses
+add up market expenses,2,train,CHECK_SPENDING,Add up market expenses
+add up food expenses,2,train,CHECK_SPENDING,Add up food expenses
+add tui to contacts,2,train,MANAGE_CONTACTS,Add tui to contacts
+add priya as recipient,2,train,MANAGE_CONTACTS,Add priya as recipient
+add mere to contacts,2,train,MANAGE_CONTACTS,Add mere to contacts || Add mere to contacts?
+add litia as recipient,2,train,MANAGE_CONTACTS,Add litia as recipient
+add kumar as recipient,2,train,MANAGE_CONTACTS,Add kumar as recipient
+account balance please,2,train,CHECK_BALANCE,Account balance please
+bill pay water,2,train,BILL_PAY,Bill pay water
+bill pay waf,2,train,BILL_PAY,Bill pay waf
+bill pay phone,2,train,BILL_PAY,Bill pay phone
+is raj saved,2,train,MANAGE_CONTACTS,Is raj saved? || Is raj saved
+i want to withdraw 60,2,train,WITHDRAW_MONEY,I want to withdraw 60
+i want to withdraw 500,2,train,WITHDRAW_MONEY,I want to withdraw 500
+i want to withdraw 30,2,train,WITHDRAW_MONEY,I want to withdraw 30
+i want to pay my water,2,train,BILL_PAY,I want to pay my water
+i want to pay my waf,2,train,BILL_PAY,I want to pay my waf
+manage my contacts,2,test,MANAGE_CONTACTS,Manage my contacts
+make a waf payment,2,train,BILL_PAY,Make a waf payment? || Make a waf payment
+make a transfer to kumar,2,train,TRANSFER_MONEY,Make a transfer to kumar
+make a telecom payment,2,train,BILL_PAY,Make a telecom payment || Make a telecom payment?
+make a electricity payment,2,train,BILL_PAY,Make a electricity payment
+list transfers this week,2,train,VIEW_TRANSACTIONS,List transfers this week
+list transfers this month,2,train,VIEW_TRANSACTIONS,List transfers this month
+list transfers since monday,2,train,VIEW_TRANSACTIONS,List transfers since monday
+list transfers in the last 30 days,2,train,VIEW_TRANSACTIONS,List transfers in the last 30 days? || List transfers in the last 30 days
+list transfers in october,2,train,VIEW_TRANSACTIONS,List transfers in october

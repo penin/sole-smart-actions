@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sole-intent"
+version = "1.0.0"
+description = "Sole Smart Actions intent classification: BoW + Logistic Regression baseline and shared evaluation framework"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "scikit-learn>=1.5",
+    "pandas>=2.2",
+    "numpy>=1.26",
+    "scipy>=1.11",
+    "matplotlib>=3.8",
+    "seaborn>=0.13",
+    "openpyxl>=3.1",
+    "joblib>=1.3",
+    "PyYAML>=6.0",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+addopts = "-ra"

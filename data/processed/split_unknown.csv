@@ -1,0 +1,301 @@
+row_id,excel_row,text,intent,split,scope
+0,2,Play music,UNKNOWN_INTENT,evaluation_only,rejection_test
+7,9,Book a taxi,UNKNOWN_INTENT,evaluation_only,rejection_test
+12,14,Turn on the lights quickly,UNKNOWN_INTENT,evaluation_only,rejection_test
+23,25,Order food,UNKNOWN_INTENT,evaluation_only,rejection_test
+34,36,Who won the rugby please,UNKNOWN_INTENT,evaluation_only,rejection_test
+61,63,Renew my passport,UNKNOWN_INTENT,evaluation_only,rejection_test
+62,64,Play music?,UNKNOWN_INTENT,evaluation_only,rejection_test
+65,67,Predict the lottery,UNKNOWN_INTENT,evaluation_only,rejection_test
+77,79,Tell me a joke if possible,UNKNOWN_INTENT,evaluation_only,rejection_test
+95,97,Predict the lottery on sole,UNKNOWN_INTENT,evaluation_only,rejection_test
+101,103,Open youtube,UNKNOWN_INTENT,evaluation_only,rejection_test
+133,135,How tall is mount everest? now,UNKNOWN_INTENT,evaluation_only,rejection_test
+145,147,Order food please,UNKNOWN_INTENT,evaluation_only,rejection_test
+184,186,Who won the rugby?,UNKNOWN_INTENT,evaluation_only,rejection_test
+187,189,Turn on the lights,UNKNOWN_INTENT,evaluation_only,rejection_test
+191,193,Book a taxi now,UNKNOWN_INTENT,evaluation_only,rejection_test
+196,198,Where is the nearest beach?,UNKNOWN_INTENT,evaluation_only,rejection_test
+217,219,Find a curry recipe,UNKNOWN_INTENT,evaluation_only,rejection_test
+233,235,Find a cinema,UNKNOWN_INTENT,evaluation_only,rejection_test
+237,239,Buy me a phone on sole,UNKNOWN_INTENT,evaluation_only,rejection_test
+249,251,Where is the nearest beach,UNKNOWN_INTENT,evaluation_only,rejection_test
+254,256,Turn on the lights on sole,UNKNOWN_INTENT,evaluation_only,rejection_test
+263,265,Translate this to french,UNKNOWN_INTENT,evaluation_only,rejection_test
+271,273,Tell me a joke,UNKNOWN_INTENT,evaluation_only,rejection_test
+286,288,Order food?,UNKNOWN_INTENT,evaluation_only,rejection_test
+296,298,How tall is mount everest,UNKNOWN_INTENT,evaluation_only,rejection_test
+300,302,Where is the nearest beach?,UNKNOWN_INTENT,evaluation_only,rejection_test
+307,309,Renew my passport now,UNKNOWN_INTENT,evaluation_only,rejection_test
+310,312,Renew my passport?,UNKNOWN_INTENT,evaluation_only,rejection_test
+320,322,Tell me a joke now,UNKNOWN_INTENT,evaluation_only,rejection_test
+352,354,Who won the rugby,UNKNOWN_INTENT,evaluation_only,rejection_test
+353,355,Book a taxi quickly,UNKNOWN_INTENT,evaluation_only,rejection_test
+361,363,Order food please now,UNKNOWN_INTENT,evaluation_only,rejection_test
+377,379,Tell me a joke,UNKNOWN_INTENT,evaluation_only,rejection_test
+386,388,Play music,UNKNOWN_INTENT,evaluation_only,rejection_test
+395,397,Renew my passport,UNKNOWN_INTENT,evaluation_only,rejection_test
+398,400,Open youtube,UNKNOWN_INTENT,evaluation_only,rejection_test
+412,414,Where is the nearest beach? now,UNKNOWN_INTENT,evaluation_only,rejection_test
+425,427,Find a curry recipe on the app,UNKNOWN_INTENT,evaluation_only,rejection_test
+429,431,Who won the rugby please asap,UNKNOWN_INTENT,evaluation_only,rejection_test
+434,436,Order food,UNKNOWN_INTENT,evaluation_only,rejection_test
+468,470,Play music,UNKNOWN_INTENT,evaluation_only,rejection_test
+481,483,What time is the game,UNKNOWN_INTENT,evaluation_only,rejection_test
+515,517,Order food please on sole,UNKNOWN_INTENT,evaluation_only,rejection_test
+516,518,Who won the rugby please quickly,UNKNOWN_INTENT,evaluation_only,rejection_test
+527,529,Play music for me,UNKNOWN_INTENT,evaluation_only,rejection_test
+528,530,Tell me a joke,UNKNOWN_INTENT,evaluation_only,rejection_test
+529,531,How tall is mount everest?,UNKNOWN_INTENT,evaluation_only,rejection_test
+544,546,Turn on the lights if possible,UNKNOWN_INTENT,evaluation_only,rejection_test
+548,550,Who won the rugby please,UNKNOWN_INTENT,evaluation_only,rejection_test
+572,574,Write my homework,UNKNOWN_INTENT,evaluation_only,rejection_test
+594,596,How tall is mount everest? if possible,UNKNOWN_INTENT,evaluation_only,rejection_test
+597,599,Book a taxi,UNKNOWN_INTENT,evaluation_only,rejection_test
+602,604,Predict the lottery,UNKNOWN_INTENT,evaluation_only,rejection_test
+605,607,Who won the rugby,UNKNOWN_INTENT,evaluation_only,rejection_test
+615,617,How tall is mount everest? on sole,UNKNOWN_INTENT,evaluation_only,rejection_test
+618,620,Find a cinema please if possible,UNKNOWN_INTENT,evaluation_only,rejection_test
+620,622,Tell me a story,UNKNOWN_INTENT,evaluation_only,rejection_test
+638,640,Buy me a phone asap,UNKNOWN_INTENT,evaluation_only,rejection_test
+639,641,What time is the game if possible,UNKNOWN_INTENT,evaluation_only,rejection_test
+649,651,Find a cinema,UNKNOWN_INTENT,evaluation_only,rejection_test
+661,663,What's the capital of japan,UNKNOWN_INTENT,evaluation_only,rejection_test
+669,671,Renew my passport if possible,UNKNOWN_INTENT,evaluation_only,rejection_test
+684,686,Tell me a joke,UNKNOWN_INTENT,evaluation_only,rejection_test
+698,700,Turn on the lights?,UNKNOWN_INTENT,evaluation_only,rejection_test
+728,730,Buy me a phone,UNKNOWN_INTENT,evaluation_only,rejection_test
+734,736,What's the exchange rate,UNKNOWN_INTENT,evaluation_only,rejection_test
+750,752,What's the exchange rate please,UNKNOWN_INTENT,evaluation_only,rejection_test
+751,753,Play music quickly,UNKNOWN_INTENT,evaluation_only,rejection_test
+760,762,Translate this to french,UNKNOWN_INTENT,evaluation_only,rejection_test
+764,766,Order food please asap,UNKNOWN_INTENT,evaluation_only,rejection_test
+769,771,Buy me a phone,UNKNOWN_INTENT,evaluation_only,rejection_test
+795,797,Turn on the lights now,UNKNOWN_INTENT,evaluation_only,rejection_test
+806,808,Buy me a phone,UNKNOWN_INTENT,evaluation_only,rejection_test
+813,815,Open youtube in sole,UNKNOWN_INTENT,evaluation_only,rejection_test
+870,872,Find a cinema please,UNKNOWN_INTENT,evaluation_only,rejection_test
+874,876,Order food quickly,UNKNOWN_INTENT,evaluation_only,rejection_test
+875,877,Book a taxi,UNKNOWN_INTENT,evaluation_only,rejection_test
+876,878,Predict the lottery,UNKNOWN_INTENT,evaluation_only,rejection_test
+885,887,Set an alarm,UNKNOWN_INTENT,evaluation_only,rejection_test
+904,906,Order food please if possible,UNKNOWN_INTENT,evaluation_only,rejection_test
+906,908,Play music,UNKNOWN_INTENT,evaluation_only,rejection_test
+917,919,Open youtube?,UNKNOWN_INTENT,evaluation_only,rejection_test
+918,920,What's on tv,UNKNOWN_INTENT,evaluation_only,rejection_test
+938,940,Where is the nearest beach? asap,UNKNOWN_INTENT,evaluation_only,rejection_test
+952,954,Play music,UNKNOWN_INTENT,evaluation_only,rejection_test
+980,982,Play music,UNKNOWN_INTENT,evaluation_only,rejection_test
+986,988,Book a flight,UNKNOWN_INTENT,evaluation_only,rejection_test
+1001,1003,Book a flight?,UNKNOWN_INTENT,evaluation_only,rejection_test
+1016,1018,Write my homework,UNKNOWN_INTENT,evaluation_only,rejection_test
+1020,1022,Where is the nearest beach?,UNKNOWN_INTENT,evaluation_only,rejection_test
+1023,1025,How tall is mount everest?,UNKNOWN_INTENT,evaluation_only,rejection_test
+1024,1026,Turn on the lights,UNKNOWN_INTENT,evaluation_only,rejection_test
+1040,1042,Play music,UNKNOWN_INTENT,evaluation_only,rejection_test
+1043,1045,What's the exchange rate please on sole,UNKNOWN_INTENT,evaluation_only,rejection_test
+1055,1057,Order food please,UNKNOWN_INTENT,evaluation_only,rejection_test
+1079,1081,Open youtube now,UNKNOWN_INTENT,evaluation_only,rejection_test
+1099,1101,Book a flight,UNKNOWN_INTENT,evaluation_only,rejection_test
+1101,1103,Find a curry recipe,UNKNOWN_INTENT,evaluation_only,rejection_test
+1117,1119,Find a cinema please on sole,UNKNOWN_INTENT,evaluation_only,rejection_test
+1134,1136,Predict the lottery,UNKNOWN_INTENT,evaluation_only,rejection_test
+1162,1164,Write my homework now,UNKNOWN_INTENT,evaluation_only,rejection_test
+1164,1166,Predict the lottery,UNKNOWN_INTENT,evaluation_only,rejection_test
+1177,1179,Who won the rugby please on sole,UNKNOWN_INTENT,evaluation_only,rejection_test
+1191,1193,Play music,UNKNOWN_INTENT,evaluation_only,rejection_test
+1193,1195,What's on tv,UNKNOWN_INTENT,evaluation_only,rejection_test
+1194,1196,What's the exchange rate,UNKNOWN_INTENT,evaluation_only,rejection_test
+1195,1197,Buy me a phone quickly,UNKNOWN_INTENT,evaluation_only,rejection_test
+1196,1198,Who won the rugby please,UNKNOWN_INTENT,evaluation_only,rejection_test
+1205,1207,Set an alarm?,UNKNOWN_INTENT,evaluation_only,rejection_test
+1231,1233,Who won the rugby,UNKNOWN_INTENT,evaluation_only,rejection_test
+1233,1235,Find a cinema please,UNKNOWN_INTENT,evaluation_only,rejection_test
+1245,1247,Translate this to french now,UNKNOWN_INTENT,evaluation_only,rejection_test
+1249,1251,Play music asap,UNKNOWN_INTENT,evaluation_only,rejection_test
+1265,1267,Find a cinema please asap,UNKNOWN_INTENT,evaluation_only,rejection_test
+1268,1270,Where is the nearest beach?,UNKNOWN_INTENT,evaluation_only,rejection_test
+1295,1297,Renew my passport on the app,UNKNOWN_INTENT,evaluation_only,rejection_test
+1297,1299,Book a taxi,UNKNOWN_INTENT,evaluation_only,rejection_test
+1300,1302,What's the exchange rate please asap,UNKNOWN_INTENT,evaluation_only,rejection_test
+1308,1310,How tall is mount everest on my account,UNKNOWN_INTENT,evaluation_only,rejection_test
+1310,1312,Where is the nearest beach?,UNKNOWN_INTENT,evaluation_only,rejection_test
+1314,1316,What's the exchange rate please,UNKNOWN_INTENT,evaluation_only,rejection_test
+1329,1331,What's on tv,UNKNOWN_INTENT,evaluation_only,rejection_test
+1333,1335,Tell me a joke,UNKNOWN_INTENT,evaluation_only,rejection_test
+1336,1338,Who won the rugby,UNKNOWN_INTENT,evaluation_only,rejection_test
+1344,1346,Renew my passport,UNKNOWN_INTENT,evaluation_only,rejection_test
+1345,1347,How tall is mount everest? asap,UNKNOWN_INTENT,evaluation_only,rejection_test
+1372,1374,Order food on my account,UNKNOWN_INTENT,evaluation_only,rejection_test
+1379,1381,Tell me a joke quickly,UNKNOWN_INTENT,evaluation_only,rejection_test
+1408,1410,Who won the rugby please,UNKNOWN_INTENT,evaluation_only,rejection_test
+1418,1420,What's the exchange rate on the app,UNKNOWN_INTENT,evaluation_only,rejection_test
+1422,1424,Tell me a joke now,UNKNOWN_INTENT,evaluation_only,rejection_test
+1423,1425,Tell me a joke?,UNKNOWN_INTENT,evaluation_only,rejection_test
+1433,1435,Book a flight,UNKNOWN_INTENT,evaluation_only,rejection_test
+1449,1451,What's the exchange rate please if possible,UNKNOWN_INTENT,evaluation_only,rejection_test
+1451,1453,What's the weather,UNKNOWN_INTENT,evaluation_only,rejection_test
+1456,1458,Play music now,UNKNOWN_INTENT,evaluation_only,rejection_test
+1464,1466,Where is the nearest beach? quickly,UNKNOWN_INTENT,evaluation_only,rejection_test
+1471,1473,Book a taxi on sole,UNKNOWN_INTENT,evaluation_only,rejection_test
+1474,1476,Tell me a story?,UNKNOWN_INTENT,evaluation_only,rejection_test
+1491,1493,What's the capital of japan,UNKNOWN_INTENT,evaluation_only,rejection_test
+1493,1495,Where is the nearest beach? if possible,UNKNOWN_INTENT,evaluation_only,rejection_test
+1503,1505,Book a taxi,UNKNOWN_INTENT,evaluation_only,rejection_test
+1505,1507,Turn on the lights,UNKNOWN_INTENT,evaluation_only,rejection_test
+1506,1508,Buy me a phone now,UNKNOWN_INTENT,evaluation_only,rejection_test
+1516,1518,Buy me a phone,UNKNOWN_INTENT,evaluation_only,rejection_test
+1523,1525,Write my homework?,UNKNOWN_INTENT,evaluation_only,rejection_test
+1567,1569,Predict the lottery please on my account,UNKNOWN_INTENT,evaluation_only,rejection_test
+1571,1573,What's on tv,UNKNOWN_INTENT,evaluation_only,rejection_test
+1576,1578,Book a taxi on my account,UNKNOWN_INTENT,evaluation_only,rejection_test
+1599,1601,Buy me a phone?,UNKNOWN_INTENT,evaluation_only,rejection_test
+1605,1607,What time is the game?,UNKNOWN_INTENT,evaluation_only,rejection_test
+1609,1611,Buy me a phone quickly at the moment,UNKNOWN_INTENT,evaluation_only,rejection_test
+1618,1620,Predict the lottery?,UNKNOWN_INTENT,evaluation_only,rejection_test
+1632,1634,Find a cinema?,UNKNOWN_INTENT,evaluation_only,rejection_test
+1640,1642,Translate this to french?,UNKNOWN_INTENT,evaluation_only,rejection_test
+1647,1649,Tell me a story,UNKNOWN_INTENT,evaluation_only,rejection_test
+1662,1664,What's the capital of japan in sole,UNKNOWN_INTENT,evaluation_only,rejection_test
+1665,1667,What's the exchange rate,UNKNOWN_INTENT,evaluation_only,rejection_test
+1666,1668,Open youtube asap,UNKNOWN_INTENT,evaluation_only,rejection_test
+1685,1687,Predict the lottery,UNKNOWN_INTENT,evaluation_only,rejection_test
+1686,1688,Turn on the lights at the moment,UNKNOWN_INTENT,evaluation_only,rejection_test
+1705,1707,What's the exchange rate please,UNKNOWN_INTENT,evaluation_only,rejection_test
+1740,1742,Play music asap this time,UNKNOWN_INTENT,evaluation_only,rejection_test
+1743,1745,Tell me a joke please on the app,UNKNOWN_INTENT,evaluation_only,rejection_test
+1747,1749,Translate this to french,UNKNOWN_INTENT,evaluation_only,rejection_test
+1752,1754,Translate this to french,UNKNOWN_INTENT,evaluation_only,rejection_test
+1758,1760,Set an alarm if possible,UNKNOWN_INTENT,evaluation_only,rejection_test
+1759,1761,What's the exchange rate please quickly,UNKNOWN_INTENT,evaluation_only,rejection_test
+1767,1769,Turn on the lights,UNKNOWN_INTENT,evaluation_only,rejection_test
+1788,1790,Set an alarm,UNKNOWN_INTENT,evaluation_only,rejection_test
+1789,1791,Open youtube if possible,UNKNOWN_INTENT,evaluation_only,rejection_test
+1790,1792,Write my homework at the moment,UNKNOWN_INTENT,evaluation_only,rejection_test
+1794,1796,Open youtube,UNKNOWN_INTENT,evaluation_only,rejection_test
+1807,1809,Play music,UNKNOWN_INTENT,evaluation_only,rejection_test
+1818,1820,Play music quickly,UNKNOWN_INTENT,evaluation_only,rejection_test
+1824,1826,What's the weather in sole,UNKNOWN_INTENT,evaluation_only,rejection_test
+1828,1830,Translate this to french quickly,UNKNOWN_INTENT,evaluation_only,rejection_test
+1831,1833,Book a taxi if possible,UNKNOWN_INTENT,evaluation_only,rejection_test
+1844,1846,Buy me a phone,UNKNOWN_INTENT,evaluation_only,rejection_test
+1859,1861,How tall is mount everest?,UNKNOWN_INTENT,evaluation_only,rejection_test
+1861,1863,Find a cinema please,UNKNOWN_INTENT,evaluation_only,rejection_test
+1883,1885,Find a hotel,UNKNOWN_INTENT,evaluation_only,rejection_test
+1888,1890,Renew my passport on sole,UNKNOWN_INTENT,evaluation_only,rejection_test
+1889,1891,Renew my passport,UNKNOWN_INTENT,evaluation_only,rejection_test
+1891,1893,Predict the lottery,UNKNOWN_INTENT,evaluation_only,rejection_test
+1921,1923,What's the exchange rate please,UNKNOWN_INTENT,evaluation_only,rejection_test
+1927,1929,Find a hotel,UNKNOWN_INTENT,evaluation_only,rejection_test
+1936,1938,Play music,UNKNOWN_INTENT,evaluation_only,rejection_test
+1944,1946,Tell me a joke on sole,UNKNOWN_INTENT,evaluation_only,rejection_test
+1945,1947,Where is the nearest beach,UNKNOWN_INTENT,evaluation_only,rejection_test
+1955,1957,Find a cinema please now,UNKNOWN_INTENT,evaluation_only,rejection_test
+1976,1978,What's on tv this time,UNKNOWN_INTENT,evaluation_only,rejection_test
+1977,1979,Renew my passport,UNKNOWN_INTENT,evaluation_only,rejection_test
+1990,1992,Where is the nearest beach? on sole,UNKNOWN_INTENT,evaluation_only,rejection_test
+2002,2004,Predict the lottery now,UNKNOWN_INTENT,evaluation_only,rejection_test
+2007,2009,Buy me a phone,UNKNOWN_INTENT,evaluation_only,rejection_test
+2014,2016,How tall is mount everest?,UNKNOWN_INTENT,evaluation_only,rejection_test
+2020,2022,Find a cinema please,UNKNOWN_INTENT,evaluation_only,rejection_test
+2028,2030,Tell me a joke,UNKNOWN_INTENT,evaluation_only,rejection_test
+2044,2046,Set an alarm,UNKNOWN_INTENT,evaluation_only,rejection_test
+2060,2062,Play music please,UNKNOWN_INTENT,evaluation_only,rejection_test
+2072,2074,Open youtube,UNKNOWN_INTENT,evaluation_only,rejection_test
+2085,2087,What's the exchange rate?,UNKNOWN_INTENT,evaluation_only,rejection_test
+2086,2088,How tall is mount everest,UNKNOWN_INTENT,evaluation_only,rejection_test
+2105,2107,Set an alarm,UNKNOWN_INTENT,evaluation_only,rejection_test
+2122,2124,Translate this to french on sole,UNKNOWN_INTENT,evaluation_only,rejection_test
+2144,2146,Open youtube,UNKNOWN_INTENT,evaluation_only,rejection_test
+2145,2147,How tall is mount everest?,UNKNOWN_INTENT,evaluation_only,rejection_test
+2147,2149,What's the weather?,UNKNOWN_INTENT,evaluation_only,rejection_test
+2150,2152,What's the exchange rate please now,UNKNOWN_INTENT,evaluation_only,rejection_test
+2153,2155,Translate this to french this time,UNKNOWN_INTENT,evaluation_only,rejection_test
+2155,2157,Translate this to french today on my account,UNKNOWN_INTENT,evaluation_only,rejection_test
+2201,2203,Find a cinema please quickly,UNKNOWN_INTENT,evaluation_only,rejection_test
+2218,2220,How tall is mount everest,UNKNOWN_INTENT,evaluation_only,rejection_test
+2223,2225,Tell me a story,UNKNOWN_INTENT,evaluation_only,rejection_test
+2227,2229,How tall is mount everest? quickly,UNKNOWN_INTENT,evaluation_only,rejection_test
+2237,2239,Book a flight on the app,UNKNOWN_INTENT,evaluation_only,rejection_test
+2239,2241,Predict the lottery thanks on the app,UNKNOWN_INTENT,evaluation_only,rejection_test
+2251,2253,How tall is mount everest?,UNKNOWN_INTENT,evaluation_only,rejection_test
+2258,2260,Tell me a story on the app,UNKNOWN_INTENT,evaluation_only,rejection_test
+2297,2299,Who won the rugby,UNKNOWN_INTENT,evaluation_only,rejection_test
+2299,2301,Find a cinema please,UNKNOWN_INTENT,evaluation_only,rejection_test
+2301,2303,What time is the game at the moment,UNKNOWN_INTENT,evaluation_only,rejection_test
+2312,2314,Buy me a phone if possible,UNKNOWN_INTENT,evaluation_only,rejection_test
+2316,2318,Find a cinema,UNKNOWN_INTENT,evaluation_only,rejection_test
+2332,2334,Book a flight,UNKNOWN_INTENT,evaluation_only,rejection_test
+2340,2342,What's the weather on my account,UNKNOWN_INTENT,evaluation_only,rejection_test
+2343,2345,Where is the nearest beach on the app,UNKNOWN_INTENT,evaluation_only,rejection_test
+2351,2353,What's the weather now,UNKNOWN_INTENT,evaluation_only,rejection_test
+2361,2363,Who won the rugby please if possible,UNKNOWN_INTENT,evaluation_only,rejection_test
+2362,2364,What's the weather,UNKNOWN_INTENT,evaluation_only,rejection_test
+2376,2378,Renew my passport please,UNKNOWN_INTENT,evaluation_only,rejection_test
+2384,2386,What time is the game,UNKNOWN_INTENT,evaluation_only,rejection_test
+2387,2389,Buy me a phone in sole,UNKNOWN_INTENT,evaluation_only,rejection_test
+2394,2396,How tall is mount everest if possible,UNKNOWN_INTENT,evaluation_only,rejection_test
+2409,2411,Play music today on the app,UNKNOWN_INTENT,evaluation_only,rejection_test
+2417,2419,Write my homework,UNKNOWN_INTENT,evaluation_only,rejection_test
+2418,2420,Tell me a joke on my account,UNKNOWN_INTENT,evaluation_only,rejection_test
+2419,2421,Tell me a story,UNKNOWN_INTENT,evaluation_only,rejection_test
+2422,2424,Play music right now,UNKNOWN_INTENT,evaluation_only,rejection_test
+2439,2441,Find a curry recipe in sole,UNKNOWN_INTENT,evaluation_only,rejection_test
+2440,2442,Tell me a joke,UNKNOWN_INTENT,evaluation_only,rejection_test
+2444,2446,What's the capital of japan,UNKNOWN_INTENT,evaluation_only,rejection_test
+2447,2449,Find a cinema,UNKNOWN_INTENT,evaluation_only,rejection_test
+2451,2453,Translate this to french,UNKNOWN_INTENT,evaluation_only,rejection_test
+2456,2458,Book a taxi asap,UNKNOWN_INTENT,evaluation_only,rejection_test
+2470,2472,Play music please,UNKNOWN_INTENT,evaluation_only,rejection_test
+2472,2474,Find a curry recipe now,UNKNOWN_INTENT,evaluation_only,rejection_test
+2473,2475,Open youtube,UNKNOWN_INTENT,evaluation_only,rejection_test
+2492,2494,Tell me a joke asap,UNKNOWN_INTENT,evaluation_only,rejection_test
+2495,2497,Where is the nearest beach?,UNKNOWN_INTENT,evaluation_only,rejection_test
+2528,2530,Buy me a phone please,UNKNOWN_INTENT,evaluation_only,rejection_test
+2536,2538,Play music now at the moment,UNKNOWN_INTENT,evaluation_only,rejection_test
+2539,2541,Find a cinema on the app,UNKNOWN_INTENT,evaluation_only,rejection_test
+2544,2546,Turn on the lights asap,UNKNOWN_INTENT,evaluation_only,rejection_test
+2552,2554,What's the capital of japan,UNKNOWN_INTENT,evaluation_only,rejection_test
+2555,2557,Play music on sole,UNKNOWN_INTENT,evaluation_only,rejection_test
+2560,2562,Turn on the lights,UNKNOWN_INTENT,evaluation_only,rejection_test
+2568,2570,Find a hotel?,UNKNOWN_INTENT,evaluation_only,rejection_test
+2572,2574,Find a curry recipe?,UNKNOWN_INTENT,evaluation_only,rejection_test
+2581,2583,Where is the nearest beach at the moment,UNKNOWN_INTENT,evaluation_only,rejection_test
+2596,2598,Play music if possible,UNKNOWN_INTENT,evaluation_only,rejection_test
+2599,2601,Renew my passport now now,UNKNOWN_INTENT,evaluation_only,rejection_test
+2604,2606,Buy me a phone at the moment,UNKNOWN_INTENT,evaluation_only,rejection_test
+2629,2631,What's on tv?,UNKNOWN_INTENT,evaluation_only,rejection_test
+2654,2656,Open youtube,UNKNOWN_INTENT,evaluation_only,rejection_test
+2658,2660,What's the exchange rate please,UNKNOWN_INTENT,evaluation_only,rejection_test
+2659,2661,Book a taxi on the app,UNKNOWN_INTENT,evaluation_only,rejection_test
+2669,2671,Turn on the lights this time,UNKNOWN_INTENT,evaluation_only,rejection_test
+2678,2680,Order food please,UNKNOWN_INTENT,evaluation_only,rejection_test
+2687,2689,What time is the game in sole,UNKNOWN_INTENT,evaluation_only,rejection_test
+2689,2691,Find a hotel,UNKNOWN_INTENT,evaluation_only,rejection_test
+2693,2695,Who won the rugby please now,UNKNOWN_INTENT,evaluation_only,rejection_test
+2699,2701,Book a taxi right now on my account,UNKNOWN_INTENT,evaluation_only,rejection_test
+2718,2720,Play music if possible,UNKNOWN_INTENT,evaluation_only,rejection_test
+2734,2736,Open youtube on sole,UNKNOWN_INTENT,evaluation_only,rejection_test
+2736,2738,Where is the nearest beach,UNKNOWN_INTENT,evaluation_only,rejection_test
+2737,2739,Book a taxi,UNKNOWN_INTENT,evaluation_only,rejection_test
+2757,2759,Find a hotel on the app,UNKNOWN_INTENT,evaluation_only,rejection_test
+2765,2767,Translate this to french please in sole,UNKNOWN_INTENT,evaluation_only,rejection_test
+2783,2785,Open youtube quickly,UNKNOWN_INTENT,evaluation_only,rejection_test
+2791,2793,Find a hotel,UNKNOWN_INTENT,evaluation_only,rejection_test
+2805,2807,Order food now,UNKNOWN_INTENT,evaluation_only,rejection_test
+2812,2814,What's the exchange rate,UNKNOWN_INTENT,evaluation_only,rejection_test
+2819,2821,Who won the rugby please,UNKNOWN_INTENT,evaluation_only,rejection_test
+2839,2841,Play music on sole,UNKNOWN_INTENT,evaluation_only,rejection_test
+2844,2846,Translate this to french,UNKNOWN_INTENT,evaluation_only,rejection_test
+2860,2862,What's the exchange rate please on my account,UNKNOWN_INTENT,evaluation_only,rejection_test
+2868,2870,Book a taxi?,UNKNOWN_INTENT,evaluation_only,rejection_test
+2883,2885,Order food please,UNKNOWN_INTENT,evaluation_only,rejection_test
+2895,2897,Translate this to french asap,UNKNOWN_INTENT,evaluation_only,rejection_test
+2911,2913,Open youtube for me if possible,UNKNOWN_INTENT,evaluation_only,rejection_test
+2917,2919,Turn on the lights,UNKNOWN_INTENT,evaluation_only,rejection_test
+2921,2923,Order food please,UNKNOWN_INTENT,evaluation_only,rejection_test
+2951,2953,Turn on the lights please,UNKNOWN_INTENT,evaluation_only,rejection_test
+2954,2956,Translate this to french if possible,UNKNOWN_INTENT,evaluation_only,rejection_test
+2966,2968,Translate this to french if possible,UNKNOWN_INTENT,evaluation_only,rejection_test
+2977,2979,What's the capital of japan?,UNKNOWN_INTENT,evaluation_only,rejection_test
+2985,2987,Order food please quickly,UNKNOWN_INTENT,evaluation_only,rejection_test

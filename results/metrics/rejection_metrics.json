@@ -1,0 +1,146 @@
+{
+  "rule": "if max_probability < threshold: UNKNOWN_INTENT else argmax intent",
+  "threshold_selection": {
+    "method": "known-intent validation coverage target (prespecified before viewing unknown labels)",
+    "target_known_coverage": 0.95,
+    "threshold": 0.1957229623551974,
+    "validation_known_coverage_achieved": 0.9518518518518518
+  },
+  "validation_known_only": {
+    "threshold": 0.1957229623551974,
+    "n_known": 270,
+    "n_unknown": 0,
+    "counts": {
+      "correct_supported_classification": 196,
+      "incorrect_supported_classification": 61,
+      "false_rejection_of_supported": 13,
+      "correct_rejection_of_unsupported": 0,
+      "false_acceptance_of_unsupported": 0
+    },
+    "known_intent_coverage": 0.9518518518518518,
+    "known_false_rejection_rate": 0.04814814814814815,
+    "accuracy_on_accepted_known": 0.7626459143968871,
+    "end_to_end_known_accuracy": 0.725925925925926,
+    "unknown_rejection_rate": null,
+    "unknown_false_accept_rate": null
+  },
+  "primary_frozen_threshold_test_plus_unknown": {
+    "threshold": 0.1957229623551974,
+    "n_known": 270,
+    "n_unknown": 300,
+    "counts": {
+      "correct_supported_classification": 204,
+      "incorrect_supported_classification": 41,
+      "false_rejection_of_supported": 25,
+      "correct_rejection_of_unsupported": 44,
+      "false_acceptance_of_unsupported": 256
+    },
+    "known_intent_coverage": 0.9074074074074074,
+    "known_false_rejection_rate": 0.09259259259259259,
+    "accuracy_on_accepted_known": 0.8326530612244898,
+    "end_to_end_known_accuracy": 0.7555555555555555,
+    "unknown_rejection_rate": 0.14666666666666667,
+    "unknown_false_accept_rate": 0.8533333333333334,
+    "unknown_false_accepts_by_predicted_intent": {
+      "VIEW_TRANSACTIONS": 86,
+      "HELP_SUPPORT": 69,
+      "CHECK_SPENDING": 32,
+      "CHECK_BALANCE": 16,
+      "BILL_PAY": 15,
+      "TRANSFER_MONEY": 14,
+      "MANAGE_CONTACTS": 13,
+      "VIEW_GROUP": 11
+    }
+  },
+  "unknown_unique_phrases": 153,
+  "unknown_rejection_rate_unique_phrases": 0.08496732026143791,
+  "default_model_frozen_threshold": {
+    "threshold": 0.24721900633953928,
+    "n_known": 270,
+    "n_unknown": 300,
+    "counts": {
+      "correct_supported_classification": 221,
+      "incorrect_supported_classification": 35,
+      "false_rejection_of_supported": 14,
+      "correct_rejection_of_unsupported": 39,
+      "false_acceptance_of_unsupported": 261
+    },
+    "known_intent_coverage": 0.9481481481481482,
+    "known_false_rejection_rate": 0.05185185185185185,
+    "accuracy_on_accepted_known": 0.86328125,
+    "end_to_end_known_accuracy": 0.8185185185185185,
+    "unknown_rejection_rate": 0.13,
+    "unknown_false_accept_rate": 0.87,
+    "unknown_false_accepts_by_predicted_intent": {
+      "VIEW_TRANSACTIONS": 89,
+      "HELP_SUPPORT": 52,
+      "VIEW_GROUP": 29,
+      "CHECK_SPENDING": 27,
+      "BILL_PAY": 18,
+      "CHECK_BALANCE": 17,
+      "MANAGE_CONTACTS": 15,
+      "TRANSFER_MONEY": 14
+    }
+  },
+  "exploratory_sweep_note": "rejection_threshold_sweep_exploratory.csv and figure 10 use the evaluation-only unknowns at every threshold; they are exploratory, not an independent test, and were not used to choose the primary threshold.",
+  "supplementary_unknown_aware": {
+    "description": "Unknown-aware threshold chosen on validation knowns + a calibration half of the unknown phrases (grouped by normalized phrase), reported on test knowns + the disjoint holdout half. Supplementary only: the 300 unknowns were also used for the primary frozen-threshold evaluation, and both halves share a synthetic generator.",
+    "n_unknown_calibration": 137,
+    "n_unknown_holdout": 163,
+    "shared_phrases_between_halves": 0,
+    "objective": "maximize 0.5*known_val_coverage + 0.5*unknown_calibration_rejection",
+    "selected_threshold": 0.41,
+    "holdout_results_unknown_aware_threshold": {
+      "threshold": 0.41,
+      "n_known": 270,
+      "n_unknown": 163,
+      "counts": {
+        "correct_supported_classification": 157,
+        "incorrect_supported_classification": 8,
+        "false_rejection_of_supported": 105,
+        "correct_rejection_of_unsupported": 154,
+        "false_acceptance_of_unsupported": 9
+      },
+      "known_intent_coverage": 0.6111111111111112,
+      "known_false_rejection_rate": 0.3888888888888889,
+      "accuracy_on_accepted_known": 0.9515151515151515,
+      "end_to_end_known_accuracy": 0.5814814814814815,
+      "unknown_rejection_rate": 0.9447852760736196,
+      "unknown_false_accept_rate": 0.05521472392638037,
+      "unknown_false_accepts_by_predicted_intent": {
+        "HELP_SUPPORT": 4,
+        "CHECK_SPENDING": 2,
+        "VIEW_TRANSACTIONS": 2,
+        "CHECK_BALANCE": 1
+      }
+    },
+    "holdout_results_frozen_primary_threshold": {
+      "threshold": 0.1957229623551974,
+      "n_known": 270,
+      "n_unknown": 163,
+      "counts": {
+        "correct_supported_classification": 204,
+        "incorrect_supported_classification": 41,
+        "false_rejection_of_supported": 25,
+        "correct_rejection_of_unsupported": 36,
+        "false_acceptance_of_unsupported": 127
+      },
+      "known_intent_coverage": 0.9074074074074074,
+      "known_false_rejection_rate": 0.09259259259259259,
+      "accuracy_on_accepted_known": 0.8326530612244898,
+      "end_to_end_known_accuracy": 0.7555555555555555,
+      "unknown_rejection_rate": 0.22085889570552147,
+      "unknown_false_accept_rate": 0.7791411042944786,
+      "unknown_false_accepts_by_predicted_intent": {
+        "VIEW_TRANSACTIONS": 51,
+        "HELP_SUPPORT": 28,
+        "CHECK_SPENDING": 14,
+        "BILL_PAY": 12,
+        "TRANSFER_MONEY": 9,
+        "VIEW_GROUP": 5,
+        "MANAGE_CONTACTS": 5,
+        "CHECK_BALANCE": 3
+      }
+    }
+  }
+}

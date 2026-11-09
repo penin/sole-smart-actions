@@ -1,0 +1,841 @@
+row_id,excel_row,text,intent,split,canonical,template,canonical_in_train,template_in_train,max_jaccard_to_train,near_duplicate_of_train,leakage_flag
+0,2,Play music,UNKNOWN_INTENT,evaluation_only,play music,play music,False,False,0.0,False,False
+7,9,Book a taxi,UNKNOWN_INTENT,evaluation_only,book a taxi,book a taxi,False,False,0.2,False,False
+12,14,Turn on the lights quickly,UNKNOWN_INTENT,evaluation_only,turn on the lights quickly,turn on the lights quickly,False,False,0.25,False,False
+23,25,Order food,UNKNOWN_INTENT,evaluation_only,order food,order food,False,False,0.2,False,False
+34,36,Who won the rugby please,UNKNOWN_INTENT,evaluation_only,who won the rugby please,who won the rugby please,False,False,0.25,False,False
+61,63,Renew my passport,UNKNOWN_INTENT,evaluation_only,renew my passport,renew my passport,False,False,0.25,False,False
+62,64,Play music?,UNKNOWN_INTENT,evaluation_only,play music,play music,False,False,0.0,False,False
+65,67,Predict the lottery,UNKNOWN_INTENT,evaluation_only,predict the lottery,predict the lottery,False,False,0.16666666666666666,False,False
+77,79,Tell me a joke if possible,UNKNOWN_INTENT,evaluation_only,tell me a joke if possible,tell me a joke if possible,False,False,0.2727272727272727,False,False
+95,97,Predict the lottery on sole,UNKNOWN_INTENT,evaluation_only,predict the lottery on sole,predict the lottery on sole,False,False,0.2857142857142857,False,False
+101,103,Open youtube,UNKNOWN_INTENT,evaluation_only,open youtube,open youtube,False,False,0.3333333333333333,False,False
+133,135,How tall is mount everest? now,UNKNOWN_INTENT,evaluation_only,how tall is mount everest now,how tall is mount everest now,False,False,0.3333333333333333,False,False
+145,147,Order food please,UNKNOWN_INTENT,evaluation_only,order food please,order food please,False,False,0.2,False,False
+184,186,Who won the rugby?,UNKNOWN_INTENT,evaluation_only,who won the rugby,who won the rugby,False,False,0.2857142857142857,False,False
+187,189,Turn on the lights,UNKNOWN_INTENT,evaluation_only,turn on the lights,turn on the lights,False,False,0.2857142857142857,False,False
+191,193,Book a taxi now,UNKNOWN_INTENT,evaluation_only,book a taxi now,book a taxi now,False,False,0.16666666666666666,False,False
+196,198,Where is the nearest beach?,UNKNOWN_INTENT,evaluation_only,where is the nearest beach,where is the nearest beach,False,False,0.18181818181818182,False,False
+217,219,Find a curry recipe,UNKNOWN_INTENT,evaluation_only,find a curry recipe,find a curry recipe,False,False,0.3333333333333333,False,False
+233,235,Find a cinema,UNKNOWN_INTENT,evaluation_only,find a cinema,find a cinema,False,False,0.4,False,False
+237,239,Buy me a phone on sole,UNKNOWN_INTENT,evaluation_only,buy me a phone on sole,buy me a phone on sole,False,False,0.25,False,False
+249,251,Where is the nearest beach,UNKNOWN_INTENT,evaluation_only,where is the nearest beach,where is the nearest beach,False,False,0.18181818181818182,False,False
+254,256,Turn on the lights on sole,UNKNOWN_INTENT,evaluation_only,turn on the lights on sole,turn on the lights on sole,False,False,0.2857142857142857,False,False
+263,265,Translate this to french,UNKNOWN_INTENT,evaluation_only,translate this to french,translate this to french,False,False,0.2222222222222222,False,False
+271,273,Tell me a joke,UNKNOWN_INTENT,evaluation_only,tell me a joke,tell me a joke,False,False,0.2857142857142857,False,False
+286,288,Order food?,UNKNOWN_INTENT,evaluation_only,order food,order food,False,False,0.2,False,False
+296,298,How tall is mount everest,UNKNOWN_INTENT,evaluation_only,how tall is mount everest,how tall is mount everest,False,False,0.25,False,False
+300,302,Where is the nearest beach?,UNKNOWN_INTENT,evaluation_only,where is the nearest beach,where is the nearest beach,False,False,0.18181818181818182,False,False
+307,309,Renew my passport now,UNKNOWN_INTENT,evaluation_only,renew my passport now,renew my passport now,False,False,0.3333333333333333,False,False
+310,312,Renew my passport?,UNKNOWN_INTENT,evaluation_only,renew my passport,renew my passport,False,False,0.25,False,False
+320,322,Tell me a joke now,UNKNOWN_INTENT,evaluation_only,tell me a joke now,tell me a joke now,False,False,0.25,False,False
+352,354,Who won the rugby,UNKNOWN_INTENT,evaluation_only,who won the rugby,who won the rugby,False,False,0.2857142857142857,False,False
+353,355,Book a taxi quickly,UNKNOWN_INTENT,evaluation_only,book a taxi quickly,book a taxi quickly,False,False,0.16666666666666666,False,False
+361,363,Order food please now,UNKNOWN_INTENT,evaluation_only,order food please now,order food please now,False,False,0.3333333333333333,False,False
+377,379,Tell me a joke,UNKNOWN_INTENT,evaluation_only,tell me a joke,tell me a joke,False,False,0.2857142857142857,False,False
+386,388,Play music,UNKNOWN_INTENT,evaluation_only,play music,play music,False,False,0.0,False,False
+395,397,Renew my passport,UNKNOWN_INTENT,evaluation_only,renew my passport,renew my passport,False,False,0.25,False,False
+398,400,Open youtube,UNKNOWN_INTENT,evaluation_only,open youtube,open youtube,False,False,0.3333333333333333,False,False
+412,414,Where is the nearest beach? now,UNKNOWN_INTENT,evaluation_only,where is the nearest beach now,where is the nearest beach now,False,False,0.2,False,False
+425,427,Find a curry recipe on the app,UNKNOWN_INTENT,evaluation_only,find a curry recipe on the app,find a curry recipe on the app,False,False,0.45454545454545453,False,False
+429,431,Who won the rugby please asap,UNKNOWN_INTENT,evaluation_only,who won the rugby please asap,who won the rugby please asap,False,False,0.25,False,False
+434,436,Order food,UNKNOWN_INTENT,evaluation_only,order food,order food,False,False,0.2,False,False
+468,470,Play music,UNKNOWN_INTENT,evaluation_only,play music,play music,False,False,0.0,False,False
+481,483,What time is the game,UNKNOWN_INTENT,evaluation_only,what time is the game,what time is the game,False,False,0.2,False,False
+515,517,Order food please on sole,UNKNOWN_INTENT,evaluation_only,order food please on sole,order food please on sole,False,False,0.42857142857142855,False,False
+516,518,Who won the rugby please quickly,UNKNOWN_INTENT,evaluation_only,who won the rugby please quickly,who won the rugby please quickly,False,False,0.25,False,False
+527,529,Play music for me,UNKNOWN_INTENT,evaluation_only,play music for me,play music for me,False,False,0.2222222222222222,False,False
+528,530,Tell me a joke,UNKNOWN_INTENT,evaluation_only,tell me a joke,tell me a joke,False,False,0.2857142857142857,False,False
+529,531,How tall is mount everest?,UNKNOWN_INTENT,evaluation_only,how tall is mount everest,how tall is mount everest,False,False,0.25,False,False
+544,546,Turn on the lights if possible,UNKNOWN_INTENT,evaluation_only,turn on the lights if possible,turn on the lights if possible,False,False,0.25,False,False
+548,550,Who won the rugby please,UNKNOWN_INTENT,evaluation_only,who won the rugby please,who won the rugby please,False,False,0.25,False,False
+572,574,Write my homework,UNKNOWN_INTENT,evaluation_only,write my homework,write my homework,False,False,0.25,False,False
+594,596,How tall is mount everest? if possible,UNKNOWN_INTENT,evaluation_only,how tall is mount everest if possible,how tall is mount everest if possible,False,False,0.3333333333333333,False,False
+597,599,Book a taxi,UNKNOWN_INTENT,evaluation_only,book a taxi,book a taxi,False,False,0.2,False,False
+602,604,Predict the lottery,UNKNOWN_INTENT,evaluation_only,predict the lottery,predict the lottery,False,False,0.16666666666666666,False,False
+605,607,Who won the rugby,UNKNOWN_INTENT,evaluation_only,who won the rugby,who won the rugby,False,False,0.2857142857142857,False,False
+615,617,How tall is mount everest? on sole,UNKNOWN_INTENT,evaluation_only,how tall is mount everest on sole,how tall is mount everest on sole,False,False,0.3333333333333333,False,False
+618,620,Find a cinema please if possible,UNKNOWN_INTENT,evaluation_only,find a cinema please if possible,find a cinema please if possible,False,False,0.4,False,False
+620,622,Tell me a story,UNKNOWN_INTENT,evaluation_only,tell me a story,tell me a story,False,False,0.2857142857142857,False,False
+638,640,Buy me a phone asap,UNKNOWN_INTENT,evaluation_only,buy me a phone asap,buy me a phone asap,False,False,0.2857142857142857,False,False
+639,641,What time is the game if possible,UNKNOWN_INTENT,evaluation_only,what time is the game if possible,what time is the game if possible,False,False,0.25,False,False
+649,651,Find a cinema,UNKNOWN_INTENT,evaluation_only,find a cinema,find a cinema,False,False,0.4,False,False
+661,663,What's the capital of japan,UNKNOWN_INTENT,evaluation_only,what s the capital of japan,what s the capital of japan,False,False,0.18181818181818182,False,False
+669,671,Renew my passport if possible,UNKNOWN_INTENT,evaluation_only,renew my passport if possible,renew my passport if possible,False,False,0.42857142857142855,False,False
+684,686,Tell me a joke,UNKNOWN_INTENT,evaluation_only,tell me a joke,tell me a joke,False,False,0.2857142857142857,False,False
+698,700,Turn on the lights?,UNKNOWN_INTENT,evaluation_only,turn on the lights,turn on the lights,False,False,0.2857142857142857,False,False
+728,730,Buy me a phone,UNKNOWN_INTENT,evaluation_only,buy me a phone,buy me a phone,False,False,0.3333333333333333,False,False
+734,736,What's the exchange rate,UNKNOWN_INTENT,evaluation_only,what s the exchange rate,what s the exchange rate,False,False,0.2,False,False
+750,752,What's the exchange rate please,UNKNOWN_INTENT,evaluation_only,what s the exchange rate please,what s the exchange rate please,False,False,0.2,False,False
+751,753,Play music quickly,UNKNOWN_INTENT,evaluation_only,play music quickly,play music quickly,False,False,0.2,False,False
+760,762,Translate this to french,UNKNOWN_INTENT,evaluation_only,translate this to french,translate this to french,False,False,0.2222222222222222,False,False
+764,766,Order food please asap,UNKNOWN_INTENT,evaluation_only,order food please asap,order food please asap,False,False,0.3333333333333333,False,False
+769,771,Buy me a phone,UNKNOWN_INTENT,evaluation_only,buy me a phone,buy me a phone,False,False,0.3333333333333333,False,False
+795,797,Turn on the lights now,UNKNOWN_INTENT,evaluation_only,turn on the lights now,turn on the lights now,False,False,0.25,False,False
+806,808,Buy me a phone,UNKNOWN_INTENT,evaluation_only,buy me a phone,buy me a phone,False,False,0.3333333333333333,False,False
+813,815,Open youtube in sole,UNKNOWN_INTENT,evaluation_only,open youtube in sole,open youtube in sole,False,False,0.5,False,False
+870,872,Find a cinema please,UNKNOWN_INTENT,evaluation_only,find a cinema please,find a cinema please,False,False,0.3333333333333333,False,False
+874,876,Order food quickly,UNKNOWN_INTENT,evaluation_only,order food quickly,order food quickly,False,False,0.2,False,False
+875,877,Book a taxi,UNKNOWN_INTENT,evaluation_only,book a taxi,book a taxi,False,False,0.2,False,False
+876,878,Predict the lottery,UNKNOWN_INTENT,evaluation_only,predict the lottery,predict the lottery,False,False,0.16666666666666666,False,False
+885,887,Set an alarm,UNKNOWN_INTENT,evaluation_only,set an alarm,set an alarm,False,False,0.14285714285714285,False,False
+904,906,Order food please if possible,UNKNOWN_INTENT,evaluation_only,order food please if possible,order food please if possible,False,False,0.42857142857142855,False,False
+906,908,Play music,UNKNOWN_INTENT,evaluation_only,play music,play music,False,False,0.0,False,False
+917,919,Open youtube?,UNKNOWN_INTENT,evaluation_only,open youtube,open youtube,False,False,0.3333333333333333,False,False
+918,920,What's on tv,UNKNOWN_INTENT,evaluation_only,what s on tv,what s on tv,False,False,0.14285714285714285,False,False
+938,940,Where is the nearest beach? asap,UNKNOWN_INTENT,evaluation_only,where is the nearest beach asap,where is the nearest beach asap,False,False,0.16666666666666666,False,False
+952,954,Play music,UNKNOWN_INTENT,evaluation_only,play music,play music,False,False,0.0,False,False
+980,982,Play music,UNKNOWN_INTENT,evaluation_only,play music,play music,False,False,0.0,False,False
+986,988,Book a flight,UNKNOWN_INTENT,evaluation_only,book a flight,book a flight,False,False,0.2,False,False
+1001,1003,Book a flight?,UNKNOWN_INTENT,evaluation_only,book a flight,book a flight,False,False,0.2,False,False
+1016,1018,Write my homework,UNKNOWN_INTENT,evaluation_only,write my homework,write my homework,False,False,0.25,False,False
+1020,1022,Where is the nearest beach?,UNKNOWN_INTENT,evaluation_only,where is the nearest beach,where is the nearest beach,False,False,0.18181818181818182,False,False
+1023,1025,How tall is mount everest?,UNKNOWN_INTENT,evaluation_only,how tall is mount everest,how tall is mount everest,False,False,0.25,False,False
+1024,1026,Turn on the lights,UNKNOWN_INTENT,evaluation_only,turn on the lights,turn on the lights,False,False,0.2857142857142857,False,False
+1040,1042,Play music,UNKNOWN_INTENT,evaluation_only,play music,play music,False,False,0.0,False,False
+1043,1045,What's the exchange rate please on sole,UNKNOWN_INTENT,evaluation_only,what s the exchange rate please on sole,what s the exchange rate please on sole,False,False,0.3,False,False
+1055,1057,Order food please,UNKNOWN_INTENT,evaluation_only,order food please,order food please,False,False,0.2,False,False
+1079,1081,Open youtube now,UNKNOWN_INTENT,evaluation_only,open youtube now,open youtube now,False,False,0.4,False,False
+1099,1101,Book a flight,UNKNOWN_INTENT,evaluation_only,book a flight,book a flight,False,False,0.2,False,False
+1101,1103,Find a curry recipe,UNKNOWN_INTENT,evaluation_only,find a curry recipe,find a curry recipe,False,False,0.3333333333333333,False,False
+1117,1119,Find a cinema please on sole,UNKNOWN_INTENT,evaluation_only,find a cinema please on sole,find a cinema please on sole,False,False,0.375,False,False
+1134,1136,Predict the lottery,UNKNOWN_INTENT,evaluation_only,predict the lottery,predict the lottery,False,False,0.16666666666666666,False,False
+1162,1164,Write my homework now,UNKNOWN_INTENT,evaluation_only,write my homework now,write my homework now,False,False,0.3333333333333333,False,False
+1164,1166,Predict the lottery,UNKNOWN_INTENT,evaluation_only,predict the lottery,predict the lottery,False,False,0.16666666666666666,False,False
+1177,1179,Who won the rugby please on sole,UNKNOWN_INTENT,evaluation_only,who won the rugby please on sole,who won the rugby please on sole,False,False,0.3333333333333333,False,False
+1191,1193,Play music,UNKNOWN_INTENT,evaluation_only,play music,play music,False,False,0.0,False,False
+1193,1195,What's on tv,UNKNOWN_INTENT,evaluation_only,what s on tv,what s on tv,False,False,0.14285714285714285,False,False
+1194,1196,What's the exchange rate,UNKNOWN_INTENT,evaluation_only,what s the exchange rate,what s the exchange rate,False,False,0.2,False,False
+1195,1197,Buy me a phone quickly,UNKNOWN_INTENT,evaluation_only,buy me a phone quickly,buy me a phone quickly,False,False,0.2857142857142857,False,False
+1196,1198,Who won the rugby please,UNKNOWN_INTENT,evaluation_only,who won the rugby please,who won the rugby please,False,False,0.25,False,False
+1205,1207,Set an alarm?,UNKNOWN_INTENT,evaluation_only,set an alarm,set an alarm,False,False,0.14285714285714285,False,False
+1231,1233,Who won the rugby,UNKNOWN_INTENT,evaluation_only,who won the rugby,who won the rugby,False,False,0.2857142857142857,False,False
+1233,1235,Find a cinema please,UNKNOWN_INTENT,evaluation_only,find a cinema please,find a cinema please,False,False,0.3333333333333333,False,False
+1245,1247,Translate this to french now,UNKNOWN_INTENT,evaluation_only,translate this to french now,translate this to french now,False,False,0.2222222222222222,False,False
+1249,1251,Play music asap,UNKNOWN_INTENT,evaluation_only,play music asap,play music asap,False,False,0.2,False,False
+1265,1267,Find a cinema please asap,UNKNOWN_INTENT,evaluation_only,find a cinema please asap,find a cinema please asap,False,False,0.2857142857142857,False,False
+1268,1270,Where is the nearest beach?,UNKNOWN_INTENT,evaluation_only,where is the nearest beach,where is the nearest beach,False,False,0.18181818181818182,False,False
+1295,1297,Renew my passport on the app,UNKNOWN_INTENT,evaluation_only,renew my passport on the app,renew my passport on the app,False,False,0.5714285714285714,False,False
+1297,1299,Book a taxi,UNKNOWN_INTENT,evaluation_only,book a taxi,book a taxi,False,False,0.2,False,False
+1300,1302,What's the exchange rate please asap,UNKNOWN_INTENT,evaluation_only,what s the exchange rate please asap,what s the exchange rate please asap,False,False,0.2222222222222222,False,False
+1308,1310,How tall is mount everest on my account,UNKNOWN_INTENT,evaluation_only,how tall is mount everest on my account,how tall is mount everest on my account,False,False,0.4166666666666667,False,False
+1310,1312,Where is the nearest beach?,UNKNOWN_INTENT,evaluation_only,where is the nearest beach,where is the nearest beach,False,False,0.18181818181818182,False,False
+1314,1316,What's the exchange rate please,UNKNOWN_INTENT,evaluation_only,what s the exchange rate please,what s the exchange rate please,False,False,0.2,False,False
+1329,1331,What's on tv,UNKNOWN_INTENT,evaluation_only,what s on tv,what s on tv,False,False,0.14285714285714285,False,False
+1333,1335,Tell me a joke,UNKNOWN_INTENT,evaluation_only,tell me a joke,tell me a joke,False,False,0.2857142857142857,False,False
+1336,1338,Who won the rugby,UNKNOWN_INTENT,evaluation_only,who won the rugby,who won the rugby,False,False,0.2857142857142857,False,False
+1344,1346,Renew my passport,UNKNOWN_INTENT,evaluation_only,renew my passport,renew my passport,False,False,0.25,False,False
+1345,1347,How tall is mount everest? asap,UNKNOWN_INTENT,evaluation_only,how tall is mount everest asap,how tall is mount everest asap,False,False,0.2222222222222222,False,False
+1372,1374,Order food on my account,UNKNOWN_INTENT,evaluation_only,order food on my account,order food on my account,False,False,0.5,False,False
+1379,1381,Tell me a joke quickly,UNKNOWN_INTENT,evaluation_only,tell me a joke quickly,tell me a joke quickly,False,False,0.375,False,False
+1408,1410,Who won the rugby please,UNKNOWN_INTENT,evaluation_only,who won the rugby please,who won the rugby please,False,False,0.25,False,False
+1418,1420,What's the exchange rate on the app,UNKNOWN_INTENT,evaluation_only,what s the exchange rate on the app,what s the exchange rate on the app,False,False,0.3333333333333333,False,False
+1422,1424,Tell me a joke now,UNKNOWN_INTENT,evaluation_only,tell me a joke now,tell me a joke now,False,False,0.25,False,False
+1423,1425,Tell me a joke?,UNKNOWN_INTENT,evaluation_only,tell me a joke,tell me a joke,False,False,0.2857142857142857,False,False
+1433,1435,Book a flight,UNKNOWN_INTENT,evaluation_only,book a flight,book a flight,False,False,0.2,False,False
+1449,1451,What's the exchange rate please if possible,UNKNOWN_INTENT,evaluation_only,what s the exchange rate please if possible,what s the exchange rate please if possible,False,False,0.3,False,False
+1451,1453,What's the weather,UNKNOWN_INTENT,evaluation_only,what s the weather,what s the weather,False,False,0.2222222222222222,False,False
+1456,1458,Play music now,UNKNOWN_INTENT,evaluation_only,play music now,play music now,False,False,0.2,False,False
+1464,1466,Where is the nearest beach? quickly,UNKNOWN_INTENT,evaluation_only,where is the nearest beach quickly,where is the nearest beach quickly,False,False,0.2,False,False
+1471,1473,Book a taxi on sole,UNKNOWN_INTENT,evaluation_only,book a taxi on sole,book a taxi on sole,False,False,0.2857142857142857,False,False
+1474,1476,Tell me a story?,UNKNOWN_INTENT,evaluation_only,tell me a story,tell me a story,False,False,0.2857142857142857,False,False
+1491,1493,What's the capital of japan,UNKNOWN_INTENT,evaluation_only,what s the capital of japan,what s the capital of japan,False,False,0.18181818181818182,False,False
+1493,1495,Where is the nearest beach? if possible,UNKNOWN_INTENT,evaluation_only,where is the nearest beach if possible,where is the nearest beach if possible,False,False,0.25,False,False
+1503,1505,Book a taxi,UNKNOWN_INTENT,evaluation_only,book a taxi,book a taxi,False,False,0.2,False,False
+1505,1507,Turn on the lights,UNKNOWN_INTENT,evaluation_only,turn on the lights,turn on the lights,False,False,0.2857142857142857,False,False
+1506,1508,Buy me a phone now,UNKNOWN_INTENT,evaluation_only,buy me a phone now,buy me a phone now,False,False,0.2857142857142857,False,False
+1516,1518,Buy me a phone,UNKNOWN_INTENT,evaluation_only,buy me a phone,buy me a phone,False,False,0.3333333333333333,False,False
+1523,1525,Write my homework?,UNKNOWN_INTENT,evaluation_only,write my homework,write my homework,False,False,0.25,False,False
+1567,1569,Predict the lottery please on my account,UNKNOWN_INTENT,evaluation_only,predict the lottery please on my account,predict the lottery please on my account,False,False,0.375,False,False
+1571,1573,What's on tv,UNKNOWN_INTENT,evaluation_only,what s on tv,what s on tv,False,False,0.14285714285714285,False,False
+1576,1578,Book a taxi on my account,UNKNOWN_INTENT,evaluation_only,book a taxi on my account,book a taxi on my account,False,False,0.42857142857142855,False,False
+1599,1601,Buy me a phone?,UNKNOWN_INTENT,evaluation_only,buy me a phone,buy me a phone,False,False,0.3333333333333333,False,False
+1605,1607,What time is the game?,UNKNOWN_INTENT,evaluation_only,what time is the game,what time is the game,False,False,0.2,False,False
+1609,1611,Buy me a phone quickly at the moment,UNKNOWN_INTENT,evaluation_only,buy me a phone quickly at the moment,buy me a phone quickly at the moment,False,False,0.36363636363636365,False,False
+1618,1620,Predict the lottery?,UNKNOWN_INTENT,evaluation_only,predict the lottery,predict the lottery,False,False,0.16666666666666666,False,False
+1632,1634,Find a cinema?,UNKNOWN_INTENT,evaluation_only,find a cinema,find a cinema,False,False,0.4,False,False
+1640,1642,Translate this to french?,UNKNOWN_INTENT,evaluation_only,translate this to french,translate this to french,False,False,0.2222222222222222,False,False
+1647,1649,Tell me a story,UNKNOWN_INTENT,evaluation_only,tell me a story,tell me a story,False,False,0.2857142857142857,False,False
+1662,1664,What's the capital of japan in sole,UNKNOWN_INTENT,evaluation_only,what s the capital of japan in sole,what s the capital of japan in sole,False,False,0.21428571428571427,False,False
+1665,1667,What's the exchange rate,UNKNOWN_INTENT,evaluation_only,what s the exchange rate,what s the exchange rate,False,False,0.2,False,False
+1666,1668,Open youtube asap,UNKNOWN_INTENT,evaluation_only,open youtube asap,open youtube asap,False,False,0.25,False,False
+1685,1687,Predict the lottery,UNKNOWN_INTENT,evaluation_only,predict the lottery,predict the lottery,False,False,0.16666666666666666,False,False
+1686,1688,Turn on the lights at the moment,UNKNOWN_INTENT,evaluation_only,turn on the lights at the moment,turn on the lights at the moment,False,False,0.4444444444444444,False,False
+1705,1707,What's the exchange rate please,UNKNOWN_INTENT,evaluation_only,what s the exchange rate please,what s the exchange rate please,False,False,0.2,False,False
+1740,1742,Play music asap this time,UNKNOWN_INTENT,evaluation_only,play music asap this time,play music asap this time,False,False,0.2857142857142857,False,False
+1743,1745,Tell me a joke please on the app,UNKNOWN_INTENT,evaluation_only,tell me a joke please on the app,tell me a joke please on the app,False,False,0.3333333333333333,False,False
+1747,1749,Translate this to french,UNKNOWN_INTENT,evaluation_only,translate this to french,translate this to french,False,False,0.2222222222222222,False,False
+1752,1754,Translate this to french,UNKNOWN_INTENT,evaluation_only,translate this to french,translate this to french,False,False,0.2222222222222222,False,False
+1758,1760,Set an alarm if possible,UNKNOWN_INTENT,evaluation_only,set an alarm if possible,set an alarm if possible,False,False,0.2857142857142857,False,False
+1759,1761,What's the exchange rate please quickly,UNKNOWN_INTENT,evaluation_only,what s the exchange rate please quickly,what s the exchange rate please quickly,False,False,0.2222222222222222,False,False
+1767,1769,Turn on the lights,UNKNOWN_INTENT,evaluation_only,turn on the lights,turn on the lights,False,False,0.2857142857142857,False,False
+1788,1790,Set an alarm,UNKNOWN_INTENT,evaluation_only,set an alarm,set an alarm,False,False,0.14285714285714285,False,False
+1789,1791,Open youtube if possible,UNKNOWN_INTENT,evaluation_only,open youtube if possible,open youtube if possible,False,False,0.3333333333333333,False,False
+1790,1792,Write my homework at the moment,UNKNOWN_INTENT,evaluation_only,write my homework at the moment,write my homework at the moment,False,False,0.5,False,False
+1794,1796,Open youtube,UNKNOWN_INTENT,evaluation_only,open youtube,open youtube,False,False,0.3333333333333333,False,False
+1807,1809,Play music,UNKNOWN_INTENT,evaluation_only,play music,play music,False,False,0.0,False,False
+1818,1820,Play music quickly,UNKNOWN_INTENT,evaluation_only,play music quickly,play music quickly,False,False,0.2,False,False
+1824,1826,What's the weather in sole,UNKNOWN_INTENT,evaluation_only,what s the weather in sole,what s the weather in sole,False,False,0.25,False,False
+1828,1830,Translate this to french quickly,UNKNOWN_INTENT,evaluation_only,translate this to french quickly,translate this to french quickly,False,False,0.2,False,False
+1831,1833,Book a taxi if possible,UNKNOWN_INTENT,evaluation_only,book a taxi if possible,book a taxi if possible,False,False,0.3,False,False
+1844,1846,Buy me a phone,UNKNOWN_INTENT,evaluation_only,buy me a phone,buy me a phone,False,False,0.3333333333333333,False,False
+1859,1861,How tall is mount everest?,UNKNOWN_INTENT,evaluation_only,how tall is mount everest,how tall is mount everest,False,False,0.25,False,False
+1861,1863,Find a cinema please,UNKNOWN_INTENT,evaluation_only,find a cinema please,find a cinema please,False,False,0.3333333333333333,False,False
+1883,1885,Find a hotel,UNKNOWN_INTENT,evaluation_only,find a hotel,find a hotel,False,False,0.4,False,False
+1888,1890,Renew my passport on sole,UNKNOWN_INTENT,evaluation_only,renew my passport on sole,renew my passport on sole,False,False,0.42857142857142855,False,False
+1889,1891,Renew my passport,UNKNOWN_INTENT,evaluation_only,renew my passport,renew my passport,False,False,0.25,False,False
+1891,1893,Predict the lottery,UNKNOWN_INTENT,evaluation_only,predict the lottery,predict the lottery,False,False,0.16666666666666666,False,False
+1921,1923,What's the exchange rate please,UNKNOWN_INTENT,evaluation_only,what s the exchange rate please,what s the exchange rate please,False,False,0.2,False,False
+1927,1929,Find a hotel,UNKNOWN_INTENT,evaluation_only,find a hotel,find a hotel,False,False,0.4,False,False
+1936,1938,Play music,UNKNOWN_INTENT,evaluation_only,play music,play music,False,False,0.0,False,False
+1944,1946,Tell me a joke on sole,UNKNOWN_INTENT,evaluation_only,tell me a joke on sole,tell me a joke on sole,False,False,0.25,False,False
+1945,1947,Where is the nearest beach,UNKNOWN_INTENT,evaluation_only,where is the nearest beach,where is the nearest beach,False,False,0.18181818181818182,False,False
+1955,1957,Find a cinema please now,UNKNOWN_INTENT,evaluation_only,find a cinema please now,find a cinema please now,False,False,0.2857142857142857,False,False
+1976,1978,What's on tv this time,UNKNOWN_INTENT,evaluation_only,what s on tv this time,what s on tv this time,False,False,0.25,False,False
+1977,1979,Renew my passport,UNKNOWN_INTENT,evaluation_only,renew my passport,renew my passport,False,False,0.25,False,False
+1990,1992,Where is the nearest beach? on sole,UNKNOWN_INTENT,evaluation_only,where is the nearest beach on sole,where is the nearest beach on sole,False,False,0.25,False,False
+2002,2004,Predict the lottery now,UNKNOWN_INTENT,evaluation_only,predict the lottery now,predict the lottery now,False,False,0.2,False,False
+2007,2009,Buy me a phone,UNKNOWN_INTENT,evaluation_only,buy me a phone,buy me a phone,False,False,0.3333333333333333,False,False
+2014,2016,How tall is mount everest?,UNKNOWN_INTENT,evaluation_only,how tall is mount everest,how tall is mount everest,False,False,0.25,False,False
+2020,2022,Find a cinema please,UNKNOWN_INTENT,evaluation_only,find a cinema please,find a cinema please,False,False,0.3333333333333333,False,False
+2028,2030,Tell me a joke,UNKNOWN_INTENT,evaluation_only,tell me a joke,tell me a joke,False,False,0.2857142857142857,False,False
+2044,2046,Set an alarm,UNKNOWN_INTENT,evaluation_only,set an alarm,set an alarm,False,False,0.14285714285714285,False,False
+2060,2062,Play music please,UNKNOWN_INTENT,evaluation_only,play music please,play music please,False,False,0.2,False,False
+2072,2074,Open youtube,UNKNOWN_INTENT,evaluation_only,open youtube,open youtube,False,False,0.3333333333333333,False,False
+2085,2087,What's the exchange rate?,UNKNOWN_INTENT,evaluation_only,what s the exchange rate,what s the exchange rate,False,False,0.2,False,False
+2086,2088,How tall is mount everest,UNKNOWN_INTENT,evaluation_only,how tall is mount everest,how tall is mount everest,False,False,0.25,False,False
+2105,2107,Set an alarm,UNKNOWN_INTENT,evaluation_only,set an alarm,set an alarm,False,False,0.14285714285714285,False,False
+2122,2124,Translate this to french on sole,UNKNOWN_INTENT,evaluation_only,translate this to french on sole,translate this to french on sole,False,False,0.25,False,False
+2144,2146,Open youtube,UNKNOWN_INTENT,evaluation_only,open youtube,open youtube,False,False,0.3333333333333333,False,False
+2145,2147,How tall is mount everest?,UNKNOWN_INTENT,evaluation_only,how tall is mount everest,how tall is mount everest,False,False,0.25,False,False
+2147,2149,What's the weather?,UNKNOWN_INTENT,evaluation_only,what s the weather,what s the weather,False,False,0.2222222222222222,False,False
+2150,2152,What's the exchange rate please now,UNKNOWN_INTENT,evaluation_only,what s the exchange rate please now,what s the exchange rate please now,False,False,0.2222222222222222,False,False
+2153,2155,Translate this to french this time,UNKNOWN_INTENT,evaluation_only,translate this to french this time,translate this to french this time,False,False,0.3333333333333333,False,False
+2155,2157,Translate this to french today on my account,UNKNOWN_INTENT,evaluation_only,translate this to french today on my account,translate this to french today on my account,False,False,0.4,False,False
+2201,2203,Find a cinema please quickly,UNKNOWN_INTENT,evaluation_only,find a cinema please quickly,find a cinema please quickly,False,False,0.2857142857142857,False,False
+2218,2220,How tall is mount everest,UNKNOWN_INTENT,evaluation_only,how tall is mount everest,how tall is mount everest,False,False,0.25,False,False
+2223,2225,Tell me a story,UNKNOWN_INTENT,evaluation_only,tell me a story,tell me a story,False,False,0.2857142857142857,False,False
+2227,2229,How tall is mount everest? quickly,UNKNOWN_INTENT,evaluation_only,how tall is mount everest quickly,how tall is mount everest quickly,False,False,0.3333333333333333,False,False
+2237,2239,Book a flight on the app,UNKNOWN_INTENT,evaluation_only,book a flight on the app,book a flight on the app,False,False,0.375,False,False
+2239,2241,Predict the lottery thanks on the app,UNKNOWN_INTENT,evaluation_only,predict the lottery thanks on the app,predict the lottery thanks on the app,False,False,0.375,False,False
+2251,2253,How tall is mount everest?,UNKNOWN_INTENT,evaluation_only,how tall is mount everest,how tall is mount everest,False,False,0.25,False,False
+2258,2260,Tell me a story on the app,UNKNOWN_INTENT,evaluation_only,tell me a story on the app,tell me a story on the app,False,False,0.36363636363636365,False,False
+2297,2299,Who won the rugby,UNKNOWN_INTENT,evaluation_only,who won the rugby,who won the rugby,False,False,0.2857142857142857,False,False
+2299,2301,Find a cinema please,UNKNOWN_INTENT,evaluation_only,find a cinema please,find a cinema please,False,False,0.3333333333333333,False,False
+2301,2303,What time is the game at the moment,UNKNOWN_INTENT,evaluation_only,what time is the game at the moment,what time is the game at the moment,False,False,0.36363636363636365,False,False
+2312,2314,Buy me a phone if possible,UNKNOWN_INTENT,evaluation_only,buy me a phone if possible,buy me a phone if possible,False,False,0.3333333333333333,False,False
+2316,2318,Find a cinema,UNKNOWN_INTENT,evaluation_only,find a cinema,find a cinema,False,False,0.4,False,False
+2332,2334,Book a flight,UNKNOWN_INTENT,evaluation_only,book a flight,book a flight,False,False,0.2,False,False
+2340,2342,What's the weather on my account,UNKNOWN_INTENT,evaluation_only,what s the weather on my account,what s the weather on my account,False,False,0.375,False,False
+2343,2345,Where is the nearest beach on the app,UNKNOWN_INTENT,evaluation_only,where is the nearest beach on the app,where is the nearest beach on the app,False,False,0.3333333333333333,False,False
+2351,2353,What's the weather now,UNKNOWN_INTENT,evaluation_only,what s the weather now,what s the weather now,False,False,0.2,False,False
+2361,2363,Who won the rugby please if possible,UNKNOWN_INTENT,evaluation_only,who won the rugby please if possible,who won the rugby please if possible,False,False,0.3333333333333333,False,False
+2362,2364,What's the weather,UNKNOWN_INTENT,evaluation_only,what s the weather,what s the weather,False,False,0.2222222222222222,False,False
+2376,2378,Renew my passport please,UNKNOWN_INTENT,evaluation_only,renew my passport please,renew my passport please,False,False,0.2857142857142857,False,False
+2384,2386,What time is the game,UNKNOWN_INTENT,evaluation_only,what time is the game,what time is the game,False,False,0.2,False,False
+2387,2389,Buy me a phone in sole,UNKNOWN_INTENT,evaluation_only,buy me a phone in sole,buy me a phone in sole,False,False,0.25,False,False
+2394,2396,How tall is mount everest if possible,UNKNOWN_INTENT,evaluation_only,how tall is mount everest if possible,how tall is mount everest if possible,False,False,0.3333333333333333,False,False
+2409,2411,Play music today on the app,UNKNOWN_INTENT,evaluation_only,play music today on the app,play music today on the app,False,False,0.375,False,False
+2417,2419,Write my homework,UNKNOWN_INTENT,evaluation_only,write my homework,write my homework,False,False,0.25,False,False
+2418,2420,Tell me a joke on my account,UNKNOWN_INTENT,evaluation_only,tell me a joke on my account,tell me a joke on my account,False,False,0.4,False,False
+2419,2421,Tell me a story,UNKNOWN_INTENT,evaluation_only,tell me a story,tell me a story,False,False,0.2857142857142857,False,False
+2422,2424,Play music right now,UNKNOWN_INTENT,evaluation_only,play music right now,play music right now,False,False,0.2,False,False
+2439,2441,Find a curry recipe in sole,UNKNOWN_INTENT,evaluation_only,find a curry recipe in sole,find a curry recipe in sole,False,False,0.3333333333333333,False,False
+2440,2442,Tell me a joke,UNKNOWN_INTENT,evaluation_only,tell me a joke,tell me a joke,False,False,0.2857142857142857,False,False
+2444,2446,What's the capital of japan,UNKNOWN_INTENT,evaluation_only,what s the capital of japan,what s the capital of japan,False,False,0.18181818181818182,False,False
+2447,2449,Find a cinema,UNKNOWN_INTENT,evaluation_only,find a cinema,find a cinema,False,False,0.4,False,False
+2451,2453,Translate this to french,UNKNOWN_INTENT,evaluation_only,translate this to french,translate this to french,False,False,0.2222222222222222,False,False
+2456,2458,Book a taxi asap,UNKNOWN_INTENT,evaluation_only,book a taxi asap,book a taxi asap,False,False,0.16666666666666666,False,False
+2470,2472,Play music please,UNKNOWN_INTENT,evaluation_only,play music please,play music please,False,False,0.2,False,False
+2472,2474,Find a curry recipe now,UNKNOWN_INTENT,evaluation_only,find a curry recipe now,find a curry recipe now,False,False,0.2857142857142857,False,False
+2473,2475,Open youtube,UNKNOWN_INTENT,evaluation_only,open youtube,open youtube,False,False,0.3333333333333333,False,False
+2492,2494,Tell me a joke asap,UNKNOWN_INTENT,evaluation_only,tell me a joke asap,tell me a joke asap,False,False,0.25,False,False
+2495,2497,Where is the nearest beach?,UNKNOWN_INTENT,evaluation_only,where is the nearest beach,where is the nearest beach,False,False,0.18181818181818182,False,False
+2528,2530,Buy me a phone please,UNKNOWN_INTENT,evaluation_only,buy me a phone please,buy me a phone please,False,False,0.2857142857142857,False,False
+2536,2538,Play music now at the moment,UNKNOWN_INTENT,evaluation_only,play music now at the moment,play music now at the moment,False,False,0.375,False,False
+2539,2541,Find a cinema on the app,UNKNOWN_INTENT,evaluation_only,find a cinema on the app,find a cinema on the app,False,False,0.5,False,False
+2544,2546,Turn on the lights asap,UNKNOWN_INTENT,evaluation_only,turn on the lights asap,turn on the lights asap,False,False,0.25,False,False
+2552,2554,What's the capital of japan,UNKNOWN_INTENT,evaluation_only,what s the capital of japan,what s the capital of japan,False,False,0.18181818181818182,False,False
+2555,2557,Play music on sole,UNKNOWN_INTENT,evaluation_only,play music on sole,play music on sole,False,False,0.3333333333333333,False,False
+2560,2562,Turn on the lights,UNKNOWN_INTENT,evaluation_only,turn on the lights,turn on the lights,False,False,0.2857142857142857,False,False
+2568,2570,Find a hotel?,UNKNOWN_INTENT,evaluation_only,find a hotel,find a hotel,False,False,0.4,False,False
+2572,2574,Find a curry recipe?,UNKNOWN_INTENT,evaluation_only,find a curry recipe,find a curry recipe,False,False,0.3333333333333333,False,False
+2581,2583,Where is the nearest beach at the moment,UNKNOWN_INTENT,evaluation_only,where is the nearest beach at the moment,where is the nearest beach at the moment,False,False,0.36363636363636365,False,False
+2596,2598,Play music if possible,UNKNOWN_INTENT,evaluation_only,play music if possible,play music if possible,False,False,0.3333333333333333,False,False
+2599,2601,Renew my passport now now,UNKNOWN_INTENT,evaluation_only,renew my passport now now,renew my passport now now,False,False,0.3333333333333333,False,False
+2604,2606,Buy me a phone at the moment,UNKNOWN_INTENT,evaluation_only,buy me a phone at the moment,buy me a phone at the moment,False,False,0.4,False,False
+2629,2631,What's on tv?,UNKNOWN_INTENT,evaluation_only,what s on tv,what s on tv,False,False,0.14285714285714285,False,False
+2654,2656,Open youtube,UNKNOWN_INTENT,evaluation_only,open youtube,open youtube,False,False,0.3333333333333333,False,False
+2658,2660,What's the exchange rate please,UNKNOWN_INTENT,evaluation_only,what s the exchange rate please,what s the exchange rate please,False,False,0.2,False,False
+2659,2661,Book a taxi on the app,UNKNOWN_INTENT,evaluation_only,book a taxi on the app,book a taxi on the app,False,False,0.375,False,False
+2669,2671,Turn on the lights this time,UNKNOWN_INTENT,evaluation_only,turn on the lights this time,turn on the lights this time,False,False,0.25,False,False
+2678,2680,Order food please,UNKNOWN_INTENT,evaluation_only,order food please,order food please,False,False,0.2,False,False
+2687,2689,What time is the game in sole,UNKNOWN_INTENT,evaluation_only,what time is the game in sole,what time is the game in sole,False,False,0.2727272727272727,False,False
+2689,2691,Find a hotel,UNKNOWN_INTENT,evaluation_only,find a hotel,find a hotel,False,False,0.4,False,False
+2693,2695,Who won the rugby please now,UNKNOWN_INTENT,evaluation_only,who won the rugby please now,who won the rugby please now,False,False,0.2727272727272727,False,False
+2699,2701,Book a taxi right now on my account,UNKNOWN_INTENT,evaluation_only,book a taxi right now on my account,book a taxi right now on my account,False,False,0.36363636363636365,False,False
+2718,2720,Play music if possible,UNKNOWN_INTENT,evaluation_only,play music if possible,play music if possible,False,False,0.3333333333333333,False,False
+2734,2736,Open youtube on sole,UNKNOWN_INTENT,evaluation_only,open youtube on sole,open youtube on sole,False,False,0.3333333333333333,False,False
+2736,2738,Where is the nearest beach,UNKNOWN_INTENT,evaluation_only,where is the nearest beach,where is the nearest beach,False,False,0.18181818181818182,False,False
+2737,2739,Book a taxi,UNKNOWN_INTENT,evaluation_only,book a taxi,book a taxi,False,False,0.2,False,False
+2757,2759,Find a hotel on the app,UNKNOWN_INTENT,evaluation_only,find a hotel on the app,find a hotel on the app,False,False,0.5,False,False
+2765,2767,Translate this to french please in sole,UNKNOWN_INTENT,evaluation_only,translate this to french please in sole,translate this to french please in sole,False,False,0.3333333333333333,False,False
+2783,2785,Open youtube quickly,UNKNOWN_INTENT,evaluation_only,open youtube quickly,open youtube quickly,False,False,0.25,False,False
+2791,2793,Find a hotel,UNKNOWN_INTENT,evaluation_only,find a hotel,find a hotel,False,False,0.4,False,False
+2805,2807,Order food now,UNKNOWN_INTENT,evaluation_only,order food now,order food now,False,False,0.2,False,False
+2812,2814,What's the exchange rate,UNKNOWN_INTENT,evaluation_only,what s the exchange rate,what s the exchange rate,False,False,0.2,False,False
+2819,2821,Who won the rugby please,UNKNOWN_INTENT,evaluation_only,who won the rugby please,who won the rugby please,False,False,0.25,False,False
+2839,2841,Play music on sole,UNKNOWN_INTENT,evaluation_only,play music on sole,play music on sole,False,False,0.3333333333333333,False,False
+2844,2846,Translate this to french,UNKNOWN_INTENT,evaluation_only,translate this to french,translate this to french,False,False,0.2222222222222222,False,False
+2860,2862,What's the exchange rate please on my account,UNKNOWN_INTENT,evaluation_only,what s the exchange rate please on my account,what s the exchange rate please on my account,False,False,0.3,False,False
+2868,2870,Book a taxi?,UNKNOWN_INTENT,evaluation_only,book a taxi,book a taxi,False,False,0.2,False,False
+2883,2885,Order food please,UNKNOWN_INTENT,evaluation_only,order food please,order food please,False,False,0.2,False,False
+2895,2897,Translate this to french asap,UNKNOWN_INTENT,evaluation_only,translate this to french asap,translate this to french asap,False,False,0.2,False,False
+2911,2913,Open youtube for me if possible,UNKNOWN_INTENT,evaluation_only,open youtube for me if possible,open youtube for me if possible,False,False,0.2727272727272727,False,False
+2917,2919,Turn on the lights,UNKNOWN_INTENT,evaluation_only,turn on the lights,turn on the lights,False,False,0.2857142857142857,False,False
+2921,2923,Order food please,UNKNOWN_INTENT,evaluation_only,order food please,order food please,False,False,0.2,False,False
+2951,2953,Turn on the lights please,UNKNOWN_INTENT,evaluation_only,turn on the lights please,turn on the lights please,False,False,0.25,False,False
+2954,2956,Translate this to french if possible,UNKNOWN_INTENT,evaluation_only,translate this to french if possible,translate this to french if possible,False,False,0.2727272727272727,False,False
+2966,2968,Translate this to french if possible,UNKNOWN_INTENT,evaluation_only,translate this to french if possible,translate this to french if possible,False,False,0.2727272727272727,False,False
+2977,2979,What's the capital of japan?,UNKNOWN_INTENT,evaluation_only,what s the capital of japan,what s the capital of japan,False,False,0.18181818181818182,False,False
+2985,2987,Order food please quickly,UNKNOWN_INTENT,evaluation_only,order food please quickly,order food please quickly,False,False,0.3333333333333333,False,False
+5,7,Recent transactions?,VIEW_TRANSACTIONS,test,recent transactions,recent transactions,False,False,0.3333333333333333,False,False
+11,13,Start a bill payment,BILL_PAY,test,start a bill payment,start a bill payment,False,False,0.5,False,False
+31,33,How much is available,CHECK_BALANCE,test,how much is available,how much is available,False,False,0.5,False,False
+44,46,Summarize my expenses,CHECK_SPENDING,test,summarize my expenses,summarize my expenses,False,False,0.25,False,False
+56,58,Withdraw 120 dollars,WITHDRAW_MONEY,test,withdraw 120 dollars,withdraw <num> dollars,False,False,0.4,False,False
+63,65,How much is available?,CHECK_BALANCE,test,how much is available,how much is available,False,False,0.5,False,False
+88,90,Show last 5 transactions,VIEW_TRANSACTIONS,test,show last 5 transactions,show last <num> transactions,False,True,0.6,False,True
+92,94,Withdraw 50 dollars,WITHDRAW_MONEY,test,withdraw 50 dollars,withdraw <num> dollars,False,False,0.6666666666666666,False,False
+100,102,How much is available now,CHECK_BALANCE,test,how much is available now,how much is available now,False,False,0.5714285714285714,False,False
+103,105,Help with my sole app,HELP_SUPPORT,test,help with my sole app,help with my sole app,False,False,0.2857142857142857,False,False
+110,112,Need customer service,HELP_SUPPORT,test,need customer service,need customer service,False,False,0.14285714285714285,False,False
+125,127,Can i pay waf,BILL_PAY,test,can i pay waf,can i pay waf,False,False,0.5,False,False
+129,131,Help with my sole app?,HELP_SUPPORT,test,help with my sole app,help with my sole app,False,False,0.2857142857142857,False,False
+143,145,Edit savenaca's details,MANAGE_CONTACTS,test,edit savenaca s details,edit savenaca s details,False,False,0.3333333333333333,False,False
+151,153,Edit adi's details,MANAGE_CONTACTS,test,edit adi s details,edit adi s details,False,False,0.3333333333333333,False,False
+155,157,Need customer service please now,HELP_SUPPORT,test,need customer service please now,need customer service please now,False,False,0.2857142857142857,False,False
+181,183,What's my balance please now,CHECK_BALANCE,test,what s my balance please now,what s my balance please now,False,False,0.3333333333333333,False,False
+183,185,View my recipient list?,MANAGE_CONTACTS,test,view my recipient list,view my recipient list,False,False,0.3333333333333333,False,False
+186,188,Send cash to jone,TRANSFER_MONEY,test,send cash to jone,send cash to jone,False,False,0.42857142857142855,False,False
+188,190,Send cash to peni,TRANSFER_MONEY,test,send cash to peni,send cash to peni,False,False,0.42857142857142855,False,False
+193,195,How much has church group saved?,VIEW_GROUP,test,how much has church group saved,how much has church group saved,False,False,0.375,False,False
+199,201,I have a complaint,HELP_SUPPORT,test,i have a complaint,i have a complaint,False,False,0.5,False,False
+208,210,How much has market vendors group saved,VIEW_GROUP,test,how much has market vendors group saved,how much has market vendors group saved,False,False,0.4444444444444444,False,False
+211,213,View my recipient list,MANAGE_CONTACTS,test,view my recipient list,view my recipient list,False,False,0.3333333333333333,False,False
+223,225,Show spending on shopping,CHECK_SPENDING,test,show spending on shopping,show spending on shopping,False,False,0.6,False,False
+225,227,Send cash to ravi,TRANSFER_MONEY,test,send cash to ravi,send cash to ravi,False,False,0.42857142857142855,False,False
+238,240,Show last 5 transactions in sole,VIEW_TRANSACTIONS,test,show last 5 transactions in sole,show last <num> transactions in sole,False,False,0.5,False,False
+239,241,Need customer service please,HELP_SUPPORT,test,need customer service please,need customer service please,False,False,0.16666666666666666,False,False
+244,246,View my recipient list,MANAGE_CONTACTS,test,view my recipient list,view my recipient list,False,False,0.3333333333333333,False,False
+264,266,Need customer service,HELP_SUPPORT,test,need customer service,need customer service,False,False,0.14285714285714285,False,False
+306,308,Check balance,CHECK_BALANCE,test,check balance,check balance,False,False,0.5,False,False
+311,313,Pay telecom,BILL_PAY,test,pay telecom,pay telecom,True,True,1.0,True,True
+314,316,Where is my statement,VIEW_TRANSACTIONS,test,where is my statement,where is my statement,False,False,0.2857142857142857,False,False
+343,345,I have a complaint,HELP_SUPPORT,test,i have a complaint,i have a complaint,False,False,0.5,False,False
+364,366,Where is my statement?,VIEW_TRANSACTIONS,test,where is my statement,where is my statement,False,False,0.2857142857142857,False,False
+382,384,Prepare a withdrawal,WITHDRAW_MONEY,test,prepare a withdrawal,prepare a withdrawal,False,False,0.25,False,False
+387,389,Withdraw 40 dollars,WITHDRAW_MONEY,test,withdraw 40 dollars,withdraw <num> dollars,False,False,0.4,False,False
+409,411,I owe joeli 100,TRANSFER_MONEY,test,i owe joeli 100,i owe joeli <num>,False,False,0.3333333333333333,False,False
+413,415,Edit savenaca's details,MANAGE_CONTACTS,test,edit savenaca s details,edit savenaca s details,False,False,0.3333333333333333,False,False
+421,423,Withdraw 20 dollars,WITHDRAW_MONEY,test,withdraw 20 dollars,withdraw <num> dollars,False,False,0.6666666666666666,False,False
+436,438,Send cash to asha,TRANSFER_MONEY,test,send cash to asha,send cash to asha,False,False,0.42857142857142855,False,False
+442,444,Pay waf,BILL_PAY,test,pay waf,pay waf,True,True,1.0,True,True
+464,466,Help with my sole app at the moment,HELP_SUPPORT,test,help with my sole app at the moment,help with my sole app at the moment,False,False,0.4,False,False
+474,476,Can i pay water,BILL_PAY,test,can i pay water,can i pay water,False,False,0.5,False,False
+476,478,View groupwealth,VIEW_GROUP,test,view groupwealth,view groupwealth,False,False,0.3333333333333333,False,False
+477,479,Pay waf?,BILL_PAY,test,pay waf,pay waf,True,True,1.0,True,True
+479,481,Withdraw 200 dollars?,WITHDRAW_MONEY,test,withdraw 200 dollars,withdraw <num> dollars,False,False,0.6666666666666666,False,False
+489,491,How much has church group saved,VIEW_GROUP,test,how much has church group saved,how much has church group saved,False,False,0.375,False,False
+493,495,I have a complaint?,HELP_SUPPORT,test,i have a complaint,i have a complaint,False,False,0.5,False,False
+496,498,Pay efl,BILL_PAY,test,pay efl,pay efl,True,True,1.0,True,True
+521,523,Withdraw 10 dollars?,WITHDRAW_MONEY,test,withdraw 10 dollars,withdraw <num> dollars,False,False,0.5,False,False
+526,528,Please send $100 to ravi,TRANSFER_MONEY,test,please send $ 100 to ravi,please send $ <num> to ravi,False,False,0.4444444444444444,False,False
+562,564,Show transactions,VIEW_TRANSACTIONS,test,show transactions,show transactions,True,True,1.0,True,True
+565,567,Need customer service,HELP_SUPPORT,test,need customer service,need customer service,False,False,0.14285714285714285,False,False
+566,568,Withdraw 60 dollars,WITHDRAW_MONEY,test,withdraw 60 dollars,withdraw <num> dollars,False,False,0.6666666666666666,False,False
+575,577,Where is my statement on my account,VIEW_TRANSACTIONS,test,where is my statement on my account,where is my statement on my account,False,False,0.42857142857142855,False,False
+591,593,Start a bill payment,BILL_PAY,test,start a bill payment,start a bill payment,False,False,0.5,False,False
+603,605,Help me send money to mika,TRANSFER_MONEY,test,help me send money to mika,help me send money to mika,False,False,0.5714285714285714,False,False
+607,609,View groupwealth,VIEW_GROUP,test,view groupwealth,view groupwealth,False,False,0.3333333333333333,False,False
+628,630,Total purchases this week,CHECK_SPENDING,test,total purchases this week,total purchases this week,False,False,0.6,False,False
+632,634,Total purchases last month,CHECK_SPENDING,test,total purchases last month,total purchases last month,False,False,0.6,False,False
+690,692,How do i cash out,WITHDRAW_MONEY,test,how do i cash out,how do i cash out,False,False,0.42857142857142855,False,False
+695,697,Edit john's details,MANAGE_CONTACTS,test,edit john s details,edit john s details,False,False,0.3333333333333333,False,False
+711,713,Go to family group,VIEW_GROUP,test,go to family group,go to family group,False,False,0.5,False,False
+730,732,Withdraw 80 dollars,WITHDRAW_MONEY,test,withdraw 80 dollars,withdraw <num> dollars,False,False,0.6666666666666666,False,False
+735,737,Recent transactions now,VIEW_TRANSACTIONS,test,recent transactions now,recent transactions now,False,False,0.25,False,False
+747,749,I owe tui $200,TRANSFER_MONEY,test,i owe tui $ 200,i owe tui $ <num>,False,False,0.42857142857142855,False,False
+752,754,Show savings balance,CHECK_BALANCE,test,show savings balance,show savings balance,False,False,0.6666666666666666,False,False
+768,770,Edit sera's details,MANAGE_CONTACTS,test,edit sera s details,edit sera s details,False,False,0.3333333333333333,False,False
+808,810,Check balance in sole,CHECK_BALANCE,test,check balance in sole,check balance in sole,False,False,0.6666666666666666,False,False
+809,811,Show spending on school,CHECK_SPENDING,test,show spending on school,show spending on school,False,False,0.6,False,False
+810,812,Withdraw 5 dollars,WITHDRAW_MONEY,test,withdraw 5 dollars,withdraw <num> dollars,False,False,0.6666666666666666,False,False
+822,824,Need customer service please,HELP_SUPPORT,test,need customer service please,need customer service please,False,False,0.16666666666666666,False,False
+829,831,Show expenditure summary,CHECK_SPENDING,test,show expenditure summary,show expenditure summary,False,False,0.25,False,False
+849,851,How much has rugby club group saved,VIEW_GROUP,test,how much has rugby club group saved,how much has rugby club group saved,False,False,0.4444444444444444,False,False
+852,854,Pay water,BILL_PAY,test,pay water,pay water,True,True,1.0,True,True
+857,859,Need customer service please,HELP_SUPPORT,test,need customer service please,need customer service please,False,False,0.16666666666666666,False,False
+859,861,I owe raj 120,TRANSFER_MONEY,test,i owe raj 120,i owe raj <num>,False,False,0.3333333333333333,False,False
+872,874,Need customer service?,HELP_SUPPORT,test,need customer service,need customer service,False,False,0.14285714285714285,False,False
+879,881,Help with my sole app on my account,HELP_SUPPORT,test,help with my sole app on my account,help with my sole app on my account,False,False,0.4444444444444444,False,False
+887,889,Help me send money to john,TRANSFER_MONEY,test,help me send money to john,help me send money to john,False,False,0.6666666666666666,False,False
+897,899,Show last 5 transactions on my account,VIEW_TRANSACTIONS,test,show last 5 transactions on my account,show last <num> transactions on my account,False,True,0.75,False,True
+907,909,Recent transactions,VIEW_TRANSACTIONS,test,recent transactions,recent transactions,False,False,0.3333333333333333,False,False
+909,911,What's my balance please on sole,CHECK_BALANCE,test,what s my balance please on sole,what s my balance please on sole,False,False,0.375,False,False
+929,931,Withdraw at an agent,WITHDRAW_MONEY,test,withdraw at an agent,withdraw at an agent,False,False,0.2,False,False
+941,943,View groupwealth now,VIEW_GROUP,test,view groupwealth now,view groupwealth now,False,False,0.25,False,False
+944,946,Help,HELP_SUPPORT,test,help,help,False,False,0.25,False,False
+954,956,View groupwealth,VIEW_GROUP,test,view groupwealth,view groupwealth,False,False,0.3333333333333333,False,False
+961,963,Summarize my expenses,CHECK_SPENDING,test,summarize my expenses,summarize my expenses,False,False,0.25,False,False
+963,965,Can i pay waf,BILL_PAY,test,can i pay waf,can i pay waf,False,False,0.5,False,False
+971,973,What's my balance,CHECK_BALANCE,test,what s my balance,what s my balance,False,False,0.5,False,False
+1000,1002,Edit litia's details?,MANAGE_CONTACTS,test,edit litia s details,edit litia s details,False,False,0.3333333333333333,False,False
+1011,1013,What's my balance,CHECK_BALANCE,test,what s my balance,what s my balance,False,False,0.5,False,False
+1021,1023,Withdraw 30 dollars,WITHDRAW_MONEY,test,withdraw 30 dollars,withdraw <num> dollars,False,False,0.6666666666666666,False,False
+1047,1049,What's my balance?,CHECK_BALANCE,test,what s my balance,what s my balance,False,False,0.5,False,False
+1050,1052,Show expenditure summary?,CHECK_SPENDING,test,show expenditure summary,show expenditure summary,False,False,0.25,False,False
+1054,1056,Total purchases over the weekend,CHECK_SPENDING,test,total purchases over the weekend,total purchases over the weekend,False,False,0.6666666666666666,False,False
+1059,1061,Show beneficiaries,MANAGE_CONTACTS,test,show beneficiaries,show beneficiaries,False,False,0.3333333333333333,False,False
+1070,1072,Show expenditure summary,CHECK_SPENDING,test,show expenditure summary,show expenditure summary,False,False,0.25,False,False
+1080,1082,How much has work group saved,VIEW_GROUP,test,how much has work group saved,how much has work group saved,False,False,0.375,False,False
+1082,1084,I owe mere 50,TRANSFER_MONEY,test,i owe mere 50,i owe mere <num>,False,False,0.2857142857142857,False,False
+1100,1102,Can i pay efl,BILL_PAY,test,can i pay efl,can i pay efl,False,False,0.5,False,False
+1113,1115,How much has village group saved,VIEW_GROUP,test,how much has village group saved,how much has village group saved,False,False,0.375,False,False
+1115,1117,Help?,HELP_SUPPORT,test,help,help,False,False,0.25,False,False
+1116,1118,Total purchases over the weekend,CHECK_SPENDING,test,total purchases over the weekend,total purchases over the weekend,False,False,0.6666666666666666,False,False
+1127,1129,I owe jone 80,TRANSFER_MONEY,test,i owe jone 80,i owe jone <num>,False,False,0.3333333333333333,False,False
+1135,1137,What's my balance please,CHECK_BALANCE,test,what s my balance please,what s my balance please,False,False,0.4,False,False
+1137,1139,Show transactions,VIEW_TRANSACTIONS,test,show transactions,show transactions,True,True,1.0,True,True
+1140,1142,Where is my statement,VIEW_TRANSACTIONS,test,where is my statement,where is my statement,False,False,0.2857142857142857,False,False
+1141,1143,Recent transactions,VIEW_TRANSACTIONS,test,recent transactions,recent transactions,False,False,0.3333333333333333,False,False
+1147,1149,How much has school group saved?,VIEW_GROUP,test,how much has school group saved,how much has school group saved,False,False,0.375,False,False
+1156,1158,Pay internet,BILL_PAY,test,pay internet,pay internet,True,True,1.0,True,True
+1199,1201,Edit mere's details,MANAGE_CONTACTS,test,edit mere s details,edit mere s details,False,False,0.3333333333333333,False,False
+1203,1205,Edit ana's details,MANAGE_CONTACTS,test,edit ana s details,edit ana s details,False,False,0.3333333333333333,False,False
+1210,1212,Total purchases since monday,CHECK_SPENDING,test,total purchases since monday,total purchases since monday,False,False,0.6,False,False
+1222,1224,Show spending on restaurants,CHECK_SPENDING,test,show spending on restaurants,show spending on restaurants,False,False,0.6,False,False
+1223,1225,What's my balance,CHECK_BALANCE,test,what s my balance,what s my balance,False,False,0.5,False,False
+1237,1239,Where is my statement this time,VIEW_TRANSACTIONS,test,where is my statement this time,where is my statement this time,False,False,0.4,False,False
+1259,1261,Show savings balance,CHECK_BALANCE,test,show savings balance,show savings balance,False,False,0.6666666666666666,False,False
+1261,1263,"Withdraw 1,000 dollars",WITHDRAW_MONEY,test,withdraw 1 000 dollars,withdraw <num> <num> dollars,False,False,0.75,False,False
+1285,1287,Withdraw 15 dollars,WITHDRAW_MONEY,test,withdraw 15 dollars,withdraw <num> dollars,False,False,0.6666666666666666,False,False
+1288,1290,Pay school fees,BILL_PAY,test,pay school fees,pay school fees,True,True,1.0,True,True
+1292,1294,Group savings,VIEW_GROUP,test,group savings,group savings,False,False,0.6666666666666666,False,False
+1301,1303,View groupwealth,VIEW_GROUP,test,view groupwealth,view groupwealth,False,False,0.3333333333333333,False,False
+1306,1308,How much has holiday savings group saved,VIEW_GROUP,test,how much has holiday savings group saved,how much has holiday savings group saved,False,False,0.4444444444444444,False,False
+1327,1329,Total purchases last week,CHECK_SPENDING,test,total purchases last week,total purchases last week,False,False,0.6,False,False
+1357,1359,Withdraw 75 dollars,WITHDRAW_MONEY,test,withdraw 75 dollars,withdraw <num> dollars,False,False,0.6666666666666666,False,False
+1369,1371,Edit adi's details quickly,MANAGE_CONTACTS,test,edit adi s details quickly,edit adi s details quickly,False,False,0.2857142857142857,False,False
+1377,1379,Edit kumar's details,MANAGE_CONTACTS,test,edit kumar s details,edit kumar s details,False,False,0.2,False,False
+1380,1382,What's my balance,CHECK_BALANCE,test,what s my balance,what s my balance,False,False,0.5,False,False
+1398,1400,I owe mika 5,TRANSFER_MONEY,test,i owe mika 5,i owe mika <num>,False,False,0.3333333333333333,False,False
+1402,1404,Show transactions,VIEW_TRANSACTIONS,test,show transactions,show transactions,True,True,1.0,True,True
+1412,1414,Go to holiday savings group,VIEW_GROUP,test,go to holiday savings group,go to holiday savings group,False,False,0.5714285714285714,False,False
+1431,1433,Pay broadband,BILL_PAY,test,pay broadband,pay broadband,True,True,1.0,True,True
+1465,1467,I have a complaint,HELP_SUPPORT,test,i have a complaint,i have a complaint,False,False,0.5,False,False
+1478,1480,Help me send money to roshni,TRANSFER_MONEY,test,help me send money to roshni,help me send money to roshni,False,False,0.5714285714285714,False,False
+1479,1481,Withdraw $200 dollars,WITHDRAW_MONEY,test,withdraw $ 200 dollars,withdraw $ <num> dollars,False,False,0.75,False,False
+1482,1484,Pay phone,BILL_PAY,test,pay phone,pay phone,True,True,1.0,True,True
+1484,1486,Edit jone's details,MANAGE_CONTACTS,test,edit jone s details,edit jone s details,False,False,0.3333333333333333,False,False
+1498,1500,Go to community group,VIEW_GROUP,test,go to community group,go to community group,False,False,0.5,False,False
+1507,1509,Show spending on school?,CHECK_SPENDING,test,show spending on school,show spending on school,False,False,0.6,False,False
+1515,1517,Send cash to raj,TRANSFER_MONEY,test,send cash to raj,send cash to raj,False,False,0.42857142857142855,False,False
+1519,1521,Check balance,CHECK_BALANCE,test,check balance,check balance,False,False,0.5,False,False
+1529,1531,Can i pay water if possible,BILL_PAY,test,can i pay water if possible,can i pay water if possible,False,False,0.4,False,False
+1531,1533,What's my balance please,CHECK_BALANCE,test,what s my balance please,what s my balance please,False,False,0.4,False,False
+1536,1538,How much has community group saved,VIEW_GROUP,test,how much has community group saved,how much has community group saved,False,False,0.375,False,False
+1560,1562,Edit mika's details,MANAGE_CONTACTS,test,edit mika s details,edit mika s details,False,False,0.3333333333333333,False,False
+1579,1581,Where is my statement,VIEW_TRANSACTIONS,test,where is my statement,where is my statement,False,False,0.2857142857142857,False,False
+1584,1586,Withdraw 500 dollars,WITHDRAW_MONEY,test,withdraw 500 dollars,withdraw <num> dollars,False,False,0.4,False,False
+1585,1587,Show transactions?,VIEW_TRANSACTIONS,test,show transactions,show transactions,True,True,1.0,True,True
+1596,1598,Help,HELP_SUPPORT,test,help,help,False,False,0.25,False,False
+1603,1605,Send cash to kumar,TRANSFER_MONEY,test,send cash to kumar,send cash to kumar,False,False,0.42857142857142855,False,False
+1610,1612,Check balance,CHECK_BALANCE,test,check balance,check balance,False,False,0.5,False,False
+1616,1618,Pay mobile,BILL_PAY,test,pay mobile,pay mobile,True,True,1.0,True,True
+1620,1622,Can i pay electricity?,BILL_PAY,test,can i pay electricity,can i pay electricity,False,False,0.5,False,False
+1633,1635,Edit joeli's details,MANAGE_CONTACTS,test,edit joeli s details,edit joeli s details,False,False,0.3333333333333333,False,False
+1645,1647,Edit roshni's details,MANAGE_CONTACTS,test,edit roshni s details,edit roshni s details,False,False,0.2,False,False
+1690,1692,Show spending on fuel,CHECK_SPENDING,test,show spending on fuel,show spending on fuel,False,False,0.6,False,False
+1696,1698,Edit sera's details?,MANAGE_CONTACTS,test,edit sera s details,edit sera s details,False,False,0.3333333333333333,False,False
+1712,1714,Total purchases in october,CHECK_SPENDING,test,total purchases in october,total purchases in october,False,False,0.6,False,False
+1717,1719,Please send $200 to asha,TRANSFER_MONEY,test,please send $ 200 to asha,please send $ <num> to asha,False,False,0.4444444444444444,False,False
+1728,1730,Please send 25 to mere,TRANSFER_MONEY,test,please send 25 to mere,please send <num> to mere,False,False,0.5,False,False
+1730,1732,Go to women's savings group,VIEW_GROUP,test,go to women s savings group,go to women s savings group,False,False,0.625,False,False
+1746,1748,Show expenditure summary in sole,CHECK_SPENDING,test,show expenditure summary in sole,show expenditure summary in sole,False,False,0.5,False,False
+1773,1775,Show spending on school,CHECK_SPENDING,test,show spending on school,show spending on school,False,False,0.6,False,False
+1782,1784,Show last 5 transactions,VIEW_TRANSACTIONS,test,show last 5 transactions,show last <num> transactions,False,True,0.6,False,True
+1822,1824,Show transactions at the moment,VIEW_TRANSACTIONS,test,show transactions at the moment,show transactions at the moment,False,False,0.6666666666666666,False,False
+1826,1828,Recent transactions,VIEW_TRANSACTIONS,test,recent transactions,recent transactions,False,False,0.3333333333333333,False,False
+1829,1831,Pay bills,BILL_PAY,test,pay bills,pay bills,False,False,0.3333333333333333,False,False
+1835,1837,How much is available,CHECK_BALANCE,test,how much is available,how much is available,False,False,0.5,False,False
+1841,1843,Edit adi's details,MANAGE_CONTACTS,test,edit adi s details,edit adi s details,False,False,0.3333333333333333,False,False
+1860,1862,Withdraw at an agent this time,WITHDRAW_MONEY,test,withdraw at an agent this time,withdraw at an agent this time,False,False,0.2727272727272727,False,False
+1865,1867,Show savings balance?,CHECK_BALANCE,test,show savings balance,show savings balance,False,False,0.6666666666666666,False,False
+1873,1875,Please send 80 to adi,TRANSFER_MONEY,test,please send 80 to adi,please send <num> to adi,False,False,0.5,False,False
+1879,1881,Go to village group,VIEW_GROUP,test,go to village group,go to village group,False,False,0.5,False,False
+1885,1887,Withdraw $50 dollars,WITHDRAW_MONEY,test,withdraw $ 50 dollars,withdraw $ <num> dollars,False,False,0.75,False,False
+1890,1892,Recent transactions,VIEW_TRANSACTIONS,test,recent transactions,recent transactions,False,False,0.3333333333333333,False,False
+1911,1913,Recent transactions,VIEW_TRANSACTIONS,test,recent transactions,recent transactions,False,False,0.3333333333333333,False,False
+1931,1933,Withdraw at an agent?,WITHDRAW_MONEY,test,withdraw at an agent,withdraw at an agent,False,False,0.2,False,False
+1953,1955,Can i pay broadband,BILL_PAY,test,can i pay broadband,can i pay broadband,False,False,0.5,False,False
+1960,1962,Check balance,CHECK_BALANCE,test,check balance,check balance,False,False,0.5,False,False
+1968,1970,Show savings balance in sole,CHECK_BALANCE,test,show savings balance in sole,show savings balance in sole,False,False,0.8,True,False
+1970,1972,Help with my sole app,HELP_SUPPORT,test,help with my sole app,help with my sole app,False,False,0.2857142857142857,False,False
+1971,1973,Summarize my expenses now,CHECK_SPENDING,test,summarize my expenses now,summarize my expenses now,False,False,0.3333333333333333,False,False
+1974,1976,How much is available this time,CHECK_BALANCE,test,how much is available this time,how much is available this time,False,False,0.4444444444444444,False,False
+1994,1996,Can i pay school fees,BILL_PAY,test,can i pay school fees,can i pay school fees,False,False,0.6,False,False
+1995,1997,Send cash to john,TRANSFER_MONEY,test,send cash to john,send cash to john,False,False,0.6,False,False
+2015,2017,Manage my contacts,MANAGE_CONTACTS,test,manage my contacts,manage my contacts,False,False,0.6666666666666666,False,False
+2027,2029,Send cash to sera,TRANSFER_MONEY,test,send cash to sera,send cash to sera,False,False,0.6,False,False
+2035,2037,Prepare a withdrawal,WITHDRAW_MONEY,test,prepare a withdrawal,prepare a withdrawal,False,False,0.25,False,False
+2048,2050,Total purchases since monday,CHECK_SPENDING,test,total purchases since monday,total purchases since monday,False,False,0.6,False,False
+2062,2064,Can i pay electricity,BILL_PAY,test,can i pay electricity,can i pay electricity,False,False,0.5,False,False
+2074,2076,Go to work group,VIEW_GROUP,test,go to work group,go to work group,False,False,0.5,False,False
+2077,2079,What's my balance please,CHECK_BALANCE,test,what s my balance please,what s my balance please,False,False,0.4,False,False
+2096,2098,Edit ana's details,MANAGE_CONTACTS,test,edit ana s details,edit ana s details,False,False,0.3333333333333333,False,False
+2097,2099,Pay electricity,BILL_PAY,test,pay electricity,pay electricity,True,True,1.0,True,True
+2117,2119,Withdraw 250 dollars,WITHDRAW_MONEY,test,withdraw 250 dollars,withdraw <num> dollars,False,False,0.6666666666666666,False,False
+2127,2129,Recent transactions,VIEW_TRANSACTIONS,test,recent transactions,recent transactions,False,False,0.3333333333333333,False,False
+2134,2136,Pay waf today,BILL_PAY,test,pay waf today,pay waf today,False,False,0.6666666666666666,False,False
+2142,2144,Go to market vendors group,VIEW_GROUP,test,go to market vendors group,go to market vendors group,False,False,0.5714285714285714,False,False
+2180,2182,Show transactions,VIEW_TRANSACTIONS,test,show transactions,show transactions,True,True,1.0,True,True
+2219,2221,Need customer service,HELP_SUPPORT,test,need customer service,need customer service,False,False,0.14285714285714285,False,False
+2224,2226,Show savings balance,CHECK_BALANCE,test,show savings balance,show savings balance,False,False,0.6666666666666666,False,False
+2229,2231,Show spending on food,CHECK_SPENDING,test,show spending on food,show spending on food,False,False,0.6,False,False
+2232,2234,How much has school group saved,VIEW_GROUP,test,how much has school group saved,how much has school group saved,False,False,0.375,False,False
+2238,2240,Help with my sole app please,HELP_SUPPORT,test,help with my sole app please,help with my sole app please,False,False,0.25,False,False
+2249,2251,What's my balance please,CHECK_BALANCE,test,what s my balance please,what s my balance please,False,False,0.4,False,False
+2286,2288,Need customer service please on sole,HELP_SUPPORT,test,need customer service please on sole,need customer service please on sole,False,False,0.375,False,False
+2300,2302,Edit priya's details,MANAGE_CONTACTS,test,edit priya s details,edit priya s details,False,False,0.3333333333333333,False,False
+2307,2309,Withdraw $20 dollars,WITHDRAW_MONEY,test,withdraw $ 20 dollars,withdraw $ <num> dollars,False,False,0.75,False,False
+2337,2339,Recent transactions on sole,VIEW_TRANSACTIONS,test,recent transactions on sole,recent transactions on sole,False,False,0.3333333333333333,False,False
+2347,2349,Help me send money to sera,TRANSFER_MONEY,test,help me send money to sera,help me send money to sera,False,False,0.6666666666666666,False,False
+2353,2355,Can i pay mobile,BILL_PAY,test,can i pay mobile,can i pay mobile,False,False,0.5,False,False
+2378,2380,Go to women's savings group if possible,VIEW_GROUP,test,go to women s savings group if possible,go to women s savings group if possible,False,False,0.5,False,False
+2379,2381,Can i pay phone,BILL_PAY,test,can i pay phone,can i pay phone,False,False,0.5,False,False
+2383,2385,Show beneficiaries,MANAGE_CONTACTS,test,show beneficiaries,show beneficiaries,False,False,0.3333333333333333,False,False
+2389,2391,Need customer service,HELP_SUPPORT,test,need customer service,need customer service,False,False,0.14285714285714285,False,False
+2411,2413,How much has family group saved,VIEW_GROUP,test,how much has family group saved,how much has family group saved,False,False,0.375,False,False
+2415,2417,How do i cash out,WITHDRAW_MONEY,test,how do i cash out,how do i cash out,False,False,0.42857142857142855,False,False
+2423,2425,Need customer service please,HELP_SUPPORT,test,need customer service please,need customer service please,False,False,0.16666666666666666,False,False
+2427,2429,Withdraw 10 dollars,WITHDRAW_MONEY,test,withdraw 10 dollars,withdraw <num> dollars,False,False,0.5,False,False
+2441,2443,Total purchases yesterday,CHECK_SPENDING,test,total purchases yesterday,total purchases yesterday,False,False,0.5,False,False
+2462,2464,Edit jone's details?,MANAGE_CONTACTS,test,edit jone s details,edit jone s details,False,False,0.3333333333333333,False,False
+2474,2476,Show spending on mobile data,CHECK_SPENDING,test,show spending on mobile data,show spending on mobile data,False,False,0.6666666666666666,False,False
+2476,2478,Prepare a withdrawal?,WITHDRAW_MONEY,test,prepare a withdrawal,prepare a withdrawal,False,False,0.25,False,False
+2477,2479,Check balance?,CHECK_BALANCE,test,check balance,check balance,False,False,0.5,False,False
+2491,2493,I owe adi 250,TRANSFER_MONEY,test,i owe adi 250,i owe adi <num>,False,False,0.3333333333333333,False,False
+2527,2529,Start a bill payment,BILL_PAY,test,start a bill payment,start a bill payment,False,False,0.5,False,False
+2533,2535,Show savings balance,CHECK_BALANCE,test,show savings balance,show savings balance,False,False,0.6666666666666666,False,False
+2543,2545,Total purchases in the last 30 days,CHECK_SPENDING,test,total purchases in the last 30 days,total purchases in the last <num> days,False,False,0.75,False,False
+2550,2552,Can i pay broadband,BILL_PAY,test,can i pay broadband,can i pay broadband,False,False,0.5,False,False
+2598,2600,Show spending on market,CHECK_SPENDING,test,show spending on market,show spending on market,False,False,0.6,False,False
+2605,2607,Send cash to litia,TRANSFER_MONEY,test,send cash to litia,send cash to litia,False,False,0.42857142857142855,False,False
+2610,2612,Show last 5 transactions,VIEW_TRANSACTIONS,test,show last 5 transactions,show last <num> transactions,False,True,0.6,False,True
+2622,2624,Send cash to adi,TRANSFER_MONEY,test,send cash to adi,send cash to adi,False,False,0.6,False,False
+2630,2632,Withdraw 25 dollars,WITHDRAW_MONEY,test,withdraw 25 dollars,withdraw <num> dollars,False,False,0.6666666666666666,False,False
+2635,2637,Show beneficiaries?,MANAGE_CONTACTS,test,show beneficiaries,show beneficiaries,False,False,0.3333333333333333,False,False
+2643,2645,I owe kumar 40,TRANSFER_MONEY,test,i owe kumar 40,i owe kumar <num>,False,False,0.3333333333333333,False,False
+2649,2651,Recent transactions on the app,VIEW_TRANSACTIONS,test,recent transactions on the app,recent transactions on the app,False,False,0.42857142857142855,False,False
+2650,2652,Show spending on utilities,CHECK_SPENDING,test,show spending on utilities,show spending on utilities,False,False,0.6,False,False
+2652,2654,Group savings,VIEW_GROUP,test,group savings,group savings,False,False,0.6666666666666666,False,False
+2681,2683,Help in sole,HELP_SUPPORT,test,help in sole,help in sole,False,False,0.4,False,False
+2688,2690,Prepare a withdrawal,WITHDRAW_MONEY,test,prepare a withdrawal,prepare a withdrawal,False,False,0.25,False,False
+2697,2699,Withdraw at an agent,WITHDRAW_MONEY,test,withdraw at an agent,withdraw at an agent,False,False,0.2,False,False
+2716,2718,Manage my contacts,MANAGE_CONTACTS,test,manage my contacts,manage my contacts,False,False,0.6666666666666666,False,False
+2728,2730,Go to school group,VIEW_GROUP,test,go to school group,go to school group,False,False,0.5,False,False
+2745,2747,Go to church group,VIEW_GROUP,test,go to church group,go to church group,False,False,0.5,False,False
+2776,2778,Recent transactions,VIEW_TRANSACTIONS,test,recent transactions,recent transactions,False,False,0.3333333333333333,False,False
+2786,2788,I have a complaint at the moment,HELP_SUPPORT,test,i have a complaint at the moment,i have a complaint at the moment,False,False,0.5,False,False
+2789,2791,Help at the moment,HELP_SUPPORT,test,help at the moment,help at the moment,False,False,0.5714285714285714,False,False
+2797,2799,How much is available,CHECK_BALANCE,test,how much is available,how much is available,False,False,0.5,False,False
+2814,2816,Can i pay school fees,BILL_PAY,test,can i pay school fees,can i pay school fees,False,False,0.6,False,False
+2843,2845,Show last 5 transactions?,VIEW_TRANSACTIONS,test,show last 5 transactions,show last <num> transactions,False,True,0.6,False,True
+2847,2849,Pay bills,BILL_PAY,test,pay bills,pay bills,False,False,0.3333333333333333,False,False
+2863,2865,Help on the app,HELP_SUPPORT,test,help on the app,help on the app,False,False,0.5,False,False
+2872,2874,I owe mary $50,TRANSFER_MONEY,test,i owe mary $ 50,i owe mary $ <num>,False,False,0.42857142857142855,False,False
+2877,2879,Show spending on bills,CHECK_SPENDING,test,show spending on bills,show spending on bills,False,False,0.6,False,False
+2886,2888,I owe mary 15,TRANSFER_MONEY,test,i owe mary 15,i owe mary <num>,False,False,0.4,False,False
+2910,2912,Please send 500 to raj,TRANSFER_MONEY,test,please send 500 to raj,please send <num> to raj,False,False,0.375,False,False
+2920,2922,Show beneficiaries quickly,MANAGE_CONTACTS,test,show beneficiaries quickly,show beneficiaries quickly,False,False,0.25,False,False
+2924,2926,Edit tui's details,MANAGE_CONTACTS,test,edit tui s details,edit tui s details,False,False,0.3333333333333333,False,False
+2929,2931,I have a complaint,HELP_SUPPORT,test,i have a complaint,i have a complaint,False,False,0.5,False,False
+2943,2945,Recent transactions,VIEW_TRANSACTIONS,test,recent transactions,recent transactions,False,False,0.3333333333333333,False,False
+2946,2948,Total purchases,CHECK_SPENDING,test,total purchases,total purchases,False,False,0.3333333333333333,False,False
+2960,2962,Edit ravi's details,MANAGE_CONTACTS,test,edit ravi s details,edit ravi s details,False,False,0.25,False,False
+2970,2972,What's my balance at the moment,CHECK_BALANCE,test,what s my balance at the moment,what s my balance at the moment,False,False,0.625,False,False
+2974,2976,How much has village group saved,VIEW_GROUP,test,how much has village group saved,how much has village group saved,False,False,0.375,False,False
+2979,2981,How much has women's savings group saved,VIEW_GROUP,test,how much has women s savings group saved,how much has women s savings group saved,False,False,0.5,False,False
+2996,2998,Please send 40 to litia,TRANSFER_MONEY,test,please send 40 to litia,please send <num> to litia,False,False,0.375,False,False
+2997,2999,Total purchases this month,CHECK_SPENDING,test,total purchases this month,total purchases this month,False,False,0.6,False,False
+3,5,Save recipient roshni,MANAGE_CONTACTS,validation,save recipient roshni,save recipient roshni,False,False,0.6666666666666666,False,False
+6,8,Show money received this week,VIEW_TRANSACTIONS,validation,show money received this week,show money received this week,False,False,0.5,False,False
+17,19,Find my transfer to adi,VIEW_TRANSACTIONS,validation,find my transfer to adi,find my transfer to adi,False,False,0.5,False,False
+37,39,Show my rugby club group,VIEW_GROUP,validation,show my rugby club group,show my rugby club group,False,False,0.5714285714285714,False,False
+51,53,Spending yesterday,CHECK_SPENDING,validation,spending yesterday,spending yesterday,False,False,0.25,False,False
+54,56,Show money received since monday,VIEW_TRANSACTIONS,validation,show money received since monday,show money received since monday,False,False,0.5,False,False
+57,59,Cash withdrawal 300,WITHDRAW_MONEY,validation,cash withdrawal 300,cash withdrawal <num>,False,False,0.5,False,False
+86,88,Total money spent,CHECK_SPENDING,validation,total money spent,total money spent,False,False,0.25,False,False
+117,119,Do i have 5,CHECK_BALANCE,validation,do i have 5,do i have <num>,False,False,0.5,False,False
+118,120,Pay 250 on my internet,BILL_PAY,validation,pay 250 on my internet,pay <num> on my internet,False,False,0.5,False,False
+121,123,Save recipient jone,MANAGE_CONTACTS,validation,save recipient jone,save recipient jone,False,False,0.6666666666666666,False,False
+124,126,Save recipient mary,MANAGE_CONTACTS,validation,save recipient mary,save recipient mary,False,False,0.6666666666666666,False,False
+141,143,Send tui 200,TRANSFER_MONEY,validation,send tui 200,send tui <num>,False,False,0.3333333333333333,False,False
+154,156,Open statement,VIEW_TRANSACTIONS,validation,open statement,open statement,False,False,0.3333333333333333,False,False
+161,163,Do i have 250,CHECK_BALANCE,validation,do i have 250,do i have <num>,False,False,0.5,False,False
+174,176,Show money received in the last 30 days,VIEW_TRANSACTIONS,validation,show money received in the last 30 days,show money received in the last <num> days,False,False,0.6666666666666666,False,False
+175,177,My account is locked,HELP_SUPPORT,validation,my account is locked,my account is locked,False,False,0.3333333333333333,False,False
+177,179,Save recipient tui,MANAGE_CONTACTS,validation,save recipient tui,save recipient tui,False,False,0.6666666666666666,False,False
+205,207,Look up priya,MANAGE_CONTACTS,validation,look up priya,look up priya,False,False,0.25,False,False
+209,211,Show my available funds?,CHECK_BALANCE,validation,show my available funds,show my available funds,False,False,0.5,False,False
+216,218,Do i have 250,CHECK_BALANCE,validation,do i have 250,do i have <num>,False,False,0.5,False,False
+218,220,Save recipient peni,MANAGE_CONTACTS,validation,save recipient peni,save recipient peni,False,False,0.6666666666666666,False,False
+230,232,Pay $100 on my school fees,BILL_PAY,validation,pay $ 100 on my school fees,pay $ <num> on my school fees,False,False,0.5,False,False
+234,236,I need to pay internet,BILL_PAY,validation,i need to pay internet,i need to pay internet,False,False,0.6666666666666666,False,False
+275,277,Spending this month,CHECK_SPENDING,validation,spending this month,spending this month,True,True,1.0,True,True
+281,283,Send ravi $100,TRANSFER_MONEY,validation,send ravi $ 100,send ravi $ <num>,False,False,0.42857142857142855,False,False
+282,284,Who is in market vendors group,VIEW_GROUP,validation,who is in market vendors group,who is in market vendors group,False,False,0.42857142857142855,False,False
+291,293,Cash withdrawal 30,WITHDRAW_MONEY,validation,cash withdrawal 30,cash withdrawal <num>,False,False,0.5,False,False
+309,311,Send 30 to raj,TRANSFER_MONEY,validation,send 30 to raj,send <num> to raj,False,False,0.5,False,False
+322,324,My account is locked,HELP_SUPPORT,validation,my account is locked,my account is locked,False,False,0.3333333333333333,False,False
+338,340,Talk to an agent,HELP_SUPPORT,validation,talk to an agent,talk to an agent,False,False,0.14285714285714285,False,False
+349,351,How much did i contribute,VIEW_GROUP,validation,how much did i contribute,how much did i contribute,False,False,0.5,False,False
+356,358,Pay 10 on my broadband,BILL_PAY,validation,pay 10 on my broadband,pay <num> on my broadband,False,False,0.5,False,False
+388,390,My money is missing,HELP_SUPPORT,validation,my money is missing,my money is missing,False,False,0.4,False,False
+400,402,Total money spent if possible,CHECK_SPENDING,validation,total money spent if possible,total money spent if possible,False,False,0.2857142857142857,False,False
+416,418,Average daily spending,CHECK_SPENDING,validation,average daily spending,average daily spending,False,False,0.2,False,False
+432,434,Talk to an agent,HELP_SUPPORT,validation,talk to an agent,talk to an agent,False,False,0.14285714285714285,False,False
+440,442,"Cash withdrawal 1,000",WITHDRAW_MONEY,validation,cash withdrawal 1 000,cash withdrawal <num> <num>,False,False,0.6,False,False
+449,451,Pay my mobile bill,BILL_PAY,validation,pay my mobile bill,pay my mobile bill,False,False,0.75,False,False
+457,459,Find my transfer to raj,VIEW_TRANSACTIONS,validation,find my transfer to raj,find my transfer to raj,False,False,0.5,False,False
+466,468,Who is in holiday savings group,VIEW_GROUP,validation,who is in holiday savings group,who is in holiday savings group,False,False,0.42857142857142855,False,False
+482,484,View holiday savings group contributions,VIEW_GROUP,validation,view holiday savings group contributions,view holiday savings group contributions,False,False,0.5714285714285714,False,False
+487,489,Talk to an agent,HELP_SUPPORT,validation,talk to an agent,talk to an agent,False,False,0.14285714285714285,False,False
+525,527,Need assistance with login,HELP_SUPPORT,validation,need assistance with login,need assistance with login,False,False,0.125,False,False
+545,547,My money is missing,HELP_SUPPORT,validation,my money is missing,my money is missing,False,False,0.4,False,False
+551,553,Cash withdrawal 150,WITHDRAW_MONEY,validation,cash withdrawal 150,cash withdrawal <num>,False,False,0.5,False,False
+577,579,Save recipient ben,MANAGE_CONTACTS,validation,save recipient ben,save recipient ben,False,False,0.6666666666666666,False,False
+579,581,Save recipient ravi,MANAGE_CONTACTS,validation,save recipient ravi,save recipient ravi,False,False,0.6666666666666666,False,False
+586,588,Do i have 40?,CHECK_BALANCE,validation,do i have 40,do i have <num>,False,False,0.5,False,False
+596,598,Do i have $50,CHECK_BALANCE,validation,do i have $ 50,do i have $ <num>,False,False,0.42857142857142855,False,False
+598,600,Spending since monday,CHECK_SPENDING,validation,spending since monday,spending since monday,False,False,0.4,False,False
+604,606,Send 40 dollars to jone,TRANSFER_MONEY,validation,send 40 dollars to jone,send <num> dollars to jone,False,False,0.5714285714285714,False,False
+610,612,Need assistance with login,HELP_SUPPORT,validation,need assistance with login,need assistance with login,False,False,0.125,False,False
+613,615,Find my transfer to asha,VIEW_TRANSACTIONS,validation,find my transfer to asha,find my transfer to asha,False,False,0.5,False,False
+616,618,Show my available funds,CHECK_BALANCE,validation,show my available funds,show my available funds,False,False,0.5,False,False
+629,631,Show contacts,MANAGE_CONTACTS,validation,show contacts,show contacts,False,False,0.3333333333333333,False,False
+634,636,Show my available funds,CHECK_BALANCE,validation,show my available funds,show my available funds,False,False,0.5,False,False
+637,639,Pay my school fees bill,BILL_PAY,validation,pay my school fees bill,pay my school fees bill,False,False,0.8,True,False
+642,644,Spending in october?,CHECK_SPENDING,validation,spending in october,spending in october,False,False,0.4,False,False
+645,647,Send savenaca $20,TRANSFER_MONEY,validation,send savenaca $ 20,send savenaca $ <num>,False,False,0.42857142857142855,False,False
+648,650,My account is locked this time,HELP_SUPPORT,validation,my account is locked this time,my account is locked this time,False,False,0.4,False,False
+653,655,Move 80 to ravi,TRANSFER_MONEY,validation,move 80 to ravi,move <num> to ravi,False,False,0.5,False,False
+655,657,Cash withdrawal 80,WITHDRAW_MONEY,validation,cash withdrawal 80,cash withdrawal <num>,False,False,0.5,False,False
+665,667,Save recipient mere,MANAGE_CONTACTS,validation,save recipient mere,save recipient mere,False,False,0.4,False,False
+671,673,Save recipient mere,MANAGE_CONTACTS,validation,save recipient mere,save recipient mere,False,False,0.4,False,False
+700,702,Save recipient savenaca?,MANAGE_CONTACTS,validation,save recipient savenaca,save recipient savenaca,False,False,0.6666666666666666,False,False
+714,716,Spending last week,CHECK_SPENDING,validation,spending last week,spending last week,False,False,0.4,False,False
+721,723,Talk to an agent?,HELP_SUPPORT,validation,talk to an agent,talk to an agent,False,False,0.14285714285714285,False,False
+731,733,Cash withdrawal 80?,WITHDRAW_MONEY,validation,cash withdrawal 80,cash withdrawal <num>,False,False,0.5,False,False
+736,738,Show my community group,VIEW_GROUP,validation,show my community group,show my community group,False,False,0.5,False,False
+772,774,Pay 200 on my efl,BILL_PAY,validation,pay 200 on my efl,pay <num> on my efl,False,False,0.5,False,False
+779,781,Show money received this month,VIEW_TRANSACTIONS,validation,show money received this month,show money received this month,False,False,0.5,False,False
+816,818,Move 10 to savenaca,TRANSFER_MONEY,validation,move 10 to savenaca,move <num> to savenaca,False,False,0.3333333333333333,False,False
+821,823,Spending this week,CHECK_SPENDING,validation,spending this week,spending this week,False,False,0.5,False,False
+830,832,Cash withdrawal 500,WITHDRAW_MONEY,validation,cash withdrawal 500,cash withdrawal <num>,False,False,0.5,False,False
+832,834,Look up ana,MANAGE_CONTACTS,validation,look up ana,look up ana,False,False,0.25,False,False
+833,835,Who is in family group,VIEW_GROUP,validation,who is in family group,who is in family group,False,False,0.3333333333333333,False,False
+840,842,Show my available funds in sole,CHECK_BALANCE,validation,show my available funds in sole,show my available funds in sole,False,False,0.5714285714285714,False,False
+868,870,Move 250 to kumar,TRANSFER_MONEY,validation,move 250 to kumar,move <num> to kumar,False,False,0.3333333333333333,False,False
+871,873,What's my wallet total,CHECK_BALANCE,validation,what s my wallet total,what s my wallet total,False,False,0.2857142857142857,False,False
+896,898,Save recipient sera,MANAGE_CONTACTS,validation,save recipient sera,save recipient sera,False,False,0.6666666666666666,False,False
+902,904,Send 10 dollars to mika,TRANSFER_MONEY,validation,send 10 dollars to mika,send <num> dollars to mika,False,False,0.5714285714285714,False,False
+905,907,Send asha 15,TRANSFER_MONEY,validation,send asha 15,send asha <num>,False,False,0.6,False,False
+914,916,Look up savenaca,MANAGE_CONTACTS,validation,look up savenaca,look up savenaca,False,False,0.25,False,False
+922,924,Expenses by category,CHECK_SPENDING,validation,expenses by category,expenses by category,False,False,0.25,False,False
+923,925,Spending this month? in sole,CHECK_SPENDING,validation,spending this month in sole,spending this month in sole,True,True,1.0,True,True
+933,935,Need assistance with login this time,HELP_SUPPORT,validation,need assistance with login this time,need assistance with login this time,False,False,0.25,False,False
+934,936,Who is in community group,VIEW_GROUP,validation,who is in community group,who is in community group,False,False,0.3333333333333333,False,False
+940,942,Spending last month,CHECK_SPENDING,validation,spending last month,spending last month,False,False,0.5,False,False
+946,948,Look up adi,MANAGE_CONTACTS,validation,look up adi,look up adi,False,False,0.25,False,False
+950,952,Move $50 to raj,TRANSFER_MONEY,validation,move $ 50 to raj,move $ <num> to raj,False,False,0.42857142857142855,False,False
+956,958,Find my transfer to asha,VIEW_TRANSACTIONS,validation,find my transfer to asha,find my transfer to asha,False,False,0.5,False,False
+959,961,Send 300 to adi,TRANSFER_MONEY,validation,send 300 to adi,send <num> to adi,False,False,0.6,False,False
+1058,1060,View church group contributions,VIEW_GROUP,validation,view church group contributions,view church group contributions,False,False,0.5,False,False
+1095,1097,Cash withdrawal 75,WITHDRAW_MONEY,validation,cash withdrawal 75,cash withdrawal <num>,False,False,0.5,False,False
+1109,1111,Talk to an agent,HELP_SUPPORT,validation,talk to an agent,talk to an agent,False,False,0.14285714285714285,False,False
+1120,1122,Open contacts,MANAGE_CONTACTS,validation,open contacts,open contacts,False,False,0.3333333333333333,False,False
+1126,1128,What's my wallet total?,CHECK_BALANCE,validation,what s my wallet total,what s my wallet total,False,False,0.2857142857142857,False,False
+1130,1132,Find my transfer to ben,VIEW_TRANSACTIONS,validation,find my transfer to ben,find my transfer to ben,False,False,0.5,False,False
+1150,1152,Spending,CHECK_SPENDING,validation,spending,spending,False,False,0.3333333333333333,False,False
+1160,1162,Cash out,WITHDRAW_MONEY,validation,cash out,cash out,False,False,0.6666666666666666,False,False
+1179,1181,I need to pay waf,BILL_PAY,validation,i need to pay waf,i need to pay waf,False,False,0.6666666666666666,False,False
+1183,1185,Pay efl using sole,BILL_PAY,validation,pay efl using sole,pay efl using sole,False,False,0.5,False,False
+1186,1188,Show my available funds at the moment,CHECK_BALANCE,validation,show my available funds at the moment,show my available funds at the moment,False,False,0.5,False,False
+1206,1208,Need to withdraw,WITHDRAW_MONEY,validation,need to withdraw,need to withdraw,False,False,0.3333333333333333,False,False
+1250,1252,Need assistance with login?,HELP_SUPPORT,validation,need assistance with login,need assistance with login,False,False,0.125,False,False
+1277,1279,Look up raj,MANAGE_CONTACTS,validation,look up raj,look up raj,False,False,0.2,False,False
+1317,1319,Find my transfer to peni,VIEW_TRANSACTIONS,validation,find my transfer to peni,find my transfer to peni,False,False,0.5,False,False
+1321,1323,Pay phone using sole,BILL_PAY,validation,pay phone using sole,pay phone using sole,False,False,0.5,False,False
+1326,1328,Spending over the weekend,CHECK_SPENDING,validation,spending over the weekend,spending over the weekend,False,False,0.5,False,False
+1334,1336,Do i have 80,CHECK_BALANCE,validation,do i have 80,do i have <num>,False,False,0.5,False,False
+1365,1367,Show money received in october,VIEW_TRANSACTIONS,validation,show money received in october,show money received in october,False,False,0.5,False,False
+1378,1380,Send peni 50,TRANSFER_MONEY,validation,send peni 50,send peni <num>,False,False,0.3333333333333333,False,False
+1389,1391,Do i have 300,CHECK_BALANCE,validation,do i have 300,do i have <num>,False,False,0.5,False,False
+1405,1407,Look up tui,MANAGE_CONTACTS,validation,look up tui,look up tui,False,False,0.25,False,False
+1413,1415,Do i have $100,CHECK_BALANCE,validation,do i have $ 100,do i have $ <num>,False,False,0.42857142857142855,False,False
+1455,1457,Show outgoing transfers,VIEW_TRANSACTIONS,validation,show outgoing transfers,show outgoing transfers,False,False,0.25,False,False
+1461,1463,Find my transfer to roshni,VIEW_TRANSACTIONS,validation,find my transfer to roshni,find my transfer to roshni,False,False,0.5,False,False
+1475,1477,Send jone 5,TRANSFER_MONEY,validation,send jone 5,send jone <num>,False,False,0.3333333333333333,False,False
+1481,1483,Show money received last week,VIEW_TRANSACTIONS,validation,show money received last week,show money received last week,False,False,0.5,False,False
+1489,1491,Pay waf using sole,BILL_PAY,validation,pay waf using sole,pay waf using sole,False,False,0.5,False,False
+1490,1492,Do i have $20,CHECK_BALANCE,validation,do i have $ 20,do i have $ <num>,False,False,0.42857142857142855,False,False
+1495,1497,I need to pay electricity,BILL_PAY,validation,i need to pay electricity,i need to pay electricity,False,False,0.6666666666666666,False,False
+1504,1506,Pay my water bill,BILL_PAY,validation,pay my water bill,pay my water bill,False,False,0.75,False,False
+1537,1539,Pay 20 on my internet,BILL_PAY,validation,pay 20 on my internet,pay <num> on my internet,False,False,0.5,False,False
+1538,1540,Send $100 to adi,TRANSFER_MONEY,validation,send $ 100 to adi,send $ <num> to adi,False,False,0.5,False,False
+1550,1552,My account is locked?,HELP_SUPPORT,validation,my account is locked,my account is locked,False,False,0.3333333333333333,False,False
+1570,1572,Show my school group,VIEW_GROUP,validation,show my school group,show my school group,False,False,0.5,False,False
+1589,1591,Show my women's savings group,VIEW_GROUP,validation,show my women s savings group,show my women s savings group,False,False,0.625,False,False
+1590,1592,Pay my internet bill,BILL_PAY,validation,pay my internet bill,pay my internet bill,False,False,0.75,False,False
+1592,1594,Send 500 to joeli,TRANSFER_MONEY,validation,send 500 to joeli,send <num> to joeli,False,False,0.6666666666666666,False,False
+1602,1604,Show money received in october,VIEW_TRANSACTIONS,validation,show money received in october,show money received in october,False,False,0.5,False,False
+1604,1606,Spending in the last 30 days,CHECK_SPENDING,validation,spending in the last 30 days,spending in the last <num> days,False,False,0.625,False,False
+1617,1619,Who is in school group,VIEW_GROUP,validation,who is in school group,who is in school group,False,False,0.42857142857142855,False,False
+1627,1629,Send $20 dollars to ben,TRANSFER_MONEY,validation,send $ 20 dollars to ben,send $ <num> dollars to ben,False,False,0.4444444444444444,False,False
+1642,1644,I need to pay phone,BILL_PAY,validation,i need to pay phone,i need to pay phone,False,False,0.6666666666666666,False,False
+1653,1655,Cash withdrawal 250,WITHDRAW_MONEY,validation,cash withdrawal 250,cash withdrawal <num>,False,False,0.5,False,False
+1654,1656,Send 60 to asha,TRANSFER_MONEY,validation,send 60 to asha,send <num> to asha,False,False,0.42857142857142855,False,False
+1667,1669,Who is in women's savings group?,VIEW_GROUP,validation,who is in women s savings group,who is in women s savings group,False,False,0.5,False,False
+1674,1676,Expenses by category at the moment,CHECK_SPENDING,validation,expenses by category at the moment,expenses by category at the moment,False,False,0.4444444444444444,False,False
+1684,1686,Show money received last month,VIEW_TRANSACTIONS,validation,show money received last month,show money received last month,False,False,0.5,False,False
+1688,1690,What's my wallet total,CHECK_BALANCE,validation,what s my wallet total,what s my wallet total,False,False,0.2857142857142857,False,False
+1701,1703,Withdraw funds,WITHDRAW_MONEY,validation,withdraw funds,withdraw funds,False,False,0.3333333333333333,False,False
+1702,1704,My account is locked on my account,HELP_SUPPORT,validation,my account is locked on my account,my account is locked on my account,False,False,0.5,False,False
+1704,1706,Talk to an agent on sole,HELP_SUPPORT,validation,talk to an agent on sole,talk to an agent on sole,False,False,0.25,False,False
+1726,1728,How much did i contribute?,VIEW_GROUP,validation,how much did i contribute,how much did i contribute,False,False,0.5,False,False
+1733,1735,Withdraw funds?,WITHDRAW_MONEY,validation,withdraw funds,withdraw funds,False,False,0.3333333333333333,False,False
+1738,1740,Show my church group?,VIEW_GROUP,validation,show my church group,show my church group,False,False,0.5,False,False
+1745,1747,Look up jone,MANAGE_CONTACTS,validation,look up jone,look up jone,False,False,0.25,False,False
+1754,1756,Talk to an agent now,HELP_SUPPORT,validation,talk to an agent now,talk to an agent now,False,False,0.2222222222222222,False,False
+1766,1768,Show my work group,VIEW_GROUP,validation,show my work group,show my work group,False,False,0.5,False,False
+1787,1789,View women's savings group contributions,VIEW_GROUP,validation,view women s savings group contributions,view women s savings group contributions,False,False,0.625,False,False
+1800,1802,I need to pay telecom,BILL_PAY,validation,i need to pay telecom,i need to pay telecom,False,False,0.6666666666666666,False,False
+1810,1812,Need to withdraw,WITHDRAW_MONEY,validation,need to withdraw,need to withdraw,False,False,0.3333333333333333,False,False
+1816,1818,Show money received in the last 30 days,VIEW_TRANSACTIONS,validation,show money received in the last 30 days,show money received in the last <num> days,False,False,0.6666666666666666,False,False
+1825,1827,Talk to an agent please,HELP_SUPPORT,validation,talk to an agent please,talk to an agent please,False,False,0.14285714285714285,False,False
+1837,1839,Cash withdrawal $100,WITHDRAW_MONEY,validation,cash withdrawal $ 100,cash withdrawal $ <num>,False,False,0.6,False,False
+1868,1870,Total money spent,CHECK_SPENDING,validation,total money spent,total money spent,False,False,0.25,False,False
+1874,1876,Show money received,VIEW_TRANSACTIONS,validation,show money received,show money received,False,False,0.25,False,False
+1877,1879,Open statement,VIEW_TRANSACTIONS,validation,open statement,open statement,False,False,0.3333333333333333,False,False
+1886,1888,Cash withdrawal 120,WITHDRAW_MONEY,validation,cash withdrawal 120,cash withdrawal <num>,False,False,0.5,False,False
+1899,1901,Expenses by category,CHECK_SPENDING,validation,expenses by category,expenses by category,False,False,0.25,False,False
+1903,1905,Open statement if possible,VIEW_TRANSACTIONS,validation,open statement if possible,open statement if possible,False,False,0.3333333333333333,False,False
+1908,1910,Cash withdrawal 10,WITHDRAW_MONEY,validation,cash withdrawal 10,cash withdrawal <num>,False,False,0.3333333333333333,False,False
+1912,1914,Who is in church group,VIEW_GROUP,validation,who is in church group,who is in church group,False,False,0.3333333333333333,False,False
+1914,1916,Do i have 100,CHECK_BALANCE,validation,do i have 100,do i have <num>,False,False,0.5,False,False
+1930,1932,Cash withdrawal 25,WITHDRAW_MONEY,validation,cash withdrawal 25,cash withdrawal <num>,False,False,0.5,False,False
+1949,1951,What's left in my account,CHECK_BALANCE,validation,what s left in my account,what s left in my account,False,False,0.3333333333333333,False,False
+1988,1990,Look up mere,MANAGE_CONTACTS,validation,look up mere,look up mere,False,False,0.2,False,False
+1999,2001,Average daily spending this time,CHECK_SPENDING,validation,average daily spending this time,average daily spending this time,False,False,0.3333333333333333,False,False
+2018,2020,Who is in family group,VIEW_GROUP,validation,who is in family group,who is in family group,False,False,0.3333333333333333,False,False
+2031,2033,Send 20 dollars to sera,TRANSFER_MONEY,validation,send 20 dollars to sera,send <num> dollars to sera,False,False,0.5714285714285714,False,False
+2056,2058,Send kumar 100,TRANSFER_MONEY,validation,send kumar 100,send kumar <num>,False,False,0.375,False,False
+2057,2059,Cash withdrawal 20,WITHDRAW_MONEY,validation,cash withdrawal 20,cash withdrawal <num>,False,False,0.5,False,False
+2059,2061,Move 20 to kumar,TRANSFER_MONEY,validation,move 20 to kumar,move <num> to kumar,False,False,0.3333333333333333,False,False
+2063,2065,View work group contributions,VIEW_GROUP,validation,view work group contributions,view work group contributions,False,False,0.5,False,False
+2068,2070,Need assistance with login if possible,HELP_SUPPORT,validation,need assistance with login if possible,need assistance with login if possible,False,False,0.2727272727272727,False,False
+2070,2072,Talk to an agent if possible,HELP_SUPPORT,validation,talk to an agent if possible,talk to an agent if possible,False,False,0.2727272727272727,False,False
+2084,2086,Do i have 50,CHECK_BALANCE,validation,do i have 50,do i have <num>,False,False,0.5,False,False
+2088,2090,My money is missing,HELP_SUPPORT,validation,my money is missing,my money is missing,False,False,0.4,False,False
+2090,2092,Show money received over the weekend,VIEW_TRANSACTIONS,validation,show money received over the weekend,show money received over the weekend,False,False,0.5714285714285714,False,False
+2095,2097,Move 50 to ravi,TRANSFER_MONEY,validation,move 50 to ravi,move <num> to ravi,False,False,0.5,False,False
+2099,2101,Talk to an agent,HELP_SUPPORT,validation,talk to an agent,talk to an agent,False,False,0.14285714285714285,False,False
+2102,2104,Cash out,WITHDRAW_MONEY,validation,cash out,cash out,False,False,0.6666666666666666,False,False
+2112,2114,What's my wallet total,CHECK_BALANCE,validation,what s my wallet total,what s my wallet total,False,False,0.2857142857142857,False,False
+2121,2123,Cash withdrawal 100,WITHDRAW_MONEY,validation,cash withdrawal 100,cash withdrawal <num>,False,False,0.5,False,False
+2135,2137,I need to pay efl,BILL_PAY,validation,i need to pay efl,i need to pay efl,False,False,0.6666666666666666,False,False
+2140,2142,Show outgoing transfers,VIEW_TRANSACTIONS,validation,show outgoing transfers,show outgoing transfers,False,False,0.25,False,False
+2154,2156,View rugby club group contributions,VIEW_GROUP,validation,view rugby club group contributions,view rugby club group contributions,False,False,0.5714285714285714,False,False
+2161,2163,Pay 15 on my broadband,BILL_PAY,validation,pay 15 on my broadband,pay <num> on my broadband,False,False,0.5,False,False
+2166,2168,Send mere $200,TRANSFER_MONEY,validation,send mere $ 200,send mere $ <num>,False,False,0.42857142857142855,False,False
+2178,2180,What's left in my account?,CHECK_BALANCE,validation,what s left in my account,what s left in my account,False,False,0.3333333333333333,False,False
+2188,2190,Average daily spending,CHECK_SPENDING,validation,average daily spending,average daily spending,False,False,0.2,False,False
+2207,2209,Need to withdraw today,WITHDRAW_MONEY,validation,need to withdraw today,need to withdraw today,False,False,0.2857142857142857,False,False
+2211,2213,My money is missing now,HELP_SUPPORT,validation,my money is missing now,my money is missing now,False,False,0.3333333333333333,False,False
+2241,2243,Pay 80 on my water,BILL_PAY,validation,pay 80 on my water,pay <num> on my water,False,False,0.5,False,False
+2242,2244,Move 5 to adi,TRANSFER_MONEY,validation,move 5 to adi,move <num> to adi,False,False,0.3333333333333333,False,False
+2262,2264,Save recipient savenaca,MANAGE_CONTACTS,validation,save recipient savenaca,save recipient savenaca,False,False,0.6666666666666666,False,False
+2264,2266,Move $20 to tui,TRANSFER_MONEY,validation,move $ 20 to tui,move $ <num> to tui,False,False,0.42857142857142855,False,False
+2288,2290,Find my transfer to mary,VIEW_TRANSACTIONS,validation,find my transfer to mary,find my transfer to mary,False,False,0.5,False,False
+2309,2311,Spending last week,CHECK_SPENDING,validation,spending last week,spending last week,False,False,0.4,False,False
+2315,2317,Look up sera,MANAGE_CONTACTS,validation,look up sera,look up sera,False,False,0.25,False,False
+2319,2321,Expenses by category?,CHECK_SPENDING,validation,expenses by category,expenses by category,False,False,0.25,False,False
+2325,2327,Find my transfer to ravi,VIEW_TRANSACTIONS,validation,find my transfer to ravi,find my transfer to ravi,False,False,0.5,False,False
+2329,2331,Spending in october,CHECK_SPENDING,validation,spending in october,spending in october,False,False,0.4,False,False
+2331,2333,Find my transfer to ana,VIEW_TRANSACTIONS,validation,find my transfer to ana,find my transfer to ana,False,False,0.5,False,False
+2398,2400,What's left in my account,CHECK_BALANCE,validation,what s left in my account,what s left in my account,False,False,0.3333333333333333,False,False
+2401,2403,I need to pay broadband,BILL_PAY,validation,i need to pay broadband,i need to pay broadband,False,False,0.6666666666666666,False,False
+2406,2408,Pay mobile using sole,BILL_PAY,validation,pay mobile using sole,pay mobile using sole,False,False,0.5,False,False
+2408,2410,Cash out?,WITHDRAW_MONEY,validation,cash out,cash out,False,False,0.6666666666666666,False,False
+2425,2427,Cash withdrawal 15,WITHDRAW_MONEY,validation,cash withdrawal 15,cash withdrawal <num>,False,False,0.5,False,False
+2437,2439,Spending since monday,CHECK_SPENDING,validation,spending since monday,spending since monday,False,False,0.4,False,False
+2443,2445,Pay my electricity bill,BILL_PAY,validation,pay my electricity bill,pay my electricity bill,False,False,0.75,False,False
+2453,2455,Send 60 dollars to savenaca,TRANSFER_MONEY,validation,send 60 dollars to savenaca,send <num> dollars to savenaca,False,False,0.5714285714285714,False,False
+2454,2456,Show contacts,MANAGE_CONTACTS,validation,show contacts,show contacts,False,False,0.3333333333333333,False,False
+2464,2466,Do i have 10,CHECK_BALANCE,validation,do i have 10,do i have <num>,False,False,0.5,False,False
+2471,2473,Look up mika,MANAGE_CONTACTS,validation,look up mika,look up mika,False,False,0.25,False,False
+2486,2488,Average daily spending,CHECK_SPENDING,validation,average daily spending,average daily spending,False,False,0.2,False,False
+2493,2495,My money is missing?,HELP_SUPPORT,validation,my money is missing,my money is missing,False,False,0.4,False,False
+2497,2499,Total money spent?,CHECK_SPENDING,validation,total money spent,total money spent,False,False,0.25,False,False
+2501,2503,Move $20 to sera?,TRANSFER_MONEY,validation,move $ 20 to sera,move $ <num> to sera,False,False,0.42857142857142855,False,False
+2510,2512,Pay internet using sole,BILL_PAY,validation,pay internet using sole,pay internet using sole,False,False,0.5,False,False
+2532,2534,Pay telecom using sole,BILL_PAY,validation,pay telecom using sole,pay telecom using sole,False,False,0.5,False,False
+2553,2555,Do i have 150,CHECK_BALANCE,validation,do i have 150,do i have <num>,False,False,0.5,False,False
+2558,2560,Show outgoing transfers,VIEW_TRANSACTIONS,validation,show outgoing transfers,show outgoing transfers,False,False,0.25,False,False
+2565,2567,Spending over the weekend quickly,CHECK_SPENDING,validation,spending over the weekend quickly,spending over the weekend quickly,False,False,0.42857142857142855,False,False
+2571,2573,Show my work group,VIEW_GROUP,validation,show my work group,show my work group,False,False,0.5,False,False
+2575,2577,Look up ravi,MANAGE_CONTACTS,validation,look up ravi,look up ravi,False,False,0.25,False,False
+2603,2605,Save recipient priya,MANAGE_CONTACTS,validation,save recipient priya,save recipient priya,False,False,0.6666666666666666,False,False
+2607,2609,Talk to an agent,HELP_SUPPORT,validation,talk to an agent,talk to an agent,False,False,0.14285714285714285,False,False
+2612,2614,Do i have 25,CHECK_BALANCE,validation,do i have 25,do i have <num>,False,False,0.5,False,False
+2617,2619,Cash out in sole,WITHDRAW_MONEY,validation,cash out in sole,cash out in sole,False,False,0.4,False,False
+2623,2625,My account is locked in sole,HELP_SUPPORT,validation,my account is locked in sole,my account is locked in sole,False,False,0.5,False,False
+2626,2628,Save recipient litia,MANAGE_CONTACTS,validation,save recipient litia,save recipient litia,False,False,0.6666666666666666,False,False
+2642,2644,Show my church group,VIEW_GROUP,validation,show my church group,show my church group,False,False,0.5,False,False
+2648,2650,Save recipient ravi,MANAGE_CONTACTS,validation,save recipient ravi,save recipient ravi,False,False,0.6666666666666666,False,False
+2657,2659,Do i have 250 on my account,CHECK_BALANCE,validation,do i have 250 on my account,do i have <num> on my account,False,False,0.45454545454545453,False,False
+2674,2676,Do i have 10,CHECK_BALANCE,validation,do i have 10,do i have <num>,False,False,0.5,False,False
+2690,2692,View market vendors group contributions,VIEW_GROUP,validation,view market vendors group contributions,view market vendors group contributions,False,False,0.5714285714285714,False,False
+2694,2696,View village group contributions,VIEW_GROUP,validation,view village group contributions,view village group contributions,False,False,0.5,False,False
+2705,2707,Who is in rugby club group,VIEW_GROUP,validation,who is in rugby club group,who is in rugby club group,False,False,0.42857142857142855,False,False
+2707,2709,Pay 15 on my school fees,BILL_PAY,validation,pay 15 on my school fees,pay <num> on my school fees,False,False,0.5714285714285714,False,False
+2731,2733,Withdraw funds,WITHDRAW_MONEY,validation,withdraw funds,withdraw funds,False,False,0.3333333333333333,False,False
+2759,2761,Spending last month,CHECK_SPENDING,validation,spending last month,spending last month,False,False,0.5,False,False
+2763,2765,Show money received this week,VIEW_TRANSACTIONS,validation,show money received this week,show money received this week,False,False,0.5,False,False
+2764,2766,Spending this month,CHECK_SPENDING,validation,spending this month,spending this month,True,True,1.0,True,True
+2774,2776,Cash withdrawal 5,WITHDRAW_MONEY,validation,cash withdrawal 5,cash withdrawal <num>,False,False,0.5,False,False
+2775,2777,Who is in work group,VIEW_GROUP,validation,who is in work group,who is in work group,False,False,0.3333333333333333,False,False
+2777,2779,Withdraw funds,WITHDRAW_MONEY,validation,withdraw funds,withdraw funds,False,False,0.3333333333333333,False,False
+2784,2786,Expenses by category on my account,CHECK_SPENDING,validation,expenses by category on my account,expenses by category on my account,False,False,0.42857142857142855,False,False
+2801,2803,Move 5 to sera,TRANSFER_MONEY,validation,move 5 to sera,move <num> to sera,False,False,0.42857142857142855,False,False
+2811,2813,Cash withdrawal 150,WITHDRAW_MONEY,validation,cash withdrawal 150,cash withdrawal <num>,False,False,0.5,False,False
+2823,2825,Send $100 to ravi,TRANSFER_MONEY,validation,send $ 100 to ravi,send $ <num> to ravi,False,False,0.5,False,False
+2824,2826,Pay school fees using sole,BILL_PAY,validation,pay school fees using sole,pay school fees using sole,False,False,0.6,False,False
+2835,2837,My money is missing on my account,HELP_SUPPORT,validation,my money is missing on my account,my money is missing on my account,False,False,0.42857142857142855,False,False
+2836,2838,Pay $200 on my electricity,BILL_PAY,validation,pay $ 200 on my electricity,pay $ <num> on my electricity,False,False,0.5,False,False
+2838,2840,Find my transfer to sera,VIEW_TRANSACTIONS,validation,find my transfer to sera,find my transfer to sera,False,False,0.5,False,False
+2849,2851,Do i have 80,CHECK_BALANCE,validation,do i have 80,do i have <num>,False,False,0.5,False,False
+2858,2860,Who is in work group,VIEW_GROUP,validation,who is in work group,who is in work group,False,False,0.3333333333333333,False,False
+2866,2868,Show my market vendors group,VIEW_GROUP,validation,show my market vendors group,show my market vendors group,False,False,0.5714285714285714,False,False
+2891,2893,Cash withdrawal $20,WITHDRAW_MONEY,validation,cash withdrawal $ 20,cash withdrawal $ <num>,False,False,0.6,False,False
+2896,2898,Pay water using sole,BILL_PAY,validation,pay water using sole,pay water using sole,False,False,0.5,False,False
+2897,2899,Open contacts,MANAGE_CONTACTS,validation,open contacts,open contacts,False,False,0.3333333333333333,False,False
+2907,2909,Talk to an agent,HELP_SUPPORT,validation,talk to an agent,talk to an agent,False,False,0.14285714285714285,False,False
+2916,2918,Need assistance with login please,HELP_SUPPORT,validation,need assistance with login please,need assistance with login please,False,False,0.14285714285714285,False,False
+2945,2947,Send mary $200,TRANSFER_MONEY,validation,send mary $ 200,send mary $ <num>,False,False,0.5,False,False
+2963,2965,View community group contributions,VIEW_GROUP,validation,view community group contributions,view community group contributions,False,False,0.5,False,False
+2978,2980,Do i have 200,CHECK_BALANCE,validation,do i have 200,do i have <num>,False,False,0.5,False,False
+2991,2993,Find my transfer to mere,VIEW_TRANSACTIONS,validation,find my transfer to mere,find my transfer to mere,False,False,0.5,False,False
+2998,3000,Pay my phone bill,BILL_PAY,validation,pay my phone bill,pay my phone bill,False,False,0.75,False,False

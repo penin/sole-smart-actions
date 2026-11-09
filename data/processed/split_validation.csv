@@ -1,0 +1,271 @@
+row_id,excel_row,text,intent,split,scope
+3,5,Save recipient roshni,MANAGE_CONTACTS,validation,core
+6,8,Show money received this week,VIEW_TRANSACTIONS,validation,core
+17,19,Find my transfer to adi,VIEW_TRANSACTIONS,validation,core
+37,39,Show my rugby club group,VIEW_GROUP,validation,core
+51,53,Spending yesterday,CHECK_SPENDING,validation,stretch
+54,56,Show money received since monday,VIEW_TRANSACTIONS,validation,core
+57,59,Cash withdrawal 300,WITHDRAW_MONEY,validation,core
+86,88,Total money spent,CHECK_SPENDING,validation,stretch
+117,119,Do i have 5,CHECK_BALANCE,validation,core
+118,120,Pay 250 on my internet,BILL_PAY,validation,core
+121,123,Save recipient jone,MANAGE_CONTACTS,validation,core
+124,126,Save recipient mary,MANAGE_CONTACTS,validation,core
+141,143,Send tui 200,TRANSFER_MONEY,validation,core
+154,156,Open statement,VIEW_TRANSACTIONS,validation,core
+161,163,Do i have 250,CHECK_BALANCE,validation,core
+174,176,Show money received in the last 30 days,VIEW_TRANSACTIONS,validation,core
+175,177,My account is locked,HELP_SUPPORT,validation,core
+177,179,Save recipient tui,MANAGE_CONTACTS,validation,core
+205,207,Look up priya,MANAGE_CONTACTS,validation,core
+209,211,Show my available funds?,CHECK_BALANCE,validation,core
+216,218,Do i have 250,CHECK_BALANCE,validation,core
+218,220,Save recipient peni,MANAGE_CONTACTS,validation,core
+230,232,Pay $100 on my school fees,BILL_PAY,validation,core
+234,236,I need to pay internet,BILL_PAY,validation,core
+275,277,Spending this month,CHECK_SPENDING,validation,stretch
+281,283,Send ravi $100,TRANSFER_MONEY,validation,core
+282,284,Who is in market vendors group,VIEW_GROUP,validation,core
+291,293,Cash withdrawal 30,WITHDRAW_MONEY,validation,core
+309,311,Send 30 to raj,TRANSFER_MONEY,validation,core
+322,324,My account is locked,HELP_SUPPORT,validation,core
+338,340,Talk to an agent,HELP_SUPPORT,validation,core
+349,351,How much did i contribute,VIEW_GROUP,validation,core
+356,358,Pay 10 on my broadband,BILL_PAY,validation,core
+388,390,My money is missing,HELP_SUPPORT,validation,core
+400,402,Total money spent if possible,CHECK_SPENDING,validation,stretch
+416,418,Average daily spending,CHECK_SPENDING,validation,stretch
+432,434,Talk to an agent,HELP_SUPPORT,validation,core
+440,442,"Cash withdrawal 1,000",WITHDRAW_MONEY,validation,core
+449,451,Pay my mobile bill,BILL_PAY,validation,core
+457,459,Find my transfer to raj,VIEW_TRANSACTIONS,validation,core
+466,468,Who is in holiday savings group,VIEW_GROUP,validation,core
+482,484,View holiday savings group contributions,VIEW_GROUP,validation,core
+487,489,Talk to an agent,HELP_SUPPORT,validation,core
+525,527,Need assistance with login,HELP_SUPPORT,validation,core
+545,547,My money is missing,HELP_SUPPORT,validation,core
+551,553,Cash withdrawal 150,WITHDRAW_MONEY,validation,core
+577,579,Save recipient ben,MANAGE_CONTACTS,validation,core
+579,581,Save recipient ravi,MANAGE_CONTACTS,validation,core
+586,588,Do i have 40?,CHECK_BALANCE,validation,core
+596,598,Do i have $50,CHECK_BALANCE,validation,core
+598,600,Spending since monday,CHECK_SPENDING,validation,stretch
+604,606,Send 40 dollars to jone,TRANSFER_MONEY,validation,core
+610,612,Need assistance with login,HELP_SUPPORT,validation,core
+613,615,Find my transfer to asha,VIEW_TRANSACTIONS,validation,core
+616,618,Show my available funds,CHECK_BALANCE,validation,core
+629,631,Show contacts,MANAGE_CONTACTS,validation,core
+634,636,Show my available funds,CHECK_BALANCE,validation,core
+637,639,Pay my school fees bill,BILL_PAY,validation,core
+642,644,Spending in october?,CHECK_SPENDING,validation,stretch
+645,647,Send savenaca $20,TRANSFER_MONEY,validation,core
+648,650,My account is locked this time,HELP_SUPPORT,validation,core
+653,655,Move 80 to ravi,TRANSFER_MONEY,validation,core
+655,657,Cash withdrawal 80,WITHDRAW_MONEY,validation,core
+665,667,Save recipient mere,MANAGE_CONTACTS,validation,core
+671,673,Save recipient mere,MANAGE_CONTACTS,validation,core
+700,702,Save recipient savenaca?,MANAGE_CONTACTS,validation,core
+714,716,Spending last week,CHECK_SPENDING,validation,stretch
+721,723,Talk to an agent?,HELP_SUPPORT,validation,core
+731,733,Cash withdrawal 80?,WITHDRAW_MONEY,validation,core
+736,738,Show my community group,VIEW_GROUP,validation,core
+772,774,Pay 200 on my efl,BILL_PAY,validation,core
+779,781,Show money received this month,VIEW_TRANSACTIONS,validation,core
+816,818,Move 10 to savenaca,TRANSFER_MONEY,validation,core
+821,823,Spending this week,CHECK_SPENDING,validation,stretch
+830,832,Cash withdrawal 500,WITHDRAW_MONEY,validation,core
+832,834,Look up ana,MANAGE_CONTACTS,validation,core
+833,835,Who is in family group,VIEW_GROUP,validation,core
+840,842,Show my available funds in sole,CHECK_BALANCE,validation,core
+868,870,Move 250 to kumar,TRANSFER_MONEY,validation,core
+871,873,What's my wallet total,CHECK_BALANCE,validation,core
+896,898,Save recipient sera,MANAGE_CONTACTS,validation,core
+902,904,Send 10 dollars to mika,TRANSFER_MONEY,validation,core
+905,907,Send asha 15,TRANSFER_MONEY,validation,core
+914,916,Look up savenaca,MANAGE_CONTACTS,validation,core
+922,924,Expenses by category,CHECK_SPENDING,validation,stretch
+923,925,Spending this month? in sole,CHECK_SPENDING,validation,stretch
+933,935,Need assistance with login this time,HELP_SUPPORT,validation,core
+934,936,Who is in community group,VIEW_GROUP,validation,core
+940,942,Spending last month,CHECK_SPENDING,validation,stretch
+946,948,Look up adi,MANAGE_CONTACTS,validation,core
+950,952,Move $50 to raj,TRANSFER_MONEY,validation,core
+956,958,Find my transfer to asha,VIEW_TRANSACTIONS,validation,core
+959,961,Send 300 to adi,TRANSFER_MONEY,validation,core
+1058,1060,View church group contributions,VIEW_GROUP,validation,core
+1095,1097,Cash withdrawal 75,WITHDRAW_MONEY,validation,core
+1109,1111,Talk to an agent,HELP_SUPPORT,validation,core
+1120,1122,Open contacts,MANAGE_CONTACTS,validation,core
+1126,1128,What's my wallet total?,CHECK_BALANCE,validation,core
+1130,1132,Find my transfer to ben,VIEW_TRANSACTIONS,validation,core
+1150,1152,Spending,CHECK_SPENDING,validation,stretch
+1160,1162,Cash out,WITHDRAW_MONEY,validation,core
+1179,1181,I need to pay waf,BILL_PAY,validation,core
+1183,1185,Pay efl using sole,BILL_PAY,validation,core
+1186,1188,Show my available funds at the moment,CHECK_BALANCE,validation,core
+1206,1208,Need to withdraw,WITHDRAW_MONEY,validation,core
+1250,1252,Need assistance with login?,HELP_SUPPORT,validation,core
+1277,1279,Look up raj,MANAGE_CONTACTS,validation,core
+1317,1319,Find my transfer to peni,VIEW_TRANSACTIONS,validation,core
+1321,1323,Pay phone using sole,BILL_PAY,validation,core
+1326,1328,Spending over the weekend,CHECK_SPENDING,validation,stretch
+1334,1336,Do i have 80,CHECK_BALANCE,validation,core
+1365,1367,Show money received in october,VIEW_TRANSACTIONS,validation,core
+1378,1380,Send peni 50,TRANSFER_MONEY,validation,core
+1389,1391,Do i have 300,CHECK_BALANCE,validation,core
+1405,1407,Look up tui,MANAGE_CONTACTS,validation,core
+1413,1415,Do i have $100,CHECK_BALANCE,validation,core
+1455,1457,Show outgoing transfers,VIEW_TRANSACTIONS,validation,core
+1461,1463,Find my transfer to roshni,VIEW_TRANSACTIONS,validation,core
+1475,1477,Send jone 5,TRANSFER_MONEY,validation,core
+1481,1483,Show money received last week,VIEW_TRANSACTIONS,validation,core
+1489,1491,Pay waf using sole,BILL_PAY,validation,core
+1490,1492,Do i have $20,CHECK_BALANCE,validation,core
+1495,1497,I need to pay electricity,BILL_PAY,validation,core
+1504,1506,Pay my water bill,BILL_PAY,validation,core
+1537,1539,Pay 20 on my internet,BILL_PAY,validation,core
+1538,1540,Send $100 to adi,TRANSFER_MONEY,validation,core
+1550,1552,My account is locked?,HELP_SUPPORT,validation,core
+1570,1572,Show my school group,VIEW_GROUP,validation,core
+1589,1591,Show my women's savings group,VIEW_GROUP,validation,core
+1590,1592,Pay my internet bill,BILL_PAY,validation,core
+1592,1594,Send 500 to joeli,TRANSFER_MONEY,validation,core
+1602,1604,Show money received in october,VIEW_TRANSACTIONS,validation,core
+1604,1606,Spending in the last 30 days,CHECK_SPENDING,validation,stretch
+1617,1619,Who is in school group,VIEW_GROUP,validation,core
+1627,1629,Send $20 dollars to ben,TRANSFER_MONEY,validation,core
+1642,1644,I need to pay phone,BILL_PAY,validation,core
+1653,1655,Cash withdrawal 250,WITHDRAW_MONEY,validation,core
+1654,1656,Send 60 to asha,TRANSFER_MONEY,validation,core
+1667,1669,Who is in women's savings group?,VIEW_GROUP,validation,core
+1674,1676,Expenses by category at the moment,CHECK_SPENDING,validation,stretch
+1684,1686,Show money received last month,VIEW_TRANSACTIONS,validation,core
+1688,1690,What's my wallet total,CHECK_BALANCE,validation,core
+1701,1703,Withdraw funds,WITHDRAW_MONEY,validation,core
+1702,1704,My account is locked on my account,HELP_SUPPORT,validation,core
+1704,1706,Talk to an agent on sole,HELP_SUPPORT,validation,core
+1726,1728,How much did i contribute?,VIEW_GROUP,validation,core
+1733,1735,Withdraw funds?,WITHDRAW_MONEY,validation,core
+1738,1740,Show my church group?,VIEW_GROUP,validation,core
+1745,1747,Look up jone,MANAGE_CONTACTS,validation,core
+1754,1756,Talk to an agent now,HELP_SUPPORT,validation,core
+1766,1768,Show my work group,VIEW_GROUP,validation,core
+1787,1789,View women's savings group contributions,VIEW_GROUP,validation,core
+1800,1802,I need to pay telecom,BILL_PAY,validation,core
+1810,1812,Need to withdraw,WITHDRAW_MONEY,validation,core
+1816,1818,Show money received in the last 30 days,VIEW_TRANSACTIONS,validation,core
+1825,1827,Talk to an agent please,HELP_SUPPORT,validation,core
+1837,1839,Cash withdrawal $100,WITHDRAW_MONEY,validation,core
+1868,1870,Total money spent,CHECK_SPENDING,validation,stretch
+1874,1876,Show money received,VIEW_TRANSACTIONS,validation,core
+1877,1879,Open statement,VIEW_TRANSACTIONS,validation,core
+1886,1888,Cash withdrawal 120,WITHDRAW_MONEY,validation,core
+1899,1901,Expenses by category,CHECK_SPENDING,validation,stretch
+1903,1905,Open statement if possible,VIEW_TRANSACTIONS,validation,core
+1908,1910,Cash withdrawal 10,WITHDRAW_MONEY,validation,core
+1912,1914,Who is in church group,VIEW_GROUP,validation,core
+1914,1916,Do i have 100,CHECK_BALANCE,validation,core
+1930,1932,Cash withdrawal 25,WITHDRAW_MONEY,validation,core
+1949,1951,What's left in my account,CHECK_BALANCE,validation,core
+1988,1990,Look up mere,MANAGE_CONTACTS,validation,core
+1999,2001,Average daily spending this time,CHECK_SPENDING,validation,stretch
+2018,2020,Who is in family group,VIEW_GROUP,validation,core
+2031,2033,Send 20 dollars to sera,TRANSFER_MONEY,validation,core
+2056,2058,Send kumar 100,TRANSFER_MONEY,validation,core
+2057,2059,Cash withdrawal 20,WITHDRAW_MONEY,validation,core
+2059,2061,Move 20 to kumar,TRANSFER_MONEY,validation,core
+2063,2065,View work group contributions,VIEW_GROUP,validation,core
+2068,2070,Need assistance with login if possible,HELP_SUPPORT,validation,core
+2070,2072,Talk to an agent if possible,HELP_SUPPORT,validation,core
+2084,2086,Do i have 50,CHECK_BALANCE,validation,core
+2088,2090,My money is missing,HELP_SUPPORT,validation,core
+2090,2092,Show money received over the weekend,VIEW_TRANSACTIONS,validation,core
+2095,2097,Move 50 to ravi,TRANSFER_MONEY,validation,core
+2099,2101,Talk to an agent,HELP_SUPPORT,validation,core
+2102,2104,Cash out,WITHDRAW_MONEY,validation,core
+2112,2114,What's my wallet total,CHECK_BALANCE,validation,core
+2121,2123,Cash withdrawal 100,WITHDRAW_MONEY,validation,core
+2135,2137,I need to pay efl,BILL_PAY,validation,core
+2140,2142,Show outgoing transfers,VIEW_TRANSACTIONS,validation,core
+2154,2156,View rugby club group contributions,VIEW_GROUP,validation,core
+2161,2163,Pay 15 on my broadband,BILL_PAY,validation,core
+2166,2168,Send mere $200,TRANSFER_MONEY,validation,core
+2178,2180,What's left in my account?,CHECK_BALANCE,validation,core
+2188,2190,Average daily spending,CHECK_SPENDING,validation,stretch
+2207,2209,Need to withdraw today,WITHDRAW_MONEY,validation,core
+2211,2213,My money is missing now,HELP_SUPPORT,validation,core
+2241,2243,Pay 80 on my water,BILL_PAY,validation,core
+2242,2244,Move 5 to adi,TRANSFER_MONEY,validation,core
+2262,2264,Save recipient savenaca,MANAGE_CONTACTS,validation,core
+2264,2266,Move $20 to tui,TRANSFER_MONEY,validation,core
+2288,2290,Find my transfer to mary,VIEW_TRANSACTIONS,validation,core
+2309,2311,Spending last week,CHECK_SPENDING,validation,stretch
+2315,2317,Look up sera,MANAGE_CONTACTS,validation,core
+2319,2321,Expenses by category?,CHECK_SPENDING,validation,stretch
+2325,2327,Find my transfer to ravi,VIEW_TRANSACTIONS,validation,core
+2329,2331,Spending in october,CHECK_SPENDING,validation,stretch
+2331,2333,Find my transfer to ana,VIEW_TRANSACTIONS,validation,core
+2398,2400,What's left in my account,CHECK_BALANCE,validation,core
+2401,2403,I need to pay broadband,BILL_PAY,validation,core
+2406,2408,Pay mobile using sole,BILL_PAY,validation,core
+2408,2410,Cash out?,WITHDRAW_MONEY,validation,core
+2425,2427,Cash withdrawal 15,WITHDRAW_MONEY,validation,core
+2437,2439,Spending since monday,CHECK_SPENDING,validation,stretch
+2443,2445,Pay my electricity bill,BILL_PAY,validation,core
+2453,2455,Send 60 dollars to savenaca,TRANSFER_MONEY,validation,core
+2454,2456,Show contacts,MANAGE_CONTACTS,validation,core
+2464,2466,Do i have 10,CHECK_BALANCE,validation,core
+2471,2473,Look up mika,MANAGE_CONTACTS,validation,core
+2486,2488,Average daily spending,CHECK_SPENDING,validation,stretch
+2493,2495,My money is missing?,HELP_SUPPORT,validation,core
+2497,2499,Total money spent?,CHECK_SPENDING,validation,stretch
+2501,2503,Move $20 to sera?,TRANSFER_MONEY,validation,core
+2510,2512,Pay internet using sole,BILL_PAY,validation,core
+2532,2534,Pay telecom using sole,BILL_PAY,validation,core
+2553,2555,Do i have 150,CHECK_BALANCE,validation,core
+2558,2560,Show outgoing transfers,VIEW_TRANSACTIONS,validation,core
+2565,2567,Spending over the weekend quickly,CHECK_SPENDING,validation,stretch
+2571,2573,Show my work group,VIEW_GROUP,validation,core
+2575,2577,Look up ravi,MANAGE_CONTACTS,validation,core
+2603,2605,Save recipient priya,MANAGE_CONTACTS,validation,core
+2607,2609,Talk to an agent,HELP_SUPPORT,validation,core
+2612,2614,Do i have 25,CHECK_BALANCE,validation,core
+2617,2619,Cash out in sole,WITHDRAW_MONEY,validation,core
+2623,2625,My account is locked in sole,HELP_SUPPORT,validation,core
+2626,2628,Save recipient litia,MANAGE_CONTACTS,validation,core
+2642,2644,Show my church group,VIEW_GROUP,validation,core
+2648,2650,Save recipient ravi,MANAGE_CONTACTS,validation,core
+2657,2659,Do i have 250 on my account,CHECK_BALANCE,validation,core
+2674,2676,Do i have 10,CHECK_BALANCE,validation,core
+2690,2692,View market vendors group contributions,VIEW_GROUP,validation,core
+2694,2696,View village group contributions,VIEW_GROUP,validation,core
+2705,2707,Who is in rugby club group,VIEW_GROUP,validation,core
+2707,2709,Pay 15 on my school fees,BILL_PAY,validation,core
+2731,2733,Withdraw funds,WITHDRAW_MONEY,validation,core
+2759,2761,Spending last month,CHECK_SPENDING,validation,stretch
+2763,2765,Show money received this week,VIEW_TRANSACTIONS,validation,core
+2764,2766,Spending this month,CHECK_SPENDING,validation,stretch
+2774,2776,Cash withdrawal 5,WITHDRAW_MONEY,validation,core
+2775,2777,Who is in work group,VIEW_GROUP,validation,core
+2777,2779,Withdraw funds,WITHDRAW_MONEY,validation,core
+2784,2786,Expenses by category on my account,CHECK_SPENDING,validation,stretch
+2801,2803,Move 5 to sera,TRANSFER_MONEY,validation,core
+2811,2813,Cash withdrawal 150,WITHDRAW_MONEY,validation,core
+2823,2825,Send $100 to ravi,TRANSFER_MONEY,validation,core
+2824,2826,Pay school fees using sole,BILL_PAY,validation,core
+2835,2837,My money is missing on my account,HELP_SUPPORT,validation,core
+2836,2838,Pay $200 on my electricity,BILL_PAY,validation,core
+2838,2840,Find my transfer to sera,VIEW_TRANSACTIONS,validation,core
+2849,2851,Do i have 80,CHECK_BALANCE,validation,core
+2858,2860,Who is in work group,VIEW_GROUP,validation,core
+2866,2868,Show my market vendors group,VIEW_GROUP,validation,core
+2891,2893,Cash withdrawal $20,WITHDRAW_MONEY,validation,core
+2896,2898,Pay water using sole,BILL_PAY,validation,core
+2897,2899,Open contacts,MANAGE_CONTACTS,validation,core
+2907,2909,Talk to an agent,HELP_SUPPORT,validation,core
+2916,2918,Need assistance with login please,HELP_SUPPORT,validation,core
+2945,2947,Send mary $200,TRANSFER_MONEY,validation,core
+2963,2965,View community group contributions,VIEW_GROUP,validation,core
+2978,2980,Do i have 200,CHECK_BALANCE,validation,core
+2991,2993,Find my transfer to mere,VIEW_TRANSACTIONS,validation,core
+2998,3000,Pay my phone bill,BILL_PAY,validation,core

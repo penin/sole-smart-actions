@@ -1,0 +1,7 @@
+# Demo API dependencies. Install into the project's existing .venv (which already has scikit-learn,
+# joblib and the `sole_intent` package used to train the model):
+#   .venv\Scripts\python -m pip install -r demo\backend\requirements.txt
+fastapi==0.162.2
+uvicorn[standard]==0.54.0
+httpx==0.28.1
+-r ../../requirements.txt

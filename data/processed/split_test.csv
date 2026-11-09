@@ -1,0 +1,271 @@
+row_id,excel_row,text,intent,split,scope
+5,7,Recent transactions?,VIEW_TRANSACTIONS,test,core
+11,13,Start a bill payment,BILL_PAY,test,core
+31,33,How much is available,CHECK_BALANCE,test,core
+44,46,Summarize my expenses,CHECK_SPENDING,test,stretch
+56,58,Withdraw 120 dollars,WITHDRAW_MONEY,test,core
+63,65,How much is available?,CHECK_BALANCE,test,core
+88,90,Show last 5 transactions,VIEW_TRANSACTIONS,test,core
+92,94,Withdraw 50 dollars,WITHDRAW_MONEY,test,core
+100,102,How much is available now,CHECK_BALANCE,test,core
+103,105,Help with my sole app,HELP_SUPPORT,test,core
+110,112,Need customer service,HELP_SUPPORT,test,core
+125,127,Can i pay waf,BILL_PAY,test,core
+129,131,Help with my sole app?,HELP_SUPPORT,test,core
+143,145,Edit savenaca's details,MANAGE_CONTACTS,test,core
+151,153,Edit adi's details,MANAGE_CONTACTS,test,core
+155,157,Need customer service please now,HELP_SUPPORT,test,core
+181,183,What's my balance please now,CHECK_BALANCE,test,core
+183,185,View my recipient list?,MANAGE_CONTACTS,test,core
+186,188,Send cash to jone,TRANSFER_MONEY,test,core
+188,190,Send cash to peni,TRANSFER_MONEY,test,core
+193,195,How much has church group saved?,VIEW_GROUP,test,core
+199,201,I have a complaint,HELP_SUPPORT,test,core
+208,210,How much has market vendors group saved,VIEW_GROUP,test,core
+211,213,View my recipient list,MANAGE_CONTACTS,test,core
+223,225,Show spending on shopping,CHECK_SPENDING,test,stretch
+225,227,Send cash to ravi,TRANSFER_MONEY,test,core
+238,240,Show last 5 transactions in sole,VIEW_TRANSACTIONS,test,core
+239,241,Need customer service please,HELP_SUPPORT,test,core
+244,246,View my recipient list,MANAGE_CONTACTS,test,core
+264,266,Need customer service,HELP_SUPPORT,test,core
+306,308,Check balance,CHECK_BALANCE,test,core
+311,313,Pay telecom,BILL_PAY,test,core
+314,316,Where is my statement,VIEW_TRANSACTIONS,test,core
+343,345,I have a complaint,HELP_SUPPORT,test,core
+364,366,Where is my statement?,VIEW_TRANSACTIONS,test,core
+382,384,Prepare a withdrawal,WITHDRAW_MONEY,test,core
+387,389,Withdraw 40 dollars,WITHDRAW_MONEY,test,core
+409,411,I owe joeli 100,TRANSFER_MONEY,test,core
+413,415,Edit savenaca's details,MANAGE_CONTACTS,test,core
+421,423,Withdraw 20 dollars,WITHDRAW_MONEY,test,core
+436,438,Send cash to asha,TRANSFER_MONEY,test,core
+442,444,Pay waf,BILL_PAY,test,core
+464,466,Help with my sole app at the moment,HELP_SUPPORT,test,core
+474,476,Can i pay water,BILL_PAY,test,core
+476,478,View groupwealth,VIEW_GROUP,test,core
+477,479,Pay waf?,BILL_PAY,test,core
+479,481,Withdraw 200 dollars?,WITHDRAW_MONEY,test,core
+489,491,How much has church group saved,VIEW_GROUP,test,core
+493,495,I have a complaint?,HELP_SUPPORT,test,core
+496,498,Pay efl,BILL_PAY,test,core
+521,523,Withdraw 10 dollars?,WITHDRAW_MONEY,test,core
+526,528,Please send $100 to ravi,TRANSFER_MONEY,test,core
+562,564,Show transactions,VIEW_TRANSACTIONS,test,core
+565,567,Need customer service,HELP_SUPPORT,test,core
+566,568,Withdraw 60 dollars,WITHDRAW_MONEY,test,core
+575,577,Where is my statement on my account,VIEW_TRANSACTIONS,test,core
+591,593,Start a bill payment,BILL_PAY,test,core
+603,605,Help me send money to mika,TRANSFER_MONEY,test,core
+607,609,View groupwealth,VIEW_GROUP,test,core
+628,630,Total purchases this week,CHECK_SPENDING,test,stretch
+632,634,Total purchases last month,CHECK_SPENDING,test,stretch
+690,692,How do i cash out,WITHDRAW_MONEY,test,core
+695,697,Edit john's details,MANAGE_CONTACTS,test,core
+711,713,Go to family group,VIEW_GROUP,test,core
+730,732,Withdraw 80 dollars,WITHDRAW_MONEY,test,core
+735,737,Recent transactions now,VIEW_TRANSACTIONS,test,core
+747,749,I owe tui $200,TRANSFER_MONEY,test,core
+752,754,Show savings balance,CHECK_BALANCE,test,core
+768,770,Edit sera's details,MANAGE_CONTACTS,test,core
+808,810,Check balance in sole,CHECK_BALANCE,test,core
+809,811,Show spending on school,CHECK_SPENDING,test,stretch
+810,812,Withdraw 5 dollars,WITHDRAW_MONEY,test,core
+822,824,Need customer service please,HELP_SUPPORT,test,core
+829,831,Show expenditure summary,CHECK_SPENDING,test,stretch
+849,851,How much has rugby club group saved,VIEW_GROUP,test,core
+852,854,Pay water,BILL_PAY,test,core
+857,859,Need customer service please,HELP_SUPPORT,test,core
+859,861,I owe raj 120,TRANSFER_MONEY,test,core
+872,874,Need customer service?,HELP_SUPPORT,test,core
+879,881,Help with my sole app on my account,HELP_SUPPORT,test,core
+887,889,Help me send money to john,TRANSFER_MONEY,test,core
+897,899,Show last 5 transactions on my account,VIEW_TRANSACTIONS,test,core
+907,909,Recent transactions,VIEW_TRANSACTIONS,test,core
+909,911,What's my balance please on sole,CHECK_BALANCE,test,core
+929,931,Withdraw at an agent,WITHDRAW_MONEY,test,core
+941,943,View groupwealth now,VIEW_GROUP,test,core
+944,946,Help,HELP_SUPPORT,test,core
+954,956,View groupwealth,VIEW_GROUP,test,core
+961,963,Summarize my expenses,CHECK_SPENDING,test,stretch
+963,965,Can i pay waf,BILL_PAY,test,core
+971,973,What's my balance,CHECK_BALANCE,test,core
+1000,1002,Edit litia's details?,MANAGE_CONTACTS,test,core
+1011,1013,What's my balance,CHECK_BALANCE,test,core
+1021,1023,Withdraw 30 dollars,WITHDRAW_MONEY,test,core
+1047,1049,What's my balance?,CHECK_BALANCE,test,core
+1050,1052,Show expenditure summary?,CHECK_SPENDING,test,stretch
+1054,1056,Total purchases over the weekend,CHECK_SPENDING,test,stretch
+1059,1061,Show beneficiaries,MANAGE_CONTACTS,test,core
+1070,1072,Show expenditure summary,CHECK_SPENDING,test,stretch
+1080,1082,How much has work group saved,VIEW_GROUP,test,core
+1082,1084,I owe mere 50,TRANSFER_MONEY,test,core
+1100,1102,Can i pay efl,BILL_PAY,test,core
+1113,1115,How much has village group saved,VIEW_GROUP,test,core
+1115,1117,Help?,HELP_SUPPORT,test,core
+1116,1118,Total purchases over the weekend,CHECK_SPENDING,test,stretch
+1127,1129,I owe jone 80,TRANSFER_MONEY,test,core
+1135,1137,What's my balance please,CHECK_BALANCE,test,core
+1137,1139,Show transactions,VIEW_TRANSACTIONS,test,core
+1140,1142,Where is my statement,VIEW_TRANSACTIONS,test,core
+1141,1143,Recent transactions,VIEW_TRANSACTIONS,test,core
+1147,1149,How much has school group saved?,VIEW_GROUP,test,core
+1156,1158,Pay internet,BILL_PAY,test,core
+1199,1201,Edit mere's details,MANAGE_CONTACTS,test,core
+1203,1205,Edit ana's details,MANAGE_CONTACTS,test,core
+1210,1212,Total purchases since monday,CHECK_SPENDING,test,stretch
+1222,1224,Show spending on restaurants,CHECK_SPENDING,test,stretch
+1223,1225,What's my balance,CHECK_BALANCE,test,core
+1237,1239,Where is my statement this time,VIEW_TRANSACTIONS,test,core
+1259,1261,Show savings balance,CHECK_BALANCE,test,core
+1261,1263,"Withdraw 1,000 dollars",WITHDRAW_MONEY,test,core
+1285,1287,Withdraw 15 dollars,WITHDRAW_MONEY,test,core
+1288,1290,Pay school fees,BILL_PAY,test,core
+1292,1294,Group savings,VIEW_GROUP,test,core
+1301,1303,View groupwealth,VIEW_GROUP,test,core
+1306,1308,How much has holiday savings group saved,VIEW_GROUP,test,core
+1327,1329,Total purchases last week,CHECK_SPENDING,test,stretch
+1357,1359,Withdraw 75 dollars,WITHDRAW_MONEY,test,core
+1369,1371,Edit adi's details quickly,MANAGE_CONTACTS,test,core
+1377,1379,Edit kumar's details,MANAGE_CONTACTS,test,core
+1380,1382,What's my balance,CHECK_BALANCE,test,core
+1398,1400,I owe mika 5,TRANSFER_MONEY,test,core
+1402,1404,Show transactions,VIEW_TRANSACTIONS,test,core
+1412,1414,Go to holiday savings group,VIEW_GROUP,test,core
+1431,1433,Pay broadband,BILL_PAY,test,core
+1465,1467,I have a complaint,HELP_SUPPORT,test,core
+1478,1480,Help me send money to roshni,TRANSFER_MONEY,test,core
+1479,1481,Withdraw $200 dollars,WITHDRAW_MONEY,test,core
+1482,1484,Pay phone,BILL_PAY,test,core
+1484,1486,Edit jone's details,MANAGE_CONTACTS,test,core
+1498,1500,Go to community group,VIEW_GROUP,test,core
+1507,1509,Show spending on school?,CHECK_SPENDING,test,stretch
+1515,1517,Send cash to raj,TRANSFER_MONEY,test,core
+1519,1521,Check balance,CHECK_BALANCE,test,core
+1529,1531,Can i pay water if possible,BILL_PAY,test,core
+1531,1533,What's my balance please,CHECK_BALANCE,test,core
+1536,1538,How much has community group saved,VIEW_GROUP,test,core
+1560,1562,Edit mika's details,MANAGE_CONTACTS,test,core
+1579,1581,Where is my statement,VIEW_TRANSACTIONS,test,core
+1584,1586,Withdraw 500 dollars,WITHDRAW_MONEY,test,core
+1585,1587,Show transactions?,VIEW_TRANSACTIONS,test,core
+1596,1598,Help,HELP_SUPPORT,test,core
+1603,1605,Send cash to kumar,TRANSFER_MONEY,test,core
+1610,1612,Check balance,CHECK_BALANCE,test,core
+1616,1618,Pay mobile,BILL_PAY,test,core
+1620,1622,Can i pay electricity?,BILL_PAY,test,core
+1633,1635,Edit joeli's details,MANAGE_CONTACTS,test,core
+1645,1647,Edit roshni's details,MANAGE_CONTACTS,test,core
+1690,1692,Show spending on fuel,CHECK_SPENDING,test,stretch
+1696,1698,Edit sera's details?,MANAGE_CONTACTS,test,core
+1712,1714,Total purchases in october,CHECK_SPENDING,test,stretch
+1717,1719,Please send $200 to asha,TRANSFER_MONEY,test,core
+1728,1730,Please send 25 to mere,TRANSFER_MONEY,test,core
+1730,1732,Go to women's savings group,VIEW_GROUP,test,core
+1746,1748,Show expenditure summary in sole,CHECK_SPENDING,test,stretch
+1773,1775,Show spending on school,CHECK_SPENDING,test,stretch
+1782,1784,Show last 5 transactions,VIEW_TRANSACTIONS,test,core
+1822,1824,Show transactions at the moment,VIEW_TRANSACTIONS,test,core
+1826,1828,Recent transactions,VIEW_TRANSACTIONS,test,core
+1829,1831,Pay bills,BILL_PAY,test,core
+1835,1837,How much is available,CHECK_BALANCE,test,core
+1841,1843,Edit adi's details,MANAGE_CONTACTS,test,core
+1860,1862,Withdraw at an agent this time,WITHDRAW_MONEY,test,core
+1865,1867,Show savings balance?,CHECK_BALANCE,test,core
+1873,1875,Please send 80 to adi,TRANSFER_MONEY,test,core
+1879,1881,Go to village group,VIEW_GROUP,test,core
+1885,1887,Withdraw $50 dollars,WITHDRAW_MONEY,test,core
+1890,1892,Recent transactions,VIEW_TRANSACTIONS,test,core
+1911,1913,Recent transactions,VIEW_TRANSACTIONS,test,core
+1931,1933,Withdraw at an agent?,WITHDRAW_MONEY,test,core
+1953,1955,Can i pay broadband,BILL_PAY,test,core
+1960,1962,Check balance,CHECK_BALANCE,test,core
+1968,1970,Show savings balance in sole,CHECK_BALANCE,test,core
+1970,1972,Help with my sole app,HELP_SUPPORT,test,core
+1971,1973,Summarize my expenses now,CHECK_SPENDING,test,stretch
+1974,1976,How much is available this time,CHECK_BALANCE,test,core
+1994,1996,Can i pay school fees,BILL_PAY,test,core
+1995,1997,Send cash to john,TRANSFER_MONEY,test,core
+2015,2017,Manage my contacts,MANAGE_CONTACTS,test,core
+2027,2029,Send cash to sera,TRANSFER_MONEY,test,core
+2035,2037,Prepare a withdrawal,WITHDRAW_MONEY,test,core
+2048,2050,Total purchases since monday,CHECK_SPENDING,test,stretch
+2062,2064,Can i pay electricity,BILL_PAY,test,core
+2074,2076,Go to work group,VIEW_GROUP,test,core
+2077,2079,What's my balance please,CHECK_BALANCE,test,core
+2096,2098,Edit ana's details,MANAGE_CONTACTS,test,core
+2097,2099,Pay electricity,BILL_PAY,test,core
+2117,2119,Withdraw 250 dollars,WITHDRAW_MONEY,test,core
+2127,2129,Recent transactions,VIEW_TRANSACTIONS,test,core
+2134,2136,Pay waf today,BILL_PAY,test,core
+2142,2144,Go to market vendors group,VIEW_GROUP,test,core
+2180,2182,Show transactions,VIEW_TRANSACTIONS,test,core
+2219,2221,Need customer service,HELP_SUPPORT,test,core
+2224,2226,Show savings balance,CHECK_BALANCE,test,core
+2229,2231,Show spending on food,CHECK_SPENDING,test,stretch
+2232,2234,How much has school group saved,VIEW_GROUP,test,core
+2238,2240,Help with my sole app please,HELP_SUPPORT,test,core
+2249,2251,What's my balance please,CHECK_BALANCE,test,core
+2286,2288,Need customer service please on sole,HELP_SUPPORT,test,core
+2300,2302,Edit priya's details,MANAGE_CONTACTS,test,core
+2307,2309,Withdraw $20 dollars,WITHDRAW_MONEY,test,core
+2337,2339,Recent transactions on sole,VIEW_TRANSACTIONS,test,core
+2347,2349,Help me send money to sera,TRANSFER_MONEY,test,core
+2353,2355,Can i pay mobile,BILL_PAY,test,core
+2378,2380,Go to women's savings group if possible,VIEW_GROUP,test,core
+2379,2381,Can i pay phone,BILL_PAY,test,core
+2383,2385,Show beneficiaries,MANAGE_CONTACTS,test,core
+2389,2391,Need customer service,HELP_SUPPORT,test,core
+2411,2413,How much has family group saved,VIEW_GROUP,test,core
+2415,2417,How do i cash out,WITHDRAW_MONEY,test,core
+2423,2425,Need customer service please,HELP_SUPPORT,test,core
+2427,2429,Withdraw 10 dollars,WITHDRAW_MONEY,test,core
+2441,2443,Total purchases yesterday,CHECK_SPENDING,test,stretch
+2462,2464,Edit jone's details?,MANAGE_CONTACTS,test,core
+2474,2476,Show spending on mobile data,CHECK_SPENDING,test,stretch
+2476,2478,Prepare a withdrawal?,WITHDRAW_MONEY,test,core
+2477,2479,Check balance?,CHECK_BALANCE,test,core
+2491,2493,I owe adi 250,TRANSFER_MONEY,test,core
+2527,2529,Start a bill payment,BILL_PAY,test,core
+2533,2535,Show savings balance,CHECK_BALANCE,test,core
+2543,2545,Total purchases in the last 30 days,CHECK_SPENDING,test,stretch
+2550,2552,Can i pay broadband,BILL_PAY,test,core
+2598,2600,Show spending on market,CHECK_SPENDING,test,stretch
+2605,2607,Send cash to litia,TRANSFER_MONEY,test,core
+2610,2612,Show last 5 transactions,VIEW_TRANSACTIONS,test,core
+2622,2624,Send cash to adi,TRANSFER_MONEY,test,core
+2630,2632,Withdraw 25 dollars,WITHDRAW_MONEY,test,core
+2635,2637,Show beneficiaries?,MANAGE_CONTACTS,test,core
+2643,2645,I owe kumar 40,TRANSFER_MONEY,test,core
+2649,2651,Recent transactions on the app,VIEW_TRANSACTIONS,test,core
+2650,2652,Show spending on utilities,CHECK_SPENDING,test,stretch
+2652,2654,Group savings,VIEW_GROUP,test,core
+2681,2683,Help in sole,HELP_SUPPORT,test,core
+2688,2690,Prepare a withdrawal,WITHDRAW_MONEY,test,core
+2697,2699,Withdraw at an agent,WITHDRAW_MONEY,test,core
+2716,2718,Manage my contacts,MANAGE_CONTACTS,test,core
+2728,2730,Go to school group,VIEW_GROUP,test,core
+2745,2747,Go to church group,VIEW_GROUP,test,core
+2776,2778,Recent transactions,VIEW_TRANSACTIONS,test,core
+2786,2788,I have a complaint at the moment,HELP_SUPPORT,test,core
+2789,2791,Help at the moment,HELP_SUPPORT,test,core
+2797,2799,How much is available,CHECK_BALANCE,test,core
+2814,2816,Can i pay school fees,BILL_PAY,test,core
+2843,2845,Show last 5 transactions?,VIEW_TRANSACTIONS,test,core
+2847,2849,Pay bills,BILL_PAY,test,core
+2863,2865,Help on the app,HELP_SUPPORT,test,core
+2872,2874,I owe mary $50,TRANSFER_MONEY,test,core
+2877,2879,Show spending on bills,CHECK_SPENDING,test,stretch
+2886,2888,I owe mary 15,TRANSFER_MONEY,test,core
+2910,2912,Please send 500 to raj,TRANSFER_MONEY,test,core
+2920,2922,Show beneficiaries quickly,MANAGE_CONTACTS,test,core
+2924,2926,Edit tui's details,MANAGE_CONTACTS,test,core
+2929,2931,I have a complaint,HELP_SUPPORT,test,core
+2943,2945,Recent transactions,VIEW_TRANSACTIONS,test,core
+2946,2948,Total purchases,CHECK_SPENDING,test,stretch
+2960,2962,Edit ravi's details,MANAGE_CONTACTS,test,core
+2970,2972,What's my balance at the moment,CHECK_BALANCE,test,core
+2974,2976,How much has village group saved,VIEW_GROUP,test,core
+2979,2981,How much has women's savings group saved,VIEW_GROUP,test,core
+2996,2998,Please send 40 to litia,TRANSFER_MONEY,test,core
+2997,2999,Total purchases this month,CHECK_SPENDING,test,stretch

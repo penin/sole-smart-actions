@@ -1,0 +1,28 @@
+split,actual_intent,predicted_intent,count,unique_phrases,example
+test,TRANSFER_MONEY,HELP_SUPPORT,8,8,I owe joeli 100
+test,MANAGE_CONTACTS,VIEW_TRANSACTIONS,7,5,View my recipient list?
+test,CHECK_SPENDING,VIEW_TRANSACTIONS,6,4,Show expenditure summary
+test,HELP_SUPPORT,BILL_PAY,6,3,I have a complaint
+test,HELP_SUPPORT,MANAGE_CONTACTS,6,2,Need customer service
+test,VIEW_TRANSACTIONS,CHECK_BALANCE,6,4,Where is my statement
+test,VIEW_GROUP,VIEW_TRANSACTIONS,4,1,View groupwealth
+test,WITHDRAW_MONEY,MANAGE_CONTACTS,4,2,Prepare a withdrawal
+test,CHECK_SPENDING,HELP_SUPPORT,3,2,Summarize my expenses
+test,VIEW_TRANSACTIONS,HELP_SUPPORT,3,3,Recent transactions now
+test,TRANSFER_MONEY,WITHDRAW_MONEY,2,2,I owe tui $200
+test,VIEW_GROUP,HELP_SUPPORT,1,1,View groupwealth now
+train,TRANSFER_MONEY,BILL_PAY,15,15,Pay joeli 80
+train,CHECK_BALANCE,CHECK_SPENDING,5,3,How much can i spend
+train,VIEW_GROUP,VIEW_TRANSACTIONS,5,2,Show my groups
+train,BILL_PAY,HELP_SUPPORT,1,1,Bill payment if possible
+train,CHECK_BALANCE,VIEW_TRANSACTIONS,1,1,Show balance at the moment
+train,VIEW_GROUP,CHECK_BALANCE,1,1,Show my groups in sole
+validation,CHECK_BALANCE,HELP_SUPPORT,18,15,Do i have 5
+validation,HELP_SUPPORT,CHECK_BALANCE,12,9,My account is locked
+validation,HELP_SUPPORT,TRANSFER_MONEY,12,6,Talk to an agent
+validation,VIEW_TRANSACTIONS,TRANSFER_MONEY,12,11,Find my transfer to adi
+validation,CHECK_BALANCE,VIEW_TRANSACTIONS,4,3,Show my available funds?
+validation,HELP_SUPPORT,MANAGE_CONTACTS,3,2,Need assistance with login
+validation,VIEW_GROUP,CHECK_SPENDING,2,2,How much did i contribute
+validation,VIEW_TRANSACTIONS,VIEW_GROUP,2,1,Open statement
+validation,VIEW_TRANSACTIONS,HELP_SUPPORT,1,1,Open statement if possible

@@ -1,0 +1,19 @@
+text,final_intent,max_confidence
+Buy me a phone?,BILL_PAY,0.31554865561296713
+Buy me a phone,BILL_PAY,0.31554865561296713
+Translate this to french please in sole,TRANSFER_MONEY,0.3101835833953151
+Buy me a phone if possible,BILL_PAY,0.3057903644766828
+Buy me a phone now,BILL_PAY,0.3056985227992509
+Translate this to french,TRANSFER_MONEY,0.3040347047854679
+Translate this to french?,TRANSFER_MONEY,0.3040347047854679
+Buy me a phone asap,BILL_PAY,0.302372707720057
+Buy me a phone please,BILL_PAY,0.2971824349908883
+Buy me a phone quickly,BILL_PAY,0.29612711946289794
+Translate this to french asap,TRANSFER_MONEY,0.29373493828981767
+Translate this to french quickly,TRANSFER_MONEY,0.2889553740780031
+Translate this to french now,TRANSFER_MONEY,0.28076824994824445
+Translate this to french if possible,TRANSFER_MONEY,0.27138187291932736
+Translate this to french this time,TRANSFER_MONEY,0.2610355514642084
+Buy me a phone in sole,BILL_PAY,0.23290108355180875
+Buy me a phone on sole,BILL_PAY,0.22856355972567377
+Tell me a joke if possible,BILL_PAY,0.19697009736579896

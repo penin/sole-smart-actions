@@ -1,0 +1,76 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", "Segoe UI", system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;
+  --font-mono: "Cascadia Mono", "Consolas", ui-monospace, monospace;
+
+  --color-navy-950: #071427;
+  --color-navy-900: #0b1f3a;
+  --color-navy-800: #12294a;
+  --color-navy-700: #1c3a63;
+  --color-navy-600: #2a4f80;
+  --color-canvas: #f4f6fa;
+}
+
+@layer base {
+  body {
+    @apply bg-canvas text-slate-800 antialiased;
+  }
+  :focus-visible {
+    @apply outline-2 outline-offset-2 outline-teal-600;
+  }
+}
+
+@layer components {
+  .card {
+    @apply rounded-2xl border border-slate-200/80 bg-white shadow-[0_1px_2px_rgba(11,31,58,0.06),0_8px_24px_-12px_rgba(11,31,58,0.12)];
+  }
+  .card-title {
+    @apply text-base font-semibold tracking-tight text-navy-900;
+  }
+  .eyebrow {
+    @apply text-[11px] font-semibold uppercase tracking-[0.08em] text-slate-500;
+  }
+  .intent-chip {
+    @apply inline-flex items-center rounded-md bg-slate-100 px-2 py-0.5 font-mono text-[12px] font-medium text-slate-700;
+  }
+}
+
+/* Range slider: teal fill up to the thumb via --fill (set inline). */
+.threshold-slider {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 8px;
+  border-radius: 9999px;
+  background: linear-gradient(to right, #0d9488 0%, #0d9488 var(--fill), #e2e8f0 var(--fill), #e2e8f0 100%);
+  cursor: pointer;
+}
+.threshold-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 22px;
+  width: 22px;
+  border-radius: 9999px;
+  background: #fff;
+  border: 3px solid #0b1f3a;
+  box-shadow: 0 1px 4px rgba(11, 31, 58, 0.3);
+  transition: transform 120ms ease;
+}
+.threshold-slider::-webkit-slider-thumb:hover {
+  transform: scale(1.1);
+}
+.threshold-slider::-moz-range-thumb {
+  height: 18px;
+  width: 18px;
+  border-radius: 9999px;
+  background: #fff;
+  border: 3px solid #0b1f3a;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0ms !important;
+    animation-duration: 0ms !important;
+  }
+}

@@ -1,0 +1,7 @@
+split,actual,predicted,count,accepted_at_threshold
+train,TRANSFER_MONEY,BILL_PAY,15,15
+train,BILL_PAY,TRANSFER_MONEY,0,0
+validation,TRANSFER_MONEY,BILL_PAY,0,0
+validation,BILL_PAY,TRANSFER_MONEY,0,0
+test,TRANSFER_MONEY,BILL_PAY,0,0
+test,BILL_PAY,TRANSFER_MONEY,0,0

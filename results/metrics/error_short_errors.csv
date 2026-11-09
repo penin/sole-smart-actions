@@ -1,0 +1,5 @@
+split,text,actual_intent,predicted_intent,max_confidence,top2_margin,oov_tokens
+validation,Open statement,VIEW_TRANSACTIONS,VIEW_GROUP,0.186259799987344,0.026637493199491463,statement
+test,View groupwealth,VIEW_GROUP,VIEW_TRANSACTIONS,0.18139400021355603,0.021827879969696123,
+test,Show beneficiaries,MANAGE_CONTACTS,VIEW_TRANSACTIONS,0.4736070663297389,0.3617020788794263,beneficiaries
+test,Show beneficiaries?,MANAGE_CONTACTS,VIEW_TRANSACTIONS,0.4736070663297389,0.3617020788794263,beneficiaries

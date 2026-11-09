@@ -1,0 +1,25 @@
+{
+  "note": "Test inputs only. These are NOT expected outputs; the app shows whatever the trained model predicts. 'intent_hint' names the category's intended intent (null for categories that are not an intent) and is used only to flag when that intent is not a class of the loaded model.",
+  "categories": [
+    {"id": "transfer", "label": "Transfer Money", "intent_hint": "TRANSFER_MONEY",
+     "commands": ["Send $50 to Jone", "Transfer $100 to Mere", "Give Ana 20 dollars", "Transfer 50 dollars to Jone"]},
+    {"id": "balance", "label": "Check Balance", "intent_hint": "CHECK_BALANCE",
+     "commands": ["What's my balance?", "How much money do I have?", "Show my available balance"]},
+    {"id": "transactions", "label": "View Transactions", "intent_hint": "VIEW_TRANSACTIONS",
+     "commands": ["Show my recent transactions", "What was my last payment?", "Show my transaction history"]},
+    {"id": "bills", "label": "Bill Payments", "intent_hint": "BILL_PAY",
+     "commands": ["Pay my EFL bill", "I want to pay my water bill", "Pay $75 to EFL"]},
+    {"id": "withdraw", "label": "Withdraw Money", "intent_hint": "WITHDRAW_MONEY",
+     "commands": ["I want to withdraw $100", "How do I cash out?", "Where can I withdraw my money?"]},
+    {"id": "help", "label": "Help and Support", "intent_hint": "HELP_SUPPORT",
+     "commands": ["How do I reset my PIN?", "I need help with my account", "My payment failed"]},
+    {"id": "contacts", "label": "Contacts", "intent_hint": "MANAGE_CONTACTS",
+     "commands": ["Add Jone to my contacts", "Show my saved contacts", "Remove a saved contact"]},
+    {"id": "groups", "label": "Groups", "intent_hint": "VIEW_GROUP",
+     "commands": ["Show my savings group", "Who is in my group?", "Show my group details"]},
+    {"id": "unknown", "label": "Unknown / Out-of-Scope", "intent_hint": "UNKNOWN_INTENT",
+     "commands": ["What's the weather today?", "Who won the rugby match?", "Tell me a joke", "Book me a flight to Australia", "What is the capital of France?"]},
+    {"id": "ambiguous", "label": "Ambiguous", "intent_hint": null,
+     "commands": ["Send", "Money", "Help", "Payment", "Can you do that?", "I need to do something with my account"]}
+  ]
+}

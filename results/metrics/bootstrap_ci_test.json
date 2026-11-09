@@ -1,0 +1,35 @@
+{
+  "method": "cluster bootstrap over 179 groups, 2000 resamples, 95% percentile intervals",
+  "models": {
+    "tuned": {
+      "accuracy": {
+        "estimate": 0.7925925925925926,
+        "ci_low": 0.7095534169550173,
+        "ci_high": 0.8674984609972737
+      },
+      "macro_f1": {
+        "estimate": 0.7962875803984661,
+        "ci_low": 0.7123555603754326,
+        "ci_high": 0.8644601838355779
+      }
+    },
+    "default": {
+      "accuracy": {
+        "estimate": 0.8518518518518519,
+        "ci_low": 0.7769717795654847,
+        "ci_high": 0.9191204751131221
+      },
+      "macro_f1": {
+        "estimate": 0.8546291661910324,
+        "ci_low": 0.7736154368349198,
+        "ci_high": 0.9169247816798559
+      }
+    }
+  },
+  "macro_f1_difference_tuned_minus_default": {
+    "estimate": -0.05834158579256621,
+    "ci_low": -0.1092111561154628,
+    "ci_high": -0.012483300965809954,
+    "share_of_resamples_positive": 0.005
+  }
+}

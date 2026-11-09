@@ -1,0 +1,20 @@
+# Exploratory confidence-threshold analysis on the frozen Baseline V1 model.
+# Reuses V1's saved probabilities; never retrains and never writes into V1 output folders.
+# The test and unknown-evaluation sets were inspected in earlier experiments, so results are
+# EXPLORATORY and must not be used to claim a statistically optimal threshold.
+
+baseline_config: config/baseline.yaml
+model_path: models/bow_logreg_v1_tuned_v1.0.0.joblib
+predictions_dir: results/predictions
+baseline_rejection_metrics: results/metrics/rejection_metrics.json
+output_dir: results/threshold_analysis
+
+# "baseline" resolves to the exact frozen V1 threshold stored in the model bundle (0.19572, reported as 0.196),
+# so the first row reproduces the published V1 numbers exactly.
+thresholds: [baseline, 0.25, 0.30, 0.35, 0.40, 0.45, 0.50, 0.60]
+candidate_threshold: 0.35
+dense_sweep_step: 0.01
+
+known_split: test              # legitimate commands evaluated at each threshold
+reference_known_split: validation   # coverage on validation shown for reference only
+financial_intents: [TRANSFER_MONEY, BILL_PAY, WITHDRAW_MONEY]

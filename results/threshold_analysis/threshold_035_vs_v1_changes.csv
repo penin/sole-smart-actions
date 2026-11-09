@@ -1,0 +1,298 @@
+dataset,row_id,text,actual_intent,top_intent,max_confidence,outcome_v1,outcome_035
+legitimate_test,44,Summarize my expenses,CHECK_SPENDING,HELP_SUPPORT,0.24337958081885364,incorrect_accept,false_reject
+legitimate_test,143,Edit savenaca's details,MANAGE_CONTACTS,MANAGE_CONTACTS,0.2713972721159891,correct_accept,false_reject
+legitimate_test,151,Edit adi's details,MANAGE_CONTACTS,MANAGE_CONTACTS,0.27372986859291604,correct_accept,false_reject
+legitimate_test,183,View my recipient list?,MANAGE_CONTACTS,VIEW_TRANSACTIONS,0.25614476720249946,incorrect_accept,false_reject
+legitimate_test,199,I have a complaint,HELP_SUPPORT,BILL_PAY,0.26258379662194453,incorrect_accept,false_reject
+legitimate_test,211,View my recipient list,MANAGE_CONTACTS,VIEW_TRANSACTIONS,0.25614476720249946,incorrect_accept,false_reject
+legitimate_test,239,Need customer service please,HELP_SUPPORT,HELP_SUPPORT,0.25512385903644225,correct_accept,false_reject
+legitimate_test,244,View my recipient list,MANAGE_CONTACTS,VIEW_TRANSACTIONS,0.25614476720249946,incorrect_accept,false_reject
+legitimate_test,314,Where is my statement,VIEW_TRANSACTIONS,CHECK_BALANCE,0.33183073750654346,incorrect_accept,false_reject
+legitimate_test,343,I have a complaint,HELP_SUPPORT,BILL_PAY,0.26258379662194453,incorrect_accept,false_reject
+legitimate_test,364,Where is my statement?,VIEW_TRANSACTIONS,CHECK_BALANCE,0.33183073750654346,incorrect_accept,false_reject
+legitimate_test,409,I owe joeli 100,TRANSFER_MONEY,HELP_SUPPORT,0.1958216916155538,incorrect_accept,false_reject
+legitimate_test,413,Edit savenaca's details,MANAGE_CONTACTS,MANAGE_CONTACTS,0.2713972721159891,correct_accept,false_reject
+legitimate_test,493,I have a complaint?,HELP_SUPPORT,BILL_PAY,0.26258379662194453,incorrect_accept,false_reject
+legitimate_test,628,Total purchases this week,CHECK_SPENDING,CHECK_SPENDING,0.30286544996977594,correct_accept,false_reject
+legitimate_test,695,Edit john's details,MANAGE_CONTACTS,MANAGE_CONTACTS,0.2750420850211032,correct_accept,false_reject
+legitimate_test,735,Recent transactions now,VIEW_TRANSACTIONS,HELP_SUPPORT,0.2447119866758562,incorrect_accept,false_reject
+legitimate_test,747,I owe tui $200,TRANSFER_MONEY,WITHDRAW_MONEY,0.24622219306679308,incorrect_accept,false_reject
+legitimate_test,768,Edit sera's details,MANAGE_CONTACTS,MANAGE_CONTACTS,0.2644567507546796,correct_accept,false_reject
+legitimate_test,822,Need customer service please,HELP_SUPPORT,HELP_SUPPORT,0.25512385903644225,correct_accept,false_reject
+legitimate_test,857,Need customer service please,HELP_SUPPORT,HELP_SUPPORT,0.25512385903644225,correct_accept,false_reject
+legitimate_test,859,I owe raj 120,TRANSFER_MONEY,HELP_SUPPORT,0.20701428519075815,incorrect_accept,false_reject
+legitimate_test,941,View groupwealth now,VIEW_GROUP,HELP_SUPPORT,0.21540158682692082,incorrect_accept,false_reject
+legitimate_test,944,Help,HELP_SUPPORT,HELP_SUPPORT,0.23343272970856851,correct_accept,false_reject
+legitimate_test,961,Summarize my expenses,CHECK_SPENDING,HELP_SUPPORT,0.24337958081885364,incorrect_accept,false_reject
+legitimate_test,1000,Edit litia's details?,MANAGE_CONTACTS,MANAGE_CONTACTS,0.27566767127161784,correct_accept,false_reject
+legitimate_test,1054,Total purchases over the weekend,CHECK_SPENDING,VIEW_TRANSACTIONS,0.27063353156193337,incorrect_accept,false_reject
+legitimate_test,1115,Help?,HELP_SUPPORT,HELP_SUPPORT,0.23343272970856851,correct_accept,false_reject
+legitimate_test,1116,Total purchases over the weekend,CHECK_SPENDING,VIEW_TRANSACTIONS,0.27063353156193337,incorrect_accept,false_reject
+legitimate_test,1127,I owe jone 80,TRANSFER_MONEY,HELP_SUPPORT,0.19718928750862444,incorrect_accept,false_reject
+legitimate_test,1140,Where is my statement,VIEW_TRANSACTIONS,CHECK_BALANCE,0.33183073750654346,incorrect_accept,false_reject
+legitimate_test,1199,Edit mere's details,MANAGE_CONTACTS,MANAGE_CONTACTS,0.2702267913517978,correct_accept,false_reject
+legitimate_test,1203,Edit ana's details,MANAGE_CONTACTS,MANAGE_CONTACTS,0.25652558848781193,correct_accept,false_reject
+legitimate_test,1210,Total purchases since monday,CHECK_SPENDING,CHECK_SPENDING,0.23621784690873404,correct_accept,false_reject
+legitimate_test,1327,Total purchases last week,CHECK_SPENDING,CHECK_SPENDING,0.3008467515627988,correct_accept,false_reject
+legitimate_test,1369,Edit adi's details quickly,MANAGE_CONTACTS,MANAGE_CONTACTS,0.24128724231274248,correct_accept,false_reject
+legitimate_test,1377,Edit kumar's details,MANAGE_CONTACTS,MANAGE_CONTACTS,0.2845999350528402,correct_accept,false_reject
+legitimate_test,1398,I owe mika 5,TRANSFER_MONEY,HELP_SUPPORT,0.2023233471341554,incorrect_accept,false_reject
+legitimate_test,1465,I have a complaint,HELP_SUPPORT,BILL_PAY,0.26258379662194453,incorrect_accept,false_reject
+legitimate_test,1484,Edit jone's details,MANAGE_CONTACTS,MANAGE_CONTACTS,0.28745093087361506,correct_accept,false_reject
+legitimate_test,1560,Edit mika's details,MANAGE_CONTACTS,MANAGE_CONTACTS,0.28660027243499614,correct_accept,false_reject
+legitimate_test,1579,Where is my statement,VIEW_TRANSACTIONS,CHECK_BALANCE,0.33183073750654346,incorrect_accept,false_reject
+legitimate_test,1596,Help,HELP_SUPPORT,HELP_SUPPORT,0.23343272970856851,correct_accept,false_reject
+legitimate_test,1633,Edit joeli's details,MANAGE_CONTACTS,MANAGE_CONTACTS,0.28301797638246007,correct_accept,false_reject
+legitimate_test,1645,Edit roshni's details,MANAGE_CONTACTS,MANAGE_CONTACTS,0.2852827877441474,correct_accept,false_reject
+legitimate_test,1696,Edit sera's details?,MANAGE_CONTACTS,MANAGE_CONTACTS,0.2644567507546796,correct_accept,false_reject
+legitimate_test,1712,Total purchases in october,CHECK_SPENDING,CHECK_SPENDING,0.21425301350128642,correct_accept,false_reject
+legitimate_test,1841,Edit adi's details,MANAGE_CONTACTS,MANAGE_CONTACTS,0.27372986859291604,correct_accept,false_reject
+legitimate_test,1971,Summarize my expenses now,CHECK_SPENDING,HELP_SUPPORT,0.3410539955703485,incorrect_accept,false_reject
+legitimate_test,2048,Total purchases since monday,CHECK_SPENDING,CHECK_SPENDING,0.23621784690873404,correct_accept,false_reject
+legitimate_test,2096,Edit ana's details,MANAGE_CONTACTS,MANAGE_CONTACTS,0.25652558848781193,correct_accept,false_reject
+legitimate_test,2300,Edit priya's details,MANAGE_CONTACTS,MANAGE_CONTACTS,0.3051575561557065,correct_accept,false_reject
+legitimate_test,2337,Recent transactions on sole,VIEW_TRANSACTIONS,HELP_SUPPORT,0.25333566292403953,incorrect_accept,false_reject
+legitimate_test,2423,Need customer service please,HELP_SUPPORT,HELP_SUPPORT,0.25512385903644225,correct_accept,false_reject
+legitimate_test,2441,Total purchases yesterday,CHECK_SPENDING,CHECK_SPENDING,0.20184079933582863,correct_accept,false_reject
+legitimate_test,2462,Edit jone's details?,MANAGE_CONTACTS,MANAGE_CONTACTS,0.28745093087361506,correct_accept,false_reject
+legitimate_test,2491,I owe adi 250,TRANSFER_MONEY,HELP_SUPPORT,0.20524109518593067,incorrect_accept,false_reject
+legitimate_test,2543,Total purchases in the last 30 days,CHECK_SPENDING,CHECK_SPENDING,0.2970270933402965,correct_accept,false_reject
+legitimate_test,2643,I owe kumar 40,TRANSFER_MONEY,HELP_SUPPORT,0.209395010541371,incorrect_accept,false_reject
+legitimate_test,2649,Recent transactions on the app,VIEW_TRANSACTIONS,HELP_SUPPORT,0.2438666412146325,incorrect_accept,false_reject
+legitimate_test,2681,Help in sole,HELP_SUPPORT,HELP_SUPPORT,0.31058252407972425,correct_accept,false_reject
+legitimate_test,2786,I have a complaint at the moment,HELP_SUPPORT,BILL_PAY,0.2213913303409656,incorrect_accept,false_reject
+legitimate_test,2789,Help at the moment,HELP_SUPPORT,HELP_SUPPORT,0.2753545716268245,correct_accept,false_reject
+legitimate_test,2872,I owe mary $50,TRANSFER_MONEY,WITHDRAW_MONEY,0.24755659481374415,incorrect_accept,false_reject
+legitimate_test,2886,I owe mary 15,TRANSFER_MONEY,HELP_SUPPORT,0.20174217684950863,incorrect_accept,false_reject
+legitimate_test,2924,Edit tui's details,MANAGE_CONTACTS,MANAGE_CONTACTS,0.2839728086548495,correct_accept,false_reject
+legitimate_test,2929,I have a complaint,HELP_SUPPORT,BILL_PAY,0.26258379662194453,incorrect_accept,false_reject
+legitimate_test,2960,Edit ravi's details,MANAGE_CONTACTS,MANAGE_CONTACTS,0.28356853950828403,correct_accept,false_reject
+unknown_evaluation,7,Book a taxi,UNKNOWN_INTENT,MANAGE_CONTACTS,0.20447769554879067,accepted_as_other_intent,correct_reject
+unknown_evaluation,12,Turn on the lights quickly,UNKNOWN_INTENT,CHECK_SPENDING,0.28809344377951657,accepted_as_other_intent,correct_reject
+unknown_evaluation,34,Who won the rugby please,UNKNOWN_INTENT,VIEW_GROUP,0.2790184991506029,accepted_as_other_intent,correct_reject
+unknown_evaluation,61,Renew my passport,UNKNOWN_INTENT,HELP_SUPPORT,0.29776135424165967,accepted_as_help_support,correct_reject
+unknown_evaluation,65,Predict the lottery,UNKNOWN_INTENT,VIEW_TRANSACTIONS,0.24794995175920914,accepted_as_other_intent,correct_reject
+unknown_evaluation,77,Tell me a joke if possible,UNKNOWN_INTENT,BILL_PAY,0.19697009736579896,accepted_as_financial,correct_reject
+unknown_evaluation,95,Predict the lottery on sole,UNKNOWN_INTENT,CHECK_SPENDING,0.282638649450995,accepted_as_other_intent,correct_reject
+unknown_evaluation,133,How tall is mount everest? now,UNKNOWN_INTENT,CHECK_BALANCE,0.34213525487953933,accepted_as_other_intent,correct_reject
+unknown_evaluation,145,Order food please,UNKNOWN_INTENT,HELP_SUPPORT,0.26192766806329576,accepted_as_help_support,correct_reject
+unknown_evaluation,184,Who won the rugby?,UNKNOWN_INTENT,VIEW_GROUP,0.30946823072748636,accepted_as_other_intent,correct_reject
+unknown_evaluation,187,Turn on the lights,UNKNOWN_INTENT,CHECK_SPENDING,0.31526560756980604,accepted_as_other_intent,correct_reject
+unknown_evaluation,217,Find a curry recipe,UNKNOWN_INTENT,VIEW_TRANSACTIONS,0.2982481647704636,accepted_as_other_intent,correct_reject
+unknown_evaluation,233,Find a cinema,UNKNOWN_INTENT,VIEW_TRANSACTIONS,0.2982481647704636,accepted_as_other_intent,correct_reject
+unknown_evaluation,237,Buy me a phone on sole,UNKNOWN_INTENT,BILL_PAY,0.22856355972567377,accepted_as_financial,correct_reject
+unknown_evaluation,263,Translate this to french,UNKNOWN_INTENT,TRANSFER_MONEY,0.3040347047854679,accepted_as_financial,correct_reject
+unknown_evaluation,271,Tell me a joke,UNKNOWN_INTENT,VIEW_TRANSACTIONS,0.20667261750298735,accepted_as_other_intent,correct_reject
+unknown_evaluation,296,How tall is mount everest,UNKNOWN_INTENT,CHECK_BALANCE,0.3324270986367141,accepted_as_other_intent,correct_reject
+unknown_evaluation,310,Renew my passport?,UNKNOWN_INTENT,HELP_SUPPORT,0.29776135424165967,accepted_as_help_support,correct_reject
+unknown_evaluation,320,Tell me a joke now,UNKNOWN_INTENT,VIEW_TRANSACTIONS,0.1987935718826219,accepted_as_other_intent,correct_reject
+unknown_evaluation,352,Who won the rugby,UNKNOWN_INTENT,VIEW_GROUP,0.30946823072748636,accepted_as_other_intent,correct_reject
+unknown_evaluation,377,Tell me a joke,UNKNOWN_INTENT,VIEW_TRANSACTIONS,0.20667261750298735,accepted_as_other_intent,correct_reject
+unknown_evaluation,395,Renew my passport,UNKNOWN_INTENT,HELP_SUPPORT,0.29776135424165967,accepted_as_help_support,correct_reject
+unknown_evaluation,429,Who won the rugby please asap,UNKNOWN_INTENT,HELP_SUPPORT,0.3302169973656589,accepted_as_help_support,correct_reject
+unknown_evaluation,481,What time is the game,UNKNOWN_INTENT,VIEW_TRANSACTIONS,0.22826407437015578,accepted_as_other_intent,correct_reject
+unknown_evaluation,527,Play music for me,UNKNOWN_INTENT,MANAGE_CONTACTS,0.19714185138567966,accepted_as_other_intent,correct_reject
+unknown_evaluation,528,Tell me a joke,UNKNOWN_INTENT,VIEW_TRANSACTIONS,0.20667261750298735,accepted_as_other_intent,correct_reject
+unknown_evaluation,529,How tall is mount everest?,UNKNOWN_INTENT,CHECK_BALANCE,0.3324270986367141,accepted_as_other_intent,correct_reject
+unknown_evaluation,544,Turn on the lights if possible,UNKNOWN_INTENT,CHECK_SPENDING,0.26754395287988664,accepted_as_other_intent,correct_reject
+unknown_evaluation,548,Who won the rugby please,UNKNOWN_INTENT,VIEW_GROUP,0.2790184991506029,accepted_as_other_intent,correct_reject
+unknown_evaluation,572,Write my homework,UNKNOWN_INTENT,HELP_SUPPORT,0.29776135424165967,accepted_as_help_support,correct_reject
+unknown_evaluation,594,How tall is mount everest? if possible,UNKNOWN_INTENT,CHECK_BALANCE,0.3473247355251221,accepted_as_other_intent,correct_reject
+unknown_evaluation,597,Book a taxi,UNKNOWN_INTENT,MANAGE_CONTACTS,0.20447769554879067,accepted_as_other_intent,correct_reject
+unknown_evaluation,602,Predict the lottery,UNKNOWN_INTENT,VIEW_TRANSACTIONS,0.24794995175920914,accepted_as_other_intent,correct_reject
+unknown_evaluation,605,Who won the rugby,UNKNOWN_INTENT,VIEW_GROUP,0.30946823072748636,accepted_as_other_intent,correct_reject
+unknown_evaluation,615,How tall is mount everest? on sole,UNKNOWN_INTENT,CHECK_SPENDING,0.30053678939320133,accepted_as_other_intent,correct_reject
+unknown_evaluation,618,Find a cinema please if possible,UNKNOWN_INTENT,VIEW_TRANSACTIONS,0.2418662820006808,accepted_as_other_intent,correct_reject
+unknown_evaluation,620,Tell me a story,UNKNOWN_INTENT,VIEW_TRANSACTIONS,0.20667261750298735,accepted_as_other_intent,correct_reject
+unknown_evaluation,638,Buy me a phone asap,UNKNOWN_INTENT,BILL_PAY,0.302372707720057,accepted_as_financial,correct_reject
+unknown_evaluation,639,What time is the game if possible,UNKNOWN_INTENT,VIEW_TRANSACTIONS,0.19986145388704857,accepted_as_other_intent,correct_reject
+unknown_evaluation,649,Find a cinema,UNKNOWN_INTENT,VIEW_TRANSACTIONS,0.2982481647704636,accepted_as_other_intent,correct_reject
+unknown_evaluation,661,What's the capital of japan,UNKNOWN_INTENT,VIEW_TRANSACTIONS,0.2618505045615265,accepted_as_other_intent,correct_reject
+unknown_evaluation,684,Tell me a joke,UNKNOWN_INTENT,VIEW_TRANSACTIONS,0.20667261750298735,accepted_as_other_intent,correct_reject
+unknown_evaluation,698,Turn on the lights?,UNKNOWN_INTENT,CHECK_SPENDING,0.31526560756980604,accepted_as_other_intent,correct_reject
+unknown_evaluation,728,Buy me a phone,UNKNOWN_INTENT,BILL_PAY,0.31554865561296713,accepted_as_financial,correct_reject
+unknown_evaluation,734,What's the exchange rate,UNKNOWN_INTENT,VIEW_TRANSACTIONS,0.26400094055796086,accepted_as_other_intent,correct_reject
+unknown_evaluation,750,What's the exchange rate please,UNKNOWN_INTENT,VIEW_TRANSACTIONS,0.23497012388173502,accepted_as_other_intent,correct_reject
+unknown_evaluation,751,Play music quickly,UNKNOWN_INTENT,HELP_SUPPORT,0.2727408888655865,accepted_as_help_support,correct_reject
+unknown_evaluation,760,Translate this to french,UNKNOWN_INTENT,TRANSFER_MONEY,0.3040347047854679,accepted_as_financial,correct_reject
+unknown_evaluation,769,Buy me a phone,UNKNOWN_INTENT,BILL_PAY,0.31554865561296713,accepted_as_financial,correct_reject
+unknown_evaluation,795,Turn on the lights now,UNKNOWN_INTENT,CHECK_SPENDING,0.284039592567819,accepted_as_other_intent,correct_reject
+unknown_evaluation,806,Buy me a phone,UNKNOWN_INTENT,BILL_PAY,0.31554865561296713,accepted_as_financial,correct_reject
+unknown_evaluation,813,Open youtube in sole,UNKNOWN_INTENT,HELP_SUPPORT,0.2109431004873179,accepted_as_help_support,correct_reject
+unknown_evaluation,870,Find a cinema please,UNKNOWN_INTENT,VIEW_TRANSACTIONS,0.2737776469329951,accepted_as_other_intent,correct_reject
+unknown_evaluation,874,Order food quickly,UNKNOWN_INTENT,HELP_SUPPORT,0.26164702405740903,accepted_as_help_support,correct_reject
+unknown_evaluation,875,Book a taxi,UNKNOWN_INTENT,MANAGE_CONTACTS,0.20447769554879067,accepted_as_other_intent,correct_reject
+unknown_evaluation,876,Predict the lottery,UNKNOWN_INTENT,VIEW_TRANSACTIONS,0.24794995175920914,accepted_as_other_intent,correct_reject
+unknown_evaluation,918,What's on tv,UNKNOWN_INTENT,CHECK_SPENDING,0.33439433982442246,accepted_as_other_intent,correct_reject
+unknown_evaluation,986,Book a flight,UNKNOWN_INTENT,MANAGE_CONTACTS,0.20447769554879067,accepted_as_other_intent,correct_reject
+unknown_evaluation,1001,Book a flight?,UNKNOWN_INTENT,MANAGE_CONTACTS,0.20447769554879067,accepted_as_other_intent,correct_reject
+unknown_evaluation,1016,Write my homework,UNKNOWN_INTENT,HELP_SUPPORT,0.29776135424165967,accepted_as_help_support,correct_reject
+unknown_evaluation,1023,How tall is mount everest?,UNKNOWN_INTENT,CHECK_BALANCE,0.3324270986367141,accepted_as_other_intent,correct_reject
+unknown_evaluation,1024,Turn on the lights,UNKNOWN_INTENT,CHECK_SPENDING,0.31526560756980604,accepted_as_other_intent,correct_reject
+unknown_evaluation,1043,What's the exchange rate please on sole,UNKNOWN_INTENT,CHECK_SPENDING,0.2962038620339037,accepted_as_other_intent,correct_reject
+unknown_evaluation,1055,Order food please,UNKNOWN_INTENT,HELP_SUPPORT,0.26192766806329576,accepted_as_help_support,correct_reject
+unknown_evaluation,1079,Open youtube now,UNKNOWN_INTENT,HELP_SUPPORT,0.23031164836118992,accepted_as_help_support,correct_reject
+unknown_evaluation,1099,Book a flight,UNKNOWN_INTENT,MANAGE_CONTACTS,0.20447769554879067,accepted_as_other_intent,correct_reject
+unknown_evaluation,1101,Find a curry recipe,UNKNOWN_INTENT,VIEW_TRANSACTIONS,0.2982481647704636,accepted_as_other_intent,correct_reject
+unknown_evaluation,1117,Find a cinema please on sole,UNKNOWN_INTENT,VIEW_TRANSACTIONS,0.20965091144704012,accepted_as_other_intent,correct_reject
+unknown_evaluation,1134,Predict the lottery,UNKNOWN_INTENT,VIEW_TRANSACTIONS,0.24794995175920914,accepted_as_other_intent,correct_reject
+unknown_evaluation,1164,Predict the lottery,UNKNOWN_INTENT,VIEW_TRANSACTIONS,0.24794995175920914,accepted_as_other_intent,correct_reject
+unknown_evaluation,1193,What's on tv,UNKNOWN_INTENT,CHECK_SPENDING,0.33439433982442246,accepted_as_other_intent,correct_reject
+unknown_evaluation,1194,What's the exchange rate,UNKNOWN_INTENT,VIEW_TRANSACTIONS,0.26400094055796086,accepted_as_other_intent,correct_reject
+unknown_evaluation,1195,Buy me a phone quickly,UNKNOWN_INTENT,BILL_PAY,0.29612711946289794,accepted_as_financial,correct_reject
+unknown_evaluation,1196,Who won the rugby please,UNKNOWN_INTENT,VIEW_GROUP,0.2790184991506029,accepted_as_other_intent,correct_reject
+unknown_evaluation,1231,Who won the rugby,UNKNOWN_INTENT,VIEW_GROUP,0.30946823072748636,accepted_as_other_intent,correct_reject
+unknown_evaluation,1233,Find a cinema please,UNKNOWN_INTENT,VIEW_TRANSACTIONS,0.2737776469329951,accepted_as_other_intent,correct_reject
+unknown_evaluation,1245,Translate this to french now,UNKNOWN_INTENT,TRANSFER_MONEY,0.28076824994824445,accepted_as_financial,correct_reject
+unknown_evaluation,1249,Play music asap,UNKNOWN_INTENT,HELP_SUPPORT,0.2511613621782962,accepted_as_help_support,correct_reject
+unknown_evaluation,1265,Find a cinema please asap,UNKNOWN_INTENT,VIEW_TRANSACTIONS,0.2604439251587375,accepted_as_other_intent,correct_reject
+unknown_evaluation,1297,Book a taxi,UNKNOWN_INTENT,MANAGE_CONTACTS,0.20447769554879067,accepted_as_other_intent,correct_reject
+unknown_evaluation,1300,What's the exchange rate please asap,UNKNOWN_INTENT,HELP_SUPPORT,0.23353945527170103,accepted_as_help_support,correct_reject
+unknown_evaluation,1314,What's the exchange rate please,UNKNOWN_INTENT,VIEW_TRANSACTIONS,0.23497012388173502,accepted_as_other_intent,correct_reject
+unknown_evaluation,1329,What's on tv,UNKNOWN_INTENT,CHECK_SPENDING,0.33439433982442246,accepted_as_other_intent,correct_reject
+unknown_evaluation,1333,Tell me a joke,UNKNOWN_INTENT,VIEW_TRANSACTIONS,0.20667261750298735,accepted_as_other_intent,correct_reject
+unknown_evaluation,1336,Who won the rugby,UNKNOWN_INTENT,VIEW_GROUP,0.30946823072748636,accepted_as_other_intent,correct_reject
+unknown_evaluation,1344,Renew my passport,UNKNOWN_INTENT,HELP_SUPPORT,0.29776135424165967,accepted_as_help_support,correct_reject
+unknown_evaluation,1345,How tall is mount everest? asap,UNKNOWN_INTENT,CHECK_BALANCE,0.3201201767239837,accepted_as_other_intent,correct_reject
+unknown_evaluation,1408,Who won the rugby please,UNKNOWN_INTENT,VIEW_GROUP,0.2790184991506029,accepted_as_other_intent,correct_reject
+unknown_evaluation,1418,What's the exchange rate on the app,UNKNOWN_INTENT,VIEW_TRANSACTIONS,0.32478775025984236,accepted_as_other_intent,correct_reject
+unknown_evaluation,1422,Tell me a joke now,UNKNOWN_INTENT,VIEW_TRANSACTIONS,0.1987935718826219,accepted_as_other_intent,correct_reject
+unknown_evaluation,1423,Tell me a joke?,UNKNOWN_INTENT,VIEW_TRANSACTIONS,0.20667261750298735,accepted_as_other_intent,correct_reject
+unknown_evaluation,1433,Book a flight,UNKNOWN_INTENT,MANAGE_CONTACTS,0.20447769554879067,accepted_as_other_intent,correct_reject
+unknown_evaluation,1449,What's the exchange rate please if possible,UNKNOWN_INTENT,HELP_SUPPORT,0.2865702831911523,accepted_as_help_support,correct_reject
+unknown_evaluation,1451,What's the weather,UNKNOWN_INTENT,VIEW_TRANSACTIONS,0.26400094055796086,accepted_as_other_intent,correct_reject
+unknown_evaluation,1456,Play music now,UNKNOWN_INTENT,HELP_SUPPORT,0.26463160183799117,accepted_as_help_support,correct_reject
+unknown_evaluation,1471,Book a taxi on sole,UNKNOWN_INTENT,CHECK_SPENDING,0.22581730464982722,accepted_as_other_intent,correct_reject
+unknown_evaluation,1474,Tell me a story?,UNKNOWN_INTENT,VIEW_TRANSACTIONS,0.20667261750298735,accepted_as_other_intent,correct_reject
+unknown_evaluation,1491,What's the capital of japan,UNKNOWN_INTENT,VIEW_TRANSACTIONS,0.2618505045615265,accepted_as_other_intent,correct_reject
+unknown_evaluation,1503,Book a taxi,UNKNOWN_INTENT,MANAGE_CONTACTS,0.20447769554879067,accepted_as_other_intent,correct_reject
+unknown_evaluation,1505,Turn on the lights,UNKNOWN_INTENT,CHECK_SPENDING,0.31526560756980604,accepted_as_other_intent,correct_reject
+unknown_evaluation,1506,Buy me a phone now,UNKNOWN_INTENT,BILL_PAY,0.3056985227992509,accepted_as_financial,correct_reject
+unknown_evaluation,1516,Buy me a phone,UNKNOWN_INTENT,BILL_PAY,0.31554865561296713,accepted_as_financial,correct_reject
+unknown_evaluation,1523,Write my homework?,UNKNOWN_INTENT,HELP_SUPPORT,0.29776135424165967,accepted_as_help_support,correct_reject
+unknown_evaluation,1571,What's on tv,UNKNOWN_INTENT,CHECK_SPENDING,0.33439433982442246,accepted_as_other_intent,correct_reject
+unknown_evaluation,1576,Book a taxi on my account,UNKNOWN_INTENT,HELP_SUPPORT,0.2850857910415002,accepted_as_help_support,correct_reject
+unknown_evaluation,1599,Buy me a phone?,UNKNOWN_INTENT,BILL_PAY,0.31554865561296713,accepted_as_financial,correct_reject
+unknown_evaluation,1605,What time is the game?,UNKNOWN_INTENT,VIEW_TRANSACTIONS,0.22826407437015578,accepted_as_other_intent,correct_reject
+unknown_evaluation,1609,Buy me a phone quickly at the moment,UNKNOWN_INTENT,VIEW_TRANSACTIONS,0.28277326252853435,accepted_as_other_intent,correct_reject
+unknown_evaluation,1618,Predict the lottery?,UNKNOWN_INTENT,VIEW_TRANSACTIONS,0.24794995175920914,accepted_as_other_intent,correct_reject
+unknown_evaluation,1632,Find a cinema?,UNKNOWN_INTENT,VIEW_TRANSACTIONS,0.2982481647704636,accepted_as_other_intent,correct_reject
+unknown_evaluation,1640,Translate this to french?,UNKNOWN_INTENT,TRANSFER_MONEY,0.3040347047854679,accepted_as_financial,correct_reject
+unknown_evaluation,1647,Tell me a story,UNKNOWN_INTENT,VIEW_TRANSACTIONS,0.20667261750298735,accepted_as_other_intent,correct_reject
+unknown_evaluation,1662,What's the capital of japan in sole,UNKNOWN_INTENT,VIEW_TRANSACTIONS,0.21704256787980067,accepted_as_other_intent,correct_reject
+unknown_evaluation,1665,What's the exchange rate,UNKNOWN_INTENT,VIEW_TRANSACTIONS,0.26400094055796086,accepted_as_other_intent,correct_reject
+unknown_evaluation,1666,Open youtube asap,UNKNOWN_INTENT,HELP_SUPPORT,0.21967767493346974,accepted_as_help_support,correct_reject
+unknown_evaluation,1685,Predict the lottery,UNKNOWN_INTENT,VIEW_TRANSACTIONS,0.24794995175920914,accepted_as_other_intent,correct_reject
+unknown_evaluation,1686,Turn on the lights at the moment,UNKNOWN_INTENT,CHECK_SPENDING,0.3492239538098697,accepted_as_other_intent,correct_reject
+unknown_evaluation,1705,What's the exchange rate please,UNKNOWN_INTENT,VIEW_TRANSACTIONS,0.23497012388173502,accepted_as_other_intent,correct_reject
+unknown_evaluation,1740,Play music asap this time,UNKNOWN_INTENT,HELP_SUPPORT,0.23353785749008243,accepted_as_help_support,correct_reject
+unknown_evaluation,1743,Tell me a joke please on the app,UNKNOWN_INTENT,VIEW_TRANSACTIONS,0.26745071207561605,accepted_as_other_intent,correct_reject
+unknown_evaluation,1747,Translate this to french,UNKNOWN_INTENT,TRANSFER_MONEY,0.3040347047854679,accepted_as_financial,correct_reject
+unknown_evaluation,1752,Translate this to french,UNKNOWN_INTENT,TRANSFER_MONEY,0.3040347047854679,accepted_as_financial,correct_reject
+unknown_evaluation,1758,Set an alarm if possible,UNKNOWN_INTENT,HELP_SUPPORT,0.2948503693142464,accepted_as_help_support,correct_reject
+unknown_evaluation,1759,What's the exchange rate please quickly,UNKNOWN_INTENT,HELP_SUPPORT,0.25393123886952673,accepted_as_help_support,correct_reject
+unknown_evaluation,1767,Turn on the lights,UNKNOWN_INTENT,CHECK_SPENDING,0.31526560756980604,accepted_as_other_intent,correct_reject
+unknown_evaluation,1789,Open youtube if possible,UNKNOWN_INTENT,HELP_SUPPORT,0.2670749565627244,accepted_as_help_support,correct_reject
+unknown_evaluation,1790,Write my homework at the moment,UNKNOWN_INTENT,HELP_SUPPORT,0.33242290327593277,accepted_as_help_support,correct_reject
+unknown_evaluation,1818,Play music quickly,UNKNOWN_INTENT,HELP_SUPPORT,0.2727408888655865,accepted_as_help_support,correct_reject
+unknown_evaluation,1824,What's the weather in sole,UNKNOWN_INTENT,VIEW_TRANSACTIONS,0.21858472727484163,accepted_as_other_intent,correct_reject
+unknown_evaluation,1828,Translate this to french quickly,UNKNOWN_INTENT,TRANSFER_MONEY,0.2889553740780031,accepted_as_financial,correct_reject
+unknown_evaluation,1831,Book a taxi if possible,UNKNOWN_INTENT,HELP_SUPPORT,0.19729848963475374,accepted_as_help_support,correct_reject
+unknown_evaluation,1844,Buy me a phone,UNKNOWN_INTENT,BILL_PAY,0.31554865561296713,accepted_as_financial,correct_reject
+unknown_evaluation,1859,How tall is mount everest?,UNKNOWN_INTENT,CHECK_BALANCE,0.3324270986367141,accepted_as_other_intent,correct_reject
+unknown_evaluation,1861,Find a cinema please,UNKNOWN_INTENT,VIEW_TRANSACTIONS,0.2737776469329951,accepted_as_other_intent,correct_reject
+unknown_evaluation,1883,Find a hotel,UNKNOWN_INTENT,VIEW_TRANSACTIONS,0.2982481647704636,accepted_as_other_intent,correct_reject
+unknown_evaluation,1889,Renew my passport,UNKNOWN_INTENT,HELP_SUPPORT,0.29776135424165967,accepted_as_help_support,correct_reject
+unknown_evaluation,1891,Predict the lottery,UNKNOWN_INTENT,VIEW_TRANSACTIONS,0.24794995175920914,accepted_as_other_intent,correct_reject
+unknown_evaluation,1921,What's the exchange rate please,UNKNOWN_INTENT,VIEW_TRANSACTIONS,0.23497012388173502,accepted_as_other_intent,correct_reject
+unknown_evaluation,1927,Find a hotel,UNKNOWN_INTENT,VIEW_TRANSACTIONS,0.2982481647704636,accepted_as_other_intent,correct_reject
+unknown_evaluation,1944,Tell me a joke on sole,UNKNOWN_INTENT,CHECK_SPENDING,0.22122054394522192,accepted_as_other_intent,correct_reject
+unknown_evaluation,1955,Find a cinema please now,UNKNOWN_INTENT,VIEW_TRANSACTIONS,0.25918835991933026,accepted_as_other_intent,correct_reject
+unknown_evaluation,1977,Renew my passport,UNKNOWN_INTENT,HELP_SUPPORT,0.29776135424165967,accepted_as_help_support,correct_reject
+unknown_evaluation,1990,Where is the nearest beach? on sole,UNKNOWN_INTENT,CHECK_SPENDING,0.2904292235763052,accepted_as_other_intent,correct_reject
+unknown_evaluation,2002,Predict the lottery now,UNKNOWN_INTENT,VIEW_TRANSACTIONS,0.22849406817826748,accepted_as_other_intent,correct_reject
+unknown_evaluation,2007,Buy me a phone,UNKNOWN_INTENT,BILL_PAY,0.31554865561296713,accepted_as_financial,correct_reject
+unknown_evaluation,2014,How tall is mount everest?,UNKNOWN_INTENT,CHECK_BALANCE,0.3324270986367141,accepted_as_other_intent,correct_reject
+unknown_evaluation,2020,Find a cinema please,UNKNOWN_INTENT,VIEW_TRANSACTIONS,0.2737776469329951,accepted_as_other_intent,correct_reject
+unknown_evaluation,2028,Tell me a joke,UNKNOWN_INTENT,VIEW_TRANSACTIONS,0.20667261750298735,accepted_as_other_intent,correct_reject
+unknown_evaluation,2060,Play music please,UNKNOWN_INTENT,HELP_SUPPORT,0.27286723171100735,accepted_as_help_support,correct_reject
+unknown_evaluation,2085,What's the exchange rate?,UNKNOWN_INTENT,VIEW_TRANSACTIONS,0.26400094055796086,accepted_as_other_intent,correct_reject
+unknown_evaluation,2086,How tall is mount everest,UNKNOWN_INTENT,CHECK_BALANCE,0.3324270986367141,accepted_as_other_intent,correct_reject
+unknown_evaluation,2122,Translate this to french on sole,UNKNOWN_INTENT,CHECK_SPENDING,0.2558752936615494,accepted_as_other_intent,correct_reject
+unknown_evaluation,2145,How tall is mount everest?,UNKNOWN_INTENT,CHECK_BALANCE,0.3324270986367141,accepted_as_other_intent,correct_reject
+unknown_evaluation,2147,What's the weather?,UNKNOWN_INTENT,VIEW_TRANSACTIONS,0.26400094055796086,accepted_as_other_intent,correct_reject
+unknown_evaluation,2150,What's the exchange rate please now,UNKNOWN_INTENT,HELP_SUPPORT,0.24567857908847626,accepted_as_help_support,correct_reject
+unknown_evaluation,2153,Translate this to french this time,UNKNOWN_INTENT,TRANSFER_MONEY,0.2610355514642084,accepted_as_financial,correct_reject
+unknown_evaluation,2155,Translate this to french today on my account,UNKNOWN_INTENT,HELP_SUPPORT,0.22450405344709898,accepted_as_help_support,correct_reject
+unknown_evaluation,2201,Find a cinema please quickly,UNKNOWN_INTENT,VIEW_TRANSACTIONS,0.2546723716312225,accepted_as_other_intent,correct_reject
+unknown_evaluation,2218,How tall is mount everest,UNKNOWN_INTENT,CHECK_BALANCE,0.3324270986367141,accepted_as_other_intent,correct_reject
+unknown_evaluation,2223,Tell me a story,UNKNOWN_INTENT,VIEW_TRANSACTIONS,0.20667261750298735,accepted_as_other_intent,correct_reject
+unknown_evaluation,2227,How tall is mount everest? quickly,UNKNOWN_INTENT,CHECK_BALANCE,0.33560813197711004,accepted_as_other_intent,correct_reject
+unknown_evaluation,2237,Book a flight on the app,UNKNOWN_INTENT,CHECK_SPENDING,0.2225918683613873,accepted_as_other_intent,correct_reject
+unknown_evaluation,2239,Predict the lottery thanks on the app,UNKNOWN_INTENT,VIEW_TRANSACTIONS,0.30070459249019055,accepted_as_other_intent,correct_reject
+unknown_evaluation,2251,How tall is mount everest?,UNKNOWN_INTENT,CHECK_BALANCE,0.3324270986367141,accepted_as_other_intent,correct_reject
+unknown_evaluation,2258,Tell me a story on the app,UNKNOWN_INTENT,VIEW_TRANSACTIONS,0.3067300760749583,accepted_as_other_intent,correct_reject
+unknown_evaluation,2297,Who won the rugby,UNKNOWN_INTENT,VIEW_GROUP,0.30946823072748636,accepted_as_other_intent,correct_reject
+unknown_evaluation,2299,Find a cinema please,UNKNOWN_INTENT,VIEW_TRANSACTIONS,0.2737776469329951,accepted_as_other_intent,correct_reject
+unknown_evaluation,2301,What time is the game at the moment,UNKNOWN_INTENT,VIEW_TRANSACTIONS,0.3417695331106643,accepted_as_other_intent,correct_reject
+unknown_evaluation,2312,Buy me a phone if possible,UNKNOWN_INTENT,BILL_PAY,0.3057903644766828,accepted_as_financial,correct_reject
+unknown_evaluation,2316,Find a cinema,UNKNOWN_INTENT,VIEW_TRANSACTIONS,0.2982481647704636,accepted_as_other_intent,correct_reject
+unknown_evaluation,2332,Book a flight,UNKNOWN_INTENT,MANAGE_CONTACTS,0.20447769554879067,accepted_as_other_intent,correct_reject
+unknown_evaluation,2340,What's the weather on my account,UNKNOWN_INTENT,HELP_SUPPORT,0.2687066695817144,accepted_as_help_support,correct_reject
+unknown_evaluation,2343,Where is the nearest beach on the app,UNKNOWN_INTENT,CHECK_SPENDING,0.26220828981294064,accepted_as_other_intent,correct_reject
+unknown_evaluation,2351,What's the weather now,UNKNOWN_INTENT,VIEW_TRANSACTIONS,0.2506738313118351,accepted_as_other_intent,correct_reject
+unknown_evaluation,2362,What's the weather,UNKNOWN_INTENT,VIEW_TRANSACTIONS,0.26400094055796086,accepted_as_other_intent,correct_reject
+unknown_evaluation,2384,What time is the game,UNKNOWN_INTENT,VIEW_TRANSACTIONS,0.22826407437015578,accepted_as_other_intent,correct_reject
+unknown_evaluation,2387,Buy me a phone in sole,UNKNOWN_INTENT,BILL_PAY,0.23290108355180875,accepted_as_financial,correct_reject
+unknown_evaluation,2394,How tall is mount everest if possible,UNKNOWN_INTENT,CHECK_BALANCE,0.3473247355251221,accepted_as_other_intent,correct_reject
+unknown_evaluation,2409,Play music today on the app,UNKNOWN_INTENT,HELP_SUPPORT,0.27146729351271764,accepted_as_help_support,correct_reject
+unknown_evaluation,2417,Write my homework,UNKNOWN_INTENT,HELP_SUPPORT,0.29776135424165967,accepted_as_help_support,correct_reject
+unknown_evaluation,2418,Tell me a joke on my account,UNKNOWN_INTENT,HELP_SUPPORT,0.21477834825406872,accepted_as_help_support,correct_reject
+unknown_evaluation,2419,Tell me a story,UNKNOWN_INTENT,VIEW_TRANSACTIONS,0.20667261750298735,accepted_as_other_intent,correct_reject
+unknown_evaluation,2422,Play music right now,UNKNOWN_INTENT,HELP_SUPPORT,0.2714109476045097,accepted_as_help_support,correct_reject
+unknown_evaluation,2439,Find a curry recipe in sole,UNKNOWN_INTENT,VIEW_TRANSACTIONS,0.26305205464892084,accepted_as_other_intent,correct_reject
+unknown_evaluation,2440,Tell me a joke,UNKNOWN_INTENT,VIEW_TRANSACTIONS,0.20667261750298735,accepted_as_other_intent,correct_reject
+unknown_evaluation,2444,What's the capital of japan,UNKNOWN_INTENT,VIEW_TRANSACTIONS,0.2618505045615265,accepted_as_other_intent,correct_reject
+unknown_evaluation,2447,Find a cinema,UNKNOWN_INTENT,VIEW_TRANSACTIONS,0.2982481647704636,accepted_as_other_intent,correct_reject
+unknown_evaluation,2451,Translate this to french,UNKNOWN_INTENT,TRANSFER_MONEY,0.3040347047854679,accepted_as_financial,correct_reject
+unknown_evaluation,2470,Play music please,UNKNOWN_INTENT,HELP_SUPPORT,0.27286723171100735,accepted_as_help_support,correct_reject
+unknown_evaluation,2472,Find a curry recipe now,UNKNOWN_INTENT,VIEW_TRANSACTIONS,0.2901713322267049,accepted_as_other_intent,correct_reject
+unknown_evaluation,2492,Tell me a joke asap,UNKNOWN_INTENT,VIEW_TRANSACTIONS,0.19921505596027683,accepted_as_other_intent,correct_reject
+unknown_evaluation,2528,Buy me a phone please,UNKNOWN_INTENT,BILL_PAY,0.2971824349908883,accepted_as_financial,correct_reject
+unknown_evaluation,2536,Play music now at the moment,UNKNOWN_INTENT,HELP_SUPPORT,0.2999654001738074,accepted_as_help_support,correct_reject
+unknown_evaluation,2544,Turn on the lights asap,UNKNOWN_INTENT,CHECK_SPENDING,0.29526954772564645,accepted_as_other_intent,correct_reject
+unknown_evaluation,2552,What's the capital of japan,UNKNOWN_INTENT,VIEW_TRANSACTIONS,0.2618505045615265,accepted_as_other_intent,correct_reject
+unknown_evaluation,2555,Play music on sole,UNKNOWN_INTENT,HELP_SUPPORT,0.26673482638404306,accepted_as_help_support,correct_reject
+unknown_evaluation,2560,Turn on the lights,UNKNOWN_INTENT,CHECK_SPENDING,0.31526560756980604,accepted_as_other_intent,correct_reject
+unknown_evaluation,2568,Find a hotel?,UNKNOWN_INTENT,VIEW_TRANSACTIONS,0.2982481647704636,accepted_as_other_intent,correct_reject
+unknown_evaluation,2572,Find a curry recipe?,UNKNOWN_INTENT,VIEW_TRANSACTIONS,0.2982481647704636,accepted_as_other_intent,correct_reject
+unknown_evaluation,2581,Where is the nearest beach at the moment,UNKNOWN_INTENT,VIEW_TRANSACTIONS,0.2927464733285719,accepted_as_other_intent,correct_reject
+unknown_evaluation,2596,Play music if possible,UNKNOWN_INTENT,HELP_SUPPORT,0.30615457629575277,accepted_as_help_support,correct_reject
+unknown_evaluation,2604,Buy me a phone at the moment,UNKNOWN_INTENT,VIEW_TRANSACTIONS,0.30431696468622305,accepted_as_other_intent,correct_reject
+unknown_evaluation,2629,What's on tv?,UNKNOWN_INTENT,CHECK_SPENDING,0.33439433982442246,accepted_as_other_intent,correct_reject
+unknown_evaluation,2658,What's the exchange rate please,UNKNOWN_INTENT,VIEW_TRANSACTIONS,0.23497012388173502,accepted_as_other_intent,correct_reject
+unknown_evaluation,2659,Book a taxi on the app,UNKNOWN_INTENT,CHECK_SPENDING,0.2225918683613873,accepted_as_other_intent,correct_reject
+unknown_evaluation,2678,Order food please,UNKNOWN_INTENT,HELP_SUPPORT,0.26192766806329576,accepted_as_help_support,correct_reject
+unknown_evaluation,2689,Find a hotel,UNKNOWN_INTENT,VIEW_TRANSACTIONS,0.2982481647704636,accepted_as_other_intent,correct_reject
+unknown_evaluation,2693,Who won the rugby please now,UNKNOWN_INTENT,HELP_SUPPORT,0.3396513137882845,accepted_as_help_support,correct_reject
+unknown_evaluation,2718,Play music if possible,UNKNOWN_INTENT,HELP_SUPPORT,0.30615457629575277,accepted_as_help_support,correct_reject
+unknown_evaluation,2734,Open youtube on sole,UNKNOWN_INTENT,CHECK_SPENDING,0.23881029102446846,accepted_as_other_intent,correct_reject
+unknown_evaluation,2737,Book a taxi,UNKNOWN_INTENT,MANAGE_CONTACTS,0.20447769554879067,accepted_as_other_intent,correct_reject
+unknown_evaluation,2765,Translate this to french please in sole,UNKNOWN_INTENT,TRANSFER_MONEY,0.3101835833953151,accepted_as_financial,correct_reject
+unknown_evaluation,2783,Open youtube quickly,UNKNOWN_INTENT,HELP_SUPPORT,0.2387460873419598,accepted_as_help_support,correct_reject
+unknown_evaluation,2791,Find a hotel,UNKNOWN_INTENT,VIEW_TRANSACTIONS,0.2982481647704636,accepted_as_other_intent,correct_reject
+unknown_evaluation,2805,Order food now,UNKNOWN_INTENT,HELP_SUPPORT,0.2539353565145596,accepted_as_help_support,correct_reject
+unknown_evaluation,2812,What's the exchange rate,UNKNOWN_INTENT,VIEW_TRANSACTIONS,0.26400094055796086,accepted_as_other_intent,correct_reject
+unknown_evaluation,2819,Who won the rugby please,UNKNOWN_INTENT,VIEW_GROUP,0.2790184991506029,accepted_as_other_intent,correct_reject
+unknown_evaluation,2839,Play music on sole,UNKNOWN_INTENT,HELP_SUPPORT,0.26673482638404306,accepted_as_help_support,correct_reject
+unknown_evaluation,2844,Translate this to french,UNKNOWN_INTENT,TRANSFER_MONEY,0.3040347047854679,accepted_as_financial,correct_reject
+unknown_evaluation,2868,Book a taxi?,UNKNOWN_INTENT,MANAGE_CONTACTS,0.20447769554879067,accepted_as_other_intent,correct_reject
+unknown_evaluation,2883,Order food please,UNKNOWN_INTENT,HELP_SUPPORT,0.26192766806329576,accepted_as_help_support,correct_reject
+unknown_evaluation,2895,Translate this to french asap,UNKNOWN_INTENT,TRANSFER_MONEY,0.29373493828981767,accepted_as_financial,correct_reject
+unknown_evaluation,2911,Open youtube for me if possible,UNKNOWN_INTENT,HELP_SUPPORT,0.23575147321312898,accepted_as_help_support,correct_reject
+unknown_evaluation,2917,Turn on the lights,UNKNOWN_INTENT,CHECK_SPENDING,0.31526560756980604,accepted_as_other_intent,correct_reject
+unknown_evaluation,2921,Order food please,UNKNOWN_INTENT,HELP_SUPPORT,0.26192766806329576,accepted_as_help_support,correct_reject
+unknown_evaluation,2951,Turn on the lights please,UNKNOWN_INTENT,CHECK_SPENDING,0.2860179638283406,accepted_as_other_intent,correct_reject
+unknown_evaluation,2954,Translate this to french if possible,UNKNOWN_INTENT,TRANSFER_MONEY,0.27138187291932736,accepted_as_financial,correct_reject
+unknown_evaluation,2966,Translate this to french if possible,UNKNOWN_INTENT,TRANSFER_MONEY,0.27138187291932736,accepted_as_financial,correct_reject
+unknown_evaluation,2977,What's the capital of japan?,UNKNOWN_INTENT,VIEW_TRANSACTIONS,0.2618505045615265,accepted_as_other_intent,correct_reject

@@ -1,0 +1,16 @@
+partition_a,partition_b,phrase_or_template,match_type
+train,validation,spending this month,normalized
+train,validation,spending this month in sole,normalized
+train,test,pay broadband,normalized
+train,test,pay efl,normalized
+train,test,pay electricity,normalized
+train,test,pay internet,normalized
+train,test,pay mobile,normalized
+train,test,pay phone,normalized
+train,test,pay school fees,normalized
+train,test,pay telecom,normalized
+train,test,pay waf,normalized
+train,test,pay water,normalized
+train,test,show last <num> transactions,number_masked
+train,test,show last <num> transactions on my account,number_masked
+train,test,show transactions,normalized
