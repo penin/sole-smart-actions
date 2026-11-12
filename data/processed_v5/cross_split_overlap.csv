@@ -1,0 +1,61 @@
+partition_a,partition_b,phrase_or_template,match_type
+train,validation,can i cash out $ <num> today,number_masked
+train,validation,check my sole balance on <num> march,number_masked
+train,validation,compare my expenses for on <num> september,number_masked
+train,validation,display my wallet balance on <num> october,number_masked
+train,validation,give me the transaction list for on <num> april,number_masked
+train,validation,help me take out <num> dollars,number_masked
+train,validation,how do i withdraw <num> dollars,number_masked
+train,validation,how much is left in my wallet on <num> february,number_masked
+train,validation,i want to cash out <num> dollars,number_masked
+train,validation,request a withdrawal of $ <num>,number_masked
+train,validation,show spending by category on <num> august,number_masked
+train,validation,show spending by category on <num> september,number_masked
+train,validation,show the amount available to spend on <num> march,number_masked
+train,validation,show the amount available to spend on <num> may,number_masked
+train,validation,spending this month in sole,normalized
+train,validation,tell me my current balance on <num> march,number_masked
+train,validation,what is my available balance on <num> february,number_masked
+train,validation,who contributed to family on <num> june,number_masked
+train,test,can you check my account balance on <num> april,number_masked
+train,test,display my latest transaction history on <num> september,number_masked
+train,test,display my wallet balance on <num> november,number_masked
+train,test,display my wallet balance on <num> september,number_masked
+train,test,do i have money in my sole wallet on <num> december,number_masked
+train,test,give me an expenditure breakdown on <num> december,number_masked
+train,test,give me an expenditure breakdown on <num> may,number_masked
+train,test,give me the transaction list for on <num> october,number_masked
+train,test,help me pay $ <num> to internet provider,number_masked
+train,test,help me take out <num> dollars,number_masked
+train,test,how do i withdraw <num> dollars,number_masked
+train,test,how much cash is in sole on <num> april,number_masked
+train,test,i need to collect $ <num> in cash,number_masked
+train,test,list contributions in family on <num> march,number_masked
+train,test,list my wallet transactions on <num> october,number_masked
+train,test,pay <num> dollars toward my water supplier bill,number_masked
+train,test,pay my electricity provider bill of $ <num>,number_masked
+train,test,please settle my efl invoice for $ <num>,number_masked
+train,test,request a withdrawal of $ <num>,number_masked
+train,test,settle $ <num> owed to internet provider,number_masked
+train,test,settle $ <num> owed to mobile provider,number_masked
+train,test,show incoming transfers on <num> december,number_masked
+train,test,show incoming transfers on <num> may,number_masked
+train,test,show incoming transfers on <num> november,number_masked
+train,test,show last <num> transactions,number_masked
+train,test,show last <num> transactions on my account,number_masked
+train,test,show money received on <num> february,number_masked
+train,test,show money received on <num> march,number_masked
+train,test,show outgoing payments on <num> march,number_masked
+train,test,show the amount available to spend on <num> june,number_masked
+train,test,show the amount available to spend on <num> september,number_masked
+train,test,take $ <num> out of my sole account,number_masked
+train,test,tell me how much i paid out on <num> july,number_masked
+train,test,tell me my current balance on <num> august,number_masked
+train,test,what is my available balance on <num> october,number_masked
+train,test,withdraw $ <num> from my wallet,number_masked
+validation,test,help me take out <num> dollars,number_masked
+validation,test,how do i withdraw <num> dollars,number_masked
+validation,test,how much did i spend on <num> may,number_masked
+validation,test,list my wallet transactions on <num> july,number_masked
+validation,test,request a withdrawal of $ <num>,number_masked
+validation,test,tell me my current balance on <num> september,number_masked

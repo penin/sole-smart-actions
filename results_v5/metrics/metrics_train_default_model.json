@@ -1,0 +1,331 @@
+{
+  "model_name": "bow_logreg_default",
+  "experiment_id": "bow_logreg_v5",
+  "split": "train",
+  "n_samples": 2160,
+  "class_order": [
+    "TRANSFER_MONEY",
+    "CHECK_BALANCE",
+    "VIEW_TRANSACTIONS",
+    "WITHDRAW_MONEY",
+    "BILL_PAY",
+    "HELP_SUPPORT",
+    "MANAGE_CONTACTS",
+    "VIEW_GROUP",
+    "CHECK_SPENDING"
+  ],
+  "accuracy": 1.0,
+  "macro_precision": 1.0,
+  "weighted_precision": 1.0,
+  "macro_recall": 1.0,
+  "weighted_recall": 1.0,
+  "macro_f1": 1.0,
+  "weighted_f1": 1.0,
+  "balanced_accuracy": 1.0,
+  "log_loss": 0.061939136968343154,
+  "macro_roc_auc_ovr": 1.0,
+  "weighted_roc_auc_ovr": 1.0,
+  "macro_average_precision": 0.9999999999999998,
+  "top2_accuracy": 1.0,
+  "top3_accuracy": 1.0,
+  "mean_confidence": 0.9424442014135194,
+  "expected_calibration_error": 0.05755579858648073,
+  "per_class": [
+    {
+      "intent": "TRANSFER_MONEY",
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 240,
+      "roc_auc_ovr": 1.0,
+      "average_precision": 0.9999999999999999
+    },
+    {
+      "intent": "CHECK_BALANCE",
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 240,
+      "roc_auc_ovr": 1.0,
+      "average_precision": 0.9999999999999999
+    },
+    {
+      "intent": "VIEW_TRANSACTIONS",
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 240,
+      "roc_auc_ovr": 1.0,
+      "average_precision": 0.9999999999999999
+    },
+    {
+      "intent": "WITHDRAW_MONEY",
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 240,
+      "roc_auc_ovr": 1.0,
+      "average_precision": 0.9999999999999999
+    },
+    {
+      "intent": "BILL_PAY",
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 240,
+      "roc_auc_ovr": 1.0,
+      "average_precision": 0.9999999999999999
+    },
+    {
+      "intent": "HELP_SUPPORT",
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 240,
+      "roc_auc_ovr": 1.0,
+      "average_precision": 0.9999999999999999
+    },
+    {
+      "intent": "MANAGE_CONTACTS",
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 240,
+      "roc_auc_ovr": 1.0,
+      "average_precision": 0.9999999999999999
+    },
+    {
+      "intent": "VIEW_GROUP",
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 240,
+      "roc_auc_ovr": 1.0,
+      "average_precision": 0.9999999999999999
+    },
+    {
+      "intent": "CHECK_SPENDING",
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 240,
+      "roc_auc_ovr": 1.0,
+      "average_precision": 0.9999999999999999
+    }
+  ],
+  "confusion_matrix": [
+    [
+      240,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      240,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      240,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      240,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      240,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      240,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      240,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      240,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      240
+    ]
+  ],
+  "confusion_matrix_normalized": [
+    [
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      1.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      1.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      1.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "core8_breakdown": {
+    "n_samples": 1920,
+    "accuracy": 1.0,
+    "macro_precision": 1.0,
+    "weighted_precision": 1.0,
+    "macro_recall": 1.0,
+    "weighted_recall": 1.0,
+    "macro_f1": 1.0,
+    "weighted_f1": 1.0,
+    "predicted_outside_core": 0,
+    "undefined_metrics": {}
+  },
+  "undefined_metrics": {}
+}

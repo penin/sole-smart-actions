@@ -291,15 +291,21 @@ def top_features_plot(features: pd.DataFrame, class_order: list[str], path: Path
 
 
 # ------------------------------------------------------------------ threshold analysis (exploratory)
-def _mark_thresholds(ax, baseline: float, candidate: float, label: bool = True) -> None:
-    for x, name, ls in ((baseline, "V1 0.196", "--"), (candidate, f"candidate {candidate:.2f}", ":")):
+def _mark_thresholds(ax, baseline: float, candidate: float | None, label: bool = True) -> None:
+    marks = [(baseline, "V1 0.196", "--")]
+    if candidate is not None:
+        marks.append((candidate, f"candidate {candidate:.2f}", ":"))
+    for x, name, ls in marks:
         ax.axvline(x, color=INK_2, ls=ls, lw=1)
         if label:
             ax.text(x, 1.0, f" {name}", transform=ax.get_xaxis_transform(), fontsize=7, color=INK_2,
                     va="top", rotation=90, ha="right")
 
 
-def threshold_panels(table: pd.DataFrame, baseline: float, candidate: float, path: Path) -> pd.DataFrame:
+def threshold_panels(table: pd.DataFrame, baseline: float, candidate: float | None, path: Path,
+                     ref_name: str = "V1 frozen threshold 0.196",
+                     title: str = "Threshold comparison: Baseline V1 model (exploratory; test + evaluation-only unknowns)",
+                     ) -> pd.DataFrame:
     """Small multiples: one metric per panel, each vs threshold (single y-scale per panel)."""
     panels = [("unknown_rejection_rate", "Unknown rejection rate", True),
               ("known_coverage", "Known-intent coverage", True),
@@ -309,14 +315,14 @@ def threshold_panels(table: pd.DataFrame, baseline: float, candidate: float, pat
               ("end_to_end_known_accuracy", "End-to-end known accuracy\n(rejections count as wrong)", True)]
     fig, axes = plt.subplots(2, 3, figsize=(13, 7.5), sharex=True)
     t = table["threshold"].to_numpy()
-    for (col, title, is_rate), ax in zip(panels, axes.ravel()):
+    for (col, panel_title, is_rate), ax in zip(panels, axes.ravel()):
         y = table[col].to_numpy(dtype=float)
         ax.plot(t, y, color=SERIES[0], marker="o", ms=5)
         for xi, yi in zip(t, y):
             ax.annotate(f"{yi:.0%}" if is_rate else f"{yi:.0f}", (xi, yi), textcoords="offset points",
                         xytext=(0, 6), ha="center", fontsize=7, color=INK_2)
         _mark_thresholds(ax, baseline, candidate, label=False)
-        ax.set_title(title, loc="left", fontsize=10)
+        ax.set_title(panel_title, loc="left", fontsize=10)
         if is_rate:
             ax.set_ylim(0, 1.08)
             ax.yaxis.set_major_formatter(matplotlib.ticker.PercentFormatter(1.0))
@@ -324,23 +330,23 @@ def threshold_panels(table: pd.DataFrame, baseline: float, candidate: float, pat
             ax.set_ylim(0, max(1.0, np.nanmax(y)) * 1.18)
     for ax in axes[1]:
         ax.set_xlabel("Confidence threshold")
-    fig.suptitle("Threshold comparison: Baseline V1 model (exploratory; test + evaluation-only unknowns)\n"
-                 f"dashed line = V1 frozen threshold 0.196 · dotted line = candidate {candidate:.2f}",
+    key = f"dashed line = {ref_name}" + (f" · dotted line = candidate {candidate:.2f}" if candidate is not None else "")
+    fig.suptitle(f"{title}\n{key}",
                  x=0.02, ha="left", fontsize=12, fontweight="bold")
     fig.tight_layout()
     _save(fig, path)
     return table
 
 
-def coverage_vs_rejection(table: pd.DataFrame, dense: pd.DataFrame, baseline: float, candidate: float,
-                          path: Path) -> pd.DataFrame:
+def coverage_vs_rejection(table: pd.DataFrame, dense: pd.DataFrame, baseline: float, candidate: float | None,
+                          path: Path, ref_short: str = "0.196 (V1)") -> pd.DataFrame:
     fig, ax = plt.subplots(figsize=(7.5, 6))
     ax.plot(dense["unknown_rejection_rate"], dense["known_intent_coverage"], color=AXIS, lw=1.5,
             label="All thresholds 0.00–1.00 (step 0.01)")
     ax.plot(table["unknown_rejection_rate"], table["known_coverage"], ls="none", marker="o", ms=7,
             color=SERIES[0], label="Evaluated thresholds", markeredgecolor=SURFACE, markeredgewidth=1.5)
     for _, r in table.iterrows():
-        name = "0.196 (V1)" if r["threshold"] == baseline else f"{r['threshold']:.2f}"
+        name = ref_short if r["threshold"] == baseline else ("none" if r["threshold"] == 0 else f"{r['threshold']:.2f}")
         bold = r["threshold"] in (baseline, candidate)
         ax.annotate(name, (r["unknown_rejection_rate"], r["known_coverage"]), textcoords="offset points",
                     xytext=(7, 4), fontsize=8, color=INK if bold else INK_2, fontweight="bold" if bold else "normal")
@@ -412,7 +418,8 @@ def legitimate_rejection_heatmap(by_intent: pd.DataFrame, labels: list[str], pat
     fig, ax = plt.subplots(figsize=(10, 6))
     sns.heatmap(rate, annot=annot, fmt="", cmap=SEQ_CMAP, vmin=0, vmax=1, linewidths=1, linecolor=SURFACE,
                 annot_kws={"size": 7.5}, cbar_kws={"format": matplotlib.ticker.PercentFormatter(1.0)}, ax=ax)
-    ax.set_xticklabels([f"{t:.3f}".rstrip("0") if t < 0.2 else f"{t:.2f}" for t in rate.columns])
+    ax.set_xticklabels(["none" if t == 0 else f"{t:.3f}".rstrip("0") if t < 0.2 else f"{t:.2f}"
+                        for t in rate.columns])
     ax.set_yticklabels([_short(c) for c in rate.index], rotation=0)
     ax.set_xlabel("Confidence threshold")
     ax.set_ylabel("Actual intent (30 test commands each)")

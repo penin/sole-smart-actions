@@ -1,0 +1,16 @@
+split,actual_intent,predicted_intent,count,unique_phrases,example
+test,TRANSFER_MONEY,HELP_SUPPORT,7,7,I owe joeli 100
+test,CHECK_SPENDING,VIEW_TRANSACTIONS,2,2,Show expenditure summary
+test,MANAGE_CONTACTS,VIEW_TRANSACTIONS,2,2,Show beneficiaries
+test,HELP_SUPPORT,BILL_PAY,1,1,I have a complaint
+test,HELP_SUPPORT,MANAGE_CONTACTS,1,1,Need customer service
+test,TRANSFER_MONEY,WITHDRAW_MONEY,1,1,I owe mary $50
+test,VIEW_TRANSACTIONS,CHECK_BALANCE,1,1,Where is my statement this time
+test,VIEW_TRANSACTIONS,HELP_SUPPORT,1,1,Where is my statement on my account
+test,VIEW_TRANSACTIONS,MANAGE_CONTACTS,1,1,Where is my statement
+validation,VIEW_TRANSACTIONS,TRANSFER_MONEY,11,11,Find my transfer to adi
+validation,HELP_SUPPORT,CHECK_BALANCE,4,4,My money is missing
+validation,BILL_PAY,TRANSFER_MONEY,3,3,I need to pay internet
+validation,VIEW_TRANSACTIONS,VIEW_GROUP,2,2,Open statement
+validation,CHECK_BALANCE,HELP_SUPPORT,1,1,Do i have 250 on my account
+validation,VIEW_GROUP,CHECK_SPENDING,1,1,How much did i contribute

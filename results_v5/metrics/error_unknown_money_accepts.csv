@@ -1,0 +1,24 @@
+text,final_intent,max_confidence
+Set a reminder to water the plants on 6 March,BILL_PAY,0.7355833688749975
+Set a reminder to water the plants on 26 March,BILL_PAY,0.7311746514621728
+Set a reminder to water the plants on 22 July,BILL_PAY,0.6858933585522768
+Set a reminder to water the plants on 28 December,BILL_PAY,0.6818212223974462
+Set a reminder to water the plants on 28 June,BILL_PAY,0.6800908038366973
+Set a reminder to water the plants on 21 August,BILL_PAY,0.6764761947883424
+Set a reminder to water the plants on 10 February,BILL_PAY,0.6748902903016643
+Buy me a phone,BILL_PAY,0.5959900449161941
+Can you book a flight to Nadi?,TRANSFER_MONEY,0.547374801197173
+Can you book a flight to Suva?,TRANSFER_MONEY,0.547374801197173
+Can you book a flight to Tokyo?,TRANSFER_MONEY,0.547374801197173
+Can you book a flight to London?,TRANSFER_MONEY,0.547374801197173
+Can you book a flight to Lautoka?,TRANSFER_MONEY,0.547374801197173
+Can you book a flight to Apia?,TRANSFER_MONEY,0.547374801197173
+Can you book a flight to Singapore?,TRANSFER_MONEY,0.547374801197173
+Can you book a flight to Sydney?,TRANSFER_MONEY,0.547374801197173
+Can you book a flight to Paris?,TRANSFER_MONEY,0.547374801197173
+Buy me a phone if possible,BILL_PAY,0.4903217092213221
+Buy me a phone now,BILL_PAY,0.4433803143893395
+Buy me a phone please,BILL_PAY,0.43810314402623524
+Buy me a phone asap,BILL_PAY,0.4270283995186968
+Set a reminder to read a book on 15 April,TRANSFER_MONEY,0.3911389837968512
+Translate this to french,TRANSFER_MONEY,0.3635802745361109

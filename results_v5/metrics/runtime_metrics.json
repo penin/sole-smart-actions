@@ -1,0 +1,114 @@
+{
+  "environment": {
+    "platform": "Windows-11-10.0.26200-SP0",
+    "system": "Windows",
+    "machine": "AMD64",
+    "processor": "Intel64 Family 6 Model 183 Stepping 1, GenuineIntel",
+    "logical_cpus": 32,
+    "total_memory_gb": 31.73,
+    "python_implementation": "CPython",
+    "python_version": "3.13.15",
+    "hardware_accelerator": "none (CPU only)"
+  },
+  "packages": {
+    "python": "3.13.15",
+    "scikit-learn": "1.9.1",
+    "pandas": "3.1.1",
+    "numpy": "2.5.4",
+    "scipy": "1.18.1",
+    "matplotlib": "3.11.2",
+    "seaborn": "0.13.2",
+    "openpyxl": "3.1.5",
+    "joblib": "1.6.0",
+    "PyYAML": "6.0.3",
+    "pytest": "9.2.0"
+  },
+  "methodology": "time.perf_counter around one end-to-end predict_proba call on raw text (normalization + vectorization + LR). Warm-up calls discarded. Single-request batches sample random test utterances; batch measurement uses all 270 test rows. Single process, no other workload controls; wall-clock times vary by machine.",
+  "default": {
+    "params": {
+      "ngram_range": [
+        1,
+        1
+      ],
+      "C": 1.0,
+      "binary": false
+    },
+    "training_seconds": 0.048411800000167204,
+    "latency_single_request": {
+      "batch_size": 1,
+      "warmup_calls": 50,
+      "measured_calls": 1000,
+      "mean_ms": 0.30471170000009806,
+      "median_ms": 0.27879999993274396,
+      "p95_ms": 0.46333000009326497,
+      "p99_ms": 0.6994710000981283,
+      "min_ms": 0.24619999999231368,
+      "max_ms": 1.1275000001660374,
+      "throughput_predictions_per_s": 3586.8005747533502
+    },
+    "latency_batch": {
+      "batch_size": 270,
+      "warmup_calls": 10,
+      "measured_calls": 200,
+      "mean_ms": 2.1184489999961897,
+      "median_ms": 2.0092500000146174,
+      "p95_ms": 2.7072950000047054,
+      "p99_ms": 2.8655340000864267,
+      "min_ms": 1.863900000216745,
+      "max_ms": 3.108399999973699,
+      "throughput_predictions_per_s": 134378.49943911197
+    },
+    "model_file": "models_v5/bow_logreg_v5_default_v1.0.0.joblib",
+    "model_size_mb": 0.03256034851074219,
+    "vocabulary_size": 374,
+    "n_parameters": 3375,
+    "coef_shape": [
+      9,
+      374
+    ]
+  },
+  "tuned": {
+    "params": {
+      "ngram_range": [
+        1,
+        2
+      ],
+      "C": 10.0,
+      "binary": true
+    },
+    "training_seconds": 0.17450060000010126,
+    "latency_single_request": {
+      "batch_size": 1,
+      "warmup_calls": 50,
+      "measured_calls": 1000,
+      "mean_ms": 0.3016639000006762,
+      "median_ms": 0.27980000004390604,
+      "p95_ms": 0.4443850000257043,
+      "p99_ms": 0.6611190000353416,
+      "min_ms": 0.25179999988722557,
+      "max_ms": 1.5906999999515392,
+      "throughput_predictions_per_s": 3573.9814147358134
+    },
+    "latency_batch": {
+      "batch_size": 270,
+      "warmup_calls": 10,
+      "measured_calls": 200,
+      "mean_ms": 3.00480949999951,
+      "median_ms": 2.857650000009926,
+      "p95_ms": 3.5639499999092537,
+      "p99_ms": 4.325866000122002,
+      "min_ms": 2.661199999920427,
+      "max_ms": 7.674999999835563,
+      "throughput_predictions_per_s": 94483.22922648407
+    },
+    "model_file": "models_v5/bow_logreg_v5_tuned_v1.0.0.joblib",
+    "model_size_mb": 0.21685409545898438,
+    "vocabulary_size": 2584,
+    "n_parameters": 23265,
+    "coef_shape": [
+      9,
+      2584
+    ]
+  },
+  "hyperparameter_search_seconds": 1.7068712999998752
+}

@@ -43,6 +43,20 @@ def canonical_key(text) -> str:
     return " ".join(tokenize(normalize_text(text)))
 
 
+def dedup_key(text) -> str:
+    """Duplicate-check key: Unicode NFKC, casefold, collapsed whitespace, surrounding punctuation removed.
+    Interior punctuation is kept (``canonical_key`` is the stricter, punctuation-free variant)."""
+    if text is None or (isinstance(text, float) and np.isnan(text)):
+        return ""
+    t = _WHITESPACE.sub(" ", unicodedata.normalize("NFKC", str(text)).casefold()).strip()
+    start, end = 0, len(t)
+    while start < end and (unicodedata.category(t[start]).startswith("P") or t[start].isspace()):
+        start += 1
+    while end > start and (unicodedata.category(t[end - 1]).startswith("P") or t[end - 1].isspace()):
+        end -= 1
+    return t[start:end]
+
+
 def template_key(text) -> str:
     """canonical_key with numbers masked, so "send 50 to jone" == "send 500 to jone"."""
     return _NUMBER.sub("<num>", canonical_key(text))

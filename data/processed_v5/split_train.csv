@@ -1,0 +1,2161 @@
+row_id,excel_row,text,intent,split,scope
+1,3,I want to pay my phone bill,BILL_PAY,train,core
+2,4,Can i withdraw 10?,WITHDRAW_MONEY,train,core
+4,6,Report fraud asap,HELP_SUPPORT,train,core
+8,10,Calculate spending on fuel,CHECK_SPENDING,train,stretch
+9,11,Can i send asha 40,TRANSFER_MONEY,train,core
+10,12,Show payments over 30,VIEW_TRANSACTIONS,train,core
+13,15,Pay 80 for phone,BILL_PAY,train,core
+14,16,Pay 25 to internet,BILL_PAY,train,core
+15,17,Pay my electricity,BILL_PAY,train,core
+16,18,Get 75 cash,WITHDRAW_MONEY,train,core
+18,20,Help me withdraw 50,WITHDRAW_MONEY,train,core
+19,21,Give me an expense summary,CHECK_SPENDING,train,stretch
+20,22,Transfer failed,HELP_SUPPORT,train,core
+21,23,I want to withdraw 10,WITHDRAW_MONEY,train,core
+22,24,Who contributed in the last 30 days,VIEW_GROUP,train,core
+24,26,Check work group,VIEW_GROUP,train,core
+25,27,Wallet balance,CHECK_BALANCE,train,core
+26,28,Check holiday savings group?,VIEW_GROUP,train,core
+27,29,Is there $200 in my wallet?,CHECK_BALANCE,train,core
+28,30,I can't access my account on sole,HELP_SUPPORT,train,core
+29,31,Need to transfer 50 to mary,TRANSFER_MONEY,train,core
+30,32,Take out 25,WITHDRAW_MONEY,train,core
+32,34,Pay my school fees account,BILL_PAY,train,core
+33,35,Send 50 from my wallet to tui,TRANSFER_MONEY,train,core
+35,37,Add priya as recipient,MANAGE_CONTACTS,train,core
+36,38,I need to take out 50?,WITHDRAW_MONEY,train,core
+38,40,See group balance,VIEW_GROUP,train,core
+39,41,Withdraw $50,WITHDRAW_MONEY,train,core
+40,42,Put 25 in tui's wallet,TRANSFER_MONEY,train,core
+41,43,Check church group,VIEW_GROUP,train,core
+42,44,How do i unlock my account,HELP_SUPPORT,train,core
+43,45,Send money to mere,TRANSFER_MONEY,train,core
+45,47,I need to take out 80,WITHDRAW_MONEY,train,core
+46,48,Find joeli in contacts,MANAGE_CONTACTS,train,core
+47,49,How much money is left,CHECK_BALANCE,train,core
+48,50,What funds do I have available on 11 June?,CHECK_BALANCE,train,core
+49,51,Total expenses last week,CHECK_SPENDING,train,stretch
+50,52,How much did i spend on transport over the weekend,CHECK_SPENDING,train,stretch
+52,54,Withdraw 80,WITHDRAW_MONEY,train,core
+53,55,Save savenaca,MANAGE_CONTACTS,train,core
+55,57,Open women's savings group,VIEW_GROUP,train,core
+58,60,Is there 50 in my wallet,CHECK_BALANCE,train,core
+59,61,Is raj saved?,MANAGE_CONTACTS,train,core
+60,62,Find litia in contacts,MANAGE_CONTACTS,train,core
+64,66,Where did my money go,CHECK_SPENDING,train,stretch
+66,68,Pay my efl account,BILL_PAY,train,core
+67,69,What funds do I have available on 25 December?,CHECK_BALANCE,train,core
+68,70,Take 10 from my wallet,WITHDRAW_MONEY,train,core
+69,71,Total expenses this month,CHECK_SPENDING,train,stretch
+70,72,Start cash out for $200,WITHDRAW_MONEY,train,core
+71,73,How much did i spend on groceries,CHECK_SPENDING,train,stretch
+72,74,Did joeli send me money,VIEW_TRANSACTIONS,train,core
+73,75,Did jone send me money?,VIEW_TRANSACTIONS,train,core
+74,76,Open groupwealth?,VIEW_GROUP,train,core
+75,77,Show contributions to market vendors group,VIEW_GROUP,train,core
+76,78,Add litia as recipient,MANAGE_CONTACTS,train,core
+78,80,Add jone to contacts?,MANAGE_CONTACTS,train,core
+79,81,Send 60 to my friend peni,TRANSFER_MONEY,train,core
+80,82,Did ravi send me money,VIEW_TRANSACTIONS,train,core
+81,83,Show group activity,VIEW_GROUP,train,core
+82,84,Pay broadband,BILL_PAY,train,core
+83,85,Add mere to contacts,MANAGE_CONTACTS,train,core
+84,86,Pay efl,BILL_PAY,train,core
+85,87,How much did i spend on market yesterday,CHECK_SPENDING,train,stretch
+87,89,Show contributions to holiday savings group,VIEW_GROUP,train,core
+89,91,Take out 500?,WITHDRAW_MONEY,train,core
+90,92,Send 300 fiji dollars to jone,TRANSFER_MONEY,train,core
+91,93,Open holiday savings group,VIEW_GROUP,train,core
+93,95,Take 120 from my wallet,WITHDRAW_MONEY,train,core
+94,96,Take out 15,WITHDRAW_MONEY,train,core
+96,98,Withdraw $20,WITHDRAW_MONEY,train,core
+97,99,I want to send $100 to savenaca,TRANSFER_MONEY,train,core
+98,100,Suspicious payment,HELP_SUPPORT,train,core
+99,101,Is there 250 in my wallet now,CHECK_BALANCE,train,core
+102,104,Remove roshni from contacts,MANAGE_CONTACTS,train,core
+104,106,Change saved contact joeli,MANAGE_CONTACTS,train,core
+105,107,Calculate spending on bills,CHECK_SPENDING,train,stretch
+106,108,Start a transfer for jone,TRANSFER_MONEY,train,core
+107,109,Reset my pin? now,HELP_SUPPORT,train,core
+108,110,Pay joeli 80,TRANSFER_MONEY,train,core
+109,111,Reset my pin? quickly,HELP_SUPPORT,train,core
+111,113,Save kumar,MANAGE_CONTACTS,train,core
+112,114,Who do i call for help,HELP_SUPPORT,train,core
+113,115,Report fraud,HELP_SUPPORT,train,core
+114,116,Bill payment,BILL_PAY,train,core
+115,117,Show payments over 500,VIEW_TRANSACTIONS,train,core
+116,118,Cash out 80,WITHDRAW_MONEY,train,core
+119,121,My savings group,VIEW_GROUP,train,core
+120,122,Show deposits in october,VIEW_TRANSACTIONS,train,core
+122,124,Show deposits yesterday,VIEW_TRANSACTIONS,train,core
+123,125,Withdraw 75,WITHDRAW_MONEY,train,core
+126,128,Payment not working,HELP_SUPPORT,train,core
+127,129,How much did i spend on mobile data since monday,CHECK_SPENDING,train,stretch
+128,130,Send money to joeli,TRANSFER_MONEY,train,core
+130,132,I need to take out $100,WITHDRAW_MONEY,train,core
+131,133,Do I have money in my Sole wallet on 28 June?,CHECK_BALANCE,train,core
+132,134,Show incoming payments,VIEW_TRANSACTIONS,train,core
+134,136,Make a transfer to tui,TRANSFER_MONEY,train,core
+135,137,Can you send $50 to jone,TRANSFER_MONEY,train,core
+136,138,What payments did i make over the weekend,VIEW_TRANSACTIONS,train,core
+137,139,Is there 40 in my wallet?,CHECK_BALANCE,train,core
+138,140,Search contacts for john,MANAGE_CONTACTS,train,core
+139,141,How much money have i got?,CHECK_BALANCE,train,core
+140,142,Delete tui as payee?,MANAGE_CONTACTS,train,core
+142,144,I want to send $200 to ravi,TRANSFER_MONEY,train,core
+144,146,I want to pay my telecom,BILL_PAY,train,core
+146,148,Put 5 in tui's wallet,TRANSFER_MONEY,train,core
+147,149,Pay $20 to electricity,BILL_PAY,train,core
+148,150,Did i spend more than 5 on food,CHECK_SPENDING,train,stretch
+149,151,Show incoming transfers on 13 August,VIEW_TRANSACTIONS,train,core
+150,152,I want to pay my phone,BILL_PAY,train,core
+152,154,Transfer failed please now,HELP_SUPPORT,train,core
+153,155,Can i withdraw 150,WITHDRAW_MONEY,train,core
+156,158,Transfer failed please if possible,HELP_SUPPORT,train,core
+157,159,Show incoming transfers on 25 January,VIEW_TRANSACTIONS,train,core
+158,160,Balance,CHECK_BALANCE,train,core
+159,161,Take $100 from my wallet,WITHDRAW_MONEY,train,core
+160,162,I want to pay my internet,BILL_PAY,train,core
+162,164,Get $200 cash,WITHDRAW_MONEY,train,core
+163,165,Rename contact litia,MANAGE_CONTACTS,train,core
+164,166,Transfer failed please on sole,HELP_SUPPORT,train,core
+165,167,Help me pay broadband,BILL_PAY,train,core
+166,168,Show my last payments,VIEW_TRANSACTIONS,train,core
+167,169,Can i withdraw $50,WITHDRAW_MONEY,train,core
+168,170,Transfer funds to savenaca,TRANSFER_MONEY,train,core
+169,171,Suspicious payment quickly,HELP_SUPPORT,train,core
+170,172,Show members of my school savings group,VIEW_GROUP,train,core
+171,173,List transfers in october,VIEW_TRANSACTIONS,train,core
+172,174,Spending this month?,CHECK_SPENDING,train,stretch
+173,175,Update tui's contact,MANAGE_CONTACTS,train,core
+176,178,What payments did i make this month,VIEW_TRANSACTIONS,train,core
+178,180,Is there 5 in my wallet,CHECK_BALANCE,train,core
+179,181,Reset my pin?,HELP_SUPPORT,train,core
+180,182,I forgot my pin now,HELP_SUPPORT,train,core
+182,184,Check school group,VIEW_GROUP,train,core
+185,187,How much did i spend on market,CHECK_SPENDING,train,stretch
+189,191,Show transactions last week,VIEW_TRANSACTIONS,train,core
+190,192,Get 50 cash,WITHDRAW_MONEY,train,core
+192,194,Pay 300 to sera,TRANSFER_MONEY,train,core
+194,196,How much did i spend on market in the last 30 days,CHECK_SPENDING,train,stretch
+195,197,I would like support for an unrecognized charge,HELP_SUPPORT,train,core
+197,199,Find Jone in my recipient list,MANAGE_CONTACTS,train,core
+198,200,Who contributed since monday?,VIEW_GROUP,train,core
+200,202,I want to pay my waf,BILL_PAY,train,core
+201,203,Get 300 cash,WITHDRAW_MONEY,train,core
+202,204,Send $20 to my friend john,TRANSFER_MONEY,train,core
+203,205,Find the 60 transfer,VIEW_TRANSACTIONS,train,core
+204,206,Settle my phone charges,BILL_PAY,train,core
+206,208,Group details,VIEW_GROUP,train,core
+207,209,Did mika send me money,VIEW_TRANSACTIONS,train,core
+210,212,Remove a beneficiary,MANAGE_CONTACTS,train,core
+212,214,I have a broadband bill,BILL_PAY,train,core
+213,215,Find work group,VIEW_GROUP,train,core
+214,216,Is there 20 in my wallet,CHECK_BALANCE,train,core
+215,217,Search contacts for priya,MANAGE_CONTACTS,train,core
+219,221,Settle my school fees charges,BILL_PAY,train,core
+220,222,Total expenses this week,CHECK_SPENDING,train,stretch
+221,223,How much can i spend,CHECK_BALANCE,train,core
+222,224,Send money to sera,TRANSFER_MONEY,train,core
+224,226,List groups i belong to,VIEW_GROUP,train,core
+226,228,Help me withdraw 200,WITHDRAW_MONEY,train,core
+227,229,How do i unlock my account this time,HELP_SUPPORT,train,core
+228,230,Biggest expense over the weekend,CHECK_SPENDING,train,stretch
+229,231,Delete peni as payee,MANAGE_CONTACTS,train,core
+231,233,Make a telecom payment,BILL_PAY,train,core
+232,234,Who contributed this week,VIEW_GROUP,train,core
+235,237,Did mary send me money,VIEW_TRANSACTIONS,train,core
+236,238,Delete joeli as payee,MANAGE_CONTACTS,train,core
+240,242,How much did i spend on food yesterday,CHECK_SPENDING,train,stretch
+241,243,Is there 5 in my wallet at the moment,CHECK_BALANCE,train,core
+242,244,Can you guide me on an app login problem?,HELP_SUPPORT,train,core
+243,245,Open work group,VIEW_GROUP,train,core
+245,247,Transfer $50 to priya,TRANSFER_MONEY,train,core
+246,248,Change saved contact mika,MANAGE_CONTACTS,train,core
+247,249,Cash out 300,WITHDRAW_MONEY,train,core
+248,250,View our school group activity on 27 December,VIEW_GROUP,train,core
+250,252,Did ben send me money,VIEW_TRANSACTIONS,train,core
+251,253,What payments did i make in october,VIEW_TRANSACTIONS,train,core
+252,254,Pay ana 10?,TRANSFER_MONEY,train,core
+253,255,Show payments over $20,VIEW_TRANSACTIONS,train,core
+255,257,Pay my phone account,BILL_PAY,train,core
+256,258,Display my latest transaction history on 7 April,VIEW_TRANSACTIONS,train,core
+257,259,Rename contact joeli,MANAGE_CONTACTS,train,core
+258,260,Balance enquiry,CHECK_BALANCE,train,core
+259,261,Total expenses yesterday,CHECK_SPENDING,train,stretch
+260,262,Pay 300 to electricity,BILL_PAY,train,core
+261,263,Find the 30 transfer,VIEW_TRANSACTIONS,train,core
+262,264,Did i spend more than 15 on utilities,CHECK_SPENDING,train,stretch
+265,267,My balance,CHECK_BALANCE,train,core
+266,268,Is there 250 in my wallet,CHECK_BALANCE,train,core
+267,269,Tell me how much I paid out on 1 December,CHECK_SPENDING,train,stretch
+268,270,Withdraw 200,WITHDRAW_MONEY,train,core
+269,271,Did i spend more than 250 on transport,CHECK_SPENDING,train,stretch
+270,272,Find the $20 transfer?,VIEW_TRANSACTIONS,train,core
+272,274,Is there 500 in my wallet,CHECK_BALANCE,train,core
+273,275,List transfers last month,VIEW_TRANSACTIONS,train,core
+274,276,Is there 15 in my wallet?,CHECK_BALANCE,train,core
+276,278,Delete kumar as payee,MANAGE_CONTACTS,train,core
+277,279,Add mika to contacts,MANAGE_CONTACTS,train,core
+278,280,Show payments over 40,VIEW_TRANSACTIONS,train,core
+279,281,Find a transaction from in october?,VIEW_TRANSACTIONS,train,core
+280,282,Delete ana as payee,MANAGE_CONTACTS,train,core
+283,285,Where do I report an agent deposit issue?,HELP_SUPPORT,train,core
+284,286,I need to take out 5,WITHDRAW_MONEY,train,core
+285,287,App keeps crashing,HELP_SUPPORT,train,core
+287,289,See my balance,CHECK_BALANCE,train,core
+288,290,Reset my pin? on sole,HELP_SUPPORT,train,core
+289,291,What is my available balance on 9 March?,CHECK_BALANCE,train,core
+290,292,Pay waf?,BILL_PAY,train,core
+292,294,Show withdrawals in the last 30 days,VIEW_TRANSACTIONS,train,core
+293,295,Display the work group account,VIEW_GROUP,train,core
+294,296,Is there 75 in my wallet,CHECK_BALANCE,train,core
+295,297,Total saved by women's savings group,VIEW_GROUP,train,core
+297,299,Show payments to ravi?,VIEW_TRANSACTIONS,train,core
+298,300,Open bill pay?,BILL_PAY,train,core
+299,301,Is ana saved,MANAGE_CONTACTS,train,core
+301,303,Show contributions to family group,VIEW_GROUP,train,core
+302,304,Put $50 in ravi's wallet,TRANSFER_MONEY,train,core
+303,305,Show payments to tui,VIEW_TRANSACTIONS,train,core
+304,306,Send 20 from my wallet to sera,TRANSFER_MONEY,train,core
+305,307,I have a question regarding a missing receipt,HELP_SUPPORT,train,core
+308,310,Pay 300 to phone,BILL_PAY,train,core
+312,314,Is there 25 in my wallet,CHECK_BALANCE,train,core
+313,315,List transfers in the last 30 days?,VIEW_TRANSACTIONS,train,core
+315,317,Pay 100 for telecom,BILL_PAY,train,core
+316,318,Compare spending this month and last month,CHECK_SPENDING,train,stretch
+317,319,Check the balance of our church group,VIEW_GROUP,train,core
+318,320,Send 60 from my wallet to priya,TRANSFER_MONEY,train,core
+319,321,Need to transfer 50 to jone,TRANSFER_MONEY,train,core
+321,323,Cash out from my account,WITHDRAW_MONEY,train,core
+323,325,Compare spending this month and last month on my account,CHECK_SPENDING,train,stretch
+324,326,Start a transfer for ana,TRANSFER_MONEY,train,core
+325,327,Need cash from my wallet,WITHDRAW_MONEY,train,core
+326,328,How much spent on food,CHECK_SPENDING,train,stretch
+327,329,Tell me my current balance,CHECK_BALANCE,train,core
+328,330,Contact support now,HELP_SUPPORT,train,core
+329,331,Save sera,MANAGE_CONTACTS,train,core
+330,332,What were my expenses on 15 February?,CHECK_SPENDING,train,stretch
+331,333,Did raj send me money,VIEW_TRANSACTIONS,train,core
+332,334,Take out 20,WITHDRAW_MONEY,train,core
+333,335,Change saved contact ben,MANAGE_CONTACTS,train,core
+334,336,Check market vendors group,VIEW_GROUP,train,core
+335,337,Bill payment if possible,BILL_PAY,train,core
+336,338,I want to send 80 to tui,TRANSFER_MONEY,train,core
+337,339,Contact support,HELP_SUPPORT,train,core
+339,341,Show our group account,VIEW_GROUP,train,core
+340,342,Is there $100 in my wallet?,CHECK_BALANCE,train,core
+341,343,Is there 200 in my wallet,CHECK_BALANCE,train,core
+342,344,List transfers over the weekend,VIEW_TRANSACTIONS,train,core
+344,346,Take money out of sole,WITHDRAW_MONEY,train,core
+345,347,How much spent on market,CHECK_SPENDING,train,stretch
+346,348,Show deposits over the weekend,VIEW_TRANSACTIONS,train,core
+347,349,Send 75 fiji dollars to jone,TRANSFER_MONEY,train,core
+348,350,Help me withdraw 80,WITHDRAW_MONEY,train,core
+350,352,Show deposits this month,VIEW_TRANSACTIONS,train,core
+351,353,Transfer money to mika?,TRANSFER_MONEY,train,core
+354,356,Pay 15 to sera,TRANSFER_MONEY,train,core
+355,357,I forgot my pin asap,HELP_SUPPORT,train,core
+357,359,Save litia,MANAGE_CONTACTS,train,core
+358,360,Is there 60 in my wallet,CHECK_BALANCE,train,core
+359,361,Check my Sole balance on 8 November,CHECK_BALANCE,train,core
+360,362,Show group savings,VIEW_GROUP,train,core
+362,364,Pay utilities,BILL_PAY,train,core
+363,365,Is there 150 in my wallet,CHECK_BALANCE,train,core
+365,367,Did i spend more than 30 on utilities,CHECK_SPENDING,train,stretch
+366,368,Show contributions to school group,VIEW_GROUP,train,core
+367,369,Change saved contact john,MANAGE_CONTACTS,train,core
+368,370,Which category cost most,CHECK_SPENDING,train,stretch
+369,371,Show my group savings for community,VIEW_GROUP,train,core
+370,372,Take out 100,WITHDRAW_MONEY,train,core
+371,373,Tell me my current balance on 9 November,CHECK_BALANCE,train,core
+372,374,Show money received on 26 October,VIEW_TRANSACTIONS,train,core
+373,375,I want to send $20 to john,TRANSFER_MONEY,train,core
+374,376,Please help resolve an incorrect payment,HELP_SUPPORT,train,core
+375,377,Show funds in my wallet,CHECK_BALANCE,train,core
+376,378,Did roshni send me money,VIEW_TRANSACTIONS,train,core
+378,380,Show money received on 26 February,VIEW_TRANSACTIONS,train,core
+379,381,I forgot my pin,HELP_SUPPORT,train,core
+380,382,Make a transfer to kumar,TRANSFER_MONEY,train,core
+381,383,I would like support for my account access,HELP_SUPPORT,train,core
+383,385,Calculate spending on market,CHECK_SPENDING,train,stretch
+384,386,Delete john as payee,MANAGE_CONTACTS,train,core
+385,387,Show payments to peni?,VIEW_TRANSACTIONS,train,core
+389,391,Give me the transaction list for on 24 November,VIEW_TRANSACTIONS,train,core
+390,392,Biggest expense in the last 30 days,CHECK_SPENDING,train,stretch
+391,393,Put 30 in jone's wallet,TRANSFER_MONEY,train,core
+392,394,Pay 200 for waf,BILL_PAY,train,core
+393,395,Please help resolve an unrecognized charge,HELP_SUPPORT,train,core
+394,396,Payment not working at the moment,HELP_SUPPORT,train,core
+396,398,I can't access my account,HELP_SUPPORT,train,core
+397,399,Search contacts for kumar,MANAGE_CONTACTS,train,core
+399,401,Can someone assist with a delayed transaction?,HELP_SUPPORT,train,core
+401,403,Can you pay my electricity provider account $500?,BILL_PAY,train,core
+402,404,Transfer funds to jone,TRANSFER_MONEY,train,core
+403,405,Add mary to contacts,MANAGE_CONTACTS,train,core
+404,406,Can i withdraw 30,WITHDRAW_MONEY,train,core
+405,407,I need help with a blocked wallet,HELP_SUPPORT,train,core
+406,408,I want to pay my efl,BILL_PAY,train,core
+407,409,Make a electricity payment,BILL_PAY,train,core
+408,410,Update mika's contact,MANAGE_CONTACTS,train,core
+410,412,Wanna withdraw 150,WITHDRAW_MONEY,train,core
+411,413,Show payments over 300,VIEW_TRANSACTIONS,train,core
+414,416,Take 25 from my wallet,WITHDRAW_MONEY,train,core
+415,417,Forgot password?,HELP_SUPPORT,train,core
+417,419,Add new payee,MANAGE_CONTACTS,train,core
+418,420,Total saved by work group,VIEW_GROUP,train,core
+419,421,Show withdrawals since monday,VIEW_TRANSACTIONS,train,core
+420,422,Tell me my current balance on 14 August,CHECK_BALANCE,train,core
+422,424,Is there 80 in my wallet,CHECK_BALANCE,train,core
+423,425,Summarize purchases on 9 March,CHECK_SPENDING,train,stretch
+424,426,Put 30 in tui's wallet,TRANSFER_MONEY,train,core
+426,428,Can you check my account balance on 5 April?,CHECK_BALANCE,train,core
+427,429,I want to withdraw 40,WITHDRAW_MONEY,train,core
+428,430,Pay my mobile account,BILL_PAY,train,core
+430,432,Show the amount available to spend on 18 December,CHECK_BALANCE,train,core
+431,433,Make a $50 transfer to Laisa,TRANSFER_MONEY,train,core
+433,435,"Send 1,000 to my friend roshni",TRANSFER_MONEY,train,core
+435,437,What payments did i make last week,VIEW_TRANSACTIONS,train,core
+437,439,Rename contact mika,MANAGE_CONTACTS,train,core
+438,440,How much have i spent,CHECK_SPENDING,train,stretch
+439,441,Show withdrawals yesterday,VIEW_TRANSACTIONS,train,core
+441,443,Pay 300 for internet,BILL_PAY,train,core
+443,445,I have a question regarding an account error,HELP_SUPPORT,train,core
+444,446,I want to pay my school fees,BILL_PAY,train,core
+445,447,Biggest expense yesterday,CHECK_SPENDING,train,stretch
+446,448,I can't access my account now,HELP_SUPPORT,train,core
+447,449,Process a $45 payment for mobile provider,BILL_PAY,train,core
+448,450,Add raj to contacts,MANAGE_CONTACTS,train,core
+450,452,Connect me to support about a blocked wallet,HELP_SUPPORT,train,core
+451,453,Put 50 in mere's wallet,TRANSFER_MONEY,train,core
+452,454,Check the balance of our family group,VIEW_GROUP,train,core
+453,455,Save priya,MANAGE_CONTACTS,train,core
+454,456,Take out 150,WITHDRAW_MONEY,train,core
+455,457,Did i spend more than 300 on school,CHECK_SPENDING,train,stretch
+456,458,Show payments to mary,VIEW_TRANSACTIONS,train,core
+458,460,Put 75 in ben's wallet,TRANSFER_MONEY,train,core
+459,461,Find roshni in contacts,MANAGE_CONTACTS,train,core
+460,462,Do I have money in my Sole wallet on 16 April?,CHECK_BALANCE,train,core
+461,463,Total saved by village group,VIEW_GROUP,train,core
+462,464,My phone was stolen,HELP_SUPPORT,train,core
+463,465,Delete sera as payee,MANAGE_CONTACTS,train,core
+465,467,What did i spend in the last 30 days,CHECK_SPENDING,train,stretch
+467,469,Show incoming payments on the app,VIEW_TRANSACTIONS,train,core
+469,471,Save mary,MANAGE_CONTACTS,train,core
+470,472,Send 300 from my wallet to peni,TRANSFER_MONEY,train,core
+471,473,How much did i spend on fuel,CHECK_SPENDING,train,stretch
+472,474,Connect me to support about an agent deposit issue,HELP_SUPPORT,train,core
+473,475,Biggest expense this week,CHECK_SPENDING,train,stretch
+475,477,Settle school fees,BILL_PAY,train,core
+478,480,Is there 120 in my wallet,CHECK_BALANCE,train,core
+480,482,Where can I withdraw $150?,WITHDRAW_MONEY,train,core
+483,485,Find church group?,VIEW_GROUP,train,core
+484,486,My balance on the app,CHECK_BALANCE,train,core
+485,487,Cash out 100,WITHDRAW_MONEY,train,core
+486,488,Show withdrawals last week,VIEW_TRANSACTIONS,train,core
+488,490,Did i spend more than 75 on restaurants,CHECK_SPENDING,train,stretch
+490,492,Is there $50 in my wallet,CHECK_BALANCE,train,core
+491,493,How much is left in my wallet on 22 June?,CHECK_BALANCE,train,core
+492,494,Change saved contact raj,MANAGE_CONTACTS,train,core
+494,496,How much did i spend on groceries since monday,CHECK_SPENDING,train,stretch
+495,497,Who contributed to church on 26 September?,VIEW_GROUP,train,core
+497,499,Tell me my current balance on 5 December,CHECK_BALANCE,train,core
+498,500,Did sera send me money,VIEW_TRANSACTIONS,train,core
+499,501,Show payments to asha,VIEW_TRANSACTIONS,train,core
+500,502,Remove savenaca from contacts,MANAGE_CONTACTS,train,core
+501,503,Report unauthorized transaction,HELP_SUPPORT,train,core
+502,504,How much did I spend on 2 October?,CHECK_SPENDING,train,stretch
+503,505,Check community group?,VIEW_GROUP,train,core
+504,506,Did i spend more than 15 on mobile data,CHECK_SPENDING,train,stretch
+505,507,Connect me to support about a missing receipt,HELP_SUPPORT,train,core
+506,508,Make a efl payment,BILL_PAY,train,core
+507,509,Display the community group account,VIEW_GROUP,train,core
+508,510,Show payments over 120,VIEW_TRANSACTIONS,train,core
+509,511,What is my available balance on 28 October?,CHECK_BALANCE,train,core
+510,512,Check the balance of our community group,VIEW_GROUP,train,core
+511,513,How much did i spend on market since monday,CHECK_SPENDING,train,stretch
+512,514,Bill pay water,BILL_PAY,train,core
+513,515,How much did i spend on food last month,CHECK_SPENDING,train,stretch
+514,516,Send $250 to Suli,TRANSFER_MONEY,train,core
+517,519,Check my Sole balance on 8 July,CHECK_BALANCE,train,core
+518,520,Put $20 in peni's wallet,TRANSFER_MONEY,train,core
+519,521,Display my wallet balance on 7 November,CHECK_BALANCE,train,core
+520,522,Did i spend more than $200 on restaurants,CHECK_SPENDING,train,stretch
+522,524,Display my wallet balance on 12 January,CHECK_BALANCE,train,core
+523,525,Save asha,MANAGE_CONTACTS,train,core
+524,526,Show payments to savenaca,VIEW_TRANSACTIONS,train,core
+530,532,Show group savings please,VIEW_GROUP,train,core
+531,533,Can you send 75 to mere,TRANSFER_MONEY,train,core
+532,534,Wanna pay my water,BILL_PAY,train,core
+533,535,Check my account balance,CHECK_BALANCE,train,core
+534,536,Is there 15 in my wallet in sole,CHECK_BALANCE,train,core
+535,537,Open school group,VIEW_GROUP,train,core
+536,538,Show payments to roshni,VIEW_TRANSACTIONS,train,core
+537,539,Show payments over 150,VIEW_TRANSACTIONS,train,core
+538,540,Show deposits in the last 30 days,VIEW_TRANSACTIONS,train,core
+539,541,I need to pay ben,TRANSFER_MONEY,train,core
+540,542,How much is in my sole wallet,CHECK_BALANCE,train,core
+541,543,Add ravi as recipient,MANAGE_CONTACTS,train,core
+542,544,Add litia to contacts,MANAGE_CONTACTS,train,core
+543,545,Remove Saki from my contacts,MANAGE_CONTACTS,train,core
+546,548,Biggest expense today,CHECK_SPENDING,train,stretch
+547,549,Can someone assist with an unrecognized charge?,HELP_SUPPORT,train,core
+549,551,How much did i spend on bills,CHECK_SPENDING,train,stretch
+550,552,I need help with a merchant payment issue,HELP_SUPPORT,train,core
+552,554,Is there $20 in my wallet,CHECK_BALANCE,train,core
+553,555,Pay litia 60,TRANSFER_MONEY,train,core
+554,556,Biggest expense last month,CHECK_SPENDING,train,stretch
+555,557,Who contributed to work on 28 November?,VIEW_GROUP,train,core
+556,558,Settle my telecom charges,BILL_PAY,train,core
+557,559,List my wallet transactions this week,VIEW_TRANSACTIONS,train,core
+558,560,Can someone assist with a blocked wallet?,HELP_SUPPORT,train,core
+559,561,Show my group savings for holiday,VIEW_GROUP,train,core
+560,562,Pay $200 to peni,TRANSFER_MONEY,train,core
+561,563,Where do I report a merchant payment issue?,HELP_SUPPORT,train,core
+563,565,Show transactions last month,VIEW_TRANSACTIONS,train,core
+564,566,Edit the saved details for Saki,MANAGE_CONTACTS,train,core
+567,569,How much cash is in Sole on 17 January?,CHECK_BALANCE,train,core
+568,570,Is there 30 in my wallet,CHECK_BALANCE,train,core
+569,571,List groups i belong to on the app,VIEW_GROUP,train,core
+570,572,View my transaction records,VIEW_TRANSACTIONS,train,core
+571,573,Calculate spending on mobile data,CHECK_SPENDING,train,stretch
+573,575,What is happening in my holiday savings group on 27 October?,VIEW_GROUP,train,core
+574,576,I have a telecom bill,BILL_PAY,train,core
+576,578,What payments did i make last month,VIEW_TRANSACTIONS,train,core
+578,580,Start cash out for 5,WITHDRAW_MONEY,train,core
+580,582,"I want to withdraw 1,000",WITHDRAW_MONEY,train,core
+581,583,Transaction history,VIEW_TRANSACTIONS,train,core
+582,584,Send 200 fiji dollars to kumar,TRANSFER_MONEY,train,core
+583,585,Find the $50 transfer,VIEW_TRANSACTIONS,train,core
+584,586,Please help resolve my account access,HELP_SUPPORT,train,core
+585,587,Please settle my internet provider invoice for $400,BILL_PAY,train,core
+587,589,Connect me to support about a merchant payment issue,HELP_SUPPORT,train,core
+588,590,Is sera saved,MANAGE_CONTACTS,train,core
+589,591,Show contributions to village group?,VIEW_GROUP,train,core
+590,592,Show payments to ben,VIEW_TRANSACTIONS,train,core
+592,594,Find a transaction from last month,VIEW_TRANSACTIONS,train,core
+593,595,Please help resolve a failed transfer,HELP_SUPPORT,train,core
+595,597,Find kumar in contacts,MANAGE_CONTACTS,train,core
+599,601,Show saved payees,MANAGE_CONTACTS,train,core
+600,602,Change saved contact adi,MANAGE_CONTACTS,train,core
+601,603,Put 30 in ben's wallet,TRANSFER_MONEY,train,core
+606,608,Save mika,MANAGE_CONTACTS,train,core
+608,610,Total expenses over the weekend,CHECK_SPENDING,train,stretch
+609,611,Can i withdraw 40,WITHDRAW_MONEY,train,core
+611,613,How much spent on school,CHECK_SPENDING,train,stretch
+612,614,Take $20 from my wallet,WITHDRAW_MONEY,train,core
+614,616,Is roshni saved,MANAGE_CONTACTS,train,core
+617,619,Pay mary 15,TRANSFER_MONEY,train,core
+619,621,How much did i spend on bills at the moment,CHECK_SPENDING,train,stretch
+621,623,My spending breakdown?,CHECK_SPENDING,train,stretch
+622,624,Show payments over 50,VIEW_TRANSACTIONS,train,core
+623,625,Wrong pin too many times,HELP_SUPPORT,train,core
+624,626,Forgot password? if possible,HELP_SUPPORT,train,core
+625,627,I need to take out 500,WITHDRAW_MONEY,train,core
+626,628,Get 150 cash,WITHDRAW_MONEY,train,core
+627,629,Help me pay water,BILL_PAY,train,core
+630,632,Where do I report an unrecognized charge?,HELP_SUPPORT,train,core
+631,633,Add mere as recipient,MANAGE_CONTACTS,train,core
+633,635,Show account activity,VIEW_TRANSACTIONS,train,core
+635,637,Add adi as recipient,MANAGE_CONTACTS,train,core
+636,638,Tell me my current balance on 20 June,CHECK_BALANCE,train,core
+640,642,Start a transfer for mika,TRANSFER_MONEY,train,core
+641,643,Group members,VIEW_GROUP,train,core
+643,645,I have a question regarding a failed transfer,HELP_SUPPORT,train,core
+644,646,Pay 10 to joeli,TRANSFER_MONEY,train,core
+646,648,Tell me how much I paid out on 23 July,CHECK_SPENDING,train,stretch
+647,649,Can you send $50 to john,TRANSFER_MONEY,train,core
+650,652,Withdraw from sole,WITHDRAW_MONEY,train,core
+651,653,Pay my mobile provider bill of $35,BILL_PAY,train,core
+652,654,Search contacts for tui,MANAGE_CONTACTS,train,core
+654,656,"Take 1,000 from my wallet",WITHDRAW_MONEY,train,core
+656,658,I need to take out 300,WITHDRAW_MONEY,train,core
+657,659,Can i withdraw 60,WITHDRAW_MONEY,train,core
+658,660,Take 200 from my wallet,WITHDRAW_MONEY,train,core
+659,661,Tell me my current balance quickly,CHECK_BALANCE,train,core
+660,662,Balance enquiry now,CHECK_BALANCE,train,core
+662,664,I need to take out 15,WITHDRAW_MONEY,train,core
+663,665,Report unauthorized transaction on my account,HELP_SUPPORT,train,core
+664,666,List transfers since monday,VIEW_TRANSACTIONS,train,core
+666,668,Transfer money to john,TRANSFER_MONEY,train,core
+667,669,How much did i spend on restaurants since monday?,CHECK_SPENDING,train,stretch
+668,670,How much did i spend on school last month?,CHECK_SPENDING,train,stretch
+670,672,Total expenses in the last 30 days,CHECK_SPENDING,train,stretch
+672,674,Give me the transaction list for on 11 September,VIEW_TRANSACTIONS,train,core
+673,675,How much spent on fuel,CHECK_SPENDING,train,stretch
+674,676,Start cash out for 30,WITHDRAW_MONEY,train,core
+675,677,Take 500 from my wallet,WITHDRAW_MONEY,train,core
+676,678,I have a water bill,BILL_PAY,train,core
+677,679,Give me the transaction list for on 20 October,VIEW_TRANSACTIONS,train,core
+678,680,Remove jone from contacts?,MANAGE_CONTACTS,train,core
+679,681,Settle my broadband charges,BILL_PAY,train,core
+680,682,Transfer money to savenaca,TRANSFER_MONEY,train,core
+681,683,Search contacts for savenaca,MANAGE_CONTACTS,train,core
+682,684,I have a Vodafone bill for $30,BILL_PAY,train,core
+683,685,Take 30 from my wallet,WITHDRAW_MONEY,train,core
+685,687,Find women's savings group,VIEW_GROUP,train,core
+686,688,Who contributed yesterday,VIEW_GROUP,train,core
+687,689,Send 5 fiji dollars to litia,TRANSFER_MONEY,train,core
+688,690,How much money is left at the moment,CHECK_BALANCE,train,core
+689,691,Who do i call for help asap,HELP_SUPPORT,train,core
+691,693,Find the 250 transfer,VIEW_TRANSACTIONS,train,core
+692,694,How much has my community group saved?,VIEW_GROUP,train,core
+693,695,Bill pay broadband,BILL_PAY,train,core
+694,696,Transfer money to asha,TRANSFER_MONEY,train,core
+696,698,I want to withdraw 100,WITHDRAW_MONEY,train,core
+697,699,Pay Niko $125 from my wallet,TRANSFER_MONEY,train,core
+699,701,Can i send john $200,TRANSFER_MONEY,train,core
+701,703,Make a transfer to ravi,TRANSFER_MONEY,train,core
+702,704,Find village group,VIEW_GROUP,train,core
+703,705,Settle mobile,BILL_PAY,train,core
+704,706,Search contacts for peni,MANAGE_CONTACTS,train,core
+705,707,List contributions in community on 10 February,VIEW_GROUP,train,core
+706,708,Biggest expense last week,CHECK_SPENDING,train,stretch
+707,709,I have a electricity provider bill for $25,BILL_PAY,train,core
+708,710,Find family group,VIEW_GROUP,train,core
+709,711,What payments did i make,VIEW_TRANSACTIONS,train,core
+710,712,Need to transfer 100 to raj?,TRANSFER_MONEY,train,core
+712,714,Start a transfer for kumar,TRANSFER_MONEY,train,core
+713,715,Can i withdraw 75,WITHDRAW_MONEY,train,core
+715,717,Display my wallet balance on 26 April,CHECK_BALANCE,train,core
+716,718,I need to take out 25,WITHDRAW_MONEY,train,core
+717,719,How much spent on food on the app,CHECK_SPENDING,train,stretch
+718,720,Is john saved,MANAGE_CONTACTS,train,core
+719,721,Can someone assist with a merchant payment issue?,HELP_SUPPORT,train,core
+720,722,Can I rename the contact Tui?,MANAGE_CONTACTS,train,core
+722,724,List transfers this week,VIEW_TRANSACTIONS,train,core
+723,725,Did i spend more than 5 on shopping,CHECK_SPENDING,train,stretch
+724,726,Create a contact for mary,MANAGE_CONTACTS,train,core
+725,727,How much did i spend on food,CHECK_SPENDING,train,stretch
+726,728,Help me withdraw 10,WITHDRAW_MONEY,train,core
+727,729,Total saved by family group,VIEW_GROUP,train,core
+729,731,Withdraw 25,WITHDRAW_MONEY,train,core
+732,734,I have a efl bill,BILL_PAY,train,core
+733,735,Bill pay telecom?,BILL_PAY,train,core
+737,739,Transfer money to joeli,TRANSFER_MONEY,train,core
+738,740,I forgot my pin now on my account,HELP_SUPPORT,train,core
+739,741,Show members of my village savings group,VIEW_GROUP,train,core
+740,742,Show payments to kumar,VIEW_TRANSACTIONS,train,core
+741,743,Who contributed to family on 17 September?,VIEW_GROUP,train,core
+742,744,How much spent on mobile data,CHECK_SPENDING,train,stretch
+743,745,Can i send mere $100,TRANSFER_MONEY,train,core
+744,746,Give me an expenditure breakdown on 2 April,CHECK_SPENDING,train,stretch
+745,747,Pay my broadband account,BILL_PAY,train,core
+746,748,Withdraw 50,WITHDRAW_MONEY,train,core
+748,750,Settle $110 owed to internet provider,BILL_PAY,train,core
+749,751,Show payments over 250,VIEW_TRANSACTIONS,train,core
+753,755,I have a internet bill,BILL_PAY,train,core
+754,756,Change saved contact tui,MANAGE_CONTACTS,train,core
+755,757,How much did i spend on shopping last month,CHECK_SPENDING,train,stretch
+756,758,Find holiday savings group,VIEW_GROUP,train,core
+757,759,Who contributed to holiday on 7 September?,VIEW_GROUP,train,core
+758,760,What did i spend last week,CHECK_SPENDING,train,stretch
+759,761,Is there 80 in my wallet this time,CHECK_BALANCE,train,core
+761,763,How much is in my sole wallet in sole,CHECK_BALANCE,train,core
+762,764,Show transactions since monday,VIEW_TRANSACTIONS,train,core
+763,765,Someone accessed my wallet,HELP_SUPPORT,train,core
+765,767,Start cash out for 10,WITHDRAW_MONEY,train,core
+766,768,Pay 150 for broadband,BILL_PAY,train,core
+767,769,How much spent on groceries,CHECK_SPENDING,train,stretch
+770,772,Put 200 in mary's wallet,TRANSFER_MONEY,train,core
+771,773,How much did i spend on restaurants,CHECK_SPENDING,train,stretch
+773,775,Open village group,VIEW_GROUP,train,core
+774,776,Pay my Vodafone bill of $220,BILL_PAY,train,core
+775,777,Contact support on the app,HELP_SUPPORT,train,core
+776,778,Send 25 from my wallet to mary,TRANSFER_MONEY,train,core
+777,779,How much did i spend on market last week,CHECK_SPENDING,train,stretch
+778,780,Calculate spending on restaurants?,CHECK_SPENDING,train,stretch
+780,782,Remove mere from contacts,MANAGE_CONTACTS,train,core
+781,783,I need to pay jone,TRANSFER_MONEY,train,core
+782,784,Show contributions to church group,VIEW_GROUP,train,core
+783,785,Start a transfer for peni,TRANSFER_MONEY,train,core
+784,786,Rename contact sera,MANAGE_CONTACTS,train,core
+785,787,Can you guide me on an agent deposit issue?,HELP_SUPPORT,train,core
+786,788,"Find the 1,000 transfer",VIEW_TRANSACTIONS,train,core
+787,789,Take out $20,WITHDRAW_MONEY,train,core
+788,790,Is there 200 in my wallet in sole,CHECK_BALANCE,train,core
+789,791,Add up utilities expenses,CHECK_SPENDING,train,stretch
+790,792,I need to pay asha,TRANSFER_MONEY,train,core
+791,793,Update raj's contact,MANAGE_CONTACTS,train,core
+792,794,Do I have money in my Sole wallet on 3 September?,CHECK_BALANCE,train,core
+793,795,Send 250 fiji dollars to litia,TRANSFER_MONEY,train,core
+794,796,What payments did I make on 28 June?,VIEW_TRANSACTIONS,train,core
+796,798,Put 40 in mary's wallet,TRANSFER_MONEY,train,core
+797,799,Remove adi from contacts,MANAGE_CONTACTS,train,core
+798,800,What funds do I have available on 19 August?,CHECK_BALANCE,train,core
+799,801,Send 30 to my friend savenaca,TRANSFER_MONEY,train,core
+800,802,Pay litia 10,TRANSFER_MONEY,train,core
+801,803,Search contacts for joeli,MANAGE_CONTACTS,train,core
+802,804,I want to withdraw 300,WITHDRAW_MONEY,train,core
+803,805,How do I withdraw 120 dollars?,WITHDRAW_MONEY,train,core
+804,806,Withdraw $200,WITHDRAW_MONEY,train,core
+805,807,Find the 5 transfer,VIEW_TRANSACTIONS,train,core
+807,809,Biggest expense last week this time,CHECK_SPENDING,train,stretch
+811,813,How much do i have,CHECK_BALANCE,train,core
+812,814,I want to withdraw $50,WITHDRAW_MONEY,train,core
+814,816,Which transactions happened on 17 August?,VIEW_TRANSACTIONS,train,core
+815,817,I need help with a failed transfer,HELP_SUPPORT,train,core
+817,819,Someone accessed my wallet if possible,HELP_SUPPORT,train,core
+818,820,Send 25 to my friend jone,TRANSFER_MONEY,train,core
+819,821,Send 75 fiji dollars to litia,TRANSFER_MONEY,train,core
+820,822,Rename contact roshni,MANAGE_CONTACTS,train,core
+823,825,Remove asha from contacts,MANAGE_CONTACTS,train,core
+824,826,Saved recipients,MANAGE_CONTACTS,train,core
+825,827,Show transactions in october,VIEW_TRANSACTIONS,train,core
+826,828,Remove peni from contacts,MANAGE_CONTACTS,train,core
+827,829,Can you send 30 to jone?,TRANSFER_MONEY,train,core
+828,830,Who contributed over the weekend?,VIEW_GROUP,train,core
+831,833,Transfer money to ana,TRANSFER_MONEY,train,core
+834,836,Show contributions to family group on the app,VIEW_GROUP,train,core
+835,837,Can i withdraw 5,WITHDRAW_MONEY,train,core
+836,838,Make a transfer to sera,TRANSFER_MONEY,train,core
+837,839,Find a transaction from,VIEW_TRANSACTIONS,train,core
+838,840,Take out 120,WITHDRAW_MONEY,train,core
+839,841,Is jone saved,MANAGE_CONTACTS,train,core
+841,843,How much is left in my wallet on 27 February?,CHECK_BALANCE,train,core
+842,844,Send 500 to my friend mere,TRANSFER_MONEY,train,core
+843,845,Show my saved contact Peni,MANAGE_CONTACTS,train,core
+844,846,Display my wallet balance on 27 February,CHECK_BALANCE,train,core
+845,847,Suspicious payment on sole,HELP_SUPPORT,train,core
+846,848,Get 20 cash,WITHDRAW_MONEY,train,core
+847,849,Can I cash out $20 today?,WITHDRAW_MONEY,train,core
+848,850,Find a transaction from in the last 30 days,VIEW_TRANSACTIONS,train,core
+850,852,Is kumar saved,MANAGE_CONTACTS,train,core
+851,853,Pay 20 for broadband,BILL_PAY,train,core
+853,855,How much cash is in Sole on 26 November?,CHECK_BALANCE,train,core
+854,856,Show last 10 transactions,VIEW_TRANSACTIONS,train,core
+855,857,Did i spend more than 20 on restaurants,CHECK_SPENDING,train,stretch
+856,858,My balance in sole,CHECK_BALANCE,train,core
+858,860,Send 40 to my friend peni,TRANSFER_MONEY,train,core
+860,862,Transfer 120 to joeli,TRANSFER_MONEY,train,core
+861,863,Update Josefa in my address book,MANAGE_CONTACTS,train,core
+862,864,Make a $150 bill payment to internet provider,BILL_PAY,train,core
+863,865,Pay school fees,BILL_PAY,train,core
+864,866,Report fraud if possible,HELP_SUPPORT,train,core
+865,867,Help me withdraw 120,WITHDRAW_MONEY,train,core
+866,868,Show members of my community savings group,VIEW_GROUP,train,core
+867,869,Show my group savings for church,VIEW_GROUP,train,core
+869,871,Is there 25 in my wallet on the app,CHECK_BALANCE,train,core
+873,875,Show the amount available to spend on 1 March,CHECK_BALANCE,train,core
+877,879,Create a contact for ana,MANAGE_CONTACTS,train,core
+878,880,Settle my waf charges,BILL_PAY,train,core
+880,882,Give me the transaction list for on 15 December,VIEW_TRANSACTIONS,train,core
+881,883,Update ana's contact,MANAGE_CONTACTS,train,core
+882,884,Show contributions to community group,VIEW_GROUP,train,core
+883,885,Process a $70 payment for water supplier,BILL_PAY,train,core
+884,886,Is there 300 in my wallet,CHECK_BALANCE,train,core
+886,888,Pay 120 to school fees,BILL_PAY,train,core
+888,890,Suspicious payment if possible,HELP_SUPPORT,train,core
+889,891,Withdraw 20,WITHDRAW_MONEY,train,core
+890,892,Group balance,VIEW_GROUP,train,core
+891,893,Show contributions to family group now,VIEW_GROUP,train,core
+892,894,Transfer failed please,HELP_SUPPORT,train,core
+893,895,Biggest expense in october?,CHECK_SPENDING,train,stretch
+894,896,Cash out $50,WITHDRAW_MONEY,train,core
+895,897,What funds do I have available on 7 December?,CHECK_BALANCE,train,core
+898,900,How much did i spend on mobile data,CHECK_SPENDING,train,stretch
+899,901,Remove kumar from contacts,MANAGE_CONTACTS,train,core
+900,902,Can i send savenaca 10,TRANSFER_MONEY,train,core
+901,903,Total saved by market vendors group,VIEW_GROUP,train,core
+903,905,How much spent on transport,CHECK_SPENDING,train,stretch
+908,910,Report fraud now,HELP_SUPPORT,train,core
+910,912,How much did i spend on fuel today,CHECK_SPENDING,train,stretch
+911,913,Send 100 from my wallet to adi,TRANSFER_MONEY,train,core
+912,914,Where do I report a delayed transaction?,HELP_SUPPORT,train,core
+913,915,Show transactions in the last 30 days,VIEW_TRANSACTIONS,train,core
+915,917,How much did i spend on fuel in october,CHECK_SPENDING,train,stretch
+916,918,List contributions in community on 26 January,VIEW_GROUP,train,core
+919,921,Process a $30 payment for mobile provider,BILL_PAY,train,core
+920,922,Take out $50,WITHDRAW_MONEY,train,core
+921,923,Show my saved contact Ana,MANAGE_CONTACTS,train,core
+924,926,Forgot password? now,HELP_SUPPORT,train,core
+925,927,Can i withdraw 100?,WITHDRAW_MONEY,train,core
+926,928,Need to transfer 40 to jone?,TRANSFER_MONEY,train,core
+927,929,Add Josefa to my recipients,MANAGE_CONTACTS,train,core
+928,930,Find a transaction from last month if possible,VIEW_TRANSACTIONS,train,core
+930,932,How much is left in my wallet on 11 February?,CHECK_BALANCE,train,core
+931,933,Total expenses last month,CHECK_SPENDING,train,stretch
+932,934,I need to take out 300 if possible,WITHDRAW_MONEY,train,core
+935,937,"Withdraw 1,000",WITHDRAW_MONEY,train,core
+936,938,Settle my electricity charges,BILL_PAY,train,core
+937,939,Where do I report an app login problem?,HELP_SUPPORT,train,core
+939,941,Can someone assist with an agent deposit issue?,HELP_SUPPORT,train,core
+942,944,I need help with a forgotten PIN,HELP_SUPPORT,train,core
+943,945,Send $100 fiji dollars to raj,TRANSFER_MONEY,train,core
+945,947,I forgot my pin on sole,HELP_SUPPORT,train,core
+947,949,I want to withdraw 5,WITHDRAW_MONEY,train,core
+948,950,I need to collect $250 in cash,WITHDRAW_MONEY,train,core
+949,951,Bill pay efl,BILL_PAY,train,core
+951,953,Delete priya as payee,MANAGE_CONTACTS,train,core
+953,955,I need to take out 20,WITHDRAW_MONEY,train,core
+955,957,Who contributed last month,VIEW_GROUP,train,core
+957,959,Wanna withdraw 10,WITHDRAW_MONEY,train,core
+958,960,Show incoming transfers on 28 August,VIEW_TRANSACTIONS,train,core
+960,962,Add up restaurants expenses,CHECK_SPENDING,train,stretch
+962,964,Someone accessed my wallet please,HELP_SUPPORT,train,core
+964,966,Help me withdraw $200,WITHDRAW_MONEY,train,core
+965,967,I need to collect $5 in cash,WITHDRAW_MONEY,train,core
+966,968,How much went out of my wallet on 10 July?,CHECK_SPENDING,train,stretch
+967,969,I would like support for a missing receipt,HELP_SUPPORT,train,core
+968,970,How much has my family group saved?,VIEW_GROUP,train,core
+969,971,Pay 500 for internet,BILL_PAY,train,core
+970,972,I need to pay savenaca,TRANSFER_MONEY,train,core
+972,974,Can you send 250 to tui,TRANSFER_MONEY,train,core
+973,975,Open community group,VIEW_GROUP,train,core
+974,976,Delete savenaca as payee,MANAGE_CONTACTS,train,core
+975,977,Check the balance of our village group,VIEW_GROUP,train,core
+976,978,Is there 100 in my wallet,CHECK_BALANCE,train,core
+977,979,Open my school group wallet,VIEW_GROUP,train,core
+978,980,Show incoming transfers on 5 December,VIEW_TRANSACTIONS,train,core
+979,981,Find community group?,VIEW_GROUP,train,core
+981,983,Is ravi saved?,MANAGE_CONTACTS,train,core
+982,984,How much is left in my wallet on 6 May?,CHECK_BALANCE,train,core
+983,985,How much did i spend on groceries last week,CHECK_SPENDING,train,stretch
+984,986,Did i spend more than 200 on fuel,CHECK_SPENDING,train,stretch
+985,987,Get 80 cash,WITHDRAW_MONEY,train,core
+987,989,Did i spend more than 120 on school,CHECK_SPENDING,train,stretch
+988,990,Who do i call for help now,HELP_SUPPORT,train,core
+989,991,I can't access my account asap,HELP_SUPPORT,train,core
+990,992,Check family group?,VIEW_GROUP,train,core
+991,993,Get 5 cash,WITHDRAW_MONEY,train,core
+992,994,Can you guide me on a merchant payment issue?,HELP_SUPPORT,train,core
+993,995,How much is in savings,CHECK_BALANCE,train,core
+994,996,Pay 150 dollars toward my Water Authority bill,BILL_PAY,train,core
+995,997,Show payments to ana,VIEW_TRANSACTIONS,train,core
+996,998,Withdraw 100,WITHDRAW_MONEY,train,core
+997,999,Search contacts for raj,MANAGE_CONTACTS,train,core
+998,1000,Open my work group wallet,VIEW_GROUP,train,core
+999,1001,Can i send raj 30,TRANSFER_MONEY,train,core
+1002,1004,Show the amount available to spend on 24 September,CHECK_BALANCE,train,core
+1003,1005,Add up market expenses,CHECK_SPENDING,train,stretch
+1004,1006,Display the church group account,VIEW_GROUP,train,core
+1005,1007,Can i withdraw $200,WITHDRAW_MONEY,train,core
+1006,1008,I need help with an unrecognized charge,HELP_SUPPORT,train,core
+1007,1009,Settle $175 owed to mobile provider,BILL_PAY,train,core
+1008,1010,How much cash is in Sole on 1 April?,CHECK_BALANCE,train,core
+1009,1011,Bill pay waf,BILL_PAY,train,core
+1010,1012,Did i spend more than 10 on fuel,CHECK_SPENDING,train,stretch
+1012,1014,Pay 200 to school fees,BILL_PAY,train,core
+1013,1015,Tell me my current balance on 17 June,CHECK_BALANCE,train,core
+1014,1016,Pay 75 to litia,TRANSFER_MONEY,train,core
+1015,1017,Where do I report identity verification?,HELP_SUPPORT,train,core
+1017,1019,Rename contact raj,MANAGE_CONTACTS,train,core
+1018,1020,Is there 120 in my wallet in sole,CHECK_BALANCE,train,core
+1019,1021,Total saved by work group in sole,VIEW_GROUP,train,core
+1022,1024,Process a $40 payment for Water Authority,BILL_PAY,train,core
+1025,1027,Display my latest transaction history on 16 July,VIEW_TRANSACTIONS,train,core
+1026,1028,Make a transfer to adi,TRANSFER_MONEY,train,core
+1027,1029,Find the 80 transfer?,VIEW_TRANSACTIONS,train,core
+1028,1030,Who contributed in october?,VIEW_GROUP,train,core
+1029,1031,Withdraw 30,WITHDRAW_MONEY,train,core
+1030,1032,Help me pay waf,BILL_PAY,train,core
+1031,1033,Withdraw cash,WITHDRAW_MONEY,train,core
+1032,1034,Can you send 60 to savenaca,TRANSFER_MONEY,train,core
+1033,1035,Can i withdraw 80,WITHDRAW_MONEY,train,core
+1034,1036,I need to pay litia,TRANSFER_MONEY,train,core
+1035,1037,Did i spend more than 50 on fuel,CHECK_SPENDING,train,stretch
+1036,1038,Is there 10 in my wallet,CHECK_BALANCE,train,core
+1037,1039,What is happening in my friends savings group on 16 June?,VIEW_GROUP,train,core
+1038,1040,Who contributed to village on 9 May?,VIEW_GROUP,train,core
+1039,1041,Did i spend more than 15 on transport,CHECK_SPENDING,train,stretch
+1041,1043,What is my available balance on 14 March?,CHECK_BALANCE,train,core
+1042,1044,Can you pay my internet provider account $45?,BILL_PAY,train,core
+1044,1046,What is my available balance on 23 August?,CHECK_BALANCE,train,core
+1045,1047,Contact support asap,HELP_SUPPORT,train,core
+1046,1048,Display the holiday group account,VIEW_GROUP,train,core
+1048,1050,My phone was stolen if possible,HELP_SUPPORT,train,core
+1049,1051,Transfer failed on sole,HELP_SUPPORT,train,core
+1051,1053,Update Ratu in my address book,MANAGE_CONTACTS,train,core
+1052,1054,Request a withdrawal of $80,WITHDRAW_MONEY,train,core
+1053,1055,Change saved contact savenaca,MANAGE_CONTACTS,train,core
+1056,1058,Total saved by school group?,VIEW_GROUP,train,core
+1057,1059,What is happening in my village savings group on 25 August?,VIEW_GROUP,train,core
+1060,1062,Find market vendors group,VIEW_GROUP,train,core
+1061,1063,Pay 10 dollars toward my electricity provider bill,BILL_PAY,train,core
+1062,1064,Tell me my current balance on 5 February,CHECK_BALANCE,train,core
+1063,1065,Can you send 10 to raj,TRANSFER_MONEY,train,core
+1064,1066,List contributions in church on 23 December,VIEW_GROUP,train,core
+1065,1067,How much cash is in Sole on 8 April?,CHECK_BALANCE,train,core
+1066,1068,Show my group savings for family,VIEW_GROUP,train,core
+1067,1069,See my balance if possible,CHECK_BALANCE,train,core
+1068,1070,How much can i spend please now,CHECK_BALANCE,train,core
+1069,1071,Find work group if possible,VIEW_GROUP,train,core
+1071,1073,Show group activity on the app,VIEW_GROUP,train,core
+1072,1074,Help me withdraw 20,WITHDRAW_MONEY,train,core
+1073,1075,Who contributed to holiday on 19 April?,VIEW_GROUP,train,core
+1074,1076,Show contributions to rugby club group,VIEW_GROUP,train,core
+1075,1077,Save tui,MANAGE_CONTACTS,train,core
+1076,1078,Display my wallet balance on 24 February,CHECK_BALANCE,train,core
+1077,1079,Settle $125 owed to Vodafone,BILL_PAY,train,core
+1078,1080,Pay 30 to school fees,BILL_PAY,train,core
+1081,1083,What funds do I have available on 15 April?,CHECK_BALANCE,train,core
+1083,1085,Help me pay water at the moment,BILL_PAY,train,core
+1084,1086,Show money received on 2 December,VIEW_TRANSACTIONS,train,core
+1085,1087,Add savenaca to contacts,MANAGE_CONTACTS,train,core
+1086,1088,What funds do I have available on 17 October?,CHECK_BALANCE,train,core
+1087,1089,What funds do I have available on 9 October?,CHECK_BALANCE,train,core
+1088,1090,I need help with identity verification,HELP_SUPPORT,train,core
+1089,1091,What is happening in my family savings group on 12 June?,VIEW_GROUP,train,core
+1090,1092,What did i spend this month,CHECK_SPENDING,train,stretch
+1091,1093,Compare my expenses for on 8 October,CHECK_SPENDING,train,stretch
+1092,1094,Change saved contact mere,MANAGE_CONTACTS,train,core
+1093,1095,What funds do I have available on 26 June?,CHECK_BALANCE,train,core
+1094,1096,Create a contact for tui,MANAGE_CONTACTS,train,core
+1096,1098,App keeps crashing? quickly,HELP_SUPPORT,train,core
+1097,1099,Pay the phone bill,BILL_PAY,train,core
+1098,1100,What payments did i make since monday?,VIEW_TRANSACTIONS,train,core
+1102,1104,Open my holiday group wallet,VIEW_GROUP,train,core
+1103,1105,Show withdrawals last month,VIEW_TRANSACTIONS,train,core
+1104,1106,Open my friends group wallet,VIEW_GROUP,train,core
+1105,1107,How much is left in my wallet on 19 July?,CHECK_BALANCE,train,core
+1106,1108,Show incoming transfers on 27 June,VIEW_TRANSACTIONS,train,core
+1107,1109,Pay mika 250,TRANSFER_MONEY,train,core
+1108,1110,How much did i spend on fuel since monday,CHECK_SPENDING,train,stretch
+1110,1112,Do I have money in my Sole wallet on 9 September?,CHECK_BALANCE,train,core
+1111,1113,Remove Josefa from my contacts,MANAGE_CONTACTS,train,core
+1112,1114,List transfers today,VIEW_TRANSACTIONS,train,core
+1114,1116,How much is left in my wallet on 4 September?,CHECK_BALANCE,train,core
+1118,1120,Did i spend more than 10 on groceries,CHECK_SPENDING,train,stretch
+1119,1121,How do I withdraw 75 dollars?,WITHDRAW_MONEY,train,core
+1121,1123,Delete recipient Priya,MANAGE_CONTACTS,train,core
+1122,1124,Send 50 to my friend mika,TRANSFER_MONEY,train,core
+1123,1125,Connect me to support about a delayed transaction,HELP_SUPPORT,train,core
+1124,1126,Take 250 from my wallet,WITHDRAW_MONEY,train,core
+1125,1127,Find the 100 transfer,VIEW_TRANSACTIONS,train,core
+1128,1130,Pay 15 for broadband,BILL_PAY,train,core
+1129,1131,How much has my school group saved?,VIEW_GROUP,train,core
+1131,1133,List my wallet transactions on 9 August,VIEW_TRANSACTIONS,train,core
+1132,1134,What is my available balance this week?,CHECK_BALANCE,train,core
+1133,1135,I need to speak to an agent about a blocked wallet,HELP_SUPPORT,train,core
+1136,1138,Send 60 to my friend litia,TRANSFER_MONEY,train,core
+1138,1140,Calculate spending on school,CHECK_SPENDING,train,stretch
+1139,1141,Is there 250 in my wallet on sole,CHECK_BALANCE,train,core
+1142,1144,What payments did i make yesterday,VIEW_TRANSACTIONS,train,core
+1143,1145,Who do i call for help at the moment,HELP_SUPPORT,train,core
+1144,1146,I want to pay my broadband,BILL_PAY,train,core
+1145,1147,Add roshni as recipient,MANAGE_CONTACTS,train,core
+1146,1148,Display my wallet balance on 3 August,CHECK_BALANCE,train,core
+1148,1150,Calculate spending on fuel at the moment,CHECK_SPENDING,train,stretch
+1149,1151,Create a contact for litia,MANAGE_CONTACTS,train,core
+1151,1153,Did i spend more than 5 on restaurants,CHECK_SPENDING,train,stretch
+1152,1154,Tell me my current balance on 25 February,CHECK_BALANCE,train,core
+1153,1155,Where do I report a missing receipt?,HELP_SUPPORT,train,core
+1154,1156,Help me pay electricity,BILL_PAY,train,core
+1155,1157,Open church group,VIEW_GROUP,train,core
+1157,1159,Find mika in contacts,MANAGE_CONTACTS,train,core
+1158,1160,Did i spend more than 5 on transport,CHECK_SPENDING,train,stretch
+1159,1161,Show transactions this month,VIEW_TRANSACTIONS,train,core
+1161,1163,Send 15 to my friend roshni,TRANSFER_MONEY,train,core
+1163,1165,Display the family group account,VIEW_GROUP,train,core
+1165,1167,Suspicious payment please,HELP_SUPPORT,train,core
+1166,1168,Need to transfer 25 to ana,TRANSFER_MONEY,train,core
+1167,1169,Display my wallet balance on 24 October,CHECK_BALANCE,train,core
+1168,1170,App keeps crashing on sole,HELP_SUPPORT,train,core
+1169,1171,Rename contact peni,MANAGE_CONTACTS,train,core
+1170,1172,Who contributed to community on 4 January?,VIEW_GROUP,train,core
+1171,1173,Where do I report an incorrect payment?,HELP_SUPPORT,train,core
+1172,1174,How much is left in my wallet on 3 January?,CHECK_BALANCE,train,core
+1173,1175,Compare my expenses for on 1 October,CHECK_SPENDING,train,stretch
+1174,1176,I can't access my account in sole,HELP_SUPPORT,train,core
+1175,1177,How much has my friends group saved?,VIEW_GROUP,train,core
+1176,1178,Make a $400 bill payment to Water Authority,BILL_PAY,train,core
+1178,1180,Transfer failed now,HELP_SUPPORT,train,core
+1180,1182,Withdraw $100,WITHDRAW_MONEY,train,core
+1181,1183,Transfer money to adi,TRANSFER_MONEY,train,core
+1182,1184,Bill pay phone,BILL_PAY,train,core
+1184,1186,Compare my expenses for on 27 July,CHECK_SPENDING,train,stretch
+1185,1187,Settle $50 owed to Water Authority,BILL_PAY,train,core
+1187,1189,Pay tui $100,TRANSFER_MONEY,train,core
+1188,1190,See my balance on the app,CHECK_BALANCE,train,core
+1189,1191,Can't log in,HELP_SUPPORT,train,core
+1190,1192,Show withdrawals in october,VIEW_TRANSACTIONS,train,core
+1192,1194,Pay 65 dollars toward my electricity provider bill,BILL_PAY,train,core
+1197,1199,Check my Sole balance on 22 August,CHECK_BALANCE,train,core
+1198,1200,Search contacts for ben,MANAGE_CONTACTS,train,core
+1200,1202,I need to take out 200,WITHDRAW_MONEY,train,core
+1201,1203,Show money received on 20 July,VIEW_TRANSACTIONS,train,core
+1202,1204,Make a $45 bill payment to EFL,BILL_PAY,train,core
+1204,1206,Remove joeli from contacts,MANAGE_CONTACTS,train,core
+1207,1209,Save adi,MANAGE_CONTACTS,train,core
+1208,1210,How much did i spend on restaurants in the last 30 days,CHECK_SPENDING,train,stretch
+1209,1211,Send 10 fiji dollars to roshni,TRANSFER_MONEY,train,core
+1211,1213,Is there 30 in my wallet quickly,CHECK_BALANCE,train,core
+1212,1214,Pay 5 to waf,BILL_PAY,train,core
+1213,1215,Help me withdraw $50,WITHDRAW_MONEY,train,core
+1214,1216,Start cash out for $100,WITHDRAW_MONEY,train,core
+1215,1217,Put 15 in ana's wallet,TRANSFER_MONEY,train,core
+1216,1218,Did i spend more than 300 on food,CHECK_SPENDING,train,stretch
+1217,1219,Show withdrawals this week,VIEW_TRANSACTIONS,train,core
+1218,1220,Show contributions to work group,VIEW_GROUP,train,core
+1219,1221,How much cash is in Sole on 19 December?,CHECK_BALANCE,train,core
+1220,1222,Process a $80 payment for mobile provider,BILL_PAY,train,core
+1221,1223,Send money to adi,TRANSFER_MONEY,train,core
+1224,1226,App keeps crashing? now,HELP_SUPPORT,train,core
+1225,1227,Delete adi as payee,MANAGE_CONTACTS,train,core
+1226,1228,Find ravi in contacts,MANAGE_CONTACTS,train,core
+1227,1229,Find the 200 transfer,VIEW_TRANSACTIONS,train,core
+1228,1230,How much is left in my wallet on 12 May?,CHECK_BALANCE,train,core
+1229,1231,Give me an expenditure breakdown on 20 September,CHECK_SPENDING,train,stretch
+1230,1232,What is happening in my friends savings group on 19 October?,VIEW_GROUP,train,core
+1232,1234,How much spent at restaurants,CHECK_SPENDING,train,stretch
+1234,1236,Add adi to contacts,MANAGE_CONTACTS,train,core
+1235,1237,What payments did i make in the last 30 days,VIEW_TRANSACTIONS,train,core
+1236,1238,Is there 10 in my wallet on my account,CHECK_BALANCE,train,core
+1238,1240,Connect me to support about my account access,HELP_SUPPORT,train,core
+1239,1241,"Did i spend more than 1,000 on utilities",CHECK_SPENDING,train,stretch
+1240,1242,View wallet activity,VIEW_TRANSACTIONS,train,core
+1241,1243,Send money to ben,TRANSFER_MONEY,train,core
+1242,1244,Pay 120 for mobile,BILL_PAY,train,core
+1243,1245,Check the balance of our holiday group,VIEW_GROUP,train,core
+1244,1246,Pay $50 to joeli,TRANSFER_MONEY,train,core
+1246,1248,I need to take out 150,WITHDRAW_MONEY,train,core
+1247,1249,Total saved by church group,VIEW_GROUP,train,core
+1248,1250,Total saved by community group,VIEW_GROUP,train,core
+1251,1253,Show payments to raj,VIEW_TRANSACTIONS,train,core
+1252,1254,Can't log in now,HELP_SUPPORT,train,core
+1253,1255,Remove litia from contacts,MANAGE_CONTACTS,train,core
+1254,1256,Open family group,VIEW_GROUP,train,core
+1255,1257,Put 120 in mere's wallet,TRANSFER_MONEY,train,core
+1256,1258,Give me an expense summary on the app,CHECK_SPENDING,train,stretch
+1257,1259,Did i spend more than 15 on shopping,CHECK_SPENDING,train,stretch
+1258,1260,What is happening in my community savings group on 24 July?,VIEW_GROUP,train,core
+1260,1262,Report fraud on sole,HELP_SUPPORT,train,core
+1262,1264,Cash out 150,WITHDRAW_MONEY,train,core
+1263,1265,Who contributed this month,VIEW_GROUP,train,core
+1264,1266,Request a withdrawal of $70,WITHDRAW_MONEY,train,core
+1266,1268,I want to pay my mobile,BILL_PAY,train,core
+1267,1269,Biggest expense over the weekend at the moment,CHECK_SPENDING,train,stretch
+1269,1271,Pay the school fees bill,BILL_PAY,train,core
+1270,1272,Add john as recipient,MANAGE_CONTACTS,train,core
+1271,1273,Pay ana 5,TRANSFER_MONEY,train,core
+1272,1274,I have a question regarding my account access,HELP_SUPPORT,train,core
+1273,1275,How much is left in my wallet on 17 April?,CHECK_BALANCE,train,core
+1274,1276,How can I get assistance with a forgotten PIN?,HELP_SUPPORT,train,core
+1275,1277,I would like support for an account error,HELP_SUPPORT,train,core
+1276,1278,Add up bills expenses,CHECK_SPENDING,train,stretch
+1278,1280,Group balance on the app,VIEW_GROUP,train,core
+1279,1281,"Is there 1,000 in my wallet",CHECK_BALANCE,train,core
+1280,1282,Summarize purchases on 13 February,CHECK_SPENDING,train,stretch
+1281,1283,What is my available balance on 2 March?,CHECK_BALANCE,train,core
+1282,1284,Is there 25 in my wallet if possible,CHECK_BALANCE,train,core
+1283,1285,Help me withdraw 250,WITHDRAW_MONEY,train,core
+1284,1286,Find raj in contacts,MANAGE_CONTACTS,train,core
+1286,1288,Add up school expenses,CHECK_SPENDING,train,stretch
+1287,1289,Total saved by holiday savings group?,VIEW_GROUP,train,core
+1289,1291,Can you guide me on a locked account?,HELP_SUPPORT,train,core
+1290,1292,Need to transfer 80 to ravi,TRANSFER_MONEY,train,core
+1291,1293,App keeps crashing now,HELP_SUPPORT,train,core
+1293,1295,How much did I spend on 1 March?,CHECK_SPENDING,train,stretch
+1294,1296,Withdraw 5,WITHDRAW_MONEY,train,core
+1296,1298,Did i spend more than 25 on bills,CHECK_SPENDING,train,stretch
+1298,1300,Check rugby club group,VIEW_GROUP,train,core
+1299,1301,Settle efl,BILL_PAY,train,core
+1302,1304,Who contributed to school on 12 November?,VIEW_GROUP,train,core
+1303,1305,App keeps crashing? on sole,HELP_SUPPORT,train,core
+1304,1306,Pay 300 to water,BILL_PAY,train,core
+1305,1307,I need to take out 120,WITHDRAW_MONEY,train,core
+1307,1309,What payments did I make on 11 April?,VIEW_TRANSACTIONS,train,core
+1309,1311,Find the 40 transfer,VIEW_TRANSACTIONS,train,core
+1311,1313,Pay 150 dollars toward my internet provider bill,BILL_PAY,train,core
+1312,1314,I need to speak to an agent about updating my phone number,HELP_SUPPORT,train,core
+1313,1315,Transfer 500 dollars to Ravi,TRANSFER_MONEY,train,core
+1315,1317,Find Joeli in my recipient list,MANAGE_CONTACTS,train,core
+1316,1318,Can you pay my Water Authority account $70?,BILL_PAY,train,core
+1318,1320,Create a contact for ravi,MANAGE_CONTACTS,train,core
+1319,1321,Create a contact for priya,MANAGE_CONTACTS,train,core
+1320,1322,Did i spend more than 60 on fuel,CHECK_SPENDING,train,stretch
+1322,1324,Find the 25 transfer,VIEW_TRANSACTIONS,train,core
+1323,1325,I have a question regarding updating my phone number,HELP_SUPPORT,train,core
+1324,1326,Compare my expenses for on 21 October,CHECK_SPENDING,train,stretch
+1325,1327,How much did i spend on utilities since monday,CHECK_SPENDING,train,stretch
+1328,1330,Show the amount available to spend on 27 August,CHECK_BALANCE,train,core
+1330,1332,What funds do I have available on 16 October?,CHECK_BALANCE,train,core
+1331,1333,Take out 15 on my account,WITHDRAW_MONEY,train,core
+1332,1334,Is there 250 in my wallet at the moment,CHECK_BALANCE,train,core
+1335,1337,Contact support please at the moment,HELP_SUPPORT,train,core
+1337,1339,I need to speak to an agent about a missing receipt,HELP_SUPPORT,train,core
+1338,1340,Show transactions over the weekend,VIEW_TRANSACTIONS,train,core
+1339,1341,Suspicious payment asap,HELP_SUPPORT,train,core
+1340,1342,Help me withdraw 75,WITHDRAW_MONEY,train,core
+1341,1343,Help me take out 20 dollars,WITHDRAW_MONEY,train,core
+1342,1344,Can you check my account balance on 26 January?,CHECK_BALANCE,train,core
+1343,1345,App keeps crashing please quickly,HELP_SUPPORT,train,core
+1346,1348,Did i spend more than 40 on school,CHECK_SPENDING,train,stretch
+1347,1349,Send $100 from my wallet to kumar,TRANSFER_MONEY,train,core
+1348,1350,Open my family group wallet,VIEW_GROUP,train,core
+1349,1351,Forgot password in sole,HELP_SUPPORT,train,core
+1350,1352,Show outgoing payments on 3 January,VIEW_TRANSACTIONS,train,core
+1351,1353,Check village group,VIEW_GROUP,train,core
+1352,1354,Take 50 from my wallet,WITHDRAW_MONEY,train,core
+1353,1355,Report fraud quickly,HELP_SUPPORT,train,core
+1354,1356,Show my group savings for work,VIEW_GROUP,train,core
+1355,1357,Save ana,MANAGE_CONTACTS,train,core
+1356,1358,Pay 300 for electricity,BILL_PAY,train,core
+1358,1360,Contact support if possible,HELP_SUPPORT,train,core
+1359,1361,Can someone assist with a forgotten PIN?,HELP_SUPPORT,train,core
+1360,1362,Send 25 fiji dollars to sera,TRANSFER_MONEY,train,core
+1361,1363,Check women's savings group,VIEW_GROUP,train,core
+1362,1364,How much did i spend on mobile data this month,CHECK_SPENDING,train,stretch
+1363,1365,Help me withdraw 500,WITHDRAW_MONEY,train,core
+1364,1366,Is there 5 in my wallet if possible,CHECK_BALANCE,train,core
+1366,1368,Who contributed?,VIEW_GROUP,train,core
+1367,1369,Take $50 from my wallet,WITHDRAW_MONEY,train,core
+1368,1370,Find the 300 transfer,VIEW_TRANSACTIONS,train,core
+1370,1372,Transfer funds to peni,TRANSFER_MONEY,train,core
+1371,1373,Transfer 120 to ravi,TRANSFER_MONEY,train,core
+1373,1375,Start cash out for 200,WITHDRAW_MONEY,train,core
+1374,1376,What is my available balance on 12 May?,CHECK_BALANCE,train,core
+1375,1377,Take out 200,WITHDRAW_MONEY,train,core
+1376,1378,Transfer 40 to joeli,TRANSFER_MONEY,train,core
+1381,1383,Add kumar as recipient,MANAGE_CONTACTS,train,core
+1382,1384,Did i spend more than 50 on food,CHECK_SPENDING,train,stretch
+1383,1385,Show the amount available to spend on 15 January,CHECK_BALANCE,train,core
+1384,1386,View our work group activity on 15 July,VIEW_GROUP,train,core
+1385,1387,I need to take out $200,WITHDRAW_MONEY,train,core
+1386,1388,Show contributions to work group this time,VIEW_GROUP,train,core
+1387,1389,Show contributions to women's savings group,VIEW_GROUP,train,core
+1388,1390,Help me pay mobile,BILL_PAY,train,core
+1390,1392,Calculate spending on shopping,CHECK_SPENDING,train,stretch
+1391,1393,Give me an expenditure breakdown on 14 May,CHECK_SPENDING,train,stretch
+1392,1394,Show payments to adi,VIEW_TRANSACTIONS,train,core
+1393,1395,Show members of my work savings group,VIEW_GROUP,train,core
+1394,1396,Send 250 to my friend peni,TRANSFER_MONEY,train,core
+1395,1397,Can someone assist with updating my phone number?,HELP_SUPPORT,train,core
+1396,1398,Check my Sole balance on 12 September,CHECK_BALANCE,train,core
+1397,1399,Show the amount available to spend on 22 September,CHECK_BALANCE,train,core
+1399,1401,"Is there 1,000 in my wallet this time",CHECK_BALANCE,train,core
+1400,1402,Is there 250 in my wallet please,CHECK_BALANCE,train,core
+1401,1403,Help me pay efl,BILL_PAY,train,core
+1403,1405,I forgot my pin quickly,HELP_SUPPORT,train,core
+1404,1406,Show deposits over the weekend on the app,VIEW_TRANSACTIONS,train,core
+1406,1408,Show deposits last week,VIEW_TRANSACTIONS,train,core
+1407,1409,Save ben,MANAGE_CONTACTS,train,core
+1409,1411,Tell me how much I paid out on 27 March,CHECK_SPENDING,train,stretch
+1410,1412,Can you send 500 to ana,TRANSFER_MONEY,train,core
+1411,1413,Send 15 to my friend asha,TRANSFER_MONEY,train,core
+1414,1416,I want to cash out 300 dollars,WITHDRAW_MONEY,train,core
+1415,1417,Pay $200 for mobile,BILL_PAY,train,core
+1416,1418,Please settle my Vodafone invoice for $12,BILL_PAY,train,core
+1417,1419,I can't access my account asap in sole,HELP_SUPPORT,train,core
+1419,1421,Transfer funds to roshni,TRANSFER_MONEY,train,core
+1420,1422,Pay mobile,BILL_PAY,train,core
+1421,1423,Pay 80 to efl,BILL_PAY,train,core
+1424,1426,What is happening in my village savings group on 21 July?,VIEW_GROUP,train,core
+1425,1427,Did i spend more than 20 on groceries,CHECK_SPENDING,train,stretch
+1426,1428,Take $200 from my wallet,WITHDRAW_MONEY,train,core
+1427,1429,Bill pay internet,BILL_PAY,train,core
+1428,1430,Account balance,CHECK_BALANCE,train,core
+1429,1431,Total expenses in october,CHECK_SPENDING,train,stretch
+1430,1432,Update joeli's contact,MANAGE_CONTACTS,train,core
+1432,1434,Make a transfer to raj,TRANSFER_MONEY,train,core
+1434,1436,Is there 5 in my wallet please,CHECK_BALANCE,train,core
+1435,1437,Add up groceries expenses,CHECK_SPENDING,train,stretch
+1436,1438,What is happening in my family savings group on 13 December?,VIEW_GROUP,train,core
+1437,1439,Tell me my current balance on 18 August,CHECK_BALANCE,train,core
+1438,1440,What funds do I have available on 6 May?,CHECK_BALANCE,train,core
+1439,1441,Create a contact for sera,MANAGE_CONTACTS,train,core
+1440,1442,Transfer money to sera,TRANSFER_MONEY,train,core
+1441,1443,List contributions in village on 3 March,VIEW_GROUP,train,core
+1442,1444,Spending this month in sole,CHECK_SPENDING,train,stretch
+1443,1445,Show my groups,VIEW_GROUP,train,core
+1444,1446,Can you guide me on identity verification?,HELP_SUPPORT,train,core
+1445,1447,"I need to take out 1,000",WITHDRAW_MONEY,train,core
+1446,1448,Search contacts for mere,MANAGE_CONTACTS,train,core
+1447,1449,Did i spend more than $20 on bills,CHECK_SPENDING,train,stretch
+1448,1450,I need help with a delayed transaction,HELP_SUPPORT,train,core
+1450,1452,Open rugby club group,VIEW_GROUP,train,core
+1452,1454,Can you send 50 to ana,TRANSFER_MONEY,train,core
+1453,1455,Payment not working quickly,HELP_SUPPORT,train,core
+1454,1456,Check my Sole balance on 11 November,CHECK_BALANCE,train,core
+1457,1459,Find school group,VIEW_GROUP,train,core
+1458,1460,How do i unlock my account in sole,HELP_SUPPORT,train,core
+1459,1461,What is happening in my friends savings group on 24 August?,VIEW_GROUP,train,core
+1460,1462,Show money received on 9 July,VIEW_TRANSACTIONS,train,core
+1462,1464,Show money received on 28 March,VIEW_TRANSACTIONS,train,core
+1463,1465,How can I get assistance with a locked account?,HELP_SUPPORT,train,core
+1466,1468,Display the friends group account,VIEW_GROUP,train,core
+1467,1469,Make a water payment,BILL_PAY,train,core
+1468,1470,How can I get assistance with an app login problem?,HELP_SUPPORT,train,core
+1469,1471,I want to send 15 to peni,TRANSFER_MONEY,train,core
+1470,1472,Show payments to john,VIEW_TRANSACTIONS,train,core
+1472,1474,Display my wallet balance on 21 August,CHECK_BALANCE,train,core
+1473,1475,Did i spend more than 200 on shopping,CHECK_SPENDING,train,stretch
+1476,1478,List contributions in school on 10 October,VIEW_GROUP,train,core
+1477,1479,Who contributed to family on 9 September?,VIEW_GROUP,train,core
+1480,1482,Is there $200 in my wallet if possible,CHECK_BALANCE,train,core
+1483,1485,I forgot my pin right now at the moment,HELP_SUPPORT,train,core
+1485,1487,Calculate spending on transport,CHECK_SPENDING,train,stretch
+1486,1488,Help me pay phone,BILL_PAY,train,core
+1487,1489,Need to transfer 75 to jone,TRANSFER_MONEY,train,core
+1488,1490,Transfer funds to priya,TRANSFER_MONEY,train,core
+1492,1494,List contributions in village on 13 January,VIEW_GROUP,train,core
+1494,1496,Who contributed to friends on 6 August?,VIEW_GROUP,train,core
+1496,1498,Show withdrawals over the weekend,VIEW_TRANSACTIONS,train,core
+1497,1499,I want to send 75 to jone,TRANSFER_MONEY,train,core
+1499,1501,Show deposits,VIEW_TRANSACTIONS,train,core
+1500,1502,How much has my holiday group saved?,VIEW_GROUP,train,core
+1501,1503,Can someone assist with an app login problem?,HELP_SUPPORT,train,core
+1502,1504,Show withdrawals this month,VIEW_TRANSACTIONS,train,core
+1508,1510,Send money to priya,TRANSFER_MONEY,train,core
+1509,1511,Show payments over 10,VIEW_TRANSACTIONS,train,core
+1510,1512,Did ana send me money,VIEW_TRANSACTIONS,train,core
+1511,1513,Search contacts for roshni,MANAGE_CONTACTS,train,core
+1512,1514,Show incoming transfers on 21 November,VIEW_TRANSACTIONS,train,core
+1513,1515,Show group savings at the moment,VIEW_GROUP,train,core
+1514,1516,How much has my work group saved?,VIEW_GROUP,train,core
+1517,1519,How much money have i got at the moment,CHECK_BALANCE,train,core
+1518,1520,Pay 20 to jone,TRANSFER_MONEY,train,core
+1520,1522,Settle waf,BILL_PAY,train,core
+1521,1523,Show outgoing payments on 21 November,VIEW_TRANSACTIONS,train,core
+1522,1524,Can you guide me on a blocked wallet?,HELP_SUPPORT,train,core
+1524,1526,Start a transfer for mere,TRANSFER_MONEY,train,core
+1525,1527,Is there 300 in my wallet quickly,CHECK_BALANCE,train,core
+1526,1528,What is my available balance on 20 May?,CHECK_BALANCE,train,core
+1527,1529,Review my account activity on 13 October,VIEW_TRANSACTIONS,train,core
+1528,1530,Add tui to contacts,MANAGE_CONTACTS,train,core
+1530,1532,Help me withdraw 25,WITHDRAW_MONEY,train,core
+1532,1534,What did i spend over the weekend,CHECK_SPENDING,train,stretch
+1533,1535,Biggest expense in the last 30 days this time,CHECK_SPENDING,train,stretch
+1534,1536,I need help with an incorrect payment,HELP_SUPPORT,train,core
+1535,1537,Biggest expense this month,CHECK_SPENDING,train,stretch
+1539,1541,Find priya in contacts,MANAGE_CONTACTS,train,core
+1540,1542,Show spending by category on 14 June,CHECK_SPENDING,train,stretch
+1541,1543,"I want to withdraw 1,000 this time",WITHDRAW_MONEY,train,core
+1542,1544,I need to take out $50,WITHDRAW_MONEY,train,core
+1543,1545,Can you guide me on updating my phone number?,HELP_SUPPORT,train,core
+1544,1546,Tell me how much I paid out on 8 February,CHECK_SPENDING,train,stretch
+1545,1547,My contacts?,MANAGE_CONTACTS,train,core
+1546,1548,Pay ana 50,TRANSFER_MONEY,train,core
+1547,1549,Take 20 from my wallet,WITHDRAW_MONEY,train,core
+1548,1550,Send 40 fiji dollars to adi,TRANSFER_MONEY,train,core
+1549,1551,List contributions in family on 13 December,VIEW_GROUP,train,core
+1551,1553,Find the 75 transfer,VIEW_TRANSACTIONS,train,core
+1552,1554,Find rugby club group,VIEW_GROUP,train,core
+1553,1555,Process a $100 payment for water supplier,BILL_PAY,train,core
+1554,1556,Who contributed to work on 11 October?,VIEW_GROUP,train,core
+1555,1557,"Get 1,000 cash",WITHDRAW_MONEY,train,core
+1556,1558,Pay the internet bill,BILL_PAY,train,core
+1557,1559,What funds do I have available on 28 January?,CHECK_BALANCE,train,core
+1558,1560,Transfer 500 to tui,TRANSFER_MONEY,train,core
+1559,1561,Is there 50 in my wallet if possible,CHECK_BALANCE,train,core
+1561,1563,Open the saved recipient entry for Joeli,MANAGE_CONTACTS,train,core
+1562,1564,Calculate spending on groceries,CHECK_SPENDING,train,stretch
+1563,1565,Save Roshni as a payment contact,MANAGE_CONTACTS,train,core
+1564,1566,Show balance,CHECK_BALANCE,train,core
+1565,1567,Change saved contact ravi,MANAGE_CONTACTS,train,core
+1566,1568,Help me pay $30 to internet provider,BILL_PAY,train,core
+1568,1570,Show spending by category on 9 July,CHECK_SPENDING,train,stretch
+1569,1571,Who contributed to family on 22 December?,VIEW_GROUP,train,core
+1572,1574,Pay 250 to electricity,BILL_PAY,train,core
+1573,1575,Show payments over $100,VIEW_TRANSACTIONS,train,core
+1574,1576,Summarize purchases on 5 November,CHECK_SPENDING,train,stretch
+1575,1577,Settle electricity,BILL_PAY,train,core
+1577,1579,Edit the saved details for Kumar,MANAGE_CONTACTS,train,core
+1578,1580,What funds do I have available on 24 August?,CHECK_BALANCE,train,core
+1580,1582,Help me pay $75 to mobile provider,BILL_PAY,train,core
+1581,1583,Who do i call for help if possible,HELP_SUPPORT,train,core
+1582,1584,Did savenaca send me money,VIEW_TRANSACTIONS,train,core
+1583,1585,How much spent on restaurants?,CHECK_SPENDING,train,stretch
+1586,1588,Start a transfer for adi,TRANSFER_MONEY,train,core
+1587,1589,How much did i spend on utilities this month,CHECK_SPENDING,train,stretch
+1588,1590,Report fraud on the app,HELP_SUPPORT,train,core
+1591,1593,Where do I report an account error?,HELP_SUPPORT,train,core
+1593,1595,Withdraw 300,WITHDRAW_MONEY,train,core
+1594,1596,Remove ben from contacts,MANAGE_CONTACTS,train,core
+1595,1597,Pay electricity,BILL_PAY,train,core
+1597,1599,Start a cash withdrawal for $150,WITHDRAW_MONEY,train,core
+1598,1600,Review my account activity on 24 May,VIEW_TRANSACTIONS,train,core
+1600,1602,Show members of my church savings group,VIEW_GROUP,train,core
+1601,1603,Open the saved recipient entry for Jone,MANAGE_CONTACTS,train,core
+1606,1608,Send 40 fiji dollars to ana,TRANSFER_MONEY,train,core
+1607,1609,Who contributed to family on 3 June?,VIEW_GROUP,train,core
+1608,1610,Get 15 cash?,WITHDRAW_MONEY,train,core
+1611,1613,Pay 250 to water,BILL_PAY,train,core
+1612,1614,Tell me my current balance please this time,CHECK_BALANCE,train,core
+1613,1615,Is there 80 in my wallet at the moment,CHECK_BALANCE,train,core
+1614,1616,Add kumar to contacts,MANAGE_CONTACTS,train,core
+1615,1617,See group balance if possible,VIEW_GROUP,train,core
+1619,1621,Help me take out 70 dollars,WITHDRAW_MONEY,train,core
+1621,1623,Start cash out for $50,WITHDRAW_MONEY,train,core
+1622,1624,Bill pay school fees,BILL_PAY,train,core
+1623,1625,Did mere send me money,VIEW_TRANSACTIONS,train,core
+1624,1626,View our community group activity on 18 October,VIEW_GROUP,train,core
+1625,1627,I need to speak to an agent about a delayed transaction,HELP_SUPPORT,train,core
+1626,1628,I want to withdraw 80,WITHDRAW_MONEY,train,core
+1628,1630,Add Samu to my recipients,MANAGE_CONTACTS,train,core
+1629,1631,Give me an expenditure breakdown on 5 May,CHECK_SPENDING,train,stretch
+1630,1632,Group details if possible,VIEW_GROUP,train,core
+1631,1633,Do I have money in my Sole wallet on 2 October?,CHECK_BALANCE,train,core
+1634,1636,How much did i spend on school in october,CHECK_SPENDING,train,stretch
+1635,1637,Who contributed to holiday on 12 September?,VIEW_GROUP,train,core
+1636,1638,Start cash out for 300,WITHDRAW_MONEY,train,core
+1637,1639,Did litia send me money,VIEW_TRANSACTIONS,train,core
+1638,1640,Forgot password now,HELP_SUPPORT,train,core
+1639,1641,Cash out 40,WITHDRAW_MONEY,train,core
+1641,1643,Is there 120 in my wallet this time,CHECK_BALANCE,train,core
+1643,1645,Can i send litia $20,TRANSFER_MONEY,train,core
+1644,1646,How can I get assistance with a missing receipt?,HELP_SUPPORT,train,core
+1646,1648,Save Ravi as a payment contact,MANAGE_CONTACTS,train,core
+1648,1650,Pay the broadband bill,BILL_PAY,train,core
+1649,1651,Pay my Water Authority bill of $175,BILL_PAY,train,core
+1650,1652,Pay the mobile bill,BILL_PAY,train,core
+1651,1653,List contributions in community on 25 July,VIEW_GROUP,train,core
+1652,1654,Take $20 from my wallet this time,WITHDRAW_MONEY,train,core
+1655,1657,Start cash out for 150,WITHDRAW_MONEY,train,core
+1656,1658,Need to transfer 25 to jone,TRANSFER_MONEY,train,core
+1657,1659,Display the school group account,VIEW_GROUP,train,core
+1658,1660,How much cash is in Sole on 27 May?,CHECK_BALANCE,train,core
+1659,1661,Delete recipient Kumar,MANAGE_CONTACTS,train,core
+1660,1662,Can i send mere 250,TRANSFER_MONEY,train,core
+1661,1663,Compare my expenses for on 9 July,CHECK_SPENDING,train,stretch
+1663,1665,Did i spend more than 250 on transport quickly,CHECK_SPENDING,train,stretch
+1664,1666,Edit the saved details for Mika,MANAGE_CONTACTS,train,core
+1668,1670,Do I have money in my Sole wallet on 11 July?,CHECK_BALANCE,train,core
+1669,1671,Remove mary from contacts,MANAGE_CONTACTS,train,core
+1670,1672,Rename contact tui,MANAGE_CONTACTS,train,core
+1671,1673,Add up fuel expenses,CHECK_SPENDING,train,stretch
+1672,1674,Summarize purchases on 5 October,CHECK_SPENDING,train,stretch
+1673,1675,Reset my pin at the moment,HELP_SUPPORT,train,core
+1675,1677,Pay 40 to telecom,BILL_PAY,train,core
+1676,1678,Send money to john,TRANSFER_MONEY,train,core
+1677,1679,Help me pay internet,BILL_PAY,train,core
+1678,1680,Need to transfer $20 to priya,TRANSFER_MONEY,train,core
+1679,1681,Check the balance of our work group,VIEW_GROUP,train,core
+1680,1682,Transfer money to raj,TRANSFER_MONEY,train,core
+1681,1683,List contributions in church on 16 August,VIEW_GROUP,train,core
+1682,1684,Please help resolve a forgotten PIN,HELP_SUPPORT,train,core
+1683,1685,I want to withdraw 30,WITHDRAW_MONEY,train,core
+1687,1689,Transfer failed today,HELP_SUPPORT,train,core
+1689,1691,Please help resolve a blocked wallet,HELP_SUPPORT,train,core
+1691,1693,I want to pay my electricity?,BILL_PAY,train,core
+1692,1694,Send 300 to my friend asha,TRANSFER_MONEY,train,core
+1693,1695,Suspicious payment now,HELP_SUPPORT,train,core
+1694,1696,List contributions in school on 8 March,VIEW_GROUP,train,core
+1695,1697,Show payments to jone,VIEW_TRANSACTIONS,train,core
+1697,1699,Take out 250,WITHDRAW_MONEY,train,core
+1698,1700,Rename contact priya,MANAGE_CONTACTS,train,core
+1699,1701,Display my latest transaction history on 25 December,VIEW_TRANSACTIONS,train,core
+1700,1702,Help me withdraw 40,WITHDRAW_MONEY,train,core
+1703,1705,I want to withdraw 500,WITHDRAW_MONEY,train,core
+1706,1708,Remove john from contacts,MANAGE_CONTACTS,train,core
+1707,1709,What did i spend this week,CHECK_SPENDING,train,stretch
+1708,1710,Pay 250 to waf,BILL_PAY,train,core
+1709,1711,How much spent at restaurants on the app,CHECK_SPENDING,train,stretch
+1710,1712,Check the balance of our school group,VIEW_GROUP,train,core
+1711,1713,I need to take out 40,WITHDRAW_MONEY,train,core
+1713,1715,Find my wallet activity on 19 January,VIEW_TRANSACTIONS,train,core
+1714,1716,List transfers in the last 30 days on my account,VIEW_TRANSACTIONS,train,core
+1715,1717,Put 25 in mika's wallet,TRANSFER_MONEY,train,core
+1716,1718,View our village group activity on 23 August,VIEW_GROUP,train,core
+1718,1720,Can you check my account balance yesterday?,CHECK_BALANCE,train,core
+1719,1721,I need to speak to an agent about a merchant payment issue,HELP_SUPPORT,train,core
+1720,1722,Delete roshni as payee,MANAGE_CONTACTS,train,core
+1721,1723,Add mika as recipient,MANAGE_CONTACTS,train,core
+1722,1724,I can't access my account on sole at the moment,HELP_SUPPORT,train,core
+1723,1725,Start a cash withdrawal for $30,WITHDRAW_MONEY,train,core
+1724,1726,"Pay 1,000 for school fees",BILL_PAY,train,core
+1725,1727,Make a $7 bill payment to internet provider,BILL_PAY,train,core
+1727,1729,Connect me to support about identity verification,HELP_SUPPORT,train,core
+1729,1731,Get $100 cash,WITHDRAW_MONEY,train,core
+1731,1733,"Can i withdraw 1,000",WITHDRAW_MONEY,train,core
+1732,1734,View our community group activity on 19 May,VIEW_GROUP,train,core
+1734,1736,Update john's contact,MANAGE_CONTACTS,train,core
+1735,1737,Show spending by category on 6 February,CHECK_SPENDING,train,stretch
+1736,1738,Show last 10 transactions on my account,VIEW_TRANSACTIONS,train,core
+1737,1739,Pay the water bill,BILL_PAY,train,core
+1739,1741,Pay $20 to ravi,TRANSFER_MONEY,train,core
+1741,1743,Help me withdraw 15?,WITHDRAW_MONEY,train,core
+1742,1744,I need to take out 100,WITHDRAW_MONEY,train,core
+1744,1746,Pay the waf bill,BILL_PAY,train,core
+1748,1750,Make a $15 bill payment to Digicel,BILL_PAY,train,core
+1749,1751,Save ravi,MANAGE_CONTACTS,train,core
+1750,1752,I need to pay joeli?,TRANSFER_MONEY,train,core
+1751,1753,Show funds in my wallet please if possible,CHECK_BALANCE,train,core
+1753,1755,Update jone's contact,MANAGE_CONTACTS,train,core
+1755,1757,Take 100 from my wallet,WITHDRAW_MONEY,train,core
+1756,1758,Pay $20 for water,BILL_PAY,train,core
+1757,1759,Make a $5 bill payment to water supplier,BILL_PAY,train,core
+1760,1762,Tell me my current balance on 7 March,CHECK_BALANCE,train,core
+1761,1763,Create a contact for john,MANAGE_CONTACTS,train,core
+1762,1764,Pay 10 to broadband,BILL_PAY,train,core
+1763,1765,Can i withdraw 250,WITHDRAW_MONEY,train,core
+1764,1766,I need to pay kumar,TRANSFER_MONEY,train,core
+1765,1767,Tell me my current balance on 1 October,CHECK_BALANCE,train,core
+1768,1770,Delete mere as payee,MANAGE_CONTACTS,train,core
+1769,1771,Wrong pin too many times now,HELP_SUPPORT,train,core
+1770,1772,Withdraw $500 from my wallet,WITHDRAW_MONEY,train,core
+1771,1773,My phone was stolen on my account,HELP_SUPPORT,train,core
+1772,1774,Is there 40 in my wallet quickly,CHECK_BALANCE,train,core
+1774,1776,Find the 500 transfer,VIEW_TRANSACTIONS,train,core
+1775,1777,Contact support quickly,HELP_SUPPORT,train,core
+1776,1778,Tell me my current balance on 25 January,CHECK_BALANCE,train,core
+1777,1779,Open bill pay now,BILL_PAY,train,core
+1778,1780,Is there 75 in my wallet in sole,CHECK_BALANCE,train,core
+1779,1781,Is litia saved,MANAGE_CONTACTS,train,core
+1780,1782,Show payments to mere?,VIEW_TRANSACTIONS,train,core
+1781,1783,Suspicious payment this time,HELP_SUPPORT,train,core
+1783,1785,Pay my mobile provider bill of $175,BILL_PAY,train,core
+1784,1786,Get 40 cash,WITHDRAW_MONEY,train,core
+1785,1787,Do I have money in my Sole wallet on 7 September?,CHECK_BALANCE,train,core
+1786,1788,Tell me my current balance on 2 March,CHECK_BALANCE,train,core
+1791,1793,Find a transaction from this week,VIEW_TRANSACTIONS,train,core
+1792,1794,Change saved contact sera,MANAGE_CONTACTS,train,core
+1793,1795,Find mary in contacts,MANAGE_CONTACTS,train,core
+1795,1797,Add up mobile data expenses,CHECK_SPENDING,train,stretch
+1796,1798,Can you check my account balance on 10 November?,CHECK_BALANCE,train,core
+1797,1799,Check my Sole balance on 14 November,CHECK_BALANCE,train,core
+1798,1800,Show members of my family savings group,VIEW_GROUP,train,core
+1799,1801,Give me an expenditure breakdown on 19 July,CHECK_SPENDING,train,stretch
+1801,1803,Is asha saved,MANAGE_CONTACTS,train,core
+1802,1804,Start withdrawal,WITHDRAW_MONEY,train,core
+1803,1805,Show my group savings for friends,VIEW_GROUP,train,core
+1804,1806,Show outgoing payments on 1 January,VIEW_TRANSACTIONS,train,core
+1805,1807,Did i spend more than $50 on food,CHECK_SPENDING,train,stretch
+1806,1808,I can't access my account quickly,HELP_SUPPORT,train,core
+1808,1810,What is happening in my village savings group on 2 January?,VIEW_GROUP,train,core
+1809,1811,What is my available balance on 20 February?,CHECK_BALANCE,train,core
+1811,1813,Show group activity on my account,VIEW_GROUP,train,core
+1812,1814,Can i send roshni 200,TRANSFER_MONEY,train,core
+1813,1815,Rename contact kumar,MANAGE_CONTACTS,train,core
+1814,1816,I want to pay my water,BILL_PAY,train,core
+1815,1817,What were my expenses on 5 February?,CHECK_SPENDING,train,stretch
+1817,1819,Which transactions happened on 11 April?,VIEW_TRANSACTIONS,train,core
+1819,1821,I need to speak to an agent about an incorrect payment,HELP_SUPPORT,train,core
+1820,1822,Open my church group wallet,VIEW_GROUP,train,core
+1821,1823,Rename contact ben,MANAGE_CONTACTS,train,core
+1823,1825,Is there 150 in my wallet please,CHECK_BALANCE,train,core
+1827,1829,Save Tevita as a payment contact,MANAGE_CONTACTS,train,core
+1830,1832,"Can i send kumar 1,000",TRANSFER_MONEY,train,core
+1832,1834,I would like support for updating my phone number,HELP_SUPPORT,train,core
+1833,1835,Who contributed to church on 28 July?,VIEW_GROUP,train,core
+1834,1836,Can i send ana 25,TRANSFER_MONEY,train,core
+1836,1838,How can I get assistance with updating my phone number?,HELP_SUPPORT,train,core
+1838,1840,Check my Sole balance on 18 April,CHECK_BALANCE,train,core
+1839,1841,Show spending by category on 27 August,CHECK_SPENDING,train,stretch
+1840,1842,"Help me withdraw 1,000?",WITHDRAW_MONEY,train,core
+1842,1844,Help me take out 110 dollars,WITHDRAW_MONEY,train,core
+1843,1845,I have a internet provider bill for $20,BILL_PAY,train,core
+1845,1847,I have a school fees bill,BILL_PAY,train,core
+1846,1848,Get 60 cash,WITHDRAW_MONEY,train,core
+1847,1849,Is there 100 in my wallet in sole,CHECK_BALANCE,train,core
+1848,1850,I need to collect $18 in cash,WITHDRAW_MONEY,train,core
+1849,1851,How much is left in my wallet on 24 February?,CHECK_BALANCE,train,core
+1850,1852,Send $200 fiji dollars to sera,TRANSFER_MONEY,train,core
+1851,1853,Pay the electricity bill,BILL_PAY,train,core
+1852,1854,Show payments to priya,VIEW_TRANSACTIONS,train,core
+1853,1855,Send 80 from my wallet to roshni,TRANSFER_MONEY,train,core
+1854,1856,Reset my pin on my account,HELP_SUPPORT,train,core
+1855,1857,Pay mary 150,TRANSFER_MONEY,train,core
+1856,1858,Display my latest transaction history on 14 September,VIEW_TRANSACTIONS,train,core
+1857,1859,Give me the transaction list for on 17 June,VIEW_TRANSACTIONS,train,core
+1858,1860,"I want to send 1,000 to mary",TRANSFER_MONEY,train,core
+1862,1864,Add ben as recipient,MANAGE_CONTACTS,train,core
+1863,1865,Cash out 75,WITHDRAW_MONEY,train,core
+1864,1866,Make a $7 bill payment to mobile provider,BILL_PAY,train,core
+1866,1868,What is happening in my village savings group on 14 September?,VIEW_GROUP,train,core
+1867,1869,Start cash out for 120,WITHDRAW_MONEY,train,core
+1869,1871,Tell me my current balance on 23 October,CHECK_BALANCE,train,core
+1870,1872,Put 60 in peni's wallet,TRANSFER_MONEY,train,core
+1871,1873,Is there 250 in my wallet on the app,CHECK_BALANCE,train,core
+1872,1874,Tell me my current balance last week,CHECK_BALANCE,train,core
+1875,1877,Report unauthorized transaction in sole,HELP_SUPPORT,train,core
+1876,1878,Please help resolve identity verification,HELP_SUPPORT,train,core
+1878,1880,Can someone assist with an incorrect payment?,HELP_SUPPORT,train,core
+1880,1882,I have a question regarding a forgotten PIN,HELP_SUPPORT,train,core
+1881,1883,Make a $10 transfer to Peni,TRANSFER_MONEY,train,core
+1882,1884,Help me pay school fees?,BILL_PAY,train,core
+1884,1886,Who contributed to school on 25 May?,VIEW_GROUP,train,core
+1887,1889,Tell me how much I paid out on 12 April,CHECK_SPENDING,train,stretch
+1892,1894,"Start cash out for 1,000",WITHDRAW_MONEY,train,core
+1893,1895,Who do i call for help on my account,HELP_SUPPORT,train,core
+1894,1896,Where do I report a forgotten PIN?,HELP_SUPPORT,train,core
+1895,1897,Calculate spending on utilities,CHECK_SPENDING,train,stretch
+1896,1898,Did i spend more than 250 on food,CHECK_SPENDING,train,stretch
+1897,1899,Show contributions to work group at the moment,VIEW_GROUP,train,core
+1898,1900,Give me an expenditure breakdown on 16 November,CHECK_SPENDING,train,stretch
+1900,1902,Settle my mobile charges,BILL_PAY,train,core
+1901,1903,Show transactions this week,VIEW_TRANSACTIONS,train,core
+1902,1904,Find a transaction from this month,VIEW_TRANSACTIONS,train,core
+1904,1906,Open market vendors group?,VIEW_GROUP,train,core
+1905,1907,Add joeli to contacts,MANAGE_CONTACTS,train,core
+1906,1908,Pay my electricity account,BILL_PAY,train,core
+1907,1909,Send 60 fiji dollars to litia,TRANSFER_MONEY,train,core
+1909,1911,Show the amount available to spend on 12 April,CHECK_BALANCE,train,core
+1910,1912,Take out $100,WITHDRAW_MONEY,train,core
+1913,1915,Show the amount available to spend on 6 June,CHECK_BALANCE,train,core
+1915,1917,Make a waf payment?,BILL_PAY,train,core
+1916,1918,I have a mobile bill,BILL_PAY,train,core
+1917,1919,Connect me to support about updating my phone number,HELP_SUPPORT,train,core
+1918,1920,How much cash is in Sole on 13 January?,CHECK_BALANCE,train,core
+1919,1921,Give me the transaction list for on 21 May,VIEW_TRANSACTIONS,train,core
+1920,1922,Open community group on the app,VIEW_GROUP,train,core
+1922,1924,Can't log in on the app,HELP_SUPPORT,train,core
+1923,1925,Is there 200 in my wallet if possible,CHECK_BALANCE,train,core
+1924,1926,I can't access my account if possible,HELP_SUPPORT,train,core
+1925,1927,Please help resolve an app login problem,HELP_SUPPORT,train,core
+1926,1928,Group balance quickly,VIEW_GROUP,train,core
+1928,1930,Is mika saved,MANAGE_CONTACTS,train,core
+1929,1931,I have a waf bill,BILL_PAY,train,core
+1932,1934,How much did i spend on fuel over the weekend,CHECK_SPENDING,train,stretch
+1933,1935,I forgot my pin if possible,HELP_SUPPORT,train,core
+1934,1936,Change saved contact kumar,MANAGE_CONTACTS,train,core
+1935,1937,Transfer failed asap,HELP_SUPPORT,train,core
+1937,1939,Start a cash withdrawal for $120,WITHDRAW_MONEY,train,core
+1938,1940,List my wallet transactions on 23 June,VIEW_TRANSACTIONS,train,core
+1939,1941,Biggest expense,CHECK_SPENDING,train,stretch
+1940,1942,How much did i spend on food this month,CHECK_SPENDING,train,stretch
+1941,1943,Take 75 from my wallet,WITHDRAW_MONEY,train,core
+1942,1944,What were my expenses on 19 July?,CHECK_SPENDING,train,stretch
+1943,1945,Review my account activity on 19 August,VIEW_TRANSACTIONS,train,core
+1946,1948,Tell me how much I paid out on 28 December,CHECK_SPENDING,train,stretch
+1947,1949,Make a transfer to john,TRANSFER_MONEY,train,core
+1948,1950,Help me withdraw 300,WITHDRAW_MONEY,train,core
+1950,1952,How much spent at restaurants now,CHECK_SPENDING,train,stretch
+1951,1953,Is there 10 in my wallet in sole,CHECK_BALANCE,train,core
+1952,1954,List contributions in community on 10 November,VIEW_GROUP,train,core
+1954,1956,Can i withdraw $20,WITHDRAW_MONEY,train,core
+1956,1958,Settle broadband,BILL_PAY,train,core
+1957,1959,How much did I spend on 26 October?,CHECK_SPENDING,train,stretch
+1958,1960,Can you send 10 to mary,TRANSFER_MONEY,train,core
+1959,1961,Bill pay mobile,BILL_PAY,train,core
+1961,1963,Send 30 fiji dollars to savenaca,TRANSFER_MONEY,train,core
+1962,1964,Pay 100 to internet,BILL_PAY,train,core
+1963,1965,Save Taina as a payment contact,MANAGE_CONTACTS,train,core
+1964,1966,Pay 150 to mobile,BILL_PAY,train,core
+1965,1967,Settle $125 owed to internet provider,BILL_PAY,train,core
+1966,1968,Can i send joeli 300,TRANSFER_MONEY,train,core
+1967,1969,How much did I spend on 9 December?,CHECK_SPENDING,train,stretch
+1969,1971,I have a electricity provider bill for $95,BILL_PAY,train,core
+1972,1974,Update mary's contact,MANAGE_CONTACTS,train,core
+1973,1975,Cash out from my account on my account,WITHDRAW_MONEY,train,core
+1975,1977,Display my latest transaction history on 9 February,VIEW_TRANSACTIONS,train,core
+1978,1980,I want to withdraw 60,WITHDRAW_MONEY,train,core
+1979,1981,Show my saved contact Josefa,MANAGE_CONTACTS,train,core
+1980,1982,Add joeli as recipient,MANAGE_CONTACTS,train,core
+1981,1983,Add sera as recipient,MANAGE_CONTACTS,train,core
+1982,1984,What is my available balance on 10 August?,CHECK_BALANCE,train,core
+1983,1985,Transfer failed please asap,HELP_SUPPORT,train,core
+1984,1986,Pay 15 for internet,BILL_PAY,train,core
+1985,1987,Contact support on sole,HELP_SUPPORT,train,core
+1986,1988,Transfer money to mary,TRANSFER_MONEY,train,core
+1987,1989,Display the village group account,VIEW_GROUP,train,core
+1989,1991,How much is in savings now,CHECK_BALANCE,train,core
+1991,1993,I need help with updating my phone number,HELP_SUPPORT,train,core
+1992,1994,I have a electricity bill?,BILL_PAY,train,core
+1993,1995,Calculate spending on food,CHECK_SPENDING,train,stretch
+1996,1998,What funds do I have available on 22 March?,CHECK_BALANCE,train,core
+1997,1999,I would like support for a forgotten PIN,HELP_SUPPORT,train,core
+1998,2000,Take 80 from my wallet,WITHDRAW_MONEY,train,core
+2000,2002,View our friends group activity on 2 April,VIEW_GROUP,train,core
+2001,2003,Add ana as recipient,MANAGE_CONTACTS,train,core
+2003,2005,Get 30 cash,WITHDRAW_MONEY,train,core
+2004,2006,Pay tui 60,TRANSFER_MONEY,train,core
+2005,2007,What did I spend on shopping on 19 September?,CHECK_SPENDING,train,stretch
+2006,2008,List contributions in work on 6 August,VIEW_GROUP,train,core
+2008,2010,Show spending by category on 10 November,CHECK_SPENDING,train,stretch
+2009,2011,Can you send 10 to mika,TRANSFER_MONEY,train,core
+2010,2012,Delete raj as payee,MANAGE_CONTACTS,train,core
+2011,2013,Open the saved recipient entry for Ana,MANAGE_CONTACTS,train,core
+2012,2014,How much cash is in Sole on 27 August?,CHECK_BALANCE,train,core
+2013,2015,Open the saved recipient entry for Suli,MANAGE_CONTACTS,train,core
+2016,2018,Move $400 to Suli in my contacts,TRANSFER_MONEY,train,core
+2017,2019,Make a internet payment,BILL_PAY,train,core
+2019,2021,Pay 20 for water,BILL_PAY,train,core
+2021,2023,I have a Water Authority bill for $120,BILL_PAY,train,core
+2022,2024,Update asha's contact,MANAGE_CONTACTS,train,core
+2023,2025,Pay 75 dollars toward my mobile provider bill,BILL_PAY,train,core
+2024,2026,Who contributed to community on 2 July?,VIEW_GROUP,train,core
+2025,2027,Pay my Digicel bill of $100,BILL_PAY,train,core
+2026,2028,Can i send ana 10,TRANSFER_MONEY,train,core
+2029,2031,What is happening in my holiday savings group this morning?,VIEW_GROUP,train,core
+2030,2032,What funds do I have available on 21 May?,CHECK_BALANCE,train,core
+2032,2034,Pay $50 for internet,BILL_PAY,train,core
+2033,2035,I can't access my account quickly in sole,HELP_SUPPORT,train,core
+2034,2036,How can I get assistance with an account error?,HELP_SUPPORT,train,core
+2036,2038,Add ravi to contacts,MANAGE_CONTACTS,train,core
+2037,2039,How much has my village group saved?,VIEW_GROUP,train,core
+2038,2040,Show payments over 80,VIEW_TRANSACTIONS,train,core
+2039,2041,Pay 5 to joeli,TRANSFER_MONEY,train,core
+2040,2042,Show spending by category on 6 September,CHECK_SPENDING,train,stretch
+2041,2043,Show the amount available to spend on 5 May,CHECK_BALANCE,train,core
+2042,2044,How can I get assistance with an incorrect payment?,HELP_SUPPORT,train,core
+2043,2045,View our work group activity on 14 April,VIEW_GROUP,train,core
+2045,2047,Who do i call for help quickly,HELP_SUPPORT,train,core
+2046,2048,Update adi's contact,MANAGE_CONTACTS,train,core
+2047,2049,Find a transaction from yesterday,VIEW_TRANSACTIONS,train,core
+2049,2051,Add raj as recipient,MANAGE_CONTACTS,train,core
+2050,2052,Show my saved contact Taina,MANAGE_CONTACTS,train,core
+2051,2053,Delete recipient Suli,MANAGE_CONTACTS,train,core
+2052,2054,Display my latest transaction history on 10 January,VIEW_TRANSACTIONS,train,core
+2053,2055,Send 50 fiji dollars to litia,TRANSFER_MONEY,train,core
+2054,2056,Did i spend more than 50 on school,CHECK_SPENDING,train,stretch
+2055,2057,Save peni,MANAGE_CONTACTS,train,core
+2058,2060,Is there 20 in my wallet on my account,CHECK_BALANCE,train,core
+2061,2063,List transfers last week?,VIEW_TRANSACTIONS,train,core
+2064,2066,Update sera's contact,MANAGE_CONTACTS,train,core
+2065,2067,Can i withdraw 20,WITHDRAW_MONEY,train,core
+2066,2068,Start cash out for 50,WITHDRAW_MONEY,train,core
+2067,2069,How much cash is in Sole on 25 December?,CHECK_BALANCE,train,core
+2069,2071,What is happening in my village savings group on 5 April?,VIEW_GROUP,train,core
+2071,2073,I need help with an app login problem,HELP_SUPPORT,train,core
+2073,2075,Reset my pin? asap,HELP_SUPPORT,train,core
+2075,2077,Pay $20 for internet,BILL_PAY,train,core
+2076,2078,I need to collect $65 in cash,WITHDRAW_MONEY,train,core
+2078,2080,I need to collect $95 in cash,WITHDRAW_MONEY,train,core
+2079,2081,Make a $50 bill payment to water supplier,BILL_PAY,train,core
+2080,2082,Forgot password? on sole,HELP_SUPPORT,train,core
+2081,2083,What is happening in my school savings group on 13 November?,VIEW_GROUP,train,core
+2082,2084,Can you check my account balance on 2 June?,CHECK_BALANCE,train,core
+2083,2085,List contributions in holiday on 13 June,VIEW_GROUP,train,core
+2087,2089,Biggest expense since monday,CHECK_SPENDING,train,stretch
+2089,2091,Show spending by category on 17 December,CHECK_SPENDING,train,stretch
+2091,2093,Update savenaca's contact,MANAGE_CONTACTS,train,core
+2092,2094,Show payments to sera?,VIEW_TRANSACTIONS,train,core
+2093,2095,Pay 125 dollars toward my water supplier bill,BILL_PAY,train,core
+2094,2096,Give me an expenditure breakdown on 22 November,CHECK_SPENDING,train,stretch
+2098,2100,How much is in my sole wallet if possible,CHECK_BALANCE,train,core
+2100,2102,How can I get assistance with an agent deposit issue?,HELP_SUPPORT,train,core
+2101,2103,I need to pay peni,TRANSFER_MONEY,train,core
+2103,2105,What is happening in my work savings group on 4 March?,VIEW_GROUP,train,core
+2104,2106,Take out 30,WITHDRAW_MONEY,train,core
+2106,2108,Add up transport expenses,CHECK_SPENDING,train,stretch
+2107,2109,Show spending by category on 4 March,CHECK_SPENDING,train,stretch
+2108,2110,Did adi send me money,VIEW_TRANSACTIONS,train,core
+2109,2111,Save jone,MANAGE_CONTACTS,train,core
+2110,2112,Add up food expenses,CHECK_SPENDING,train,stretch
+2111,2113,Pay $50 to ravi,TRANSFER_MONEY,train,core
+2113,2115,"Cash out 1,000",WITHDRAW_MONEY,train,core
+2114,2116,How much is left in my wallet on 17 September?,CHECK_BALANCE,train,core
+2115,2117,Can you pay my Water Authority account $35?,BILL_PAY,train,core
+2116,2118,App keeps crashing in sole,HELP_SUPPORT,train,core
+2118,2120,I need help with a missing receipt,HELP_SUPPORT,train,core
+2119,2121,Did i spend more than $100 on food,CHECK_SPENDING,train,stretch
+2120,2122,How much did i spend on shopping over the weekend,CHECK_SPENDING,train,stretch
+2123,2125,Show incoming transfers on 8 July,VIEW_TRANSACTIONS,train,core
+2124,2126,Send 40 fiji dollars to tui,TRANSFER_MONEY,train,core
+2125,2127,Settle telecom,BILL_PAY,train,core
+2126,2128,Can someone assist with a failed transfer?,HELP_SUPPORT,train,core
+2128,2130,Rename contact jone,MANAGE_CONTACTS,train,core
+2129,2131,Update litia's contact,MANAGE_CONTACTS,train,core
+2130,2132,Is priya saved,MANAGE_CONTACTS,train,core
+2131,2133,Check women's savings group at the moment,VIEW_GROUP,train,core
+2132,2134,Find the 50 transfer,VIEW_TRANSACTIONS,train,core
+2133,2135,Who contributed to holiday on 25 October?,VIEW_GROUP,train,core
+2136,2138,I need to collect $25 in cash,WITHDRAW_MONEY,train,core
+2137,2139,Forgot password? asap,HELP_SUPPORT,train,core
+2138,2140,How much did i spend on transport since monday,CHECK_SPENDING,train,stretch
+2139,2141,Pay 60 to waf,BILL_PAY,train,core
+2141,2143,List transfers this month,VIEW_TRANSACTIONS,train,core
+2143,2145,Did john send me money,VIEW_TRANSACTIONS,train,core
+2146,2148,What is happening in my friends savings group on 4 December?,VIEW_GROUP,train,core
+2148,2150,I forgot my pin on my account,HELP_SUPPORT,train,core
+2149,2151,Pay 150 to phone,BILL_PAY,train,core
+2151,2153,Settle my waf charges now,BILL_PAY,train,core
+2152,2154,List transfers,VIEW_TRANSACTIONS,train,core
+2156,2158,Did i spend more than $50 on market,CHECK_SPENDING,train,stretch
+2157,2159,Make a phone payment,BILL_PAY,train,core
+2158,2160,What is happening in my village savings group on 7 September?,VIEW_GROUP,train,core
+2159,2161,Delete recipient Ana,MANAGE_CONTACTS,train,core
+2160,2162,Transfer failed if possible,HELP_SUPPORT,train,core
+2162,2164,Transfer funds to mika,TRANSFER_MONEY,train,core
+2163,2165,Open the saved recipient entry for Ema,MANAGE_CONTACTS,train,core
+2164,2166,Transfer $200 to mary,TRANSFER_MONEY,train,core
+2165,2167,Tell me how much I paid out on 1 February,CHECK_SPENDING,train,stretch
+2167,2169,Search contacts for asha,MANAGE_CONTACTS,train,core
+2168,2170,Send $100 to my friend savenaca,TRANSFER_MONEY,train,core
+2169,2171,Did i spend more than 40 on food?,CHECK_SPENDING,train,stretch
+2170,2172,Display my latest transaction history on 24 September,VIEW_TRANSACTIONS,train,core
+2171,2173,Can you pay my internet provider account $300?,BILL_PAY,train,core
+2172,2174,What payments did i make this week,VIEW_TRANSACTIONS,train,core
+2173,2175,I have a water supplier bill for $150,BILL_PAY,train,core
+2174,2176,Transfer 120 to ben,TRANSFER_MONEY,train,core
+2175,2177,Show our group account if possible,VIEW_GROUP,train,core
+2176,2178,How much cash is in Sole on 21 October?,CHECK_BALANCE,train,core
+2177,2179,View our friends group activity on 27 February,VIEW_GROUP,train,core
+2179,2181,Cash out 500,WITHDRAW_MONEY,train,core
+2181,2183,Change saved contact mary,MANAGE_CONTACTS,train,core
+2182,2184,List my wallet transactions on 16 September,VIEW_TRANSACTIONS,train,core
+2183,2185,How much did I spend on 3 December?,CHECK_SPENDING,train,stretch
+2184,2186,Delete ravi as payee,MANAGE_CONTACTS,train,core
+2185,2187,I want to send 120 to mary,TRANSFER_MONEY,train,core
+2186,2188,Take out 50,WITHDRAW_MONEY,train,core
+2187,2189,Send 250 fiji dollars to joeli,TRANSFER_MONEY,train,core
+2189,2191,Is there $50 in my wallet quickly,CHECK_BALANCE,train,core
+2190,2192,Add peni to contacts,MANAGE_CONTACTS,train,core
+2191,2193,I want to withdraw 250,WITHDRAW_MONEY,train,core
+2192,2194,View our school group activity on 1 February,VIEW_GROUP,train,core
+2193,2195,Delete jone as payee,MANAGE_CONTACTS,train,core
+2194,2196,Show the amount available to spend on 26 October,CHECK_BALANCE,train,core
+2195,2197,What is happening in my community savings group on 1 February?,VIEW_GROUP,train,core
+2196,2198,Forgot password? quickly,HELP_SUPPORT,train,core
+2197,2199,Pay 15 dollars toward my electricity provider bill,BILL_PAY,train,core
+2198,2200,Show balance in sole,CHECK_BALANCE,train,core
+2199,2201,Get 120 cash,WITHDRAW_MONEY,train,core
+2200,2202,Who contributed to school on 14 March?,VIEW_GROUP,train,core
+2202,2204,Cash out 15,WITHDRAW_MONEY,train,core
+2203,2205,Find a transaction from over the weekend?,VIEW_TRANSACTIONS,train,core
+2204,2206,Pay 20 to electricity?,BILL_PAY,train,core
+2205,2207,What funds do I have available on 17 June?,CHECK_BALANCE,train,core
+2206,2208,Show deposits this week,VIEW_TRANSACTIONS,train,core
+2208,2210,Can i send ana 150,TRANSFER_MONEY,train,core
+2209,2211,I can't access my account right now,HELP_SUPPORT,train,core
+2210,2212,Give me the transaction list for on 24 October,VIEW_TRANSACTIONS,train,core
+2212,2214,Save roshni,MANAGE_CONTACTS,train,core
+2213,2215,How much did i spend on food over the weekend,CHECK_SPENDING,train,stretch
+2214,2216,Add asha as recipient,MANAGE_CONTACTS,train,core
+2215,2217,What did i spend since monday,CHECK_SPENDING,train,stretch
+2216,2218,Get 200 cash?,WITHDRAW_MONEY,train,core
+2217,2219,Show deposits in the last 30 days now,VIEW_TRANSACTIONS,train,core
+2220,2222,Transfer failed please quickly,HELP_SUPPORT,train,core
+2221,2223,Can someone assist with an account error?,HELP_SUPPORT,train,core
+2222,2224,What funds do I have available on 7 August?,CHECK_BALANCE,train,core
+2225,2227,Settle my efl charges?,BILL_PAY,train,core
+2226,2228,Make a $30 bill payment to electricity provider,BILL_PAY,train,core
+2228,2230,Rename contact savenaca,MANAGE_CONTACTS,train,core
+2230,2232,Pay 18 dollars toward my internet provider bill,BILL_PAY,train,core
+2231,2233,What payments did I make on 2 October?,VIEW_TRANSACTIONS,train,core
+2233,2235,Did i spend more than 100 on shopping,CHECK_SPENDING,train,stretch
+2234,2236,I need to pay roshni,TRANSFER_MONEY,train,core
+2235,2237,I can't access my account thanks this time,HELP_SUPPORT,train,core
+2236,2238,Show members of my friends savings group,VIEW_GROUP,train,core
+2240,2242,Remove Laisa from my contacts,MANAGE_CONTACTS,train,core
+2243,2245,Withdraw 15,WITHDRAW_MONEY,train,core
+2244,2246,Can i withdraw 30 in sole,WITHDRAW_MONEY,train,core
+2245,2247,I can't access my account today at the moment,HELP_SUPPORT,train,core
+2246,2248,How much is left in my wallet on 11 May?,CHECK_BALANCE,train,core
+2247,2249,What funds do I have available on 18 August?,CHECK_BALANCE,train,core
+2248,2250,Transfer funds to john,TRANSFER_MONEY,train,core
+2250,2252,How much did I spend on 8 March?,CHECK_SPENDING,train,stretch
+2252,2254,Find village group at the moment,VIEW_GROUP,train,core
+2253,2255,Can you pay my internet provider account $18?,BILL_PAY,train,core
+2254,2256,Transfer failed on my account,HELP_SUPPORT,train,core
+2255,2257,Send 50 to my friend roshni,TRANSFER_MONEY,train,core
+2256,2258,Is there 40 in my wallet on my account,CHECK_BALANCE,train,core
+2257,2259,Delete litia as payee,MANAGE_CONTACTS,train,core
+2259,2261,Pay my electricity provider bill of $125,BILL_PAY,train,core
+2260,2262,Show my spending totals today,CHECK_SPENDING,train,stretch
+2261,2263,How much is left in my wallet on 2 August?,CHECK_BALANCE,train,core
+2263,2265,Pay my water account,BILL_PAY,train,core
+2265,2267,Transfer funds to adi,TRANSFER_MONEY,train,core
+2266,2268,What did i spend yesterday,CHECK_SPENDING,train,stretch
+2267,2269,Can you guide me on a failed transfer?,HELP_SUPPORT,train,core
+2268,2270,Show payments over 15,VIEW_TRANSACTIONS,train,core
+2269,2271,Show incoming transfers on 20 June,VIEW_TRANSACTIONS,train,core
+2270,2272,Help me pay $80 to Vodafone,BILL_PAY,train,core
+2271,2273,"Show payments over 1,000",VIEW_TRANSACTIONS,train,core
+2272,2274,Which transactions happened on 15 July?,VIEW_TRANSACTIONS,train,core
+2273,2275,Is there 150 in my wallet this time,CHECK_BALANCE,train,core
+2274,2276,Add jone as recipient,MANAGE_CONTACTS,train,core
+2275,2277,Which transactions happened on 1 August?,VIEW_TRANSACTIONS,train,core
+2276,2278,Give me an expense summary at the moment,CHECK_SPENDING,train,stretch
+2277,2279,Tell me my current balance on 27 June,CHECK_BALANCE,train,core
+2278,2280,I need to pay EFL $50,BILL_PAY,train,core
+2279,2281,Withdraw $18 from my wallet,WITHDRAW_MONEY,train,core
+2280,2282,Pay 100 to phone?,BILL_PAY,train,core
+2281,2283,I have a question regarding an incorrect payment,HELP_SUPPORT,train,core
+2282,2284,List contributions in family on 20 January,VIEW_GROUP,train,core
+2283,2285,Total saved by rugby club group,VIEW_GROUP,train,core
+2284,2286,View my transaction records at the moment,VIEW_TRANSACTIONS,train,core
+2285,2287,Transfer funds to mere,TRANSFER_MONEY,train,core
+2287,2289,Cash out $20,WITHDRAW_MONEY,train,core
+2289,2291,Is there $20 in my wallet at the moment,CHECK_BALANCE,train,core
+2290,2292,Pay $50 to roshni,TRANSFER_MONEY,train,core
+2291,2293,How much did i spend on groceries today,CHECK_SPENDING,train,stretch
+2292,2294,Give me an expenditure breakdown on 20 January,CHECK_SPENDING,train,stretch
+2293,2295,Add ana to contacts,MANAGE_CONTACTS,train,core
+2294,2296,Display my wallet balance on 14 February,CHECK_BALANCE,train,core
+2295,2297,"Did i spend more than 1,000 on bills",CHECK_SPENDING,train,stretch
+2296,2298,Help me take out 7 dollars,WITHDRAW_MONEY,train,core
+2298,2300,Cash out 200,WITHDRAW_MONEY,train,core
+2302,2304,I want to send 40 to savenaca,TRANSFER_MONEY,train,core
+2303,2305,Compare my expenses for on 23 October,CHECK_SPENDING,train,stretch
+2304,2306,List my wallet transactions on 5 September,VIEW_TRANSACTIONS,train,core
+2305,2307,Search contacts for ravi,MANAGE_CONTACTS,train,core
+2306,2308,Add priya to contacts,MANAGE_CONTACTS,train,core
+2308,2310,Find the 15 transfer,VIEW_TRANSACTIONS,train,core
+2310,2312,Search contacts for mika,MANAGE_CONTACTS,train,core
+2311,2313,Show the amount available to spend on 10 December,CHECK_BALANCE,train,core
+2313,2315,Find a transaction from this week on the app,VIEW_TRANSACTIONS,train,core
+2314,2316,Transfer funds to ravi,TRANSFER_MONEY,train,core
+2317,2319,Delete recipient Ratu,MANAGE_CONTACTS,train,core
+2318,2320,Give me an expenditure breakdown on 19 November,CHECK_SPENDING,train,stretch
+2320,2322,Show spending by category on 16 February,CHECK_SPENDING,train,stretch
+2321,2323,Who contributed in the last 30 days on the app,VIEW_GROUP,train,core
+2322,2324,Suspicious payment at the moment,HELP_SUPPORT,train,core
+2323,2325,Pay my internet account,BILL_PAY,train,core
+2324,2326,Show spending by category on 26 February,CHECK_SPENDING,train,stretch
+2326,2328,What is happening in my work savings group on 14 November?,VIEW_GROUP,train,core
+2327,2329,Transfer failed quickly,HELP_SUPPORT,train,core
+2328,2330,Create a contact for mere,MANAGE_CONTACTS,train,core
+2330,2332,"I want to send 1,000 to litia",TRANSFER_MONEY,train,core
+2333,2335,Is there 250 in my wallet in sole,CHECK_BALANCE,train,core
+2334,2336,List contributions in family on 21 March,VIEW_GROUP,train,core
+2335,2337,Settle my water charges,BILL_PAY,train,core
+2336,2338,"Send 1,000 from my wallet to raj",TRANSFER_MONEY,train,core
+2338,2340,Pay 5 to kumar,TRANSFER_MONEY,train,core
+2339,2341,Show outgoing payments on 15 February,VIEW_TRANSACTIONS,train,core
+2341,2343,How do I withdraw 7 dollars?,WITHDRAW_MONEY,train,core
+2342,2344,Create a contact for jone,MANAGE_CONTACTS,train,core
+2344,2346,Take out 60,WITHDRAW_MONEY,train,core
+2345,2347,Get 25 cash?,WITHDRAW_MONEY,train,core
+2346,2348,"Pay 1,000 to phone",BILL_PAY,train,core
+2348,2350,View our friends group activity on 12 January,VIEW_GROUP,train,core
+2349,2351,Make a transfer to asha,TRANSFER_MONEY,train,core
+2350,2352,View our friends group activity on 23 October,VIEW_GROUP,train,core
+2352,2354,I want to withdraw 20,WITHDRAW_MONEY,train,core
+2354,2356,Show payments to mika,VIEW_TRANSACTIONS,train,core
+2355,2357,Display my wallet balance on 5 November,CHECK_BALANCE,train,core
+2356,2358,Pay 75 to joeli,TRANSFER_MONEY,train,core
+2357,2359,Pay 125 dollars toward my Digicel bill,BILL_PAY,train,core
+2358,2360,Help me pay telecom,BILL_PAY,train,core
+2359,2361,I forgot my pin thanks on my account,HELP_SUPPORT,train,core
+2360,2362,How much did i spend on utilities in the last 30 days,CHECK_SPENDING,train,stretch
+2363,2365,I can't access my account for me on my account,HELP_SUPPORT,train,core
+2364,2366,Withdraw $75 from my wallet,WITHDRAW_MONEY,train,core
+2365,2367,Account balance please in sole,CHECK_BALANCE,train,core
+2366,2368,Find my wallet activity on 22 January,VIEW_TRANSACTIONS,train,core
+2367,2369,Is there 60 in my wallet quickly,CHECK_BALANCE,train,core
+2368,2370,I can't access my account please now,HELP_SUPPORT,train,core
+2369,2371,Do I have money in my Sole wallet on 24 December?,CHECK_BALANCE,train,core
+2370,2372,List transfers today on my account,VIEW_TRANSACTIONS,train,core
+2371,2373,Tell me my current balance on 18 October,CHECK_BALANCE,train,core
+2372,2374,Show deposits last month,VIEW_TRANSACTIONS,train,core
+2373,2375,Give me the transaction list for on 9 March,VIEW_TRANSACTIONS,train,core
+2374,2376,Withdraw 250,WITHDRAW_MONEY,train,core
+2375,2377,Who contributed to family on 16 January?,VIEW_GROUP,train,core
+2377,2379,Transfer money to roshni,TRANSFER_MONEY,train,core
+2380,2382,App keeps crashing if possible,HELP_SUPPORT,train,core
+2381,2383,Report fraud please,HELP_SUPPORT,train,core
+2382,2384,Pay the efl bill,BILL_PAY,train,core
+2385,2387,Transaction history at the moment,VIEW_TRANSACTIONS,train,core
+2386,2388,How can I get assistance with identity verification?,HELP_SUPPORT,train,core
+2388,2390,Please transfer $45 to Peni today,TRANSFER_MONEY,train,core
+2390,2392,Request a withdrawal of $45,WITHDRAW_MONEY,train,core
+2391,2393,List my wallet transactions on 1 October,VIEW_TRANSACTIONS,train,core
+2392,2394,How do I withdraw 110 dollars?,WITHDRAW_MONEY,train,core
+2393,2395,How much went out of my wallet on 15 April?,CHECK_SPENDING,train,stretch
+2395,2397,Delete recipient Saki,MANAGE_CONTACTS,train,core
+2396,2398,Show my group savings for school,VIEW_GROUP,train,core
+2397,2399,I forgot my pin on sole on my account,HELP_SUPPORT,train,core
+2399,2401,Pay $20 to mika,TRANSFER_MONEY,train,core
+2400,2402,Withdraw 60,WITHDRAW_MONEY,train,core
+2402,2404,Make a $20 bill payment to Vodafone,BILL_PAY,train,core
+2403,2405,List groups i belong to on my account,VIEW_GROUP,train,core
+2404,2406,Did i spend more than 150 on food,CHECK_SPENDING,train,stretch
+2405,2407,I need to pay mary,TRANSFER_MONEY,train,core
+2407,2409,Show funds in my wallet this time,CHECK_BALANCE,train,core
+2410,2412,Make a transfer to litia,TRANSFER_MONEY,train,core
+2412,2414,What payments did I make on 7 August?,VIEW_TRANSACTIONS,train,core
+2413,2415,Show payments over $100 at the moment,VIEW_TRANSACTIONS,train,core
+2414,2416,Can you guide me on an account error?,HELP_SUPPORT,train,core
+2416,2418,Display my wallet balance on 25 January,CHECK_BALANCE,train,core
+2420,2422,Open groupwealth this time,VIEW_GROUP,train,core
+2421,2423,Tell me my current balance on 7 July,CHECK_BALANCE,train,core
+2424,2426,My savings group this time,VIEW_GROUP,train,core
+2426,2428,Can i withdraw 120,WITHDRAW_MONEY,train,core
+2428,2430,I have a question regarding an agent deposit issue,HELP_SUPPORT,train,core
+2429,2431,Take $400 out of my Sole account,WITHDRAW_MONEY,train,core
+2430,2432,Help me pay $400 to water supplier,BILL_PAY,train,core
+2431,2433,Can you guide me on an unrecognized charge?,HELP_SUPPORT,train,core
+2432,2434,Create a contact for savenaca,MANAGE_CONTACTS,train,core
+2433,2435,Start a transfer for sera,TRANSFER_MONEY,train,core
+2434,2436,Is peni saved,MANAGE_CONTACTS,train,core
+2435,2437,What were my expenses on 21 September?,CHECK_SPENDING,train,stretch
+2436,2438,I would like support for identity verification,HELP_SUPPORT,train,core
+2438,2440,Change saved contact priya,MANAGE_CONTACTS,train,core
+2442,2444,Tell me how much I paid out on 17 October,CHECK_SPENDING,train,stretch
+2445,2447,Transfer 5 to ana,TRANSFER_MONEY,train,core
+2446,2448,Delete mika as payee,MANAGE_CONTACTS,train,core
+2448,2450,Show payments over 75,VIEW_TRANSACTIONS,train,core
+2449,2451,How much cash is in Sole on 25 August?,CHECK_BALANCE,train,core
+2450,2452,Add Tevita to my recipients,MANAGE_CONTACTS,train,core
+2452,2454,How much has my church group saved?,VIEW_GROUP,train,core
+2455,2457,Find a transaction from last week?,VIEW_TRANSACTIONS,train,core
+2457,2459,Start cash out for 25,WITHDRAW_MONEY,train,core
+2458,2460,Make a $20 bill payment to EFL,BILL_PAY,train,core
+2459,2461,Do I have money in my Sole wallet on 13 August?,CHECK_BALANCE,train,core
+2460,2462,Give me the transaction list for on 22 July,VIEW_TRANSACTIONS,train,core
+2461,2463,Make a $95 bill payment to water supplier,BILL_PAY,train,core
+2463,2465,Is there 300 in my wallet on the app,CHECK_BALANCE,train,core
+2465,2467,App keeps crashing? asap,HELP_SUPPORT,train,core
+2466,2468,Do I have money in my Sole wallet on 3 June?,CHECK_BALANCE,train,core
+2467,2469,Wanna pay my telecom,BILL_PAY,train,core
+2468,2470,Settle my internet charges,BILL_PAY,train,core
+2469,2471,How much spent on bills,CHECK_SPENDING,train,stretch
+2475,2477,Compare my expenses for on 23 September,CHECK_SPENDING,train,stretch
+2478,2480,Send 50 from my wallet to asha,TRANSFER_MONEY,train,core
+2479,2481,How much can i spend this time,CHECK_BALANCE,train,core
+2480,2482,List contributions in family on 19 June,VIEW_GROUP,train,core
+2481,2483,What were my expenses on 25 May?,CHECK_SPENDING,train,stretch
+2482,2484,I have a electricity provider bill for $150,BILL_PAY,train,core
+2483,2485,Need to transfer 200 to mary?,TRANSFER_MONEY,train,core
+2484,2486,I need to collect $20 in cash,WITHDRAW_MONEY,train,core
+2485,2487,Put 500 in savenaca's wallet,TRANSFER_MONEY,train,core
+2487,2489,Settle phone,BILL_PAY,train,core
+2488,2490,Start cash out for 20,WITHDRAW_MONEY,train,core
+2489,2491,Did tui send me money,VIEW_TRANSACTIONS,train,core
+2490,2492,How much is left in my wallet on 4 November?,CHECK_BALANCE,train,core
+2494,2496,Update Samu in my address book,MANAGE_CONTACTS,train,core
+2496,2498,Show payments over $200,VIEW_TRANSACTIONS,train,core
+2498,2500,App keeps crashing asap,HELP_SUPPORT,train,core
+2499,2501,Pay 10 to internet,BILL_PAY,train,core
+2500,2502,How much cash is in Sole on 15 May?,CHECK_BALANCE,train,core
+2502,2504,Can you pay my Water Authority account $125?,BILL_PAY,train,core
+2503,2505,Give me the transaction list for on 6 May,VIEW_TRANSACTIONS,train,core
+2504,2506,Save Adi as a payment contact,MANAGE_CONTACTS,train,core
+2505,2507,How much did i spend on bills this month,CHECK_SPENDING,train,stretch
+2506,2508,Balance on my account,CHECK_BALANCE,train,core
+2507,2509,Show balance at the moment,CHECK_BALANCE,train,core
+2508,2510,Pay 25 to joeli,TRANSFER_MONEY,train,core
+2509,2511,Request a withdrawal of $220,WITHDRAW_MONEY,train,core
+2511,2513,Pay 350 dollars toward my water supplier bill,BILL_PAY,train,core
+2512,2514,Is there $20 in my wallet quickly,CHECK_BALANCE,train,core
+2513,2515,Where can I withdraw $15?,WITHDRAW_MONEY,train,core
+2514,2516,Take out 75,WITHDRAW_MONEY,train,core
+2515,2517,What were my expenses on 7 May?,CHECK_SPENDING,train,stretch
+2516,2518,Find Suli in my recipient list,MANAGE_CONTACTS,train,core
+2517,2519,I want to withdraw 75,WITHDRAW_MONEY,train,core
+2518,2520,Make a school fees payment,BILL_PAY,train,core
+2519,2521,Did i spend more than $200 on utilities,CHECK_SPENDING,train,stretch
+2520,2522,Cash out 20,WITHDRAW_MONEY,train,core
+2521,2523,I want to cash out 95 dollars,WITHDRAW_MONEY,train,core
+2522,2524,Who contributed last week,VIEW_GROUP,train,core
+2523,2525,I want to withdraw $100,WITHDRAW_MONEY,train,core
+2524,2526,Put 120 in ravi's wallet,TRANSFER_MONEY,train,core
+2525,2527,Can i send savenaca 25,TRANSFER_MONEY,train,core
+2526,2528,Withdraw my money,WITHDRAW_MONEY,train,core
+2529,2531,Add john to contacts,MANAGE_CONTACTS,train,core
+2530,2532,How do I withdraw 125 dollars?,WITHDRAW_MONEY,train,core
+2531,2533,Make a broadband payment,BILL_PAY,train,core
+2534,2536,Show payments over 60,VIEW_TRANSACTIONS,train,core
+2535,2537,Report unauthorized transaction at the moment,HELP_SUPPORT,train,core
+2537,2539,I want to withdraw $200,WITHDRAW_MONEY,train,core
+2538,2540,How much did i spend on bills in october,CHECK_SPENDING,train,stretch
+2540,2542,Is there $100 in my wallet at the moment,CHECK_BALANCE,train,core
+2541,2543,Tell me my current balance on 24 October,CHECK_BALANCE,train,core
+2542,2544,Find the 120 transfer?,VIEW_TRANSACTIONS,train,core
+2545,2547,Pay 5 for school fees,BILL_PAY,train,core
+2546,2548,What did I spend on shopping on 8 January?,CHECK_SPENDING,train,stretch
+2547,2549,Pay 100 for school fees,BILL_PAY,train,core
+2548,2550,Find ben in contacts?,MANAGE_CONTACTS,train,core
+2549,2551,Change saved contact peni,MANAGE_CONTACTS,train,core
+2551,2553,Give me an expenditure breakdown on 6 December,CHECK_SPENDING,train,stretch
+2554,2556,Send 80 from my wallet to raj,TRANSFER_MONEY,train,core
+2556,2558,Review my account activity on 12 December,VIEW_TRANSACTIONS,train,core
+2557,2559,Check village group this time,VIEW_GROUP,train,core
+2559,2561,I need to pay raj,TRANSFER_MONEY,train,core
+2561,2563,Delete recipient Josefa,MANAGE_CONTACTS,train,core
+2562,2564,I need to speak to an agent about a forgotten PIN,HELP_SUPPORT,train,core
+2563,2565,See my balance at the moment,CHECK_BALANCE,train,core
+2564,2566,Rename contact mary,MANAGE_CONTACTS,train,core
+2566,2568,App keeps crashing at the moment,HELP_SUPPORT,train,core
+2567,2569,Pay 75 to electricity,BILL_PAY,train,core
+2569,2571,I can't access my account right now now,HELP_SUPPORT,train,core
+2570,2572,Show payments to joeli,VIEW_TRANSACTIONS,train,core
+2573,2575,Find the 10 transfer,VIEW_TRANSACTIONS,train,core
+2574,2576,Account balance please,CHECK_BALANCE,train,core
+2576,2578,How much did i spend on shopping since monday,CHECK_SPENDING,train,stretch
+2577,2579,Reset my pin? if possible,HELP_SUPPORT,train,core
+2578,2580,Process a $5 payment for water supplier,BILL_PAY,train,core
+2579,2581,Show the amount available to spend on 4 October,CHECK_BALANCE,train,core
+2580,2582,Show payments over 200,VIEW_TRANSACTIONS,train,core
+2582,2584,Take $300 out of my Sole account,WITHDRAW_MONEY,train,core
+2583,2585,Check rugby club group at the moment,VIEW_GROUP,train,core
+2584,2586,Someone accessed my wallet quickly,HELP_SUPPORT,train,core
+2585,2587,List my wallet transactions on 28 September,VIEW_TRANSACTIONS,train,core
+2586,2588,Find the 20 transfer,VIEW_TRANSACTIONS,train,core
+2587,2589,Show incoming transfers on 19 May,VIEW_TRANSACTIONS,train,core
+2588,2590,Show spending by category on 21 July,CHECK_SPENDING,train,stretch
+2589,2591,Please help resolve updating my phone number,HELP_SUPPORT,train,core
+2590,2592,Get 250 cash,WITHDRAW_MONEY,train,core
+2591,2593,Transfer 30 to mary,TRANSFER_MONEY,train,core
+2592,2594,Save Mika as a payment contact,MANAGE_CONTACTS,train,core
+2593,2595,Open rugby club group this time,VIEW_GROUP,train,core
+2594,2596,Where can I withdraw $350?,WITHDRAW_MONEY,train,core
+2595,2597,Find a transaction from since monday?,VIEW_TRANSACTIONS,train,core
+2597,2599,List contributions in family on 13 November,VIEW_GROUP,train,core
+2600,2602,Remove raj from contacts,MANAGE_CONTACTS,train,core
+2601,2603,List transfers in the last 30 days this time,VIEW_TRANSACTIONS,train,core
+2602,2604,Pay my Vodafone bill of $30,BILL_PAY,train,core
+2606,2608,List contributions in village on 8 July,VIEW_GROUP,train,core
+2608,2610,Tell me my current balance on 12 April,CHECK_BALANCE,train,core
+2609,2611,Connect me to support about an account error,HELP_SUPPORT,train,core
+2611,2613,How can I get assistance with a failed transfer?,HELP_SUPPORT,train,core
+2613,2615,Pay 50 for telecom,BILL_PAY,train,core
+2614,2616,Compare spending this month and last month please,CHECK_SPENDING,train,stretch
+2615,2617,I forgot my pin on the app,HELP_SUPPORT,train,core
+2616,2618,List contributions in church on 4 March,VIEW_GROUP,train,core
+2618,2620,How much spent at restaurants in sole,CHECK_SPENDING,train,stretch
+2619,2621,Can i send asha 15?,TRANSFER_MONEY,train,core
+2620,2622,Show spending by category on 2 April,CHECK_SPENDING,train,stretch
+2621,2623,Make a $450 bill payment to Water Authority,BILL_PAY,train,core
+2624,2626,Check my Sole balance on 14 March,CHECK_BALANCE,train,core
+2625,2627,I need to pay electricity provider $125,BILL_PAY,train,core
+2627,2629,What did i spend in october,CHECK_SPENDING,train,stretch
+2628,2630,Can you send $100 to sera,TRANSFER_MONEY,train,core
+2631,2633,Need to transfer 250 to jone,TRANSFER_MONEY,train,core
+2632,2634,Pay adi $200,TRANSFER_MONEY,train,core
+2633,2635,Is tui saved,MANAGE_CONTACTS,train,core
+2634,2636,Did priya send me money,VIEW_TRANSACTIONS,train,core
+2636,2638,How much did I spend on 28 March?,CHECK_SPENDING,train,stretch
+2637,2639,Pay my waf account,BILL_PAY,train,core
+2638,2640,Show money received on 18 September,VIEW_TRANSACTIONS,train,core
+2639,2641,I would like support for a delayed transaction,HELP_SUPPORT,train,core
+2640,2642,Get 100 cash,WITHDRAW_MONEY,train,core
+2641,2643,Show money received on 25 July,VIEW_TRANSACTIONS,train,core
+2644,2646,Put $20 in mary's wallet,TRANSFER_MONEY,train,core
+2645,2647,How much did i spend on utilities over the weekend,CHECK_SPENDING,train,stretch
+2646,2648,Contact support for me on my account,HELP_SUPPORT,train,core
+2647,2649,I need to collect $200 in cash,WITHDRAW_MONEY,train,core
+2651,2653,How much do i have at the moment,CHECK_BALANCE,train,core
+2653,2655,Show incoming transfers on 28 January,VIEW_TRANSACTIONS,train,core
+2655,2657,Total expenses,CHECK_SPENDING,train,stretch
+2656,2658,Total saved by holiday savings group now,VIEW_GROUP,train,core
+2660,2662,I want to pay my school fees on my account,BILL_PAY,train,core
+2661,2663,Pay $100 for broadband,BILL_PAY,train,core
+2662,2664,Remove Ravi from my contacts,MANAGE_CONTACTS,train,core
+2663,2665,Can you send 75 to ana,TRANSFER_MONEY,train,core
+2664,2666,Pay mere 30,TRANSFER_MONEY,train,core
+2665,2667,What payments did I make on 22 February?,VIEW_TRANSACTIONS,train,core
+2666,2668,Remove Asha from my contacts,MANAGE_CONTACTS,train,core
+2667,2669,How much did i spend on food this month at the moment,CHECK_SPENDING,train,stretch
+2668,2670,Pay 40 to internet,BILL_PAY,train,core
+2670,2672,Show money received on 2 April,VIEW_TRANSACTIONS,train,core
+2671,2673,Take out 10,WITHDRAW_MONEY,train,core
+2672,2674,Help me withdraw $20,WITHDRAW_MONEY,train,core
+2673,2675,Total expenses since monday,CHECK_SPENDING,train,stretch
+2675,2677,What is my available balance on 15 December?,CHECK_BALANCE,train,core
+2676,2678,Did i spend more than 30 on fuel,CHECK_SPENDING,train,stretch
+2677,2679,I want to send 5 to sera,TRANSFER_MONEY,train,core
+2679,2681,Please settle my Digicel invoice for $45,BILL_PAY,train,core
+2680,2682,Show transactions yesterday,VIEW_TRANSACTIONS,train,core
+2682,2684,I need to speak to an agent about identity verification,HELP_SUPPORT,train,core
+2683,2685,Check the balance of our friends group,VIEW_GROUP,train,core
+2684,2686,Pay 15 to water,BILL_PAY,train,core
+2685,2687,Search contacts for jone,MANAGE_CONTACTS,train,core
+2686,2688,Get $20 cash,WITHDRAW_MONEY,train,core
+2691,2693,Show contributions to village group in sole,VIEW_GROUP,train,core
+2692,2694,Help me take out 15 dollars,WITHDRAW_MONEY,train,core
+2695,2697,Pay 300 to litia,TRANSFER_MONEY,train,core
+2696,2698,Send 15 fiji dollars to ana,TRANSFER_MONEY,train,core
+2698,2700,List contributions in friends on 21 September,VIEW_GROUP,train,core
+2700,2702,Show transactions this week on my account,VIEW_TRANSACTIONS,train,core
+2701,2703,Save Meli as a payment contact,MANAGE_CONTACTS,train,core
+2702,2704,Pay $50 for school fees,BILL_PAY,train,core
+2703,2705,Can i send jone $50?,TRANSFER_MONEY,train,core
+2704,2706,Review my account activity on 21 February,VIEW_TRANSACTIONS,train,core
+2706,2708,Can you send 500 to joeli,TRANSFER_MONEY,train,core
+2708,2710,Check my Sole balance on 5 September,CHECK_BALANCE,train,core
+2709,2711,How much money have i got in sole,CHECK_BALANCE,train,core
+2710,2712,Send $65 to Kumar,TRANSFER_MONEY,train,core
+2711,2713,Display my latest transaction history on 4 July,VIEW_TRANSACTIONS,train,core
+2712,2714,What is happening in my school savings group on 11 April?,VIEW_GROUP,train,core
+2713,2715,What did i spend last month,CHECK_SPENDING,train,stretch
+2714,2716,Who contributed to church on 9 March?,VIEW_GROUP,train,core
+2715,2717,Wrong pin too many times quickly,HELP_SUPPORT,train,core
+2717,2719,Pay $20 for school fees,BILL_PAY,train,core
+2719,2721,I would like support for an incorrect payment,HELP_SUPPORT,train,core
+2720,2722,Pay 5 to water,BILL_PAY,train,core
+2721,2723,View our church group activity on 15 March,VIEW_GROUP,train,core
+2722,2724,I need to collect $450 in cash,WITHDRAW_MONEY,train,core
+2723,2725,Did i spend more than 10 on shopping,CHECK_SPENDING,train,stretch
+2724,2726,Delete asha as payee,MANAGE_CONTACTS,train,core
+2725,2727,List my wallet transactions on 18 September,VIEW_TRANSACTIONS,train,core
+2726,2728,Show incoming transfers on 5 February,VIEW_TRANSACTIONS,train,core
+2727,2729,Show outgoing payments on 19 June,VIEW_TRANSACTIONS,train,core
+2729,2731,What is happening in my family savings group on 17 April?,VIEW_GROUP,train,core
+2730,2732,I forgot my pin today,HELP_SUPPORT,train,core
+2732,2734,Please settle my mobile provider invoice for $7,BILL_PAY,train,core
+2733,2735,I want to withdraw 25,WITHDRAW_MONEY,train,core
+2735,2737,Give me an expenditure breakdown on 8 April,CHECK_SPENDING,train,stretch
+2738,2740,How much cash is in Sole this morning?,CHECK_BALANCE,train,core
+2739,2741,What payments did I make on 9 April?,VIEW_TRANSACTIONS,train,core
+2740,2742,Make a mobile payment,BILL_PAY,train,core
+2741,2743,Show deposits since monday,VIEW_TRANSACTIONS,train,core
+2742,2744,Rename contact john,MANAGE_CONTACTS,train,core
+2743,2745,List contributions in village on 24 February,VIEW_GROUP,train,core
+2744,2746,"Is there 1,000 in my wallet on my account",CHECK_BALANCE,train,core
+2746,2748,Start a transfer for savenaca,TRANSFER_MONEY,train,core
+2747,2749,Bill pay electricity,BILL_PAY,train,core
+2748,2750,Is there 10 in my wallet at the moment,CHECK_BALANCE,train,core
+2749,2751,Pay litia 150,TRANSFER_MONEY,train,core
+2750,2752,Wallet balance in sole,CHECK_BALANCE,train,core
+2751,2753,How much spent on utilities,CHECK_SPENDING,train,stretch
+2752,2754,Withdraw $10 from my wallet,WITHDRAW_MONEY,train,core
+2753,2755,What were my expenses on 7 March?,CHECK_SPENDING,train,stretch
+2754,2756,Pay 20 to school fees,BILL_PAY,train,core
+2755,2757,View our work group activity on 22 June,VIEW_GROUP,train,core
+2756,2758,Find savenaca in contacts,MANAGE_CONTACTS,train,core
+2758,2760,Display my wallet balance on 11 September,CHECK_BALANCE,train,core
+2760,2762,Help me withdraw 30,WITHDRAW_MONEY,train,core
+2761,2763,I want to withdraw 150,WITHDRAW_MONEY,train,core
+2762,2764,How much did i spend on utilities,CHECK_SPENDING,train,stretch
+2766,2768,View our school group activity on 6 August,VIEW_GROUP,train,core
+2767,2769,What is happening in my community savings group on 26 June?,VIEW_GROUP,train,core
+2768,2770,Take $15 out of my Sole account,WITHDRAW_MONEY,train,core
+2769,2771,Tell me how much I paid out on 23 September,CHECK_SPENDING,train,stretch
+2770,2772,Transfer failed please in sole,HELP_SUPPORT,train,core
+2771,2773,Show withdrawals,VIEW_TRANSACTIONS,train,core
+2772,2774,Pay 120 for electricity,BILL_PAY,train,core
+2773,2775,How much spent on shopping,CHECK_SPENDING,train,stretch
+2778,2780,Can you guide me on my account access?,HELP_SUPPORT,train,core
+2779,2781,Review my account activity on 20 April,VIEW_TRANSACTIONS,train,core
+2780,2782,Transfer 20 to ben,TRANSFER_MONEY,train,core
+2781,2783,I have a question regarding a delayed transaction,HELP_SUPPORT,train,core
+2782,2784,Which transactions happened this week?,VIEW_TRANSACTIONS,train,core
+2785,2787,Show incoming transfers on 23 April,VIEW_TRANSACTIONS,train,core
+2787,2789,Where can I withdraw $125?,WITHDRAW_MONEY,train,core
+2788,2790,Add up food expenses at the moment,CHECK_SPENDING,train,stretch
+2790,2792,Who contributed to family on 13 November?,VIEW_GROUP,train,core
+2792,2794,I want to send $200 to raj,TRANSFER_MONEY,train,core
+2793,2795,Update mere's contact?,MANAGE_CONTACTS,train,core
+2794,2796,Edit the saved details for Leilani,MANAGE_CONTACTS,train,core
+2795,2797,Send money to savenaca,TRANSFER_MONEY,train,core
+2796,2798,Settle $250 owed to mobile provider,BILL_PAY,train,core
+2798,2800,I forgot my pin at the moment,HELP_SUPPORT,train,core
+2799,2801,Show our group account now,VIEW_GROUP,train,core
+2800,2802,Show spending by category on 11 March,CHECK_SPENDING,train,stretch
+2802,2804,Pay 5 to school fees,BILL_PAY,train,core
+2803,2805,Is there 20 in my wallet if possible,CHECK_BALANCE,train,core
+2804,2806,Show payments to ravi on the app,VIEW_TRANSACTIONS,train,core
+2806,2808,Please settle my Vodafone invoice for $350,BILL_PAY,train,core
+2807,2809,Is joeli saved,MANAGE_CONTACTS,train,core
+2808,2810,Pay my telecom account,BILL_PAY,train,core
+2809,2811,How much is in my sole wallet on my account,CHECK_BALANCE,train,core
+2810,2812,Where do I report updating my phone number?,HELP_SUPPORT,train,core
+2813,2815,Save joeli,MANAGE_CONTACTS,train,core
+2815,2817,Send money to ana,TRANSFER_MONEY,train,core
+2816,2818,I want to send 10 to ravi,TRANSFER_MONEY,train,core
+2817,2819,Help me pay $80 to internet provider,BILL_PAY,train,core
+2818,2820,App keeps crashing? if possible,HELP_SUPPORT,train,core
+2820,2822,How can I get assistance with an unrecognized charge?,HELP_SUPPORT,train,core
+2821,2823,Remove tui from contacts,MANAGE_CONTACTS,train,core
+2822,2824,Compare my expenses for on 10 August,CHECK_SPENDING,train,stretch
+2825,2827,Check my account balance in sole,CHECK_BALANCE,train,core
+2826,2828,Add Kumar to my recipients,MANAGE_CONTACTS,train,core
+2827,2829,Pay the telecom bill,BILL_PAY,train,core
+2828,2830,Send 5 to my friend sera,TRANSFER_MONEY,train,core
+2829,2831,List contributions in village on 3 November,VIEW_GROUP,train,core
+2830,2832,Find school group at the moment,VIEW_GROUP,train,core
+2831,2833,Give me the transaction list for on 21 April,VIEW_TRANSACTIONS,train,core
+2832,2834,Pay 100 for phone,BILL_PAY,train,core
+2833,2835,Did i spend more than 5 on mobile data,CHECK_SPENDING,train,stretch
+2834,2836,List groups i belong to now,VIEW_GROUP,train,core
+2837,2839,Send 250 to my friend adi,TRANSFER_MONEY,train,core
+2840,2842,Create a contact for raj,MANAGE_CONTACTS,train,core
+2841,2843,Rename contact ravi,MANAGE_CONTACTS,train,core
+2842,2844,Total saved by holiday savings group at the moment,VIEW_GROUP,train,core
+2845,2847,Can I cash out $125 today?,WITHDRAW_MONEY,train,core
+2846,2848,I have a Digicel bill for $300,BILL_PAY,train,core
+2848,2850,I have a phone bill,BILL_PAY,train,core
+2850,2852,Please settle my EFL invoice for $12,BILL_PAY,train,core
+2851,2853,Find my wallet activity on 28 November,VIEW_TRANSACTIONS,train,core
+2852,2854,Withdraw $5 from my wallet,WITHDRAW_MONEY,train,core
+2853,2855,Take 60 from my wallet,WITHDRAW_MONEY,train,core
+2854,2856,App keeps crashing on my account,HELP_SUPPORT,train,core
+2855,2857,Settle internet,BILL_PAY,train,core
+2856,2858,Take out 40,WITHDRAW_MONEY,train,core
+2857,2859,Search contacts for mary,MANAGE_CONTACTS,train,core
+2859,2861,Cash out 250,WITHDRAW_MONEY,train,core
+2861,2863,Find the 150 transfer,VIEW_TRANSACTIONS,train,core
+2862,2864,"Need to transfer 1,000 to kumar",TRANSFER_MONEY,train,core
+2864,2866,List contributions in school on 19 February,VIEW_GROUP,train,core
+2865,2867,Save Ratu as a payment contact,MANAGE_CONTACTS,train,core
+2867,2869,Can i send jone $20,TRANSFER_MONEY,train,core
+2869,2871,Request a withdrawal of $110,WITHDRAW_MONEY,train,core
+2870,2872,Need to transfer 15 to john,TRANSFER_MONEY,train,core
+2871,2873,Put 75 in tui's wallet,TRANSFER_MONEY,train,core
+2873,2875,Open the saved recipient entry for Mere,MANAGE_CONTACTS,train,core
+2874,2876,Cash out 50,WITHDRAW_MONEY,train,core
+2875,2877,Change saved contact jone,MANAGE_CONTACTS,train,core
+2876,2878,Did peni send me money,VIEW_TRANSACTIONS,train,core
+2878,2880,Show the amount available to spend on 16 December,CHECK_BALANCE,train,core
+2879,2881,Wallet balance on my account,CHECK_BALANCE,train,core
+2880,2882,"Send 1,000 to my friend mere",TRANSFER_MONEY,train,core
+2881,2883,What is happening in my village savings group on 15 December?,VIEW_GROUP,train,core
+2882,2884,Show outgoing payments on 18 March,VIEW_TRANSACTIONS,train,core
+2884,2886,Show the amount available to spend on 17 November,CHECK_BALANCE,train,core
+2885,2887,How much cash is in Sole on 9 October?,CHECK_BALANCE,train,core
+2887,2889,Show transactions this month in sole,VIEW_TRANSACTIONS,train,core
+2888,2890,Give me the transaction list for on 27 October,VIEW_TRANSACTIONS,train,core
+2889,2891,Who do i call for help please now,HELP_SUPPORT,train,core
+2890,2892,Who contributed to church on 18 August?,VIEW_GROUP,train,core
+2892,2894,I need to speak to an agent about a locked account,HELP_SUPPORT,train,core
+2893,2895,Update priya's contact,MANAGE_CONTACTS,train,core
+2894,2896,Open school group in sole,VIEW_GROUP,train,core
+2898,2900,Need to transfer $50 to ravi,TRANSFER_MONEY,train,core
+2899,2901,Pay 10 to ana,TRANSFER_MONEY,train,core
+2900,2902,How much money is left quickly,CHECK_BALANCE,train,core
+2901,2903,Start a transfer for tui,TRANSFER_MONEY,train,core
+2902,2904,Delete recipient Jone,MANAGE_CONTACTS,train,core
+2903,2905,Show my groups in sole,VIEW_GROUP,train,core
+2904,2906,Show payments over 25,VIEW_TRANSACTIONS,train,core
+2905,2907,Is there 50 in my wallet at the moment,CHECK_BALANCE,train,core
+2906,2908,List contributions in friends on 21 August,VIEW_GROUP,train,core
+2908,2910,Remove Ratu from my contacts,MANAGE_CONTACTS,train,core
+2909,2911,What did I spend on shopping on 14 September?,CHECK_SPENDING,train,stretch
+2912,2914,Add ben to contacts,MANAGE_CONTACTS,train,core
+2913,2915,I want to withdraw 120,WITHDRAW_MONEY,train,core
+2914,2916,Who contributed to school on 28 November?,VIEW_GROUP,train,core
+2915,2917,Pay 10 for water,BILL_PAY,train,core
+2918,2920,I want to cash out 100 dollars,WITHDRAW_MONEY,train,core
+2919,2921,Did i spend more than 40 on mobile data,CHECK_SPENDING,train,stretch
+2922,2924,Search contacts for adi,MANAGE_CONTACTS,train,core
+2923,2925,Connect me to support about an unrecognized charge,HELP_SUPPORT,train,core
+2925,2927,Can you check my account balance on 23 October?,CHECK_BALANCE,train,core
+2926,2928,I have a Vodafone bill for $500,BILL_PAY,train,core
+2927,2929,Show spending by category on 28 December,CHECK_SPENDING,train,stretch
+2928,2930,Show payments to litia,VIEW_TRANSACTIONS,train,core
+2930,2932,Can you pay my Digicel account $25?,BILL_PAY,train,core
+2931,2933,Who do i call for help on sole,HELP_SUPPORT,train,core
+2932,2934,Can you pay my water supplier account $500?,BILL_PAY,train,core
+2933,2935,Display my wallet balance on 21 May,CHECK_BALANCE,train,core
+2934,2936,I would like support for a merchant payment issue,HELP_SUPPORT,train,core
+2935,2937,Did asha send me money?,VIEW_TRANSACTIONS,train,core
+2936,2938,Make a $110 bill payment to Water Authority,BILL_PAY,train,core
+2937,2939,Show outgoing payments on 13 July,VIEW_TRANSACTIONS,train,core
+2938,2940,Who contributed to holiday on 17 August?,VIEW_GROUP,train,core
+2939,2941,Can you check my account balance on 13 November?,CHECK_BALANCE,train,core
+2940,2942,Find mere in contacts,MANAGE_CONTACTS,train,core
+2941,2943,Can i send mika 200,TRANSFER_MONEY,train,core
+2942,2944,Pay peni 80,TRANSFER_MONEY,train,core
+2944,2946,Send $200 to my friend priya,TRANSFER_MONEY,train,core
+2947,2949,Where can I withdraw $500?,WITHDRAW_MONEY,train,core
+2948,2950,Where can I withdraw $110?,WITHDRAW_MONEY,train,core
+2949,2951,How much cash is in Sole on 16 March?,CHECK_BALANCE,train,core
+2950,2952,Can i withdraw $100,WITHDRAW_MONEY,train,core
+2952,2954,Display my wallet balance on 16 June,CHECK_BALANCE,train,core
+2953,2955,What is happening in my friends savings group on 25 April?,VIEW_GROUP,train,core
+2955,2957,Pay my Digicel bill of $250,BILL_PAY,train,core
+2956,2958,What did i spend,CHECK_SPENDING,train,stretch
+2957,2959,Report fraud in sole,HELP_SUPPORT,train,core
+2958,2960,Create a contact for roshni,MANAGE_CONTACTS,train,core
+2959,2961,Pay 100 for waf,BILL_PAY,train,core
+2961,2963,How much did i spend on restaurants this week,CHECK_SPENDING,train,stretch
+2962,2964,Cash out $100,WITHDRAW_MONEY,train,core
+2964,2966,List transfers yesterday,VIEW_TRANSACTIONS,train,core
+2965,2967,I need to pay adi,TRANSFER_MONEY,train,core
+2967,2969,I can't access my account on my account,HELP_SUPPORT,train,core
+2968,2970,Transfer funds to sera,TRANSFER_MONEY,train,core
+2969,2971,Who contributed to school on 13 January?,VIEW_GROUP,train,core
+2971,2973,Can you guide me on an incorrect payment?,HELP_SUPPORT,train,core
+2972,2974,How much did i spend on bills yesterday,CHECK_SPENDING,train,stretch
+2973,2975,Can you send 500 to asha,TRANSFER_MONEY,train,core
+2975,2977,List contributions in village over the weekend,VIEW_GROUP,train,core
+2976,2978,Add up shopping expenses,CHECK_SPENDING,train,stretch
+2980,2982,What payments did i make today now,VIEW_TRANSACTIONS,train,core
+2981,2983,Where do I report a locked account?,HELP_SUPPORT,train,core
+2982,2984,Review my account activity on 17 October,VIEW_TRANSACTIONS,train,core
+2983,2985,I need to collect $35 in cash,WITHDRAW_MONEY,train,core
+2984,2986,Withdraw $350 from my wallet,WITHDRAW_MONEY,train,core
+2986,2988,Total saved by church group in sole,VIEW_GROUP,train,core
+2987,2989,Cash out $200,WITHDRAW_MONEY,train,core
+2988,2990,Help me withdraw 5,WITHDRAW_MONEY,train,core
+2989,2991,What were my expenses on 6 September?,CHECK_SPENDING,train,stretch
+2990,2992,My savings group on the app,VIEW_GROUP,train,core
+2992,2994,Find adi in contacts,MANAGE_CONTACTS,train,core
+2993,2995,I have a Water Authority bill for $100,BILL_PAY,train,core
+2994,2996,Pay 120 to jone,TRANSFER_MONEY,train,core
+2995,2997,Show outgoing payments on 15 October,VIEW_TRANSACTIONS,train,core
+2999,3001,How can I get assistance with a merchant payment issue?,HELP_SUPPORT,train,core

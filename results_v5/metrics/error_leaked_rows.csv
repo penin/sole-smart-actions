@@ -1,0 +1,40 @@
+text,actual_intent,predicted_intent,max_confidence,correct
+Display my wallet balance on 15 September,CHECK_BALANCE,CHECK_BALANCE,0.9982465329862972,True
+Show last 5 transactions,VIEW_TRANSACTIONS,VIEW_TRANSACTIONS,0.9850547970051782,True
+Please settle my EFL invoice for $175,BILL_PAY,BILL_PAY,0.9990708740128869,True
+Pay 70 dollars toward my water supplier bill,BILL_PAY,BILL_PAY,0.9994958932245026,True
+Settle $350 owed to internet provider,BILL_PAY,BILL_PAY,0.9992641222042401,True
+Show last 5 transactions on my account,VIEW_TRANSACTIONS,VIEW_TRANSACTIONS,0.9957104159391507,True
+Give me an expenditure breakdown on 27 May,CHECK_SPENDING,CHECK_SPENDING,0.9951079319097544,True
+Help me pay $250 to internet provider,BILL_PAY,BILL_PAY,0.9994997935531592,True
+Give me an expenditure breakdown on 25 December,CHECK_SPENDING,CHECK_SPENDING,0.9935699762426334,True
+Show incoming transfers on 26 May,VIEW_TRANSACTIONS,VIEW_TRANSACTIONS,0.9972449378200245,True
+What is my available balance on 15 October?,CHECK_BALANCE,CHECK_BALANCE,0.999563723774723,True
+Settle $300 owed to internet provider,BILL_PAY,BILL_PAY,0.999209630018232,True
+How much cash is in Sole on 12 April?,CHECK_BALANCE,CHECK_BALANCE,0.9967773096259678,True
+Show incoming transfers on 9 December,VIEW_TRANSACTIONS,VIEW_TRANSACTIONS,0.9976319987709709,True
+Pay my electricity provider bill of $90,BILL_PAY,BILL_PAY,0.9999599659080253,True
+Tell me how much I paid out on 27 July,CHECK_SPENDING,CHECK_SPENDING,0.996578507013976,True
+Can you check my account balance on 18 April?,CHECK_BALANCE,CHECK_BALANCE,0.9988784123363248,True
+Show outgoing payments on 3 March,VIEW_TRANSACTIONS,VIEW_TRANSACTIONS,0.9962888529004534,True
+Show outgoing payments on 23 March,VIEW_TRANSACTIONS,VIEW_TRANSACTIONS,0.9964884994261911,True
+Show the amount available to spend on 15 September,CHECK_BALANCE,CHECK_BALANCE,0.989487442693334,True
+Help me take out 60 dollars,WITHDRAW_MONEY,WITHDRAW_MONEY,0.9987479344777187,True
+Withdraw $70 from my wallet,WITHDRAW_MONEY,WITHDRAW_MONEY,0.9996529433278413,True
+Settle $5 owed to mobile provider,BILL_PAY,BILL_PAY,0.9981001697791285,True
+Show money received on 20 March,VIEW_TRANSACTIONS,VIEW_TRANSACTIONS,0.9947748460912343,True
+Give me the transaction list for on 6 October,VIEW_TRANSACTIONS,VIEW_TRANSACTIONS,0.9981116636388851,True
+Display my wallet balance on 26 November,CHECK_BALANCE,CHECK_BALANCE,0.9990674689369962,True
+List contributions in family on 5 March,VIEW_GROUP,VIEW_GROUP,0.9946773011941825,True
+Show the amount available to spend on 5 June,CHECK_BALANCE,CHECK_BALANCE,0.9929174226609965,True
+Request a withdrawal of $35,WITHDRAW_MONEY,WITHDRAW_MONEY,0.9839224979756314,True
+Withdraw $100 from my wallet,WITHDRAW_MONEY,WITHDRAW_MONEY,0.999689039593721,True
+I need to collect $220 in cash,WITHDRAW_MONEY,WITHDRAW_MONEY,0.9960345872565908,True
+Tell me my current balance on 20 August,CHECK_BALANCE,CHECK_BALANCE,0.998733317475684,True
+Do I have money in my Sole wallet on 4 December?,CHECK_BALANCE,CHECK_BALANCE,0.9987988542892691,True
+Display my latest transaction history on 13 September,VIEW_TRANSACTIONS,VIEW_TRANSACTIONS,0.9961098533477813,True
+How do I withdraw 80 dollars?,WITHDRAW_MONEY,WITHDRAW_MONEY,0.9962150501985695,True
+Take $60 out of my Sole account,WITHDRAW_MONEY,WITHDRAW_MONEY,0.997100442886097,True
+Show money received on 8 February,VIEW_TRANSACTIONS,VIEW_TRANSACTIONS,0.9939053043136776,True
+Show incoming transfers on 3 November,VIEW_TRANSACTIONS,VIEW_TRANSACTIONS,0.9963473125619968,True
+List my wallet transactions on 27 October,VIEW_TRANSACTIONS,VIEW_TRANSACTIONS,0.9948208362284529,True

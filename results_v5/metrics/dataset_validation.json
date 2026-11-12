@@ -1,0 +1,152 @@
+{
+  "passed": true,
+  "failed_checks": [],
+  "dedup_normalization": "Duplicate-check key: Unicode NFKC, casefold, collapsed whitespace, surrounding punctuation removed.",
+  "checks": [
+    {
+      "check": "total_rows",
+      "value": 3000,
+      "expected": 3000,
+      "status": "pass",
+      "details": ""
+    },
+    {
+      "check": "rows_train",
+      "value": 2160,
+      "expected": 2160,
+      "status": "pass",
+      "details": ""
+    },
+    {
+      "check": "rows_validation",
+      "value": 270,
+      "expected": 270,
+      "status": "pass",
+      "details": ""
+    },
+    {
+      "check": "rows_test",
+      "value": 270,
+      "expected": 270,
+      "status": "pass",
+      "details": ""
+    },
+    {
+      "check": "rows_evaluation_only",
+      "value": 300,
+      "expected": 300,
+      "status": "pass",
+      "details": ""
+    },
+    {
+      "check": "rows_per_intent_including_unknown",
+      "value": "300\u2013300",
+      "expected": 300,
+      "status": "pass",
+      "details": "all 10 labels"
+    },
+    {
+      "check": "missing_command_text",
+      "value": 0,
+      "expected": 0,
+      "status": "pass",
+      "details": ""
+    },
+    {
+      "check": "missing_intent_label",
+      "value": 0,
+      "expected": 0,
+      "status": "pass",
+      "details": ""
+    },
+    {
+      "check": "exact_duplicate_commands",
+      "value": 0,
+      "expected": 0,
+      "status": "pass",
+      "details": ""
+    },
+    {
+      "check": "normalized_duplicate_commands",
+      "value": 0,
+      "expected": 0,
+      "status": "pass",
+      "details": "NFKC + casefold + whitespace + surrounding punctuation; "
+    },
+    {
+      "check": "cross_split_duplicate_commands",
+      "value": 0,
+      "expected": 0,
+      "status": "pass",
+      "details": "normalized key shared by two splits"
+    },
+    {
+      "check": "conflicting_labels_same_normalized_command",
+      "value": 0,
+      "expected": 0,
+      "status": "pass",
+      "details": ""
+    },
+    {
+      "check": "unknown_intent_evaluation_only",
+      "value": 0,
+      "expected": 0,
+      "status": "pass",
+      "details": "UNKNOWN_INTENT rows outside evaluation_only"
+    },
+    {
+      "check": "info_duplicates_ignoring_interior_punctuation",
+      "value": 14,
+      "expected": "info",
+      "status": "info",
+      "details": "How tall is mount everest? if possible; Spending this month? in sole; Forgot password? now; App keeps crashing on sole; App keeps crashing? now; App keeps crashing now"
+    },
+    {
+      "check": "info_validation_number_masked_template_in_train",
+      "value": 23,
+      "expected": "info",
+      "status": "info",
+      "details": "same command as a training row once numbers are masked"
+    },
+    {
+      "check": "info_test_number_masked_template_in_train",
+      "value": 39,
+      "expected": "info",
+      "status": "info",
+      "details": "same command as a training row once numbers are masked"
+    },
+    {
+      "check": "info_evaluation_only_number_masked_template_in_train",
+      "value": 0,
+      "expected": "info",
+      "status": "info",
+      "details": "same command as a training row once numbers are masked"
+    },
+    {
+      "check": "info_replacement_log_rows",
+      "value": 997,
+      "expected": "info",
+      "status": "info",
+      "details": "duplicate occurrences replaced by the dataset author (from the workbook)"
+    }
+  ],
+  "replacement_log_rows": 997,
+  "replacements_by_split": {
+    "train": 693,
+    "evaluation_only": 146,
+    "test": 97,
+    "validation": 61
+  },
+  "replacements_by_intent": {
+    "CHECK_BALANCE": 158,
+    "UNKNOWN_INTENT": 146,
+    "VIEW_GROUP": 145,
+    "HELP_SUPPORT": 135,
+    "VIEW_TRANSACTIONS": 103,
+    "BILL_PAY": 91,
+    "CHECK_SPENDING": 86,
+    "WITHDRAW_MONEY": 63,
+    "MANAGE_CONTACTS": 62,
+    "TRANSFER_MONEY": 8
+  }
+}

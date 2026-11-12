@@ -1,0 +1,754 @@
+{
+  "generated_utc": "2026-11-12T02:55:54+00:00",
+  "default_threshold": 0.34152482478950635,
+  "default_selection": "validation known-intent coverage target 95% (unknown labels not used)",
+  "status": "exploratory except the validation-calibrated default",
+  "known_set": "test (270 legitimate commands)",
+  "unknown_set": "300 evaluation-only",
+  "results": [
+    {
+      "threshold": 0.0,
+      "model_classification": {
+        "known": {
+          "n": 270,
+          "correct_accept": 253,
+          "incorrect_accept": 17,
+          "false_reject": 0,
+          "coverage": 1.0,
+          "false_rejection_rate": 0.0,
+          "accepted_accuracy": 0.937037037037037,
+          "accepted_macro_f1": 0.9366172047913144,
+          "accepted_macro_f1_defined_classes": 9,
+          "end_to_end_accuracy": 0.937037037037037,
+          "misrouted_to_financial": 2,
+          "false_rejection_by_intent": {
+            "TRANSFER_MONEY": {
+              "support": 30,
+              "false_rejected": 0,
+              "false_rejection_rate": 0.0
+            },
+            "CHECK_BALANCE": {
+              "support": 30,
+              "false_rejected": 0,
+              "false_rejection_rate": 0.0
+            },
+            "VIEW_TRANSACTIONS": {
+              "support": 30,
+              "false_rejected": 0,
+              "false_rejection_rate": 0.0
+            },
+            "WITHDRAW_MONEY": {
+              "support": 30,
+              "false_rejected": 0,
+              "false_rejection_rate": 0.0
+            },
+            "BILL_PAY": {
+              "support": 30,
+              "false_rejected": 0,
+              "false_rejection_rate": 0.0
+            },
+            "HELP_SUPPORT": {
+              "support": 30,
+              "false_rejected": 0,
+              "false_rejection_rate": 0.0
+            },
+            "MANAGE_CONTACTS": {
+              "support": 30,
+              "false_rejected": 0,
+              "false_rejection_rate": 0.0
+            },
+            "VIEW_GROUP": {
+              "support": 30,
+              "false_rejected": 0,
+              "false_rejection_rate": 0.0
+            },
+            "CHECK_SPENDING": {
+              "support": 30,
+              "false_rejected": 0,
+              "false_rejection_rate": 0.0
+            }
+          }
+        },
+        "unknown": {
+          "n": 300,
+          "rejected_as_unknown_intent": 0,
+          "rejection_rate": 0.0,
+          "false_accept_rate": 1.0,
+          "classified_as_help_support": 96,
+          "classified_as_help_support_rate": 0.32,
+          "classified_as_financial": 45,
+          "classified_as_financial_rate": 0.15,
+          "classified_as_financial_by_intent": {
+            "TRANSFER_MONEY": 22,
+            "BILL_PAY": 16,
+            "WITHDRAW_MONEY": 7
+          },
+          "classified_as_other_intent": 159,
+          "rejection_rate_unique_phrases": 0.0
+        }
+      },
+      "application": {
+        "unknown_fallback_triggered": 0,
+        "unknown_routed_to_help_support": 96,
+        "unknown_safe_fallback": 96,
+        "unknown_safe_fallback_rate": 0.32,
+        "unknown_routed_to_financial_action": 45,
+        "known_fallback_triggered": 0,
+        "note": "Safe fallback = unknown command either rejected (app shows HELP/clarify fallback) or classified HELP_SUPPORT by the model (app routes to help). The second case is a model misclassification with a benign app outcome, not a rejection."
+      },
+      "label": "No threshold",
+      "validation_known_coverage": 1.0
+    },
+    {
+      "threshold": 0.25,
+      "model_classification": {
+        "known": {
+          "n": 270,
+          "correct_accept": 253,
+          "incorrect_accept": 12,
+          "false_reject": 5,
+          "coverage": 0.9814814814814815,
+          "false_rejection_rate": 0.018518518518518517,
+          "accepted_accuracy": 0.9547169811320755,
+          "accepted_macro_f1": 0.9539372012305106,
+          "accepted_macro_f1_defined_classes": 9,
+          "end_to_end_accuracy": 0.937037037037037,
+          "misrouted_to_financial": 2,
+          "false_rejection_by_intent": {
+            "TRANSFER_MONEY": {
+              "support": 30,
+              "false_rejected": 4,
+              "false_rejection_rate": 0.13333333333333333
+            },
+            "CHECK_BALANCE": {
+              "support": 30,
+              "false_rejected": 0,
+              "false_rejection_rate": 0.0
+            },
+            "VIEW_TRANSACTIONS": {
+              "support": 30,
+              "false_rejected": 0,
+              "false_rejection_rate": 0.0
+            },
+            "WITHDRAW_MONEY": {
+              "support": 30,
+              "false_rejected": 0,
+              "false_rejection_rate": 0.0
+            },
+            "BILL_PAY": {
+              "support": 30,
+              "false_rejected": 0,
+              "false_rejection_rate": 0.0
+            },
+            "HELP_SUPPORT": {
+              "support": 30,
+              "false_rejected": 1,
+              "false_rejection_rate": 0.03333333333333333
+            },
+            "MANAGE_CONTACTS": {
+              "support": 30,
+              "false_rejected": 0,
+              "false_rejection_rate": 0.0
+            },
+            "VIEW_GROUP": {
+              "support": 30,
+              "false_rejected": 0,
+              "false_rejection_rate": 0.0
+            },
+            "CHECK_SPENDING": {
+              "support": 30,
+              "false_rejected": 0,
+              "false_rejection_rate": 0.0
+            }
+          }
+        },
+        "unknown": {
+          "n": 300,
+          "rejected_as_unknown_intent": 31,
+          "rejection_rate": 0.10333333333333333,
+          "false_accept_rate": 0.8966666666666666,
+          "classified_as_help_support": 90,
+          "classified_as_help_support_rate": 0.3,
+          "classified_as_financial": 36,
+          "classified_as_financial_rate": 0.12,
+          "classified_as_financial_by_intent": {
+            "TRANSFER_MONEY": 22,
+            "BILL_PAY": 14,
+            "WITHDRAW_MONEY": 0
+          },
+          "classified_as_other_intent": 143,
+          "rejection_rate_unique_phrases": 0.10367892976588629
+        }
+      },
+      "application": {
+        "unknown_fallback_triggered": 31,
+        "unknown_routed_to_help_support": 90,
+        "unknown_safe_fallback": 121,
+        "unknown_safe_fallback_rate": 0.4033333333333333,
+        "unknown_routed_to_financial_action": 36,
+        "known_fallback_triggered": 5,
+        "note": "Safe fallback = unknown command either rejected (app shows HELP/clarify fallback) or classified HELP_SUPPORT by the model (app routes to help). The second case is a model misclassification with a benign app outcome, not a rejection."
+      },
+      "label": "25%",
+      "validation_known_coverage": 0.9925925925925926
+    },
+    {
+      "threshold": 0.3,
+      "model_classification": {
+        "known": {
+          "n": 270,
+          "correct_accept": 251,
+          "incorrect_accept": 9,
+          "false_reject": 10,
+          "coverage": 0.9629629629629629,
+          "false_rejection_rate": 0.037037037037037035,
+          "accepted_accuracy": 0.9653846153846154,
+          "accepted_macro_f1": 0.9660033751866413,
+          "accepted_macro_f1_defined_classes": 9,
+          "end_to_end_accuracy": 0.9296296296296296,
+          "misrouted_to_financial": 2,
+          "false_rejection_by_intent": {
+            "TRANSFER_MONEY": {
+              "support": 30,
+              "false_rejected": 7,
+              "false_rejection_rate": 0.23333333333333334
+            },
+            "CHECK_BALANCE": {
+              "support": 30,
+              "false_rejected": 0,
+              "false_rejection_rate": 0.0
+            },
+            "VIEW_TRANSACTIONS": {
+              "support": 30,
+              "false_rejected": 0,
+              "false_rejection_rate": 0.0
+            },
+            "WITHDRAW_MONEY": {
+              "support": 30,
+              "false_rejected": 0,
+              "false_rejection_rate": 0.0
+            },
+            "BILL_PAY": {
+              "support": 30,
+              "false_rejected": 0,
+              "false_rejection_rate": 0.0
+            },
+            "HELP_SUPPORT": {
+              "support": 30,
+              "false_rejected": 1,
+              "false_rejection_rate": 0.03333333333333333
+            },
+            "MANAGE_CONTACTS": {
+              "support": 30,
+              "false_rejected": 0,
+              "false_rejection_rate": 0.0
+            },
+            "VIEW_GROUP": {
+              "support": 30,
+              "false_rejected": 2,
+              "false_rejection_rate": 0.06666666666666667
+            },
+            "CHECK_SPENDING": {
+              "support": 30,
+              "false_rejected": 0,
+              "false_rejection_rate": 0.0
+            }
+          }
+        },
+        "unknown": {
+          "n": 300,
+          "rejected_as_unknown_intent": 67,
+          "rejection_rate": 0.22333333333333333,
+          "false_accept_rate": 0.7766666666666666,
+          "classified_as_help_support": 86,
+          "classified_as_help_support_rate": 0.2866666666666667,
+          "classified_as_financial": 26,
+          "classified_as_financial_rate": 0.08666666666666667,
+          "classified_as_financial_by_intent": {
+            "TRANSFER_MONEY": 14,
+            "BILL_PAY": 12,
+            "WITHDRAW_MONEY": 0
+          },
+          "classified_as_other_intent": 121,
+          "rejection_rate_unique_phrases": 0.22408026755852842
+        }
+      },
+      "application": {
+        "unknown_fallback_triggered": 67,
+        "unknown_routed_to_help_support": 86,
+        "unknown_safe_fallback": 153,
+        "unknown_safe_fallback_rate": 0.51,
+        "unknown_routed_to_financial_action": 26,
+        "known_fallback_triggered": 10,
+        "note": "Safe fallback = unknown command either rejected (app shows HELP/clarify fallback) or classified HELP_SUPPORT by the model (app routes to help). The second case is a model misclassification with a benign app outcome, not a rejection."
+      },
+      "label": "30%",
+      "validation_known_coverage": 0.9629629629629629
+    },
+    {
+      "threshold": 0.34152482478950635,
+      "model_classification": {
+        "known": {
+          "n": 270,
+          "correct_accept": 251,
+          "incorrect_accept": 9,
+          "false_reject": 10,
+          "coverage": 0.9629629629629629,
+          "false_rejection_rate": 0.037037037037037035,
+          "accepted_accuracy": 0.9653846153846154,
+          "accepted_macro_f1": 0.9660033751866413,
+          "accepted_macro_f1_defined_classes": 9,
+          "end_to_end_accuracy": 0.9296296296296296,
+          "misrouted_to_financial": 2,
+          "false_rejection_by_intent": {
+            "TRANSFER_MONEY": {
+              "support": 30,
+              "false_rejected": 7,
+              "false_rejection_rate": 0.23333333333333334
+            },
+            "CHECK_BALANCE": {
+              "support": 30,
+              "false_rejected": 0,
+              "false_rejection_rate": 0.0
+            },
+            "VIEW_TRANSACTIONS": {
+              "support": 30,
+              "false_rejected": 0,
+              "false_rejection_rate": 0.0
+            },
+            "WITHDRAW_MONEY": {
+              "support": 30,
+              "false_rejected": 0,
+              "false_rejection_rate": 0.0
+            },
+            "BILL_PAY": {
+              "support": 30,
+              "false_rejected": 0,
+              "false_rejection_rate": 0.0
+            },
+            "HELP_SUPPORT": {
+              "support": 30,
+              "false_rejected": 1,
+              "false_rejection_rate": 0.03333333333333333
+            },
+            "MANAGE_CONTACTS": {
+              "support": 30,
+              "false_rejected": 0,
+              "false_rejection_rate": 0.0
+            },
+            "VIEW_GROUP": {
+              "support": 30,
+              "false_rejected": 2,
+              "false_rejection_rate": 0.06666666666666667
+            },
+            "CHECK_SPENDING": {
+              "support": 30,
+              "false_rejected": 0,
+              "false_rejection_rate": 0.0
+            }
+          }
+        },
+        "unknown": {
+          "n": 300,
+          "rejected_as_unknown_intent": 88,
+          "rejection_rate": 0.29333333333333333,
+          "false_accept_rate": 0.7066666666666667,
+          "classified_as_help_support": 80,
+          "classified_as_help_support_rate": 0.26666666666666666,
+          "classified_as_financial": 23,
+          "classified_as_financial_rate": 0.07666666666666666,
+          "classified_as_financial_by_intent": {
+            "TRANSFER_MONEY": 11,
+            "BILL_PAY": 12,
+            "WITHDRAW_MONEY": 0
+          },
+          "classified_as_other_intent": 109,
+          "rejection_rate_unique_phrases": 0.29431438127090304
+        }
+      },
+      "application": {
+        "unknown_fallback_triggered": 88,
+        "unknown_routed_to_help_support": 80,
+        "unknown_safe_fallback": 168,
+        "unknown_safe_fallback_rate": 0.56,
+        "unknown_routed_to_financial_action": 23,
+        "known_fallback_triggered": 10,
+        "note": "Safe fallback = unknown command either rejected (app shows HELP/clarify fallback) or classified HELP_SUPPORT by the model (app routes to help). The second case is a model misclassification with a benign app outcome, not a rejection."
+      },
+      "label": "Default 34.15% (validation-calibrated)",
+      "validation_known_coverage": 0.9518518518518518
+    },
+    {
+      "threshold": 0.35,
+      "model_classification": {
+        "known": {
+          "n": 270,
+          "correct_accept": 251,
+          "incorrect_accept": 9,
+          "false_reject": 10,
+          "coverage": 0.9629629629629629,
+          "false_rejection_rate": 0.037037037037037035,
+          "accepted_accuracy": 0.9653846153846154,
+          "accepted_macro_f1": 0.9660033751866413,
+          "accepted_macro_f1_defined_classes": 9,
+          "end_to_end_accuracy": 0.9296296296296296,
+          "misrouted_to_financial": 2,
+          "false_rejection_by_intent": {
+            "TRANSFER_MONEY": {
+              "support": 30,
+              "false_rejected": 7,
+              "false_rejection_rate": 0.23333333333333334
+            },
+            "CHECK_BALANCE": {
+              "support": 30,
+              "false_rejected": 0,
+              "false_rejection_rate": 0.0
+            },
+            "VIEW_TRANSACTIONS": {
+              "support": 30,
+              "false_rejected": 0,
+              "false_rejection_rate": 0.0
+            },
+            "WITHDRAW_MONEY": {
+              "support": 30,
+              "false_rejected": 0,
+              "false_rejection_rate": 0.0
+            },
+            "BILL_PAY": {
+              "support": 30,
+              "false_rejected": 0,
+              "false_rejection_rate": 0.0
+            },
+            "HELP_SUPPORT": {
+              "support": 30,
+              "false_rejected": 1,
+              "false_rejection_rate": 0.03333333333333333
+            },
+            "MANAGE_CONTACTS": {
+              "support": 30,
+              "false_rejected": 0,
+              "false_rejection_rate": 0.0
+            },
+            "VIEW_GROUP": {
+              "support": 30,
+              "false_rejected": 2,
+              "false_rejection_rate": 0.06666666666666667
+            },
+            "CHECK_SPENDING": {
+              "support": 30,
+              "false_rejected": 0,
+              "false_rejection_rate": 0.0
+            }
+          }
+        },
+        "unknown": {
+          "n": 300,
+          "rejected_as_unknown_intent": 91,
+          "rejection_rate": 0.30333333333333334,
+          "false_accept_rate": 0.6966666666666667,
+          "classified_as_help_support": 80,
+          "classified_as_help_support_rate": 0.26666666666666666,
+          "classified_as_financial": 23,
+          "classified_as_financial_rate": 0.07666666666666666,
+          "classified_as_financial_by_intent": {
+            "TRANSFER_MONEY": 11,
+            "BILL_PAY": 12,
+            "WITHDRAW_MONEY": 0
+          },
+          "classified_as_other_intent": 106,
+          "rejection_rate_unique_phrases": 0.30434782608695654
+        }
+      },
+      "application": {
+        "unknown_fallback_triggered": 91,
+        "unknown_routed_to_help_support": 80,
+        "unknown_safe_fallback": 171,
+        "unknown_safe_fallback_rate": 0.57,
+        "unknown_routed_to_financial_action": 23,
+        "known_fallback_triggered": 10,
+        "note": "Safe fallback = unknown command either rejected (app shows HELP/clarify fallback) or classified HELP_SUPPORT by the model (app routes to help). The second case is a model misclassification with a benign app outcome, not a rejection."
+      },
+      "label": "35%",
+      "validation_known_coverage": 0.9407407407407408
+    },
+    {
+      "threshold": 0.4,
+      "model_classification": {
+        "known": {
+          "n": 270,
+          "correct_accept": 248,
+          "incorrect_accept": 5,
+          "false_reject": 17,
+          "coverage": 0.937037037037037,
+          "false_rejection_rate": 0.06296296296296296,
+          "accepted_accuracy": 0.9802371541501976,
+          "accepted_macro_f1": 0.980622761165602,
+          "accepted_macro_f1_defined_classes": 9,
+          "end_to_end_accuracy": 0.9185185185185185,
+          "misrouted_to_financial": 1,
+          "false_rejection_by_intent": {
+            "TRANSFER_MONEY": {
+              "support": 30,
+              "false_rejected": 9,
+              "false_rejection_rate": 0.3
+            },
+            "CHECK_BALANCE": {
+              "support": 30,
+              "false_rejected": 0,
+              "false_rejection_rate": 0.0
+            },
+            "VIEW_TRANSACTIONS": {
+              "support": 30,
+              "false_rejected": 3,
+              "false_rejection_rate": 0.1
+            },
+            "WITHDRAW_MONEY": {
+              "support": 30,
+              "false_rejected": 0,
+              "false_rejection_rate": 0.0
+            },
+            "BILL_PAY": {
+              "support": 30,
+              "false_rejected": 0,
+              "false_rejection_rate": 0.0
+            },
+            "HELP_SUPPORT": {
+              "support": 30,
+              "false_rejected": 2,
+              "false_rejection_rate": 0.06666666666666667
+            },
+            "MANAGE_CONTACTS": {
+              "support": 30,
+              "false_rejected": 0,
+              "false_rejection_rate": 0.0
+            },
+            "VIEW_GROUP": {
+              "support": 30,
+              "false_rejected": 2,
+              "false_rejection_rate": 0.06666666666666667
+            },
+            "CHECK_SPENDING": {
+              "support": 30,
+              "false_rejected": 1,
+              "false_rejection_rate": 0.03333333333333333
+            }
+          }
+        },
+        "unknown": {
+          "n": 300,
+          "rejected_as_unknown_intent": 148,
+          "rejection_rate": 0.49333333333333335,
+          "false_accept_rate": 0.5066666666666667,
+          "classified_as_help_support": 69,
+          "classified_as_help_support_rate": 0.23,
+          "classified_as_financial": 21,
+          "classified_as_financial_rate": 0.07,
+          "classified_as_financial_by_intent": {
+            "TRANSFER_MONEY": 9,
+            "BILL_PAY": 12,
+            "WITHDRAW_MONEY": 0
+          },
+          "classified_as_other_intent": 62,
+          "rejection_rate_unique_phrases": 0.4916387959866221
+        }
+      },
+      "application": {
+        "unknown_fallback_triggered": 148,
+        "unknown_routed_to_help_support": 69,
+        "unknown_safe_fallback": 217,
+        "unknown_safe_fallback_rate": 0.7233333333333334,
+        "unknown_routed_to_financial_action": 21,
+        "known_fallback_triggered": 17,
+        "note": "Safe fallback = unknown command either rejected (app shows HELP/clarify fallback) or classified HELP_SUPPORT by the model (app routes to help). The second case is a model misclassification with a benign app outcome, not a rejection."
+      },
+      "label": "40%",
+      "validation_known_coverage": 0.9259259259259259
+    },
+    {
+      "threshold": 0.5,
+      "model_classification": {
+        "known": {
+          "n": 270,
+          "correct_accept": 243,
+          "incorrect_accept": 3,
+          "false_reject": 24,
+          "coverage": 0.9111111111111111,
+          "false_rejection_rate": 0.08888888888888889,
+          "accepted_accuracy": 0.9878048780487805,
+          "accepted_macro_f1": 0.9877222358354434,
+          "accepted_macro_f1_defined_classes": 9,
+          "end_to_end_accuracy": 0.9,
+          "misrouted_to_financial": 0,
+          "false_rejection_by_intent": {
+            "TRANSFER_MONEY": {
+              "support": 30,
+              "false_rejected": 9,
+              "false_rejection_rate": 0.3
+            },
+            "CHECK_BALANCE": {
+              "support": 30,
+              "false_rejected": 0,
+              "false_rejection_rate": 0.0
+            },
+            "VIEW_TRANSACTIONS": {
+              "support": 30,
+              "false_rejected": 5,
+              "false_rejection_rate": 0.16666666666666666
+            },
+            "WITHDRAW_MONEY": {
+              "support": 30,
+              "false_rejected": 1,
+              "false_rejection_rate": 0.03333333333333333
+            },
+            "BILL_PAY": {
+              "support": 30,
+              "false_rejected": 0,
+              "false_rejection_rate": 0.0
+            },
+            "HELP_SUPPORT": {
+              "support": 30,
+              "false_rejected": 4,
+              "false_rejection_rate": 0.13333333333333333
+            },
+            "MANAGE_CONTACTS": {
+              "support": 30,
+              "false_rejected": 1,
+              "false_rejection_rate": 0.03333333333333333
+            },
+            "VIEW_GROUP": {
+              "support": 30,
+              "false_rejected": 2,
+              "false_rejection_rate": 0.06666666666666667
+            },
+            "CHECK_SPENDING": {
+              "support": 30,
+              "false_rejected": 2,
+              "false_rejection_rate": 0.06666666666666667
+            }
+          }
+        },
+        "unknown": {
+          "n": 300,
+          "rejected_as_unknown_intent": 222,
+          "rejection_rate": 0.74,
+          "false_accept_rate": 0.26,
+          "classified_as_help_support": 42,
+          "classified_as_help_support_rate": 0.14,
+          "classified_as_financial": 17,
+          "classified_as_financial_rate": 0.056666666666666664,
+          "classified_as_financial_by_intent": {
+            "TRANSFER_MONEY": 9,
+            "BILL_PAY": 8,
+            "WITHDRAW_MONEY": 0
+          },
+          "classified_as_other_intent": 19,
+          "rejection_rate_unique_phrases": 0.7391304347826086
+        }
+      },
+      "application": {
+        "unknown_fallback_triggered": 222,
+        "unknown_routed_to_help_support": 42,
+        "unknown_safe_fallback": 264,
+        "unknown_safe_fallback_rate": 0.88,
+        "unknown_routed_to_financial_action": 17,
+        "known_fallback_triggered": 24,
+        "note": "Safe fallback = unknown command either rejected (app shows HELP/clarify fallback) or classified HELP_SUPPORT by the model (app routes to help). The second case is a model misclassification with a benign app outcome, not a rejection."
+      },
+      "label": "50%",
+      "validation_known_coverage": 0.8592592592592593
+    },
+    {
+      "threshold": 0.6,
+      "model_classification": {
+        "known": {
+          "n": 270,
+          "correct_accept": 232,
+          "incorrect_accept": 3,
+          "false_reject": 35,
+          "coverage": 0.8703703703703703,
+          "false_rejection_rate": 0.12962962962962962,
+          "accepted_accuracy": 0.9872340425531915,
+          "accepted_macro_f1": 0.9862410372954213,
+          "accepted_macro_f1_defined_classes": 9,
+          "end_to_end_accuracy": 0.8592592592592593,
+          "misrouted_to_financial": 0,
+          "false_rejection_by_intent": {
+            "TRANSFER_MONEY": {
+              "support": 30,
+              "false_rejected": 10,
+              "false_rejection_rate": 0.3333333333333333
+            },
+            "CHECK_BALANCE": {
+              "support": 30,
+              "false_rejected": 0,
+              "false_rejection_rate": 0.0
+            },
+            "VIEW_TRANSACTIONS": {
+              "support": 30,
+              "false_rejected": 5,
+              "false_rejection_rate": 0.16666666666666666
+            },
+            "WITHDRAW_MONEY": {
+              "support": 30,
+              "false_rejected": 1,
+              "false_rejection_rate": 0.03333333333333333
+            },
+            "BILL_PAY": {
+              "support": 30,
+              "false_rejected": 0,
+              "false_rejection_rate": 0.0
+            },
+            "HELP_SUPPORT": {
+              "support": 30,
+              "false_rejected": 5,
+              "false_rejection_rate": 0.16666666666666666
+            },
+            "MANAGE_CONTACTS": {
+              "support": 30,
+              "false_rejected": 8,
+              "false_rejection_rate": 0.26666666666666666
+            },
+            "VIEW_GROUP": {
+              "support": 30,
+              "false_rejected": 2,
+              "false_rejection_rate": 0.06666666666666667
+            },
+            "CHECK_SPENDING": {
+              "support": 30,
+              "false_rejected": 4,
+              "false_rejection_rate": 0.13333333333333333
+            }
+          }
+        },
+        "unknown": {
+          "n": 300,
+          "rejected_as_unknown_intent": 264,
+          "rejection_rate": 0.88,
+          "false_accept_rate": 0.12,
+          "classified_as_help_support": 20,
+          "classified_as_help_support_rate": 0.06666666666666667,
+          "classified_as_financial": 7,
+          "classified_as_financial_rate": 0.023333333333333334,
+          "classified_as_financial_by_intent": {
+            "TRANSFER_MONEY": 0,
+            "BILL_PAY": 7,
+            "WITHDRAW_MONEY": 0
+          },
+          "classified_as_other_intent": 9,
+          "rejection_rate_unique_phrases": 0.8795986622073578
+        }
+      },
+      "application": {
+        "unknown_fallback_triggered": 264,
+        "unknown_routed_to_help_support": 20,
+        "unknown_safe_fallback": 284,
+        "unknown_safe_fallback_rate": 0.9466666666666667,
+        "unknown_routed_to_financial_action": 7,
+        "known_fallback_triggered": 35,
+        "note": "Safe fallback = unknown command either rejected (app shows HELP/clarify fallback) or classified HELP_SUPPORT by the model (app routes to help). The second case is a model misclassification with a benign app outcome, not a rejection."
+      },
+      "label": "60%",
+      "validation_known_coverage": 0.8333333333333334
+    }
+  ]
+}

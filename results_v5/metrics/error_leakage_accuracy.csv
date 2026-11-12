@@ -1,0 +1,5 @@
+split,leakage_flag,n,accuracy
+validation,False,247,0.9109311740890689
+validation,True,23,1.0
+test,False,231,0.9264069264069265
+test,True,39,1.0

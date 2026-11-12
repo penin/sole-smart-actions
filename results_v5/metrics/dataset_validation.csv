@@ -1,0 +1,19 @@
+check,value,expected,status,details
+total_rows,3000,3000,pass,
+rows_train,2160,2160,pass,
+rows_validation,270,270,pass,
+rows_test,270,270,pass,
+rows_evaluation_only,300,300,pass,
+rows_per_intent_including_unknown,300–300,300,pass,all 10 labels
+missing_command_text,0,0,pass,
+missing_intent_label,0,0,pass,
+exact_duplicate_commands,0,0,pass,
+normalized_duplicate_commands,0,0,pass,NFKC + casefold + whitespace + surrounding punctuation; 
+cross_split_duplicate_commands,0,0,pass,normalized key shared by two splits
+conflicting_labels_same_normalized_command,0,0,pass,
+unknown_intent_evaluation_only,0,0,pass,UNKNOWN_INTENT rows outside evaluation_only
+info_duplicates_ignoring_interior_punctuation,14,info,info,How tall is mount everest? if possible; Spending this month? in sole; Forgot password? now; App keeps crashing on sole; App keeps crashing? now; App keeps crashing now
+info_validation_number_masked_template_in_train,23,info,info,same command as a training row once numbers are masked
+info_test_number_masked_template_in_train,39,info,info,same command as a training row once numbers are masked
+info_evaluation_only_number_masked_template_in_train,0,info,info,same command as a training row once numbers are masked
+info_replacement_log_rows,997,info,info,duplicate occurrences replaced by the dataset author (from the workbook)

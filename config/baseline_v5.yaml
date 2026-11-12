@@ -1,0 +1,126 @@
+# Sole Smart Actions — Bag of Words + Logistic Regression, rerun on Dataset V5 (deduplicated).
+# Identical methodology to config/baseline.yaml (V4); only the dataset, identifiers, output folders and the
+# added validation / threshold-sweep / comparison sections differ. V4 outputs are never written by this config.
+# All paths are resolved relative to the project root (the BagOfWords directory).
+
+experiment:
+  model_name: bow_logreg
+  experiment_id: bow_logreg_v5
+  model_version: "1.0.0"
+  random_seed: 42
+
+data:
+  path: Sole_Smart_Actions_Intent_Training_v5_Deduplicated.xlsx
+  sheet: Training Data
+  dataset_version: v5_deduplicated
+  expected_rows: 3000
+  expected_split_counts:
+    train: 2160
+    validation: 270
+    test: 270
+    evaluation_only: 300
+
+# Canonical class ordering. Every model (BoW, CNN, LSTM, transformer) must use this order.
+labels:
+  - TRANSFER_MONEY
+  - CHECK_BALANCE
+  - VIEW_TRANSACTIONS
+  - WITHDRAW_MONEY
+  - BILL_PAY
+  - HELP_SUPPORT
+  - MANAGE_CONTACTS
+  - VIEW_GROUP
+  - CHECK_SPENDING
+
+core_labels:
+  - TRANSFER_MONEY
+  - CHECK_BALANCE
+  - VIEW_TRANSACTIONS
+  - WITHDRAW_MONEY
+  - BILL_PAY
+  - HELP_SUPPORT
+  - MANAGE_CONTACTS
+  - VIEW_GROUP
+
+unknown_label: UNKNOWN_INTENT
+scopes:
+  core: core
+  stretch: stretch
+  rejection: rejection_test
+
+preprocessing:
+  unicode_form: NFKC
+  lowercase: true
+  collapse_whitespace: true
+  # Keeps "$", single characters and digits as tokens (sklearn's default drops them).
+  token_pattern: '(?u)\$|\b\w+\b'
+
+model:
+  solver: lbfgs
+  max_iter: 5000
+  # Default (untuned) configuration, reported separately from the tuned model.
+  default_params:
+    ngram_range: [1, 1]
+    C: 1.0
+    binary: false
+
+tuning:
+  selection_metric: validation_macro_f1
+  tie_breakers: [validation_log_loss]
+  grid:
+    ngram_range: [[1, 1], [1, 2]]
+    C: [0.1, 1.0, 10.0]
+    binary: [false, true]
+
+rejection:
+  # Prespecified before looking at any UNKNOWN_INTENT labels.
+  target_known_coverage: 0.95
+  sweep_thresholds: {start: 0.0, stop: 1.0, step: 0.01}
+  # Supplementary unknown-aware protocol: split the 300 unknowns into calibration / holdout
+  # by normalized phrase so identical phrases never cross the split.
+  unknown_calibration_fraction: 0.5
+
+learning_curve:
+  train_sizes: [0.1, 0.2, 0.35, 0.5, 0.75, 1.0]
+  cv_folds: 5
+
+bootstrap:
+  # Test phrases repeat, so resampling is clustered by normalized phrase.
+  n_resamples: 2000
+
+latency:
+  warmup: 50
+  single_repeats: 1000
+  batch_repeats: 200
+
+diagnostics:
+  high_confidence: 0.90
+  ambiguous_margin: 0.10
+  short_command_max_tokens: 2
+  near_duplicate_jaccard: 0.8
+  top_features: 15
+
+plots:
+  dpi: 200
+
+# ---------------------------------------------------------------- V5 additions
+outputs:
+  results_dir: results_v5
+  models_dir: models_v5
+  processed_dir: data/processed_v5
+
+# Checked before training; any failure stops the run without altering the data.
+validation:
+  per_intent: 300
+  replacement_log_sheet: Replacement Log
+
+# Threshold evaluation, reported separately from raw classifier accuracy. "none" = no threshold;
+# "default" = threshold calibrated on V5 validation (rejection.target_known_coverage). Others are exploratory.
+threshold_sweep:
+  thresholds: [none, default, 0.25, 0.30, 0.35, 0.40, 0.50, 0.60]
+
+comparison:
+  reference_label: V4
+  label: V5
+  reference_results_dir: results
+  reference_threshold_analysis: results/threshold_analysis/threshold_comparison.csv

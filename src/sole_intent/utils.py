@@ -9,6 +9,7 @@ import os
 import platform
 import random
 import sys
+from dataclasses import dataclass
 from datetime import datetime, timezone
 from importlib import metadata
 from pathlib import Path
@@ -48,6 +49,49 @@ def load_config(path: str | Path | None = None) -> dict:
 def ensure_output_dirs() -> None:
     for d in (METRICS_DIR, FIGURES_DIR, PREDICTIONS_DIR, REPORTS_DIR, MODELS_DIR, PROCESSED_DIR):
         d.mkdir(parents=True, exist_ok=True)
+
+
+@dataclass(frozen=True)
+class OutputPaths:
+    """Where one experiment writes. Defaults reproduce the original Baseline V1 (V4 data) locations."""
+    results: Path
+    models: Path
+    processed: Path
+
+    @property
+    def metrics(self) -> Path:
+        return self.results / "metrics"
+
+    @property
+    def figures(self) -> Path:
+        return self.results / "figures"
+
+    @property
+    def predictions(self) -> Path:
+        return self.results / "predictions"
+
+    @property
+    def reports(self) -> Path:
+        return self.results / "reports"
+
+    def ensure(self) -> None:
+        for d in (self.metrics, self.figures, self.predictions, self.reports, self.models, self.processed):
+            d.mkdir(parents=True, exist_ok=True)
+
+    def rel(self, path: Path) -> str:
+        """Project-relative POSIX path for reports (absolute if the path is outside the project)."""
+        resolved = Path(path).resolve()
+        try:
+            return str(resolved.relative_to(PROJECT_ROOT)).replace("\\", "/")
+        except ValueError:
+            return str(resolved).replace("\\", "/")
+
+
+def output_paths(cfg: dict) -> OutputPaths:
+    out = cfg.get("outputs") or {}
+    return OutputPaths(results=resolve_path(out.get("results_dir", "results")),
+                       models=resolve_path(out.get("models_dir", "models")),
+                       processed=resolve_path(out.get("processed_dir", "data/processed")))
 
 
 def set_seed(seed: int) -> None:

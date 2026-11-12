@@ -1,0 +1,8 @@
+canonical,count,splits,intents,examples
+app keeps crashing asap,2,train,HELP_SUPPORT,App keeps crashing? asap || App keeps crashing asap
+app keeps crashing if possible,2,train,HELP_SUPPORT,App keeps crashing if possible || App keeps crashing? if possible
+app keeps crashing now,2,train,HELP_SUPPORT,App keeps crashing? now || App keeps crashing now
+app keeps crashing on sole,2,train,HELP_SUPPORT,App keeps crashing on sole || App keeps crashing? on sole
+forgot password now,2,train,HELP_SUPPORT,Forgot password? now || Forgot password now
+how tall is mount everest if possible,2,evaluation_only,UNKNOWN_INTENT,How tall is mount everest? if possible || How tall is mount everest if possible
+spending this month in sole,2,train|validation,CHECK_SPENDING,Spending this month? in sole || Spending this month in sole

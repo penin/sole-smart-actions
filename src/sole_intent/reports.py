@@ -7,7 +7,7 @@ import numpy as np
 import pandas as pd
 
 from .rejection import UNKNOWN_INTENT
-from .utils import METRICS_DIR, PROJECT_ROOT, REPORTS_DIR, utc_now
+from .utils import PROJECT_ROOT, output_paths, utc_now
 
 
 # ------------------------------------------------------------------ formatting helpers
@@ -41,6 +41,15 @@ def md_table(df: pd.DataFrame, digits: int = 3, index: bool = False) -> str:
 
 def ci(b: dict) -> str:
     return f"{b['estimate']:.3f} [{b['ci_low']:.3f}, {b['ci_high']:.3f}]"
+
+
+def _out(ctx: dict):
+    return ctx.get("out") or output_paths(ctx["cfg"])
+
+
+def _r(ctx: dict) -> str:
+    """Project-relative results folder name, e.g. ``results`` or ``results_v5``."""
+    return _out(ctx).rel(_out(ctx).results)
 
 
 def _rel(path) -> str:
@@ -123,8 +132,62 @@ def error_analysis_tables(ctx: dict) -> dict[str, pd.DataFrame]:
     out["unknown_top_accepts"] = (u[~u["rejected"]].drop_duplicates("text").sort_values("max_confidence", ascending=False)
                                   [["text", "final_intent", "max_confidence"]].head(15))
     for name, frame in out.items():
-        frame.to_csv(METRICS_DIR / f"error_{name}.csv", index=False)
+        frame.to_csv(_out(ctx).metrics / f"error_{name}.csv", index=False)
     return out
+
+
+# ------------------------------------------------------------------ optional sections
+def strict_validation_section(ctx: dict) -> list[str]:
+    v = ctx.get("validation")
+    if not v:
+        return []
+    checks = pd.DataFrame(v["checks"])[["check", "value", "expected", "status", "details"]]
+    lines = ["## Pre-training validation (required checks)", "",
+             f"**Result: {'PASSED' if v['passed'] else 'FAILED'}.** Checks run before any training. A failure "
+             "stops the run and nothing in the dataset is changed. Duplicate key: Unicode NFKC, casefold, collapsed "
+             "whitespace, surrounding punctuation removed. Rows marked `info` are stricter diagnostics, not "
+             "requirements.", "", md_table(checks)]
+    if "replacement_log_rows" in v:
+        lines += [f"The workbook's *Replacement Log* records {v['replacement_log_rows']} duplicate occurrences that the "
+                  "dataset author replaced with new synthetic commands (by split: "
+                  + ", ".join(f"{k} {n}" for k, n in v.get("replacements_by_split", {}).items()) + ").", ""]
+    return lines
+
+
+def threshold_sweep_section(ctx: dict) -> list[str]:
+    sw = ctx.get("threshold_sweep")
+    if not sw:
+        return []
+    t = sw["table"]
+    view = pd.DataFrame({
+        "threshold": t["label"],
+        "known coverage": t["known_coverage"].map(pct),
+        f"accepted (of {int(t['known_n'].iloc[0])})": t["known_accepted"],
+        "correct & accepted": t["known_correct_accept"],
+        "accuracy of accepted": t["accepted_accuracy"].map(pct),
+        f"correct routing (of {int(t['known_n'].iloc[0])})": t["overall_correct_routing_rate"].map(pct),
+        "legit rejected": t["known_false_reject"],
+        "unknown rejected": t["unknown_rejection_rate"].map(pct),
+        "unknown → HELP_SUPPORT": t["unknown_to_help_support"],
+        "unknown safe fallback": t["safe_fallback_rate"].map(pct),
+        "unknown → financial": t["unknown_to_financial"],
+        "→ TRANSFER / WITHDRAW / BILL": [f"{a} / {b} / {c}" for a, b, c in zip(
+            t["unknown_to_TRANSFER_MONEY"], t["unknown_to_WITHDRAW_MONEY"], t["unknown_to_BILL_PAY"])],
+    })
+    d = sw["default_threshold"]
+    rel = _out(ctx).rel(sw["dir"])
+    return ["## 11b. Threshold sweep (separate from raw accuracy)", "",
+            f"Known commands are the {int(t['known_n'].iloc[0])} legitimate test rows; unknown commands are the "
+            f"{int(t['unknown_n'].iloc[0])} evaluation-only rows. *Correct routing* counts rejected legitimate commands "
+            "as incorrect. The validation-calibrated default "
+            f"({100 * d:.2f}%) is the only methodological choice. **Every other row is exploratory** and must not "
+            "be used to pick an \"optimal\" threshold, because the same test and unknown sets are scored at each one. "
+            "The *No threshold* row equals raw test accuracy by construction (verified in code).", "",
+            md_table(view),
+            f"Files: `{rel}/threshold_sweep.csv`, `.json`, `dense_threshold_sweep.csv`, "
+            "`decisions_at_default_threshold.csv`, `legitimate_rejection_by_intent.csv`; charts "
+            "`threshold_comparison.png`, `coverage_vs_rejection.png`, `safe_fallback_comparison.png`, "
+            "`financial_routing_risk.png`, `legitimate_rejection_by_intent.png`.", ""]
 
 
 # ------------------------------------------------------------------ data quality report
@@ -133,6 +196,28 @@ def data_quality_report(ctx: dict, ea: dict) -> str:
     labels, unk = ctx["labels"], ctx["cfg"]["unknown_label"]
     bal = pd.DataFrame(a["class_balance"]).T.reindex(labels + [unk])
     leak = a["leakage"]
+    proc = _out(ctx).rel(_out(ctx).processed)
+    test_rows, test_unique = leak["test"]["rows"], a["unique_phrases_per_split"]["test"]
+    unk_rows, unk_unique = leak["evaluation_only"]["rows"], a["unique_phrases_per_split"]["evaluation_only"]
+    oov_test = float(ea["short_oov_summary"].set_index("split").loc["test", "share_rows_with_oov"])
+    groups = d["duplicate_groups"]
+    unk_top = groups[groups["splits"].str.contains("evaluation_only")].head(1)
+    implications = [
+        "Training-set metrics and cross-validation inside the training split are optimistic"
+        + (" (duplicates and shared templates)." if a["normalized_duplicate_redundant_rows"] else
+           " (shared templates and vocabulary)."),
+        (f"The test set holds {test_unique} distinct phrases in {test_rows} rows; repeated templates mean single "
+         "errors move metrics in steps of several points." if test_unique < test_rows else
+         f"All {test_rows} test rows are distinct phrases; one error moves accuracy by {100 / test_rows:.2f} points."),
+        (f"Train→test overlap: {leak['test']['normalized_in_train']} exact/normalized and "
+         f"{leak['test']['template_in_train']} number-masked matches. Reported, not removed; see the "
+         "leakage-controlled test subset." if leak["test"]["leakage_flagged"] else
+         "No train→test phrase overlap was found, even after masking numbers."),
+        (f"Unknown-evaluation phrases repeat ({unk_unique} distinct in {unk_rows} rows; e.g. "
+         f"`{unk_top['canonical'].iloc[0]}` ×{int(unk_top['count'].iloc[0])}); unknown rejection is also reported "
+         "per unique phrase." if unk_unique < unk_rows and len(unk_top) else
+         f"Unknown-evaluation phrases are distinct ({unk_unique} of {unk_rows})."),
+    ]
     lines = [
         "# Data Quality Report — Sole Smart Actions Intent Dataset", "",
         f"_Generated {utc_now()} by `scripts/run_all.py`. Source workbook is read-only; no rows were "
@@ -142,6 +227,7 @@ def data_quality_report(ctx: dict, ea: dict) -> str:
         f"- Dataset version: `{fp['dataset_version']}`; rows: {fp['n_rows']:,}",
         f"- File SHA-256: `{fp['file_sha256']}`",
         f"- Content SHA-256 (text,intent,split,scope as CSV): `{fp['content_sha256']}`", "",
+        *strict_validation_section(ctx),
         "## Integrity checks", "",
         md_table(f[f["category"].isin(["schema", "splits", "labels"])]),
         "## Class balance by split", "",
@@ -160,15 +246,20 @@ def data_quality_report(ctx: dict, ea: dict) -> str:
         f"Only {a['unique_normalized_phrases']:,} of {a['n_rows']:,} rows are distinct after normalization "
         f"(lowercase, punctuation-insensitive). Unique phrases per partition: "
         + ", ".join(f"{k} {v:,}" for k, v in a["unique_phrases_per_split"].items()) + ". "
-        "Repeats are exact copies or differ only in case/punctuation (e.g. a trailing `?`). Within-partition repetition inflates the apparent sample size: "
-        f"the 270-row test set holds {a['unique_phrases_per_split']['test']} distinct phrases, so test "
-        "confidence intervals use a phrase-clustered bootstrap.", "",
+        + (f"Exact duplicates: {a['exact_duplicate_redundant_rows']} redundant rows. "
+           + ("The remaining repeats differ only in case or punctuation. " if a["exact_duplicate_redundant_rows"]
+              < a["normalized_duplicate_redundant_rows"] else "")
+           if a["normalized_duplicate_redundant_rows"] else "No repeated phrases. ")
+        + (f"Within-partition repetition inflates the apparent sample size: the {test_rows}-row test set holds "
+           f"{test_unique} distinct phrases, so test confidence intervals use a phrase-clustered bootstrap."
+           if test_unique < test_rows else
+           f"Every one of the {test_rows} test rows is a distinct phrase."), "",
         "Most repeated phrases:", "",
         md_table(d["duplicate_groups"].head(15)[["canonical", "count", "splits", "intents"]]),
         "## Contradictory labels", "",
         f"{a['contradictory_label_phrases']} normalized phrases carry more than one intent label"
         + (" — no label conflicts were found." if a["contradictory_label_phrases"] == 0
-           else "; see `data/processed/duplicate_groups.csv`."), "",
+           else f"; see `{proc}/duplicate_groups.csv`."), "",
         "## Cross-partition overlap and leakage", "",
         md_table(f[f["category"] == "leakage"]),
         "| Partition | Rows | Phrase seen in train | Number-masked template seen in train | Near-duplicate (Jaccard ≥ "
@@ -179,24 +270,21 @@ def data_quality_report(ctx: dict, ea: dict) -> str:
         f"**Leakage flag:** {leak['test']['leakage_flagged']} test rows ({pct(leak['test']['leakage_flagged'] / leak['test']['rows'])}) "
         "repeat a training phrase exactly or after masking numbers. The primary benchmark keeps the supplied "
         "split; a **leakage-controlled test subset** excluding these rows is evaluated separately "
-        "(`metrics_test_leakage_controlled.json`). Unknown-evaluation phrases do not overlap training.", "",
-        "Rows flagged per partition are listed in `data/processed/leakage_rows.csv`; all shared phrases in "
-        "`data/processed/cross_split_overlap.csv`.", "",
+        "(`metrics_test_leakage_controlled.json`)."
+        + (" Unknown-evaluation phrases do not overlap training." if leak["evaluation_only"]["leakage_flagged"] == 0
+           else f" {leak['evaluation_only']['leakage_flagged']} unknown-evaluation rows match a training phrase."), "",
+        f"Rows flagged per partition are listed in `{proc}/leakage_rows.csv`; all shared phrases in "
+        f"`{proc}/cross_split_overlap.csv`.", "",
         "## Vocabulary shift (train vocabulary vs held-out partitions)", "",
         md_table(ea["short_oov_summary"][["split", "n", "rows_with_oov", "share_rows_with_oov",
                                           "mean_oov_token_share"]]),
-        "Validation and test contain many words that never occur in training (e.g. "
-        + ", ".join(f"`{w}`" for w in ea["oov_words"]["oov_token"].head(12)) + "). The held-out partitions "
-        "therefore test generalization to **unseen paraphrase templates**, not just unseen rows. This is the "
-        "main driver of the train/validation gap reported in the evaluation report.", "",
+        f"{pct(oov_test)} of test rows contain at least one word that never occurs in training (most frequent: "
+        + ", ".join(f"`{w}`" for w in ea["oov_words"]["oov_token"].head(12)) + "). "
+        + ("The held-out partitions therefore test generalization to **unseen paraphrase templates**, not just "
+           "unseen rows, and this is a main driver of the train/held-out gap." if oov_test >= 0.2 else
+           "Most held-out commands are built from vocabulary seen in training."), "",
         "## Implications", "",
-        "1. Training-set metrics and cross-validation inside the training split are optimistic (duplicates and "
-        "shared templates).",
-        "2. Validation/test numbers are dominated by a small number of unseen templates repeated several times; "
-        "single errors move metrics in steps of several points.",
-        "3. Exact train→test overlap is small but non-zero and is reported, not removed.",
-        "4. Many unknown-evaluation phrases repeat (e.g. `play music` ×11); unknown rejection is also "
-        "reported per unique phrase.", "",
+        *[f"{i}. {txt}" for i, txt in enumerate(implications, start=1)], "",
     ]
     return "\n".join(lines)
 
@@ -228,6 +316,24 @@ def evaluation_report(ctx: dict, ea: dict) -> str:
     tb_rows = tr[(tr["actual_intent"] == "TRANSFER_MONEY") & (tr["predicted_intent"] == "BILL_PAY")]
     tb_example = tb_rows["text"].iloc[0] if len(tb_rows) else "n/a"
     best_by_c = grid.groupby("C")["validation_macro_f1"].max()
+    # Facts used to keep the narrative true for whichever dataset produced this run.
+    au = ctx["audit"]
+    oov_test = float(ea["short_oov_summary"].set_index("split").loc["test", "share_rows_with_oov"])
+    gap_pts = 100 * (T["train"]["accuracy"] - T["test"]["accuracy"])
+    test_n, test_unique = T["test"]["n_samples"], au["unique_phrases_per_split"]["test"]
+    val_repeats = au["unique_phrases_per_split"]["validation"] < T["validation"]["n_samples"]
+    dt, tt = D["test"]["macro_f1"], T["test"]["macro_f1"]
+    default_vs_test = ("but higher" if dt > tt + 5e-4 else "and lower" if dt < tt - 5e-4 else "and about the same")
+    test_pred = ctx["preds"]["test"]
+    test_errors = test_pred[~test_pred["correct"]]
+    oov_error_share = float((test_errors["oov_fraction"] > 0).mean()) if len(test_errors) else 0.0
+    mean_conf, acc = T["test"]["mean_confidence"], T["test"]["accuracy"]
+    calibration_word = ("under-confident" if mean_conf < acc - 0.05 else
+                        "over-confident" if mean_conf > acc + 0.05 else "reasonably calibrated")
+    unk_unique = au["unique_phrases_per_split"]["evaluation_only"]
+    n_unknown = au["leakage"]["evaluation_only"]["rows"]
+    leak_test = au["leakage"]["test"]
+    max_repeat = int((conf["count"] / conf["unique_phrases"]).max()) if len(conf) else 1
 
     def split_row(name, m):
         return {"split": name, "n": m["n_samples"], "accuracy": m["accuracy"], "balanced_acc": m["balanced_accuracy"],
@@ -264,28 +370,32 @@ def evaluation_report(ctx: dict, ea: dict) -> str:
         "Result types are labelled: **in-sample** (train), **selection** (validation), **held-out** (test), "
         "**exploratory** (re-uses evaluation-only unknowns) and **diagnostic** (hand-written probes).", "",
         "## 1. Executive summary", "",
-        f"- **Selected model** (best validation macro F1): unigram counts, C = {best['C']:g} "
-        f"(`{_pid(best)}`). Held-out test accuracy **{T['test']['accuracy']:.3f}**, macro F1 "
+        f"- **Raw Out-of-Sample Test Accuracy (No Confidence Threshold): {T['test']['accuracy']:.3f}** "
+        f"({ctx.get('test_correct', round(T['test']['accuracy'] * T['test']['n_samples']))} of "
+        f"{T['test']['n_samples']} legitimate test commands classified correctly; no prediction excluded).",
+        f"- **Selected model** (best validation macro F1): `{_pid(best)}`. Held-out test accuracy **{T['test']['accuracy']:.3f}**, macro F1 "
         f"**{T['test']['macro_f1']:.3f}** (95% phrase-clustered CI {bs['models']['tuned']['macro_f1']['ci_low']:.3f}–"
         f"{bs['models']['tuned']['macro_f1']['ci_high']:.3f}), "
         f"macro ROC-AUC **{T['test']['macro_roc_auc_ovr']:.3f}**.",
-        f"- Train macro F1 {T['train']['macro_f1']:.3f} vs validation {T['validation']['macro_f1']:.3f}: a large "
-        "generalization gap. Validation/test contain paraphrase templates whose key words never occur in "
-        f"training ({pct(ea['short_oov_summary'].set_index('split').loc['test', 'share_rows_with_oov'])} of test rows "
-        "contain an unseen word). BoW cannot map an unseen word to a known meaning.",
+        f"- Train macro F1 {T['train']['macro_f1']:.3f} vs validation {T['validation']['macro_f1']:.3f} and test "
+        f"{T['test']['macro_f1']:.3f}: a train–test accuracy gap of {gap_pts:.1f} points"
+        + (" (large)." if gap_pts >= 10 else ".")
+        + f" {pct(oov_test)} of test rows contain a word never seen in training; they account for "
+        f"{pct(oov_error_share)} of test errors. BoW cannot map an unseen word to a known meaning.",
         f"- The **untuned default** (`{_pid(dflt)}`) scored lower on validation ({D['validation']['macro_f1']:.3f}) "
-        f"but {'higher' if tuned_worse else 'lower'} on test ({D['test']['macro_f1']:.3f}). The paired bootstrap "
+        f"{default_vs_test} on test ({D['test']['macro_f1']:.3f} vs {T['test']['macro_f1']:.3f}). The paired bootstrap "
         f"difference (tuned − default) is {diff['estimate']:+.3f} [{diff['ci_low']:+.3f}, {diff['ci_high']:+.3f}]. "
-        "With 30 validation rows per class, many of them repeats, model selection is noisy. The tuned model "
-        "stays the primary result because the test set was not used for selection.",
-        f"- **Unknown-intent rejection is weak.** With the threshold frozen at {thr:.3f} (95% known-intent "
+        f"With 30 validation rows per class{', many of them repeats,' if val_repeats else ','} model selection is "
+        "noisy. The tuned model stays the primary result because the test set was not used for selection.",
+        f"- **Unknown-intent rejection is {'weak' if rp['unknown_rejection_rate'] < 0.5 else 'partial'}.** With the threshold frozen at {thr:.3f} (95% known-intent "
         f"validation coverage), {pct(rp['unknown_rejection_rate'])} of the 300 unsupported requests are rejected "
         f"and {pct(rp['unknown_false_accept_rate'])} are falsely accepted. Known-intent test coverage is "
         f"{pct(rp['known_intent_coverage'])}. The maximum-probability rule is not a safe out-of-scope guard here.",
-        f"- TRANSFER_MONEY ↔ BILL_PAY confusions on validation + test: {n_tb_heldout} rows, but "
-        f"{n_tb_train} *training* TRANSFER_MONEY rows (e.g. `{tb_example}`) are predicted BILL_PAY even "
-        "in-sample: `pay <person> <amount>` collides with the strongest BILL_PAY cue, `pay`. "
-        f"{int(sum(v for k, v in rp.get('unknown_false_accepts_by_predicted_intent', {}).items() if k in ctx['money_moving']))} "
+        f"- TRANSFER_MONEY ↔ BILL_PAY confusions on validation + test: {n_tb_heldout} rows"
+        + (f", and {n_tb_train} *training* TRANSFER_MONEY rows (e.g. `{tb_example}`) are predicted BILL_PAY even "
+           "in-sample: `pay <person> <amount>` collides with the strongest BILL_PAY cue, `pay`. "
+           if n_tb_train else "; no training TRANSFER_MONEY rows are predicted BILL_PAY. ")
+        + f"{int(sum(v for k, v in rp.get('unknown_false_accepts_by_predicted_intent', {}).items() if k in ctx['money_moving']))} "
         "unsupported requests were accepted as a money-moving intent (TRANSFER_MONEY, BILL_PAY or WITHDRAW_MONEY).",
         f"- The model is tiny and fast: {rt['tuned']['vocabulary_size']} vocabulary terms, "
         f"{rt['tuned']['n_parameters']:,} parameters, {rt['tuned']['model_size_mb'] * 1024:.1f} KB on disk, "
@@ -295,16 +405,20 @@ def evaluation_report(ctx: dict, ea: dict) -> str:
         f"{ctx['audit']['n_rows']:,} synthetic utterances (sheet `Training Data`): 9 supported intents × 300 "
         "(240 train / 30 validation / 30 test each) and 300 `UNKNOWN_INTENT` rows reserved for rejection "
         "evaluation (`evaluation_only`). Eight intents are `core`; `CHECK_SPENDING` is the `stretch` intent. "
-        "The supplied splits were used unchanged. Figure: `results/figures/12_class_distribution.png`.", "",
+        f"The supplied splits were used unchanged. Figure: `{_r(ctx)}/figures/12_class_distribution.png`.", "",
         "## 3. Data-quality findings", "",
         f"- No missing values, empty texts, invalid labels or contradictory labels.",
-        f"- Heavy repetition: {ctx['audit']['normalized_duplicate_redundant_rows']:,} redundant rows after "
-        f"normalization; only {ctx['audit']['unique_phrases_per_split']['test']} distinct phrases among 270 test rows.",
-        f"- Leakage: {ctx['audit']['leakage']['test']['leakage_flagged']} test rows and "
-        f"{ctx['audit']['leakage']['validation']['leakage_flagged']} validation rows repeat a training phrase "
-        "(exactly or after masking numbers). Reported, not removed; a leakage-controlled subset is evaluated.",
-        "- Strong vocabulary shift between train and held-out partitions (see §13).",
-        "Full details: `results/reports/data_quality_report.md`, `results/metrics/dataset_audit.{json,csv}`.", "",
+        (f"- {'Heavy repetition' if au['normalized_duplicate_redundant_rows'] > 50 else 'Repetition'}: "
+         f"{au['normalized_duplicate_redundant_rows']:,} redundant rows under a punctuation-insensitive key; "
+         f"{test_unique} distinct phrases among {test_n} test rows."),
+        f"- Train overlap: {leak_test['normalized_in_train']} test rows repeat a training phrase exactly or after "
+        f"normalization, {leak_test['template_in_train']} once numbers are masked "
+        f"(validation: {au['leakage']['validation']['normalized_in_train']} / "
+        f"{au['leakage']['validation']['template_in_train']}). Reported, not removed; a leakage-controlled subset "
+        f"({leak_test['rows'] - leak_test['leakage_flagged']} test rows) is evaluated.",
+        f"- {'Strong' if oov_test >= 0.2 else 'Moderate' if oov_test >= 0.05 else 'Little'} vocabulary shift between "
+        f"train and held-out partitions: {pct(oov_test)} of test rows contain an unseen word (see §13).",
+        f"Full details: `{_r(ctx)}/reports/data_quality_report.md`, `{_r(ctx)}/metrics/dataset_audit.{{json,csv}}`.", "",
         "## 4. Model architecture and preprocessing", "",
         "`raw text → TextNormalizer → CountVectorizer → LogisticRegression → 9 class probabilities → threshold rejection`", "",
         "- **Normalization:** Unicode NFKC, lowercase, whitespace collapse. No stemming, lemmatization or "
@@ -324,13 +438,14 @@ def evaluation_report(ctx: dict, ea: dict) -> str:
         f"- Canonical class order (shared with all team models): {', '.join(f'`{c}`' for c in labels)}.", "",
         "## 6. Hyperparameter tuning", "",
         f"Grid: n-gram ∈ {{(1,1), (1,2)}} × C ∈ {{0.1, 1, 10}} × {{counts, binary}} = {len(grid)} configurations "
-        "(`results/metrics/hyperparameter_search.csv`).", "",
+        f"(`{_r(ctx)}/metrics/hyperparameter_search.csv`).", "",
         md_table(grid[["rank", "params_id", "train_macro_f1", "validation_macro_f1", "validation_accuracy",
                        "validation_log_loss", "vocabulary_size"]]),
         f"Selected: `{_pid(best)}`. Validation macro F1 spans only "
         f"{grid['validation_macro_f1'].min():.3f}–{grid['validation_macro_f1'].max():.3f} across the grid. Best "
         "validation macro F1 by C: " + ", ".join(f"C={c:g}: {v:.3f}" for c, v in best_by_c.items()) + ". With "
-        "30 validation rows per class, the gap between the top configurations is a few repeated phrases.", "",
+        f"{T['validation']['n_samples']} validation rows, one command is worth "
+        f"{100 / T['validation']['n_samples']:.2f} accuracy points, so small gaps between configurations are noise.", "",
         "**Default vs tuned** (default = unigram counts, C = 1):", "",
         md_table(variant_tbl),
         f"Phrase-clustered bootstrap on test ({bs['method']}): tuned macro F1 {ci(bs['models']['tuned']['macro_f1'])}, "
@@ -343,9 +458,11 @@ def evaluation_report(ctx: dict, ea: dict) -> str:
         md_table(split_tbl),
         "Figure: `04_split_comparison.png`. The learning curve (`07_learning_curve.png`, training split only, "
         "5-fold CV grouped by phrase) reaches "
-        f"{lc['cv_mean'].iloc[-1]:.3f} CV macro F1 at {int(lc['train_size'].iloc[-1])} examples, far above "
-        f"validation ({T['validation']['macro_f1']:.3f}). Phrases resembling training phrases are easy; the gap "
-        "comes from new phrasings, which more rows of the same templates are unlikely to fix.", "",
+        f"{lc['cv_mean'].iloc[-1]:.3f} CV macro F1 at {int(lc['train_size'].iloc[-1])} examples, versus "
+        f"{T['validation']['macro_f1']:.3f} on validation and {T['test']['macro_f1']:.3f} on test. "
+        + ("Phrases resembling training phrases are easy; the gap comes from new phrasings, which more rows of the "
+           "same templates are unlikely to fix." if lc['cv_mean'].iloc[-1] - T['validation']['macro_f1'] > 0.05 else
+           "Cross-validated and held-out scores are close."), "",
         "## 8. Per-class performance (test, selected model)", "",
         md_table(pc[["intent", "scope", "precision", "recall", "f1", "support", "roc_auc_ovr", "average_precision"]]),
         "**Core-eight breakdown** (9-class model, rows whose true label is core; predictions of "
@@ -358,10 +475,11 @@ def evaluation_report(ctx: dict, ea: dict) -> str:
         "Figures `01_confusion_matrix_counts.png` and `02_confusion_matrix_normalized.png`. Most frequent test "
         "confusions:", "",
         md_table(test_conf[["actual_intent", "predicted_intent", "count", "unique_phrases", "example"]]),
-        "Each confusion comes from one or a few templates (e.g. `I owe <name> <amount>`), often repeated "
-        "several times, so each reflects a missing template, not a diffuse weakness. Common pattern: a key verb or noun absent from training "
-        "(`owe`, `beneficiaries`, `statement`, `complaint`, `customer service`). The model then falls back "
-        "to whatever weak cues remain, such as `show`, `view` or `my`.", "",
+        ("Confusions cluster on a few phrasings"
+         + (", some repeated several times" if max_repeat > 1 else "")
+         + f". {pct(oov_error_share)} of test errors contain a word absent from training (most frequent unseen "
+         "held-out words: " + ", ".join(f"`{w}`" for w in ea["oov_words"]["oov_token"].head(6))
+         + "). Unseen words are dropped, so the model falls back to whatever weak cues remain."), "",
         "## 10. ROC-AUC and precision-recall analysis", "",
         f"Test macro one-vs-rest ROC-AUC {T['test']['macro_roc_auc_ovr']:.3f} (weighted "
         f"{T['test']['weighted_roc_auc_ovr']:.3f}); macro average precision {T['test']['macro_average_precision']:.3f}. "
@@ -373,10 +491,10 @@ def evaluation_report(ctx: dict, ea: dict) -> str:
         f"Undefined metrics in this run: {T['test']['undefined_metrics'] or 'none'}.", "",
         f"**Calibration:** test ECE {T['test']['expected_calibration_error']:.3f} (`09_calibration_curve.png`). "
         f"Mean top-label confidence is {T['test']['mean_confidence']:.3f} against accuracy "
-        f"{T['test']['accuracy']:.3f}" + (f": the C = {best['C']:g} model is **under-confident**. Its "
-        "probabilities are flattened by regularization, which makes the absolute value of a confidence "
-        "threshold hard to interpret." if T['test']['mean_confidence'] < T['test']['accuracy'] - 0.05
-        else "."), "",
+        f"{T['test']['accuracy']:.3f}: the model is **{calibration_word}**"
+        + (". With strong regularization (C ≤ 0.1) probabilities are flattened, which makes the absolute value "
+           "of a confidence threshold hard to interpret." if calibration_word == "under-confident" and best["C"] <= 0.1
+           else ". Threshold values do not transfer between models without recalibration."), "",
         "## 11. Unknown-intent rejection", "",
         f"**Protocol.** Rule: `max_probability < threshold → UNKNOWN_INTENT`. The coverage target "
         f"({pct(cfg['rejection']['target_known_coverage'], 0)} of known validation intents accepted) was fixed "
@@ -406,6 +524,7 @@ def evaluation_report(ctx: dict, ea: dict) -> str:
         "separate known from unknown requests at an acceptable operating point. Caveat: both halves come from the "
         "same synthetic generator, and the holdout was also part of the primary evaluation, so this is not a "
         "fully untouched test.", "",
+        *threshold_sweep_section(ctx),
         "## 12. Computational performance", "",
         "| Measure | Value |", "|---|---|",
         f"| Training time (final fit, 2,160 rows) | {rt['tuned']['training_seconds'] * 1000:.1f} ms |",
@@ -426,32 +545,40 @@ def evaluation_report(ctx: dict, ea: dict) -> str:
         md_table(ea["short_oov_summary"]),
         f"- {len(ea['accepted_errors'])} distinct validation/test phrases are misclassified **and** accepted by "
         f"the rejection threshold. {len(ea['high_conf_errors'])} held-out errors have confidence ≥ "
-        f"{ctx['diag']['high_confidence']}, because the regularized model rarely produces high confidence.",
+        f"{ctx['diag']['high_confidence']}"
+        + (" (the regularized model rarely produces high confidence)." if best["C"] <= 0.1 else
+           ". Confident errors cannot be caught by any reasonable threshold."),
         "- Word order: BoW gives identical probabilities to reordered commands "
         "(`transfer from mere to jone` vs `transfer from jone to mere`). Direction of payment is invisible to "
         "this model.",
         "- Hand-written diagnostic probes are qualitative only (see `error_analysis.md`).", "",
-        "Full analysis: `results/reports/error_analysis.md`.", "",
+        f"Full analysis: `{_r(ctx)}/reports/error_analysis.md`.", "",
         "## 14. Limitations and potential leakage", "",
         "- **Synthetic data.** Utterances are generated from templates with filler suffixes. Real customer "
         "language in Fiji will include Fijian and Fiji Hindi words, code-switching, local slang and "
         "abbreviations (e.g. M-PAiSA, \"vinaka\", \"bhaiya\"), misspellings, SMS shorthand and speech-to-text "
         "errors. None of these is represented systematically here. Reported metrics should not be read as "
         "production accuracy.",
-        f"- **Leakage.** {ctx['audit']['leakage']['test']['leakage_flagged']} test rows repeat a training phrase. "
-        f"Leakage-controlled test macro F1 is {T['test_leakage_controlled']['macro_f1']:.3f} vs "
-        f"{T['test']['macro_f1']:.3f} on the full test set.",
-        f"- **Small, repetitive held-out sets.** {T['test_unique_phrases']['n_samples']} distinct test phrases; "
+        f"- **Leakage.** {leak_test['leakage_flagged']} test rows match a training phrase "
+        f"({leak_test['normalized_in_train']} exactly or after normalization, {leak_test['template_in_train']} once "
+        f"numbers are masked). Leakage-controlled test macro F1 is {T['test_leakage_controlled']['macro_f1']:.3f} vs "
+        f"{T['test']['macro_f1']:.3f} on the full test set. Template-generated commands may also share structure "
+        "across splits beyond what number masking detects.",
+        f"- **Small held-out sets.** {test_n} test rows ({test_unique} distinct phrases); "
         "confidence intervals are wide (see §6), so small differences in macro F1 between models are not reliable.",
-        "- **Unknown evaluation.** The 300 unknowns are synthetic, highly repetitive and sometimes padded with "
-        "wallet words (\"… on my account\", \"… on the app\"). Rejection results are specific to this set.",
+        f"- **Unknown evaluation.** The {n_unknown} unknowns are synthetic"
+        + (", highly repetitive" if unk_unique < 0.8 * n_unknown else "")
+        + " and sometimes padded with wallet words (\"… on my account\", \"… on the app\"). Rejection results are "
+        "specific to this set.",
         "- **BoW limits.** No word order, negation, synonyms or sub-word information. Unseen words are dropped "
         "silently.",
-        "- **Calibration.** Probabilities are under-confident; threshold values do not transfer across models "
+        f"- **Calibration.** Probabilities are {calibration_word}; threshold values do not transfer across models "
         "without recalibration.", "",
         "## 15. Recommendations for the next model", "",
         "1. **Sub-word / character features** (char n-gram TF-IDF, fastText or a transformer tokenizer) to handle "
-        "unseen words, misspellings and SMS forms. This is the dominant failure mode here.",
+        "unseen words, misspellings and SMS forms"
+        + (f". Unseen words appear in {pct(oov_error_share)} of test errors, the dominant failure mode here."
+           if oov_error_share >= 0.5 else "."),
         "2. **Pretrained sentence encoders or transformers** to map unseen paraphrases (`owe`, `beneficiaries`, "
         "`statement`) to known intents through semantic similarity.",
         "3. **A dedicated out-of-scope detector** (e.g. trained on a separate pool of unsupported requests, "
@@ -484,11 +611,22 @@ def error_analysis_report(ctx: dict, ea: dict) -> str:
     max_heldout_conf = max(ctx["preds"]["validation"]["max_confidence"].max(), ctx["preds"]["test"]["max_confidence"].max())
     oos = probes[probes["expected"] == UNKNOWN_INTENT]
     oos_accepted = int((oos["final_intent"] != UNKNOWN_INTENT).sum())
+    test = ctx["preds"]["test"]
+    errors = test[~test["correct"]]
+    oov_err = errors[errors["oov_tokens"].fillna("").str.len() > 0]
+    oov_err_share = len(oov_err) / len(errors) if len(errors) else 0.0
+    oov_example = oov_err.iloc[0] if len(oov_err) else None
+    tb_train = ctx["preds"]["train"].query("actual_intent == 'TRANSFER_MONEY' and predicted_intent == 'BILL_PAY'")
+    in_dataset = int(probes["phrase_in_dataset"].astype(bool).sum())
+    neg = probes[probes["text"].str.lower().str.startswith("don't send")]
+    T = ctx["variants"]["tuned"]["metrics"]["test"]
+    under_conf = T["mean_confidence"] < T["accuracy"] - 0.05
+    n_conf = len(ea["high_conf_errors"])
     L = [
         "# Error Analysis — BoW + Logistic Regression (selected model)", "",
         f"_Generated {utc_now()}. Threshold for rejection: {thr:.4f}. Row-level predictions with all class "
-        "probabilities: `results/predictions/*_predictions.csv`. Tables below are also saved as "
-        "`results/metrics/error_*.csv`._", "",
+        f"probabilities: `{_r(ctx)}/predictions/*_predictions.csv`. Tables below are also saved as "
+        f"`{_r(ctx)}/metrics/error_*.csv`._", "",
         "## 1. Most common confusions", "",
         md_table(held_conf[["split", "actual_intent", "predicted_intent", "count", "unique_phrases", "example"]].head(15)),
         "Train confusions (in-sample):", "",
@@ -496,8 +634,10 @@ def error_analysis_report(ctx: dict, ea: dict) -> str:
                  if len(conf) else conf),
         "## 2. Confident errors", "",
         f"Errors with confidence ≥ {ctx['diag']['high_confidence']}: {len(ea['high_conf_errors'])} on validation/test. "
-        f"The selected model's highest held-out confidence is {max_heldout_conf:.3f}, so the more useful view is **errors that the rejection "
-        "threshold would accept** (distinct phrases, highest confidence first):", "",
+        f"The selected model's highest held-out confidence is {max_heldout_conf:.3f}. "
+        + ("Because confident errors are rare, the more useful view is " if n_conf <= 2 else
+           "Confident errors cannot be filtered by any reasonable threshold. Below: ")
+        + "**errors that the rejection threshold would accept** (distinct phrases, highest confidence first):", "",
         md_table(ea["accepted_errors"].head(20)),
         "## 3. Low-confidence correct predictions (would be falsely rejected)", "",
         f"{len(ea['low_conf_correct'])} distinct correct validation/test phrases fall below the threshold:", "",
@@ -510,9 +650,12 @@ def error_analysis_report(ctx: dict, ea: dict) -> str:
         md_table(ea["short_errors"].head(15)),
         "Most frequent out-of-vocabulary tokens in validation/test (never seen in training):", "",
         md_table(ea["oov_words"].head(25)),
-        "Out-of-vocabulary words explain most errors. Rows with any unseen word are far less accurate than "
-        "fully in-vocabulary rows. The vectorizer silently drops unseen words, so `I owe jone 80` reduces to "
-        "`i jone 80`, which carries almost no intent signal.", "",
+        f"{pct(oov_err_share)} of test errors contain a word never seen in training"
+        + (" — out-of-vocabulary words explain most errors." if oov_err_share >= 0.5 else ".")
+        + " The vectorizer silently drops unseen words"
+        + (f"; e.g. in `{oov_example['text']}` the word(s) `{oov_example['oov_tokens']}` are ignored, leaving the "
+           f"model to guess {oov_example['predicted_intent']} (actual {oov_example['actual_intent']})."
+           if oov_example is not None else "."), "",
         "## 6. Word-order blindness", "",
         md_table(wo),
         "Pairs with the same bag of words receive **identical** probabilities (max |Δp| = 0). The model cannot "
@@ -526,12 +669,11 @@ def error_analysis_report(ctx: dict, ea: dict) -> str:
         "TRANSFER_MONEY ↔ BILL_PAY confusions:", "",
         md_table(ea["transfer_billpay"]),
         "Training TRANSFER_MONEY rows predicted BILL_PAY (in-sample):", "",
-        md_table(ctx["preds"]["train"].query("actual_intent == 'TRANSFER_MONEY' and predicted_intent == 'BILL_PAY'")
-                 [["text", "max_confidence", "final_intent"]]),
-        "These are person-to-person payments phrased as `pay <name> <amount>`. Because `pay` is the "
-        "strongest BILL_PAY feature (see `13_top_features.png`) and names are sparse, the model routes them to "
-        "bill payment. A transfer to a person mistaken for a bill payment (or vice versa) is the most "
-        "consequential confusion for a wallet. A payee/biller slot check should gate both intents.", "",
+        md_table(tb_train[["text", "max_confidence", "final_intent"]]),
+        ("These are person-to-person payments the model routes to bill payment (see `13_top_features.png` for "
+         "the words driving BILL_PAY). " if len(tb_train) else "")
+        + "A transfer to a person mistaken for a bill payment (or vice versa) is the most consequential confusion "
+        "for a wallet. A payee/biller slot check should gate both intents.", "",
         "Supported requests wrongly routed **and accepted** into a money-moving intent (validation/test):", "",
         md_table(ea["money_false_positives"]),
         f"Unsupported (UNKNOWN_INTENT) requests accepted as money-moving intents (distinct phrases, "
@@ -544,21 +686,23 @@ def error_analysis_report(ctx: dict, ea: dict) -> str:
         "## 9. Qualitative diagnostic probes", "",
         f"**These {len(probes)} commands were written by hand for this analysis. They are qualitative diagnostic "
         "probes, not an independent statistical test set, and support no claim about generalization.** "
-        "`phrase_in_dataset` flags probes whose normalized phrase also appears in the workbook (several "
-        "example probes requested in the brief, such as `tell me a joke`, exist in the unknown set). "
-        "`AMBIGUOUS` marks commands with no single correct intent.", "",
+        f"`phrase_in_dataset` flags probes whose normalized phrase also appears in the workbook ({in_dataset} "
+        f"of {len(probes)}). `AMBIGUOUS` marks commands with no single correct intent.", "",
         md_table(probes[["text", "expected", "final_intent", "predicted_intent", "max_confidence",
                          "matches_expected", "phrase_in_dataset", "probe_purpose"]]),
         f"Probes with a definite expected label matching the final (post-rejection) output: "
         f"{int(scored['matches_expected'].astype(bool).sum())}/{len(scored)} (illustrative only). "
         f"Out-of-scope probes accepted as a supported intent: {oos_accepted}/{len(oos)}.", "",
         "## 10. Takeaways", "",
-        "1. Most held-out errors trace to unseen vocabulary in a few repeated paraphrase templates.",
-        "2. Confidence is low across the board (under-confident model), so confidence-based rejection cannot "
-        "separate in-scope from out-of-scope requests.",
-        "3. BoW ignores word order and negation (`don't send money to Jone` → TRANSFER_MONEY).",
-        "4. Explicit TRANSFER_MONEY ↔ BILL_PAY confusion is rare, but out-of-scope requests do get routed to "
-        "money-moving intents.", "",
+        f"1. {pct(oov_err_share)} of held-out test errors involve vocabulary unseen in training.",
+        "2. " + ("Confidence is low across the board (under-confident model), so " if under_conf else
+                 "Confident predictions are common for both supported and unsupported commands, so ")
+        + "confidence-based rejection cannot cleanly separate in-scope from out-of-scope requests.",
+        "3. BoW ignores word order and negation"
+        + (f" (`{neg['text'].iloc[0]}` → {neg['final_intent'].iloc[0]})." if len(neg) else "."),
+        f"4. TRANSFER_MONEY ↔ BILL_PAY confusions on held-out data: "
+        f"{int(ea['transfer_billpay'].query('split != \"train\"')['count'].sum())}; out-of-scope requests routed "
+        f"to money-moving intents: {len(ea['unknown_money_accepts'])} distinct phrases.", "",
     ]
     return "\n".join(L)
 
@@ -612,7 +756,8 @@ def model_card(ctx: dict) -> str:
         "- Ignores word order and negation, so it cannot tell payer from payee.",
         f"- Weak out-of-scope rejection: {pct(rp['unknown_false_accept_rate'])} of unsupported requests were "
         "accepted, some as money-moving intents.",
-        "- Probabilities are under-confident (poorly calibrated).",
+        "- Probabilities are " + ("under-confident (poorly calibrated)." if T["test"]["mean_confidence"]
+                                    < T["test"]["accuracy"] - 0.05 else "not calibrated; recalibrate before thresholding."),
         "- Logistic-regression coefficients (`13_top_features.png`) show associations between n-grams and "
         "predicted classes. They are not causal explanations.", "",
         "## Ethical and safety considerations", "",
@@ -624,9 +769,10 @@ def model_card(ctx: dict) -> str:
 
 
 def write_reports(ctx: dict) -> None:
-    REPORTS_DIR.mkdir(parents=True, exist_ok=True)
+    reports_dir = _out(ctx).reports
+    reports_dir.mkdir(parents=True, exist_ok=True)
     ea = error_analysis_tables(ctx)
-    (REPORTS_DIR / "data_quality_report.md").write_text(data_quality_report(ctx, ea), encoding="utf-8")
-    (REPORTS_DIR / "evaluation_report.md").write_text(evaluation_report(ctx, ea), encoding="utf-8")
-    (REPORTS_DIR / "error_analysis.md").write_text(error_analysis_report(ctx, ea), encoding="utf-8")
-    (REPORTS_DIR / "model_card.md").write_text(model_card(ctx), encoding="utf-8")
+    (reports_dir / "data_quality_report.md").write_text(data_quality_report(ctx, ea), encoding="utf-8")
+    (reports_dir / "evaluation_report.md").write_text(evaluation_report(ctx, ea), encoding="utf-8")
+    (reports_dir / "error_analysis.md").write_text(error_analysis_report(ctx, ea), encoding="utf-8")
+    (reports_dir / "model_card.md").write_text(model_card(ctx), encoding="utf-8")

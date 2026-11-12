@@ -1,0 +1,16 @@
+text,final_intent,max_confidence
+Book a taxi right now on my account,HELP_SUPPORT,0.8715647253370916
+Show me videos of turtle,VIEW_TRANSACTIONS,0.8604028025203512
+Show me videos of cat,VIEW_TRANSACTIONS,0.8604028025203512
+Show me videos of parrot,VIEW_TRANSACTIONS,0.8604028025203512
+Show me videos of dog,VIEW_TRANSACTIONS,0.8604028025203512
+Show me videos of horse,VIEW_TRANSACTIONS,0.8604028025203512
+Find a cinema on the app,VIEW_TRANSACTIONS,0.8289229336905858
+Find a hotel on the app,VIEW_TRANSACTIONS,0.8289229336905858
+Find a curry recipe on the app,VIEW_TRANSACTIONS,0.8289229336905858
+Set an alarm if possible,HELP_SUPPORT,0.7626083087317267
+Order food please if possible,HELP_SUPPORT,0.7582325322309527
+Set a reminder to water the plants on 6 March,BILL_PAY,0.7355833688749975
+Set a reminder to water the plants on 26 March,BILL_PAY,0.7311746514621728
+Order food please quickly,HELP_SUPPORT,0.7247954675445476
+Buy me a phone quickly at the moment,HELP_SUPPORT,0.717761198147681

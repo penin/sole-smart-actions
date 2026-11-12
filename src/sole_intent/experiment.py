@@ -13,8 +13,8 @@ import pandas as pd
 from sklearn.model_selection import GroupShuffleSplit, StratifiedGroupKFold, learning_curve
 
 from . import plots
-from .audit import add_audit_keys, audit_dataset, leakage_table
-from .data_loader import dataset_fingerprint, get_splits, load_dataset, validate_schema
+from .audit import add_audit_keys, audit_dataset, leakage_table, strict_dataset_checks
+from .data_loader import DatasetError, dataset_fingerprint, get_splits, load_dataset, validate_schema
 from .evaluate import (cluster_bootstrap, confusion_frames, evaluate_predictions, expected_calibration_error,
                        measure_latency, per_class_frame, summary_row)
 from .preprocessing import canonical_key, normalize_text, tokenize
@@ -22,9 +22,8 @@ from .rejection import (UNKNOWN_INTENT, apply_rejection, balanced_threshold, max
                         rejection_outcomes, threshold_for_coverage, threshold_sweep)
 from .reports import write_reports
 from .train import build_pipeline, fit_pipeline, params_id, reorder_proba, save_bundle, tune_hyperparameters
-from .utils import (DEFAULT_CONFIG, FIGURES_DIR, METRICS_DIR, MODELS_DIR, PREDICTIONS_DIR, PROCESSED_DIR,
-                    REPORTS_DIR, ensure_output_dirs, environment_info, load_config, package_versions,
-                    resolve_path, save_json, set_seed, sha256_file, utc_now)
+from .utils import (DEFAULT_CONFIG, OutputPaths, environment_info, load_config, load_json, output_paths,
+                    package_versions, resolve_path, save_json, set_seed, sha256_file, utc_now)
 
 MONEY_MOVING = ["TRANSFER_MONEY", "BILL_PAY", "WITHDRAW_MONEY"]
 
@@ -112,6 +111,19 @@ def _top_features(pipe, class_order: list[str], k: int) -> pd.DataFrame:
     return pd.DataFrame(rows)
 
 
+def guard_output_dataset(P: OutputPaths, fingerprint: dict) -> None:
+    """Refuse to overwrite an output folder that holds results for a different dataset (e.g. running the
+    V5 data with the V4 config would otherwise replace the published V4 results)."""
+    existing = P.metrics / "experiment_config.json"
+    if not existing.exists():
+        return
+    previous = load_json(existing).get("dataset", {}).get("content_sha256")
+    if previous and previous != fingerprint["content_sha256"]:
+        raise RuntimeError(f"{P.rel(P.results)} holds results for a different dataset "
+                           f"(content sha256 {previous[:12]}… vs {fingerprint['content_sha256'][:12]}…). "
+                           "Use a config with its own `outputs:` folders.")
+
+
 def run_experiment(config_path=None) -> dict:
     t_start = time.perf_counter()
     cfg_path = resolve_path(config_path or DEFAULT_CONFIG)
@@ -119,7 +131,7 @@ def run_experiment(config_path=None) -> dict:
     exp = cfg["experiment"]
     seed = exp["random_seed"]
     set_seed(seed)
-    ensure_output_dirs()
+    P = output_paths(cfg)
     plots.apply_style(cfg["plots"]["dpi"])
     labels, core = cfg["labels"], cfg["core_labels"]
     model_name, exp_id = exp["model_name"], exp["experiment_id"]
@@ -131,19 +143,31 @@ def run_experiment(config_path=None) -> dict:
     df = load_dataset(cfg)
     validate_schema(df, cfg)
     fingerprint = dataset_fingerprint(df, cfg)
+    guard_output_dataset(P, fingerprint)
+    P.ensure()
+    if cfg.get("validation"):
+        validation = strict_dataset_checks(df, cfg)
+        save_json(validation, P.metrics / "dataset_validation.json")
+        pd.DataFrame(validation["checks"]).to_csv(P.metrics / "dataset_validation.csv", index=False)
+        failed = [c["check"] for c in validation["checks"] if c["status"] == "fail"]
+        if failed:
+            raise DatasetError(f"Dataset validation failed before training: {failed} "
+                               f"(see {P.rel(P.metrics / 'dataset_validation.csv')})")
+    else:
+        validation = None
     splits = get_splits(df, cfg)
     audit_summary, findings, details = audit_dataset(df, cfg)
-    save_json(audit_summary | {"fingerprint": fingerprint}, METRICS_DIR / "dataset_audit.json")
-    findings.to_csv(METRICS_DIR / "dataset_audit.csv", index=False)
+    save_json(audit_summary | {"fingerprint": fingerprint}, P.metrics / "dataset_audit.json")
+    findings.to_csv(P.metrics / "dataset_audit.csv", index=False)
     for name, frame in details.items():
-        frame.to_csv(PROCESSED_DIR / f"{name}.csv", index=False)
+        frame.to_csv(P.processed / f"{name}.csv", index=False)
     leak = leakage_table(df, cfg).set_index("row_id")
     keyed = add_audit_keys(df)
     keyed["leakage_flag"] = keyed["row_id"].map(leak["leakage_flag"]).fillna(False).astype(bool)
     keyed["max_jaccard_to_train"] = keyed["row_id"].map(leak["max_jaccard_to_train"])
-    keyed.to_csv(PROCESSED_DIR / "dataset_with_audit_keys.csv", index=False)
+    keyed.to_csv(P.processed / "dataset_with_audit_keys.csv", index=False)
     for name, frame in splits.as_dict().items():
-        frame.to_csv(PROCESSED_DIR / f"split_{name}.csv", index=False)
+        frame.to_csv(P.processed / f"split_{name}.csv", index=False)
 
     train, val, test, unk = splits.train, splits.validation, splits.test, splits.unknown
     assert UNKNOWN_INTENT not in set(train["intent"]), "UNKNOWN_INTENT leaked into training data"
@@ -153,7 +177,7 @@ def run_experiment(config_path=None) -> dict:
     t0 = time.perf_counter()
     grid_results, best_params = tune_hyperparameters(train, val, cfg, labels)
     grid_seconds = time.perf_counter() - t0
-    grid_results.to_csv(METRICS_DIR / "hyperparameter_search.csv", index=False)
+    grid_results.to_csv(P.metrics / "hyperparameter_search.csv", index=False)
     default_params = {"ngram_range": tuple(cfg["model"]["default_params"]["ngram_range"]),
                       "C": float(cfg["model"]["default_params"]["C"]),
                       "binary": bool(cfg["model"]["default_params"]["binary"])}
@@ -195,23 +219,23 @@ def run_experiment(config_path=None) -> dict:
     bootstrap = cluster_bootstrap(test["intent"], {"tuned": variants["tuned"]["pred"]["test"],
                                                    "default": variants["default"]["pred"]["test"]},
                                   labels, test_groups, n_resamples=cfg["bootstrap"]["n_resamples"], seed=seed)
-    save_json(bootstrap, METRICS_DIR / "bootstrap_ci_test.json")
+    save_json(bootstrap, P.metrics / "bootstrap_ci_test.json")
 
     tuned = variants["tuned"]
     pipe, threshold = tuned["pipeline"], tuned["threshold"]
     for split in ["train", "validation", "test", "test_leakage_controlled", "test_unique_phrases"]:
-        save_json(tuned["metrics"][split], METRICS_DIR / f"metrics_{split}.json")
-        save_json(variants["default"]["metrics"][split], METRICS_DIR / f"metrics_{split}_default_model.json")
+        save_json(tuned["metrics"][split], P.metrics / f"metrics_{split}.json")
+        save_json(variants["default"]["metrics"][split], P.metrics / f"metrics_{split}_default_model.json")
     pd.concat([per_class_frame(v["metrics"][s]).assign(variant=name)
                for name, v in variants.items()
                for s in ["train", "validation", "test", "test_leakage_controlled", "test_unique_phrases"]]
-              ).to_csv(METRICS_DIR / "per_class_metrics.csv", index=False)
+              ).to_csv(P.metrics / "per_class_metrics.csv", index=False)
     cm, cm_norm = confusion_frames(tuned["metrics"]["test"])
-    cm.to_csv(METRICS_DIR / "confusion_matrix.csv")
-    cm_norm.to_csv(METRICS_DIR / "confusion_matrix_normalized.csv")
+    cm.to_csv(P.metrics / "confusion_matrix.csv")
+    cm_norm.to_csv(P.metrics / "confusion_matrix_normalized.csv")
     pd.concat([pd.DataFrame(tuned["metrics"][s]["per_class"])[["intent", "support", "roc_auc_ovr", "average_precision"]]
                .assign(split=s) for s in ["train", "validation", "test"]]
-              ).to_csv(METRICS_DIR / "roc_auc_per_class.csv", index=False)
+              ).to_csv(P.metrics / "roc_auc_per_class.csv", index=False)
 
     # ---------------------------------------------------------------- 4. rejection
     print("[4/9] Unknown-intent rejection protocol")
@@ -222,7 +246,7 @@ def run_experiment(config_path=None) -> dict:
     s = cfg["rejection"]["sweep_thresholds"]
     thresholds = np.round(np.arange(s["start"], s["stop"] + 1e-9, s["step"]), 4)
     sweep = threshold_sweep(test["intent"], tuned["proba"]["test"], tuned["proba"]["unknown"], labels, thresholds)
-    sweep.to_csv(METRICS_DIR / "rejection_threshold_sweep_exploratory.csv", index=False)
+    sweep.to_csv(P.metrics / "rejection_threshold_sweep_exploratory.csv", index=False)
 
     # Supplementary unknown-aware threshold: calibrate on half the unknown phrases, report on the other half.
     unk_groups = unk["text"].map(canonical_key)
@@ -263,7 +287,7 @@ def run_experiment(config_path=None) -> dict:
                                    "independent test, and were not used to choose the primary threshold."),
         "supplementary_unknown_aware": supplementary,
     }
-    save_json(rejection_metrics, METRICS_DIR / "rejection_metrics.json")
+    save_json(rejection_metrics, P.metrics / "rejection_metrics.json")
 
     # ---------------------------------------------------------------- 5. persistence + runtime
     print("[5/9] Saving models and measuring runtime")
@@ -274,7 +298,7 @@ def run_experiment(config_path=None) -> dict:
     paths = {}
     for variant, v in variants.items():
         paths[variant] = save_bundle(
-            v["pipeline"], MODELS_DIR / f"{exp_id}_{variant}_v{version}.joblib", class_order=labels,
+            v["pipeline"], P.models / f"{exp_id}_{variant}_v{version}.joblib", class_order=labels,
             threshold=v["threshold"],
             metadata=common_meta | {"variant": variant, "params": v["params"], "training_seconds": v["fit_seconds"],
                                     "validation_macro_f1": v["metrics"]["validation"]["macro_f1"]})
@@ -295,7 +319,7 @@ def run_experiment(config_path=None) -> dict:
             "params": v["params"],
             "training_seconds": v["fit_seconds"],
             "latency_single_request": lat1, "latency_batch": latb,
-            "model_file": str(paths[variant].relative_to(MODELS_DIR.parent)),
+            "model_file": P.rel(paths[variant]),
             "model_size_mb": paths[variant].stat().st_size / 1024**2,
             "vocabulary_size": len(v["pipeline"].named_steps["bow"].vocabulary_),
             "n_parameters": int(clf.coef_.size + clf.intercept_.size),
@@ -304,7 +328,7 @@ def run_experiment(config_path=None) -> dict:
         if variant == "tuned":
             latency_samples = {"Single request (batch=1)": samples1, f"Batch of {len(test_texts)}": samplesb}
     runtime["hyperparameter_search_seconds"] = grid_seconds
-    save_json(runtime, METRICS_DIR / "runtime_metrics.json")
+    save_json(runtime, P.metrics / "runtime_metrics.json")
 
     # ---------------------------------------------------------------- 6. predictions
     print("[6/9] Exporting row-level predictions")
@@ -313,13 +337,13 @@ def run_experiment(config_path=None) -> dict:
         p = _prediction_frame(frame, tuned["proba"][split], labels, threshold)
         p["leakage_flag"] = p["row_id"].map(leak["leakage_flag"]).fillna(False).astype(bool)
         preds[split] = p
-        p.to_csv(PREDICTIONS_DIR / f"{split}_predictions.csv", index=False)
+        p.to_csv(P.predictions / f"{split}_predictions.csv", index=False)
     pu = _prediction_frame(unk, unk_proba, labels, threshold)
     pu["correct"] = pu["rejected"]  # for unknowns, "correct" means correctly rejected
     pu["unknown_calibration_half"] = False
     pu.loc[cal_idx, "unknown_calibration_half"] = True
     preds["unknown"] = pu
-    pu.to_csv(PREDICTIONS_DIR / "unknown_predictions.csv", index=False)
+    pu.to_csv(P.predictions / "unknown_predictions.csv", index=False)
 
     probe_df = pd.DataFrame(DIAGNOSTIC_PROBES, columns=["text", "expected", "probe_purpose"])
     probe_res = pd.DataFrame(predict_with(pipe, probe_df["text"], labels, threshold))
@@ -330,7 +354,7 @@ def run_experiment(config_path=None) -> dict:
     probe_df["matches_expected"] = np.where(probe_df["expected"] == "AMBIGUOUS", None,
                                             probe_df["final_intent"] == probe_df["expected"])
     probe_df.insert(0, "probe_type", "qualitative_diagnostic_probe")
-    probe_df.to_csv(PREDICTIONS_DIR / "diagnostic_predictions.csv", index=False)
+    probe_df.to_csv(P.predictions / "diagnostic_predictions.csv", index=False)
 
     word_order = []
     for a, b in WORD_ORDER_PROBES:
@@ -341,11 +365,11 @@ def run_experiment(config_path=None) -> dict:
                            "max_abs_prob_diff": float(np.max(np.abs(np.array(list(ra["probabilities"].values()))
                                                                     - np.array(list(rb["probabilities"].values())))))})
     word_order = pd.DataFrame(word_order)
-    word_order.to_csv(PREDICTIONS_DIR / "word_order_probes.csv", index=False)
+    word_order.to_csv(P.predictions / "word_order_probes.csv", index=False)
 
     # ---------------------------------------------------------------- 7. figures
     print("[7/9] Generating figures and learning curve")
-    F = FIGURES_DIR
+    F = P.figures
     tm = tuned["metrics"]["test"]
     plots.confusion_matrix_plot(cm, F / "01_confusion_matrix_counts.png", "Test confusion matrix (counts)", False)
     plots.confusion_matrix_plot(cm_norm, F / "02_confusion_matrix_normalized.png",
@@ -359,11 +383,11 @@ def run_experiment(config_path=None) -> dict:
                               index=comp_metrics).astype(float)
     comparison.columns = ["train", "validation", "test", "test (leakage-controlled)"]
     plots.split_comparison_plot(comparison, F / "04_split_comparison.png", "Train / validation / test comparison")
-    comparison.to_csv(METRICS_DIR / "split_comparison.csv")
+    comparison.to_csv(P.metrics / "split_comparison.csv")
     plots.roc_curves_plot(test["intent"], tuned["proba"]["test"], labels, F / "05_roc_curves.png",
-                          "One-vs-rest ROC curves (test)").to_csv(METRICS_DIR / "roc_curves_data.csv", index=False)
+                          "One-vs-rest ROC curves (test)").to_csv(P.metrics / "roc_curves_data.csv", index=False)
     plots.pr_curves_plot(test["intent"], tuned["proba"]["test"], labels, F / "06_precision_recall_curves.png",
-                         "One-vs-rest precision-recall curves (test)").to_csv(METRICS_DIR / "pr_curves_data.csv", index=False)
+                         "One-vs-rest precision-recall curves (test)").to_csv(P.metrics / "pr_curves_data.csv", index=False)
 
     groups = train["text"].map(canonical_key)
     cv = StratifiedGroupKFold(n_splits=cfg["learning_curve"]["cv_folds"], shuffle=True, random_state=seed)
@@ -379,30 +403,30 @@ def run_experiment(config_path=None) -> dict:
                        "folds_failed": np.isnan(cv_scores).sum(1)})
     plots.learning_curve_plot(lc, F / "07_learning_curve.png",
                               "Learning curve (training split only, 5-fold CV grouped by phrase)")
-    lc.to_csv(METRICS_DIR / "learning_curve.csv", index=False)
+    lc.to_csv(P.metrics / "learning_curve.csv", index=False)
 
     test_conf = max_confidence(tuned["proba"]["test"])
     test_correct = preds["test"]["correct"].to_numpy()
     plots.confidence_distribution_plot(test_conf, test_correct, threshold, F / "08_confidence_distribution.png",
                                        "Confidence: correct vs incorrect (test)"
-                                       ).to_csv(METRICS_DIR / "confidence_distribution_test.csv", index=False)
+                                       ).to_csv(P.metrics / "confidence_distribution_test.csv", index=False)
     ece, cal_bins = expected_calibration_error(test["intent"], tuned["pred"]["test"], test_conf)
     plots.calibration_plot(cal_bins, ece, F / "09_calibration_curve.png", "Reliability diagram (test, top label)")
-    cal_bins.to_csv(METRICS_DIR / "calibration_bins_test.csv", index=False)
+    cal_bins.to_csv(P.metrics / "calibration_bins_test.csv", index=False)
     plots.rejection_threshold_plot(sweep, threshold, F / "10_rejection_threshold.png",
                                    "Rejection threshold sensitivity")
     lat_df = plots.latency_plot(latency_samples, F / "11_inference_latency.png",
                                 "Inference latency (tuned model, CPU, end-to-end)")
-    lat_df.to_csv(METRICS_DIR / "latency_samples.csv", index=False)
+    lat_df.to_csv(P.metrics / "latency_samples.csv", index=False)
     dist = pd.crosstab(df["intent"], df["split"]).reindex(index=labels + [UNKNOWN_INTENT],
                                                          columns=["train", "validation", "test", "evaluation_only"],
                                                          fill_value=0)
     plots.class_distribution_plot(dist, F / "12_class_distribution.png", "Class distribution across splits")
-    dist.to_csv(METRICS_DIR / "class_distribution.csv")
+    dist.to_csv(P.metrics / "class_distribution.csv")
     top = _top_features(pipe, labels, diag["top_features"])
     plots.top_features_plot(top, labels, F / "13_top_features.png",
                             f"Top {diag['top_features']} positive LR coefficients per intent (associations, not causes)")
-    top.to_csv(METRICS_DIR / "top_features.csv", index=False)
+    top.to_csv(P.metrics / "top_features.csv", index=False)
 
     # ---------------------------------------------------------------- 8. supplementary core-8 model
     print("[8/9] Supplementary core-8 model and error analysis")
@@ -420,7 +444,7 @@ def run_experiment(config_path=None) -> dict:
     save_json({"note": "Supplementary 8-class model trained on core intents only with the tuned "
                        "hyperparameters (not re-tuned). Primary results are the 9-class model.",
                "params": best_params, "training_seconds": secs8, "metrics": core8, "rejection": rej8},
-              METRICS_DIR / "metrics_core8_model.json")
+              P.metrics / "metrics_core8_model.json")
 
     # ---------------------------------------------------------------- 9. error analysis + summary + reports
     vocab = set(pipe.named_steps["bow"].vocabulary_)
@@ -475,7 +499,7 @@ def run_experiment(config_path=None) -> dict:
         vocabulary_size=len(pipe8.named_steps["bow"].vocabulary_),
         notes=f"{params_id(best_params)}; 8 core classes only; not saved; latency not measured"))
     summary = pd.DataFrame(summary_rows)
-    summary.to_csv(REPORTS_DIR / "experiment_summary.csv", index=False)
+    summary.to_csv(P.reports / "experiment_summary.csv", index=False)
 
     experiment_config = {
         "experiment": exp, "created_utc": utc_now(), "config_path": str(cfg_path), "config_sha256": config_sha,
@@ -487,7 +511,7 @@ def run_experiment(config_path=None) -> dict:
                         "threshold_selection": "validation known intents only",
                         "final_evaluation": "test (+ evaluation_only unknowns for rejection)"},
     }
-    save_json(experiment_config, METRICS_DIR / "experiment_config.json")
+    save_json(experiment_config, P.metrics / "experiment_config.json")
 
     ctx = {
         "cfg": cfg, "labels": labels, "core": core, "fingerprint": fingerprint, "audit": audit_summary,
@@ -497,9 +521,19 @@ def run_experiment(config_path=None) -> dict:
         "word_order": word_order, "comparison": comparison, "learning_curve": lc, "ece": ece,
         "core8": core8, "core8_rejection": rej8, "top_features": top, "summary": summary, "bootstrap": bootstrap,
         "sweep": sweep, "diag": diag, "money_moving": MONEY_MOVING, "paths": paths,
+        "out": P, "validation": validation, "test_correct": int(preds["test"]["correct"].sum()),
     }
+    if cfg.get("threshold_sweep"):
+        from .threshold_sweep import run_threshold_sweep
+        ctx["threshold_sweep"] = run_threshold_sweep(
+            cfg, P, labels, default_threshold=threshold, test=preds["test"], unknown=preds["unknown"],
+            test_proba=tuned["proba"]["test"], unknown_proba=unk_proba,
+            validation_proba=tuned["proba"]["validation"], financial=MONEY_MOVING)
     print("[9/9] Writing reports")
     write_reports(ctx)
+    if cfg.get("comparison"):
+        from .compare import write_version_comparison
+        write_version_comparison(cfg, P, ctx)
     elapsed = time.perf_counter() - t_start
     print(f"Done in {elapsed:.1f}s")
     return ctx

@@ -1,0 +1,6 @@
+text_a,pred_a,conf_a,text_b,pred_b,conf_b,same_bag_of_words,max_abs_prob_diff
+send money to jone,TRANSFER_MONEY,0.9978051385013796,jone send money to,TRANSFER_MONEY,0.9950349000794567,True,0.00277000000000005
+jone sent me money,VIEW_TRANSACTIONS,0.7796341821347785,i sent jone money,HELP_SUPPORT,0.19106459312798832,False,0.634032
+pay bill then check balance,BILL_PAY,0.847693622507799,check balance then pay bill,BILL_PAY,0.847693622507799,True,0.0
+transfer from mere to jone,TRANSFER_MONEY,0.993518741413223,transfer from jone to mere,TRANSFER_MONEY,0.9876113427551143,True,0.005908000000000024
+did i send money to mere,TRANSFER_MONEY,0.9949025817783345,i did send money to mere,TRANSFER_MONEY,0.989213210490343,True,0.005689999999999973

@@ -13,6 +13,7 @@ import pandas as pd
 
 from .data_loader import REQUIRED_COLUMNS, VALID_SPLITS
 from .preprocessing import canonical_key, template_key
+from .utils import resolve_path
 
 SPLIT_ORDER = ["train", "validation", "test", "evaluation_only"]
 
@@ -209,3 +210,75 @@ def audit_dataset(df: pd.DataFrame, cfg: dict) -> tuple[dict, pd.DataFrame, dict
         "length_stats": length_stats,
     }
     return summary, findings, details
+
+
+def strict_dataset_checks(df: pd.DataFrame, cfg: dict) -> dict:
+    """Pass/fail dataset requirements checked BEFORE training (configured under ``validation:``).
+
+    Failures stop the run; nothing is altered. Duplicates use ``dedup_key`` (NFKC, casefold, collapsed
+    whitespace, surrounding punctuation removed). Stricter overlaps (interior punctuation ignored, numbers
+    masked) are reported as information only."""
+    from .preprocessing import dedup_key
+
+    v = cfg["validation"]
+    unknown = cfg["unknown_label"]
+    labels = list(cfg["labels"]) + [unknown]
+    checks: list[dict] = []
+
+    def check(name, value, ok, expected, details="", info=False):
+        checks.append({"check": name, "value": value, "expected": expected,
+                       "status": "info" if info else ("pass" if ok else "fail"), "details": details})
+
+    n = len(df)
+    check("total_rows", n, n == cfg["data"]["expected_rows"], cfg["data"]["expected_rows"])
+    counts = df["split"].value_counts().to_dict()
+    for split, expected in cfg["data"]["expected_split_counts"].items():
+        got = int(counts.get(split, 0))
+        check(f"rows_{split}", got, got == expected, expected)
+    per_intent = df["intent"].value_counts().reindex(labels, fill_value=0)
+    bad = {k: int(c) for k, c in per_intent.items() if c != v["per_intent"]}
+    check("rows_per_intent_including_unknown", f"{int(per_intent.min())}–{int(per_intent.max())}", not bad,
+          v["per_intent"], f"mismatches: {bad}" if bad else "all 10 labels")
+    check("missing_command_text", int(df["text"].isna().sum() + df["text"].fillna("").str.strip().eq("").sum()),
+          df["text"].notna().all() and not df["text"].fillna("").str.strip().eq("").any(), 0)
+    check("missing_intent_label", int(df["intent"].isna().sum()), df["intent"].notna().all(), 0)
+
+    exact = df["text"].duplicated(keep=False)
+    check("exact_duplicate_commands", int(exact.sum()), not exact.any(), 0,
+          "; ".join(df.loc[exact, "text"].head(5)))
+    key = df["text"].map(dedup_key)
+    norm = key.duplicated(keep=False)
+    check("normalized_duplicate_commands", int(norm.sum()), not norm.any(), 0,
+          "NFKC + casefold + whitespace + surrounding punctuation; " + "; ".join(df.loc[norm, "text"].head(5)))
+    split_sets = key.groupby(df["split"]).apply(set)
+    cross = sum(len(split_sets[a] & split_sets[b]) for i, a in enumerate(split_sets.index)
+                for b in split_sets.index[i + 1:])
+    check("cross_split_duplicate_commands", int(cross), cross == 0, 0, "normalized key shared by two splits")
+    conflicts = key.to_frame("k").assign(intent=df["intent"]).groupby("k")["intent"].nunique()
+    check("conflicting_labels_same_normalized_command", int((conflicts > 1).sum()), not (conflicts > 1).any(), 0)
+    unk_bad = int(((df["intent"] == unknown) & (df["split"] != "evaluation_only")).sum())
+    check("unknown_intent_evaluation_only", unk_bad, unk_bad == 0, 0, "UNKNOWN_INTENT rows outside evaluation_only")
+
+    keyed = add_audit_keys(df)
+    canon = keyed["canonical"].duplicated(keep=False)
+    check("info_duplicates_ignoring_interior_punctuation", int(canon.sum()), True, "info",
+          "; ".join(df.loc[canon, "text"].head(6)), info=True)
+    train_t = set(keyed.loc[keyed["split"] == "train", "template"])
+    for split in ("validation", "test", "evaluation_only"):
+        hits = int(keyed.loc[keyed["split"] == split, "template"].isin(train_t).sum())
+        check(f"info_{split}_number_masked_template_in_train", hits, True, "info",
+              "same command as a training row once numbers are masked", info=True)
+
+    extra = {}
+    try:
+        log = pd.read_excel(resolve_path(cfg["data"]["path"]), sheet_name=v.get("replacement_log_sheet", "Replacement Log"))
+        extra = {"replacement_log_rows": int(len(log)),
+                 "replacements_by_split": log["Split"].value_counts().to_dict() if "Split" in log else {},
+                 "replacements_by_intent": log["Intent"].value_counts().to_dict() if "Intent" in log else {}}
+        check("info_replacement_log_rows", int(len(log)), True, "info",
+              "duplicate occurrences replaced by the dataset author (from the workbook)", info=True)
+    except (ValueError, KeyError, FileNotFoundError):
+        pass
+    failed = [c["check"] for c in checks if c["status"] == "fail"]
+    return {"passed": not failed, "failed_checks": failed, "dedup_normalization": dedup_key.__doc__.split("\n")[0],
+            "checks": checks, **extra}

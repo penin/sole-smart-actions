@@ -1,0 +1,331 @@
+{
+  "model_name": "bow_logreg_default",
+  "experiment_id": "bow_logreg_v5",
+  "split": "test_leakage_controlled",
+  "n_samples": 231,
+  "class_order": [
+    "TRANSFER_MONEY",
+    "CHECK_BALANCE",
+    "VIEW_TRANSACTIONS",
+    "WITHDRAW_MONEY",
+    "BILL_PAY",
+    "HELP_SUPPORT",
+    "MANAGE_CONTACTS",
+    "VIEW_GROUP",
+    "CHECK_SPENDING"
+  ],
+  "accuracy": 0.9264069264069265,
+  "macro_precision": 0.9304385964912281,
+  "weighted_precision": 0.9369252677147415,
+  "macro_recall": 0.9286788704413225,
+  "weighted_recall": 0.9264069264069265,
+  "macro_f1": 0.9242079637430337,
+  "weighted_f1": 0.9256753923055833,
+  "balanced_accuracy": 0.9286788704413225,
+  "log_loss": 0.37378862579852246,
+  "macro_roc_auc_ovr": 0.990034131188582,
+  "weighted_roc_auc_ovr": 0.9912832631225958,
+  "macro_average_precision": 0.965007652209482,
+  "top2_accuracy": 0.9523809523809523,
+  "top3_accuracy": 0.974025974025974,
+  "mean_confidence": 0.7877311889304094,
+  "expected_calibration_error": 0.1386757374765171,
+  "per_class": [
+    {
+      "intent": "TRANSFER_MONEY",
+      "precision": 1.0,
+      "recall": 0.7,
+      "f1": 0.8235294117647058,
+      "support": 30,
+      "roc_auc_ovr": 0.9772802653399669,
+      "average_precision": 0.8968383259262703
+    },
+    {
+      "intent": "CHECK_BALANCE",
+      "precision": 0.875,
+      "recall": 1.0,
+      "f1": 0.9333333333333333,
+      "support": 21,
+      "roc_auc_ovr": 1.0,
+      "average_precision": 1.0000000000000004
+    },
+    {
+      "intent": "VIEW_TRANSACTIONS",
+      "precision": 0.7894736842105263,
+      "recall": 0.8333333333333334,
+      "f1": 0.8108108108108109,
+      "support": 18,
+      "roc_auc_ovr": 0.9444444444444444,
+      "average_precision": 0.8371697592581302
+    },
+    {
+      "intent": "WITHDRAW_MONEY",
+      "precision": 0.92,
+      "recall": 1.0,
+      "f1": 0.9583333333333334,
+      "support": 23,
+      "roc_auc_ovr": 0.9995819397993312,
+      "average_precision": 0.9965217391304346
+    },
+    {
+      "intent": "BILL_PAY",
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 23,
+      "roc_auc_ovr": 1.0,
+      "average_precision": 0.9999999999999998
+    },
+    {
+      "intent": "HELP_SUPPORT",
+      "precision": 0.7894736842105263,
+      "recall": 1.0,
+      "f1": 0.8823529411764706,
+      "support": 30,
+      "roc_auc_ovr": 1.0,
+      "average_precision": 0.9999999999999999
+    },
+    {
+      "intent": "MANAGE_CONTACTS",
+      "precision": 1.0,
+      "recall": 0.9333333333333333,
+      "f1": 0.9655172413793104,
+      "support": 30,
+      "roc_auc_ovr": 0.9915422885572139,
+      "average_precision": 0.9690917107583773
+    },
+    {
+      "intent": "VIEW_GROUP",
+      "precision": 1.0,
+      "recall": 0.9655172413793104,
+      "f1": 0.9824561403508771,
+      "support": 29,
+      "roc_auc_ovr": 1.0,
+      "average_precision": 0.9999999999999998
+    },
+    {
+      "intent": "CHECK_SPENDING",
+      "precision": 1.0,
+      "recall": 0.9259259259259259,
+      "f1": 0.9615384615384616,
+      "support": 27,
+      "roc_auc_ovr": 0.9974582425562817,
+      "average_precision": 0.9854473348121258
+    }
+  ],
+  "confusion_matrix": [
+    [
+      21,
+      0,
+      0,
+      2,
+      0,
+      7,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      21,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      3,
+      15,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      23,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      23,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      30,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      2,
+      0,
+      0,
+      0,
+      28,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      28,
+      0
+    ],
+    [
+      0,
+      0,
+      2,
+      0,
+      0,
+      0,
+      0,
+      0,
+      25
+    ]
+  ],
+  "confusion_matrix_normalized": [
+    [
+      0.7,
+      0.0,
+      0.0,
+      0.06666666666666667,
+      0.0,
+      0.23333333333333334,
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.16666666666666666,
+      0.8333333333333334,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      1.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.06666666666666667,
+      0.0,
+      0.0,
+      0.0,
+      0.9333333333333333,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.034482758620689655,
+      0.0,
+      0.9655172413793104,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.07407407407407407,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.9259259259259259
+    ]
+  ],
+  "core8_breakdown": {
+    "n_samples": 204,
+    "accuracy": 0.9264705882352942,
+    "macro_precision": 0.9333533281733746,
+    "weighted_precision": 0.9367723699386876,
+    "macro_recall": 0.929022988505747,
+    "weighted_recall": 0.9264705882352942,
+    "macro_f1": 0.925333157310111,
+    "weighted_f1": 0.9250169313481772,
+    "predicted_outside_core": 0,
+    "undefined_metrics": {}
+  },
+  "undefined_metrics": {}
+}

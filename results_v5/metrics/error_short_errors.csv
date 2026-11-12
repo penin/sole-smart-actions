@@ -1,0 +1,3 @@
+split,text,actual_intent,predicted_intent,max_confidence,top2_margin,oov_tokens
+validation,Open statement,VIEW_TRANSACTIONS,VIEW_GROUP,0.3169252928353004,0.11033882378813781,statement
+test,Show beneficiaries,MANAGE_CONTACTS,VIEW_TRANSACTIONS,0.7481781043514796,0.6754220472474574,beneficiaries
