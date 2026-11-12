@@ -3,6 +3,7 @@ import userEvent from "@testing-library/user-event";
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 import App from "../App";
 import samples from "../data/sampleCommands.json";
+import { thresholdPct } from "../lib/format";
 import { applyThreshold } from "../lib/threshold";
 import type { Prediction } from "../types";
 import fixture from "./fixtures/threshold_cases.json";
@@ -93,6 +94,7 @@ const INFO = {
 
 const MODELS = [
   { id: "bow_logreg", name: "Bag of Words + Logistic Regression", available: true, status: "available" },
+  { id: "bow_logreg_v4", name: "Bag of Words + Logistic Regression (Dataset V4)", available: true, status: "available" },
   { id: "tfidf_logreg", name: "TF-IDF + Logistic Regression", available: false, status: "coming_soon" },
   { id: "custom_transformer", name: "Custom Transformer", available: false, status: "coming_soon" },
   { id: "distilbert", name: "DistilBERT", available: false, status: "coming_soon" },
@@ -131,7 +133,7 @@ const slider = () => screen.getByRole("slider", { name: /confidence threshold/i 
 
 async function renderReady() {
   render(<App />);
-  await waitFor(() => expect(screen.getByText("19.57%", { selector: "output" })).toBeInTheDocument());
+  await waitFor(() => expect(screen.getByText(thresholdPct(DEFAULT), { selector: "output" })).toBeInTheDocument());
 }
 
 async function runSample(user: ReturnType<typeof userEvent.setup>, category: string, command: string) {
@@ -148,11 +150,12 @@ describe("layout and model selection", () => {
     expect(screen.getByText("Natural Language Intent Classification")).toBeInTheDocument();
     expect(screen.getByText("MIT AI Edge | Sole Smart Actions | Bag of Words Baseline")).toBeInTheDocument();
     const select = screen.getByLabelText("Classifier");
-    await waitFor(() => expect(within(select).getAllByRole("option")).toHaveLength(4));
+    await waitFor(() => expect(within(select).getAllByRole("option")).toHaveLength(5));
     const options = within(select).getAllByRole("option") as HTMLOptionElement[];
     expect(options[0]).toHaveTextContent("Bag of Words + Logistic Regression — Available");
     expect(options[0].disabled).toBe(false);
-    for (const o of options.slice(1)) {
+    expect(options[1].disabled).toBe(false);
+    for (const o of options.slice(2)) {
       expect(o.disabled).toBe(true);
       expect(o).toHaveTextContent("Coming Soon");
     }
@@ -162,6 +165,20 @@ describe("layout and model selection", () => {
     await renderReady();
     expect(screen.getByText("79.3%")).toBeInTheDocument();
     expect(screen.getAllByText("Not available").length).toBeGreaterThan(0);
+  });
+});
+
+describe("model switching", () => {
+  it("clears the previous result and loads the newly selected model's information", async () => {
+    const user = userEvent.setup();
+    await renderReady();
+    await runSample(user, "Transfer Money", "Send $50 to Jone");
+    expect(screen.getByTestId("raw-intent")).toBeInTheDocument();
+    await user.selectOptions(screen.getByLabelText("Classifier"), "bow_logreg_v4");
+    expect(screen.queryByTestId("raw-intent")).not.toBeInTheDocument();
+    await waitFor(() => expect(calls.some((c) => c.url.includes("model_id=bow_logreg_v4"))).toBe(true));
+    await user.type(screen.getByLabelText("Customer command"), "Pay my EFL bill{Enter}");
+    await waitFor(() => expect(predictCalls().at(-1)!.body).toMatchObject({ model_id: "bow_logreg_v4" }));
   });
 });
 
@@ -183,8 +200,8 @@ describe("threshold slider", () => {
     expect(screen.getByTestId("status")).toHaveTextContent("Accepted");
     const before = predictCalls().length;
 
-    fireEvent.change(slider(), { target: { value: "95" } });
-    expect(screen.getByText("95%", { selector: "output" })).toBeInTheDocument();
+    fireEvent.change(slider(), { target: { value: "100" } });
+    expect(screen.getByText("100%", { selector: "output" })).toBeInTheDocument();
     expect(screen.getByTestId("final-intent")).toHaveTextContent("UNKNOWN_INTENT");
     expect(screen.getByTestId("raw-intent")).toHaveTextContent("TRANSFER_MONEY");
     expect(screen.getByTestId("confidence")).toHaveTextContent(`${(conf * 100).toFixed(1)}%`);
@@ -196,7 +213,7 @@ describe("threshold slider", () => {
     expect(predictCalls().length).toBe(before); // no re-inference
 
     await user.click(screen.getByRole("button", { name: "Reset to Default" }));
-    expect(screen.getByText("19.57%", { selector: "output" })).toBeInTheDocument();
+    expect(screen.getByText(thresholdPct(DEFAULT), { selector: "output" })).toBeInTheDocument();
     await waitFor(() => expect(screen.getByText("Decision confirmed by backend")).toBeInTheDocument());
   });
 

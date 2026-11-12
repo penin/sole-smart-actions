@@ -34,6 +34,8 @@ export interface Explanation {
   tokens: string[];
   recognized_tokens: string[];
   unknown_tokens: string[];
+  recognized_phrases?: string[];
+  ngram_range?: number[];
   explained_class: string;
   runner_up_class: string;
   intercept: number;
@@ -91,6 +93,7 @@ export interface ModelInfo {
   name: string;
   family: string;
   version: string | null;
+  dataset_version?: string | null;
   model_file: string;
   model_sha256: string;
   pipeline_steps: string[];

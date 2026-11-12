@@ -15,12 +15,16 @@ SAMPLES = json.loads((paths.FRONTEND_DATA / "sampleCommands.json").read_text(enc
 SAMPLE_TEXTS = [t for c in SAMPLES["categories"] for t in c["commands"]]
 
 
+def test_default_model_is_v5(model):
+    assert model.model_path == paths.PROJECT_ROOT / "models_v5" / "bow_logreg_v5_tuned_v1.0.0.joblib"
+    assert model.id == "bow_logreg"
+
+
 def test_existing_model_and_vectorizer_load(model):
-    assert model.model_path == paths.PROJECT_ROOT / "models" / "bow_logreg_v1_tuned_v1.0.0.joblib"
     assert type(model.vectorizer).__name__ == "CountVectorizer"
     assert type(model.classifier).__name__ == "LogisticRegression"
     assert type(model.normalizer).__name__ == "TextNormalizer"
-    assert len(model.vocabulary) == 250
+    assert len(model.vocabulary) == len(load_bundle(model.model_path)["pipeline"].named_steps["bow"].vocabulary_)
 
 
 def test_classes_come_from_loaded_classifier(model):
@@ -28,23 +32,28 @@ def test_classes_come_from_loaded_classifier(model):
     assert len(model.class_order) == 9 and "UNKNOWN_INTENT" not in model.class_order
 
 
-def test_default_threshold_matches_project_configuration(model):
-    bundle = load_bundle(paths.MODEL_PATH)
-    assert model.default_threshold == bundle["rejection_threshold"] == pytest.approx(0.19572296, abs=1e-8)
-    assert "bundle" in model.threshold_source  # config/inference.yaml has threshold: null
+@pytest.mark.parametrize("which, expected", [("v5", 0.34152482), ("v4", 0.19572296)])
+def test_default_threshold_matches_project_configuration(which, expected):
+    from conftest import MODEL_SPECS
+    m = BowLogRegModel(MODEL_SPECS[which][0], metrics_dir=MODEL_SPECS[which][1])
+    m.load()
+    assert m.default_threshold == load_bundle(m.model_path)["rejection_threshold"] == pytest.approx(expected, abs=1e-7)
+    assert "bundle" in m.threshold_source  # config/inference.yaml has threshold: null
 
 
 @pytest.mark.parametrize("text", SAMPLE_TEXTS + ["", "SEND $50 TO JONE!!!", "x" * 2000])
-def test_predictions_match_existing_inference_pipeline(model, text):
+def test_predictions_match_existing_inference_pipeline(any_model, text):
+    model = any_model
     expected = predict_texts([text], model.bundle)[0]
     got = model.predict(text)
     assert got.raw_prediction == expected["predicted_intent"]
     assert got.probabilities == expected["probabilities"]  # exact equality: same code path, same floats
 
 
-def test_predictions_match_saved_v1_test_predictions(model):
-    """Probabilities for the held-out test rows equal those saved by the Baseline V1 run."""
-    saved = pd.read_csv(paths.PROJECT_ROOT / "results" / "predictions" / "test_predictions.csv")
+def test_predictions_match_saved_test_predictions(any_model):
+    """Probabilities for the held-out test rows equal those saved by that model's evaluation run."""
+    model = any_model
+    saved = pd.read_csv(model.results_dir / "predictions" / "test_predictions.csv")
     for _, row in saved.iloc[::9].iterrows():
         got = model.predict(row["text"]).probabilities
         np.testing.assert_allclose([got[c] for c in model.class_order],
@@ -68,15 +77,17 @@ def test_preprocessing_is_the_trained_pipeline(model):
 
 
 @pytest.mark.parametrize("text", SAMPLE_TEXTS)
-def test_feature_contributions_are_mathematically_exact(model, text):
+def test_feature_contributions_are_mathematically_exact(any_model, text):
+    model = any_model
     p = model.predict(text)
     e = p.explanation
     X = model.vectorizer.transform([e["normalized_text"]])
     k = list(model.classifier.classes_).index(p.raw_prediction)
     total = e["intercept"] + sum(c["contribution"] for c in e["contributions"])
     assert total == pytest.approx(model.classifier.decision_function(X)[0, k], abs=1e-12)
-    assert sorted(t for t in e["recognized_tokens"]) == sorted(
-        t for c in e["contributions"] for t in [c["feature"]] * c["count"])
+    in_vocab = [f for f in model.analyzer(e["normalized_text"]) if f in model.vocabulary]
+    assert sorted(in_vocab) == sorted(t for c in e["contributions"] for t in [c["feature"]] * c["count"])
+    assert set(e["recognized_phrases"]) == {f for f in in_vocab if " " in f}
 
 
 def test_model_load_failure_is_reported(tmp_path):

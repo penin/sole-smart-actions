@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export const MAX_INPUT = 500;
 
@@ -13,6 +13,11 @@ interface Props {
 export function CommandInput({ value, onChange, onSubmit, loading, disabled }: Props) {
   const [hint, setHint] = useState<string | null>(null);
   const blank = value.trim().length === 0;
+
+  // A sample command or history restore fills the box from outside: drop any stale "type a command" hint.
+  useEffect(() => {
+    if (!blank) setHint(null);
+  }, [blank]);
 
   function submit() {
     if (blank) {

@@ -130,6 +130,18 @@ export default function App() {
     }
   }, [info, analyze]);
 
+  // Switching models clears the current result: its probabilities belong to the previous model.
+  const selectModel = (id: string) => {
+    if (id === modelId) return;
+    requestId.current++;
+    setLoading(false);
+    setError(null);
+    setPrediction(null);
+    setBackendDecision(null);
+    setActiveKey(null);
+    setModelId(id);
+  };
+
   const pickSample = (cmd: string) => {
     setInput(cmd);
     void analyze(cmd);
@@ -149,12 +161,14 @@ export default function App() {
 
   return (
     <div className="flex min-h-screen flex-col">
-      <Header models={models} selectedModel={modelId} onSelectModel={setModelId} />
+      <Header models={models} selectedModel={modelId} onSelectModel={selectModel} />
 
       <div className="border-b border-slate-200 bg-white">
         <p className="mx-auto max-w-7xl px-4 py-2.5 text-xs text-slate-600 sm:px-6 lg:px-8">
-          <span className="font-semibold text-navy-900">Bag of Words + Logistic Regression</span> · Baseline model trained on
-          synthetic Sole wallet commands · Every result below is computed live by the trained model
+          <span className="font-semibold text-navy-900">{info?.name ?? "Bag of Words + Logistic Regression"}</span> · Baseline
+          model trained on synthetic Sole wallet commands
+          {info?.dataset_version ? ` (dataset ${info.dataset_version})` : ""} · Every result below is computed live by
+          the trained model
         </p>
       </div>
 

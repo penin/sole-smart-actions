@@ -57,14 +57,15 @@ def _read_json(path: Path) -> dict | None:
 
 
 class BowLogRegModel:
-    """The existing Baseline V1 model, loaded once, read-only."""
+    """A trained Bag of Words model from the project (V5 by default), loaded once, read-only."""
 
-    id = "bow_logreg"
-    name = "Bag of Words + Logistic Regression"
     family = "Bag of Words (CountVectorizer) + multinomial Logistic Regression"
 
     def __init__(self, model_path: Path = paths.MODEL_PATH, inference_config: Path = paths.INFERENCE_CONFIG,
-                 metrics_dir: Path = paths.METRICS_DIR):
+                 metrics_dir: Path = paths.METRICS_DIR, model_id: str = "bow_logreg",
+                 name: str = "Bag of Words + Logistic Regression (Dataset V5)"):
+        self.id = model_id
+        self.name = name
         self.model_path = Path(model_path)
         self.inference_config = Path(inference_config)
         self.metrics_dir = Path(metrics_dir)
@@ -135,9 +136,11 @@ class BowLogRegModel:
         ``intercept + Σ contributions`` equals ``decision_function`` for class k (verified in tests)."""
         self._require()
         normalized = self.normalizer.transform([text])[0]
-        tokens = self.analyzer(normalized)
+        # Single words (what a customer typed) vs n-gram features (what the model counts; e.g. bigrams for V5).
+        tokens = self.vectorizer.build_tokenizer()(self.vectorizer.build_preprocessor()(normalized))
         recognized = [t for t in tokens if t in self.vocabulary]
         unknown = [t for t in tokens if t not in self.vocabulary]
+        phrases = [f for f in self.analyzer(normalized) if " " in f and f in self.vocabulary]
         X = self.vectorizer.transform([normalized])
         k = self.classifier_classes.index(predicted)
         coef = self.classifier.coef_
@@ -161,6 +164,8 @@ class BowLogRegModel:
             "tokens": tokens,
             "recognized_tokens": recognized,
             "unknown_tokens": unknown,
+            "recognized_phrases": phrases,
+            "ngram_range": list(self.vectorizer.ngram_range),
             "explained_class": predicted,
             "runner_up_class": self.classifier_classes[runner],
             "intercept": float(self.classifier.intercept_[k]),
@@ -191,6 +196,7 @@ class BowLogRegModel:
             "family": self.family,
             "version": meta.get("model_version"),
             "experiment_id": meta.get("experiment_id"),
+            "dataset_version": (meta.get("dataset") or {}).get("dataset_version"),
             "model_file": str(self.model_path.relative_to(paths.PROJECT_ROOT)).replace("\\", "/"),
             "model_sha256": self.model_sha256,
             "pipeline_steps": [f"{name}: {type(step).__name__}" for name, step in self.bundle["pipeline"].steps],
@@ -214,7 +220,7 @@ class BowLogRegModel:
                               "Probability equal to the threshold is accepted. A genuine HELP_SUPPORT "
                               "prediction is routed to help, not treated as a fallback."),
             "evaluation": {
-                "source": "results/metrics (held-out test split, Baseline V1 evaluation)",
+                "source": f"{self.metrics_dir.relative_to(paths.PROJECT_ROOT).as_posix()} (held-out test split)",
                 "test_n": m_test.get("n_samples"),
                 "test_accuracy": m_test.get("accuracy"),
                 "test_macro_f1": m_test.get("macro_f1"),
@@ -270,10 +276,14 @@ class ModelRegistry:
 
 
 def build_registry() -> ModelRegistry:
-    bow = BowLogRegModel()
-    bow.load()
+    v5 = BowLogRegModel()  # default: retrained on Dataset V5
+    v4 = BowLogRegModel(paths.MODEL_PATH_V4, metrics_dir=paths.METRICS_DIR_V4, model_id="bow_logreg_v4",
+                        name="Bag of Words + Logistic Regression (Dataset V4)")
+    for m in (v5, v4):
+        m.load()
     return ModelRegistry([
-        bow,
+        v5,
+        v4,
         PlannedModel("tfidf_logreg", "TF-IDF + Logistic Regression"),
         PlannedModel("custom_transformer", "Custom Transformer"),
         PlannedModel("distilbert", "DistilBERT"),

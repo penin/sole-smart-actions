@@ -60,13 +60,14 @@ demo/
 
 | Item | Location / value |
 |---|---|
-| Model bundle | `models/bow_logreg_v1_tuned_v1.0.0.joblib` (loaded once at startup, read-only, SHA-256 shown in the UI) |
+| Model bundle (default) | `models_v5/bow_logreg_v5_tuned_v1.0.0.joblib`, trained on **Dataset V5** (loaded once at startup, read-only, SHA-256 shown in the UI) |
+| Comparison model | `models/bow_logreg_v1_tuned_v1.0.0.joblib`, trained on Dataset V4. Selectable in the *Classifier* dropdown (`model_id=bow_logreg_v4`) |
 | Vectorizer | the fitted `CountVectorizer` is the `bow` step **inside** the bundle's pipeline (there is no separate file) |
 | Preprocessing | the bundle's own `TextNormalizer` step (Unicode NFKC, lowercase, whitespace collapse) |
-| Classifier | `LogisticRegression` (`C = 0.1`), the `clf` step of the pipeline |
+| Classifier | `LogisticRegression` (V5: `C = 10`, words + two-word phrases; V4: `C = 0.1`, words only), the `clf` step of the pipeline |
 | Classes | read at runtime from the bundle's `class_order`, validated against `classifier.classes_` (9 intents) |
-| Default threshold | `config/inference.yaml` → `inference.threshold` if set; it is `null`, so the bundle's `rejection_threshold` **0.19572 (19.57%)** is used. This is the same precedence as `python -m sole_intent.predict`. |
-| Metrics | `results/metrics/metrics_test.json`, `metrics_validation.json`, `rejection_metrics.json`, `runtime_metrics.json`, `bootstrap_ci_test.json` |
+| Default threshold | `config/inference.yaml` → `inference.threshold` if set; it is `null`, so each bundle's own `rejection_threshold` is used: **34.15% for V5** (19.57% for V4). This is the same precedence as `python -m sole_intent.predict`. |
+| Metrics | V5: `results_v5/metrics/` (V4: `results/metrics/`): `metrics_test.json`, `metrics_validation.json`, `rejection_metrics.json`, `runtime_metrics.json`, `bootstrap_ci_test.json` |
 
 If the model cannot be loaded, the server still starts. `/api/health` reports the error, prediction
 endpoints return HTTP 503 with the reason, and the UI shows it.
@@ -75,8 +76,9 @@ endpoints return HTTP 503 with the reason, and the UI shows it.
 
 1. **Input:** the customer command (1–2,000 characters on the API; the UI limits input to 500).
 2. **Preprocessing:** the trained `TextNormalizer` step.
-3. **Bag of Words:** the fitted `CountVectorizer` (unigrams; keeps `$` and numbers). Words not in its
-   250-word vocabulary are dropped; the UI lists them as *unknown words*.
+3. **Bag of Words:** the fitted `CountVectorizer` (keeps `$` and numbers). V5 counts single words and two-word
+   phrases (2,584 features); V4 counts single words (250). Words not in the vocabulary are dropped; the UI lists
+   them as *unknown words* and shows recognized two-word phrases separately.
 4. **Logistic Regression:** `predict_proba()` returns a probability for each of the 9 intents.
 5. **Decision:** `decision.apply_threshold()` applies the selected threshold and fallback rules.
 
@@ -101,7 +103,7 @@ These are the project's existing rules (`src/sole_intent/rejection.py`), wrapped
 - The **raw prediction and confidence never change** with the threshold; only the final intent does.
 - Ties go to the first class in the canonical class order (numpy `argmax` behaviour).
 - The slider (0–100%, 1% steps) is temporary and per-session. It is never written to any configuration.
-  **Reset to Default** restores 19.57%. The default sits between slider steps, so it is shown with
+  **Reset to Default** restores the selected model's default (34.15% for V5). The default sits between slider steps, so it is shown with
   two decimals.
 - **Consistency:** `generate_threshold_cases.py` produces `frontend/src/__tests__/fixtures/threshold_cases.json`
   (573 cases from real model probabilities, including exact `confidence == threshold` and ±1-ulp boundaries).
@@ -118,13 +120,13 @@ loaded model; this check is computed from the model's classes at runtime.
 **Presentation scenarios.** Deep links also work, e.g.
 `http://127.0.0.1:8000/?q=Send%20%2450%20to%20Jone&t=60` (`t` = threshold %).
 
-| Scenario | Try | What it shows (actual model behaviour at 19.57%) |
+| Scenario | Try | What it shows (V5 model at its 34.15% default; V4 in brackets) |
 |---|---|---|
-| A Confident | "Send $50 to Jone" | TRANSFER_MONEY, 88.5% |
-| B Sensitivity | same, drag slider up | final intent flips to UNKNOWN_INTENT at 89%; raw/confidence unchanged |
-| C Unknown | "What's the weather today?" | VIEW_TRANSACTIONS at 29.1%: *accepted* at the default threshold (a model error; "weather" is not in the vocabulary). Rejected from 30%. |
-| D Ambiguous | "Payment" | HELP_SUPPORT at 33.2%: accepted at default, fallback at 34%+ |
-| E Paraphrase | "Transfer 50 dollars to Jone" | TRANSFER_MONEY, 81.3% |
+| A Confident | "Send $50 to Jone" | TRANSFER_MONEY, 99.9% (V4: 88.5%) |
+| B Sensitivity | same, drag slider up | final intent flips to UNKNOWN_INTENT only at 100% (V4: 89%); raw/confidence unchanged. "Payment" shows the flip more clearly (see D) |
+| C Unknown | "What's the weather today?" | VIEW_TRANSACTIONS at 36.5%: still *accepted* at the default threshold (a model error; "weather" is not in the vocabulary). Rejected from 37% (V4: 29.1%, rejected from 30%) |
+| D Ambiguous | "Payment" | HELP_SUPPORT at 46.4%: accepted at default, fallback from 47% (V4: 33.2%, from 34%) |
+| E Paraphrase | "Transfer 50 dollars to Jone" | TRANSFER_MONEY, 99.5% (V4: 81.3%) |
 
 ## 7. API
 
@@ -189,8 +191,8 @@ cd sole-smart-actions\demo
 ```powershell
 cd demo
 .\run-tests.ps1                                   # everything below
-cd backend;  ..\..\.venv\Scripts\python -m pytest -q      # 125 tests
-cd frontend; npm run typecheck; npm test                  # tsc + 18 vitest tests
+cd backend;  ..\..\.venv\Scripts\python -m pytest -q      # 203 tests (V5 and V4 models)
+cd frontend; npm run typecheck; npm test                  # tsc + 19 vitest tests
 python e2e\browser_smoke.py                       # optional: real Edge browser, needs `pip install playwright` + running demo
 ```
 
@@ -224,9 +226,11 @@ python e2e\browser_smoke.py                       # optional: real Edge browser,
 ## Limitations
 
 - The model is trained on synthetic commands and is under-confident (held-out test: mean top probability
-  49% vs accuracy 79%). Confidence values are model estimates, not guarantees.
-- At the default 19.57% threshold many out-of-scope commands are **accepted** as some intent (the project's
-  evaluation found 14.7% unknown rejection). The demo shows this honestly; it does not hide model errors.
+  V5: 88% vs accuracy 94%; V4: 49% vs 79%). Confidence values are model estimates, not guarantees.
+- At the default threshold many out-of-scope commands are still **accepted** as some intent (V5 evaluation:
+  29.3% unknown rejection; V4: 14.7%). The demo shows this honestly; it does not hide model errors.
+- V5's headline test accuracy (93.7%) is partly inflated by template-generated test commands; on test commands
+  shared with V4 it scores 90.2% (see `results_v5/v4_vs_v5_comparison.md`).
 - Bag of Words ignores word order and drops unseen words (e.g. "weather"), as the explanation panel shows.
 - `inference_ms` in the UI includes the explanation computation and the first call's warm-up. Use the
   benchmark latency in Model Information for performance claims.

@@ -14,6 +14,7 @@ def test_health_and_models(client):
     assert client.get("/api/health").json()["model_loaded"] is True
     models = {m["id"]: m for m in client.get("/api/models").json()}
     assert models["bow_logreg"]["available"] is True
+    assert models["bow_logreg_v4"]["available"] is True  # previous model kept for comparison
     for mid in ("tfidf_logreg", "custom_transformer", "distilbert"):
         assert models[mid]["available"] is False and models[mid]["status"] == "coming_soon"
 
@@ -22,7 +23,7 @@ def test_model_info_reads_real_artifacts(client, model):
     info = client.get("/api/model-info").json()
     metrics = json.loads((paths.METRICS_DIR / "metrics_test.json").read_text(encoding="utf-8"))
     assert info["classes"] == model.class_order and info["n_classes"] == 9
-    assert info["vectorizer"]["type"] == "CountVectorizer" and info["vectorizer"]["vocabulary_size"] == 250
+    assert info["vectorizer"]["type"] == "CountVectorizer" and info["vectorizer"]["vocabulary_size"] == len(model.vocabulary)
     assert info["default_threshold"] == model.default_threshold
     assert info["evaluation"]["test_accuracy"] == metrics["accuracy"]
     assert info["evaluation"]["test_macro_f1"] == metrics["macro_f1"]

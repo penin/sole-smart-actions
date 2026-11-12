@@ -42,7 +42,11 @@ export function Interpretation({ prediction, decision }: Props) {
           <code className="rounded bg-slate-100 px-1.5 py-0.5 font-mono text-xs text-navy-900">{e.normalized_text || "(empty)"}</code>
         </Step>
         <Step n={3} title="CountVectorizer builds a Bag of Words">
-          <p>Word order is ignored. Only words seen during training count.</p>
+          <p>
+            {(e.ngram_range?.[1] ?? 1) > 1
+              ? "Word order is mostly ignored: the model counts single words and two-word phrases seen during training."
+              : "Word order is ignored. Only words seen during training count."}
+          </p>
           <div className="mt-2 space-y-2">
             <div>
               <p className="eyebrow">Recognized words ({e.recognized_tokens.length})</p>
@@ -55,6 +59,18 @@ export function Interpretation({ prediction, decision }: Props) {
                 ))}
               </div>
             </div>
+            {(e.recognized_phrases?.length ?? 0) > 0 && (
+              <div>
+                <p className="eyebrow">Recognized two-word phrases ({e.recognized_phrases!.length})</p>
+                <div className="mt-1 flex flex-wrap gap-1.5" data-testid="phrases">
+                  {e.recognized_phrases!.map((t, i) => (
+                    <span key={`${t}-${i}`} className="rounded-md bg-sky-50 px-2 py-0.5 font-mono text-xs font-medium text-sky-800 ring-1 ring-sky-600/20">
+                      {t}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            )}
             <div>
               <p className="eyebrow">Unknown words — not in the {""}model vocabulary ({e.unknown_tokens.length})</p>
               <div className="mt-1 flex flex-wrap gap-1.5" data-testid="unknown">

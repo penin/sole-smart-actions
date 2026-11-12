@@ -38,7 +38,7 @@ export function Header({ models, selectedModel, onSelectModel }: Props) {
               id="model-select"
               value={selectedModel}
               onChange={(e) => onSelectModel(e.target.value)}
-              className="w-full appearance-none rounded-lg border border-white/15 bg-navy-800 py-2 pr-9 pl-3 text-sm font-medium text-white md:w-[27rem]"
+              className="w-full appearance-none rounded-lg border border-white/15 bg-navy-800 py-2 pr-9 pl-3 text-sm font-medium text-white md:w-[31rem]"
             >
               {models.length === 0 && <option value={selectedModel}>Bag of Words + Logistic Regression</option>}
               {models.map((m) => (
@@ -52,7 +52,7 @@ export function Header({ models, selectedModel, onSelectModel }: Props) {
             </svg>
           </div>
           <p className="text-xs text-slate-400">
-            {current?.available ? "Live model: Bag of Words + Logistic Regression" : "Model status loading…"}
+            {current?.available ? `Live model: ${current.name}` : "Model status loading…"}
           </p>
         </div>
       </div>

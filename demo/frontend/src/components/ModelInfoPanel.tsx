@@ -32,6 +32,7 @@ export function ModelInfoPanel({ info, error, session }: Props) {
             <p className="eyebrow">Model</p>
             <dl className="mt-1 divide-y divide-slate-100">
               <Row label="Name" value={info.name} />
+              <Row label="Training data" value={info.dataset_version ?? "Not available"} />
               <Row label="Version" value={info.version ?? "Not available"} />
               <Row label="Vectorizer" value={`${info.vectorizer.type} (${info.vectorizer.ngram_range[0] === 1 && info.vectorizer.ngram_range[1] === 1 ? "unigrams" : `${info.vectorizer.ngram_range.join("–")}-grams`})`} />
               <Row label="Classifier" value={`${info.classifier.type}, C = ${info.classifier.C}`} />
