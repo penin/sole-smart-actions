@@ -12,19 +12,19 @@ from sole_intent.experiment import guard_output_dataset
 from sole_intent.preprocessing import dedup_key
 from sole_intent.utils import PROJECT_ROOT, load_config, output_paths, save_json
 
-V5 = PROJECT_ROOT / "Sole_Smart_Actions_Intent_Training_v5_Deduplicated.xlsx"
+V5 = PROJECT_ROOT / "data" / "raw" / "Sole_Smart_Actions_Intent_Training_v5_Deduplicated.xlsx"
 needs_v5 = pytest.mark.skipif(not V5.exists(), reason="Dataset V5 workbook not present")
 
 
 def test_default_output_paths_are_the_original_v4_locations(cfg):
     P = output_paths(cfg)
-    assert P.results == PROJECT_ROOT / "results" and P.models == PROJECT_ROOT / "models"
-    assert P.processed == PROJECT_ROOT / "data" / "processed"
-    assert P.metrics == PROJECT_ROOT / "results" / "metrics"
+    assert P.results == PROJECT_ROOT / "results" / "history" / "bow_v4" and P.models == PROJECT_ROOT / "artifacts" / "history" / "bow_v4"
+    assert P.processed == PROJECT_ROOT / "data" / "processed" / "bow_v4"
+    assert P.metrics == PROJECT_ROOT / "results" / "history" / "bow_v4" / "metrics"
 
 
 def test_v5_config_isolated_and_methodology_identical():
-    v4, v5 = load_config("config/baseline.yaml"), load_config("config/baseline_v5.yaml")
+    v4, v5 = load_config("config/history/bow_v4.yaml"), load_config("config/history/bow_v5.yaml")
     p4, p5 = output_paths(v4), output_paths(v5)
     assert {p4.results, p4.models, p4.processed}.isdisjoint({p5.results, p5.models, p5.processed})
     allowed = {"experiment", "data", "outputs", "validation", "threshold_sweep", "comparison"}
@@ -47,8 +47,8 @@ def test_guard_refuses_to_overwrite_results_of_another_dataset(tmp_path):
 
 
 def test_v4_results_folder_is_protected_from_v5_data():
-    v5 = load_config("config/baseline_v5.yaml")
-    v4_paths = output_paths(load_config("config/baseline.yaml"))
+    v5 = load_config("config/history/bow_v5.yaml")
+    v4_paths = output_paths(load_config("config/history/bow_v4.yaml"))
     if not (v4_paths.metrics / "experiment_config.json").exists():
         pytest.skip("V4 results not present")
     with pytest.raises(RuntimeError):
@@ -74,7 +74,7 @@ def test_date_template_key_masks_numbers_and_months():
 
 @needs_v5
 def test_strict_checks_pass_on_v5():
-    cfg = load_config("config/baseline_v5.yaml")
+    cfg = load_config("config/history/bow_v5.yaml")
     result = strict_dataset_checks(load_dataset(cfg), cfg)
     assert result["passed"], result["failed_checks"]
     names = {c["check"] for c in result["checks"] if c["status"] == "pass"}
@@ -94,7 +94,7 @@ def test_strict_checks_catch_v4_duplicates(cfg):
 
 @needs_v5
 def test_strict_checks_fail_on_injected_problems():
-    cfg = load_config("config/baseline_v5.yaml")
+    cfg = load_config("config/history/bow_v5.yaml")
     df = load_dataset(cfg)
     bad = df.copy()
     bad.loc[1, "text"] = bad.loc[0, "text"].upper() + "!"          # normalized duplicate across splits

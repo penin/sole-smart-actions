@@ -1,0 +1,271 @@
+original,with_typo,intent
+Recent transactions?,Reecent transactions?,VIEW_TRANSACTIONS
+Start a bill payment,Sart a bill payment,BILL_PAY
+How much is available,How mbch is available,CHECK_BALANCE
+Summarize my expenses,Smmarize my expenses,CHECK_SPENDING
+Withdraw 120 dollars,Withdarw 120 dollars,WITHDRAW_MONEY
+Display my wallet balance on 15 September,Display my wallt balance on 15 September,CHECK_BALANCE
+Show last 5 transactions,Show lats 5 transactions,VIEW_TRANSACTIONS
+Withdraw 50 dollars,Withdrkw 50 dollars,WITHDRAW_MONEY
+How much is available now,How much is avilable now,CHECK_BALANCE
+Help with my sole app,Help wtih my sole app,HELP_SUPPORT
+Need customer service,Need cuustomer service,HELP_SUPPORT
+Can i pay waf,Can i pay waf,BILL_PAY
+I need help with my account access,I need help wiht my account access,HELP_SUPPORT
+Edit savenaca's details,Edit savenaca's detalis,MANAGE_CONTACTS
+Edit adi's details,Edit addi's details,MANAGE_CONTACTS
+Need customer service please now,Need customer servie please now,HELP_SUPPORT
+What's my balance please now,What's my balance pelase now,CHECK_BALANCE
+View my recipient list?,View my recipient liist?,MANAGE_CONTACTS
+Send cash to jone,Sned cash to jone,TRANSFER_MONEY
+Send cash to peni,Send cauh to peni,TRANSFER_MONEY
+How much has church group saved?,How much has church grroup saved?,VIEW_GROUP
+I have a complaint,I have a commplaint,HELP_SUPPORT
+How much has market vendors group saved,How mch has market vendors group saved,VIEW_GROUP
+Can I rename the contact Peni?,Can I renaie the contact Peni?,MANAGE_CONTACTS
+Show spending on shopping,Show spending on shoppig,CHECK_SPENDING
+Send cash to ravi,Send cash to raiv,TRANSFER_MONEY
+Show last 5 transactions in sole,Show laast 5 transactions in sole,VIEW_TRANSACTIONS
+Need customer service please,Need customer service plesae,HELP_SUPPORT
+Remove Ema from my contacts,Remve Ema from my contacts,MANAGE_CONTACTS
+I have a question regarding a merchant payment issue,I have a question regarding a merchant payment isuue,HELP_SUPPORT
+Check balance,Check ballance,CHECK_BALANCE
+Pay telecom,Pay tellecom,BILL_PAY
+Where is my statement,Where is my statelent,VIEW_TRANSACTIONS
+I need to speak to an agent about an agent deposit issue,I need to sceak to an agent about an agent deposit issue,HELP_SUPPORT
+List my wallet transactions on 25 July,Lst my wallet transactions on 25 July,VIEW_TRANSACTIONS
+Prepare a withdrawal,Preprae a withdrawal,WITHDRAW_MONEY
+Withdraw 40 dollars,Withdraw 40 dollqrs,WITHDRAW_MONEY
+I owe joeli 100,I owe joeil 100,TRANSFER_MONEY
+Can I rename the contact Kesa?,Can I rename the contact Kes?a,MANAGE_CONTACTS
+Withdraw 20 dollars,Withdraw 20 dolalrs,WITHDRAW_MONEY
+Send cash to asha,Send cah to asha,TRANSFER_MONEY
+Please settle my EFL invoice for $175,Please settle my EFL invoice for $1175,BILL_PAY
+Help with my sole app at the moment,Help wiith my sole app at the moment,HELP_SUPPORT
+Can i pay water,Can i pay waater,BILL_PAY
+View groupwealth,Viiew groupwealth,VIEW_GROUP
+Pay 70 dollars toward my water supplier bill,Pay 70 dollars toward my water spuplier bill,BILL_PAY
+Withdraw 200 dollars?,Withdraw 200 dolars?,WITHDRAW_MONEY
+Show members of my holiday savings group,Sohw members of my holiday savings group,VIEW_GROUP
+How can I get assistance with a blocked wallet?,How can I get assistanec with a blocked wallet?,HELP_SUPPORT
+Settle $350 owed to internet provider,Settle $350 owed to internet prvider,BILL_PAY
+Withdraw 10 dollars?,Withdraw 10 dollas?,WITHDRAW_MONEY
+Please send $100 to ravi,Please send $10 to ravi,TRANSFER_MONEY
+Show transactions,Shvw transactions,VIEW_TRANSACTIONS
+I have a question regarding an app login problem,I have a question regadding an app login problem,HELP_SUPPORT
+Withdraw 60 dollars,Wihtdraw 60 dollars,WITHDRAW_MONEY
+Where is my statement on my account,Where is my satement on my account,VIEW_TRANSACTIONS
+Pay 5 dollars toward my Vodafone bill,Pay 5 dollars twoard my Vodafone bill,BILL_PAY
+Help me send money to mika,Hlep me send money to mika,TRANSFER_MONEY
+Who contributed to community on 14 June?,Who contriubted to community on 14 June?,VIEW_GROUP
+Total purchases this week,Total purghases this week,CHECK_SPENDING
+Total purchases last month,Total purchahes last month,CHECK_SPENDING
+How do i cash out,How do i cah out,WITHDRAW_MONEY
+Edit john's details,Elit john's details,MANAGE_CONTACTS
+Go to family group,Go to family grxup,VIEW_GROUP
+Withdraw 80 dollars,Withdrwa 80 dollars,WITHDRAW_MONEY
+Recent transactions now,Recennt transactions now,VIEW_TRANSACTIONS
+I owe tui $200,I owe tui $00,TRANSFER_MONEY
+Show savings balance,Shw savings balance,CHECK_BALANCE
+Edit sera's details,Edit serra's details,MANAGE_CONTACTS
+Check balance in sole,Check baalnce in sole,CHECK_BALANCE
+Show spending on school,Show spendnig on school,CHECK_SPENDING
+Withdraw 5 dollars,Withdrwa 5 dollars,WITHDRAW_MONEY
+Can someone assist with my account access?,Can soeone assist with my account access?,HELP_SUPPORT
+Show expenditure summary,Show expenditgre summary,CHECK_SPENDING
+How much has rugby club group saved,How much has rugby club goup saved,VIEW_GROUP
+Pay water,Pay witer,BILL_PAY
+I would like support for an agent deposit issue,I would like support for an agwnt deposit issue,HELP_SUPPORT
+I owe raj 120,I owe raj 120,TRANSFER_MONEY
+Can you guide me on a missing receipt?,Can you guide me on a missing receiet?,HELP_SUPPORT
+Help with my sole app on my account,Help wih my sole app on my account,HELP_SUPPORT
+Help me send money to john,Heelp me send money to john,TRANSFER_MONEY
+Show last 5 transactions on my account,Sqow last 5 transactions on my account,VIEW_TRANSACTIONS
+Show money received on 11 June,Show mnoey received on 11 June,VIEW_TRANSACTIONS
+What's my balance please on sole,What's my blaance please on sole,CHECK_BALANCE
+Withdraw at an agent,Withrdaw at an agent,WITHDRAW_MONEY
+View groupwealth now,Veiw groupwealth now,VIEW_GROUP
+Help,Hellp,HELP_SUPPORT
+Open my community group wallet,Open my communiity group wallet,VIEW_GROUP
+Give me an expenditure breakdown on 27 May,Giee me an expenditure breakdown on 27 May,CHECK_SPENDING
+Help me pay $250 to internet provider,Help me pay $250 to interrnet provider,BILL_PAY
+What's my balance,Wtat's my balance,CHECK_BALANCE
+Edit litia's details?,Edit litia's dteails?,MANAGE_CONTACTS
+Check my Sole balance on 5 January,Check my Soe balance on 5 January,CHECK_BALANCE
+Withdraw 30 dollars,Withdraw 30 dllars,WITHDRAW_MONEY
+Display my wallet balance on 28 July,Display my wallet balnce on 28 July,CHECK_BALANCE
+Give me an expenditure breakdown on 25 December,Give me an expenditure breakdown on 25 Decembber,CHECK_SPENDING
+Total purchases over the weekend,Totaal purchases over the weekend,CHECK_SPENDING
+Show beneficiaries,Shhow beneficiaries,MANAGE_CONTACTS
+Give me an expenditure breakdown on 26 June,Gve me an expenditure breakdown on 26 June,CHECK_SPENDING
+How much has work group saved,How much has work grup saved,VIEW_GROUP
+I owe mere 50,I owe meere 50,TRANSFER_MONEY
+Can i pay efl,Can i pay efl,BILL_PAY
+How much has village group saved,How much has village group saevd,VIEW_GROUP
+I need to speak to an agent about an app login problem,I neeed to speak to an agent about an app login problem,HELP_SUPPORT
+How much went out of my wallet on 11 March?,How muuch went out of my wallet on 11 March?,CHECK_SPENDING
+I owe jone 80,I owe joe 80,TRANSFER_MONEY
+What's my balance please,What's my balance pleare,CHECK_BALANCE
+Show incoming transfers on 26 May,Sohw incoming transfers on 26 May,VIEW_TRANSACTIONS
+Give me the transaction list for on 26 August,Give me the transactino list for on 26 August,VIEW_TRANSACTIONS
+Review my account activity on 16 January,Review my account activty on 16 January,VIEW_TRANSACTIONS
+How much has school group saved?,How much has school group saevd?,VIEW_GROUP
+Pay internet,Pay intrenet,BILL_PAY
+Edit mere's details,Edit mee's details,MANAGE_CONTACTS
+Edit ana's details,Edit ana's deetails,MANAGE_CONTACTS
+Total purchases since monday,Total purchases since moday,CHECK_SPENDING
+Show spending on restaurants,Saow spending on restaurants,CHECK_SPENDING
+What is my available balance on 15 October?,What is my availabble balance on 15 October?,CHECK_BALANCE
+Where is my statement this time,Where is my statement this tiime,VIEW_TRANSACTIONS
+What is my available balance on 5 November?,What is my availabel balance on 5 November?,CHECK_BALANCE
+"Withdraw 1,000 dollars",Withdraw 1h000 dollars,WITHDRAW_MONEY
+Withdraw 15 dollars,Withddraw 15 dollars,WITHDRAW_MONEY
+Settle $300 owed to internet provider,Settle $300 oed to internet provider,BILL_PAY
+Group savings,Grop savings,VIEW_GROUP
+Show my group savings for village,Show my group savings for villlage,VIEW_GROUP
+How much has holiday savings group saved,How mucch has holiday savings group saved,VIEW_GROUP
+Total purchases last week,Total purchases last weke,CHECK_SPENDING
+Withdraw 75 dollars,Witdraw 75 dollars,WITHDRAW_MONEY
+Edit adi's details quickly,Edit adi's dteails quickly,MANAGE_CONTACTS
+Edit kumar's details,Edit kumar's detaiils,MANAGE_CONTACTS
+How much cash is in Sole on 12 April?,How much cash is in Soel on 12 April?,CHECK_BALANCE
+I owe mika 5,I owe miika 5,TRANSFER_MONEY
+Show incoming transfers on 9 December,Shwo incoming transfers on 9 December,VIEW_TRANSACTIONS
+Go to holiday savings group,Go to holiday savings grop,VIEW_GROUP
+Pay my electricity provider bill of $90,Pay my electricity provdier bill of $90,BILL_PAY
+I need help with an agent deposit issue,I need help with an agent deposit isssue,HELP_SUPPORT
+Help me send money to roshni,Hellp me send money to roshni,TRANSFER_MONEY
+Withdraw $200 dollars,Withdraw $200 dollaars,WITHDRAW_MONEY
+Pay phone,Pay phonne,BILL_PAY
+Edit jone's details,Edit jone's deails,MANAGE_CONTACTS
+Go to community group,Go to community grovp,VIEW_GROUP
+Tell me how much I paid out on 27 July,Tell me how murh I paid out on 27 July,CHECK_SPENDING
+Send cash to raj,Sennd cash to raj,TRANSFER_MONEY
+Can you check my account balance on 18 April?,Can you check my accouunt balance on 18 April?,CHECK_BALANCE
+Can i pay water if possible,Can i pay water if possvble,BILL_PAY
+Tell me my current balance on 11 September,Tell me my currezt balance on 11 September,CHECK_BALANCE
+How much has community group saved,How much has communtiy group saved,VIEW_GROUP
+Edit mika's details,Edit mik'as details,MANAGE_CONTACTS
+Show outgoing payments on 3 March,Show outgoinng payments on 3 March,VIEW_TRANSACTIONS
+Withdraw 500 dollars,Wihdraw 500 dollars,WITHDRAW_MONEY
+Display my latest transaction history on 3 March,Dsplay my latest transaction history on 3 March,VIEW_TRANSACTIONS
+Where do I report my account access?,Where do I report my account acces?s,HELP_SUPPORT
+Send cash to kumar,Send cah to kumar,TRANSFER_MONEY
+Display my wallet balance on 13 July,Display my wallet balance on 13 Juhy,CHECK_BALANCE
+Can you pay my EFL account $30?,Can you pay my EFL account $30?,BILL_PAY
+Can i pay electricity?,Can i pay elecricity?,BILL_PAY
+Edit joeli's details,Edit joeli's detaibs,MANAGE_CONTACTS
+Edit roshni's details,Edit roshni's deatils,MANAGE_CONTACTS
+Show spending on fuel,Show spvnding on fuel,CHECK_SPENDING
+Find Mere in my recipient list,Find Mere in my recipiett list,MANAGE_CONTACTS
+Total purchases in october,Total purchases in octobrr,CHECK_SPENDING
+Please send $200 to asha,Please send $200 to aoha,TRANSFER_MONEY
+Please send 25 to mere,Please seend 25 to mere,TRANSFER_MONEY
+Go to women's savings group,Go to women's savings grup,VIEW_GROUP
+Show expenditure summary in sole,Show expenditure summray in sole,CHECK_SPENDING
+How much did I spend on 20 August?,How much did I spend on 20 Augst?,CHECK_SPENDING
+Show outgoing payments on 23 March,Show outgoing paymments on 23 March,VIEW_TRANSACTIONS
+Show transactions at the moment,Show transactions at the mment,VIEW_TRANSACTIONS
+What payments did I make on 12 December?,What pawments did I make on 12 December?,VIEW_TRANSACTIONS
+Pay bills,Pay bils,BILL_PAY
+Can you check my account balance on 13 December?,Can you chkck my account balance on 13 December?,CHECK_BALANCE
+Save Leilani as a payment contact,Save Leilani as a payment contcat,MANAGE_CONTACTS
+Withdraw at an agent this time,Withdraw at an agynt this time,WITHDRAW_MONEY
+Show the amount available to spend on 15 September,Show the amount available to spend on 15 Septemebr,CHECK_BALANCE
+Please send 80 to adi,Please sedn 80 to adi,TRANSFER_MONEY
+Go to village group,Go to village grnup,VIEW_GROUP
+Withdraw $50 dollars,Withraw $50 dollars,WITHDRAW_MONEY
+Review my account activity on 8 March,Review my account actiaity on 8 March,VIEW_TRANSACTIONS
+Which transactions happened on 1 March?,Which transactions happened on 1 Marxh?,VIEW_TRANSACTIONS
+Help me take out 60 dollars,Hep me take out 60 dollars,WITHDRAW_MONEY
+Can i pay broadband,Can i pay broabdand,BILL_PAY
+Display my wallet balance on 17 July,Dispay my wallet balance on 17 July,CHECK_BALANCE
+Show savings balance in sole,Show savings balance in sloe,CHECK_BALANCE
+I have a question regarding a blocked wallet,I have a question regarrding a blocked wallet,HELP_SUPPORT
+Summarize my expenses now,Summaarize my expenses now,CHECK_SPENDING
+How much is available this time,How much is available thiis time,CHECK_BALANCE
+Can i pay school fees,Can i pay school fese,BILL_PAY
+Send cash to john,Send csah to john,TRANSFER_MONEY
+Manage my contacts,Manage my cotnacts,MANAGE_CONTACTS
+Send cash to sera,Send cash to srea,TRANSFER_MONEY
+Withdraw $70 from my wallet,Wihtdraw $70 from my wallet,WITHDRAW_MONEY
+How much did I spend on 21 May?,How much did I spend on 21 My?,CHECK_SPENDING
+Settle $5 owed to mobile provider,Settle $5 owde to mobile provider,BILL_PAY
+Go to work group,Go to worrk group,VIEW_GROUP
+How much is left in my wallet on 4 December?,How much is left in my wallet on 4 December?,CHECK_BALANCE
+Save Kesa as a payment contact,Save Keas as a payment contact,MANAGE_CONTACTS
+Pay my water supplier bill of $5,Pay my water supplier biill of $5,BILL_PAY
+Withdraw 250 dollars,Withdraw 250 dollrs,WITHDRAW_MONEY
+Show money received on 20 March,Sohw money received on 20 March,VIEW_TRANSACTIONS
+Pay waf today,Pay waf todya,BILL_PAY
+Go to market vendors group,Go to market vendors grroup,VIEW_GROUP
+Give me the transaction list for on 6 October,Give me the transaction list for on 6 Octboer,VIEW_TRANSACTIONS
+I have a question regarding identity verification,I have a question regarding identity verifiaction,HELP_SUPPORT
+Display my wallet balance on 26 November,Display my wallet balance on 26 Novebmer,CHECK_BALANCE
+Show spending on food,Show spewding on food,CHECK_SPENDING
+List contributions in family on 5 March,List contribtions in family on 5 March,VIEW_GROUP
+Help with my sole app please,Help with my sone app please,HELP_SUPPORT
+Show the amount available to spend on 5 June,Show the amount available to spend on 5 Junne,CHECK_BALANCE
+Need customer service please on sole,Need cuustomer service please on sole,HELP_SUPPORT
+Edit priya's details,Edit prsya's details,MANAGE_CONTACTS
+Withdraw $20 dollars,Withdraw $20 dolalrs,WITHDRAW_MONEY
+Recent transactions on sole,Recent transations on sole,VIEW_TRANSACTIONS
+Help me send money to sera,Help me send money to seera,TRANSFER_MONEY
+Can i pay mobile,Can i pay mobiile,BILL_PAY
+Go to women's savings group if possible,Go to women's savings gropu if possible,VIEW_GROUP
+Can i pay phone,Can i pay pone,BILL_PAY
+Show my saved contact Priya,Show my saved contact Prya,MANAGE_CONTACTS
+How can I get assistance with my account access?,How can I get assistance with my account accezs?,HELP_SUPPORT
+How much has family group saved,How muuch has family group saved,VIEW_GROUP
+Request a withdrawal of $35,Requst a withdrawal of $35,WITHDRAW_MONEY
+Where do I report a failed transfer?,Where do I report a faired transfer?,HELP_SUPPORT
+Withdraw $100 from my wallet,Withdraw $100 froom my wallet,WITHDRAW_MONEY
+Total purchases yesterday,Total purchaies yesterday,CHECK_SPENDING
+Open the saved recipient entry for Asha,Open the saved recpient entry for Asha,MANAGE_CONTACTS
+Show spending on mobile data,Shhow spending on mobile data,CHECK_SPENDING
+I need to collect $220 in cash,I ned to collect $220 in cash,WITHDRAW_MONEY
+Tell me my current balance on 20 August,Tell me my curreent balance on 20 August,CHECK_BALANCE
+I owe adi 250,I owe adi 250,TRANSFER_MONEY
+Can you pay my Vodafone account $15?,Can you pay my Vodafone account $1?5,BILL_PAY
+Do I have money in my Sole wallet on 4 December?,Do I have moey in my Sole wallet on 4 December?,CHECK_BALANCE
+Total purchases in the last 30 days,Total purchases in the laast 30 days,CHECK_SPENDING
+Pay my EFL bill of $12,Pay my EFL biill of $12,BILL_PAY
+Show spending on market,Shhow spending on market,CHECK_SPENDING
+Send cash to litia,Send cash to ldtia,TRANSFER_MONEY
+Display my latest transaction history on 13 September,Displaay my latest transaction history on 13 September,VIEW_TRANSACTIONS
+Send cash to adi,Send cakh to adi,TRANSFER_MONEY
+Withdraw 25 dollars,Wiithdraw 25 dollars,WITHDRAW_MONEY
+Save Josefa as a payment contact,Save Josefa as a payment cnotact,MANAGE_CONTACTS
+I owe kumar 40,I owe kuamr 40,TRANSFER_MONEY
+Recent transactions on the app,Reent transactions on the app,VIEW_TRANSACTIONS
+Show spending on utilities,Show spending on utiilties,CHECK_SPENDING
+List contributions in community on 18 April,List cottributions in community on 18 April,VIEW_GROUP
+Help in sole,Heop in sole,HELP_SUPPORT
+How do I withdraw 80 dollars?,How do I withdraw 80 dollajs?,WITHDRAW_MONEY
+Take $60 out of my Sole account,Take $60 out of my Sole accoutn,WITHDRAW_MONEY
+Delete recipient Meli,Delete recipient Mli,MANAGE_CONTACTS
+Go to school group,Go to school group,VIEW_GROUP
+Go to church group,Go to chrch group,VIEW_GROUP
+Show money received on 8 February,Sohw money received on 8 February,VIEW_TRANSACTIONS
+I have a complaint at the moment,I have a compjaint at the moment,HELP_SUPPORT
+Help at the moment,Heelp at the moment,HELP_SUPPORT
+How much is left in my wallet on 13 October?,How much is left in my wallte on 13 October?,CHECK_BALANCE
+Settle $200 owed to water supplier,Settle $20 owed to water supplier,BILL_PAY
+Show incoming transfers on 3 November,Show incoming transfers on 3 Nvember,VIEW_TRANSACTIONS
+I have a EFL bill for $90,I hae a EFL bill for $90,BILL_PAY
+Help on the app,Hlp on the app,HELP_SUPPORT
+I owe mary $50,I owe mady $50,TRANSFER_MONEY
+Show spending on bills,Show spendinng on bills,CHECK_SPENDING
+I owe mary 15,I owe maoy 15,TRANSFER_MONEY
+Please send 500 to raj,Pxease send 500 to raj,TRANSFER_MONEY
+Show beneficiaries quickly,Show beneficiariies quickly,MANAGE_CONTACTS
+Edit tui's details,Eit tui's details,MANAGE_CONTACTS
+I need help with a locked account,I need help with a locked accoutn,HELP_SUPPORT
+List my wallet transactions on 27 October,List my wallet transactiosn on 27 October,VIEW_TRANSACTIONS
+Total purchases,Toial purchases,CHECK_SPENDING
+Edit ravi's details,Edct ravi's details,MANAGE_CONTACTS
+What's my balance at the moment,What's my balknce at the moment,CHECK_BALANCE
+Who contributed to work on 6 February?,Who contributed to wrk on 6 February?,VIEW_GROUP
+How much has women's savings group saved,How much has women's savijgs group saved,VIEW_GROUP
+Please send 40 to litia,Please send 40 to liita,TRANSFER_MONEY
+Total purchases this month,Total purchases this moonth,CHECK_SPENDING

@@ -1,0 +1,10 @@
+Custom Transformer (T = 2.302, threshold = 0.958)
+
+Send 20 to my mum                   -> TRANSFER_MONEY      99.7%   open TRANSFER_MONEY
+transfer didn't go through          -> TRANSFER_MONEY      98.9%   open TRANSFER_MONEY
+how much do I have                  -> CHECK_BALANCE       99.7%   open CHECK_BALANCE
+show what I withdrew last week      -> VIEW_TRANSACTIONS   99.0%   open VIEW_TRANSACTIONS
+pay fiji water                      -> BILL_PAY            71.9%   fallback: clarification / help
+who paid into the church group      -> VIEW_GROUP          99.8%   open VIEW_GROUP
+book me a taxi                      -> MANAGE_CONTACTS     93.7%   fallback: clarification / help
+what's the weather tomorrow         -> VIEW_GROUP          61.7%   fallback: clarification / help

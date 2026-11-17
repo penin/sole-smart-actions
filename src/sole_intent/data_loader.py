@@ -11,7 +11,7 @@ from pathlib import Path
 
 import pandas as pd
 
-from .utils import resolve_path, sha256_file, sha256_text
+from .utils import PROJECT_ROOT, resolve_path, sha256_file, sha256_text
 
 REQUIRED_COLUMNS = ["text", "intent", "split", "scope"]
 VALID_SPLITS = ["train", "validation", "test", "evaluation_only"]
@@ -96,7 +96,9 @@ def dataset_fingerprint(df: pd.DataFrame, cfg: dict) -> dict:
     """File hash plus a content hash of the training sheet (robust to workbook metadata changes)."""
     content = df[REQUIRED_COLUMNS].to_csv(index=False, lineterminator="\n")
     return {
-        "dataset_path": str(dataset_path(cfg)),
+        # Repository-relative, so records never contain a personal absolute path.
+        "dataset_path": dataset_path(cfg).resolve().relative_to(PROJECT_ROOT.resolve()).as_posix()
+        if dataset_path(cfg).resolve().is_relative_to(PROJECT_ROOT.resolve()) else dataset_path(cfg).name,
         "dataset_version": cfg["data"]["dataset_version"],
         "file_sha256": sha256_file(dataset_path(cfg)),
         "content_sha256": sha256_text(content),

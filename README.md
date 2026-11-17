@@ -1,290 +1,335 @@
 # Sole Smart Actions
 
-**Natural language intent classification for Sole, a digital wallet in Fiji** (MIT AI Edge course project).
+**Natural-language intent classification for the Sole digital wallet (Fiji). MIT AI Edge course project.**
 
-Customers type commands such as *"Send $50 to Jone"*, *"Pay my EFL bill"* or *"Show my recent transactions"*.
-The model maps each command to one of 9 wallet intents. When it is not confident enough, it hands off to
-a help / clarification fallback instead of guessing.
+Customers type what they want, for example *"Send $50 to Jone"*, *"Pay my EFL bill"*, *"Show my recent
+transactions"* or *"How much money do I have?"*, and the system identifies the intent and opens the matching Sole
+screen. This repository compares four machine-learning approaches under one protocol:
 
-This repository holds:
+1. **Bag of Words + Logistic Regression**
+2. **TF-IDF + Logistic Regression**
+3. **Custom Transformer** trained from scratch
+4. **Fine-tuned DistilBERT**
 
-1. a **Bag of Words + Logistic Regression baseline**: trained, tuned on validation and fully evaluated;
-2. a **model-agnostic evaluation framework** (metrics, rejection protocol, plots, comparable summary rows) that
-   the other models must reuse so results are directly comparable;
-3. an **exploratory confidence-threshold analysis** of the baseline (`results/threshold_analysis/`);
-4. an **interactive web demo** (FastAPI + React) that runs the trained model live (`demo/`).
+It also includes an interactive demo that runs all four models side by side.
 
-| Model | Status |
-|---|---|
-| Bag of Words + Logistic Regression | Baseline V1 trained and evaluated |
-| TF-IDF + Logistic Regression | Planned |
-| Custom Transformer (from scratch) | Planned |
-| DistilBERT (fine-tuned) | Planned |
+> **This is a classification experiment, not a payment system.** Nothing in this repository executes transactions,
+> connects to financial systems or handles credentials. The demo only simulates navigation, and every money-moving
+> request ends in a simulated confirmation.
 
-> Classification only. Nothing here executes payments or connects to live financial systems.
-> The dataset is synthetic (3,000 generated utterances) and contains no customer data.
+---
 
-## Quick start
+## Contents
+1. [Business problem](#1-business-problem) · 2. [Intents](#2-supported-intents) · 3. [Models](#3-model-architectures) ·
+4. [Dataset](#4-dataset) · 5. [Methodology](#5-training-and-evaluation-methodology) · 6. [Results](#6-model-comparison-results) ·
+7. [Thresholds and unknown intents](#7-confidence-thresholds-and-unknown-intents) · 8. [Installation](#8-installation) ·
+9. [Commands](#9-training-evaluation-and-reproduction-commands) · 10. [Demo](#10-interactive-demo) ·
+11. [Reproducibility](#11-reproducibility) · 12. [Safety](#12-financial-transaction-safety) · 13. [Team](#13-team-contributions) ·
+14. [Limitations](#14-known-limitations) · 15. [Future work](#15-future-improvements) · 16. [Layout](#16-repository-layout)
 
-After [installation](#installation-windows-powershell-or-vs-code-terminal), from the repository root:
+## 1. Business problem
 
-| I want to… | Command |
-|---|---|
-| Run the web demo | `.\demo\start-demo.ps1` → http://127.0.0.1:8000 |
-| Reproduce training + evaluation | `python scripts/run_all.py` |
-| Classify a command in the terminal | `python -m sole_intent.predict 'send $50 to Jone'` |
-| Run the threshold analysis | `python scripts/evaluate_threshold.py --threshold 0.35` |
-| Run the tests | `pytest -v` and `.\demo\run-tests.ps1` |
+Sole is a digital wallet used in Fiji. Today a customer has to know *where* an action lives: which menu, tab or screen.
+Customers think in goals ("send 50 to Litia", "pay my electricity"), and every extra screen adds friction. That
+friction falls hardest on the least experienced users. **Sole Smart Actions** is a single text (or speech) entry point
+that predicts the intent and routes the customer to the right workflow. It must also recognise requests it cannot
+handle ("book a taxi") and fall back to help instead of guessing. Mistakes are not equal: opening a *money-moving*
+screen for the wrong request is worse than opening the balance screen.
 
-## Results at a glance
+## 2. Supported intents
 
-Read the generated reports for full results:
+| # | Intent | Example | Moves money? |
+|---|---|---|---|
+| 1 | `TRANSFER_MONEY` | Send $50 to Jone | yes |
+| 2 | `CHECK_BALANCE` | How much money do I have? | |
+| 3 | `VIEW_TRANSACTIONS` | Show my recent transactions | |
+| 4 | `WITHDRAW_MONEY` | Withdraw $100 | yes |
+| 5 | `BILL_PAY` | Pay my EFL bill | yes |
+| 6 | `HELP_SUPPORT` | My transfer didn't go through | |
+| 7 | `MANAGE_CONTACTS` | Add Jone to my contacts | |
+| 8 | `VIEW_GROUP` | Show my savings group | |
+| 9 | `CHECK_SPENDING` | How much did I spend this month? | |
+| – | `UNKNOWN_INTENT` | What's the weather tomorrow? | evaluation only; never a training class |
 
-| File | Contents |
-|---|---|
-| `results/reports/evaluation_report.md` | Full evaluation (15 sections) |
-| `results/reports/error_analysis.md` | Confusions, OOV, word order, leakage, financial safety, diagnostic probes |
-| `results/reports/data_quality_report.md` | Dataset audit |
-| `results/reports/model_card.md` | Model card |
-| `results/reports/experiment_summary.csv` | One row per experiment, shared schema |
+## 3. Model architectures
 
-## Project layout
+| Model | Representation | Classifier | Selected on validation | Original author |
+|---|---|---|---|---|
+| Bag of Words + LR | NFKC/lowercase text, word 1–2-gram binary counts (keeps `$` and numbers) | multinomial Logistic Regression, C = 10 | 12 configurations | penin |
+| TF-IDF + LR | word 1–2-gram TF-IDF + character 2–5-gram TF-IDF (sublinear tf) | Logistic Regression, C = 10 | 35 configurations, two representations | Chelsea Cheng |
+| Custom Transformer | 16 tokens, 100-d GloVe-initialised embeddings + positional embeddings | 2 Transformer blocks × 4 heads, mean pooling, dense head (233k parameters) | 36 configurations, best epoch | Felipe (`friosf`) |
+| Fine-tuned DistilBERT | WordPiece, 24 tokens | `distilbert-base-uncased`, top 2 of 6 blocks fine-tuned, classification head (67M parameters) | 3 strategies × 3 learning rates, best epoch | Ricardo (`ricardomanjarresr`) |
+
+All four implement one interface (`src/sole_smart_actions/models/base.py`):
+`fit`, `predict_proba` (9 columns, canonical order), `predict`, `save` / `load`, `get_model_metadata`. How each teammate's
+code was ported, and what changed, is documented in [docs/model_integration.md](docs/model_integration.md). The
+architecture is described in [docs/architecture.md](docs/architecture.md).
 
 ```text
-sole-smart-actions/
-├── Sole_Smart_Actions_Intent_Training_v4_Cleaned.xlsx   # source data (synthetic; read-only, never modified)
-├── config/
-│   ├── baseline.yaml             # all training settings: labels, grid, thresholds, seeds
-│   ├── inference.yaml            # inference threshold override (null = use the model's saved threshold)
-│   └── threshold_analysis.yaml   # exploratory threshold sweep settings
-├── src/sole_intent/
-│   ├── data_loader.py            # load + validate workbook, predefined splits, dataset hashes
-│   ├── audit.py                  # data-quality audit: duplicates, conflicts, leakage, lengths
-│   ├── preprocessing.py          # normalization, tokenization, CountVectorizer factory
-│   ├── train.py                  # pipeline, validation-based tuning, model bundle save/load
-│   ├── evaluate.py               # MODEL-AGNOSTIC metrics, bootstrap CIs, latency, summary rows
-│   ├── rejection.py              # MODEL-AGNOSTIC UNKNOWN_INTENT rejection + threshold selection
-│   ├── plots.py                  # all figures (model-agnostic inputs)
-│   ├── experiment.py             # end-to-end orchestration
-│   ├── reports.py                # Markdown report generation
-│   ├── predict.py                # inference CLI
-│   └── utils.py                  # paths, config, hashing, JSON, environment capture
-├── scripts/
-│   ├── run_all.py                # single command for the full workflow
-│   └── evaluate_threshold.py     # exploratory threshold analysis (no retraining)
-├── tests/                        # pytest suite
-├── models/                       # versioned joblib bundles + metadata JSON (Baseline V1)
-├── data/processed/               # split CSVs, audit detail tables (derived, regenerated)
-├── results/
-│   ├── metrics/ figures/ predictions/ reports/   # Baseline V1 evaluation outputs
-│   └── threshold_analysis/                       # exploratory threshold comparison
-└── demo/                         # interactive web demo (see demo/README.md)
-    ├── backend/                  # FastAPI: loads the trained model, threshold/fallback decisions
-    ├── frontend/                 # React + TypeScript + Vite + Tailwind + Recharts
-    └── start-demo.ps1            # one-command launcher
+command ─► model.predict_proba ─► 9 probabilities ─► max ≥ threshold ? ─┬─ yes ─► intent ─► (simulated) Sole screen
+                                                                         └─ no  ─► UNKNOWN_INTENT ─► clarify / Help & Support
+money-moving intents ─► explicit, simulated confirmation (nothing is executed)
 ```
 
-## Installation (Windows, PowerShell or VS Code terminal)
+## 4. Dataset
 
-Prerequisites: **Python 3.13**, **Git**, and **Node.js LTS** (Node is only needed to build the web demo).
-Run all commands from the repository root.
+`data/raw/Sole_Smart_Actions_Intent_Training_v5_Deduplicated.xlsx` (Dataset V5, SHA-256 `8dc9c89c…`) is the single
+authoritative dataset. It holds **3,000 synthetic commands**: 300 per intent plus 300 unsupported requests. The
+workbook defines fixed splits that every model uses unchanged:
 
-```powershell
-git clone https://github.com/<owner>/sole-smart-actions.git
-cd sole-smart-actions
-python -m venv .venv
-.\.venv\Scripts\Activate.ps1          # if blocked: Set-ExecutionPolicy -Scope CurrentUser RemoteSigned
-python -m pip install --upgrade pip
-pip install -r requirements.txt
-pip install -e .                      # makes `sole_intent` importable (needed to load saved models)
-```
+| Split | Commands | Use |
+|---|---:|---|
+| train | 2,160 (240 per intent) | fitting |
+| validation | 270 (30 per intent) | model selection and threshold calibration |
+| test | 270 (30 per intent) | scored once, at the end |
+| evaluation_only | 300 `UNKNOWN_INTENT` | out-of-scope handling only |
 
-`requirements.txt` pins the exact versions used for the reported run (Python 3.13, scikit-learn 1.9.1).
-Use the same scikit-learn version: saved `.joblib` models are only guaranteed to load with the version that
-created them.
+`python -m scripts.validate_data` runs 14 checks before any training and stops on failure. The checks cover:
+- the file hash
+- schema and missing values
+- intent and split vocabularies
+- split sizes and 300 commands per intent
+- per-split class balance
+- exact and normalized duplicates and conflicting labels
+- overlap between splits
 
-## Training
+All checks pass on V5. V5 replaced 997 duplicates that existed in V4 (see the workbook's *Replacement Log*).
 
-The baseline is already trained (`models/`) and evaluated (`results/`). To reproduce or retrain it:
+**Limitations:** the commands are synthetic. There are no exact or normalized duplicates across splits, but many
+training and test commands share sentence templates (for example "Send *N* to *Name*"). Test accuracy is therefore
+optimistic for real customer language, spelling, code-switching and Fijian names.
 
-```powershell
-python scripts/run_all.py
-```
+## 5. Training and evaluation methodology
 
-This validates and audits the dataset, tunes on validation, fits the default and tuned models, evaluates
-train/validation/test, runs the unknown-intent rejection protocol, measures runtime, writes predictions,
-figures and reports, and saves the models. It takes about 15 seconds and overwrites previous outputs
-(idempotent). Use another config with `python scripts/run_all.py --config config/my_experiment.yaml`.
-
-Training only (tune + save, no evaluation): `python -m sole_intent.train`
-
-> **The committed `models/` and `results/` are the official Baseline V1 artifacts.** Re-running
-> `run_all.py` reproduces the same metrics and predictions, but it rewrites timestamps, latency figures and
-> machine-specific paths. Don't commit those changes unless you mean to replace Baseline V1:
-> `git restore models results data` discards them.
-
-## Web demo
-
-An interactive app that runs the trained model live: type a command, adjust the confidence threshold,
-see the probability for each intent and the words that drove the prediction.
-
-```powershell
-.venv\Scripts\python -m pip install -r demo\backend\requirements.txt
-cd demo\frontend; npm ci; npm run build; cd ..\..
-.\demo\start-demo.ps1        # or double-click demo\start-demo.cmd  →  http://127.0.0.1:8000
-```
-
-`.\demo\start-dev.ps1` starts a hot-reloading development setup (http://127.0.0.1:5173). See
-[`demo/README.md`](demo/README.md) for the architecture, API, threshold/fallback rules, tests and how to add
-new models.
-
-## Prediction
-
-```powershell
-python -m sole_intent.predict "send $50 to Jone" "pay my EFL bill" "who won the rugby"
-python -m sole_intent.predict --json "show my recent transactions"
-python -m sole_intent.predict --threshold 0.4 "how much money do I have"
-python -m sole_intent.predict --model models\bow_logreg_v1_default_v1.0.0.joblib "send 20 to Mere"
-```
-
-In PowerShell, wrap text containing `$` in **single quotes** (`'send $50 to Jone'`), otherwise `$50` is
-expanded as a variable.
-
-From Python:
-
-```python
-from sole_intent.train import load_bundle
-from sole_intent.predict import predict_texts
-bundle = load_bundle("models/bow_logreg_v1_tuned_v1.0.0.joblib")
-predict_texts(["send $50 to Jone"], bundle)
-```
-
-## Confidence-threshold analysis (exploratory, no retraining)
-
-```powershell
-python scripts/evaluate_threshold.py                       # thresholds from config/threshold_analysis.yaml, detail for 0.35
-python scripts/evaluate_threshold.py --threshold 0.40      # detailed evaluation for another candidate
-python scripts/evaluate_threshold.py --thresholds baseline 0.3 0.35 0.4 --threshold 0.3
-```
-
-The script reuses Baseline V1's saved probabilities (checked against the saved model), reproduces V1's
-published counts at the frozen 0.196 threshold, and writes only to `results/threshold_analysis/`. It refuses
-to write into V1 folders and records SHA-256 hashes of all V1 artifacts before and after
-(`baseline_v1_manifest.json`). The test and unknown sets were inspected before, so results are
-**exploratory**. Read `threshold_<tag>_report.md` for the protocol to select a production threshold.
-
-Model decision vs application action: the model returns an intent or `UNKNOWN_INTENT`; the app maps
-`UNKNOWN_INTENT` to `FALLBACK_HELP_OR_CLARIFY` (offer HELP_SUPPORT or ask the customer to rephrase) and any
-intent to `ROUTE_<INTENT>`. A genuine HELP_SUPPORT classification is not a rejection.
-
-Inference threshold precedence: `--threshold` > `inference.threshold` in `config/inference.yaml`
-(`--config`) > the threshold stored in the model bundle (V1: 0.196).
-
-```powershell
-python -m sole_intent.predict --threshold 0.35 'send $50 to Jone'
-python -m sole_intent.predict --config config/inference.yaml --json 'who won the rugby'
-```
-
-> Note: `scripts/run_all.py` regenerates the Baseline V1 outputs in place. It is deterministic (same
-> metrics and predictions), but re-running it rewrites timestamps and latency measurements.
-
-## Tests
-
-```powershell
-pytest -v
-```
-
-The suite covers dataset loading and schema, split integrity, no UNKNOWN_INTENT in training, preprocessing
-consistency, vocabulary fitted on train only, probability shape/range/normalization, class ordering,
-serialization round-trip, rejection thresholds, edge-case inputs, hand-computed metric fixtures, and spies
-that prove tuning never touches the test split.
-
-## Experimental protocol (shared by all models)
-
-| Rule | Implementation |
+| Rule | Value |
 |---|---|
-| Preserve the supplied splits | `data_loader.get_splits` only selects rows; nothing is re-split or dropped |
-| Train on supported intents, `split = train` | 2,160 rows; `UNKNOWN_INTENT` is never a class |
-| Model selection | validation macro F1 (ties: validation log loss) |
-| Rejection threshold | chosen on **known-intent validation rows only**: 95% coverage target fixed in config before viewing unknowns |
-| Final evaluation | test split + 300 `evaluation_only` unknowns, scored once with frozen choices |
-| Canonical class order | `labels` in `config/baseline.yaml` (probability columns must follow it) |
-| Leakage-controlled view | test rows whose phrase (or number-masked template) appears in train are excluded in `metrics_test_leakage_controlled.json` |
-| Duplicate-aware uncertainty | phrase-clustered bootstrap CIs (`bootstrap_ci_test.json`) |
+| Fit | train split only (2,160) |
+| Hyperparameter / epoch selection | validation split only (270) |
+| Classes | the same nine, in the same order, for every model; `UNKNOWN_INTENT` is never a training class |
+| Default threshold | max class probability; largest validation confidence that keeps ≥ 95% of the 270 validation commands (no test or unknown labels used) |
+| Test | the same 270 legitimate commands + 300 unknown commands, scored once |
+| Metrics | one shared implementation: raw accuracy, macro precision/recall/F1, weighted F1, per-intent P/R/F1/support, confusion matrix, one-vs-rest ROC-AUC, threshold sweep, latency P50/P95, size, parameters, training time |
+| Seeds | BoW / TF-IDF 42; Custom Transformer / DistilBERT 1234 (the teammates' seeds) |
 
-## Reusing the evaluation framework for CNN / LSTM / transformer models
+**Raw test accuracy = correct predictions / 270**, before any confidence threshold. Selective accuracy among
+accepted commands is reported separately and is never the headline.
 
-Your model only needs to produce a probability matrix with columns in the canonical class order.
+**Secondary experiments, labelled and never mixed into the comparison:**
+- the teammates' original "refit on train + validation" recipe (`--protocol trainval_refit`)
+- the Custom Transformer ablations (`--variant no_attention | no_glove`)
+- temperature calibration, a three-tier routing gate, and a one-typo robustness test
 
-```python
-import numpy as np, pandas as pd
-from sole_intent.utils import load_config, save_json
-from sole_intent.data_loader import load_dataset, get_splits
-from sole_intent.evaluate import evaluate_predictions, cluster_bootstrap, measure_latency, summary_row
-from sole_intent.rejection import threshold_for_coverage, max_confidence, rejection_outcomes
-from sole_intent.preprocessing import canonical_key
+## 6. Model comparison results
 
-cfg = load_config()
-labels = cfg["labels"]                                   # canonical order: do not re-sort
-s = get_splits(load_dataset(cfg), cfg)                   # identical splits for every model
+Generated by `python -m scripts.compare` from the models' actual predictions. Full table, charts and
+reproducibility report: [results/comparison/](results/comparison/model_comparison.md).
 
-proba_val  = my_model.predict_proba(s.validation["text"])   # shape (n, 9), columns == labels
-proba_test = my_model.predict_proba(s.test["text"])
-proba_unk  = my_model.predict_proba(s.unknown["text"])
-pred_test  = np.asarray(labels, dtype=object)[proba_test.argmax(1)]
+| Model | Raw test accuracy | Macro F1 | Macro ROC-AUC | Default threshold | Correct routing at default | Unknown: safe fallback | Unknown → money flow | Typo test | Size | Latency P50 |
+|---|---|---|---|---|---|---|---|---|---|---|
+| Bag of Words + LR | 93.7% (253/270) | 0.937 | 0.995 | 0.342 | 93.0% | 56.0% | 23 / 300 | 81.5% | 0.23 MB | 0.19 ms (CPU) |
+| TF-IDF + LR | 97.4% (263/270) | 0.974 | 0.997 | 0.404 | 97.0% | 78.3% | 17 / 300 | 95.9% | 0.64 MB | 1.7 ms (CPU) |
+| Custom Transformer | 97.4% (263/270) | 0.974 | 1.000 | 0.660 | 94.4% | 32.3% | 17 / 300 | 78.1% | 2.9 MB | 13.6 ms (GPU) |
+| Fine-tuned DistilBERT | **97.8%** (264/270) | **0.978** | 1.000 | 0.676 | 96.7% | 62.0% | **14 / 300** | 85.6% | 135 MB | 6.8 ms (GPU) |
 
-m = evaluate_predictions(s.test["intent"], pred_test, proba_test, labels, "test",
-                         "cnn_v1", "cnn_v1", core_labels=cfg["core_labels"])
-thr = threshold_for_coverage(max_confidence(proba_val), cfg["rejection"]["target_known_coverage"])
-rej = rejection_outcomes(s.test["intent"], proba_test, proba_unk, labels, thr)
-ci  = cluster_bootstrap(s.test["intent"], {"cnn_v1": pred_test}, labels,
-                        s.test["text"].map(canonical_key))
-row = summary_row(model_name="cnn_v1", experiment_id="cnn_v1", test_macro_f1=m["macro_f1"],
-                  known_intent_coverage=rej["known_intent_coverage"], ...)
-# append `row` to results/reports/experiment_summary.csv
-```
+**Reading the results.**
+- **The top three models are statistically indistinguishable on this test set.** TF-IDF, the Custom Transformer
+  and DistilBERT are within one command of each other (263–264 of 270); one command is 0.37 points.
+  Bag of Words is 10–11 commands behind.
+- **TF-IDF with character n-grams gives the best trade-off here.** It is about 200 times smaller than DistilBERT,
+  millisecond-fast on a CPU, and the most robust to typos (95.9%). At its default threshold it also handles the most
+  unsupported requests safely (78%).
+- **DistilBERT is the most accurate and sends the fewest unknown requests into money flows (14 of 300)**, at roughly
+  200 times the size.
+- **The Custom Transformer handles out-of-scope requests worst.** Only 32% are rejected or sent to help. It also drops
+  to 78% accuracy with one typo per command, because a misspelled word becomes `[UNK]`.
+- **No model is safe on unknown requests with a confidence threshold alone.** 14–23 of 300 unsupported commands still
+  open a money-moving workflow. Explicit confirmation (section 12) is therefore mandatory.
 
-Figures can be produced with the same functions in `sole_intent.plots` (e.g. `confusion_matrix_plot`,
-`roc_curves_plot`, `rejection_threshold_plot`). They take labels and probabilities, not a specific model.
+The teammates' original numbers (for example 99.2% for DistilBERT) used 8 classes, 240 test commands and a
+train + validation refit. They are preserved in `research/original_experiments/` but are not comparable.
 
-## Output files
+## 7. Confidence thresholds and unknown intents
 
-| Location | Files |
-|---|---|
-| `results/metrics/` | `dataset_audit.{json,csv}`, `metrics_{train,validation,test}.json` (+ `_default_model`, `test_leakage_controlled`, `test_unique_phrases`), `per_class_metrics.csv`, `confusion_matrix{,_normalized}.csv`, `roc_auc_per_class.csv`, `rejection_metrics.json`, `runtime_metrics.json`, `experiment_config.json`, `hyperparameter_search.csv`, `bootstrap_ci_test.json`, `metrics_core8_model.json`, plot data CSVs, `error_*.csv` |
-| `results/figures/` | `01`–`13` PNGs at 200 dpi |
-| `results/predictions/` | `{train,validation,test,unknown,diagnostic}_predictions.csv`, `word_order_probes.csv` |
-| `results/reports/` | `evaluation_report.md`, `error_analysis.md`, `data_quality_report.md`, `model_card.md`, `experiment_summary.csv` |
-| `models/` | `bow_logreg_v1_{tuned,default}_v1.0.0.joblib` + `.metadata.json` |
+Each model's default threshold is calibrated **the same way** on validation (95% coverage). The thresholds differ
+because the probability distributions differ: linear models spread probability, neural models are more peaked.
+`results/<model>/threshold_sweep.csv` reports the rule at no threshold, at the default, and at 0.25, 0.30, 0.35, 0.40,
+0.50 and 0.60. For each threshold it gives:
 
-Undefined metrics are written as JSON `null` with a reason in `undefined_metrics`. They are never replaced by 0.
+- known-intent coverage
+- accepted commands
+- correctly classified accepted commands
+- accuracy among accepted commands
+- overall correct-routing rate (rejections count as failures)
+- rejected legitimate commands
+- unknown-command rejection rate
+- unknown commands classified as `HELP_SUPPORT`
+- unknown safe-fallback rate
+- unknown commands routed to financial intents
 
-## Reproducibility
+`UNKNOWN_INTENT` (below threshold) and a genuine `HELP_SUPPORT` prediction are counted separately, although both are
+safe outcomes. In the app, `UNKNOWN_INTENT` means *ask the customer to clarify or offer Help & Support*; it never
+means "execute the best guess".
 
-- Random seed 42 for every stochastic step (LR solver, CV shuffling, bootstrap, latency sampling, unknown split).
-- `experiment_config.json` records the full config, its SHA-256, the dataset file and content SHA-256, package
-  versions and hardware. Every model bundle stores the same metadata.
-- Latency figures depend on the machine. All other metrics are deterministic for a given package set.
+## 8. Installation
 
-## Collaborating
-
-- Work on a branch per task (`git switch -c feature/tfidf-model`) and open a pull request into `main`.
-- Add each new model as its own module and append one row to `results/reports/experiment_summary.csv`
-  using `sole_intent.evaluate.summary_row`, so every model is compared on identical splits and metrics.
-- Never commit `.venv/`, `node_modules/`, `demo/frontend/dist/`, `.env` files or credentials (see `.gitignore`).
-- Run `pytest -v` (and `.\demo\run-tests.ps1` if you touched the demo) before pushing.
-
-## Large model files (Git LFS)
-
-The Baseline V1 models are about 23 KB each and are committed normally. Transformer and DistilBERT
-checkpoints will be hundreds of MB, and GitHub rejects files over 100 MB. Track those with
-[Git LFS](https://git-lfs.com) **before** their first commit:
+Python **3.13** (the reference environment is 3.13.15). Clone, then from the repository root:
 
 ```powershell
-git lfs install
-git lfs track "models/**/*.safetensors" "models/**/*.bin" "models/**/*.pt" "models/**/*.onnx"
-git add .gitattributes
+git lfs install                       # once per machine; then
+git lfs pull                          # downloads the neural model weights (artifacts/**/*.safetensors, *.h5)
+py -3.13 -m venv .venv
+.venv\Scripts\activate                # macOS/Linux: source .venv/bin/activate
+# NVIDIA GPU (Windows/Linux):
+python -m pip install -r requirements.lock --extra-index-url https://download.pytorch.org/whl/cu126
+# CPU only / macOS:  python -m pip install -r requirements.lock
+python -m pip install -e . --no-deps
+python -m scripts.validate_data       # should print "All 14 checks passed."
 ```
 
-These extensions are currently in `.gitignore` as a safety net. Remove the matching line there when you
-enable LFS for them. Note that LFS storage on GitHub is limited on free plans.
+`requirements.lock` pins every package (torch 2.14.1, Keras 3.15.1 on the PyTorch backend, transformers 5.22.1,
+scikit-learn 1.9.1, …). `requirements.txt` lists the direct dependencies. The demo frontend additionally needs Node.js
+(see `demo/README.md`). The training scripts need the pinned pretrained resources; evaluation and the demo do not:
+`python -m scripts.download_pretrained` (GloVe for the Custom Transformer, `distilbert-base-uncased` for DistilBERT;
+[data/external/README.md](data/external/README.md)).
+
+## 9. Training, evaluation and reproduction commands
+
+```powershell
+python -m scripts.validate_data                     # 14 dataset checks; non-zero exit on failure
+python -m scripts.train --model bow                 # ~2 s     -> artifacts/bow/
+python -m scripts.train --model tfidf               # ~20 s    -> artifacts/tfidf/
+python -m scripts.train --model transformer         # ~30 min on an RTX 4080 Laptop GPU (36 configurations)
+python -m scripts.train --model distilbert          # ~5 min on the same GPU (9 configurations)
+python -m scripts.evaluate --model all              # -> results/<model>/ (standard files)
+python -m scripts.compare                           # -> results/comparison/
+
+python -m scripts.reproduce_all --smoke             # whole pipeline with tiny grids, a few minutes (NOT results)
+python -m scripts.reproduce_all --verify-only       # re-evaluate the committed models and check them (minutes)
+python -m scripts.reproduce_all                     # retrain all four from scratch and compare with results/ (~40 min GPU)
+
+# Secondary experiments (written to artifacts/secondary/ and results/secondary/)
+python -m scripts.train --model distilbert --protocol trainval_refit
+python -m scripts.evaluate --model distilbert --label trainval_refit
+python -m scripts.train --model transformer --variant no_attention
+python -m scripts.evaluate --model transformer --label no_attention
+
+python -m pytest                                    # project tests
+.\demo\run-tests.ps1                                # demo backend + frontend tests
+```
+
+Each `results/<model>/` folder contains:
+- metrics: `metrics_train.json`, `metrics_validation.json`, `metrics_test.json`, `classification_report.csv`
+- confusion matrix and ROC: `confusion_matrix.csv`/`.png`, `roc_auc.json`, `roc_curves.png`
+- predictions: `test_predictions.csv`, `unknown_predictions.csv`
+- thresholds and latency: `threshold_sweep.csv`, `latency_metrics.json`
+- provenance and report: `experiment_metadata.json` (hashes, environment, commands), `evaluation_report.md`
+- secondary analyses: `secondary_analyses.json`, `robustness_typos.json`
+
+## 10. Interactive demo
+
+```powershell
+.\demo\start-demo.cmd          # http://127.0.0.1:8000
+```
+
+You can:
+- choose Bag of Words, TF-IDF, Custom Transformer, DistilBERT or **Compare All Models**
+- type a command or click a sample
+- move the threshold slider and see each decision update
+- see the top-three probabilities and whether clarification is needed
+- step through the simulated Sole workflow
+
+The comparison dashboard reads `results/comparison/model_comparison.json`. Details are in
+[demo/README.md](demo/README.md).
+
+## 11. Reproducibility
+
+**What is pinned and recorded**
+- **Dataset:** SHA-256 pinned in `config/common.yaml` and checked before every run. Fixed splits only; no model
+  re-splits the data.
+- **Configuration:** versioned configs (`config/common.yaml` + one per model), with their hashes stored in every
+  `model_card.json`.
+- **Environment:** exact package pins (`requirements.lock`). Python, OS, CPU, RAM, GPU, CUDA/cuDNN, torch and
+  scikit-learn versions are recorded with every training and evaluation run.
+- **Seeds and kernels:** fixed seeds; deterministic PyTorch kernels requested (`torch.use_deterministic_algorithms`,
+  `CUBLAS_WORKSPACE_CONFIG`).
+- **Pretrained resources:** pinned to exact revisions with checksums: DistilBERT at Hugging Face commit `12040acc…`,
+  GloVe at mirror revision `1947a5a8…` (SHA-256 `22d27d5f…`).
+- **Artifacts:** SHA-256 of every model file, plus the training and evaluation commands and the git commit, in
+  `artifacts/<model>/model_card.json` and `results/<model>/experiment_metadata.json`.
+
+**What is verified**
+- **Bag of Words and TF-IDF retrain bit-for-bit** (tested). The primary BoW model is also identical to the historical
+  V5 run.
+- **Neural networks are checked within tolerances**: same accuracy within 3 commands, ≥ 97% identical test
+  predictions, macro F1 within 0.012. Identical weights across different GPUs, drivers or library builds are not
+  guaranteed.
+- **Verified on the reference machine:** `python -m scripts.reproduce_all` retrained all four models from scratch
+  (34.5 min on an RTX 4080 Laptop GPU). It reproduced every published model exactly, including the two neural
+  networks: identical test predictions and a maximum probability difference of 0.0. All 14 dataset checks, the
+  environment-lock check, artifact hashes and result schemas passed. Full report:
+  [results/comparison/reproducibility_report.md](results/comparison/reproducibility_report.md).
+
+## 12. Financial transaction safety
+
+- The models only classify text. The demo only simulates navigation, never executes or authorises a transaction, and
+  never asks for, accepts or stores a PIN, password or account number.
+- Every money-moving intent ends in an explicit confirmation step, and confirming in the demo changes nothing.
+  - Ambiguous requests become questions: *"I owe Mary $50"* becomes *"Would you like to send $50 to Mary?"*
+  - Below the threshold the app asks the customer to clarify instead of acting.
+- Even the best model sends some unsupported requests into money flows (section 6). A production system would need
+  authentication inside the official app, amount and recipient confirmation, transaction limits and monitoring.
+- Classification accuracy on a synthetic dataset is **not** evidence of production readiness.
+
+## 13. Team contributions
+
+| Model / component | Original author |
+|---|---|
+| Bag of Words baseline, evaluation framework, demo | penin |
+| TF-IDF + Logistic Regression | Chelsea Cheng |
+| Custom Transformer | Felipe (`friosf`) |
+| Fine-tuned DistilBERT (and the shared benchmarks) | Ricardo (`ricardomanjarresr`) |
+
+Details and sources: [docs/team_contributions.md](docs/team_contributions.md). The originals are preserved in
+`research/original_experiments/`.
+
+## 14. Known limitations
+
+- **Synthetic data with shared templates.** All four models probably overstate real-world accuracy, and the test set is
+  small (270 commands).
+- **Threshold-only out-of-scope detection.** None of the models is trained on unsupported requests; 14–23 of 300 still
+  reach a money flow.
+- **Typo and name sensitivity.** Word-level models drop unseen words, and the Custom Transformer suffers most from typos.
+- **Overconfidence on input with no recognisable words.** For example, the Custom Transformer assigns about 98% to
+  `MANAGE_CONTACTS` for an input made only of unknown words or punctuation. A confidence threshold cannot catch this,
+  which is another reason for confirmation steps.
+- **Latency is hardware-specific.** The neural models were measured on a GPU and the linear models on a CPU.
+- **Neural reproducibility is tolerance-based**, not bit-for-bit, across machines.
+- **The simulated workflow is illustrative only.** Its entity extraction is a few regular expressions.
+
+## 15. Future improvements
+
+- Collect and label real (anonymised, consented) customer commands, including typos, Fijian names and code-switching.
+- Add an explicit out-of-scope class or a dedicated detector, validated on held-out unsupported requests.
+- Calibrate probabilities (temperature scaling is already measured in `secondary_analyses.json`) and choose thresholds
+  from business costs.
+- Add slot extraction for amounts, recipients and billers, with confirmation.
+- Distil DistilBERT, or ensemble it with TF-IDF, for CPU and mobile deployment.
+- Monitor the routes taken in production and the safe-fallback rate.
+
+## 16. Repository layout
+
+```text
+SoleSmartActions/
+├── config/               common.yaml + bow/tfidf/transformer/distilbert.yaml; history/ = earlier BoW configs
+├── data/raw/             V4 and V5 workbooks (V5 is canonical)      data/external/  pinned downloads (git-ignored)
+├── src/sole_smart_actions/   data/ models/ evaluation/ training.py comparison.py reproducibility.py
+├── src/sole_intent/      original Bag of Words package (reused by the BoW adapter)
+├── scripts/              validate_data, train, evaluate, compare, reproduce_all, download_pretrained, rename_project.ps1
+├── artifacts/            trained models (+ secondary/, history/); large weights via Git LFS
+├── results/              bow/ tfidf/ transformer/ distilbert/ comparison/ secondary/ history/
+├── demo/                 FastAPI backend + React frontend
+├── research/original_experiments/   teammates' original notebooks and results
+├── docs/                 architecture, model integration, team contributions
+├── tests/                project tests
+├── requirements.lock  requirements.txt  pyproject.toml
+```

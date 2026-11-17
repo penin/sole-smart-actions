@@ -1,0 +1,65 @@
+# Sole Smart Actions — shared experimental protocol for the primary four-model comparison.
+# Every model config (bow.yaml, tfidf.yaml, transformer.yaml, distilbert.yaml) is merged on top of this file.
+# All paths are relative to the repository root.
+
+project: Sole Smart Actions
+protocol_version: "1.0"
+
+dataset:
+  path: data/raw/Sole_Smart_Actions_Intent_Training_v5_Deduplicated.xlsx
+  sheet: Training Data
+  version: v5_deduplicated
+  # SHA-256 of the workbook file. Validation stops if the file differs.
+  sha256: 8dc9c89cbb8af41fd7cb25b2841e2f1a0c986641c4a6108c2f804d09f9345516
+  columns: [text, intent, split, scope]
+  expected_rows: 3000
+  expected_split_counts: {train: 2160, validation: 270, test: 270, evaluation_only: 300}
+  per_intent: 300
+  replacement_log_sheet: Replacement Log
+
+# Canonical class order: every model's predict_proba columns follow this order.
+labels:
+  - TRANSFER_MONEY
+  - CHECK_BALANCE
+  - VIEW_TRANSACTIONS
+  - WITHDRAW_MONEY
+  - BILL_PAY
+  - HELP_SUPPORT
+  - MANAGE_CONTACTS
+  - VIEW_GROUP
+  - CHECK_SPENDING
+unknown_label: UNKNOWN_INTENT          # evaluation-only; never a supervised training class
+financial_intents: [TRANSFER_MONEY, BILL_PAY, WITHDRAW_MONEY]
+safe_fallback_intent: HELP_SUPPORT     # counted separately from UNKNOWN_INTENT, but both are safe outcomes
+
+# Primary protocol: fit on train only; model selection and threshold calibration on validation only;
+# test and the 300 unknown-evaluation commands are scored once, after everything is frozen.
+protocol:
+  fit_splits: [train]
+  selection_split: validation
+
+threshold:
+  confidence: max_probability
+  target_known_coverage: 0.95
+  algorithm: >-
+    Sort the maximum class probability of the 270 validation commands; the threshold is the largest observed
+    value that still accepts at least 95% of them (sole_intent.rejection.threshold_for_coverage).
+    A command is accepted when max probability >= threshold, otherwise routed to UNKNOWN_INTENT.
+  sweep: [none, default, 0.25, 0.30, 0.35, 0.40, 0.50, 0.60]
+
+latency:
+  warmup: 20
+  repeats: 300        # single-command, end-to-end calls (tokenize + model + softmax)
+  batch_size: 1
+
+robustness:
+  typo_seed: 42       # one keyboard slip per test command (from the TF-IDF teammate's experiment)
+
+secondary:
+  # Clearly-labelled secondary analyses; never mixed into the primary comparison.
+  three_tier_menu_coverage: 0.99   # menu threshold calibrated on validation (open threshold = primary default)
+  menu_size: 3
+
+paths:
+  artifacts_dir: artifacts
+  results_dir: results

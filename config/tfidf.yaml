@@ -1,0 +1,30 @@
+# TF-IDF + Logistic Regression. Ported from the TF-IDF teammate's src/run_experiments.py
+# (research/original_experiments/tfidf/). Both representations are kept and searched; the primary
+# configuration is the one with the best validation macro F1 (ties: first in grid order, as in the original).
+model:
+  name: tfidf
+  display_name: TF-IDF + Logistic Regression
+  family: classical
+  original_author: Chelsea Cheng
+  seed: 42
+
+estimator:
+  max_iter: 5000
+
+variants:
+  word:
+    label: TF-IDF (word) + LR
+    ngram_range: [[1, 1], [1, 2]]
+  word_char:
+    label: TF-IDF (word + char) + LR
+    word_ngram_range: [1, 2]
+    char_ngram_range: [[2, 4], [2, 5], [3, 5]]
+C_grid: [0.5, 1, 2, 5, 10, 20, 50]
+
+selection:
+  metric: validation_macro_f1
+  tie_breakers: [grid_order]
+
+smoke:
+  variant_names: [word]
+  C_grid: [1]

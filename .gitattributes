@@ -7,3 +7,7 @@
 *.xlsx   binary
 *.png    binary
 *.ico    binary
+*.npz    binary
+# Large model weights are stored with Git LFS (run `git lfs install` once, then `git lfs pull` after cloning).
+*.safetensors filter=lfs diff=lfs merge=lfs -text
+*.h5          filter=lfs diff=lfs merge=lfs -text

@@ -1,0 +1,43 @@
+model,params,val_macro_f1
+BoW + LR,"{'ngram': (1, 1), 'C': 0.5}",0.858
+BoW + LR,"{'ngram': (1, 1), 'C': 1}",0.8364
+BoW + LR,"{'ngram': (1, 1), 'C': 2}",0.8201
+BoW + LR,"{'ngram': (1, 1), 'C': 5}",0.8115
+BoW + LR,"{'ngram': (1, 1), 'C': 10}",0.8147
+BoW + LR,"{'ngram': (1, 1), 'C': 20}",0.8115
+BoW + LR,"{'ngram': (1, 1), 'C': 50}",0.8194
+TF-IDF (word) + LR,"{'ngram': (1, 1), 'C': 0.5}",0.8806
+TF-IDF (word) + LR,"{'ngram': (1, 1), 'C': 1}",0.8844
+TF-IDF (word) + LR,"{'ngram': (1, 1), 'C': 2}",0.8882
+TF-IDF (word) + LR,"{'ngram': (1, 1), 'C': 5}",0.8882
+TF-IDF (word) + LR,"{'ngram': (1, 1), 'C': 10}",0.8882
+TF-IDF (word) + LR,"{'ngram': (1, 1), 'C': 20}",0.8851
+TF-IDF (word) + LR,"{'ngram': (1, 1), 'C': 50}",0.8851
+TF-IDF (word) + LR,"{'ngram': (1, 2), 'C': 0.5}",0.8822
+TF-IDF (word) + LR,"{'ngram': (1, 2), 'C': 1}",0.8782
+TF-IDF (word) + LR,"{'ngram': (1, 2), 'C': 2}",0.8782
+TF-IDF (word) + LR,"{'ngram': (1, 2), 'C': 5}",0.8782
+TF-IDF (word) + LR,"{'ngram': (1, 2), 'C': 10}",0.8818
+TF-IDF (word) + LR,"{'ngram': (1, 2), 'C': 20}",0.8882
+TF-IDF (word) + LR,"{'ngram': (1, 2), 'C': 50}",0.8882
+TF-IDF (word + char) + LR,"{'char': (2, 4), 'C': 0.5}",0.9272
+TF-IDF (word + char) + LR,"{'char': (2, 4), 'C': 1}",0.931
+TF-IDF (word + char) + LR,"{'char': (2, 4), 'C': 2}",0.9346
+TF-IDF (word + char) + LR,"{'char': (2, 4), 'C': 5}",0.9346
+TF-IDF (word + char) + LR,"{'char': (2, 4), 'C': 10}",0.9341
+TF-IDF (word + char) + LR,"{'char': (2, 4), 'C': 20}",0.9341
+TF-IDF (word + char) + LR,"{'char': (2, 4), 'C': 50}",0.9341
+TF-IDF (word + char) + LR,"{'char': (2, 5), 'C': 0.5}",0.9277
+TF-IDF (word + char) + LR,"{'char': (2, 5), 'C': 1}",0.9313
+TF-IDF (word + char) + LR,"{'char': (2, 5), 'C': 2}",0.9313
+TF-IDF (word + char) + LR,"{'char': (2, 5), 'C': 5}",0.9281
+TF-IDF (word + char) + LR,"{'char': (2, 5), 'C': 10}",0.9378
+TF-IDF (word + char) + LR,"{'char': (2, 5), 'C': 20}",0.9281
+TF-IDF (word + char) + LR,"{'char': (2, 5), 'C': 50}",0.9346
+TF-IDF (word + char) + LR,"{'char': (3, 5), 'C': 0.5}",0.9281
+TF-IDF (word + char) + LR,"{'char': (3, 5), 'C': 1}",0.9244
+TF-IDF (word + char) + LR,"{'char': (3, 5), 'C': 2}",0.9281
+TF-IDF (word + char) + LR,"{'char': (3, 5), 'C': 5}",0.9213
+TF-IDF (word + char) + LR,"{'char': (3, 5), 'C': 10}",0.9213
+TF-IDF (word + char) + LR,"{'char': (3, 5), 'C': 20}",0.9213
+TF-IDF (word + char) + LR,"{'char': (3, 5), 'C': 50}",0.9174

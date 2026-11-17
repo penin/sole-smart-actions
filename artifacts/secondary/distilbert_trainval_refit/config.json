@@ -1,0 +1,49 @@
+{
+  "activation": "gelu",
+  "architectures": [
+    "DistilBertForSequenceClassification"
+  ],
+  "attention_dropout": 0.1,
+  "bos_token_id": null,
+  "dim": 768,
+  "dropout": 0.1,
+  "dtype": "float16",
+  "eos_token_id": null,
+  "hidden_dim": 3072,
+  "id2label": {
+    "0": "TRANSFER_MONEY",
+    "1": "CHECK_BALANCE",
+    "2": "VIEW_TRANSACTIONS",
+    "3": "WITHDRAW_MONEY",
+    "4": "BILL_PAY",
+    "5": "HELP_SUPPORT",
+    "6": "MANAGE_CONTACTS",
+    "7": "VIEW_GROUP",
+    "8": "CHECK_SPENDING"
+  },
+  "initializer_range": 0.02,
+  "label2id": {
+    "BILL_PAY": 4,
+    "CHECK_BALANCE": 1,
+    "CHECK_SPENDING": 8,
+    "HELP_SUPPORT": 5,
+    "MANAGE_CONTACTS": 6,
+    "TRANSFER_MONEY": 0,
+    "VIEW_GROUP": 7,
+    "VIEW_TRANSACTIONS": 2,
+    "WITHDRAW_MONEY": 3
+  },
+  "max_position_embeddings": 512,
+  "model_type": "distilbert",
+  "n_heads": 12,
+  "n_layers": 6,
+  "pad_token_id": 0,
+  "problem_type": "single_label_classification",
+  "qa_dropout": 0.1,
+  "seq_classif_dropout": 0.2,
+  "sinusoidal_pos_embds": false,
+  "tie_weights_": true,
+  "tie_word_embeddings": true,
+  "transformers_version": "5.22.1",
+  "vocab_size": 30522
+}

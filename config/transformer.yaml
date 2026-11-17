@@ -1,0 +1,57 @@
+# Custom Transformer (trained from scratch). Ported from Felipe's notebook 01_custom_transformer_v5.ipynb
+# (research/original_experiments/custom_transformer/). Architecture, grid, epoch selection and ablations are
+# preserved. Changes for the shared protocol (documented in docs/model_integration.md):
+#   * 9 supervised classes (CHECK_SPENDING added); 270-command test set
+#   * primary model = best validation epoch trained on train only (no train+validation refit)
+#   * Keras 3 on the PyTorch backend; TextVectorization replaced by an equivalent pure-Python vectorizer
+model:
+  name: transformer
+  display_name: Custom Transformer
+  family: neural
+  original_author: Felipe (friosf)
+  seed: 1234            # the teammate's seed
+
+text:
+  max_length: 16        # tokens per command (longest V5 command has 12 words)
+  max_tokens: 2000
+  standardize: lower_and_strip_punctuation
+
+embeddings:
+  source: GloVe 6B 100d (Stanford NLP, Pennington et al. 2014), Hugging Face mirror
+  url: https://huggingface.co/datasets/SLU-CSCI4750/glove.6B.100d.txt/resolve/1947a5a81ebbd83f2c831b58f308d1f11d6c6954/glove.6B.100d.txt.gz
+  revision: 1947a5a81ebbd83f2c831b58f308d1f11d6c6954
+  sha256: 22d27d5f0080da2a57f48e6691af7b18aa39e96a54ef6fad02d9456a117239e1   # verified 2026-11-16
+  file: data/external/glove/glove.6B.100d.txt.gz
+  dim: 100
+  top_words: 40000      # subset cached like the original notebook: 40k most frequent words + training vocabulary
+  init_std: 0.1         # random init for out-of-GloVe tokens
+
+architecture:
+  ff_dim: 256
+  head_dim: 64
+  embedding_dim: 100
+
+training:
+  batch_size: 32
+  max_epochs: 40
+  patience: 10          # stop after 10 epochs without improving (val accuracy, then val log loss)
+  device: auto          # cuda if available
+
+grid:
+  num_heads: [1, 2, 4]
+  num_blocks: [1, 2]
+  dropout: [0.1, 0.2, 0.3]
+  learning_rate: [0.0003, 0.001]
+
+selection:
+  metric: validation_accuracy
+  tie_breakers: [validation_log_loss]
+
+ablations:
+  no_attention: {num_blocks: 0}
+  no_glove: {pretrained: false}
+
+smoke:
+  grid: {num_heads: [2], num_blocks: [1], dropout: [0.2], learning_rate: [0.001]}
+  training: {max_epochs: 2, patience: 1}
+  train_subset: 256

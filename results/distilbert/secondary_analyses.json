@@ -1,0 +1,44 @@
+{
+  "label": "SECONDARY analyses - not part of the primary comparison",
+  "temperature_calibration": {
+    "temperature": 1.0601107323862933,
+    "fitted_on": "validation (known intents only)",
+    "validation": {
+      "log_loss_raw": 0.1865257178528764,
+      "log_loss_calibrated": 0.18577160783051092,
+      "ece_raw": 0.03017537008833009,
+      "ece_calibrated": 0.030447654607404742,
+      "mean_confidence_raw": 0.9523975923105522,
+      "mean_confidence_calibrated": 0.9470560433022364
+    },
+    "test": {
+      "log_loss_raw": 0.06584072191619214,
+      "log_loss_calibrated": 0.067911651941595,
+      "ece_raw": 0.0229843537012736,
+      "ece_calibrated": 0.025863849916358702,
+      "mean_confidence_raw": 0.9759282867113749,
+      "mean_confidence_calibrated": 0.9722922368871937
+    },
+    "note": "Temperature scaling never changes the predicted intent. The validation figures are measured on the same commands used to fit T (optimistic); test figures are held out."
+  },
+  "three_tier_routing": {
+    "description": "Ricardo's three-tier gate re-derived without unknown labels: open threshold = primary default; menu threshold = validation threshold for 99% coverage",
+    "open_threshold": 0.6759946346282959,
+    "menu_threshold": 0.47687891125679016,
+    "menu_size": 3,
+    "known": {
+      "open_correct": 0.9666666666666667,
+      "open_wrong": 0.007407407407407408,
+      "open_wrong_financial": 0.0,
+      "menu_contains_intent": 0.011111111111111112,
+      "menu_missing_intent": 0.003703703703703704,
+      "not_understood": 0.011111111111111112
+    },
+    "unknown": {
+      "opened": 0.55,
+      "opened_financial": 0.04666666666666667,
+      "menu": 0.19666666666666666,
+      "not_understood": 0.25333333333333335
+    }
+  }
+}

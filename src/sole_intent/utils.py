@@ -19,15 +19,15 @@ import numpy as np
 import yaml
 
 PROJECT_ROOT = Path(__file__).resolve().parents[2]
-DEFAULT_CONFIG = PROJECT_ROOT / "config" / "baseline.yaml"
+DEFAULT_CONFIG = PROJECT_ROOT / "config" / "history" / "bow_v4.yaml"
 
-RESULTS_DIR = PROJECT_ROOT / "results"
+RESULTS_DIR = PROJECT_ROOT / "results" / "history" / "bow_v4"
 METRICS_DIR = RESULTS_DIR / "metrics"
 FIGURES_DIR = RESULTS_DIR / "figures"
 PREDICTIONS_DIR = RESULTS_DIR / "predictions"
 REPORTS_DIR = RESULTS_DIR / "reports"
-MODELS_DIR = PROJECT_ROOT / "models"
-PROCESSED_DIR = PROJECT_ROOT / "data" / "processed"
+MODELS_DIR = PROJECT_ROOT / "artifacts" / "history" / "bow_v4"
+PROCESSED_DIR = PROJECT_ROOT / "data" / "processed" / "bow_v4"
 
 TRACKED_PACKAGES = [
     "scikit-learn", "pandas", "numpy", "scipy", "matplotlib", "seaborn",
@@ -89,9 +89,9 @@ class OutputPaths:
 
 def output_paths(cfg: dict) -> OutputPaths:
     out = cfg.get("outputs") or {}
-    return OutputPaths(results=resolve_path(out.get("results_dir", "results")),
-                       models=resolve_path(out.get("models_dir", "models")),
-                       processed=resolve_path(out.get("processed_dir", "data/processed")))
+    return OutputPaths(results=resolve_path(out.get("results_dir", "results/history/bow_v4")),
+                       models=resolve_path(out.get("models_dir", "artifacts/history/bow_v4")),
+                       processed=resolve_path(out.get("processed_dir", "data/processed/bow_v4")))
 
 
 def set_seed(seed: int) -> None:

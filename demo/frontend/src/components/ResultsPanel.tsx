@@ -1,6 +1,8 @@
 import { intentLabel, pct, thresholdPct } from "../lib/format";
 import { UNKNOWN_INTENT } from "../lib/threshold";
+import { buildWorkflow } from "../lib/workflow";
 import type { Decision, Prediction } from "../types";
+import { WorkflowPanel } from "./WorkflowPanel";
 
 interface Props {
   prediction: Prediction | null;
@@ -109,26 +111,8 @@ export function ResultsPanel({ prediction, decision, loading, error }: Props) {
             </Tile>
           </div>
 
-          <div className="mt-4 rounded-xl bg-slate-50 p-3 text-sm text-slate-700">
-            <span className="font-semibold text-navy-900">What the app would do: </span>
-            {decision.fallback_applied ? (
-              <>
-                Not confident enough to act. Show the fallback: offer <span className="intent-chip">HELP_SUPPORT</span> or
-                ask the customer to rephrase. The model's best guess was{" "}
-                <span className="intent-chip">{decision.application.suggested_intent}</span>, which is shown but not
-                executed.
-              </>
-            ) : decision.final_intent === "HELP_SUPPORT" ? (
-              <>
-                The model classified this as a Help &amp; Support request, so the customer is routed to support. This is a
-                real prediction, not a fallback.
-              </>
-            ) : (
-              <>
-                Open the <span className="font-medium">{intentLabel(decision.final_intent)}</span> flow. Any money movement
-                would still need the customer's confirmation.
-              </>
-            )}
+          <div className="mt-4">
+            <WorkflowPanel workflow={buildWorkflow(prediction.input, decision, prediction.ranked)} />
           </div>
         </div>
       )}

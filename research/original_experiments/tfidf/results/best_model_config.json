@@ -1,0 +1,7 @@
+{
+  "best_model": "TF-IDF (word + char) + LR",
+  "params": "{'char': (2, 5), 'C': 10}",
+  "threshold": 0.4151,
+  "seed": 42,
+  "target_coverage": 0.95
+}

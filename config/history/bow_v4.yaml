@@ -1,0 +1,108 @@
+# Sole Smart Actions — Bag of Words + Logistic Regression baseline configuration.
+# All paths are resolved relative to the project root (the repository root).
+
+experiment:
+  model_name: bow_logreg
+  experiment_id: bow_logreg_v1
+  model_version: "1.0.0"
+  random_seed: 42
+
+data:
+  path: data/raw/Sole_Smart_Actions_Intent_Training_v4_Cleaned.xlsx
+  sheet: Training Data
+  dataset_version: v4_cleaned
+  expected_rows: 3000
+  expected_split_counts:
+    train: 2160
+    validation: 270
+    test: 270
+    evaluation_only: 300
+
+# Canonical class ordering. Every model (BoW, CNN, LSTM, transformer) must use this order.
+labels:
+  - TRANSFER_MONEY
+  - CHECK_BALANCE
+  - VIEW_TRANSACTIONS
+  - WITHDRAW_MONEY
+  - BILL_PAY
+  - HELP_SUPPORT
+  - MANAGE_CONTACTS
+  - VIEW_GROUP
+  - CHECK_SPENDING
+
+core_labels:
+  - TRANSFER_MONEY
+  - CHECK_BALANCE
+  - VIEW_TRANSACTIONS
+  - WITHDRAW_MONEY
+  - BILL_PAY
+  - HELP_SUPPORT
+  - MANAGE_CONTACTS
+  - VIEW_GROUP
+
+unknown_label: UNKNOWN_INTENT
+scopes:
+  core: core
+  stretch: stretch
+  rejection: rejection_test
+
+preprocessing:
+  unicode_form: NFKC
+  lowercase: true
+  collapse_whitespace: true
+  # Keeps "$", single characters and digits as tokens (sklearn's default drops them).
+  token_pattern: '(?u)\$|\b\w+\b'
+
+model:
+  solver: lbfgs
+  max_iter: 5000
+  # Default (untuned) configuration, reported separately from the tuned model.
+  default_params:
+    ngram_range: [1, 1]
+    C: 1.0
+    binary: false
+
+tuning:
+  selection_metric: validation_macro_f1
+  tie_breakers: [validation_log_loss]
+  grid:
+    ngram_range: [[1, 1], [1, 2]]
+    C: [0.1, 1.0, 10.0]
+    binary: [false, true]
+
+rejection:
+  # Prespecified before looking at any UNKNOWN_INTENT labels.
+  target_known_coverage: 0.95
+  sweep_thresholds: {start: 0.0, stop: 1.0, step: 0.01}
+  # Supplementary unknown-aware protocol: split the 300 unknowns into calibration / holdout
+  # by normalized phrase so identical phrases never cross the split.
+  unknown_calibration_fraction: 0.5
+
+learning_curve:
+  train_sizes: [0.1, 0.2, 0.35, 0.5, 0.75, 1.0]
+  cv_folds: 5
+
+bootstrap:
+  # Test phrases repeat, so resampling is clustered by normalized phrase.
+  n_resamples: 2000
+
+latency:
+  warmup: 50
+  single_repeats: 1000
+  batch_repeats: 200
+
+diagnostics:
+  high_confidence: 0.90
+  ambiguous_margin: 0.10
+  short_command_max_tokens: 2
+  near_duplicate_jaccard: 0.8
+  top_features: 15
+
+plots:
+  dpi: 200
+
+# Historical output folders (moved here from results/, models/ and data/processed/ in the four-model integration).
+outputs:
+  results_dir: results/history/bow_v4
+  models_dir: artifacts/history/bow_v4
+  processed_dir: data/processed/bow_v4

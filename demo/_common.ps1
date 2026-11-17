@@ -8,11 +8,12 @@ function Assert-Python {
     if (-not (Test-Path $Python)) {
         throw "Project virtual environment not found at $Python. See demo\README.md (Installation)."
     }
-    & $Python -c "import fastapi, uvicorn, sole_intent" 2>$null
+    $env:KERAS_BACKEND = "torch"   # Keras 3 runs on PyTorch in this project
+    & $Python -c "import fastapi, uvicorn, sole_intent, sole_smart_actions, torch, keras, transformers" 2>$null
     if ($LASTEXITCODE -ne 0) {
-        Write-Host "Installing demo backend dependencies into the project .venv..." -ForegroundColor Yellow
-        & $Python -m pip install -r (Join-Path $DemoDir "backend\requirements.txt")
-        & $Python -m pip install -e $ProjectRoot
+        Write-Host "Installing the pinned project dependencies into the project .venv (README: Installation)..." -ForegroundColor Yellow
+        & $Python -m pip install -r (Join-Path $ProjectRoot "requirements.lock") --extra-index-url https://download.pytorch.org/whl/cu126
+        & $Python -m pip install -e $ProjectRoot --no-deps
     }
 }
 

@@ -1,5 +1,5 @@
-# Demo API dependencies. Install into the project's existing .venv (which already has scikit-learn,
-# joblib and the `sole_intent` package used to train the model):
+# Demo API dependencies. They are already part of the root requirements.txt / requirements.lock;
+# this file exists so the API can also be installed on its own:
 #   .venv\Scripts\python -m pip install -r demo\backend\requirements.txt
 fastapi==0.162.2
 uvicorn[standard]==0.54.0

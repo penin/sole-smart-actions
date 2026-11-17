@@ -2,7 +2,7 @@
 
 Any model (BoW, CNN, LSTM, transformer) can be evaluated with :func:`evaluate_predictions`
 given true labels, predicted labels, a probability matrix whose columns follow the canonical
-``class_order`` from ``config/baseline.yaml``, and identifying metadata.
+``class_order`` from ``config/history/bow_v4.yaml``, and identifying metadata.
 
 Undefined metrics (e.g. ROC-AUC for a class with no positives, precision for a class that is
 never predicted) are reported as ``None`` with a reason in ``undefined_metrics``; they are

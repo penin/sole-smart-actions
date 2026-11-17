@@ -502,7 +502,7 @@ def run_experiment(config_path=None) -> dict:
     summary.to_csv(P.reports / "experiment_summary.csv", index=False)
 
     experiment_config = {
-        "experiment": exp, "created_utc": utc_now(), "config_path": str(cfg_path), "config_sha256": config_sha,
+        "experiment": exp, "created_utc": utc_now(), "config_path": P.rel(cfg_path), "config_sha256": config_sha,
         "config": cfg, "dataset": fingerprint, "packages": package_versions(), "environment": environment_info(),
         "default_params": default_params, "selected_params": best_params,
         "selection": "highest validation macro F1; ties broken by lower validation log loss; test never used",

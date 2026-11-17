@@ -1,0 +1,48 @@
+{
+  "class_order": [
+    "TRANSFER_MONEY",
+    "CHECK_BALANCE",
+    "VIEW_TRANSACTIONS",
+    "WITHDRAW_MONEY",
+    "BILL_PAY",
+    "HELP_SUPPORT",
+    "MANAGE_CONTACTS",
+    "VIEW_GROUP",
+    "CHECK_SPENDING"
+  ],
+  "strategy": {
+    "strategy": "top_2_blocks",
+    "unfrozen_blocks": 2,
+    "learning_rate": 0.0001,
+    "epochs": 2,
+    "schedule_epochs": 6
+  },
+  "pretrained": {
+    "name": "distilbert/distilbert-base-uncased",
+    "revision": "12040accade4e8a0f71eabdb258fecc2e7e948be",
+    "source": "https://huggingface.co/distilbert/distilbert-base-uncased",
+    "license": "apache-2.0"
+  },
+  "max_tokens": 24,
+  "save_dtype": "float16",
+  "selection": {
+    "params": {
+      "strategy": "top_2_blocks",
+      "unfrozen_blocks": 2,
+      "learning_rate": 0.0001,
+      "epochs": 2,
+      "schedule_epochs": 6
+    },
+    "rule": "highest validation accuracy; ties -> lowest validation log loss; best epoch kept",
+    "validation_accuracy": 0.9222222222222223,
+    "validation_log_loss": 0.18662677705287933,
+    "n_configurations": 9,
+    "grid_seconds": 276.30827539996244,
+    "pretrained": {
+      "name": "distilbert/distilbert-base-uncased",
+      "revision": "12040accade4e8a0f71eabdb258fecc2e7e948be",
+      "source": "https://huggingface.co/distilbert/distilbert-base-uncased",
+      "license": "apache-2.0"
+    }
+  }
+}

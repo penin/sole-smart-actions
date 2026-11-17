@@ -1,0 +1,44 @@
+{
+  "architecture": {
+    "num_heads": 4,
+    "num_blocks": 2,
+    "dropout": 0.2,
+    "learning_rate": 0.001,
+    "epochs": 5
+  },
+  "class_order": [
+    "TRANSFER_MONEY",
+    "CHECK_BALANCE",
+    "VIEW_TRANSACTIONS",
+    "WITHDRAW_MONEY",
+    "BILL_PAY",
+    "HELP_SUPPORT",
+    "MANAGE_CONTACTS",
+    "VIEW_GROUP",
+    "CHECK_SPENDING"
+  ],
+  "text": {
+    "max_length": 16,
+    "max_tokens": 2000,
+    "standardize": "lower_and_strip_punctuation"
+  },
+  "embedding_dim": 100,
+  "ff_dim": 256,
+  "head_dim": 64,
+  "selection": {
+    "params": {
+      "num_heads": 4,
+      "num_blocks": 2,
+      "dropout": 0.2,
+      "learning_rate": 0.001,
+      "epochs": 5
+    },
+    "rule": "highest validation accuracy; ties -> lowest validation log loss; best epoch kept (patience 10)",
+    "validation_accuracy": 0.9296296296296296,
+    "validation_log_loss": 0.4571467339992523,
+    "n_configurations": 36,
+    "grid_seconds": 1640.5770621999982,
+    "glove_tokens": 378,
+    "vocabulary_size": 392
+  }
+}

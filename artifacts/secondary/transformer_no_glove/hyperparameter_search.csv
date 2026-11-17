@@ -1,0 +1,2 @@
+rank,key,num_heads,num_blocks,dropout,learning_rate,pretrained,best_epoch,epochs_run,validation_accuracy,validation_log_loss,train_accuracy,parameters,training_seconds
+1,2b/4h/d0.2/lr0.001,4,2,0.2,0.001,False,16,26,0.9703703703703703,0.18021491169929504,0.9986111111111111,232561,69.63941500004148

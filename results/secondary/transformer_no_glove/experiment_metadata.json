@@ -1,0 +1,196 @@
+{
+  "schema_version": "1.0",
+  "model": "transformer",
+  "display_name": "Custom Transformer",
+  "original_author": "Felipe (friosf)",
+  "run_label": "no_glove",
+  "protocol": "primary",
+  "variant": "no_glove",
+  "smoke_test": false,
+  "primary_comparison": false,
+  "trained_on": [
+    "train"
+  ],
+  "selected_on": [
+    "validation"
+  ],
+  "evaluated_utc": "2026-11-16T18:06:51+00:00",
+  "evaluation_command": "python evaluate.py --model transformer --label no_glove",
+  "training_command": "python train.py --model transformer --variant no_glove",
+  "git_commit": "1cd668e6e692a9b99e4b4bd20a3bff4c7a08faf0",
+  "dataset": {
+    "path": "data/raw/Sole_Smart_Actions_Intent_Training_v5_Deduplicated.xlsx",
+    "version": "v5_deduplicated",
+    "sha256": "8dc9c89cbb8af41fd7cb25b2841e2f1a0c986641c4a6108c2f804d09f9345516",
+    "content_sha256": "8277d2569ed2373b3b30062761c54d41ea50a63895c19716b34c35293eaffabe",
+    "n_rows": 3000
+  },
+  "class_order": [
+    "TRANSFER_MONEY",
+    "CHECK_BALANCE",
+    "VIEW_TRANSACTIONS",
+    "WITHDRAW_MONEY",
+    "BILL_PAY",
+    "HELP_SUPPORT",
+    "MANAGE_CONTACTS",
+    "VIEW_GROUP",
+    "CHECK_SPENDING"
+  ],
+  "artifact": {
+    "directory": "artifacts/secondary/transformer_no_glove",
+    "size_bytes": 2930628,
+    "size_mb": 2.930628,
+    "files": [
+      {
+        "path": "architecture.json",
+        "bytes": 1053,
+        "sha256": "7541b9786544f7784135b7da33e0360a3ea65e7bfead8ef7747edc59b1eb3da8"
+      },
+      {
+        "path": "hyperparameter_search.csv",
+        "bytes": 300,
+        "sha256": "10b4fe6b74f074e4aa8d085bf664232df4035b5d6566e8e615c1a46d75b422b6"
+      },
+      {
+        "path": "model.weights.h5",
+        "bytes": 2922440,
+        "sha256": "30d1f8c2c8c9cc4ffefd37f403c6c9ac1d113e6a6cfa3132525c2e2ab03a8d58"
+      },
+      {
+        "path": "training_history.csv",
+        "bytes": 1658,
+        "sha256": "227b0f650f12afc919917aa484cc862da39fdf285d3e30d5ee479979cd774830"
+      },
+      {
+        "path": "vocabulary.json",
+        "bytes": 5177,
+        "sha256": "7392d801b99dce315892ecf3c9043911c7d0ae9f8cd68fdc8afc6bcfd02cf4df"
+      }
+    ],
+    "model_card_sha256": "3bbdb6fc7e5d2db190149ac1fa51b697075716c57789b39c629a61540a3a4852"
+  },
+  "n_parameters": 232561,
+  "selection": {
+    "params": {
+      "num_heads": 4,
+      "num_blocks": 2,
+      "dropout": 0.2,
+      "learning_rate": 0.001,
+      "pretrained": false,
+      "epochs": 16
+    },
+    "rule": "highest validation accuracy; ties -> lowest validation log loss; best epoch kept (patience 10)",
+    "validation_accuracy": 0.9703703703703703,
+    "validation_log_loss": 0.18021491169929504,
+    "n_configurations": 1,
+    "grid_seconds": 71.79128240002319,
+    "glove_tokens": 378,
+    "vocabulary_size": 392
+  },
+  "hyperparameters": {
+    "num_heads": 4,
+    "num_blocks": 2,
+    "dropout": 0.2,
+    "learning_rate": 0.001,
+    "pretrained": false,
+    "epochs": 16
+  },
+  "training_seconds_final_fit": 69.63941500004148,
+  "training_wall_seconds_incl_search": 72.1110896000173,
+  "threshold_calibration": {
+    "algorithm": "largest observed validation max-probability with coverage >= target (sole_intent.rejection.threshold_for_coverage)",
+    "confidence": "max_probability",
+    "calibration_split": "validation",
+    "n_calibration": 270,
+    "target_known_coverage": 0.95,
+    "threshold": 0.9890844225883484,
+    "actual_validation_coverage": 0.9518518518518518,
+    "uses_unknown_labels": false,
+    "uses_test_labels": false
+  },
+  "headline": {
+    "raw_test_accuracy": 0.9444444444444444,
+    "raw_test_correct": 255,
+    "raw_test_n": 270,
+    "test_macro_f1": 0.9439829194167741,
+    "test_macro_precision": 0.9465875512855,
+    "test_macro_recall": 0.9444444444444444,
+    "test_weighted_f1": 0.943982919416774,
+    "test_macro_roc_auc_ovr": 0.9963888888888888,
+    "train_accuracy": 0.9986111111111111,
+    "validation_accuracy": 0.9703703703703703,
+    "default_threshold": 0.9890844225883484,
+    "latency_p50_ms": 13.596650009276345,
+    "latency_p95_ms": 16.280545009067282
+  },
+  "environment_training": {
+    "os": "Windows-11-10.0.26200-SP0",
+    "system": "Windows",
+    "machine": "AMD64",
+    "cpu": "Intel(R) Core(TM) i9-14900HX",
+    "logical_cpus": 32,
+    "total_memory_gb": 31.7,
+    "python": "3.13.15",
+    "packages": {
+      "python": "3.13.15",
+      "numpy": "2.5.4",
+      "pandas": "3.1.1",
+      "scikit-learn": "1.9.1",
+      "scipy": "1.18.1",
+      "matplotlib": "3.11.2",
+      "openpyxl": "3.1.5",
+      "joblib": "1.6.0",
+      "PyYAML": "6.0.3",
+      "torch": "2.14.1+cu126",
+      "keras": "3.15.1",
+      "transformers": "5.22.1",
+      "tokenizers": "0.23.3",
+      "safetensors": "0.8.0",
+      "huggingface-hub": "2.4.0",
+      "h5py": "3.16.0",
+      "fastapi": "0.162.2",
+      "pytest": "9.2.0"
+    },
+    "cuda_available": true,
+    "cuda_version": "12.6",
+    "cudnn_version": 91002,
+    "gpu": "NVIDIA GeForce RTX 4080 Laptop GPU",
+    "torch_version": "2.14.1+cu126",
+    "gpu_memory_gb": 12.0
+  },
+  "environment_evaluation": {
+    "os": "Windows-11-10.0.26200-SP0",
+    "system": "Windows",
+    "machine": "AMD64",
+    "cpu": "Intel(R) Core(TM) i9-14900HX",
+    "logical_cpus": 32,
+    "total_memory_gb": 31.7,
+    "python": "3.13.15",
+    "packages": {
+      "python": "3.13.15",
+      "numpy": "2.5.4",
+      "pandas": "3.1.1",
+      "scikit-learn": "1.9.1",
+      "scipy": "1.18.1",
+      "matplotlib": "3.11.2",
+      "openpyxl": "3.1.5",
+      "joblib": "1.6.0",
+      "PyYAML": "6.0.3",
+      "torch": "2.14.1+cu126",
+      "keras": "3.15.1",
+      "transformers": "5.22.1",
+      "tokenizers": "0.23.3",
+      "safetensors": "0.8.0",
+      "huggingface-hub": "2.4.0",
+      "h5py": "3.16.0",
+      "fastapi": "0.162.2",
+      "pytest": "9.2.0"
+    },
+    "cuda_available": true,
+    "cuda_version": "12.6",
+    "cudnn_version": 91002,
+    "gpu": "NVIDIA GeForce RTX 4080 Laptop GPU",
+    "torch_version": "2.14.1+cu126",
+    "gpu_memory_gb": 12.0
+  }
+}

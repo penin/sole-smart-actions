@@ -3,24 +3,33 @@ requires = ["setuptools>=68"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "sole-intent"
-version = "1.0.0"
-description = "Sole Smart Actions intent classification: BoW + Logistic Regression baseline and shared evaluation framework"
+name = "sole-smart-actions"
+version = "2.0.0"
+description = "Sole Smart Actions: intent classification for the Sole digital wallet - Bag of Words, TF-IDF, Custom Transformer and fine-tuned DistilBERT under one evaluation protocol"
 readme = "README.md"
-requires-python = ">=3.10"
+requires-python = ">=3.11,<3.14"
+# Exact pins for reproduction are in requirements.lock; these are the direct dependencies.
 dependencies = [
-    "scikit-learn>=1.5",
+    "numpy>=2.0",
     "pandas>=2.2",
-    "numpy>=1.26",
     "scipy>=1.11",
+    "scikit-learn>=1.5",
     "matplotlib>=3.8",
     "seaborn>=0.13",
     "openpyxl>=3.1",
     "joblib>=1.3",
     "PyYAML>=6.0",
+    "torch>=2.6",
+    "keras>=3.10",
+    "h5py>=3.10",
+    "transformers>=5.0",
+    "tokenizers>=0.21",
+    "safetensors>=0.5",
+    "huggingface_hub>=1.0",
 ]
 
 [project.optional-dependencies]
+demo = ["fastapi>=0.115", "uvicorn[standard]>=0.30", "httpx>=0.27"]
 dev = ["pytest>=8"]
 
 [tool.setuptools.packages.find]
@@ -28,5 +37,8 @@ where = ["src"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
-pythonpath = ["src"]
+pythonpath = ["src", "."]
 addopts = "-ra"
+markers = [
+    "slow: trains or loads neural models (deselect with -m 'not slow')",
+]

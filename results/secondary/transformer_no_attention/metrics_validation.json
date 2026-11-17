@@ -1,0 +1,333 @@
+{
+  "model_name": "transformer",
+  "experiment_id": "no_attention",
+  "split": "validation",
+  "n_samples": 270,
+  "class_order": [
+    "TRANSFER_MONEY",
+    "CHECK_BALANCE",
+    "VIEW_TRANSACTIONS",
+    "WITHDRAW_MONEY",
+    "BILL_PAY",
+    "HELP_SUPPORT",
+    "MANAGE_CONTACTS",
+    "VIEW_GROUP",
+    "CHECK_SPENDING"
+  ],
+  "accuracy": 0.8925925925925926,
+  "macro_precision": 0.9169082125603865,
+  "weighted_precision": 0.9169082125603865,
+  "macro_recall": 0.8925925925925926,
+  "weighted_recall": 0.8925925925925926,
+  "macro_f1": 0.8908119643825874,
+  "weighted_f1": 0.8908119643825875,
+  "balanced_accuracy": 0.8925925925925926,
+  "log_loss": 0.3607984629362016,
+  "macro_roc_auc_ovr": 0.9946141975308641,
+  "weighted_roc_auc_ovr": 0.994614197530864,
+  "macro_average_precision": 0.9679331153713425,
+  "top2_accuracy": 0.9629629629629629,
+  "top3_accuracy": 0.9740740740740741,
+  "mean_confidence": 0.9394057001228686,
+  "expected_calibration_error": 0.0687353285374465,
+  "per_class": [
+    {
+      "intent": "TRANSFER_MONEY",
+      "precision": 0.6521739130434783,
+      "recall": 1.0,
+      "f1": 0.7894736842105263,
+      "support": 30,
+      "roc_auc_ovr": 0.9999999999999999,
+      "average_precision": 1.0
+    },
+    {
+      "intent": "CHECK_BALANCE",
+      "precision": 0.8,
+      "recall": 0.9333333333333333,
+      "f1": 0.8615384615384616,
+      "support": 30,
+      "roc_auc_ovr": 0.98625,
+      "average_precision": 0.8793256078409116
+    },
+    {
+      "intent": "VIEW_TRANSACTIONS",
+      "precision": 1.0,
+      "recall": 0.5666666666666667,
+      "f1": 0.723404255319149,
+      "support": 30,
+      "roc_auc_ovr": 0.9827777777777778,
+      "average_precision": 0.9169305607478716
+    },
+    {
+      "intent": "WITHDRAW_MONEY",
+      "precision": 0.9375,
+      "recall": 1.0,
+      "f1": 0.967741935483871,
+      "support": 30,
+      "roc_auc_ovr": 1.0,
+      "average_precision": 0.9999999999999999
+    },
+    {
+      "intent": "BILL_PAY",
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 30,
+      "roc_auc_ovr": 0.9999999999999999,
+      "average_precision": 1.0
+    },
+    {
+      "intent": "HELP_SUPPORT",
+      "precision": 0.9583333333333334,
+      "recall": 0.7666666666666667,
+      "f1": 0.8518518518518519,
+      "support": 30,
+      "roc_auc_ovr": 0.9906944444444445,
+      "average_precision": 0.9574849583582897
+    },
+    {
+      "intent": "MANAGE_CONTACTS",
+      "precision": 1.0,
+      "recall": 0.8,
+      "f1": 0.8888888888888888,
+      "support": 30,
+      "roc_auc_ovr": 0.9981944444444444,
+      "average_precision": 0.989922480620155
+    },
+    {
+      "intent": "VIEW_GROUP",
+      "precision": 0.9666666666666667,
+      "recall": 0.9666666666666667,
+      "f1": 0.9666666666666667,
+      "support": 30,
+      "roc_auc_ovr": 0.9951388888888888,
+      "average_precision": 0.9820512820512821
+    },
+    {
+      "intent": "CHECK_SPENDING",
+      "precision": 0.9375,
+      "recall": 1.0,
+      "f1": 0.967741935483871,
+      "support": 30,
+      "roc_auc_ovr": 0.9984722222222222,
+      "average_precision": 0.9856831487235721
+    }
+  ],
+  "confusion_matrix": [
+    [
+      30,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      28,
+      0,
+      2,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      11,
+      0,
+      17,
+      0,
+      0,
+      1,
+      0,
+      1,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      30,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      30,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      7,
+      0,
+      0,
+      0,
+      23,
+      0,
+      0,
+      0
+    ],
+    [
+      5,
+      0,
+      0,
+      0,
+      0,
+      0,
+      24,
+      0,
+      1
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      29,
+      1
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      30
+    ]
+  ],
+  "confusion_matrix_normalized": [
+    [
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.9333333333333333,
+      0.0,
+      0.06666666666666667,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.36666666666666664,
+      0.0,
+      0.5666666666666667,
+      0.0,
+      0.0,
+      0.03333333333333333,
+      0.0,
+      0.03333333333333333,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.23333333333333334,
+      0.0,
+      0.0,
+      0.0,
+      0.7666666666666667,
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.16666666666666666,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.8,
+      0.0,
+      0.03333333333333333
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.9666666666666667,
+      0.03333333333333333
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "core8_breakdown": {
+    "n_samples": 240,
+    "accuracy": 0.8791666666666667,
+    "macro_precision": 0.9143342391304348,
+    "weighted_precision": 0.9143342391304348,
+    "macro_recall": 0.8791666666666667,
+    "weighted_recall": 0.8791666666666667,
+    "macro_f1": 0.8811957179949269,
+    "weighted_f1": 0.881195717994927,
+    "predicted_outside_core": 2,
+    "undefined_metrics": {}
+  },
+  "undefined_metrics": {},
+  "correct": 241,
+  "definition": "raw classifier metrics: argmax over the nine intents, no confidence threshold; accuracy = correct / 270 validation commands"
+}

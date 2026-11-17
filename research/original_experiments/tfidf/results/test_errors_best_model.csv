@@ -1,0 +1,8 @@
+text,intent,split,scope,predicted,confidence
+I have a complaint,HELP_SUPPORT,test,core,CHECK_BALANCE,0.268
+Where is my statement,VIEW_TRANSACTIONS,test,core,CHECK_BALANCE,0.53
+Where is my statement on my account,VIEW_TRANSACTIONS,test,core,CHECK_BALANCE,0.447
+Show beneficiaries,MANAGE_CONTACTS,test,core,VIEW_TRANSACTIONS,0.867
+Where is my statement this time,VIEW_TRANSACTIONS,test,core,CHECK_BALANCE,0.588
+I have a complaint at the moment,HELP_SUPPORT,test,core,CHECK_BALANCE,0.393
+Show beneficiaries quickly,MANAGE_CONTACTS,test,core,VIEW_TRANSACTIONS,0.409

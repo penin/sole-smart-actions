@@ -48,7 +48,7 @@ def main() -> None:
     parser.add_argument("texts", nargs="+", help="One or more commands to classify")
     parser.add_argument("--model", type=Path, default=None, help="Path to a .joblib bundle")
     parser.add_argument("--threshold", type=float, default=None, help="Override the rejection threshold")
-    parser.add_argument("--config", default=None, help="Inference YAML (e.g. config/inference.yaml)")
+    parser.add_argument("--config", default=None, help="Inference YAML (e.g. config/history/bow_v4_inference.yaml)")
     parser.add_argument("--json", action="store_true", help="Print full JSON including probabilities")
     args = parser.parse_args()
     inference = load_config(args.config).get("inference", {}) if args.config else {}

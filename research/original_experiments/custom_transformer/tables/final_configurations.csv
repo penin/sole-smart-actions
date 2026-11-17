@@ -1,0 +1,6 @@
+Model,Final configuration,Why
+Always predict 'TRANSFER_MONEY',always the most common intent (TRANSFER_MONEY),the floor any model must beat
+Keyword rule,20 highest-lift words per intent; abstains when no keyword matches or intents tie,highest validation accuracy (0.804) among 5 configurations
+Custom Transformer,"1 block(s), 4 head(s), ff 256, dropout 0.2, learning rate 0.001, 27 epochs, GloVe",highest validation accuracy (0.988) among 36 configurations
+Ablation: no attention,average of embeddings + dense head (0 blocks); 19 epochs,ablation of the chosen Custom Transformer configuration
+Ablation: no GloVe,"1 block(s), 4 head(s), ff 256, dropout 0.2, learning rate 0.001, 27 epochs, random embeddings; 15 epochs",ablation of the chosen Custom Transformer configuration

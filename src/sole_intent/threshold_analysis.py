@@ -1,7 +1,7 @@
 """Exploratory confidence-threshold analysis on the frozen Baseline V1 model.
 
-Reuses V1's saved class probabilities (``results/predictions/*_predictions.csv``), cross-checked
-against the saved model, so nothing is retrained. Outputs go to ``results/threshold_analysis/`` only;
+Reuses V1's saved class probabilities (``results/history/bow_v4/predictions/*_predictions.csv``), cross-checked
+against the saved model, so nothing is retrained. Outputs go to ``results/history/bow_v4/threshold_analysis/`` only;
 the analysis refuses to write into V1 output folders and verifies V1 artifact hashes before and after.
 
 The test and unknown-evaluation sets were already inspected in earlier experiments. Everything here is
@@ -29,9 +29,10 @@ from .rejection import UNKNOWN_INTENT, application_action, apply_rejection, max_
 from .train import load_bundle, reorder_proba
 from .utils import (PROJECT_ROOT, load_config, load_json, resolve_path, save_json, sha256_file, utc_now)
 
-DEFAULT_CONFIG = "config/threshold_analysis.yaml"
-V1_ARTIFACT_DIRS = ["models", "results/metrics", "results/figures", "results/predictions", "results/reports"]
-V1_ARTIFACT_FILES = ["config/baseline.yaml", "Sole_Smart_Actions_Intent_Training_v4_Cleaned.xlsx"]
+DEFAULT_CONFIG = "config/history/bow_v4_threshold_analysis.yaml"
+V1_ARTIFACT_DIRS = ["artifacts/history/bow_v4", "results/history/bow_v4/metrics", "results/history/bow_v4/figures",
+                    "results/history/bow_v4/predictions", "results/history/bow_v4/reports"]
+V1_ARTIFACT_FILES = ["config/history/bow_v4.yaml", "data/raw/Sole_Smart_Actions_Intent_Training_v4_Cleaned.xlsx"]
 HELP = "HELP_SUPPORT"
 
 KNOWN_OUTCOMES = ["correct_accept", "incorrect_accept", "false_reject"]

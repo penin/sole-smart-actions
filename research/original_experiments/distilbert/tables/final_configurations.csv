@@ -1,0 +1,4 @@
+Model,Final configuration,Why
+Always predict 'TRANSFER_MONEY',always the most common intent (TRANSFER_MONEY),the floor any model must beat
+Keyword rule,20 highest-lift words per intent; abstains when no keyword matches or intents tie,highest validation accuracy (0.804) among 5 configurations
+Fine-tuned DistilBERT,"full model, learning rate 5e-05, 2 epochs (66,959,624 of 66,959,624 parameters trained)",highest validation accuracy (0.925) among 9 configurations

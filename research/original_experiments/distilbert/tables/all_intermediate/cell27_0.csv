@@ -1,0 +1,6 @@
+Keywords per intent,Train accuracy,Validation accuracy,Validation log loss,Abstains on validation,Abstains on unsupported (tuning)
+3,0.546,0.379,1.35,62%,91%
+5,0.703,0.571,1.65,38%,91%
+10,0.807,0.717,1.35,23%,86%
+15,0.819,0.713,2.06,18%,71%
+20,0.796,0.804,2.16,7%,57%

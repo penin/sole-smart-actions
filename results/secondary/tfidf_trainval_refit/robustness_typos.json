@@ -1,0 +1,6 @@
+{
+  "description": "one keyboard slip per test command (TF-IDF teammate's add_typos, seed 42); secondary robustness check",
+  "accuracy": 0.9629629629629629,
+  "macro_f1": 0.9632239044335077,
+  "clean_accuracy": 0.9814814814814815
+}

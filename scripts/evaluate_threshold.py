@@ -4,7 +4,7 @@
     python scripts/evaluate_threshold.py --threshold 0.40     # detailed evaluation for another candidate
     python scripts/evaluate_threshold.py --thresholds 0.2 0.3 0.4 --threshold 0.3
 
-Outputs go to results/threshold_analysis/. Baseline V1 artifacts are never modified (verified by hash).
+Outputs go to results/history/bow_v4/threshold_analysis/. Baseline V1 artifacts are never modified (verified by hash).
 """
 
 from __future__ import annotations
@@ -25,8 +25,8 @@ def main() -> None:
                         help="Candidate threshold for the detailed evaluation (default: config, 0.35)")
     parser.add_argument("--thresholds", nargs="+", default=None,
                         help="Thresholds to compare; 'baseline' = frozen V1 threshold (default: config)")
-    parser.add_argument("--config", default=None, help="Analysis YAML (default: config/threshold_analysis.yaml)")
-    parser.add_argument("--output-dir", default=None, help="Output folder (default: results/threshold_analysis)")
+    parser.add_argument("--config", default=None, help="Analysis YAML (default: config/history/bow_v4_threshold_analysis.yaml)")
+    parser.add_argument("--output-dir", default=None, help="Output folder (default: results/history/bow_v4/threshold_analysis)")
     parser.add_argument("--recompute", action="store_true",
                         help="Score the saved model instead of reading saved V1 probabilities (still no retraining)")
     args = parser.parse_args()

@@ -5,6 +5,7 @@ import json
 import pytest
 
 import paths
+from conftest import trained
 from schemas import MAX_TEXT_LENGTH
 
 SAMPLES = json.loads((paths.FRONTEND_DATA / "sampleCommands.json").read_text(encoding="utf-8"))
@@ -12,18 +13,23 @@ SAMPLES = json.loads((paths.FRONTEND_DATA / "sampleCommands.json").read_text(enc
 
 def test_health_and_models(client):
     assert client.get("/api/health").json()["model_loaded"] is True
-    models = {m["id"]: m for m in client.get("/api/models").json()}
-    assert models["bow_logreg"]["available"] is True
-    assert models["bow_logreg_v4"]["available"] is True  # previous model kept for comparison
-    for mid in ("tfidf_logreg", "custom_transformer", "distilbert"):
-        assert models[mid]["available"] is False and models[mid]["status"] == "coming_soon"
+    listed = client.get("/api/models").json()
+    assert [m["id"] for m in listed] == ["bow", "tfidf", "transformer", "distilbert"]  # current models only
+    models = {m["id"]: m for m in listed}
+    assert models["bow"]["available"] is True and models["bow"]["group"] == "primary"
+    assert client.get("/api/model-info", params={"model_id": "bow_v4_history"}).status_code == 404
+    for mid in ("tfidf", "transformer", "distilbert"):
+        assert models[mid]["available"] is trained(mid)
+        if not trained(mid):
+            assert "python -m scripts" in models[mid]["error"]
 
 
 def test_model_info_reads_real_artifacts(client, model):
     info = client.get("/api/model-info").json()
-    metrics = json.loads((paths.METRICS_DIR / "metrics_test.json").read_text(encoding="utf-8"))
+    metrics = json.loads((paths.RESULTS_DIR / "bow" / "metrics_test.json").read_text(encoding="utf-8"))
     assert info["classes"] == model.class_order and info["n_classes"] == 9
-    assert info["vectorizer"]["type"] == "CountVectorizer" and info["vectorizer"]["vocabulary_size"] == len(model.vocabulary)
+    details = {d["label"]: d["value"] for d in info["details"]}
+    assert details["Vocabulary size"] == f"{len(model.vocabulary):,}" and "CountVectorizer" in details["Vectorizer"]
     assert info["default_threshold"] == model.default_threshold
     assert info["evaluation"]["test_accuracy"] == metrics["accuracy"]
     assert info["evaluation"]["test_macro_f1"] == metrics["macro_f1"]
@@ -75,7 +81,7 @@ def test_every_sample_command_can_be_classified(client, cat):
     ({"text": ""}, 422), ({"text": "   "}, 422), ({}, 422),
     ({"text": "x" * (MAX_TEXT_LENGTH + 1)}, 422),
     ({"text": "ok", "threshold": 1.5}, 422), ({"text": "ok", "threshold": -0.1}, 422),
-    ({"text": "ok", "model_id": "nope"}, 404), ({"text": "ok", "model_id": "distilbert"}, 503),
+    ({"text": "ok", "model_id": "nope"}, 404),
 ])
 def test_malformed_requests(client, payload, status):
     r = client.post("/api/predict", json=payload)

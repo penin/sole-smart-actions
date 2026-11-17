@@ -1,0 +1,41 @@
+# Fine-tuned DistilBERT. Ported from Ricardo's notebook 01_sole_intent_classifier_v5.ipynb
+# (research/original_experiments/distilbert/). Pretrained model, tokenizer, fine-tuning recipe, strategy grid and
+# epoch selection are preserved. Changes for the shared protocol (documented in docs/model_integration.md):
+#   * 9 supervised classes (CHECK_SPENDING added); 270-command test set
+#   * primary model = best validation epoch trained on train only (no train+validation refit)
+#   * pretrained weights and tokenizer pinned to an exact Hugging Face revision
+model:
+  name: distilbert
+  display_name: Fine-tuned DistilBERT
+  family: neural
+  original_author: Ricardo (ricardomanjarresr)
+  seed: 1234            # the teammate's seed
+
+pretrained:
+  name: distilbert/distilbert-base-uncased
+  revision: 12040accade4e8a0f71eabdb258fecc2e7e948be
+  source: https://huggingface.co/distilbert/distilbert-base-uncased
+  license: apache-2.0
+
+text:
+  max_tokens: 24        # covers every V5 command
+
+training:
+  batch_size: 16
+  optimizer: AdamW
+  warmup_fraction: 0.1  # linear warm-up then linear decay
+  device: auto
+  save_dtype: float16   # weights stored in half precision (as in the original); always evaluated in float32
+
+strategies:
+  frozen_backbone: {unfrozen_blocks: 0, learning_rates: [0.0003, 0.001, 0.003], epochs: 10}
+  top_2_blocks: {unfrozen_blocks: 2, learning_rates: [0.00002, 0.00005, 0.0001], epochs: 6}
+  full_model: {unfrozen_blocks: null, learning_rates: [0.00002, 0.00003, 0.00005], epochs: 6}
+
+selection:
+  metric: validation_accuracy
+  tie_breakers: [validation_log_loss]
+
+smoke:
+  strategies: {frozen_backbone: {unfrozen_blocks: 0, learning_rates: [0.001], epochs: 1}}
+  train_subset: 128

@@ -1,0 +1,210 @@
+{
+  "schema_version": "1.0",
+  "model": "distilbert",
+  "display_name": "Fine-tuned DistilBERT",
+  "original_author": "Ricardo (ricardomanjarresr)",
+  "run_label": "trainval_refit",
+  "protocol": "trainval_refit",
+  "variant": null,
+  "smoke_test": false,
+  "primary_comparison": false,
+  "trained_on": [
+    "train",
+    "validation"
+  ],
+  "selected_on": [
+    "validation"
+  ],
+  "evaluated_utc": "2026-11-16T18:04:25+00:00",
+  "evaluation_command": "python evaluate.py --model distilbert --label trainval_refit",
+  "training_command": "python train.py --model distilbert --protocol trainval_refit",
+  "git_commit": "1cd668e6e692a9b99e4b4bd20a3bff4c7a08faf0",
+  "dataset": {
+    "path": "data/raw/Sole_Smart_Actions_Intent_Training_v5_Deduplicated.xlsx",
+    "version": "v5_deduplicated",
+    "sha256": "8dc9c89cbb8af41fd7cb25b2841e2f1a0c986641c4a6108c2f804d09f9345516",
+    "content_sha256": "8277d2569ed2373b3b30062761c54d41ea50a63895c19716b34c35293eaffabe",
+    "n_rows": 3000
+  },
+  "class_order": [
+    "TRANSFER_MONEY",
+    "CHECK_BALANCE",
+    "VIEW_TRANSACTIONS",
+    "WITHDRAW_MONEY",
+    "BILL_PAY",
+    "HELP_SUPPORT",
+    "MANAGE_CONTACTS",
+    "VIEW_GROUP",
+    "CHECK_SPENDING"
+  ],
+  "artifact": {
+    "directory": "artifacts/secondary/distilbert_trainval_refit",
+    "size_bytes": 134652875,
+    "size_mb": 134.652875,
+    "files": [
+      {
+        "path": "config.json",
+        "bytes": 1181,
+        "sha256": "4a93a4a2c6acec6df2978ec837affcf03d3755f0265058a9b77e81f86e37f792"
+      },
+      {
+        "path": "hyperparameter_search.csv",
+        "bytes": 1035,
+        "sha256": "23de793e5c526fab999ec221e51191806c6c0f03af0f8b42dcb91717742f8ca6"
+      },
+      {
+        "path": "model.safetensors",
+        "bytes": 133933202,
+        "sha256": "9a53dd425f8074a3aa17f1ebabba571695404c90d04d8e698c95565b25663e4b"
+      },
+      {
+        "path": "sole_model.json",
+        "bytes": 1337,
+        "sha256": "77b446a96ae0704d87f27b7fa4910bc567da929f1e866ed89570571a744a1851"
+      },
+      {
+        "path": "tokenizer.json",
+        "bytes": 711659,
+        "sha256": "d7df2a16b7a428e1dfc72b85895003de9b3aa31e2db65e43cc4e4425c3a572ca"
+      },
+      {
+        "path": "tokenizer_config.json",
+        "bytes": 366,
+        "sha256": "71cd48543bec670f50e0c9c3556df16b1f58ea720ead6a1b4675f08870c60b17"
+      },
+      {
+        "path": "training_history.csv",
+        "bytes": 4095,
+        "sha256": "2a7a835adac550d1f85f264a98ca85185cfc2cc264bbd4c93a50b9adfc8ce511"
+      }
+    ],
+    "model_card_sha256": "c1318262e5a2bbcbccf456ace6241d99316602b080144dd3dc7931713dad72d8"
+  },
+  "n_parameters": 66960393,
+  "selection": {
+    "params": {
+      "strategy": "top_2_blocks",
+      "unfrozen_blocks": 2,
+      "learning_rate": 0.0001,
+      "epochs": 2,
+      "schedule_epochs": 6
+    },
+    "rule": "highest validation accuracy; ties -> lowest validation log loss; best epoch kept",
+    "validation_accuracy": 0.9222222222222223,
+    "validation_log_loss": 0.18662677705287933,
+    "n_configurations": 9,
+    "grid_seconds": 276.30827539996244,
+    "pretrained": {
+      "name": "distilbert/distilbert-base-uncased",
+      "revision": "12040accade4e8a0f71eabdb258fecc2e7e948be",
+      "source": "https://huggingface.co/distilbert/distilbert-base-uncased",
+      "license": "apache-2.0"
+    }
+  },
+  "hyperparameters": {
+    "strategy": "top_2_blocks",
+    "unfrozen_blocks": 2,
+    "learning_rate": 0.0001,
+    "epochs": 2,
+    "schedule_epochs": 6
+  },
+  "training_seconds_final_fit": 8.715895999979693,
+  "training_wall_seconds_incl_search": 298.9389061999973,
+  "threshold_calibration": {
+    "algorithm": "largest observed validation max-probability with coverage >= target (sole_intent.rejection.threshold_for_coverage)",
+    "confidence": "max_probability",
+    "calibration_split": "validation, using the train-only primary model (refit trains on validation)",
+    "n_calibration": 270,
+    "target_known_coverage": 0.95,
+    "threshold": 0.6759946346282959,
+    "actual_validation_coverage": 0.9518518518518518,
+    "uses_unknown_labels": false,
+    "uses_test_labels": false,
+    "inherited_from": "results/distilbert/experiment_metadata.json"
+  },
+  "headline": {
+    "raw_test_accuracy": 0.9629629629629629,
+    "raw_test_correct": 260,
+    "raw_test_n": 270,
+    "test_macro_f1": 0.9628954081188215,
+    "test_macro_precision": 0.9694397283531409,
+    "test_macro_recall": 0.9629629629629631,
+    "test_weighted_f1": 0.9628954081188216,
+    "test_macro_roc_auc_ovr": 0.9999382716049383,
+    "train_accuracy": 0.999537037037037,
+    "validation_accuracy": 0.9962962962962963,
+    "default_threshold": 0.6759946346282959,
+    "latency_p50_ms": 7.053299981635064,
+    "latency_p95_ms": 8.898689973284492
+  },
+  "environment_training": {
+    "os": "Windows-11-10.0.26200-SP0",
+    "system": "Windows",
+    "machine": "AMD64",
+    "cpu": "Intel(R) Core(TM) i9-14900HX",
+    "logical_cpus": 32,
+    "total_memory_gb": 31.7,
+    "python": "3.13.15",
+    "packages": {
+      "python": "3.13.15",
+      "numpy": "2.5.4",
+      "pandas": "3.1.1",
+      "scikit-learn": "1.9.1",
+      "scipy": "1.18.1",
+      "matplotlib": "3.11.2",
+      "openpyxl": "3.1.5",
+      "joblib": "1.6.0",
+      "PyYAML": "6.0.3",
+      "torch": "2.14.1+cu126",
+      "keras": "3.15.1",
+      "transformers": "5.22.1",
+      "tokenizers": "0.23.3",
+      "safetensors": "0.8.0",
+      "huggingface-hub": "2.4.0",
+      "h5py": "3.16.0",
+      "fastapi": "0.162.2",
+      "pytest": "9.2.0"
+    },
+    "cuda_available": true,
+    "cuda_version": "12.6",
+    "cudnn_version": 91002,
+    "gpu": "NVIDIA GeForce RTX 4080 Laptop GPU",
+    "torch_version": "2.14.1+cu126",
+    "gpu_memory_gb": 12.0
+  },
+  "environment_evaluation": {
+    "os": "Windows-11-10.0.26200-SP0",
+    "system": "Windows",
+    "machine": "AMD64",
+    "cpu": "Intel(R) Core(TM) i9-14900HX",
+    "logical_cpus": 32,
+    "total_memory_gb": 31.7,
+    "python": "3.13.15",
+    "packages": {
+      "python": "3.13.15",
+      "numpy": "2.5.4",
+      "pandas": "3.1.1",
+      "scikit-learn": "1.9.1",
+      "scipy": "1.18.1",
+      "matplotlib": "3.11.2",
+      "openpyxl": "3.1.5",
+      "joblib": "1.6.0",
+      "PyYAML": "6.0.3",
+      "torch": "2.14.1+cu126",
+      "keras": "3.15.1",
+      "transformers": "5.22.1",
+      "tokenizers": "0.23.3",
+      "safetensors": "0.8.0",
+      "huggingface-hub": "2.4.0",
+      "h5py": "3.16.0",
+      "fastapi": "0.162.2",
+      "pytest": "9.2.0"
+    },
+    "cuda_available": true,
+    "cuda_version": "12.6",
+    "cudnn_version": 91002,
+    "gpu": "NVIDIA GeForce RTX 4080 Laptop GPU",
+    "torch_version": "2.14.1+cu126",
+    "gpu_memory_gb": 12.0
+  }
+}

@@ -1,0 +1,208 @@
+{
+  "schema_version": "1.0",
+  "model": "distilbert",
+  "display_name": "Fine-tuned DistilBERT",
+  "original_author": "Ricardo (ricardomanjarresr)",
+  "run_label": "primary",
+  "protocol": "primary",
+  "variant": null,
+  "smoke_test": false,
+  "primary_comparison": true,
+  "trained_on": [
+    "train"
+  ],
+  "selected_on": [
+    "validation"
+  ],
+  "evaluated_utc": "2026-11-16T18:08:28+00:00",
+  "evaluation_command": "python evaluate.py --model all",
+  "training_command": "python train.py --model distilbert",
+  "git_commit": "1cd668e6e692a9b99e4b4bd20a3bff4c7a08faf0",
+  "dataset": {
+    "path": "data/raw/Sole_Smart_Actions_Intent_Training_v5_Deduplicated.xlsx",
+    "version": "v5_deduplicated",
+    "sha256": "8dc9c89cbb8af41fd7cb25b2841e2f1a0c986641c4a6108c2f804d09f9345516",
+    "content_sha256": "8277d2569ed2373b3b30062761c54d41ea50a63895c19716b34c35293eaffabe",
+    "n_rows": 3000
+  },
+  "class_order": [
+    "TRANSFER_MONEY",
+    "CHECK_BALANCE",
+    "VIEW_TRANSACTIONS",
+    "WITHDRAW_MONEY",
+    "BILL_PAY",
+    "HELP_SUPPORT",
+    "MANAGE_CONTACTS",
+    "VIEW_GROUP",
+    "CHECK_SPENDING"
+  ],
+  "artifact": {
+    "directory": "artifacts/distilbert",
+    "size_bytes": 134652825,
+    "size_mb": 134.652825,
+    "files": [
+      {
+        "path": "config.json",
+        "bytes": 1131,
+        "sha256": "bea167805040f4a8234bb4d0065c911bd8e761fadb547972e53ff7fd9740299b"
+      },
+      {
+        "path": "hyperparameter_search.csv",
+        "bytes": 1036,
+        "sha256": "885da57e8abe9df6f51d753df7e23ee7542f578c2ca5b3431cde7604490cc86a"
+      },
+      {
+        "path": "model.safetensors",
+        "bytes": 133933202,
+        "sha256": "ee72591b5e94fa85666bd79bf43a2938ad268e81068daf0f388a3e6941e17566"
+      },
+      {
+        "path": "sole_model.json",
+        "bytes": 1336,
+        "sha256": "33c783d009cb55c9bbb66244772b34c4e44032253d04cf44126221ffa71efa54"
+      },
+      {
+        "path": "tokenizer.json",
+        "bytes": 711659,
+        "sha256": "d7df2a16b7a428e1dfc72b85895003de9b3aa31e2db65e43cc4e4425c3a572ca"
+      },
+      {
+        "path": "tokenizer_config.json",
+        "bytes": 366,
+        "sha256": "71cd48543bec670f50e0c9c3556df16b1f58ea720ead6a1b4675f08870c60b17"
+      },
+      {
+        "path": "training_history.csv",
+        "bytes": 4095,
+        "sha256": "2a7a835adac550d1f85f264a98ca85185cfc2cc264bbd4c93a50b9adfc8ce511"
+      }
+    ],
+    "model_card_sha256": "b5c8ba69bba3898b8e818b997479cab86b913bc73f4be021bb2ad4bd9fa4d6ba"
+  },
+  "n_parameters": 66960393,
+  "selection": {
+    "params": {
+      "strategy": "top_2_blocks",
+      "unfrozen_blocks": 2,
+      "learning_rate": 0.0001,
+      "epochs": 2,
+      "schedule_epochs": 6
+    },
+    "rule": "highest validation accuracy; ties -> lowest validation log loss; best epoch kept",
+    "validation_accuracy": 0.9222222222222223,
+    "validation_log_loss": 0.18662677705287933,
+    "n_configurations": 9,
+    "grid_seconds": 272.0009709999431,
+    "pretrained": {
+      "name": "distilbert/distilbert-base-uncased",
+      "revision": "12040accade4e8a0f71eabdb258fecc2e7e948be",
+      "source": "https://huggingface.co/distilbert/distilbert-base-uncased",
+      "license": "apache-2.0"
+    }
+  },
+  "hyperparameters": {
+    "strategy": "top_2_blocks",
+    "unfrozen_blocks": 2,
+    "learning_rate": 0.0001,
+    "epochs": 2,
+    "schedule_epochs": 6
+  },
+  "training_seconds_final_fit": 18.970374599972274,
+  "training_wall_seconds_incl_search": 280.9022082000156,
+  "threshold_calibration": {
+    "algorithm": "largest observed validation max-probability with coverage >= target (sole_intent.rejection.threshold_for_coverage)",
+    "confidence": "max_probability",
+    "calibration_split": "validation",
+    "n_calibration": 270,
+    "target_known_coverage": 0.95,
+    "threshold": 0.6759946346282959,
+    "actual_validation_coverage": 0.9518518518518518,
+    "uses_unknown_labels": false,
+    "uses_test_labels": false
+  },
+  "headline": {
+    "raw_test_accuracy": 0.9777777777777777,
+    "raw_test_correct": 264,
+    "raw_test_n": 270,
+    "test_macro_f1": 0.9777436493690101,
+    "test_macro_precision": 0.9791463017269469,
+    "test_macro_recall": 0.9777777777777779,
+    "test_weighted_f1": 0.9777436493690101,
+    "test_macro_roc_auc_ovr": 0.9998302469135802,
+    "train_accuracy": 1.0,
+    "validation_accuracy": 0.9222222222222223,
+    "default_threshold": 0.6759946346282959,
+    "latency_p50_ms": 6.845999974757433,
+    "latency_p95_ms": 9.724375000223517
+  },
+  "environment_training": {
+    "os": "Windows-11-10.0.26200-SP0",
+    "system": "Windows",
+    "machine": "AMD64",
+    "cpu": "Intel(R) Core(TM) i9-14900HX",
+    "logical_cpus": 32,
+    "total_memory_gb": 31.7,
+    "python": "3.13.15",
+    "packages": {
+      "python": "3.13.15",
+      "numpy": "2.5.4",
+      "pandas": "3.1.1",
+      "scikit-learn": "1.9.1",
+      "scipy": "1.18.1",
+      "matplotlib": "3.11.2",
+      "openpyxl": "3.1.5",
+      "joblib": "1.6.0",
+      "PyYAML": "6.0.3",
+      "torch": "2.14.1+cu126",
+      "keras": "3.15.1",
+      "transformers": "5.22.1",
+      "tokenizers": "0.23.3",
+      "safetensors": "0.8.0",
+      "huggingface-hub": "2.4.0",
+      "h5py": "3.16.0",
+      "fastapi": "0.162.2",
+      "pytest": "9.2.0"
+    },
+    "cuda_available": true,
+    "cuda_version": "12.6",
+    "cudnn_version": 91002,
+    "gpu": "NVIDIA GeForce RTX 4080 Laptop GPU",
+    "torch_version": "2.14.1+cu126",
+    "gpu_memory_gb": 12.0
+  },
+  "environment_evaluation": {
+    "os": "Windows-11-10.0.26200-SP0",
+    "system": "Windows",
+    "machine": "AMD64",
+    "cpu": "Intel(R) Core(TM) i9-14900HX",
+    "logical_cpus": 32,
+    "total_memory_gb": 31.7,
+    "python": "3.13.15",
+    "packages": {
+      "python": "3.13.15",
+      "numpy": "2.5.4",
+      "pandas": "3.1.1",
+      "scikit-learn": "1.9.1",
+      "scipy": "1.18.1",
+      "matplotlib": "3.11.2",
+      "openpyxl": "3.1.5",
+      "joblib": "1.6.0",
+      "PyYAML": "6.0.3",
+      "torch": "2.14.1+cu126",
+      "keras": "3.15.1",
+      "transformers": "5.22.1",
+      "tokenizers": "0.23.3",
+      "safetensors": "0.8.0",
+      "huggingface-hub": "2.4.0",
+      "h5py": "3.16.0",
+      "fastapi": "0.162.2",
+      "pytest": "9.2.0"
+    },
+    "cuda_available": true,
+    "cuda_version": "12.6",
+    "cudnn_version": 91002,
+    "gpu": "NVIDIA GeForce RTX 4080 Laptop GPU",
+    "torch_version": "2.14.1+cu126",
+    "gpu_memory_gb": 12.0
+  }
+}

@@ -1,0 +1,2 @@
+Model,Temperature,Val log loss (raw),Val log loss (calibrated),Val ECE (raw),Val ECE (calibrated),"Mean confidence, supported (raw)","Mean confidence, supported (calibrated)","Mean confidence, unsupported (raw)","Mean confidence, unsupported (calibrated)"
+Fine-tuned DistilBERT,1.075,0.223,0.221,0.063,0.072,0.955,0.946,0.657,0.634

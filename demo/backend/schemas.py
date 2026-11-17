@@ -12,7 +12,7 @@ MAX_TEXT_LENGTH = 2000
 class PredictRequest(BaseModel):
     text: str = Field(..., max_length=MAX_TEXT_LENGTH, description="Customer command")
     threshold: float | None = Field(None, ge=0.0, le=1.0, description="Omit to use the configured default")
-    model_id: str = "bow_logreg"
+    model_id: str = "bow"
 
     @field_validator("text")
     @classmethod
@@ -25,7 +25,7 @@ class PredictRequest(BaseModel):
 class DecideRequest(BaseModel):
     probabilities: dict[str, float]
     threshold: float = Field(..., ge=0.0, le=1.0)
-    model_id: str = "bow_logreg"
+    model_id: str = "bow"
 
 
 class ApplicationResponse(BaseModel):
@@ -64,6 +64,29 @@ class PredictResponse(Decision):
     unknown_tokens: list[str]
     explanation: dict[str, Any]
     inference_ms: float
+    workflow: dict[str, Any]
+
+
+class CompareRequest(BaseModel):
+    text: str = Field(..., max_length=MAX_TEXT_LENGTH)
+    # One threshold for every model, or omit to use each model's own validation-calibrated default.
+    threshold: float | None = Field(None, ge=0.0, le=1.0)
+    model_ids: list[str] | None = None
+
+    @field_validator("text")
+    @classmethod
+    def not_blank(cls, v: str) -> str:
+        if not v.strip():
+            raise ValueError("text must not be empty")
+        return v
+
+
+class CompareEntry(BaseModel):
+    model_id: str
+    model_name: str
+    ok: bool
+    error: str | None = None
+    prediction: PredictResponse | None = None
 
 
 class ModelSummary(BaseModel):
@@ -71,4 +94,5 @@ class ModelSummary(BaseModel):
     name: str
     available: bool
     status: str
+    group: str = "primary"
     error: str | None = None

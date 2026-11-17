@@ -1,0 +1,258 @@
+{
+  "model": "bow",
+  "display_name": "Bag of Words + Logistic Regression",
+  "original_author": "penin",
+  "protocol": "trainval_refit",
+  "variant": null,
+  "run_label": "trainval_refit",
+  "smoke_test": false,
+  "primary_comparison": false,
+  "trained_on": [
+    "train",
+    "validation"
+  ],
+  "selected_on": [
+    "validation"
+  ],
+  "created_utc": "2026-11-16T17:24:29+00:00",
+  "command": "python train.py --model bow --protocol trainval_refit",
+  "git_commit": "1cd668e6e692a9b99e4b4bd20a3bff4c7a08faf0",
+  "dataset": {
+    "path": "data/raw/Sole_Smart_Actions_Intent_Training_v5_Deduplicated.xlsx",
+    "version": "v5_deduplicated",
+    "sha256": "8dc9c89cbb8af41fd7cb25b2841e2f1a0c986641c4a6108c2f804d09f9345516",
+    "content_sha256": "8277d2569ed2373b3b30062761c54d41ea50a63895c19716b34c35293eaffabe",
+    "n_rows": 3000
+  },
+  "seed": 42,
+  "config_files": {
+    "config/common.yaml": "377536b97de52a52347c0d9efa540d44abab04ceb25c3cb0941408a65517a09e",
+    "config/bow.yaml": "fe5e27dca179d9a56d34189f53cd65a555d8117ea011251dfc8d9d2995b2702a"
+  },
+  "config": {
+    "project": "Sole Smart Actions",
+    "protocol_version": "1.0",
+    "dataset": {
+      "path": "data/raw/Sole_Smart_Actions_Intent_Training_v5_Deduplicated.xlsx",
+      "sheet": "Training Data",
+      "version": "v5_deduplicated",
+      "sha256": "8dc9c89cbb8af41fd7cb25b2841e2f1a0c986641c4a6108c2f804d09f9345516",
+      "columns": [
+        "text",
+        "intent",
+        "split",
+        "scope"
+      ],
+      "expected_rows": 3000,
+      "expected_split_counts": {
+        "train": 2160,
+        "validation": 270,
+        "test": 270,
+        "evaluation_only": 300
+      },
+      "per_intent": 300,
+      "replacement_log_sheet": "Replacement Log"
+    },
+    "labels": [
+      "TRANSFER_MONEY",
+      "CHECK_BALANCE",
+      "VIEW_TRANSACTIONS",
+      "WITHDRAW_MONEY",
+      "BILL_PAY",
+      "HELP_SUPPORT",
+      "MANAGE_CONTACTS",
+      "VIEW_GROUP",
+      "CHECK_SPENDING"
+    ],
+    "unknown_label": "UNKNOWN_INTENT",
+    "financial_intents": [
+      "TRANSFER_MONEY",
+      "BILL_PAY",
+      "WITHDRAW_MONEY"
+    ],
+    "safe_fallback_intent": "HELP_SUPPORT",
+    "protocol": {
+      "fit_splits": [
+        "train"
+      ],
+      "selection_split": "validation"
+    },
+    "threshold": {
+      "confidence": "max_probability",
+      "target_known_coverage": 0.95,
+      "algorithm": "Sort the maximum class probability of the 270 validation commands; the threshold is the largest observed value that still accepts at least 95% of them (sole_intent.rejection.threshold_for_coverage). A command is accepted when max probability >= threshold, otherwise routed to UNKNOWN_INTENT.",
+      "sweep": [
+        "none",
+        "default",
+        0.25,
+        0.3,
+        0.35,
+        0.4,
+        0.5,
+        0.6
+      ]
+    },
+    "latency": {
+      "warmup": 20,
+      "repeats": 300,
+      "batch_size": 1
+    },
+    "robustness": {
+      "typo_seed": 42
+    },
+    "secondary": {
+      "three_tier_menu_coverage": 0.99,
+      "menu_size": 3
+    },
+    "paths": {
+      "artifacts_dir": "artifacts",
+      "results_dir": "results"
+    },
+    "model": {
+      "name": "bow",
+      "display_name": "Bag of Words + Logistic Regression",
+      "family": "classical",
+      "original_author": "penin",
+      "seed": 42
+    },
+    "preprocessing": {
+      "unicode_form": "NFKC",
+      "lowercase": true,
+      "collapse_whitespace": true,
+      "token_pattern": "(?u)\\$|\\b\\w+\\b"
+    },
+    "estimator": {
+      "solver": "lbfgs",
+      "max_iter": 5000
+    },
+    "tuning": {
+      "selection_metric": "validation_macro_f1",
+      "tie_breakers": [
+        "validation_log_loss"
+      ],
+      "grid": {
+        "ngram_range": [
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        "C": [
+          0.1,
+          1.0,
+          10.0
+        ],
+        "binary": [
+          false,
+          true
+        ]
+      }
+    },
+    "smoke": false
+  },
+  "selection": {
+    "params": {
+      "ngram_range": [
+        1,
+        2
+      ],
+      "C": 10.0,
+      "binary": true
+    },
+    "rule": "highest validation macro F1; ties -> lowest validation log loss",
+    "validation_macro_f1": 0.9165472598977884,
+    "validation_log_loss": 0.3697413516946189,
+    "n_configurations": 12
+  },
+  "metadata": {
+    "name": "bow",
+    "display_name": "Bag of Words + Logistic Regression",
+    "framework": "scikit-learn",
+    "class_order": [
+      "TRANSFER_MONEY",
+      "CHECK_BALANCE",
+      "VIEW_TRANSACTIONS",
+      "WITHDRAW_MONEY",
+      "BILL_PAY",
+      "HELP_SUPPORT",
+      "MANAGE_CONTACTS",
+      "VIEW_GROUP",
+      "CHECK_SPENDING"
+    ],
+    "selection": {
+      "params": {
+        "ngram_range": [
+          1,
+          2
+        ],
+        "C": 10.0,
+        "binary": true
+      },
+      "rule": "highest validation macro F1; ties -> lowest validation log loss",
+      "validation_macro_f1": 0.9165472598977884,
+      "validation_log_loss": 0.3697413516946189,
+      "n_configurations": 12
+    },
+    "n_parameters": 24858,
+    "trained_on": [
+      "train",
+      "validation"
+    ],
+    "training_seconds": 0.16937099996721372,
+    "vocabulary_size": 2761
+  },
+  "training_seconds_final_fit": 0.16937099996721372,
+  "training_wall_seconds_incl_search": 2.13882570003625,
+  "environment": {
+    "os": "Windows-11-10.0.26200-SP0",
+    "system": "Windows",
+    "machine": "AMD64",
+    "cpu": "Intel(R) Core(TM) i9-14900HX",
+    "logical_cpus": 32,
+    "total_memory_gb": 31.7,
+    "python": "3.13.15",
+    "packages": {
+      "python": "3.13.15",
+      "numpy": "2.5.4",
+      "pandas": "3.1.1",
+      "scikit-learn": "1.9.1",
+      "scipy": "1.18.1",
+      "matplotlib": "3.11.2",
+      "openpyxl": "3.1.5",
+      "joblib": "1.6.0",
+      "PyYAML": "6.0.3",
+      "torch": "2.14.1+cu126",
+      "keras": "3.15.1",
+      "transformers": "5.22.1",
+      "tokenizers": "0.23.3",
+      "safetensors": "0.8.0",
+      "huggingface-hub": "2.4.0",
+      "h5py": "3.16.0",
+      "fastapi": "0.162.2",
+      "pytest": "9.2.0"
+    },
+    "cuda_available": true,
+    "cuda_version": "12.6",
+    "cudnn_version": 91002,
+    "gpu": "NVIDIA GeForce RTX 4080 Laptop GPU",
+    "torch_version": "2.14.1+cu126",
+    "gpu_memory_gb": 12.0
+  },
+  "files": [
+    {
+      "path": "hyperparameter_search.csv",
+      "bytes": 1704,
+      "sha256": "e331083aab244efa821a5336c8c20563bad8ce8a8d361a61a36fbd3f58687937"
+    },
+    {
+      "path": "model.joblib",
+      "bytes": 242332,
+      "sha256": "6639ed6439f432d3238fd6a2fb3655beb098eb249b8b50ab4e865667ad86bb56"
+    }
+  ],
+  "size_bytes": 244036
+}

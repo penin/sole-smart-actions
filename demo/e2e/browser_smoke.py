@@ -25,8 +25,9 @@ def run_sample(page: Page, category: str, command: str) -> dict:
     page.get_by_role("tab", name=category, exact=True).click()
     page.get_by_role("button", name=f"“{command}”", exact=True).click()
     results = page.get_by_role("region", name="Prediction Results")
-    expect(results.get_by_text(f"“{command}”", exact=True)).to_be_visible()
-    expect(page.get_by_role("button", name="Analyze Command", exact=True)).to_be_enabled()
+    # The first request to a neural model loads it (lazy loading), which can take several seconds.
+    expect(results.get_by_text(f"“{command}”", exact=True)).to_be_visible(timeout=90000)
+    expect(page.get_by_role("button", name="Analyze Command", exact=True)).to_be_enabled(timeout=90000)
     return {"raw": text(page, "raw-intent"), "confidence": text(page, "confidence"),
             "final": text(page, "final-intent"), "status": " / ".join(text(page, "status").split("\n"))}
 
@@ -56,7 +57,7 @@ def main() -> None:
         page.on("request", lambda r: predict_requests.append(r.post_data or "") if r.url.endswith("/api/predict") else None)
         page.goto(args.url)
         expect(page.get_by_role("heading", name="Sole Smart Actions", exact=True)).to_be_visible()
-        expect(page.get_by_text("MIT AI Edge | Sole Smart Actions | Bag of Words Baseline")).to_be_visible()
+        expect(page.get_by_text("MIT AI Edge | Sole Smart Actions", exact=False)).to_be_visible()
         default = page.locator("output[for=threshold]").inner_text()
         print(f"Default threshold shown: {default}")
         options = page.locator("#model-select option")
@@ -97,7 +98,7 @@ def main() -> None:
         expect(page.locator("output[for=threshold]")).to_have_text(default)
 
         # Scenarios C, D, E (report the model's actual behaviour)
-        c = run_sample(page, "Unknown / Out-of-Scope", "What's the weather today?")
+        c = run_sample(page, "Unknown / Out-of-Scope", "What's the weather tomorrow?")
         print(f"C  weather @ {default}: {c}")
         d_default = run_sample(page, "Ambiguous", "Payment")
         set_threshold(page, 40)
@@ -114,6 +115,35 @@ def main() -> None:
         print("History: restore works without re-inference;",
               page.get_by_role("list", name="Recent predictions").get_by_role("button").count(), "entries")
 
+        # Every primary model answers through the same UI (real inference; first neural call loads the model)
+        for mid in ("tfidf", "transformer", "distilbert", "bow"):
+            page.locator("#model-select").select_option(mid)
+            expect(page.get_by_role("button", name="Analyze Command", exact=True)).to_be_enabled(timeout=60000)
+            r = run_sample(page, "Transfer Money", "Send $50 to Jone")
+            print(f"M  {mid:12s} 'Send $50 to Jone': {r}")
+
+        # Ambiguous money request -> clarification question + simulated confirmation (nothing executed)
+        page.get_by_label("Customer command").fill("I owe Mary $50")
+        page.get_by_role("button", name="Analyze Command", exact=True).click()
+        wf = page.get_by_test_id("workflow")
+        expect(wf).to_be_visible()
+        print("W  'I owe Mary $50' (bow):", wf.get_by_test_id("workflow-message").inner_text())
+        if wf.get_by_role("button", name="Confirm (simulated)").count():
+            wf.get_by_role("button", name="Confirm (simulated)").click()
+            expect(wf.get_by_text("No money was moved", exact=False)).to_be_visible()
+
+        # Compare All Models: four cards + dashboard from generated results
+        page.locator("#model-select").select_option("__compare__")
+        expect(page.get_by_role("heading", name="Model Comparison Dashboard")).to_be_visible()
+        page.get_by_label("Customer command").fill("I owe Mary $50")
+        page.get_by_role("button", name="Analyze Command", exact=True).click()
+        for mid in ("bow", "tfidf", "transformer", "distilbert"):
+            card = page.get_by_test_id(f"compare-{mid}")
+            expect(card).to_be_visible(timeout=60000)
+            print(f"C* {mid:12s}", " | ".join(card.inner_text().splitlines()[:5]))
+        if shots:
+            page.screenshot(path=str(shots / "compare_all_desktop.png"), full_page=True)
+
         # Mobile layout: true 390px viewport, no horizontal overflow
         m = browser.new_page(viewport={"width": 390, "height": 844}, device_scale_factor=2, is_mobile=True, has_touch=True)
         m.goto(args.url)
@@ -123,6 +153,15 @@ def main() -> None:
         print(f"Mobile 390px: horizontal overflow {overflow}px")
         if shots:
             m.screenshot(path=str(shots / "mobile_payment.png"), full_page=True)
+        m.locator("#model-select").select_option("__compare__")
+        m.get_by_label("Customer command").fill("Pay my EFL bill")
+        m.get_by_role("button", name="Analyze Command", exact=True).click()
+        expect(m.get_by_test_id("compare-distilbert")).to_be_visible(timeout=60000)
+        overflow = m.evaluate("document.documentElement.scrollWidth - window.innerWidth")
+        assert overflow <= 0, f"horizontal overflow of {overflow}px on mobile compare view"
+        print(f"Mobile 390px compare view: horizontal overflow {overflow}px")
+        if shots:
+            m.screenshot(path=str(shots / "mobile_compare.png"), full_page=True)
         t = browser.new_page(viewport={"width": 768, "height": 1024})
         t.goto(args.url)
         run_sample(t, "Transfer Money", "Give Ana 20 dollars")

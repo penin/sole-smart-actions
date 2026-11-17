@@ -1,0 +1,26 @@
+text,intent,split,scope,predicted,confidence
+Renew my passport now,UNKNOWN_INTENT,evaluation_only,rejection_test,HELP_SUPPORT,0.887
+What time is the game in sole,UNKNOWN_INTENT,evaluation_only,rejection_test,CHECK_BALANCE,0.882
+Renew my passport now now,UNKNOWN_INTENT,evaluation_only,rejection_test,HELP_SUPPORT,0.87
+Show me videos of dog,UNKNOWN_INTENT,evaluation_only,rejection_test,VIEW_TRANSACTIONS,0.87
+Renew my passport on sole,UNKNOWN_INTENT,evaluation_only,rejection_test,HELP_SUPPORT,0.859
+Show me videos of horse,UNKNOWN_INTENT,evaluation_only,rejection_test,VIEW_TRANSACTIONS,0.858
+Show me videos of parrot,UNKNOWN_INTENT,evaluation_only,rejection_test,VIEW_TRANSACTIONS,0.846
+Show me videos of cat,UNKNOWN_INTENT,evaluation_only,rejection_test,VIEW_TRANSACTIONS,0.844
+Renew my passport please,UNKNOWN_INTENT,evaluation_only,rejection_test,HELP_SUPPORT,0.837
+Show me videos of turtle,UNKNOWN_INTENT,evaluation_only,rejection_test,VIEW_TRANSACTIONS,0.828
+How tall is mount everest,UNKNOWN_INTENT,evaluation_only,rejection_test,CHECK_BALANCE,0.826
+Renew my passport if possible,UNKNOWN_INTENT,evaluation_only,rejection_test,HELP_SUPPORT,0.812
+Buy me a phone quickly at the moment,UNKNOWN_INTENT,evaluation_only,rejection_test,HELP_SUPPORT,0.804
+How tall is mount everest? on sole,UNKNOWN_INTENT,evaluation_only,rejection_test,CHECK_BALANCE,0.801
+Order food please quickly,UNKNOWN_INTENT,evaluation_only,rejection_test,HELP_SUPPORT,0.796
+Renew my passport on the app,UNKNOWN_INTENT,evaluation_only,rejection_test,HELP_SUPPORT,0.78
+Set an alarm if possible,UNKNOWN_INTENT,evaluation_only,rejection_test,HELP_SUPPORT,0.771
+Order food please asap,UNKNOWN_INTENT,evaluation_only,rejection_test,HELP_SUPPORT,0.769
+How tall is mount everest? now,UNKNOWN_INTENT,evaluation_only,rejection_test,CHECK_BALANCE,0.763
+Buy me a phone quickly,UNKNOWN_INTENT,evaluation_only,rejection_test,HELP_SUPPORT,0.739
+Play music quickly,UNKNOWN_INTENT,evaluation_only,rejection_test,HELP_SUPPORT,0.733
+Predict the lottery please on my account,UNKNOWN_INTENT,evaluation_only,rejection_test,HELP_SUPPORT,0.731
+What's the weather in sole,UNKNOWN_INTENT,evaluation_only,rejection_test,CHECK_BALANCE,0.728
+Order food please now,UNKNOWN_INTENT,evaluation_only,rejection_test,HELP_SUPPORT,0.722
+Buy me a phone,UNKNOWN_INTENT,evaluation_only,rejection_test,BILL_PAY,0.72

@@ -1,7 +1,8 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { CommandInput } from "./components/CommandInput";
 import { ConfidenceChart } from "./components/ConfidenceChart";
-import { Header } from "./components/Header";
+import { CompareView } from "./components/CompareView";
+import { COMPARE_ALL, Header } from "./components/Header";
 import { Interpretation } from "./components/Interpretation";
 import { ModelInfoPanel } from "./components/ModelInfoPanel";
 import { RecentPredictions } from "./components/RecentPredictions";
@@ -12,7 +13,7 @@ import { api, ApiError } from "./lib/api";
 import { applyThreshold } from "./lib/threshold";
 import type { Decision, HistoryEntry, ModelInfo, ModelSummary, Prediction } from "./types";
 
-const DEFAULT_MODEL = "bow_logreg";
+const DEFAULT_MODEL = "bow";
 const HISTORY_LIMIT = 10;
 
 export default function App() {
@@ -41,6 +42,7 @@ export default function App() {
     let cancelled = false;
     setInfo(null);
     setInfoError(null);
+    if (modelId === COMPARE_ALL) return;
     api
       .modelInfo(modelId)
       .then((i) => {
@@ -158,6 +160,7 @@ export default function App() {
   };
 
   const modelReady = info !== null;
+  const comparing = modelId === COMPARE_ALL;
 
   return (
     <div className="flex min-h-screen flex-col">
@@ -165,14 +168,28 @@ export default function App() {
 
       <div className="border-b border-slate-200 bg-white">
         <p className="mx-auto max-w-7xl px-4 py-2.5 text-xs text-slate-600 sm:px-6 lg:px-8">
-          <span className="font-semibold text-navy-900">{info?.name ?? "Bag of Words + Logistic Regression"}</span> · Baseline
-          model trained on synthetic Sole wallet commands
-          {info?.dataset_version ? ` (dataset ${info.dataset_version})` : ""} · Every result below is computed live by
-          the trained model
+          {comparing ? (
+            <>
+              <span className="font-semibold text-navy-900">Compare All Models</span> · Bag of Words, TF-IDF, Custom Transformer
+              and DistilBERT, all trained on the same synthetic Dataset V5 split · Classification and simulated navigation only:
+              no money ever moves
+            </>
+          ) : (
+            <>
+              <span className="font-semibold text-navy-900">{info?.name ?? "Bag of Words + Logistic Regression"}</span>
+              {info?.original_author ? ` (original implementation: ${info.original_author})` : ""} · trained on synthetic Sole
+              wallet commands{info?.dataset_version ? ` (dataset ${info.dataset_version})` : ""} · Every result below is computed
+              live by the trained model
+            </>
+          )}
         </p>
       </div>
 
       <main className="mx-auto w-full max-w-7xl flex-1 px-4 py-6 sm:px-6 lg:px-8">
+        {comparing ? (
+          <CompareView models={models} input={input} onInput={setInput} />
+        ) : (
+        <>
         {infoError && (
           <div role="alert" className="mb-6 rounded-xl border border-red-200 bg-red-50 p-4 text-sm text-red-800">
             <p className="font-semibold">The model is not available</p>
@@ -231,10 +248,12 @@ export default function App() {
             </div>
           </aside>
         </div>
+        </>
+        )}
       </main>
 
       <footer className="mt-8 bg-navy-900 py-5 text-center text-xs text-slate-300">
-        MIT AI Edge | Sole Smart Actions | Bag of Words Baseline
+        MIT AI Edge | Sole Smart Actions | Bag of Words · TF-IDF · Custom Transformer · DistilBERT | Simulation only — no transactions are executed
       </footer>
     </div>
   );

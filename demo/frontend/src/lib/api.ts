@@ -1,4 +1,4 @@
-import type { Decision, ModelInfo, ModelSummary, Prediction } from "../types";
+import type { CompareEntry, Comparison, Decision, ModelInfo, ModelSummary, Prediction } from "../types";
 
 export class ApiError extends Error {
   status: number;
@@ -42,4 +42,8 @@ export const api = {
       method: "POST",
       body: JSON.stringify({ probabilities, threshold, model_id: modelId }),
     }),
+  /** Same command through every primary model; threshold null = each model's own default. */
+  compare: (text: string, threshold: number | null) =>
+    request<CompareEntry[]>("/api/compare", { method: "POST", body: JSON.stringify({ text, threshold }) }),
+  comparison: () => request<Comparison>("/api/comparison"),
 };

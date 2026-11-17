@@ -1,0 +1,8 @@
+Cost of a wrong money action,Deployed model,Threshold,Correct,Fallback,Wrong,Wrong money flow,Unsupported accepted,Annual value
+$0.50,Fine-tuned DistilBERT,0.940,94.2%,5.8%,0.0%,0.0%,12.0%,"$138,928"
+$1.00,Fine-tuned DistilBERT,0.940,94.2%,5.8%,0.0%,0.0%,12.0%,"$138,928"
+$2.00,Fine-tuned DistilBERT,0.940,94.2%,5.8%,0.0%,0.0%,12.0%,"$138,928"
+$5.00,Fine-tuned DistilBERT,0.940,94.2%,5.8%,0.0%,0.0%,12.0%,"$138,928"
+$10.00,Fine-tuned DistilBERT,0.940,94.2%,5.8%,0.0%,0.0%,12.0%,"$138,928"
+$20.00,Fine-tuned DistilBERT,0.940,94.2%,5.8%,0.0%,0.0%,12.0%,"$138,928"
+$50.00,Fine-tuned DistilBERT,0.940,94.2%,5.8%,0.0%,0.0%,12.0%,"$138,928"

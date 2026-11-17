@@ -1,0 +1,4 @@
+Model,Threshold (raw),"Validation value / 1,000 (raw)",Temperature,Threshold,Routed correctly,Fallback,Wrong workflow,Wrong money workflow,Unsupported accepted,"Validation value / 1,000",Latency (ms)
+Always predict 'TRANSFER_MONEY',0.000,"$-4,426.2",1.00,0.000,12.5%,0.0%,87.5%,87.5%,100.0%,"$-4,426.2",0.00
+Keyword rule,0.000,$-477.5,1.00,0.000,80.4%,7.1%,12.5%,9.6%,42.7%,$-477.5,0.04
+Fine-tuned DistilBERT,0.958,$61.1,1.08,0.940,82.5%,17.5%,0.0%,0.0%,10.0%,$61.4,5.55

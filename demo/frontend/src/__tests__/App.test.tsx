@@ -27,7 +27,7 @@ function predictionFor(text: string, threshold: number): Prediction {
   const d = applyThreshold(probabilities, threshold, ORDER);
   return {
     ...d,
-    model_id: "bow_logreg",
+    model_id: "bow",
     model_name: "Bag of Words + Logistic Regression",
     input: text,
     class_order: ORDER,
@@ -53,15 +53,19 @@ function predictionFor(text: string, threshold: number): Prediction {
 }
 
 const INFO = {
-  id: "bow_logreg",
+  id: "bow",
   name: "Bag of Words + Logistic Regression",
   family: "BoW",
-  version: "1.0.0",
-  model_file: "models/bow_logreg_v1_tuned_v1.0.0.joblib",
+  version: "primary",
+  original_author: "penin",
+  dataset_version: "v5_deduplicated",
+  trained_on: ["train"],
+  model_file: "artifacts/bow/model.joblib",
   model_sha256: "abc123abc123abc123",
-  pipeline_steps: [],
-  vectorizer: { type: "CountVectorizer", ngram_range: [1, 1], binary: false, token_pattern: "x", vocabulary_size: 250 },
-  classifier: { type: "LogisticRegression", C: 0.1, n_parameters: 2259 },
+  details: [
+    { label: "Vectorizer", value: "CountVectorizer (1-2-grams, binary)" },
+    { label: "Parameters", value: "23,265" },
+  ],
   classes: ORDER,
   n_classes: ORDER.length,
   unknown_label: "UNKNOWN_INTENT",
@@ -93,11 +97,10 @@ const INFO = {
 };
 
 const MODELS = [
-  { id: "bow_logreg", name: "Bag of Words + Logistic Regression", available: true, status: "available" },
-  { id: "bow_logreg_v4", name: "Bag of Words + Logistic Regression (Dataset V4)", available: true, status: "available" },
-  { id: "tfidf_logreg", name: "TF-IDF + Logistic Regression", available: false, status: "coming_soon" },
-  { id: "custom_transformer", name: "Custom Transformer", available: false, status: "coming_soon" },
-  { id: "distilbert", name: "DistilBERT", available: false, status: "coming_soon" },
+  { id: "bow", name: "Bag of Words + Logistic Regression", available: true, status: "available", group: "primary" },
+  { id: "tfidf", name: "TF-IDF + Logistic Regression", available: true, status: "available", group: "primary" },
+  { id: "transformer", name: "Custom Transformer", available: true, status: "available", group: "primary" },
+  { id: "distilbert", name: "Fine-tuned DistilBERT", available: false, status: "error", group: "primary", error: "Not trained yet" },
 ];
 
 beforeEach(() => {
@@ -144,21 +147,19 @@ async function runSample(user: ReturnType<typeof userEvent.setup>, category: str
 }
 
 describe("layout and model selection", () => {
-  it("shows title, subtitle, footer and the model dropdown with future models disabled", async () => {
+  it("shows title, subtitle, footer and all four models plus Compare All in the dropdown", async () => {
     await renderReady();
     expect(screen.getByRole("heading", { name: "Sole Smart Actions" })).toBeInTheDocument();
-    expect(screen.getByText("Natural Language Intent Classification")).toBeInTheDocument();
-    expect(screen.getByText("MIT AI Edge | Sole Smart Actions | Bag of Words Baseline")).toBeInTheDocument();
+    expect(screen.getByText(/four models/)).toBeInTheDocument();
+    expect(screen.getByText(/MIT AI Edge \| Sole Smart Actions/)).toBeInTheDocument();
     const select = screen.getByLabelText("Classifier");
     await waitFor(() => expect(within(select).getAllByRole("option")).toHaveLength(5));
     const options = within(select).getAllByRole("option") as HTMLOptionElement[];
+    expect(options.map((o) => o.value)).toEqual(["bow", "tfidf", "transformer", "distilbert", "__compare__"]);
     expect(options[0]).toHaveTextContent("Bag of Words + Logistic Regression — Available");
-    expect(options[0].disabled).toBe(false);
-    expect(options[1].disabled).toBe(false);
-    for (const o of options.slice(2)) {
-      expect(o.disabled).toBe(true);
-      expect(o).toHaveTextContent("Coming Soon");
-    }
+    expect(options[3].disabled).toBe(true); // an unavailable model is shown, not hidden
+    expect(options[3]).toHaveTextContent("Not available");
+    expect(options[4]).toHaveTextContent("Compare All Models");
   });
 
   it("shows model information read from the API, with 'Not available' for missing metrics", async () => {
@@ -174,11 +175,11 @@ describe("model switching", () => {
     await renderReady();
     await runSample(user, "Transfer Money", "Send $50 to Jone");
     expect(screen.getByTestId("raw-intent")).toBeInTheDocument();
-    await user.selectOptions(screen.getByLabelText("Classifier"), "bow_logreg_v4");
+    await user.selectOptions(screen.getByLabelText("Classifier"), "tfidf");
     expect(screen.queryByTestId("raw-intent")).not.toBeInTheDocument();
-    await waitFor(() => expect(calls.some((c) => c.url.includes("model_id=bow_logreg_v4"))).toBe(true));
+    await waitFor(() => expect(calls.some((c) => c.url.includes("model_id=tfidf"))).toBe(true));
     await user.type(screen.getByLabelText("Customer command"), "Pay my EFL bill{Enter}");
-    await waitFor(() => expect(predictCalls().at(-1)!.body).toMatchObject({ model_id: "bow_logreg_v4" }));
+    await waitFor(() => expect(predictCalls().at(-1)!.body).toMatchObject({ model_id: "tfidf" }));
   });
 });
 
@@ -245,7 +246,7 @@ describe("command input", () => {
     expect(box.maxLength).toBe(500);
     await user.type(box, "Transfer 50 dollars to Jone{Enter}");
     await waitFor(() => expect(screen.getByTestId("raw-intent")).toBeInTheDocument());
-    expect(predictCalls()[0].body).toMatchObject({ text: "Transfer 50 dollars to Jone", model_id: "bow_logreg" });
+    expect(predictCalls()[0].body).toMatchObject({ text: "Transfer 50 dollars to Jone", model_id: "bow" });
     expect(predictCalls()[0].body!.threshold).toBe(DEFAULT);
     expect(box.value).toBe("Transfer 50 dollars to Jone");
   });
@@ -279,8 +280,9 @@ describe("sample command library", () => {
         expect(screen.getByTestId("final-intent")).toHaveTextContent(expected.final_intent);
       }
     }
-    expect(n).toBe(36);
-    expect(predictCalls()).toHaveLength(36);
+    const total = samples.categories.reduce((k, c) => k + c.commands.length, 0);
+    expect(n).toBe(total);
+    expect(predictCalls()).toHaveLength(total);
   }, 30000);
 
   it("flags UNKNOWN_INTENT as not a class of the loaded model", async () => {
@@ -324,4 +326,55 @@ describe("recent predictions", () => {
     expect(screen.queryByRole("list", { name: "Recent predictions" })).not.toBeInTheDocument();
     await act(async () => {});
   }, 30000);
+});
+
+describe("simulated workflow and safety", () => {
+  it("asks for explicit confirmation of an ambiguous money request and never executes it", async () => {
+    const user = userEvent.setup();
+    REAL["I owe Mary $50"] = Object.fromEntries(ORDER.map((c) => [c, c === "TRANSFER_MONEY" ? 0.92 : 0.01]));
+    await renderReady();
+    await user.type(screen.getByLabelText("Customer command"), "I owe Mary $50{Enter}");
+    await waitFor(() => expect(screen.getByTestId("workflow-message")).toHaveTextContent("Would you like to send $50 to Mary?"));
+    await user.click(screen.getByRole("button", { name: "Confirm (simulated)" }));
+    expect(within(screen.getByTestId("workflow")).getByRole("status")).toHaveTextContent("No money was moved");
+    fireEvent.change(slider(), { target: { value: "100" } });
+    expect(screen.getByTestId("workflow-message")).toHaveTextContent("Did you mean one of these?");
+  });
+});
+
+describe("compare all models", () => {
+  it("runs one command through every model and renders the dashboard from generated results", async () => {
+    const user = userEvent.setup();
+    const p = predictionFor("Send $50 to Jone", DEFAULT);
+    const row = {
+      model: "bow", display_name: "Bag of Words + Logistic Regression", original_author: "penin", raw_test_accuracy: 0.937,
+      raw_test_correct: 253, raw_test_n: 270, test_macro_f1: 0.937, test_weighted_f1: 0.937, test_macro_roc_auc_ovr: 0.995,
+      default_threshold: 0.3415, known_coverage_at_default: 0.96, overall_correct_routing_at_default: 0.92,
+      unknown_rejection_at_default: 0.4, unknown_help_support_at_default: 0.16, unknown_safe_fallback_at_default: 0.56,
+      unknown_to_financial_at_default: 30, latency_p50_ms: 0.33, latency_p95_ms: 0.7, latency_device: "cpu",
+      model_size_mb: 0.22, n_parameters: 23265, typo_test_accuracy: 0.85,
+    };
+    vi.stubGlobal("fetch", (input: RequestInfo | URL) => {
+      const url = String(input);
+      calls.push({ url, body: null });
+      if (url.startsWith("/api/models")) return json(200, MODELS);
+      if (url.startsWith("/api/model-info")) return json(200, INFO);
+      if (url.startsWith("/api/compare"))
+        return json(200, [
+          { model_id: "bow", model_name: "Bag of Words + Logistic Regression", ok: true, error: null, prediction: p },
+          { model_id: "distilbert", model_name: "Fine-tuned DistilBERT", ok: false, error: "Not trained yet", prediction: null },
+        ]);
+      if (url.startsWith("/api/comparison"))
+        return json(200, { generated_utc: "2026-11-16T00:00:00+00:00", source: "results/comparison/model_comparison.json", models: [row], missing: [] });
+      return json(404, { detail: "not found" });
+    });
+    await renderReady();
+    await user.selectOptions(screen.getByLabelText("Classifier"), "__compare__");
+    await waitFor(() => expect(screen.getByRole("heading", { name: "Model Comparison Dashboard" })).toBeInTheDocument());
+    await waitFor(() => expect(screen.getByText("(253/270)")).toBeInTheDocument());
+    await user.type(screen.getByLabelText("Customer command"), "Send $50 to Jone{Enter}");
+    const card = await screen.findByTestId("compare-bow");
+    expect(within(card).getByText("TRANSFER_MONEY")).toBeInTheDocument();
+    expect(screen.getByText(/Not available: Not trained yet/)).toBeInTheDocument();
+  });
 });

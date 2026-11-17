@@ -1,0 +1,201 @@
+{
+  "schema_version": "1.0",
+  "model": "tfidf",
+  "display_name": "TF-IDF + Logistic Regression",
+  "original_author": "Chelsea Cheng",
+  "run_label": "trainval_refit",
+  "protocol": "trainval_refit",
+  "variant": null,
+  "smoke_test": false,
+  "primary_comparison": false,
+  "trained_on": [
+    "train",
+    "validation"
+  ],
+  "selected_on": [
+    "validation"
+  ],
+  "evaluated_utc": "2026-11-16T17:25:50+00:00",
+  "evaluation_command": "python evaluate.py --model tfidf --label trainval_refit",
+  "training_command": "python train.py --model tfidf --protocol trainval_refit",
+  "git_commit": "1cd668e6e692a9b99e4b4bd20a3bff4c7a08faf0",
+  "dataset": {
+    "path": "data/raw/Sole_Smart_Actions_Intent_Training_v5_Deduplicated.xlsx",
+    "version": "v5_deduplicated",
+    "sha256": "8dc9c89cbb8af41fd7cb25b2841e2f1a0c986641c4a6108c2f804d09f9345516",
+    "content_sha256": "8277d2569ed2373b3b30062761c54d41ea50a63895c19716b34c35293eaffabe",
+    "n_rows": 3000
+  },
+  "class_order": [
+    "TRANSFER_MONEY",
+    "CHECK_BALANCE",
+    "VIEW_TRANSACTIONS",
+    "WITHDRAW_MONEY",
+    "BILL_PAY",
+    "HELP_SUPPORT",
+    "MANAGE_CONTACTS",
+    "VIEW_GROUP",
+    "CHECK_SPENDING"
+  ],
+  "artifact": {
+    "directory": "artifacts/secondary/tfidf_trainval_refit",
+    "size_bytes": 664971,
+    "size_mb": 0.664971,
+    "files": [
+      {
+        "path": "hyperparameter_search.csv",
+        "bytes": 5183,
+        "sha256": "fff85b0c2279478d22c34c736f2c4ead720e8f5217e8da9cb18ce65ff1ee8b12"
+      },
+      {
+        "path": "model.joblib",
+        "bytes": 659788,
+        "sha256": "aecc2ef78f7831b7bc78b486da3c83b2c528280f247097e063a41f534a17846a"
+      }
+    ],
+    "model_card_sha256": "193531c3d8de8775a0e285ccad1caf0989b13c1f5dd1233954aaec731904a60f"
+  },
+  "n_parameters": 64359,
+  "selection": {
+    "variant": "word_char",
+    "variant_label": "TF-IDF (word + char) + LR",
+    "params": {
+      "word_ngram": [
+        1,
+        2
+      ],
+      "char": [
+        2,
+        5
+      ],
+      "C": 10
+    },
+    "rule": "highest validation macro F1 across both representations; ties -> first in grid order (simpler model, smaller C), as in the original script",
+    "validation_macro_f1": 0.93781498713306,
+    "n_configurations": 35,
+    "best_per_variant": [
+      {
+        "variant_label": "TF-IDF (word + char) + LR",
+        "params": "{'word_ngram': [1, 2], 'char': [2, 5], 'C': 10}",
+        "validation_macro_f1": 0.93781498713306,
+        "validation_accuracy": 0.9407407407407408
+      },
+      {
+        "variant_label": "TF-IDF (word) + LR",
+        "params": "{'ngram': [1, 1], 'C': 5}",
+        "validation_macro_f1": 0.8882454795524336,
+        "validation_accuracy": 0.8925925925925926
+      }
+    ]
+  },
+  "hyperparameters": {
+    "word_ngram": [
+      1,
+      2
+    ],
+    "char": [
+      2,
+      5
+    ],
+    "C": 10
+  },
+  "training_seconds_final_fit": 0.6374936999636702,
+  "training_wall_seconds_incl_search": 19.01087759999791,
+  "threshold_calibration": {
+    "algorithm": "largest observed validation max-probability with coverage >= target (sole_intent.rejection.threshold_for_coverage)",
+    "confidence": "max_probability",
+    "calibration_split": "validation, using the train-only primary model (refit trains on validation)",
+    "n_calibration": 270,
+    "target_known_coverage": 0.95,
+    "threshold": 0.404208522583771,
+    "actual_validation_coverage": 0.9518518518518518,
+    "uses_unknown_labels": false,
+    "uses_test_labels": false,
+    "inherited_from": "results/tfidf/experiment_metadata.json"
+  },
+  "headline": {
+    "raw_test_accuracy": 0.9814814814814815,
+    "raw_test_correct": 265,
+    "raw_test_n": 270,
+    "test_macro_f1": 0.981467166908618,
+    "test_macro_precision": 0.9822796934865899,
+    "test_macro_recall": 0.9814814814814815,
+    "test_weighted_f1": 0.9814671669086179,
+    "test_macro_roc_auc_ovr": 0.9992438271604939,
+    "train_accuracy": 1.0,
+    "validation_accuracy": 1.0,
+    "default_threshold": 0.404208522583771,
+    "latency_p50_ms": 1.0118499922100455,
+    "latency_p95_ms": 1.1234999867156152
+  },
+  "environment_training": {
+    "os": "Windows-11-10.0.26200-SP0",
+    "system": "Windows",
+    "machine": "AMD64",
+    "cpu": "Intel(R) Core(TM) i9-14900HX",
+    "logical_cpus": 32,
+    "total_memory_gb": 31.7,
+    "python": "3.13.15",
+    "packages": {
+      "python": "3.13.15",
+      "numpy": "2.5.4",
+      "pandas": "3.1.1",
+      "scikit-learn": "1.9.1",
+      "scipy": "1.18.1",
+      "matplotlib": "3.11.2",
+      "openpyxl": "3.1.5",
+      "joblib": "1.6.0",
+      "PyYAML": "6.0.3",
+      "torch": "2.14.1+cu126",
+      "keras": "3.15.1",
+      "transformers": "5.22.1",
+      "tokenizers": "0.23.3",
+      "safetensors": "0.8.0",
+      "huggingface-hub": "2.4.0",
+      "h5py": "3.16.0",
+      "fastapi": "0.162.2",
+      "pytest": "9.2.0"
+    },
+    "cuda_available": true,
+    "cuda_version": "12.6",
+    "cudnn_version": 91002,
+    "gpu": "NVIDIA GeForce RTX 4080 Laptop GPU",
+    "torch_version": "2.14.1+cu126",
+    "gpu_memory_gb": 12.0
+  },
+  "environment_evaluation": {
+    "os": "Windows-11-10.0.26200-SP0",
+    "system": "Windows",
+    "machine": "AMD64",
+    "cpu": "Intel(R) Core(TM) i9-14900HX",
+    "logical_cpus": 32,
+    "total_memory_gb": 31.7,
+    "python": "3.13.15",
+    "packages": {
+      "python": "3.13.15",
+      "numpy": "2.5.4",
+      "pandas": "3.1.1",
+      "scikit-learn": "1.9.1",
+      "scipy": "1.18.1",
+      "matplotlib": "3.11.2",
+      "openpyxl": "3.1.5",
+      "joblib": "1.6.0",
+      "PyYAML": "6.0.3",
+      "torch": "2.14.1+cu126",
+      "keras": "3.15.1",
+      "transformers": "5.22.1",
+      "tokenizers": "0.23.3",
+      "safetensors": "0.8.0",
+      "huggingface-hub": "2.4.0",
+      "h5py": "3.16.0",
+      "fastapi": "0.162.2",
+      "pytest": "9.2.0"
+    },
+    "cuda_available": true,
+    "cuda_version": "12.6",
+    "cudnn_version": 91002,
+    "gpu": "NVIDIA GeForce RTX 4080 Laptop GPU",
+    "torch_version": "2.14.1+cu126",
+    "gpu_memory_gb": 12.0
+  }
+}

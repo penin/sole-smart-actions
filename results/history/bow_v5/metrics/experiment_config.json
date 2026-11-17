@@ -1,0 +1,227 @@
+{
+  "experiment": {
+    "model_name": "bow_logreg",
+    "experiment_id": "bow_logreg_v5",
+    "model_version": "1.0.0",
+    "random_seed": 42
+  },
+  "created_utc": "2026-11-12T02:55:54+00:00",
+  "config_path": "config/baseline_v5.yaml",
+  "config_sha256": "61b9a6a01e89f469386703ad1ac7bc38a60d70c48aec8838d075aba3307b62be",
+  "config": {
+    "experiment": {
+      "model_name": "bow_logreg",
+      "experiment_id": "bow_logreg_v5",
+      "model_version": "1.0.0",
+      "random_seed": 42
+    },
+    "data": {
+      "path": "Sole_Smart_Actions_Intent_Training_v5_Deduplicated.xlsx",
+      "sheet": "Training Data",
+      "dataset_version": "v5_deduplicated",
+      "expected_rows": 3000,
+      "expected_split_counts": {
+        "train": 2160,
+        "validation": 270,
+        "test": 270,
+        "evaluation_only": 300
+      }
+    },
+    "labels": [
+      "TRANSFER_MONEY",
+      "CHECK_BALANCE",
+      "VIEW_TRANSACTIONS",
+      "WITHDRAW_MONEY",
+      "BILL_PAY",
+      "HELP_SUPPORT",
+      "MANAGE_CONTACTS",
+      "VIEW_GROUP",
+      "CHECK_SPENDING"
+    ],
+    "core_labels": [
+      "TRANSFER_MONEY",
+      "CHECK_BALANCE",
+      "VIEW_TRANSACTIONS",
+      "WITHDRAW_MONEY",
+      "BILL_PAY",
+      "HELP_SUPPORT",
+      "MANAGE_CONTACTS",
+      "VIEW_GROUP"
+    ],
+    "unknown_label": "UNKNOWN_INTENT",
+    "scopes": {
+      "core": "core",
+      "stretch": "stretch",
+      "rejection": "rejection_test"
+    },
+    "preprocessing": {
+      "unicode_form": "NFKC",
+      "lowercase": true,
+      "collapse_whitespace": true,
+      "token_pattern": "(?u)\\$|\\b\\w+\\b"
+    },
+    "model": {
+      "solver": "lbfgs",
+      "max_iter": 5000,
+      "default_params": {
+        "ngram_range": [
+          1,
+          1
+        ],
+        "C": 1.0,
+        "binary": false
+      }
+    },
+    "tuning": {
+      "selection_metric": "validation_macro_f1",
+      "tie_breakers": [
+        "validation_log_loss"
+      ],
+      "grid": {
+        "ngram_range": [
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        "C": [
+          0.1,
+          1.0,
+          10.0
+        ],
+        "binary": [
+          false,
+          true
+        ]
+      }
+    },
+    "rejection": {
+      "target_known_coverage": 0.95,
+      "sweep_thresholds": {
+        "start": 0.0,
+        "stop": 1.0,
+        "step": 0.01
+      },
+      "unknown_calibration_fraction": 0.5
+    },
+    "learning_curve": {
+      "train_sizes": [
+        0.1,
+        0.2,
+        0.35,
+        0.5,
+        0.75,
+        1.0
+      ],
+      "cv_folds": 5
+    },
+    "bootstrap": {
+      "n_resamples": 2000
+    },
+    "latency": {
+      "warmup": 50,
+      "single_repeats": 1000,
+      "batch_repeats": 200
+    },
+    "diagnostics": {
+      "high_confidence": 0.9,
+      "ambiguous_margin": 0.1,
+      "short_command_max_tokens": 2,
+      "near_duplicate_jaccard": 0.8,
+      "top_features": 15
+    },
+    "plots": {
+      "dpi": 200
+    },
+    "outputs": {
+      "results_dir": "results_v5",
+      "models_dir": "models_v5",
+      "processed_dir": "data/processed_v5"
+    },
+    "validation": {
+      "per_intent": 300,
+      "replacement_log_sheet": "Replacement Log"
+    },
+    "threshold_sweep": {
+      "thresholds": [
+        "none",
+        "default",
+        0.25,
+        0.3,
+        0.35,
+        0.4,
+        0.5,
+        0.6
+      ]
+    },
+    "comparison": {
+      "reference_label": "V4",
+      "label": "V5",
+      "reference_results_dir": "results",
+      "reference_threshold_analysis": "results/threshold_analysis/threshold_comparison.csv"
+    }
+  },
+  "dataset": {
+    "dataset_path": "Sole_Smart_Actions_Intent_Training_v5_Deduplicated.xlsx",
+    "dataset_version": "v5_deduplicated",
+    "file_sha256": "8dc9c89cbb8af41fd7cb25b2841e2f1a0c986641c4a6108c2f804d09f9345516",
+    "content_sha256": "8277d2569ed2373b3b30062761c54d41ea50a63895c19716b34c35293eaffabe",
+    "n_rows": 3000
+  },
+  "packages": {
+    "python": "3.13.15",
+    "scikit-learn": "1.9.1",
+    "pandas": "3.1.1",
+    "numpy": "2.5.4",
+    "scipy": "1.18.1",
+    "matplotlib": "3.11.2",
+    "seaborn": "0.13.2",
+    "openpyxl": "3.1.5",
+    "joblib": "1.6.0",
+    "PyYAML": "6.0.3",
+    "pytest": "9.2.0"
+  },
+  "environment": {
+    "platform": "Windows-11-10.0.26200-SP0",
+    "system": "Windows",
+    "machine": "AMD64",
+    "processor": "Intel64 Family 6 Model 183 Stepping 1, GenuineIntel",
+    "logical_cpus": 32,
+    "total_memory_gb": 31.73,
+    "python_implementation": "CPython",
+    "python_version": "3.13.15",
+    "hardware_accelerator": "none (CPU only)"
+  },
+  "default_params": {
+    "ngram_range": [
+      1,
+      1
+    ],
+    "C": 1.0,
+    "binary": false
+  },
+  "selected_params": {
+    "ngram_range": [
+      1,
+      2
+    ],
+    "C": 10.0,
+    "binary": true
+  },
+  "selection": "highest validation macro F1; ties broken by lower validation log loss; test never used",
+  "rejection_threshold": 0.34152482478950635,
+  "model_artifacts": {
+    "default": "models_v5/bow_logreg_v5_default_v1.0.0.joblib",
+    "tuned": "models_v5/bow_logreg_v5_tuned_v1.0.0.joblib"
+  },
+  "splits_used": {
+    "fit": "train (supported intents only)",
+    "model_selection": "validation",
+    "threshold_selection": "validation known intents only",
+    "final_evaluation": "test (+ evaluation_only unknowns for rejection)"
+  }
+}

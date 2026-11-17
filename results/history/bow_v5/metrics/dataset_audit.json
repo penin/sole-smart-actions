@@ -1,0 +1,139 @@
+{
+  "n_rows": 3000,
+  "split_counts": {
+    "train": 2160,
+    "evaluation_only": 300,
+    "validation": 270,
+    "test": 270
+  },
+  "class_balance": {
+    "BILL_PAY": {
+      "train": 240,
+      "validation": 30,
+      "test": 30,
+      "evaluation_only": 0
+    },
+    "CHECK_BALANCE": {
+      "train": 240,
+      "validation": 30,
+      "test": 30,
+      "evaluation_only": 0
+    },
+    "CHECK_SPENDING": {
+      "train": 240,
+      "validation": 30,
+      "test": 30,
+      "evaluation_only": 0
+    },
+    "HELP_SUPPORT": {
+      "train": 240,
+      "validation": 30,
+      "test": 30,
+      "evaluation_only": 0
+    },
+    "MANAGE_CONTACTS": {
+      "train": 240,
+      "validation": 30,
+      "test": 30,
+      "evaluation_only": 0
+    },
+    "TRANSFER_MONEY": {
+      "train": 240,
+      "validation": 30,
+      "test": 30,
+      "evaluation_only": 0
+    },
+    "UNKNOWN_INTENT": {
+      "train": 0,
+      "validation": 0,
+      "test": 0,
+      "evaluation_only": 300
+    },
+    "VIEW_GROUP": {
+      "train": 240,
+      "validation": 30,
+      "test": 30,
+      "evaluation_only": 0
+    },
+    "VIEW_TRANSACTIONS": {
+      "train": 240,
+      "validation": 30,
+      "test": 30,
+      "evaluation_only": 0
+    },
+    "WITHDRAW_MONEY": {
+      "train": 240,
+      "validation": 30,
+      "test": 30,
+      "evaluation_only": 0
+    }
+  },
+  "scope_counts": {
+    "core": 2400,
+    "rejection_test": 300,
+    "stretch": 300
+  },
+  "missing_values": {
+    "text": 0,
+    "intent": 0,
+    "split": 0,
+    "scope": 0
+  },
+  "empty_text": 0,
+  "invalid_intents": [],
+  "exact_duplicate_redundant_rows": 0,
+  "normalized_duplicate_redundant_rows": 7,
+  "unique_normalized_phrases": 2993,
+  "unique_phrases_per_split": {
+    "train": 2155,
+    "validation": 270,
+    "test": 270,
+    "evaluation_only": 299
+  },
+  "contradictory_label_phrases": 0,
+  "leakage": {
+    "validation": {
+      "rows": 270,
+      "normalized_in_train": 1,
+      "template_in_train": 23,
+      "near_duplicate_of_train": 7,
+      "leakage_flagged": 23
+    },
+    "test": {
+      "rows": 270,
+      "normalized_in_train": 0,
+      "template_in_train": 39,
+      "near_duplicate_of_train": 16,
+      "leakage_flagged": 39
+    },
+    "evaluation_only": {
+      "rows": 300,
+      "normalized_in_train": 0,
+      "template_in_train": 0,
+      "near_duplicate_of_train": 0,
+      "leakage_flagged": 0
+    }
+  },
+  "token_length": {
+    "count": 3000.0,
+    "mean": 5.781,
+    "std": 2.12223316922093,
+    "min": 1.0,
+    "25%": 4.0,
+    "50%": 6.0,
+    "75%": 7.0,
+    "max": 12.0
+  },
+  "status_counts": {
+    "ok": 30,
+    "warn": 7,
+    "info": 6
+  },
+  "fingerprint": {
+    "dataset_path": "Sole_Smart_Actions_Intent_Training_v5_Deduplicated.xlsx",
+    "dataset_version": "v5_deduplicated",
+    "file_sha256": "8dc9c89cbb8af41fd7cb25b2841e2f1a0c986641c4a6108c2f804d09f9345516",
+    "content_sha256": "8277d2569ed2373b3b30062761c54d41ea50a63895c19716b34c35293eaffabe",
+    "n_rows": 3000
+  }
+}

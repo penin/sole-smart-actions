@@ -1,0 +1,300 @@
+{
+  "model": "transformer",
+  "display_name": "Custom Transformer",
+  "original_author": "Felipe (friosf)",
+  "protocol": "primary",
+  "variant": "no_glove",
+  "run_label": "no_glove",
+  "smoke_test": false,
+  "primary_comparison": false,
+  "trained_on": [
+    "train"
+  ],
+  "selected_on": [
+    "validation"
+  ],
+  "created_utc": "2026-11-16T18:06:34+00:00",
+  "command": "python train.py --model transformer --variant no_glove",
+  "git_commit": "1cd668e6e692a9b99e4b4bd20a3bff4c7a08faf0",
+  "dataset": {
+    "path": "data/raw/Sole_Smart_Actions_Intent_Training_v5_Deduplicated.xlsx",
+    "version": "v5_deduplicated",
+    "sha256": "8dc9c89cbb8af41fd7cb25b2841e2f1a0c986641c4a6108c2f804d09f9345516",
+    "content_sha256": "8277d2569ed2373b3b30062761c54d41ea50a63895c19716b34c35293eaffabe",
+    "n_rows": 3000
+  },
+  "seed": 1234,
+  "config_files": {
+    "config/common.yaml": "377536b97de52a52347c0d9efa540d44abab04ceb25c3cb0941408a65517a09e",
+    "config/transformer.yaml": "308e006c0487df7f6d3be2638f35331f9f60bcbeeaff9703d2297ac10f552a2d"
+  },
+  "config": {
+    "project": "Sole Smart Actions",
+    "protocol_version": "1.0",
+    "dataset": {
+      "path": "data/raw/Sole_Smart_Actions_Intent_Training_v5_Deduplicated.xlsx",
+      "sheet": "Training Data",
+      "version": "v5_deduplicated",
+      "sha256": "8dc9c89cbb8af41fd7cb25b2841e2f1a0c986641c4a6108c2f804d09f9345516",
+      "columns": [
+        "text",
+        "intent",
+        "split",
+        "scope"
+      ],
+      "expected_rows": 3000,
+      "expected_split_counts": {
+        "train": 2160,
+        "validation": 270,
+        "test": 270,
+        "evaluation_only": 300
+      },
+      "per_intent": 300,
+      "replacement_log_sheet": "Replacement Log"
+    },
+    "labels": [
+      "TRANSFER_MONEY",
+      "CHECK_BALANCE",
+      "VIEW_TRANSACTIONS",
+      "WITHDRAW_MONEY",
+      "BILL_PAY",
+      "HELP_SUPPORT",
+      "MANAGE_CONTACTS",
+      "VIEW_GROUP",
+      "CHECK_SPENDING"
+    ],
+    "unknown_label": "UNKNOWN_INTENT",
+    "financial_intents": [
+      "TRANSFER_MONEY",
+      "BILL_PAY",
+      "WITHDRAW_MONEY"
+    ],
+    "safe_fallback_intent": "HELP_SUPPORT",
+    "protocol": {
+      "fit_splits": [
+        "train"
+      ],
+      "selection_split": "validation"
+    },
+    "threshold": {
+      "confidence": "max_probability",
+      "target_known_coverage": 0.95,
+      "algorithm": "Sort the maximum class probability of the 270 validation commands; the threshold is the largest observed value that still accepts at least 95% of them (sole_intent.rejection.threshold_for_coverage). A command is accepted when max probability >= threshold, otherwise routed to UNKNOWN_INTENT.",
+      "sweep": [
+        "none",
+        "default",
+        0.25,
+        0.3,
+        0.35,
+        0.4,
+        0.5,
+        0.6
+      ]
+    },
+    "latency": {
+      "warmup": 20,
+      "repeats": 300,
+      "batch_size": 1
+    },
+    "robustness": {
+      "typo_seed": 42
+    },
+    "secondary": {
+      "three_tier_menu_coverage": 0.99,
+      "menu_size": 3
+    },
+    "paths": {
+      "artifacts_dir": "artifacts",
+      "results_dir": "results"
+    },
+    "model": {
+      "name": "transformer",
+      "display_name": "Custom Transformer",
+      "family": "neural",
+      "original_author": "Felipe (friosf)",
+      "seed": 1234
+    },
+    "text": {
+      "max_length": 16,
+      "max_tokens": 2000,
+      "standardize": "lower_and_strip_punctuation"
+    },
+    "embeddings": {
+      "source": "GloVe 6B 100d (Stanford NLP, Pennington et al. 2014), Hugging Face mirror",
+      "url": "https://huggingface.co/datasets/SLU-CSCI4750/glove.6B.100d.txt/resolve/1947a5a81ebbd83f2c831b58f308d1f11d6c6954/glove.6B.100d.txt.gz",
+      "revision": "1947a5a81ebbd83f2c831b58f308d1f11d6c6954",
+      "sha256": "22d27d5f0080da2a57f48e6691af7b18aa39e96a54ef6fad02d9456a117239e1",
+      "file": "data/external/glove/glove.6B.100d.txt.gz",
+      "dim": 100,
+      "top_words": 40000,
+      "init_std": 0.1
+    },
+    "architecture": {
+      "ff_dim": 256,
+      "head_dim": 64,
+      "embedding_dim": 100
+    },
+    "training": {
+      "batch_size": 32,
+      "max_epochs": 40,
+      "patience": 10,
+      "device": "auto"
+    },
+    "grid": {
+      "num_heads": [
+        1,
+        2,
+        4
+      ],
+      "num_blocks": [
+        1,
+        2
+      ],
+      "dropout": [
+        0.1,
+        0.2,
+        0.3
+      ],
+      "learning_rate": [
+        0.0003,
+        0.001
+      ]
+    },
+    "selection": {
+      "metric": "validation_accuracy",
+      "tie_breakers": [
+        "validation_log_loss"
+      ]
+    },
+    "ablations": {
+      "no_attention": {
+        "num_blocks": 0
+      },
+      "no_glove": {
+        "pretrained": false
+      }
+    },
+    "smoke": false
+  },
+  "selection": {
+    "params": {
+      "num_heads": 4,
+      "num_blocks": 2,
+      "dropout": 0.2,
+      "learning_rate": 0.001,
+      "pretrained": false,
+      "epochs": 16
+    },
+    "rule": "highest validation accuracy; ties -> lowest validation log loss; best epoch kept (patience 10)",
+    "validation_accuracy": 0.9703703703703703,
+    "validation_log_loss": 0.18021491169929504,
+    "n_configurations": 1,
+    "grid_seconds": 71.79128240002319,
+    "glove_tokens": 378,
+    "vocabulary_size": 392
+  },
+  "metadata": {
+    "name": "transformer",
+    "display_name": "Custom Transformer",
+    "framework": "keras-3 (torch backend)",
+    "class_order": [
+      "TRANSFER_MONEY",
+      "CHECK_BALANCE",
+      "VIEW_TRANSACTIONS",
+      "WITHDRAW_MONEY",
+      "BILL_PAY",
+      "HELP_SUPPORT",
+      "MANAGE_CONTACTS",
+      "VIEW_GROUP",
+      "CHECK_SPENDING"
+    ],
+    "selection": {
+      "params": {
+        "num_heads": 4,
+        "num_blocks": 2,
+        "dropout": 0.2,
+        "learning_rate": 0.001,
+        "pretrained": false,
+        "epochs": 16
+      },
+      "rule": "highest validation accuracy; ties -> lowest validation log loss; best epoch kept (patience 10)",
+      "validation_accuracy": 0.9703703703703703,
+      "validation_log_loss": 0.18021491169929504,
+      "n_configurations": 1,
+      "grid_seconds": 71.79128240002319,
+      "glove_tokens": 378,
+      "vocabulary_size": 392
+    },
+    "n_parameters": 232561,
+    "trained_on": [
+      "train"
+    ],
+    "training_seconds": 69.63941500004148,
+    "vocabulary_size": 392
+  },
+  "training_seconds_final_fit": 69.63941500004148,
+  "training_wall_seconds_incl_search": 72.1110896000173,
+  "environment": {
+    "os": "Windows-11-10.0.26200-SP0",
+    "system": "Windows",
+    "machine": "AMD64",
+    "cpu": "Intel(R) Core(TM) i9-14900HX",
+    "logical_cpus": 32,
+    "total_memory_gb": 31.7,
+    "python": "3.13.15",
+    "packages": {
+      "python": "3.13.15",
+      "numpy": "2.5.4",
+      "pandas": "3.1.1",
+      "scikit-learn": "1.9.1",
+      "scipy": "1.18.1",
+      "matplotlib": "3.11.2",
+      "openpyxl": "3.1.5",
+      "joblib": "1.6.0",
+      "PyYAML": "6.0.3",
+      "torch": "2.14.1+cu126",
+      "keras": "3.15.1",
+      "transformers": "5.22.1",
+      "tokenizers": "0.23.3",
+      "safetensors": "0.8.0",
+      "huggingface-hub": "2.4.0",
+      "h5py": "3.16.0",
+      "fastapi": "0.162.2",
+      "pytest": "9.2.0"
+    },
+    "cuda_available": true,
+    "cuda_version": "12.6",
+    "cudnn_version": 91002,
+    "gpu": "NVIDIA GeForce RTX 4080 Laptop GPU",
+    "torch_version": "2.14.1+cu126",
+    "gpu_memory_gb": 12.0
+  },
+  "files": [
+    {
+      "path": "architecture.json",
+      "bytes": 1053,
+      "sha256": "7541b9786544f7784135b7da33e0360a3ea65e7bfead8ef7747edc59b1eb3da8"
+    },
+    {
+      "path": "hyperparameter_search.csv",
+      "bytes": 300,
+      "sha256": "10b4fe6b74f074e4aa8d085bf664232df4035b5d6566e8e615c1a46d75b422b6"
+    },
+    {
+      "path": "model.weights.h5",
+      "bytes": 2922440,
+      "sha256": "30d1f8c2c8c9cc4ffefd37f403c6c9ac1d113e6a6cfa3132525c2e2ab03a8d58"
+    },
+    {
+      "path": "training_history.csv",
+      "bytes": 1658,
+      "sha256": "227b0f650f12afc919917aa484cc862da39fdf285d3e30d5ee479979cd774830"
+    },
+    {
+      "path": "vocabulary.json",
+      "bytes": 5177,
+      "sha256": "7392d801b99dce315892ecf3c9043911c7d0ae9f8cd68fdc8afc6bcfd02cf4df"
+    }
+  ],
+  "size_bytes": 2930628
+}

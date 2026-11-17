@@ -156,6 +156,17 @@
    "VIEW_GROUP": 0.00027308807791309335,
    "CHECK_SPENDING": 0.00013647380390502818
   },
+  "Withdraw $100": {
+   "TRANSFER_MONEY": 0.0008843493857982107,
+   "CHECK_BALANCE": 0.00016711161210714785,
+   "VIEW_TRANSACTIONS": 0.0005175907458544631,
+   "WITHDRAW_MONEY": 0.9962856471225368,
+   "BILL_PAY": 0.0006743090174821103,
+   "HELP_SUPPORT": 0.0003011379755331055,
+   "MANAGE_CONTACTS": 0.00048064616551960366,
+   "VIEW_GROUP": 0.0003060765644705887,
+   "CHECK_SPENDING": 0.0003831314106978518
+  },
   "I want to withdraw $100": {
    "TRANSFER_MONEY": 0.0007241610952944231,
    "CHECK_BALANCE": 1.9334356832352093e-05,
@@ -188,6 +199,17 @@
    "MANAGE_CONTACTS": 0.00025700495334076486,
    "VIEW_GROUP": 0.00015142947649595529,
    "CHECK_SPENDING": 0.00026934922844277267
+  },
+  "My transfer didn't go through": {
+   "TRANSFER_MONEY": 0.17686815598234157,
+   "CHECK_BALANCE": 0.016143509956585544,
+   "VIEW_TRANSACTIONS": 0.060607663609414254,
+   "WITHDRAW_MONEY": 0.020997475769799455,
+   "BILL_PAY": 0.018392488522108976,
+   "HELP_SUPPORT": 0.6004627198583782,
+   "MANAGE_CONTACTS": 0.037415764577153406,
+   "VIEW_GROUP": 0.016909485518351024,
+   "CHECK_SPENDING": 0.05220273620586751
   },
   "How do I reset my PIN?": {
    "TRANSFER_MONEY": 0.00012514634027175137,
@@ -288,16 +310,49 @@
    "VIEW_GROUP": 0.9964801326197386,
    "CHECK_SPENDING": 0.0003425872778838572
   },
-  "What's the weather today?": {
-   "TRANSFER_MONEY": 0.04550221557547616,
-   "CHECK_BALANCE": 0.03142888646733226,
-   "VIEW_TRANSACTIONS": 0.3651644280942058,
-   "WITHDRAW_MONEY": 0.03445687965029147,
-   "BILL_PAY": 0.03601798544647611,
-   "HELP_SUPPORT": 0.060950153627078334,
-   "MANAGE_CONTACTS": 0.21736397471395305,
-   "VIEW_GROUP": 0.05924874179744802,
-   "CHECK_SPENDING": 0.1498667346277389
+  "How much did I spend this month?": {
+   "TRANSFER_MONEY": 7.987748983992194e-06,
+   "CHECK_BALANCE": 0.0009234925438741841,
+   "VIEW_TRANSACTIONS": 0.00011697284355781699,
+   "WITHDRAW_MONEY": 1.6226674271473315e-05,
+   "BILL_PAY": 1.240928761857951e-05,
+   "HELP_SUPPORT": 1.612438954099515e-05,
+   "MANAGE_CONTACTS": 9.422681059097531e-06,
+   "VIEW_GROUP": 2.8697966654578838e-05,
+   "CHECK_SPENDING": 0.9988686658644393
+  },
+  "Show my spending on food": {
+   "TRANSFER_MONEY": 0.00011840229668068904,
+   "CHECK_BALANCE": 0.001457604954564647,
+   "VIEW_TRANSACTIONS": 0.01310412287843897,
+   "WITHDRAW_MONEY": 0.0003193461607813108,
+   "BILL_PAY": 0.0003309346122439705,
+   "HELP_SUPPORT": 0.000845413807644712,
+   "MANAGE_CONTACTS": 0.0006459296007722136,
+   "VIEW_GROUP": 0.006203545976112817,
+   "CHECK_SPENDING": 0.9769746997127607
+  },
+  "What did I spend last week?": {
+   "TRANSFER_MONEY": 0.00017881024280888008,
+   "CHECK_BALANCE": 0.000528095996667209,
+   "VIEW_TRANSACTIONS": 0.003470355528720357,
+   "WITHDRAW_MONEY": 0.0004902472915886581,
+   "BILL_PAY": 0.00024975143532204625,
+   "HELP_SUPPORT": 0.0005269830373588598,
+   "MANAGE_CONTACTS": 0.0003583762948175975,
+   "VIEW_GROUP": 0.00037091736899807186,
+   "CHECK_SPENDING": 0.9938264628037183
+  },
+  "What's the weather tomorrow?": {
+   "TRANSFER_MONEY": 0.052306426125510584,
+   "CHECK_BALANCE": 0.03621278778041673,
+   "VIEW_TRANSACTIONS": 0.32635326949900184,
+   "WITHDRAW_MONEY": 0.039596772660458524,
+   "BILL_PAY": 0.041459866002076365,
+   "HELP_SUPPORT": 0.05657548557938889,
+   "MANAGE_CONTACTS": 0.2754616458259169,
+   "VIEW_GROUP": 0.07592697058110874,
+   "CHECK_SPENDING": 0.09610677594612127
   },
   "Who won the rugby match?": {
    "TRANSFER_MONEY": 0.012777135486986491,
@@ -342,6 +397,17 @@
    "MANAGE_CONTACTS": 0.39487374072975323,
    "VIEW_GROUP": 0.07964822195333644,
    "CHECK_SPENDING": 0.05628382612156531
+  },
+  "I owe Mary $50": {
+   "TRANSFER_MONEY": 0.3588352144981175,
+   "CHECK_BALANCE": 0.014766680933095844,
+   "VIEW_TRANSACTIONS": 0.03208934580084791,
+   "WITHDRAW_MONEY": 0.37246879592497256,
+   "BILL_PAY": 0.033808048264951464,
+   "HELP_SUPPORT": 0.086470080122938,
+   "MANAGE_CONTACTS": 0.04453508021419907,
+   "VIEW_GROUP": 0.01772546864509789,
+   "CHECK_SPENDING": 0.03930128559577985
   },
   "Send": {
    "TRANSFER_MONEY": 0.6190767370762108,
@@ -4919,6 +4985,351 @@
    }
   },
   {
+   "name": "'Withdraw $100' @ 0.0",
+   "probabilities": {
+    "TRANSFER_MONEY": 0.0008843493857982107,
+    "CHECK_BALANCE": 0.00016711161210714785,
+    "VIEW_TRANSACTIONS": 0.0005175907458544631,
+    "WITHDRAW_MONEY": 0.9962856471225368,
+    "BILL_PAY": 0.0006743090174821103,
+    "HELP_SUPPORT": 0.0003011379755331055,
+    "MANAGE_CONTACTS": 0.00048064616551960366,
+    "VIEW_GROUP": 0.0003060765644705887,
+    "CHECK_SPENDING": 0.0003831314106978518
+   },
+   "threshold": 0.0,
+   "expected": {
+    "raw_prediction": "WITHDRAW_MONEY",
+    "confidence": 0.9962856471225368,
+    "final_intent": "WITHDRAW_MONEY",
+    "status": "accepted",
+    "fallback_applied": false,
+    "action": "ROUTE_WITHDRAW_MONEY"
+   }
+  },
+  {
+   "name": "'Withdraw $100' @ 0.01",
+   "probabilities": {
+    "TRANSFER_MONEY": 0.0008843493857982107,
+    "CHECK_BALANCE": 0.00016711161210714785,
+    "VIEW_TRANSACTIONS": 0.0005175907458544631,
+    "WITHDRAW_MONEY": 0.9962856471225368,
+    "BILL_PAY": 0.0006743090174821103,
+    "HELP_SUPPORT": 0.0003011379755331055,
+    "MANAGE_CONTACTS": 0.00048064616551960366,
+    "VIEW_GROUP": 0.0003060765644705887,
+    "CHECK_SPENDING": 0.0003831314106978518
+   },
+   "threshold": 0.01,
+   "expected": {
+    "raw_prediction": "WITHDRAW_MONEY",
+    "confidence": 0.9962856471225368,
+    "final_intent": "WITHDRAW_MONEY",
+    "status": "accepted",
+    "fallback_applied": false,
+    "action": "ROUTE_WITHDRAW_MONEY"
+   }
+  },
+  {
+   "name": "'Withdraw $100' @ 0.1",
+   "probabilities": {
+    "TRANSFER_MONEY": 0.0008843493857982107,
+    "CHECK_BALANCE": 0.00016711161210714785,
+    "VIEW_TRANSACTIONS": 0.0005175907458544631,
+    "WITHDRAW_MONEY": 0.9962856471225368,
+    "BILL_PAY": 0.0006743090174821103,
+    "HELP_SUPPORT": 0.0003011379755331055,
+    "MANAGE_CONTACTS": 0.00048064616551960366,
+    "VIEW_GROUP": 0.0003060765644705887,
+    "CHECK_SPENDING": 0.0003831314106978518
+   },
+   "threshold": 0.1,
+   "expected": {
+    "raw_prediction": "WITHDRAW_MONEY",
+    "confidence": 0.9962856471225368,
+    "final_intent": "WITHDRAW_MONEY",
+    "status": "accepted",
+    "fallback_applied": false,
+    "action": "ROUTE_WITHDRAW_MONEY"
+   }
+  },
+  {
+   "name": "'Withdraw $100' @ 0.25",
+   "probabilities": {
+    "TRANSFER_MONEY": 0.0008843493857982107,
+    "CHECK_BALANCE": 0.00016711161210714785,
+    "VIEW_TRANSACTIONS": 0.0005175907458544631,
+    "WITHDRAW_MONEY": 0.9962856471225368,
+    "BILL_PAY": 0.0006743090174821103,
+    "HELP_SUPPORT": 0.0003011379755331055,
+    "MANAGE_CONTACTS": 0.00048064616551960366,
+    "VIEW_GROUP": 0.0003060765644705887,
+    "CHECK_SPENDING": 0.0003831314106978518
+   },
+   "threshold": 0.25,
+   "expected": {
+    "raw_prediction": "WITHDRAW_MONEY",
+    "confidence": 0.9962856471225368,
+    "final_intent": "WITHDRAW_MONEY",
+    "status": "accepted",
+    "fallback_applied": false,
+    "action": "ROUTE_WITHDRAW_MONEY"
+   }
+  },
+  {
+   "name": "'Withdraw $100' @ 0.3",
+   "probabilities": {
+    "TRANSFER_MONEY": 0.0008843493857982107,
+    "CHECK_BALANCE": 0.00016711161210714785,
+    "VIEW_TRANSACTIONS": 0.0005175907458544631,
+    "WITHDRAW_MONEY": 0.9962856471225368,
+    "BILL_PAY": 0.0006743090174821103,
+    "HELP_SUPPORT": 0.0003011379755331055,
+    "MANAGE_CONTACTS": 0.00048064616551960366,
+    "VIEW_GROUP": 0.0003060765644705887,
+    "CHECK_SPENDING": 0.0003831314106978518
+   },
+   "threshold": 0.3,
+   "expected": {
+    "raw_prediction": "WITHDRAW_MONEY",
+    "confidence": 0.9962856471225368,
+    "final_intent": "WITHDRAW_MONEY",
+    "status": "accepted",
+    "fallback_applied": false,
+    "action": "ROUTE_WITHDRAW_MONEY"
+   }
+  },
+  {
+   "name": "'Withdraw $100' @ 0.35",
+   "probabilities": {
+    "TRANSFER_MONEY": 0.0008843493857982107,
+    "CHECK_BALANCE": 0.00016711161210714785,
+    "VIEW_TRANSACTIONS": 0.0005175907458544631,
+    "WITHDRAW_MONEY": 0.9962856471225368,
+    "BILL_PAY": 0.0006743090174821103,
+    "HELP_SUPPORT": 0.0003011379755331055,
+    "MANAGE_CONTACTS": 0.00048064616551960366,
+    "VIEW_GROUP": 0.0003060765644705887,
+    "CHECK_SPENDING": 0.0003831314106978518
+   },
+   "threshold": 0.35,
+   "expected": {
+    "raw_prediction": "WITHDRAW_MONEY",
+    "confidence": 0.9962856471225368,
+    "final_intent": "WITHDRAW_MONEY",
+    "status": "accepted",
+    "fallback_applied": false,
+    "action": "ROUTE_WITHDRAW_MONEY"
+   }
+  },
+  {
+   "name": "'Withdraw $100' @ 0.5",
+   "probabilities": {
+    "TRANSFER_MONEY": 0.0008843493857982107,
+    "CHECK_BALANCE": 0.00016711161210714785,
+    "VIEW_TRANSACTIONS": 0.0005175907458544631,
+    "WITHDRAW_MONEY": 0.9962856471225368,
+    "BILL_PAY": 0.0006743090174821103,
+    "HELP_SUPPORT": 0.0003011379755331055,
+    "MANAGE_CONTACTS": 0.00048064616551960366,
+    "VIEW_GROUP": 0.0003060765644705887,
+    "CHECK_SPENDING": 0.0003831314106978518
+   },
+   "threshold": 0.5,
+   "expected": {
+    "raw_prediction": "WITHDRAW_MONEY",
+    "confidence": 0.9962856471225368,
+    "final_intent": "WITHDRAW_MONEY",
+    "status": "accepted",
+    "fallback_applied": false,
+    "action": "ROUTE_WITHDRAW_MONEY"
+   }
+  },
+  {
+   "name": "'Withdraw $100' @ 0.6",
+   "probabilities": {
+    "TRANSFER_MONEY": 0.0008843493857982107,
+    "CHECK_BALANCE": 0.00016711161210714785,
+    "VIEW_TRANSACTIONS": 0.0005175907458544631,
+    "WITHDRAW_MONEY": 0.9962856471225368,
+    "BILL_PAY": 0.0006743090174821103,
+    "HELP_SUPPORT": 0.0003011379755331055,
+    "MANAGE_CONTACTS": 0.00048064616551960366,
+    "VIEW_GROUP": 0.0003060765644705887,
+    "CHECK_SPENDING": 0.0003831314106978518
+   },
+   "threshold": 0.6,
+   "expected": {
+    "raw_prediction": "WITHDRAW_MONEY",
+    "confidence": 0.9962856471225368,
+    "final_intent": "WITHDRAW_MONEY",
+    "status": "accepted",
+    "fallback_applied": false,
+    "action": "ROUTE_WITHDRAW_MONEY"
+   }
+  },
+  {
+   "name": "'Withdraw $100' @ 0.8",
+   "probabilities": {
+    "TRANSFER_MONEY": 0.0008843493857982107,
+    "CHECK_BALANCE": 0.00016711161210714785,
+    "VIEW_TRANSACTIONS": 0.0005175907458544631,
+    "WITHDRAW_MONEY": 0.9962856471225368,
+    "BILL_PAY": 0.0006743090174821103,
+    "HELP_SUPPORT": 0.0003011379755331055,
+    "MANAGE_CONTACTS": 0.00048064616551960366,
+    "VIEW_GROUP": 0.0003060765644705887,
+    "CHECK_SPENDING": 0.0003831314106978518
+   },
+   "threshold": 0.8,
+   "expected": {
+    "raw_prediction": "WITHDRAW_MONEY",
+    "confidence": 0.9962856471225368,
+    "final_intent": "WITHDRAW_MONEY",
+    "status": "accepted",
+    "fallback_applied": false,
+    "action": "ROUTE_WITHDRAW_MONEY"
+   }
+  },
+  {
+   "name": "'Withdraw $100' @ 0.99",
+   "probabilities": {
+    "TRANSFER_MONEY": 0.0008843493857982107,
+    "CHECK_BALANCE": 0.00016711161210714785,
+    "VIEW_TRANSACTIONS": 0.0005175907458544631,
+    "WITHDRAW_MONEY": 0.9962856471225368,
+    "BILL_PAY": 0.0006743090174821103,
+    "HELP_SUPPORT": 0.0003011379755331055,
+    "MANAGE_CONTACTS": 0.00048064616551960366,
+    "VIEW_GROUP": 0.0003060765644705887,
+    "CHECK_SPENDING": 0.0003831314106978518
+   },
+   "threshold": 0.99,
+   "expected": {
+    "raw_prediction": "WITHDRAW_MONEY",
+    "confidence": 0.9962856471225368,
+    "final_intent": "WITHDRAW_MONEY",
+    "status": "accepted",
+    "fallback_applied": false,
+    "action": "ROUTE_WITHDRAW_MONEY"
+   }
+  },
+  {
+   "name": "'Withdraw $100' @ 1.0",
+   "probabilities": {
+    "TRANSFER_MONEY": 0.0008843493857982107,
+    "CHECK_BALANCE": 0.00016711161210714785,
+    "VIEW_TRANSACTIONS": 0.0005175907458544631,
+    "WITHDRAW_MONEY": 0.9962856471225368,
+    "BILL_PAY": 0.0006743090174821103,
+    "HELP_SUPPORT": 0.0003011379755331055,
+    "MANAGE_CONTACTS": 0.00048064616551960366,
+    "VIEW_GROUP": 0.0003060765644705887,
+    "CHECK_SPENDING": 0.0003831314106978518
+   },
+   "threshold": 1.0,
+   "expected": {
+    "raw_prediction": "WITHDRAW_MONEY",
+    "confidence": 0.9962856471225368,
+    "final_intent": "UNKNOWN_INTENT",
+    "status": "fallback_applied",
+    "fallback_applied": true,
+    "action": "FALLBACK_HELP_OR_CLARIFY"
+   }
+  },
+  {
+   "name": "'Withdraw $100' @ 0.34152482478950635",
+   "probabilities": {
+    "TRANSFER_MONEY": 0.0008843493857982107,
+    "CHECK_BALANCE": 0.00016711161210714785,
+    "VIEW_TRANSACTIONS": 0.0005175907458544631,
+    "WITHDRAW_MONEY": 0.9962856471225368,
+    "BILL_PAY": 0.0006743090174821103,
+    "HELP_SUPPORT": 0.0003011379755331055,
+    "MANAGE_CONTACTS": 0.00048064616551960366,
+    "VIEW_GROUP": 0.0003060765644705887,
+    "CHECK_SPENDING": 0.0003831314106978518
+   },
+   "threshold": 0.34152482478950635,
+   "expected": {
+    "raw_prediction": "WITHDRAW_MONEY",
+    "confidence": 0.9962856471225368,
+    "final_intent": "WITHDRAW_MONEY",
+    "status": "accepted",
+    "fallback_applied": false,
+    "action": "ROUTE_WITHDRAW_MONEY"
+   }
+  },
+  {
+   "name": "'Withdraw $100' @ confidence (equal)",
+   "probabilities": {
+    "TRANSFER_MONEY": 0.0008843493857982107,
+    "CHECK_BALANCE": 0.00016711161210714785,
+    "VIEW_TRANSACTIONS": 0.0005175907458544631,
+    "WITHDRAW_MONEY": 0.9962856471225368,
+    "BILL_PAY": 0.0006743090174821103,
+    "HELP_SUPPORT": 0.0003011379755331055,
+    "MANAGE_CONTACTS": 0.00048064616551960366,
+    "VIEW_GROUP": 0.0003060765644705887,
+    "CHECK_SPENDING": 0.0003831314106978518
+   },
+   "threshold": 0.9962856471225368,
+   "expected": {
+    "raw_prediction": "WITHDRAW_MONEY",
+    "confidence": 0.9962856471225368,
+    "final_intent": "WITHDRAW_MONEY",
+    "status": "accepted",
+    "fallback_applied": false,
+    "action": "ROUTE_WITHDRAW_MONEY"
+   }
+  },
+  {
+   "name": "'Withdraw $100' @ confidence + 1ulp",
+   "probabilities": {
+    "TRANSFER_MONEY": 0.0008843493857982107,
+    "CHECK_BALANCE": 0.00016711161210714785,
+    "VIEW_TRANSACTIONS": 0.0005175907458544631,
+    "WITHDRAW_MONEY": 0.9962856471225368,
+    "BILL_PAY": 0.0006743090174821103,
+    "HELP_SUPPORT": 0.0003011379755331055,
+    "MANAGE_CONTACTS": 0.00048064616551960366,
+    "VIEW_GROUP": 0.0003060765644705887,
+    "CHECK_SPENDING": 0.0003831314106978518
+   },
+   "threshold": 0.9962856471225369,
+   "expected": {
+    "raw_prediction": "WITHDRAW_MONEY",
+    "confidence": 0.9962856471225368,
+    "final_intent": "UNKNOWN_INTENT",
+    "status": "fallback_applied",
+    "fallback_applied": true,
+    "action": "FALLBACK_HELP_OR_CLARIFY"
+   }
+  },
+  {
+   "name": "'Withdraw $100' @ confidence - 1ulp",
+   "probabilities": {
+    "TRANSFER_MONEY": 0.0008843493857982107,
+    "CHECK_BALANCE": 0.00016711161210714785,
+    "VIEW_TRANSACTIONS": 0.0005175907458544631,
+    "WITHDRAW_MONEY": 0.9962856471225368,
+    "BILL_PAY": 0.0006743090174821103,
+    "HELP_SUPPORT": 0.0003011379755331055,
+    "MANAGE_CONTACTS": 0.00048064616551960366,
+    "VIEW_GROUP": 0.0003060765644705887,
+    "CHECK_SPENDING": 0.0003831314106978518
+   },
+   "threshold": 0.9962856471225366,
+   "expected": {
+    "raw_prediction": "WITHDRAW_MONEY",
+    "confidence": 0.9962856471225368,
+    "final_intent": "WITHDRAW_MONEY",
+    "status": "accepted",
+    "fallback_applied": false,
+    "action": "ROUTE_WITHDRAW_MONEY"
+   }
+  },
+  {
    "name": "'I want to withdraw $100' @ 0.0",
    "probabilities": {
     "TRANSFER_MONEY": 0.0007241610952944231,
@@ -5951,6 +6362,351 @@
     "status": "accepted",
     "fallback_applied": false,
     "action": "ROUTE_WITHDRAW_MONEY"
+   }
+  },
+  {
+   "name": "\"My transfer didn't go through\" @ 0.0",
+   "probabilities": {
+    "TRANSFER_MONEY": 0.17686815598234157,
+    "CHECK_BALANCE": 0.016143509956585544,
+    "VIEW_TRANSACTIONS": 0.060607663609414254,
+    "WITHDRAW_MONEY": 0.020997475769799455,
+    "BILL_PAY": 0.018392488522108976,
+    "HELP_SUPPORT": 0.6004627198583782,
+    "MANAGE_CONTACTS": 0.037415764577153406,
+    "VIEW_GROUP": 0.016909485518351024,
+    "CHECK_SPENDING": 0.05220273620586751
+   },
+   "threshold": 0.0,
+   "expected": {
+    "raw_prediction": "HELP_SUPPORT",
+    "confidence": 0.6004627198583782,
+    "final_intent": "HELP_SUPPORT",
+    "status": "accepted",
+    "fallback_applied": false,
+    "action": "ROUTE_HELP_SUPPORT"
+   }
+  },
+  {
+   "name": "\"My transfer didn't go through\" @ 0.01",
+   "probabilities": {
+    "TRANSFER_MONEY": 0.17686815598234157,
+    "CHECK_BALANCE": 0.016143509956585544,
+    "VIEW_TRANSACTIONS": 0.060607663609414254,
+    "WITHDRAW_MONEY": 0.020997475769799455,
+    "BILL_PAY": 0.018392488522108976,
+    "HELP_SUPPORT": 0.6004627198583782,
+    "MANAGE_CONTACTS": 0.037415764577153406,
+    "VIEW_GROUP": 0.016909485518351024,
+    "CHECK_SPENDING": 0.05220273620586751
+   },
+   "threshold": 0.01,
+   "expected": {
+    "raw_prediction": "HELP_SUPPORT",
+    "confidence": 0.6004627198583782,
+    "final_intent": "HELP_SUPPORT",
+    "status": "accepted",
+    "fallback_applied": false,
+    "action": "ROUTE_HELP_SUPPORT"
+   }
+  },
+  {
+   "name": "\"My transfer didn't go through\" @ 0.1",
+   "probabilities": {
+    "TRANSFER_MONEY": 0.17686815598234157,
+    "CHECK_BALANCE": 0.016143509956585544,
+    "VIEW_TRANSACTIONS": 0.060607663609414254,
+    "WITHDRAW_MONEY": 0.020997475769799455,
+    "BILL_PAY": 0.018392488522108976,
+    "HELP_SUPPORT": 0.6004627198583782,
+    "MANAGE_CONTACTS": 0.037415764577153406,
+    "VIEW_GROUP": 0.016909485518351024,
+    "CHECK_SPENDING": 0.05220273620586751
+   },
+   "threshold": 0.1,
+   "expected": {
+    "raw_prediction": "HELP_SUPPORT",
+    "confidence": 0.6004627198583782,
+    "final_intent": "HELP_SUPPORT",
+    "status": "accepted",
+    "fallback_applied": false,
+    "action": "ROUTE_HELP_SUPPORT"
+   }
+  },
+  {
+   "name": "\"My transfer didn't go through\" @ 0.25",
+   "probabilities": {
+    "TRANSFER_MONEY": 0.17686815598234157,
+    "CHECK_BALANCE": 0.016143509956585544,
+    "VIEW_TRANSACTIONS": 0.060607663609414254,
+    "WITHDRAW_MONEY": 0.020997475769799455,
+    "BILL_PAY": 0.018392488522108976,
+    "HELP_SUPPORT": 0.6004627198583782,
+    "MANAGE_CONTACTS": 0.037415764577153406,
+    "VIEW_GROUP": 0.016909485518351024,
+    "CHECK_SPENDING": 0.05220273620586751
+   },
+   "threshold": 0.25,
+   "expected": {
+    "raw_prediction": "HELP_SUPPORT",
+    "confidence": 0.6004627198583782,
+    "final_intent": "HELP_SUPPORT",
+    "status": "accepted",
+    "fallback_applied": false,
+    "action": "ROUTE_HELP_SUPPORT"
+   }
+  },
+  {
+   "name": "\"My transfer didn't go through\" @ 0.3",
+   "probabilities": {
+    "TRANSFER_MONEY": 0.17686815598234157,
+    "CHECK_BALANCE": 0.016143509956585544,
+    "VIEW_TRANSACTIONS": 0.060607663609414254,
+    "WITHDRAW_MONEY": 0.020997475769799455,
+    "BILL_PAY": 0.018392488522108976,
+    "HELP_SUPPORT": 0.6004627198583782,
+    "MANAGE_CONTACTS": 0.037415764577153406,
+    "VIEW_GROUP": 0.016909485518351024,
+    "CHECK_SPENDING": 0.05220273620586751
+   },
+   "threshold": 0.3,
+   "expected": {
+    "raw_prediction": "HELP_SUPPORT",
+    "confidence": 0.6004627198583782,
+    "final_intent": "HELP_SUPPORT",
+    "status": "accepted",
+    "fallback_applied": false,
+    "action": "ROUTE_HELP_SUPPORT"
+   }
+  },
+  {
+   "name": "\"My transfer didn't go through\" @ 0.35",
+   "probabilities": {
+    "TRANSFER_MONEY": 0.17686815598234157,
+    "CHECK_BALANCE": 0.016143509956585544,
+    "VIEW_TRANSACTIONS": 0.060607663609414254,
+    "WITHDRAW_MONEY": 0.020997475769799455,
+    "BILL_PAY": 0.018392488522108976,
+    "HELP_SUPPORT": 0.6004627198583782,
+    "MANAGE_CONTACTS": 0.037415764577153406,
+    "VIEW_GROUP": 0.016909485518351024,
+    "CHECK_SPENDING": 0.05220273620586751
+   },
+   "threshold": 0.35,
+   "expected": {
+    "raw_prediction": "HELP_SUPPORT",
+    "confidence": 0.6004627198583782,
+    "final_intent": "HELP_SUPPORT",
+    "status": "accepted",
+    "fallback_applied": false,
+    "action": "ROUTE_HELP_SUPPORT"
+   }
+  },
+  {
+   "name": "\"My transfer didn't go through\" @ 0.5",
+   "probabilities": {
+    "TRANSFER_MONEY": 0.17686815598234157,
+    "CHECK_BALANCE": 0.016143509956585544,
+    "VIEW_TRANSACTIONS": 0.060607663609414254,
+    "WITHDRAW_MONEY": 0.020997475769799455,
+    "BILL_PAY": 0.018392488522108976,
+    "HELP_SUPPORT": 0.6004627198583782,
+    "MANAGE_CONTACTS": 0.037415764577153406,
+    "VIEW_GROUP": 0.016909485518351024,
+    "CHECK_SPENDING": 0.05220273620586751
+   },
+   "threshold": 0.5,
+   "expected": {
+    "raw_prediction": "HELP_SUPPORT",
+    "confidence": 0.6004627198583782,
+    "final_intent": "HELP_SUPPORT",
+    "status": "accepted",
+    "fallback_applied": false,
+    "action": "ROUTE_HELP_SUPPORT"
+   }
+  },
+  {
+   "name": "\"My transfer didn't go through\" @ 0.6",
+   "probabilities": {
+    "TRANSFER_MONEY": 0.17686815598234157,
+    "CHECK_BALANCE": 0.016143509956585544,
+    "VIEW_TRANSACTIONS": 0.060607663609414254,
+    "WITHDRAW_MONEY": 0.020997475769799455,
+    "BILL_PAY": 0.018392488522108976,
+    "HELP_SUPPORT": 0.6004627198583782,
+    "MANAGE_CONTACTS": 0.037415764577153406,
+    "VIEW_GROUP": 0.016909485518351024,
+    "CHECK_SPENDING": 0.05220273620586751
+   },
+   "threshold": 0.6,
+   "expected": {
+    "raw_prediction": "HELP_SUPPORT",
+    "confidence": 0.6004627198583782,
+    "final_intent": "HELP_SUPPORT",
+    "status": "accepted",
+    "fallback_applied": false,
+    "action": "ROUTE_HELP_SUPPORT"
+   }
+  },
+  {
+   "name": "\"My transfer didn't go through\" @ 0.8",
+   "probabilities": {
+    "TRANSFER_MONEY": 0.17686815598234157,
+    "CHECK_BALANCE": 0.016143509956585544,
+    "VIEW_TRANSACTIONS": 0.060607663609414254,
+    "WITHDRAW_MONEY": 0.020997475769799455,
+    "BILL_PAY": 0.018392488522108976,
+    "HELP_SUPPORT": 0.6004627198583782,
+    "MANAGE_CONTACTS": 0.037415764577153406,
+    "VIEW_GROUP": 0.016909485518351024,
+    "CHECK_SPENDING": 0.05220273620586751
+   },
+   "threshold": 0.8,
+   "expected": {
+    "raw_prediction": "HELP_SUPPORT",
+    "confidence": 0.6004627198583782,
+    "final_intent": "UNKNOWN_INTENT",
+    "status": "fallback_applied",
+    "fallback_applied": true,
+    "action": "FALLBACK_HELP_OR_CLARIFY"
+   }
+  },
+  {
+   "name": "\"My transfer didn't go through\" @ 0.99",
+   "probabilities": {
+    "TRANSFER_MONEY": 0.17686815598234157,
+    "CHECK_BALANCE": 0.016143509956585544,
+    "VIEW_TRANSACTIONS": 0.060607663609414254,
+    "WITHDRAW_MONEY": 0.020997475769799455,
+    "BILL_PAY": 0.018392488522108976,
+    "HELP_SUPPORT": 0.6004627198583782,
+    "MANAGE_CONTACTS": 0.037415764577153406,
+    "VIEW_GROUP": 0.016909485518351024,
+    "CHECK_SPENDING": 0.05220273620586751
+   },
+   "threshold": 0.99,
+   "expected": {
+    "raw_prediction": "HELP_SUPPORT",
+    "confidence": 0.6004627198583782,
+    "final_intent": "UNKNOWN_INTENT",
+    "status": "fallback_applied",
+    "fallback_applied": true,
+    "action": "FALLBACK_HELP_OR_CLARIFY"
+   }
+  },
+  {
+   "name": "\"My transfer didn't go through\" @ 1.0",
+   "probabilities": {
+    "TRANSFER_MONEY": 0.17686815598234157,
+    "CHECK_BALANCE": 0.016143509956585544,
+    "VIEW_TRANSACTIONS": 0.060607663609414254,
+    "WITHDRAW_MONEY": 0.020997475769799455,
+    "BILL_PAY": 0.018392488522108976,
+    "HELP_SUPPORT": 0.6004627198583782,
+    "MANAGE_CONTACTS": 0.037415764577153406,
+    "VIEW_GROUP": 0.016909485518351024,
+    "CHECK_SPENDING": 0.05220273620586751
+   },
+   "threshold": 1.0,
+   "expected": {
+    "raw_prediction": "HELP_SUPPORT",
+    "confidence": 0.6004627198583782,
+    "final_intent": "UNKNOWN_INTENT",
+    "status": "fallback_applied",
+    "fallback_applied": true,
+    "action": "FALLBACK_HELP_OR_CLARIFY"
+   }
+  },
+  {
+   "name": "\"My transfer didn't go through\" @ 0.34152482478950635",
+   "probabilities": {
+    "TRANSFER_MONEY": 0.17686815598234157,
+    "CHECK_BALANCE": 0.016143509956585544,
+    "VIEW_TRANSACTIONS": 0.060607663609414254,
+    "WITHDRAW_MONEY": 0.020997475769799455,
+    "BILL_PAY": 0.018392488522108976,
+    "HELP_SUPPORT": 0.6004627198583782,
+    "MANAGE_CONTACTS": 0.037415764577153406,
+    "VIEW_GROUP": 0.016909485518351024,
+    "CHECK_SPENDING": 0.05220273620586751
+   },
+   "threshold": 0.34152482478950635,
+   "expected": {
+    "raw_prediction": "HELP_SUPPORT",
+    "confidence": 0.6004627198583782,
+    "final_intent": "HELP_SUPPORT",
+    "status": "accepted",
+    "fallback_applied": false,
+    "action": "ROUTE_HELP_SUPPORT"
+   }
+  },
+  {
+   "name": "\"My transfer didn't go through\" @ confidence (equal)",
+   "probabilities": {
+    "TRANSFER_MONEY": 0.17686815598234157,
+    "CHECK_BALANCE": 0.016143509956585544,
+    "VIEW_TRANSACTIONS": 0.060607663609414254,
+    "WITHDRAW_MONEY": 0.020997475769799455,
+    "BILL_PAY": 0.018392488522108976,
+    "HELP_SUPPORT": 0.6004627198583782,
+    "MANAGE_CONTACTS": 0.037415764577153406,
+    "VIEW_GROUP": 0.016909485518351024,
+    "CHECK_SPENDING": 0.05220273620586751
+   },
+   "threshold": 0.6004627198583782,
+   "expected": {
+    "raw_prediction": "HELP_SUPPORT",
+    "confidence": 0.6004627198583782,
+    "final_intent": "HELP_SUPPORT",
+    "status": "accepted",
+    "fallback_applied": false,
+    "action": "ROUTE_HELP_SUPPORT"
+   }
+  },
+  {
+   "name": "\"My transfer didn't go through\" @ confidence + 1ulp",
+   "probabilities": {
+    "TRANSFER_MONEY": 0.17686815598234157,
+    "CHECK_BALANCE": 0.016143509956585544,
+    "VIEW_TRANSACTIONS": 0.060607663609414254,
+    "WITHDRAW_MONEY": 0.020997475769799455,
+    "BILL_PAY": 0.018392488522108976,
+    "HELP_SUPPORT": 0.6004627198583782,
+    "MANAGE_CONTACTS": 0.037415764577153406,
+    "VIEW_GROUP": 0.016909485518351024,
+    "CHECK_SPENDING": 0.05220273620586751
+   },
+   "threshold": 0.6004627198583783,
+   "expected": {
+    "raw_prediction": "HELP_SUPPORT",
+    "confidence": 0.6004627198583782,
+    "final_intent": "UNKNOWN_INTENT",
+    "status": "fallback_applied",
+    "fallback_applied": true,
+    "action": "FALLBACK_HELP_OR_CLARIFY"
+   }
+  },
+  {
+   "name": "\"My transfer didn't go through\" @ confidence - 1ulp",
+   "probabilities": {
+    "TRANSFER_MONEY": 0.17686815598234157,
+    "CHECK_BALANCE": 0.016143509956585544,
+    "VIEW_TRANSACTIONS": 0.060607663609414254,
+    "WITHDRAW_MONEY": 0.020997475769799455,
+    "BILL_PAY": 0.018392488522108976,
+    "HELP_SUPPORT": 0.6004627198583782,
+    "MANAGE_CONTACTS": 0.037415764577153406,
+    "VIEW_GROUP": 0.016909485518351024,
+    "CHECK_SPENDING": 0.05220273620586751
+   },
+   "threshold": 0.6004627198583781,
+   "expected": {
+    "raw_prediction": "HELP_SUPPORT",
+    "confidence": 0.6004627198583782,
+    "final_intent": "HELP_SUPPORT",
+    "status": "accepted",
+    "fallback_applied": false,
+    "action": "ROUTE_HELP_SUPPORT"
    }
   },
   {
@@ -9059,22 +9815,1057 @@
    }
   },
   {
-   "name": "\"What's the weather today?\" @ 0.0",
+   "name": "'How much did I spend this month?' @ 0.0",
    "probabilities": {
-    "TRANSFER_MONEY": 0.04550221557547616,
-    "CHECK_BALANCE": 0.03142888646733226,
-    "VIEW_TRANSACTIONS": 0.3651644280942058,
-    "WITHDRAW_MONEY": 0.03445687965029147,
-    "BILL_PAY": 0.03601798544647611,
-    "HELP_SUPPORT": 0.060950153627078334,
-    "MANAGE_CONTACTS": 0.21736397471395305,
-    "VIEW_GROUP": 0.05924874179744802,
-    "CHECK_SPENDING": 0.1498667346277389
+    "TRANSFER_MONEY": 7.987748983992194e-06,
+    "CHECK_BALANCE": 0.0009234925438741841,
+    "VIEW_TRANSACTIONS": 0.00011697284355781699,
+    "WITHDRAW_MONEY": 1.6226674271473315e-05,
+    "BILL_PAY": 1.240928761857951e-05,
+    "HELP_SUPPORT": 1.612438954099515e-05,
+    "MANAGE_CONTACTS": 9.422681059097531e-06,
+    "VIEW_GROUP": 2.8697966654578838e-05,
+    "CHECK_SPENDING": 0.9988686658644393
+   },
+   "threshold": 0.0,
+   "expected": {
+    "raw_prediction": "CHECK_SPENDING",
+    "confidence": 0.9988686658644393,
+    "final_intent": "CHECK_SPENDING",
+    "status": "accepted",
+    "fallback_applied": false,
+    "action": "ROUTE_CHECK_SPENDING"
+   }
+  },
+  {
+   "name": "'How much did I spend this month?' @ 0.01",
+   "probabilities": {
+    "TRANSFER_MONEY": 7.987748983992194e-06,
+    "CHECK_BALANCE": 0.0009234925438741841,
+    "VIEW_TRANSACTIONS": 0.00011697284355781699,
+    "WITHDRAW_MONEY": 1.6226674271473315e-05,
+    "BILL_PAY": 1.240928761857951e-05,
+    "HELP_SUPPORT": 1.612438954099515e-05,
+    "MANAGE_CONTACTS": 9.422681059097531e-06,
+    "VIEW_GROUP": 2.8697966654578838e-05,
+    "CHECK_SPENDING": 0.9988686658644393
+   },
+   "threshold": 0.01,
+   "expected": {
+    "raw_prediction": "CHECK_SPENDING",
+    "confidence": 0.9988686658644393,
+    "final_intent": "CHECK_SPENDING",
+    "status": "accepted",
+    "fallback_applied": false,
+    "action": "ROUTE_CHECK_SPENDING"
+   }
+  },
+  {
+   "name": "'How much did I spend this month?' @ 0.1",
+   "probabilities": {
+    "TRANSFER_MONEY": 7.987748983992194e-06,
+    "CHECK_BALANCE": 0.0009234925438741841,
+    "VIEW_TRANSACTIONS": 0.00011697284355781699,
+    "WITHDRAW_MONEY": 1.6226674271473315e-05,
+    "BILL_PAY": 1.240928761857951e-05,
+    "HELP_SUPPORT": 1.612438954099515e-05,
+    "MANAGE_CONTACTS": 9.422681059097531e-06,
+    "VIEW_GROUP": 2.8697966654578838e-05,
+    "CHECK_SPENDING": 0.9988686658644393
+   },
+   "threshold": 0.1,
+   "expected": {
+    "raw_prediction": "CHECK_SPENDING",
+    "confidence": 0.9988686658644393,
+    "final_intent": "CHECK_SPENDING",
+    "status": "accepted",
+    "fallback_applied": false,
+    "action": "ROUTE_CHECK_SPENDING"
+   }
+  },
+  {
+   "name": "'How much did I spend this month?' @ 0.25",
+   "probabilities": {
+    "TRANSFER_MONEY": 7.987748983992194e-06,
+    "CHECK_BALANCE": 0.0009234925438741841,
+    "VIEW_TRANSACTIONS": 0.00011697284355781699,
+    "WITHDRAW_MONEY": 1.6226674271473315e-05,
+    "BILL_PAY": 1.240928761857951e-05,
+    "HELP_SUPPORT": 1.612438954099515e-05,
+    "MANAGE_CONTACTS": 9.422681059097531e-06,
+    "VIEW_GROUP": 2.8697966654578838e-05,
+    "CHECK_SPENDING": 0.9988686658644393
+   },
+   "threshold": 0.25,
+   "expected": {
+    "raw_prediction": "CHECK_SPENDING",
+    "confidence": 0.9988686658644393,
+    "final_intent": "CHECK_SPENDING",
+    "status": "accepted",
+    "fallback_applied": false,
+    "action": "ROUTE_CHECK_SPENDING"
+   }
+  },
+  {
+   "name": "'How much did I spend this month?' @ 0.3",
+   "probabilities": {
+    "TRANSFER_MONEY": 7.987748983992194e-06,
+    "CHECK_BALANCE": 0.0009234925438741841,
+    "VIEW_TRANSACTIONS": 0.00011697284355781699,
+    "WITHDRAW_MONEY": 1.6226674271473315e-05,
+    "BILL_PAY": 1.240928761857951e-05,
+    "HELP_SUPPORT": 1.612438954099515e-05,
+    "MANAGE_CONTACTS": 9.422681059097531e-06,
+    "VIEW_GROUP": 2.8697966654578838e-05,
+    "CHECK_SPENDING": 0.9988686658644393
+   },
+   "threshold": 0.3,
+   "expected": {
+    "raw_prediction": "CHECK_SPENDING",
+    "confidence": 0.9988686658644393,
+    "final_intent": "CHECK_SPENDING",
+    "status": "accepted",
+    "fallback_applied": false,
+    "action": "ROUTE_CHECK_SPENDING"
+   }
+  },
+  {
+   "name": "'How much did I spend this month?' @ 0.35",
+   "probabilities": {
+    "TRANSFER_MONEY": 7.987748983992194e-06,
+    "CHECK_BALANCE": 0.0009234925438741841,
+    "VIEW_TRANSACTIONS": 0.00011697284355781699,
+    "WITHDRAW_MONEY": 1.6226674271473315e-05,
+    "BILL_PAY": 1.240928761857951e-05,
+    "HELP_SUPPORT": 1.612438954099515e-05,
+    "MANAGE_CONTACTS": 9.422681059097531e-06,
+    "VIEW_GROUP": 2.8697966654578838e-05,
+    "CHECK_SPENDING": 0.9988686658644393
+   },
+   "threshold": 0.35,
+   "expected": {
+    "raw_prediction": "CHECK_SPENDING",
+    "confidence": 0.9988686658644393,
+    "final_intent": "CHECK_SPENDING",
+    "status": "accepted",
+    "fallback_applied": false,
+    "action": "ROUTE_CHECK_SPENDING"
+   }
+  },
+  {
+   "name": "'How much did I spend this month?' @ 0.5",
+   "probabilities": {
+    "TRANSFER_MONEY": 7.987748983992194e-06,
+    "CHECK_BALANCE": 0.0009234925438741841,
+    "VIEW_TRANSACTIONS": 0.00011697284355781699,
+    "WITHDRAW_MONEY": 1.6226674271473315e-05,
+    "BILL_PAY": 1.240928761857951e-05,
+    "HELP_SUPPORT": 1.612438954099515e-05,
+    "MANAGE_CONTACTS": 9.422681059097531e-06,
+    "VIEW_GROUP": 2.8697966654578838e-05,
+    "CHECK_SPENDING": 0.9988686658644393
+   },
+   "threshold": 0.5,
+   "expected": {
+    "raw_prediction": "CHECK_SPENDING",
+    "confidence": 0.9988686658644393,
+    "final_intent": "CHECK_SPENDING",
+    "status": "accepted",
+    "fallback_applied": false,
+    "action": "ROUTE_CHECK_SPENDING"
+   }
+  },
+  {
+   "name": "'How much did I spend this month?' @ 0.6",
+   "probabilities": {
+    "TRANSFER_MONEY": 7.987748983992194e-06,
+    "CHECK_BALANCE": 0.0009234925438741841,
+    "VIEW_TRANSACTIONS": 0.00011697284355781699,
+    "WITHDRAW_MONEY": 1.6226674271473315e-05,
+    "BILL_PAY": 1.240928761857951e-05,
+    "HELP_SUPPORT": 1.612438954099515e-05,
+    "MANAGE_CONTACTS": 9.422681059097531e-06,
+    "VIEW_GROUP": 2.8697966654578838e-05,
+    "CHECK_SPENDING": 0.9988686658644393
+   },
+   "threshold": 0.6,
+   "expected": {
+    "raw_prediction": "CHECK_SPENDING",
+    "confidence": 0.9988686658644393,
+    "final_intent": "CHECK_SPENDING",
+    "status": "accepted",
+    "fallback_applied": false,
+    "action": "ROUTE_CHECK_SPENDING"
+   }
+  },
+  {
+   "name": "'How much did I spend this month?' @ 0.8",
+   "probabilities": {
+    "TRANSFER_MONEY": 7.987748983992194e-06,
+    "CHECK_BALANCE": 0.0009234925438741841,
+    "VIEW_TRANSACTIONS": 0.00011697284355781699,
+    "WITHDRAW_MONEY": 1.6226674271473315e-05,
+    "BILL_PAY": 1.240928761857951e-05,
+    "HELP_SUPPORT": 1.612438954099515e-05,
+    "MANAGE_CONTACTS": 9.422681059097531e-06,
+    "VIEW_GROUP": 2.8697966654578838e-05,
+    "CHECK_SPENDING": 0.9988686658644393
+   },
+   "threshold": 0.8,
+   "expected": {
+    "raw_prediction": "CHECK_SPENDING",
+    "confidence": 0.9988686658644393,
+    "final_intent": "CHECK_SPENDING",
+    "status": "accepted",
+    "fallback_applied": false,
+    "action": "ROUTE_CHECK_SPENDING"
+   }
+  },
+  {
+   "name": "'How much did I spend this month?' @ 0.99",
+   "probabilities": {
+    "TRANSFER_MONEY": 7.987748983992194e-06,
+    "CHECK_BALANCE": 0.0009234925438741841,
+    "VIEW_TRANSACTIONS": 0.00011697284355781699,
+    "WITHDRAW_MONEY": 1.6226674271473315e-05,
+    "BILL_PAY": 1.240928761857951e-05,
+    "HELP_SUPPORT": 1.612438954099515e-05,
+    "MANAGE_CONTACTS": 9.422681059097531e-06,
+    "VIEW_GROUP": 2.8697966654578838e-05,
+    "CHECK_SPENDING": 0.9988686658644393
+   },
+   "threshold": 0.99,
+   "expected": {
+    "raw_prediction": "CHECK_SPENDING",
+    "confidence": 0.9988686658644393,
+    "final_intent": "CHECK_SPENDING",
+    "status": "accepted",
+    "fallback_applied": false,
+    "action": "ROUTE_CHECK_SPENDING"
+   }
+  },
+  {
+   "name": "'How much did I spend this month?' @ 1.0",
+   "probabilities": {
+    "TRANSFER_MONEY": 7.987748983992194e-06,
+    "CHECK_BALANCE": 0.0009234925438741841,
+    "VIEW_TRANSACTIONS": 0.00011697284355781699,
+    "WITHDRAW_MONEY": 1.6226674271473315e-05,
+    "BILL_PAY": 1.240928761857951e-05,
+    "HELP_SUPPORT": 1.612438954099515e-05,
+    "MANAGE_CONTACTS": 9.422681059097531e-06,
+    "VIEW_GROUP": 2.8697966654578838e-05,
+    "CHECK_SPENDING": 0.9988686658644393
+   },
+   "threshold": 1.0,
+   "expected": {
+    "raw_prediction": "CHECK_SPENDING",
+    "confidence": 0.9988686658644393,
+    "final_intent": "UNKNOWN_INTENT",
+    "status": "fallback_applied",
+    "fallback_applied": true,
+    "action": "FALLBACK_HELP_OR_CLARIFY"
+   }
+  },
+  {
+   "name": "'How much did I spend this month?' @ 0.34152482478950635",
+   "probabilities": {
+    "TRANSFER_MONEY": 7.987748983992194e-06,
+    "CHECK_BALANCE": 0.0009234925438741841,
+    "VIEW_TRANSACTIONS": 0.00011697284355781699,
+    "WITHDRAW_MONEY": 1.6226674271473315e-05,
+    "BILL_PAY": 1.240928761857951e-05,
+    "HELP_SUPPORT": 1.612438954099515e-05,
+    "MANAGE_CONTACTS": 9.422681059097531e-06,
+    "VIEW_GROUP": 2.8697966654578838e-05,
+    "CHECK_SPENDING": 0.9988686658644393
+   },
+   "threshold": 0.34152482478950635,
+   "expected": {
+    "raw_prediction": "CHECK_SPENDING",
+    "confidence": 0.9988686658644393,
+    "final_intent": "CHECK_SPENDING",
+    "status": "accepted",
+    "fallback_applied": false,
+    "action": "ROUTE_CHECK_SPENDING"
+   }
+  },
+  {
+   "name": "'How much did I spend this month?' @ confidence (equal)",
+   "probabilities": {
+    "TRANSFER_MONEY": 7.987748983992194e-06,
+    "CHECK_BALANCE": 0.0009234925438741841,
+    "VIEW_TRANSACTIONS": 0.00011697284355781699,
+    "WITHDRAW_MONEY": 1.6226674271473315e-05,
+    "BILL_PAY": 1.240928761857951e-05,
+    "HELP_SUPPORT": 1.612438954099515e-05,
+    "MANAGE_CONTACTS": 9.422681059097531e-06,
+    "VIEW_GROUP": 2.8697966654578838e-05,
+    "CHECK_SPENDING": 0.9988686658644393
+   },
+   "threshold": 0.9988686658644393,
+   "expected": {
+    "raw_prediction": "CHECK_SPENDING",
+    "confidence": 0.9988686658644393,
+    "final_intent": "CHECK_SPENDING",
+    "status": "accepted",
+    "fallback_applied": false,
+    "action": "ROUTE_CHECK_SPENDING"
+   }
+  },
+  {
+   "name": "'How much did I spend this month?' @ confidence + 1ulp",
+   "probabilities": {
+    "TRANSFER_MONEY": 7.987748983992194e-06,
+    "CHECK_BALANCE": 0.0009234925438741841,
+    "VIEW_TRANSACTIONS": 0.00011697284355781699,
+    "WITHDRAW_MONEY": 1.6226674271473315e-05,
+    "BILL_PAY": 1.240928761857951e-05,
+    "HELP_SUPPORT": 1.612438954099515e-05,
+    "MANAGE_CONTACTS": 9.422681059097531e-06,
+    "VIEW_GROUP": 2.8697966654578838e-05,
+    "CHECK_SPENDING": 0.9988686658644393
+   },
+   "threshold": 0.9988686658644395,
+   "expected": {
+    "raw_prediction": "CHECK_SPENDING",
+    "confidence": 0.9988686658644393,
+    "final_intent": "UNKNOWN_INTENT",
+    "status": "fallback_applied",
+    "fallback_applied": true,
+    "action": "FALLBACK_HELP_OR_CLARIFY"
+   }
+  },
+  {
+   "name": "'How much did I spend this month?' @ confidence - 1ulp",
+   "probabilities": {
+    "TRANSFER_MONEY": 7.987748983992194e-06,
+    "CHECK_BALANCE": 0.0009234925438741841,
+    "VIEW_TRANSACTIONS": 0.00011697284355781699,
+    "WITHDRAW_MONEY": 1.6226674271473315e-05,
+    "BILL_PAY": 1.240928761857951e-05,
+    "HELP_SUPPORT": 1.612438954099515e-05,
+    "MANAGE_CONTACTS": 9.422681059097531e-06,
+    "VIEW_GROUP": 2.8697966654578838e-05,
+    "CHECK_SPENDING": 0.9988686658644393
+   },
+   "threshold": 0.9988686658644392,
+   "expected": {
+    "raw_prediction": "CHECK_SPENDING",
+    "confidence": 0.9988686658644393,
+    "final_intent": "CHECK_SPENDING",
+    "status": "accepted",
+    "fallback_applied": false,
+    "action": "ROUTE_CHECK_SPENDING"
+   }
+  },
+  {
+   "name": "'Show my spending on food' @ 0.0",
+   "probabilities": {
+    "TRANSFER_MONEY": 0.00011840229668068904,
+    "CHECK_BALANCE": 0.001457604954564647,
+    "VIEW_TRANSACTIONS": 0.01310412287843897,
+    "WITHDRAW_MONEY": 0.0003193461607813108,
+    "BILL_PAY": 0.0003309346122439705,
+    "HELP_SUPPORT": 0.000845413807644712,
+    "MANAGE_CONTACTS": 0.0006459296007722136,
+    "VIEW_GROUP": 0.006203545976112817,
+    "CHECK_SPENDING": 0.9769746997127607
+   },
+   "threshold": 0.0,
+   "expected": {
+    "raw_prediction": "CHECK_SPENDING",
+    "confidence": 0.9769746997127607,
+    "final_intent": "CHECK_SPENDING",
+    "status": "accepted",
+    "fallback_applied": false,
+    "action": "ROUTE_CHECK_SPENDING"
+   }
+  },
+  {
+   "name": "'Show my spending on food' @ 0.01",
+   "probabilities": {
+    "TRANSFER_MONEY": 0.00011840229668068904,
+    "CHECK_BALANCE": 0.001457604954564647,
+    "VIEW_TRANSACTIONS": 0.01310412287843897,
+    "WITHDRAW_MONEY": 0.0003193461607813108,
+    "BILL_PAY": 0.0003309346122439705,
+    "HELP_SUPPORT": 0.000845413807644712,
+    "MANAGE_CONTACTS": 0.0006459296007722136,
+    "VIEW_GROUP": 0.006203545976112817,
+    "CHECK_SPENDING": 0.9769746997127607
+   },
+   "threshold": 0.01,
+   "expected": {
+    "raw_prediction": "CHECK_SPENDING",
+    "confidence": 0.9769746997127607,
+    "final_intent": "CHECK_SPENDING",
+    "status": "accepted",
+    "fallback_applied": false,
+    "action": "ROUTE_CHECK_SPENDING"
+   }
+  },
+  {
+   "name": "'Show my spending on food' @ 0.1",
+   "probabilities": {
+    "TRANSFER_MONEY": 0.00011840229668068904,
+    "CHECK_BALANCE": 0.001457604954564647,
+    "VIEW_TRANSACTIONS": 0.01310412287843897,
+    "WITHDRAW_MONEY": 0.0003193461607813108,
+    "BILL_PAY": 0.0003309346122439705,
+    "HELP_SUPPORT": 0.000845413807644712,
+    "MANAGE_CONTACTS": 0.0006459296007722136,
+    "VIEW_GROUP": 0.006203545976112817,
+    "CHECK_SPENDING": 0.9769746997127607
+   },
+   "threshold": 0.1,
+   "expected": {
+    "raw_prediction": "CHECK_SPENDING",
+    "confidence": 0.9769746997127607,
+    "final_intent": "CHECK_SPENDING",
+    "status": "accepted",
+    "fallback_applied": false,
+    "action": "ROUTE_CHECK_SPENDING"
+   }
+  },
+  {
+   "name": "'Show my spending on food' @ 0.25",
+   "probabilities": {
+    "TRANSFER_MONEY": 0.00011840229668068904,
+    "CHECK_BALANCE": 0.001457604954564647,
+    "VIEW_TRANSACTIONS": 0.01310412287843897,
+    "WITHDRAW_MONEY": 0.0003193461607813108,
+    "BILL_PAY": 0.0003309346122439705,
+    "HELP_SUPPORT": 0.000845413807644712,
+    "MANAGE_CONTACTS": 0.0006459296007722136,
+    "VIEW_GROUP": 0.006203545976112817,
+    "CHECK_SPENDING": 0.9769746997127607
+   },
+   "threshold": 0.25,
+   "expected": {
+    "raw_prediction": "CHECK_SPENDING",
+    "confidence": 0.9769746997127607,
+    "final_intent": "CHECK_SPENDING",
+    "status": "accepted",
+    "fallback_applied": false,
+    "action": "ROUTE_CHECK_SPENDING"
+   }
+  },
+  {
+   "name": "'Show my spending on food' @ 0.3",
+   "probabilities": {
+    "TRANSFER_MONEY": 0.00011840229668068904,
+    "CHECK_BALANCE": 0.001457604954564647,
+    "VIEW_TRANSACTIONS": 0.01310412287843897,
+    "WITHDRAW_MONEY": 0.0003193461607813108,
+    "BILL_PAY": 0.0003309346122439705,
+    "HELP_SUPPORT": 0.000845413807644712,
+    "MANAGE_CONTACTS": 0.0006459296007722136,
+    "VIEW_GROUP": 0.006203545976112817,
+    "CHECK_SPENDING": 0.9769746997127607
+   },
+   "threshold": 0.3,
+   "expected": {
+    "raw_prediction": "CHECK_SPENDING",
+    "confidence": 0.9769746997127607,
+    "final_intent": "CHECK_SPENDING",
+    "status": "accepted",
+    "fallback_applied": false,
+    "action": "ROUTE_CHECK_SPENDING"
+   }
+  },
+  {
+   "name": "'Show my spending on food' @ 0.35",
+   "probabilities": {
+    "TRANSFER_MONEY": 0.00011840229668068904,
+    "CHECK_BALANCE": 0.001457604954564647,
+    "VIEW_TRANSACTIONS": 0.01310412287843897,
+    "WITHDRAW_MONEY": 0.0003193461607813108,
+    "BILL_PAY": 0.0003309346122439705,
+    "HELP_SUPPORT": 0.000845413807644712,
+    "MANAGE_CONTACTS": 0.0006459296007722136,
+    "VIEW_GROUP": 0.006203545976112817,
+    "CHECK_SPENDING": 0.9769746997127607
+   },
+   "threshold": 0.35,
+   "expected": {
+    "raw_prediction": "CHECK_SPENDING",
+    "confidence": 0.9769746997127607,
+    "final_intent": "CHECK_SPENDING",
+    "status": "accepted",
+    "fallback_applied": false,
+    "action": "ROUTE_CHECK_SPENDING"
+   }
+  },
+  {
+   "name": "'Show my spending on food' @ 0.5",
+   "probabilities": {
+    "TRANSFER_MONEY": 0.00011840229668068904,
+    "CHECK_BALANCE": 0.001457604954564647,
+    "VIEW_TRANSACTIONS": 0.01310412287843897,
+    "WITHDRAW_MONEY": 0.0003193461607813108,
+    "BILL_PAY": 0.0003309346122439705,
+    "HELP_SUPPORT": 0.000845413807644712,
+    "MANAGE_CONTACTS": 0.0006459296007722136,
+    "VIEW_GROUP": 0.006203545976112817,
+    "CHECK_SPENDING": 0.9769746997127607
+   },
+   "threshold": 0.5,
+   "expected": {
+    "raw_prediction": "CHECK_SPENDING",
+    "confidence": 0.9769746997127607,
+    "final_intent": "CHECK_SPENDING",
+    "status": "accepted",
+    "fallback_applied": false,
+    "action": "ROUTE_CHECK_SPENDING"
+   }
+  },
+  {
+   "name": "'Show my spending on food' @ 0.6",
+   "probabilities": {
+    "TRANSFER_MONEY": 0.00011840229668068904,
+    "CHECK_BALANCE": 0.001457604954564647,
+    "VIEW_TRANSACTIONS": 0.01310412287843897,
+    "WITHDRAW_MONEY": 0.0003193461607813108,
+    "BILL_PAY": 0.0003309346122439705,
+    "HELP_SUPPORT": 0.000845413807644712,
+    "MANAGE_CONTACTS": 0.0006459296007722136,
+    "VIEW_GROUP": 0.006203545976112817,
+    "CHECK_SPENDING": 0.9769746997127607
+   },
+   "threshold": 0.6,
+   "expected": {
+    "raw_prediction": "CHECK_SPENDING",
+    "confidence": 0.9769746997127607,
+    "final_intent": "CHECK_SPENDING",
+    "status": "accepted",
+    "fallback_applied": false,
+    "action": "ROUTE_CHECK_SPENDING"
+   }
+  },
+  {
+   "name": "'Show my spending on food' @ 0.8",
+   "probabilities": {
+    "TRANSFER_MONEY": 0.00011840229668068904,
+    "CHECK_BALANCE": 0.001457604954564647,
+    "VIEW_TRANSACTIONS": 0.01310412287843897,
+    "WITHDRAW_MONEY": 0.0003193461607813108,
+    "BILL_PAY": 0.0003309346122439705,
+    "HELP_SUPPORT": 0.000845413807644712,
+    "MANAGE_CONTACTS": 0.0006459296007722136,
+    "VIEW_GROUP": 0.006203545976112817,
+    "CHECK_SPENDING": 0.9769746997127607
+   },
+   "threshold": 0.8,
+   "expected": {
+    "raw_prediction": "CHECK_SPENDING",
+    "confidence": 0.9769746997127607,
+    "final_intent": "CHECK_SPENDING",
+    "status": "accepted",
+    "fallback_applied": false,
+    "action": "ROUTE_CHECK_SPENDING"
+   }
+  },
+  {
+   "name": "'Show my spending on food' @ 0.99",
+   "probabilities": {
+    "TRANSFER_MONEY": 0.00011840229668068904,
+    "CHECK_BALANCE": 0.001457604954564647,
+    "VIEW_TRANSACTIONS": 0.01310412287843897,
+    "WITHDRAW_MONEY": 0.0003193461607813108,
+    "BILL_PAY": 0.0003309346122439705,
+    "HELP_SUPPORT": 0.000845413807644712,
+    "MANAGE_CONTACTS": 0.0006459296007722136,
+    "VIEW_GROUP": 0.006203545976112817,
+    "CHECK_SPENDING": 0.9769746997127607
+   },
+   "threshold": 0.99,
+   "expected": {
+    "raw_prediction": "CHECK_SPENDING",
+    "confidence": 0.9769746997127607,
+    "final_intent": "UNKNOWN_INTENT",
+    "status": "fallback_applied",
+    "fallback_applied": true,
+    "action": "FALLBACK_HELP_OR_CLARIFY"
+   }
+  },
+  {
+   "name": "'Show my spending on food' @ 1.0",
+   "probabilities": {
+    "TRANSFER_MONEY": 0.00011840229668068904,
+    "CHECK_BALANCE": 0.001457604954564647,
+    "VIEW_TRANSACTIONS": 0.01310412287843897,
+    "WITHDRAW_MONEY": 0.0003193461607813108,
+    "BILL_PAY": 0.0003309346122439705,
+    "HELP_SUPPORT": 0.000845413807644712,
+    "MANAGE_CONTACTS": 0.0006459296007722136,
+    "VIEW_GROUP": 0.006203545976112817,
+    "CHECK_SPENDING": 0.9769746997127607
+   },
+   "threshold": 1.0,
+   "expected": {
+    "raw_prediction": "CHECK_SPENDING",
+    "confidence": 0.9769746997127607,
+    "final_intent": "UNKNOWN_INTENT",
+    "status": "fallback_applied",
+    "fallback_applied": true,
+    "action": "FALLBACK_HELP_OR_CLARIFY"
+   }
+  },
+  {
+   "name": "'Show my spending on food' @ 0.34152482478950635",
+   "probabilities": {
+    "TRANSFER_MONEY": 0.00011840229668068904,
+    "CHECK_BALANCE": 0.001457604954564647,
+    "VIEW_TRANSACTIONS": 0.01310412287843897,
+    "WITHDRAW_MONEY": 0.0003193461607813108,
+    "BILL_PAY": 0.0003309346122439705,
+    "HELP_SUPPORT": 0.000845413807644712,
+    "MANAGE_CONTACTS": 0.0006459296007722136,
+    "VIEW_GROUP": 0.006203545976112817,
+    "CHECK_SPENDING": 0.9769746997127607
+   },
+   "threshold": 0.34152482478950635,
+   "expected": {
+    "raw_prediction": "CHECK_SPENDING",
+    "confidence": 0.9769746997127607,
+    "final_intent": "CHECK_SPENDING",
+    "status": "accepted",
+    "fallback_applied": false,
+    "action": "ROUTE_CHECK_SPENDING"
+   }
+  },
+  {
+   "name": "'Show my spending on food' @ confidence (equal)",
+   "probabilities": {
+    "TRANSFER_MONEY": 0.00011840229668068904,
+    "CHECK_BALANCE": 0.001457604954564647,
+    "VIEW_TRANSACTIONS": 0.01310412287843897,
+    "WITHDRAW_MONEY": 0.0003193461607813108,
+    "BILL_PAY": 0.0003309346122439705,
+    "HELP_SUPPORT": 0.000845413807644712,
+    "MANAGE_CONTACTS": 0.0006459296007722136,
+    "VIEW_GROUP": 0.006203545976112817,
+    "CHECK_SPENDING": 0.9769746997127607
+   },
+   "threshold": 0.9769746997127607,
+   "expected": {
+    "raw_prediction": "CHECK_SPENDING",
+    "confidence": 0.9769746997127607,
+    "final_intent": "CHECK_SPENDING",
+    "status": "accepted",
+    "fallback_applied": false,
+    "action": "ROUTE_CHECK_SPENDING"
+   }
+  },
+  {
+   "name": "'Show my spending on food' @ confidence + 1ulp",
+   "probabilities": {
+    "TRANSFER_MONEY": 0.00011840229668068904,
+    "CHECK_BALANCE": 0.001457604954564647,
+    "VIEW_TRANSACTIONS": 0.01310412287843897,
+    "WITHDRAW_MONEY": 0.0003193461607813108,
+    "BILL_PAY": 0.0003309346122439705,
+    "HELP_SUPPORT": 0.000845413807644712,
+    "MANAGE_CONTACTS": 0.0006459296007722136,
+    "VIEW_GROUP": 0.006203545976112817,
+    "CHECK_SPENDING": 0.9769746997127607
+   },
+   "threshold": 0.9769746997127609,
+   "expected": {
+    "raw_prediction": "CHECK_SPENDING",
+    "confidence": 0.9769746997127607,
+    "final_intent": "UNKNOWN_INTENT",
+    "status": "fallback_applied",
+    "fallback_applied": true,
+    "action": "FALLBACK_HELP_OR_CLARIFY"
+   }
+  },
+  {
+   "name": "'Show my spending on food' @ confidence - 1ulp",
+   "probabilities": {
+    "TRANSFER_MONEY": 0.00011840229668068904,
+    "CHECK_BALANCE": 0.001457604954564647,
+    "VIEW_TRANSACTIONS": 0.01310412287843897,
+    "WITHDRAW_MONEY": 0.0003193461607813108,
+    "BILL_PAY": 0.0003309346122439705,
+    "HELP_SUPPORT": 0.000845413807644712,
+    "MANAGE_CONTACTS": 0.0006459296007722136,
+    "VIEW_GROUP": 0.006203545976112817,
+    "CHECK_SPENDING": 0.9769746997127607
+   },
+   "threshold": 0.9769746997127606,
+   "expected": {
+    "raw_prediction": "CHECK_SPENDING",
+    "confidence": 0.9769746997127607,
+    "final_intent": "CHECK_SPENDING",
+    "status": "accepted",
+    "fallback_applied": false,
+    "action": "ROUTE_CHECK_SPENDING"
+   }
+  },
+  {
+   "name": "'What did I spend last week?' @ 0.0",
+   "probabilities": {
+    "TRANSFER_MONEY": 0.00017881024280888008,
+    "CHECK_BALANCE": 0.000528095996667209,
+    "VIEW_TRANSACTIONS": 0.003470355528720357,
+    "WITHDRAW_MONEY": 0.0004902472915886581,
+    "BILL_PAY": 0.00024975143532204625,
+    "HELP_SUPPORT": 0.0005269830373588598,
+    "MANAGE_CONTACTS": 0.0003583762948175975,
+    "VIEW_GROUP": 0.00037091736899807186,
+    "CHECK_SPENDING": 0.9938264628037183
+   },
+   "threshold": 0.0,
+   "expected": {
+    "raw_prediction": "CHECK_SPENDING",
+    "confidence": 0.9938264628037183,
+    "final_intent": "CHECK_SPENDING",
+    "status": "accepted",
+    "fallback_applied": false,
+    "action": "ROUTE_CHECK_SPENDING"
+   }
+  },
+  {
+   "name": "'What did I spend last week?' @ 0.01",
+   "probabilities": {
+    "TRANSFER_MONEY": 0.00017881024280888008,
+    "CHECK_BALANCE": 0.000528095996667209,
+    "VIEW_TRANSACTIONS": 0.003470355528720357,
+    "WITHDRAW_MONEY": 0.0004902472915886581,
+    "BILL_PAY": 0.00024975143532204625,
+    "HELP_SUPPORT": 0.0005269830373588598,
+    "MANAGE_CONTACTS": 0.0003583762948175975,
+    "VIEW_GROUP": 0.00037091736899807186,
+    "CHECK_SPENDING": 0.9938264628037183
+   },
+   "threshold": 0.01,
+   "expected": {
+    "raw_prediction": "CHECK_SPENDING",
+    "confidence": 0.9938264628037183,
+    "final_intent": "CHECK_SPENDING",
+    "status": "accepted",
+    "fallback_applied": false,
+    "action": "ROUTE_CHECK_SPENDING"
+   }
+  },
+  {
+   "name": "'What did I spend last week?' @ 0.1",
+   "probabilities": {
+    "TRANSFER_MONEY": 0.00017881024280888008,
+    "CHECK_BALANCE": 0.000528095996667209,
+    "VIEW_TRANSACTIONS": 0.003470355528720357,
+    "WITHDRAW_MONEY": 0.0004902472915886581,
+    "BILL_PAY": 0.00024975143532204625,
+    "HELP_SUPPORT": 0.0005269830373588598,
+    "MANAGE_CONTACTS": 0.0003583762948175975,
+    "VIEW_GROUP": 0.00037091736899807186,
+    "CHECK_SPENDING": 0.9938264628037183
+   },
+   "threshold": 0.1,
+   "expected": {
+    "raw_prediction": "CHECK_SPENDING",
+    "confidence": 0.9938264628037183,
+    "final_intent": "CHECK_SPENDING",
+    "status": "accepted",
+    "fallback_applied": false,
+    "action": "ROUTE_CHECK_SPENDING"
+   }
+  },
+  {
+   "name": "'What did I spend last week?' @ 0.25",
+   "probabilities": {
+    "TRANSFER_MONEY": 0.00017881024280888008,
+    "CHECK_BALANCE": 0.000528095996667209,
+    "VIEW_TRANSACTIONS": 0.003470355528720357,
+    "WITHDRAW_MONEY": 0.0004902472915886581,
+    "BILL_PAY": 0.00024975143532204625,
+    "HELP_SUPPORT": 0.0005269830373588598,
+    "MANAGE_CONTACTS": 0.0003583762948175975,
+    "VIEW_GROUP": 0.00037091736899807186,
+    "CHECK_SPENDING": 0.9938264628037183
+   },
+   "threshold": 0.25,
+   "expected": {
+    "raw_prediction": "CHECK_SPENDING",
+    "confidence": 0.9938264628037183,
+    "final_intent": "CHECK_SPENDING",
+    "status": "accepted",
+    "fallback_applied": false,
+    "action": "ROUTE_CHECK_SPENDING"
+   }
+  },
+  {
+   "name": "'What did I spend last week?' @ 0.3",
+   "probabilities": {
+    "TRANSFER_MONEY": 0.00017881024280888008,
+    "CHECK_BALANCE": 0.000528095996667209,
+    "VIEW_TRANSACTIONS": 0.003470355528720357,
+    "WITHDRAW_MONEY": 0.0004902472915886581,
+    "BILL_PAY": 0.00024975143532204625,
+    "HELP_SUPPORT": 0.0005269830373588598,
+    "MANAGE_CONTACTS": 0.0003583762948175975,
+    "VIEW_GROUP": 0.00037091736899807186,
+    "CHECK_SPENDING": 0.9938264628037183
+   },
+   "threshold": 0.3,
+   "expected": {
+    "raw_prediction": "CHECK_SPENDING",
+    "confidence": 0.9938264628037183,
+    "final_intent": "CHECK_SPENDING",
+    "status": "accepted",
+    "fallback_applied": false,
+    "action": "ROUTE_CHECK_SPENDING"
+   }
+  },
+  {
+   "name": "'What did I spend last week?' @ 0.35",
+   "probabilities": {
+    "TRANSFER_MONEY": 0.00017881024280888008,
+    "CHECK_BALANCE": 0.000528095996667209,
+    "VIEW_TRANSACTIONS": 0.003470355528720357,
+    "WITHDRAW_MONEY": 0.0004902472915886581,
+    "BILL_PAY": 0.00024975143532204625,
+    "HELP_SUPPORT": 0.0005269830373588598,
+    "MANAGE_CONTACTS": 0.0003583762948175975,
+    "VIEW_GROUP": 0.00037091736899807186,
+    "CHECK_SPENDING": 0.9938264628037183
+   },
+   "threshold": 0.35,
+   "expected": {
+    "raw_prediction": "CHECK_SPENDING",
+    "confidence": 0.9938264628037183,
+    "final_intent": "CHECK_SPENDING",
+    "status": "accepted",
+    "fallback_applied": false,
+    "action": "ROUTE_CHECK_SPENDING"
+   }
+  },
+  {
+   "name": "'What did I spend last week?' @ 0.5",
+   "probabilities": {
+    "TRANSFER_MONEY": 0.00017881024280888008,
+    "CHECK_BALANCE": 0.000528095996667209,
+    "VIEW_TRANSACTIONS": 0.003470355528720357,
+    "WITHDRAW_MONEY": 0.0004902472915886581,
+    "BILL_PAY": 0.00024975143532204625,
+    "HELP_SUPPORT": 0.0005269830373588598,
+    "MANAGE_CONTACTS": 0.0003583762948175975,
+    "VIEW_GROUP": 0.00037091736899807186,
+    "CHECK_SPENDING": 0.9938264628037183
+   },
+   "threshold": 0.5,
+   "expected": {
+    "raw_prediction": "CHECK_SPENDING",
+    "confidence": 0.9938264628037183,
+    "final_intent": "CHECK_SPENDING",
+    "status": "accepted",
+    "fallback_applied": false,
+    "action": "ROUTE_CHECK_SPENDING"
+   }
+  },
+  {
+   "name": "'What did I spend last week?' @ 0.6",
+   "probabilities": {
+    "TRANSFER_MONEY": 0.00017881024280888008,
+    "CHECK_BALANCE": 0.000528095996667209,
+    "VIEW_TRANSACTIONS": 0.003470355528720357,
+    "WITHDRAW_MONEY": 0.0004902472915886581,
+    "BILL_PAY": 0.00024975143532204625,
+    "HELP_SUPPORT": 0.0005269830373588598,
+    "MANAGE_CONTACTS": 0.0003583762948175975,
+    "VIEW_GROUP": 0.00037091736899807186,
+    "CHECK_SPENDING": 0.9938264628037183
+   },
+   "threshold": 0.6,
+   "expected": {
+    "raw_prediction": "CHECK_SPENDING",
+    "confidence": 0.9938264628037183,
+    "final_intent": "CHECK_SPENDING",
+    "status": "accepted",
+    "fallback_applied": false,
+    "action": "ROUTE_CHECK_SPENDING"
+   }
+  },
+  {
+   "name": "'What did I spend last week?' @ 0.8",
+   "probabilities": {
+    "TRANSFER_MONEY": 0.00017881024280888008,
+    "CHECK_BALANCE": 0.000528095996667209,
+    "VIEW_TRANSACTIONS": 0.003470355528720357,
+    "WITHDRAW_MONEY": 0.0004902472915886581,
+    "BILL_PAY": 0.00024975143532204625,
+    "HELP_SUPPORT": 0.0005269830373588598,
+    "MANAGE_CONTACTS": 0.0003583762948175975,
+    "VIEW_GROUP": 0.00037091736899807186,
+    "CHECK_SPENDING": 0.9938264628037183
+   },
+   "threshold": 0.8,
+   "expected": {
+    "raw_prediction": "CHECK_SPENDING",
+    "confidence": 0.9938264628037183,
+    "final_intent": "CHECK_SPENDING",
+    "status": "accepted",
+    "fallback_applied": false,
+    "action": "ROUTE_CHECK_SPENDING"
+   }
+  },
+  {
+   "name": "'What did I spend last week?' @ 0.99",
+   "probabilities": {
+    "TRANSFER_MONEY": 0.00017881024280888008,
+    "CHECK_BALANCE": 0.000528095996667209,
+    "VIEW_TRANSACTIONS": 0.003470355528720357,
+    "WITHDRAW_MONEY": 0.0004902472915886581,
+    "BILL_PAY": 0.00024975143532204625,
+    "HELP_SUPPORT": 0.0005269830373588598,
+    "MANAGE_CONTACTS": 0.0003583762948175975,
+    "VIEW_GROUP": 0.00037091736899807186,
+    "CHECK_SPENDING": 0.9938264628037183
+   },
+   "threshold": 0.99,
+   "expected": {
+    "raw_prediction": "CHECK_SPENDING",
+    "confidence": 0.9938264628037183,
+    "final_intent": "CHECK_SPENDING",
+    "status": "accepted",
+    "fallback_applied": false,
+    "action": "ROUTE_CHECK_SPENDING"
+   }
+  },
+  {
+   "name": "'What did I spend last week?' @ 1.0",
+   "probabilities": {
+    "TRANSFER_MONEY": 0.00017881024280888008,
+    "CHECK_BALANCE": 0.000528095996667209,
+    "VIEW_TRANSACTIONS": 0.003470355528720357,
+    "WITHDRAW_MONEY": 0.0004902472915886581,
+    "BILL_PAY": 0.00024975143532204625,
+    "HELP_SUPPORT": 0.0005269830373588598,
+    "MANAGE_CONTACTS": 0.0003583762948175975,
+    "VIEW_GROUP": 0.00037091736899807186,
+    "CHECK_SPENDING": 0.9938264628037183
+   },
+   "threshold": 1.0,
+   "expected": {
+    "raw_prediction": "CHECK_SPENDING",
+    "confidence": 0.9938264628037183,
+    "final_intent": "UNKNOWN_INTENT",
+    "status": "fallback_applied",
+    "fallback_applied": true,
+    "action": "FALLBACK_HELP_OR_CLARIFY"
+   }
+  },
+  {
+   "name": "'What did I spend last week?' @ 0.34152482478950635",
+   "probabilities": {
+    "TRANSFER_MONEY": 0.00017881024280888008,
+    "CHECK_BALANCE": 0.000528095996667209,
+    "VIEW_TRANSACTIONS": 0.003470355528720357,
+    "WITHDRAW_MONEY": 0.0004902472915886581,
+    "BILL_PAY": 0.00024975143532204625,
+    "HELP_SUPPORT": 0.0005269830373588598,
+    "MANAGE_CONTACTS": 0.0003583762948175975,
+    "VIEW_GROUP": 0.00037091736899807186,
+    "CHECK_SPENDING": 0.9938264628037183
+   },
+   "threshold": 0.34152482478950635,
+   "expected": {
+    "raw_prediction": "CHECK_SPENDING",
+    "confidence": 0.9938264628037183,
+    "final_intent": "CHECK_SPENDING",
+    "status": "accepted",
+    "fallback_applied": false,
+    "action": "ROUTE_CHECK_SPENDING"
+   }
+  },
+  {
+   "name": "'What did I spend last week?' @ confidence (equal)",
+   "probabilities": {
+    "TRANSFER_MONEY": 0.00017881024280888008,
+    "CHECK_BALANCE": 0.000528095996667209,
+    "VIEW_TRANSACTIONS": 0.003470355528720357,
+    "WITHDRAW_MONEY": 0.0004902472915886581,
+    "BILL_PAY": 0.00024975143532204625,
+    "HELP_SUPPORT": 0.0005269830373588598,
+    "MANAGE_CONTACTS": 0.0003583762948175975,
+    "VIEW_GROUP": 0.00037091736899807186,
+    "CHECK_SPENDING": 0.9938264628037183
+   },
+   "threshold": 0.9938264628037183,
+   "expected": {
+    "raw_prediction": "CHECK_SPENDING",
+    "confidence": 0.9938264628037183,
+    "final_intent": "CHECK_SPENDING",
+    "status": "accepted",
+    "fallback_applied": false,
+    "action": "ROUTE_CHECK_SPENDING"
+   }
+  },
+  {
+   "name": "'What did I spend last week?' @ confidence + 1ulp",
+   "probabilities": {
+    "TRANSFER_MONEY": 0.00017881024280888008,
+    "CHECK_BALANCE": 0.000528095996667209,
+    "VIEW_TRANSACTIONS": 0.003470355528720357,
+    "WITHDRAW_MONEY": 0.0004902472915886581,
+    "BILL_PAY": 0.00024975143532204625,
+    "HELP_SUPPORT": 0.0005269830373588598,
+    "MANAGE_CONTACTS": 0.0003583762948175975,
+    "VIEW_GROUP": 0.00037091736899807186,
+    "CHECK_SPENDING": 0.9938264628037183
+   },
+   "threshold": 0.9938264628037184,
+   "expected": {
+    "raw_prediction": "CHECK_SPENDING",
+    "confidence": 0.9938264628037183,
+    "final_intent": "UNKNOWN_INTENT",
+    "status": "fallback_applied",
+    "fallback_applied": true,
+    "action": "FALLBACK_HELP_OR_CLARIFY"
+   }
+  },
+  {
+   "name": "'What did I spend last week?' @ confidence - 1ulp",
+   "probabilities": {
+    "TRANSFER_MONEY": 0.00017881024280888008,
+    "CHECK_BALANCE": 0.000528095996667209,
+    "VIEW_TRANSACTIONS": 0.003470355528720357,
+    "WITHDRAW_MONEY": 0.0004902472915886581,
+    "BILL_PAY": 0.00024975143532204625,
+    "HELP_SUPPORT": 0.0005269830373588598,
+    "MANAGE_CONTACTS": 0.0003583762948175975,
+    "VIEW_GROUP": 0.00037091736899807186,
+    "CHECK_SPENDING": 0.9938264628037183
+   },
+   "threshold": 0.9938264628037182,
+   "expected": {
+    "raw_prediction": "CHECK_SPENDING",
+    "confidence": 0.9938264628037183,
+    "final_intent": "CHECK_SPENDING",
+    "status": "accepted",
+    "fallback_applied": false,
+    "action": "ROUTE_CHECK_SPENDING"
+   }
+  },
+  {
+   "name": "\"What's the weather tomorrow?\" @ 0.0",
+   "probabilities": {
+    "TRANSFER_MONEY": 0.052306426125510584,
+    "CHECK_BALANCE": 0.03621278778041673,
+    "VIEW_TRANSACTIONS": 0.32635326949900184,
+    "WITHDRAW_MONEY": 0.039596772660458524,
+    "BILL_PAY": 0.041459866002076365,
+    "HELP_SUPPORT": 0.05657548557938889,
+    "MANAGE_CONTACTS": 0.2754616458259169,
+    "VIEW_GROUP": 0.07592697058110874,
+    "CHECK_SPENDING": 0.09610677594612127
    },
    "threshold": 0.0,
    "expected": {
     "raw_prediction": "VIEW_TRANSACTIONS",
-    "confidence": 0.3651644280942058,
+    "confidence": 0.32635326949900184,
     "final_intent": "VIEW_TRANSACTIONS",
     "status": "accepted",
     "fallback_applied": false,
@@ -9082,22 +10873,22 @@
    }
   },
   {
-   "name": "\"What's the weather today?\" @ 0.01",
+   "name": "\"What's the weather tomorrow?\" @ 0.01",
    "probabilities": {
-    "TRANSFER_MONEY": 0.04550221557547616,
-    "CHECK_BALANCE": 0.03142888646733226,
-    "VIEW_TRANSACTIONS": 0.3651644280942058,
-    "WITHDRAW_MONEY": 0.03445687965029147,
-    "BILL_PAY": 0.03601798544647611,
-    "HELP_SUPPORT": 0.060950153627078334,
-    "MANAGE_CONTACTS": 0.21736397471395305,
-    "VIEW_GROUP": 0.05924874179744802,
-    "CHECK_SPENDING": 0.1498667346277389
+    "TRANSFER_MONEY": 0.052306426125510584,
+    "CHECK_BALANCE": 0.03621278778041673,
+    "VIEW_TRANSACTIONS": 0.32635326949900184,
+    "WITHDRAW_MONEY": 0.039596772660458524,
+    "BILL_PAY": 0.041459866002076365,
+    "HELP_SUPPORT": 0.05657548557938889,
+    "MANAGE_CONTACTS": 0.2754616458259169,
+    "VIEW_GROUP": 0.07592697058110874,
+    "CHECK_SPENDING": 0.09610677594612127
    },
    "threshold": 0.01,
    "expected": {
     "raw_prediction": "VIEW_TRANSACTIONS",
-    "confidence": 0.3651644280942058,
+    "confidence": 0.32635326949900184,
     "final_intent": "VIEW_TRANSACTIONS",
     "status": "accepted",
     "fallback_applied": false,
@@ -9105,22 +10896,22 @@
    }
   },
   {
-   "name": "\"What's the weather today?\" @ 0.1",
+   "name": "\"What's the weather tomorrow?\" @ 0.1",
    "probabilities": {
-    "TRANSFER_MONEY": 0.04550221557547616,
-    "CHECK_BALANCE": 0.03142888646733226,
-    "VIEW_TRANSACTIONS": 0.3651644280942058,
-    "WITHDRAW_MONEY": 0.03445687965029147,
-    "BILL_PAY": 0.03601798544647611,
-    "HELP_SUPPORT": 0.060950153627078334,
-    "MANAGE_CONTACTS": 0.21736397471395305,
-    "VIEW_GROUP": 0.05924874179744802,
-    "CHECK_SPENDING": 0.1498667346277389
+    "TRANSFER_MONEY": 0.052306426125510584,
+    "CHECK_BALANCE": 0.03621278778041673,
+    "VIEW_TRANSACTIONS": 0.32635326949900184,
+    "WITHDRAW_MONEY": 0.039596772660458524,
+    "BILL_PAY": 0.041459866002076365,
+    "HELP_SUPPORT": 0.05657548557938889,
+    "MANAGE_CONTACTS": 0.2754616458259169,
+    "VIEW_GROUP": 0.07592697058110874,
+    "CHECK_SPENDING": 0.09610677594612127
    },
    "threshold": 0.1,
    "expected": {
     "raw_prediction": "VIEW_TRANSACTIONS",
-    "confidence": 0.3651644280942058,
+    "confidence": 0.32635326949900184,
     "final_intent": "VIEW_TRANSACTIONS",
     "status": "accepted",
     "fallback_applied": false,
@@ -9128,22 +10919,22 @@
    }
   },
   {
-   "name": "\"What's the weather today?\" @ 0.25",
+   "name": "\"What's the weather tomorrow?\" @ 0.25",
    "probabilities": {
-    "TRANSFER_MONEY": 0.04550221557547616,
-    "CHECK_BALANCE": 0.03142888646733226,
-    "VIEW_TRANSACTIONS": 0.3651644280942058,
-    "WITHDRAW_MONEY": 0.03445687965029147,
-    "BILL_PAY": 0.03601798544647611,
-    "HELP_SUPPORT": 0.060950153627078334,
-    "MANAGE_CONTACTS": 0.21736397471395305,
-    "VIEW_GROUP": 0.05924874179744802,
-    "CHECK_SPENDING": 0.1498667346277389
+    "TRANSFER_MONEY": 0.052306426125510584,
+    "CHECK_BALANCE": 0.03621278778041673,
+    "VIEW_TRANSACTIONS": 0.32635326949900184,
+    "WITHDRAW_MONEY": 0.039596772660458524,
+    "BILL_PAY": 0.041459866002076365,
+    "HELP_SUPPORT": 0.05657548557938889,
+    "MANAGE_CONTACTS": 0.2754616458259169,
+    "VIEW_GROUP": 0.07592697058110874,
+    "CHECK_SPENDING": 0.09610677594612127
    },
    "threshold": 0.25,
    "expected": {
     "raw_prediction": "VIEW_TRANSACTIONS",
-    "confidence": 0.3651644280942058,
+    "confidence": 0.32635326949900184,
     "final_intent": "VIEW_TRANSACTIONS",
     "status": "accepted",
     "fallback_applied": false,
@@ -9151,22 +10942,22 @@
    }
   },
   {
-   "name": "\"What's the weather today?\" @ 0.3",
+   "name": "\"What's the weather tomorrow?\" @ 0.3",
    "probabilities": {
-    "TRANSFER_MONEY": 0.04550221557547616,
-    "CHECK_BALANCE": 0.03142888646733226,
-    "VIEW_TRANSACTIONS": 0.3651644280942058,
-    "WITHDRAW_MONEY": 0.03445687965029147,
-    "BILL_PAY": 0.03601798544647611,
-    "HELP_SUPPORT": 0.060950153627078334,
-    "MANAGE_CONTACTS": 0.21736397471395305,
-    "VIEW_GROUP": 0.05924874179744802,
-    "CHECK_SPENDING": 0.1498667346277389
+    "TRANSFER_MONEY": 0.052306426125510584,
+    "CHECK_BALANCE": 0.03621278778041673,
+    "VIEW_TRANSACTIONS": 0.32635326949900184,
+    "WITHDRAW_MONEY": 0.039596772660458524,
+    "BILL_PAY": 0.041459866002076365,
+    "HELP_SUPPORT": 0.05657548557938889,
+    "MANAGE_CONTACTS": 0.2754616458259169,
+    "VIEW_GROUP": 0.07592697058110874,
+    "CHECK_SPENDING": 0.09610677594612127
    },
    "threshold": 0.3,
    "expected": {
     "raw_prediction": "VIEW_TRANSACTIONS",
-    "confidence": 0.3651644280942058,
+    "confidence": 0.32635326949900184,
     "final_intent": "VIEW_TRANSACTIONS",
     "status": "accepted",
     "fallback_applied": false,
@@ -9174,45 +10965,45 @@
    }
   },
   {
-   "name": "\"What's the weather today?\" @ 0.35",
+   "name": "\"What's the weather tomorrow?\" @ 0.35",
    "probabilities": {
-    "TRANSFER_MONEY": 0.04550221557547616,
-    "CHECK_BALANCE": 0.03142888646733226,
-    "VIEW_TRANSACTIONS": 0.3651644280942058,
-    "WITHDRAW_MONEY": 0.03445687965029147,
-    "BILL_PAY": 0.03601798544647611,
-    "HELP_SUPPORT": 0.060950153627078334,
-    "MANAGE_CONTACTS": 0.21736397471395305,
-    "VIEW_GROUP": 0.05924874179744802,
-    "CHECK_SPENDING": 0.1498667346277389
+    "TRANSFER_MONEY": 0.052306426125510584,
+    "CHECK_BALANCE": 0.03621278778041673,
+    "VIEW_TRANSACTIONS": 0.32635326949900184,
+    "WITHDRAW_MONEY": 0.039596772660458524,
+    "BILL_PAY": 0.041459866002076365,
+    "HELP_SUPPORT": 0.05657548557938889,
+    "MANAGE_CONTACTS": 0.2754616458259169,
+    "VIEW_GROUP": 0.07592697058110874,
+    "CHECK_SPENDING": 0.09610677594612127
    },
    "threshold": 0.35,
    "expected": {
     "raw_prediction": "VIEW_TRANSACTIONS",
-    "confidence": 0.3651644280942058,
-    "final_intent": "VIEW_TRANSACTIONS",
-    "status": "accepted",
-    "fallback_applied": false,
-    "action": "ROUTE_VIEW_TRANSACTIONS"
+    "confidence": 0.32635326949900184,
+    "final_intent": "UNKNOWN_INTENT",
+    "status": "fallback_applied",
+    "fallback_applied": true,
+    "action": "FALLBACK_HELP_OR_CLARIFY"
    }
   },
   {
-   "name": "\"What's the weather today?\" @ 0.5",
+   "name": "\"What's the weather tomorrow?\" @ 0.5",
    "probabilities": {
-    "TRANSFER_MONEY": 0.04550221557547616,
-    "CHECK_BALANCE": 0.03142888646733226,
-    "VIEW_TRANSACTIONS": 0.3651644280942058,
-    "WITHDRAW_MONEY": 0.03445687965029147,
-    "BILL_PAY": 0.03601798544647611,
-    "HELP_SUPPORT": 0.060950153627078334,
-    "MANAGE_CONTACTS": 0.21736397471395305,
-    "VIEW_GROUP": 0.05924874179744802,
-    "CHECK_SPENDING": 0.1498667346277389
+    "TRANSFER_MONEY": 0.052306426125510584,
+    "CHECK_BALANCE": 0.03621278778041673,
+    "VIEW_TRANSACTIONS": 0.32635326949900184,
+    "WITHDRAW_MONEY": 0.039596772660458524,
+    "BILL_PAY": 0.041459866002076365,
+    "HELP_SUPPORT": 0.05657548557938889,
+    "MANAGE_CONTACTS": 0.2754616458259169,
+    "VIEW_GROUP": 0.07592697058110874,
+    "CHECK_SPENDING": 0.09610677594612127
    },
    "threshold": 0.5,
    "expected": {
     "raw_prediction": "VIEW_TRANSACTIONS",
-    "confidence": 0.3651644280942058,
+    "confidence": 0.32635326949900184,
     "final_intent": "UNKNOWN_INTENT",
     "status": "fallback_applied",
     "fallback_applied": true,
@@ -9220,22 +11011,22 @@
    }
   },
   {
-   "name": "\"What's the weather today?\" @ 0.6",
+   "name": "\"What's the weather tomorrow?\" @ 0.6",
    "probabilities": {
-    "TRANSFER_MONEY": 0.04550221557547616,
-    "CHECK_BALANCE": 0.03142888646733226,
-    "VIEW_TRANSACTIONS": 0.3651644280942058,
-    "WITHDRAW_MONEY": 0.03445687965029147,
-    "BILL_PAY": 0.03601798544647611,
-    "HELP_SUPPORT": 0.060950153627078334,
-    "MANAGE_CONTACTS": 0.21736397471395305,
-    "VIEW_GROUP": 0.05924874179744802,
-    "CHECK_SPENDING": 0.1498667346277389
+    "TRANSFER_MONEY": 0.052306426125510584,
+    "CHECK_BALANCE": 0.03621278778041673,
+    "VIEW_TRANSACTIONS": 0.32635326949900184,
+    "WITHDRAW_MONEY": 0.039596772660458524,
+    "BILL_PAY": 0.041459866002076365,
+    "HELP_SUPPORT": 0.05657548557938889,
+    "MANAGE_CONTACTS": 0.2754616458259169,
+    "VIEW_GROUP": 0.07592697058110874,
+    "CHECK_SPENDING": 0.09610677594612127
    },
    "threshold": 0.6,
    "expected": {
     "raw_prediction": "VIEW_TRANSACTIONS",
-    "confidence": 0.3651644280942058,
+    "confidence": 0.32635326949900184,
     "final_intent": "UNKNOWN_INTENT",
     "status": "fallback_applied",
     "fallback_applied": true,
@@ -9243,22 +11034,22 @@
    }
   },
   {
-   "name": "\"What's the weather today?\" @ 0.8",
+   "name": "\"What's the weather tomorrow?\" @ 0.8",
    "probabilities": {
-    "TRANSFER_MONEY": 0.04550221557547616,
-    "CHECK_BALANCE": 0.03142888646733226,
-    "VIEW_TRANSACTIONS": 0.3651644280942058,
-    "WITHDRAW_MONEY": 0.03445687965029147,
-    "BILL_PAY": 0.03601798544647611,
-    "HELP_SUPPORT": 0.060950153627078334,
-    "MANAGE_CONTACTS": 0.21736397471395305,
-    "VIEW_GROUP": 0.05924874179744802,
-    "CHECK_SPENDING": 0.1498667346277389
+    "TRANSFER_MONEY": 0.052306426125510584,
+    "CHECK_BALANCE": 0.03621278778041673,
+    "VIEW_TRANSACTIONS": 0.32635326949900184,
+    "WITHDRAW_MONEY": 0.039596772660458524,
+    "BILL_PAY": 0.041459866002076365,
+    "HELP_SUPPORT": 0.05657548557938889,
+    "MANAGE_CONTACTS": 0.2754616458259169,
+    "VIEW_GROUP": 0.07592697058110874,
+    "CHECK_SPENDING": 0.09610677594612127
    },
    "threshold": 0.8,
    "expected": {
     "raw_prediction": "VIEW_TRANSACTIONS",
-    "confidence": 0.3651644280942058,
+    "confidence": 0.32635326949900184,
     "final_intent": "UNKNOWN_INTENT",
     "status": "fallback_applied",
     "fallback_applied": true,
@@ -9266,22 +11057,22 @@
    }
   },
   {
-   "name": "\"What's the weather today?\" @ 0.99",
+   "name": "\"What's the weather tomorrow?\" @ 0.99",
    "probabilities": {
-    "TRANSFER_MONEY": 0.04550221557547616,
-    "CHECK_BALANCE": 0.03142888646733226,
-    "VIEW_TRANSACTIONS": 0.3651644280942058,
-    "WITHDRAW_MONEY": 0.03445687965029147,
-    "BILL_PAY": 0.03601798544647611,
-    "HELP_SUPPORT": 0.060950153627078334,
-    "MANAGE_CONTACTS": 0.21736397471395305,
-    "VIEW_GROUP": 0.05924874179744802,
-    "CHECK_SPENDING": 0.1498667346277389
+    "TRANSFER_MONEY": 0.052306426125510584,
+    "CHECK_BALANCE": 0.03621278778041673,
+    "VIEW_TRANSACTIONS": 0.32635326949900184,
+    "WITHDRAW_MONEY": 0.039596772660458524,
+    "BILL_PAY": 0.041459866002076365,
+    "HELP_SUPPORT": 0.05657548557938889,
+    "MANAGE_CONTACTS": 0.2754616458259169,
+    "VIEW_GROUP": 0.07592697058110874,
+    "CHECK_SPENDING": 0.09610677594612127
    },
    "threshold": 0.99,
    "expected": {
     "raw_prediction": "VIEW_TRANSACTIONS",
-    "confidence": 0.3651644280942058,
+    "confidence": 0.32635326949900184,
     "final_intent": "UNKNOWN_INTENT",
     "status": "fallback_applied",
     "fallback_applied": true,
@@ -9289,22 +11080,22 @@
    }
   },
   {
-   "name": "\"What's the weather today?\" @ 1.0",
+   "name": "\"What's the weather tomorrow?\" @ 1.0",
    "probabilities": {
-    "TRANSFER_MONEY": 0.04550221557547616,
-    "CHECK_BALANCE": 0.03142888646733226,
-    "VIEW_TRANSACTIONS": 0.3651644280942058,
-    "WITHDRAW_MONEY": 0.03445687965029147,
-    "BILL_PAY": 0.03601798544647611,
-    "HELP_SUPPORT": 0.060950153627078334,
-    "MANAGE_CONTACTS": 0.21736397471395305,
-    "VIEW_GROUP": 0.05924874179744802,
-    "CHECK_SPENDING": 0.1498667346277389
+    "TRANSFER_MONEY": 0.052306426125510584,
+    "CHECK_BALANCE": 0.03621278778041673,
+    "VIEW_TRANSACTIONS": 0.32635326949900184,
+    "WITHDRAW_MONEY": 0.039596772660458524,
+    "BILL_PAY": 0.041459866002076365,
+    "HELP_SUPPORT": 0.05657548557938889,
+    "MANAGE_CONTACTS": 0.2754616458259169,
+    "VIEW_GROUP": 0.07592697058110874,
+    "CHECK_SPENDING": 0.09610677594612127
    },
    "threshold": 1.0,
    "expected": {
     "raw_prediction": "VIEW_TRANSACTIONS",
-    "confidence": 0.3651644280942058,
+    "confidence": 0.32635326949900184,
     "final_intent": "UNKNOWN_INTENT",
     "status": "fallback_applied",
     "fallback_applied": true,
@@ -9312,68 +11103,22 @@
    }
   },
   {
-   "name": "\"What's the weather today?\" @ 0.34152482478950635",
+   "name": "\"What's the weather tomorrow?\" @ 0.34152482478950635",
    "probabilities": {
-    "TRANSFER_MONEY": 0.04550221557547616,
-    "CHECK_BALANCE": 0.03142888646733226,
-    "VIEW_TRANSACTIONS": 0.3651644280942058,
-    "WITHDRAW_MONEY": 0.03445687965029147,
-    "BILL_PAY": 0.03601798544647611,
-    "HELP_SUPPORT": 0.060950153627078334,
-    "MANAGE_CONTACTS": 0.21736397471395305,
-    "VIEW_GROUP": 0.05924874179744802,
-    "CHECK_SPENDING": 0.1498667346277389
+    "TRANSFER_MONEY": 0.052306426125510584,
+    "CHECK_BALANCE": 0.03621278778041673,
+    "VIEW_TRANSACTIONS": 0.32635326949900184,
+    "WITHDRAW_MONEY": 0.039596772660458524,
+    "BILL_PAY": 0.041459866002076365,
+    "HELP_SUPPORT": 0.05657548557938889,
+    "MANAGE_CONTACTS": 0.2754616458259169,
+    "VIEW_GROUP": 0.07592697058110874,
+    "CHECK_SPENDING": 0.09610677594612127
    },
    "threshold": 0.34152482478950635,
    "expected": {
     "raw_prediction": "VIEW_TRANSACTIONS",
-    "confidence": 0.3651644280942058,
-    "final_intent": "VIEW_TRANSACTIONS",
-    "status": "accepted",
-    "fallback_applied": false,
-    "action": "ROUTE_VIEW_TRANSACTIONS"
-   }
-  },
-  {
-   "name": "\"What's the weather today?\" @ confidence (equal)",
-   "probabilities": {
-    "TRANSFER_MONEY": 0.04550221557547616,
-    "CHECK_BALANCE": 0.03142888646733226,
-    "VIEW_TRANSACTIONS": 0.3651644280942058,
-    "WITHDRAW_MONEY": 0.03445687965029147,
-    "BILL_PAY": 0.03601798544647611,
-    "HELP_SUPPORT": 0.060950153627078334,
-    "MANAGE_CONTACTS": 0.21736397471395305,
-    "VIEW_GROUP": 0.05924874179744802,
-    "CHECK_SPENDING": 0.1498667346277389
-   },
-   "threshold": 0.3651644280942058,
-   "expected": {
-    "raw_prediction": "VIEW_TRANSACTIONS",
-    "confidence": 0.3651644280942058,
-    "final_intent": "VIEW_TRANSACTIONS",
-    "status": "accepted",
-    "fallback_applied": false,
-    "action": "ROUTE_VIEW_TRANSACTIONS"
-   }
-  },
-  {
-   "name": "\"What's the weather today?\" @ confidence + 1ulp",
-   "probabilities": {
-    "TRANSFER_MONEY": 0.04550221557547616,
-    "CHECK_BALANCE": 0.03142888646733226,
-    "VIEW_TRANSACTIONS": 0.3651644280942058,
-    "WITHDRAW_MONEY": 0.03445687965029147,
-    "BILL_PAY": 0.03601798544647611,
-    "HELP_SUPPORT": 0.060950153627078334,
-    "MANAGE_CONTACTS": 0.21736397471395305,
-    "VIEW_GROUP": 0.05924874179744802,
-    "CHECK_SPENDING": 0.1498667346277389
-   },
-   "threshold": 0.36516442809420585,
-   "expected": {
-    "raw_prediction": "VIEW_TRANSACTIONS",
-    "confidence": 0.3651644280942058,
+    "confidence": 0.32635326949900184,
     "final_intent": "UNKNOWN_INTENT",
     "status": "fallback_applied",
     "fallback_applied": true,
@@ -9381,22 +11126,68 @@
    }
   },
   {
-   "name": "\"What's the weather today?\" @ confidence - 1ulp",
+   "name": "\"What's the weather tomorrow?\" @ confidence (equal)",
    "probabilities": {
-    "TRANSFER_MONEY": 0.04550221557547616,
-    "CHECK_BALANCE": 0.03142888646733226,
-    "VIEW_TRANSACTIONS": 0.3651644280942058,
-    "WITHDRAW_MONEY": 0.03445687965029147,
-    "BILL_PAY": 0.03601798544647611,
-    "HELP_SUPPORT": 0.060950153627078334,
-    "MANAGE_CONTACTS": 0.21736397471395305,
-    "VIEW_GROUP": 0.05924874179744802,
-    "CHECK_SPENDING": 0.1498667346277389
+    "TRANSFER_MONEY": 0.052306426125510584,
+    "CHECK_BALANCE": 0.03621278778041673,
+    "VIEW_TRANSACTIONS": 0.32635326949900184,
+    "WITHDRAW_MONEY": 0.039596772660458524,
+    "BILL_PAY": 0.041459866002076365,
+    "HELP_SUPPORT": 0.05657548557938889,
+    "MANAGE_CONTACTS": 0.2754616458259169,
+    "VIEW_GROUP": 0.07592697058110874,
+    "CHECK_SPENDING": 0.09610677594612127
    },
-   "threshold": 0.36516442809420574,
+   "threshold": 0.32635326949900184,
    "expected": {
     "raw_prediction": "VIEW_TRANSACTIONS",
-    "confidence": 0.3651644280942058,
+    "confidence": 0.32635326949900184,
+    "final_intent": "VIEW_TRANSACTIONS",
+    "status": "accepted",
+    "fallback_applied": false,
+    "action": "ROUTE_VIEW_TRANSACTIONS"
+   }
+  },
+  {
+   "name": "\"What's the weather tomorrow?\" @ confidence + 1ulp",
+   "probabilities": {
+    "TRANSFER_MONEY": 0.052306426125510584,
+    "CHECK_BALANCE": 0.03621278778041673,
+    "VIEW_TRANSACTIONS": 0.32635326949900184,
+    "WITHDRAW_MONEY": 0.039596772660458524,
+    "BILL_PAY": 0.041459866002076365,
+    "HELP_SUPPORT": 0.05657548557938889,
+    "MANAGE_CONTACTS": 0.2754616458259169,
+    "VIEW_GROUP": 0.07592697058110874,
+    "CHECK_SPENDING": 0.09610677594612127
+   },
+   "threshold": 0.3263532694990019,
+   "expected": {
+    "raw_prediction": "VIEW_TRANSACTIONS",
+    "confidence": 0.32635326949900184,
+    "final_intent": "UNKNOWN_INTENT",
+    "status": "fallback_applied",
+    "fallback_applied": true,
+    "action": "FALLBACK_HELP_OR_CLARIFY"
+   }
+  },
+  {
+   "name": "\"What's the weather tomorrow?\" @ confidence - 1ulp",
+   "probabilities": {
+    "TRANSFER_MONEY": 0.052306426125510584,
+    "CHECK_BALANCE": 0.03621278778041673,
+    "VIEW_TRANSACTIONS": 0.32635326949900184,
+    "WITHDRAW_MONEY": 0.039596772660458524,
+    "BILL_PAY": 0.041459866002076365,
+    "HELP_SUPPORT": 0.05657548557938889,
+    "MANAGE_CONTACTS": 0.2754616458259169,
+    "VIEW_GROUP": 0.07592697058110874,
+    "CHECK_SPENDING": 0.09610677594612127
+   },
+   "threshold": 0.3263532694990018,
+   "expected": {
+    "raw_prediction": "VIEW_TRANSACTIONS",
+    "confidence": 0.32635326949900184,
     "final_intent": "VIEW_TRANSACTIONS",
     "status": "accepted",
     "fallback_applied": false,
@@ -10781,6 +12572,351 @@
     "status": "accepted",
     "fallback_applied": false,
     "action": "ROUTE_MANAGE_CONTACTS"
+   }
+  },
+  {
+   "name": "'I owe Mary $50' @ 0.0",
+   "probabilities": {
+    "TRANSFER_MONEY": 0.3588352144981175,
+    "CHECK_BALANCE": 0.014766680933095844,
+    "VIEW_TRANSACTIONS": 0.03208934580084791,
+    "WITHDRAW_MONEY": 0.37246879592497256,
+    "BILL_PAY": 0.033808048264951464,
+    "HELP_SUPPORT": 0.086470080122938,
+    "MANAGE_CONTACTS": 0.04453508021419907,
+    "VIEW_GROUP": 0.01772546864509789,
+    "CHECK_SPENDING": 0.03930128559577985
+   },
+   "threshold": 0.0,
+   "expected": {
+    "raw_prediction": "WITHDRAW_MONEY",
+    "confidence": 0.37246879592497256,
+    "final_intent": "WITHDRAW_MONEY",
+    "status": "accepted",
+    "fallback_applied": false,
+    "action": "ROUTE_WITHDRAW_MONEY"
+   }
+  },
+  {
+   "name": "'I owe Mary $50' @ 0.01",
+   "probabilities": {
+    "TRANSFER_MONEY": 0.3588352144981175,
+    "CHECK_BALANCE": 0.014766680933095844,
+    "VIEW_TRANSACTIONS": 0.03208934580084791,
+    "WITHDRAW_MONEY": 0.37246879592497256,
+    "BILL_PAY": 0.033808048264951464,
+    "HELP_SUPPORT": 0.086470080122938,
+    "MANAGE_CONTACTS": 0.04453508021419907,
+    "VIEW_GROUP": 0.01772546864509789,
+    "CHECK_SPENDING": 0.03930128559577985
+   },
+   "threshold": 0.01,
+   "expected": {
+    "raw_prediction": "WITHDRAW_MONEY",
+    "confidence": 0.37246879592497256,
+    "final_intent": "WITHDRAW_MONEY",
+    "status": "accepted",
+    "fallback_applied": false,
+    "action": "ROUTE_WITHDRAW_MONEY"
+   }
+  },
+  {
+   "name": "'I owe Mary $50' @ 0.1",
+   "probabilities": {
+    "TRANSFER_MONEY": 0.3588352144981175,
+    "CHECK_BALANCE": 0.014766680933095844,
+    "VIEW_TRANSACTIONS": 0.03208934580084791,
+    "WITHDRAW_MONEY": 0.37246879592497256,
+    "BILL_PAY": 0.033808048264951464,
+    "HELP_SUPPORT": 0.086470080122938,
+    "MANAGE_CONTACTS": 0.04453508021419907,
+    "VIEW_GROUP": 0.01772546864509789,
+    "CHECK_SPENDING": 0.03930128559577985
+   },
+   "threshold": 0.1,
+   "expected": {
+    "raw_prediction": "WITHDRAW_MONEY",
+    "confidence": 0.37246879592497256,
+    "final_intent": "WITHDRAW_MONEY",
+    "status": "accepted",
+    "fallback_applied": false,
+    "action": "ROUTE_WITHDRAW_MONEY"
+   }
+  },
+  {
+   "name": "'I owe Mary $50' @ 0.25",
+   "probabilities": {
+    "TRANSFER_MONEY": 0.3588352144981175,
+    "CHECK_BALANCE": 0.014766680933095844,
+    "VIEW_TRANSACTIONS": 0.03208934580084791,
+    "WITHDRAW_MONEY": 0.37246879592497256,
+    "BILL_PAY": 0.033808048264951464,
+    "HELP_SUPPORT": 0.086470080122938,
+    "MANAGE_CONTACTS": 0.04453508021419907,
+    "VIEW_GROUP": 0.01772546864509789,
+    "CHECK_SPENDING": 0.03930128559577985
+   },
+   "threshold": 0.25,
+   "expected": {
+    "raw_prediction": "WITHDRAW_MONEY",
+    "confidence": 0.37246879592497256,
+    "final_intent": "WITHDRAW_MONEY",
+    "status": "accepted",
+    "fallback_applied": false,
+    "action": "ROUTE_WITHDRAW_MONEY"
+   }
+  },
+  {
+   "name": "'I owe Mary $50' @ 0.3",
+   "probabilities": {
+    "TRANSFER_MONEY": 0.3588352144981175,
+    "CHECK_BALANCE": 0.014766680933095844,
+    "VIEW_TRANSACTIONS": 0.03208934580084791,
+    "WITHDRAW_MONEY": 0.37246879592497256,
+    "BILL_PAY": 0.033808048264951464,
+    "HELP_SUPPORT": 0.086470080122938,
+    "MANAGE_CONTACTS": 0.04453508021419907,
+    "VIEW_GROUP": 0.01772546864509789,
+    "CHECK_SPENDING": 0.03930128559577985
+   },
+   "threshold": 0.3,
+   "expected": {
+    "raw_prediction": "WITHDRAW_MONEY",
+    "confidence": 0.37246879592497256,
+    "final_intent": "WITHDRAW_MONEY",
+    "status": "accepted",
+    "fallback_applied": false,
+    "action": "ROUTE_WITHDRAW_MONEY"
+   }
+  },
+  {
+   "name": "'I owe Mary $50' @ 0.35",
+   "probabilities": {
+    "TRANSFER_MONEY": 0.3588352144981175,
+    "CHECK_BALANCE": 0.014766680933095844,
+    "VIEW_TRANSACTIONS": 0.03208934580084791,
+    "WITHDRAW_MONEY": 0.37246879592497256,
+    "BILL_PAY": 0.033808048264951464,
+    "HELP_SUPPORT": 0.086470080122938,
+    "MANAGE_CONTACTS": 0.04453508021419907,
+    "VIEW_GROUP": 0.01772546864509789,
+    "CHECK_SPENDING": 0.03930128559577985
+   },
+   "threshold": 0.35,
+   "expected": {
+    "raw_prediction": "WITHDRAW_MONEY",
+    "confidence": 0.37246879592497256,
+    "final_intent": "WITHDRAW_MONEY",
+    "status": "accepted",
+    "fallback_applied": false,
+    "action": "ROUTE_WITHDRAW_MONEY"
+   }
+  },
+  {
+   "name": "'I owe Mary $50' @ 0.5",
+   "probabilities": {
+    "TRANSFER_MONEY": 0.3588352144981175,
+    "CHECK_BALANCE": 0.014766680933095844,
+    "VIEW_TRANSACTIONS": 0.03208934580084791,
+    "WITHDRAW_MONEY": 0.37246879592497256,
+    "BILL_PAY": 0.033808048264951464,
+    "HELP_SUPPORT": 0.086470080122938,
+    "MANAGE_CONTACTS": 0.04453508021419907,
+    "VIEW_GROUP": 0.01772546864509789,
+    "CHECK_SPENDING": 0.03930128559577985
+   },
+   "threshold": 0.5,
+   "expected": {
+    "raw_prediction": "WITHDRAW_MONEY",
+    "confidence": 0.37246879592497256,
+    "final_intent": "UNKNOWN_INTENT",
+    "status": "fallback_applied",
+    "fallback_applied": true,
+    "action": "FALLBACK_HELP_OR_CLARIFY"
+   }
+  },
+  {
+   "name": "'I owe Mary $50' @ 0.6",
+   "probabilities": {
+    "TRANSFER_MONEY": 0.3588352144981175,
+    "CHECK_BALANCE": 0.014766680933095844,
+    "VIEW_TRANSACTIONS": 0.03208934580084791,
+    "WITHDRAW_MONEY": 0.37246879592497256,
+    "BILL_PAY": 0.033808048264951464,
+    "HELP_SUPPORT": 0.086470080122938,
+    "MANAGE_CONTACTS": 0.04453508021419907,
+    "VIEW_GROUP": 0.01772546864509789,
+    "CHECK_SPENDING": 0.03930128559577985
+   },
+   "threshold": 0.6,
+   "expected": {
+    "raw_prediction": "WITHDRAW_MONEY",
+    "confidence": 0.37246879592497256,
+    "final_intent": "UNKNOWN_INTENT",
+    "status": "fallback_applied",
+    "fallback_applied": true,
+    "action": "FALLBACK_HELP_OR_CLARIFY"
+   }
+  },
+  {
+   "name": "'I owe Mary $50' @ 0.8",
+   "probabilities": {
+    "TRANSFER_MONEY": 0.3588352144981175,
+    "CHECK_BALANCE": 0.014766680933095844,
+    "VIEW_TRANSACTIONS": 0.03208934580084791,
+    "WITHDRAW_MONEY": 0.37246879592497256,
+    "BILL_PAY": 0.033808048264951464,
+    "HELP_SUPPORT": 0.086470080122938,
+    "MANAGE_CONTACTS": 0.04453508021419907,
+    "VIEW_GROUP": 0.01772546864509789,
+    "CHECK_SPENDING": 0.03930128559577985
+   },
+   "threshold": 0.8,
+   "expected": {
+    "raw_prediction": "WITHDRAW_MONEY",
+    "confidence": 0.37246879592497256,
+    "final_intent": "UNKNOWN_INTENT",
+    "status": "fallback_applied",
+    "fallback_applied": true,
+    "action": "FALLBACK_HELP_OR_CLARIFY"
+   }
+  },
+  {
+   "name": "'I owe Mary $50' @ 0.99",
+   "probabilities": {
+    "TRANSFER_MONEY": 0.3588352144981175,
+    "CHECK_BALANCE": 0.014766680933095844,
+    "VIEW_TRANSACTIONS": 0.03208934580084791,
+    "WITHDRAW_MONEY": 0.37246879592497256,
+    "BILL_PAY": 0.033808048264951464,
+    "HELP_SUPPORT": 0.086470080122938,
+    "MANAGE_CONTACTS": 0.04453508021419907,
+    "VIEW_GROUP": 0.01772546864509789,
+    "CHECK_SPENDING": 0.03930128559577985
+   },
+   "threshold": 0.99,
+   "expected": {
+    "raw_prediction": "WITHDRAW_MONEY",
+    "confidence": 0.37246879592497256,
+    "final_intent": "UNKNOWN_INTENT",
+    "status": "fallback_applied",
+    "fallback_applied": true,
+    "action": "FALLBACK_HELP_OR_CLARIFY"
+   }
+  },
+  {
+   "name": "'I owe Mary $50' @ 1.0",
+   "probabilities": {
+    "TRANSFER_MONEY": 0.3588352144981175,
+    "CHECK_BALANCE": 0.014766680933095844,
+    "VIEW_TRANSACTIONS": 0.03208934580084791,
+    "WITHDRAW_MONEY": 0.37246879592497256,
+    "BILL_PAY": 0.033808048264951464,
+    "HELP_SUPPORT": 0.086470080122938,
+    "MANAGE_CONTACTS": 0.04453508021419907,
+    "VIEW_GROUP": 0.01772546864509789,
+    "CHECK_SPENDING": 0.03930128559577985
+   },
+   "threshold": 1.0,
+   "expected": {
+    "raw_prediction": "WITHDRAW_MONEY",
+    "confidence": 0.37246879592497256,
+    "final_intent": "UNKNOWN_INTENT",
+    "status": "fallback_applied",
+    "fallback_applied": true,
+    "action": "FALLBACK_HELP_OR_CLARIFY"
+   }
+  },
+  {
+   "name": "'I owe Mary $50' @ 0.34152482478950635",
+   "probabilities": {
+    "TRANSFER_MONEY": 0.3588352144981175,
+    "CHECK_BALANCE": 0.014766680933095844,
+    "VIEW_TRANSACTIONS": 0.03208934580084791,
+    "WITHDRAW_MONEY": 0.37246879592497256,
+    "BILL_PAY": 0.033808048264951464,
+    "HELP_SUPPORT": 0.086470080122938,
+    "MANAGE_CONTACTS": 0.04453508021419907,
+    "VIEW_GROUP": 0.01772546864509789,
+    "CHECK_SPENDING": 0.03930128559577985
+   },
+   "threshold": 0.34152482478950635,
+   "expected": {
+    "raw_prediction": "WITHDRAW_MONEY",
+    "confidence": 0.37246879592497256,
+    "final_intent": "WITHDRAW_MONEY",
+    "status": "accepted",
+    "fallback_applied": false,
+    "action": "ROUTE_WITHDRAW_MONEY"
+   }
+  },
+  {
+   "name": "'I owe Mary $50' @ confidence (equal)",
+   "probabilities": {
+    "TRANSFER_MONEY": 0.3588352144981175,
+    "CHECK_BALANCE": 0.014766680933095844,
+    "VIEW_TRANSACTIONS": 0.03208934580084791,
+    "WITHDRAW_MONEY": 0.37246879592497256,
+    "BILL_PAY": 0.033808048264951464,
+    "HELP_SUPPORT": 0.086470080122938,
+    "MANAGE_CONTACTS": 0.04453508021419907,
+    "VIEW_GROUP": 0.01772546864509789,
+    "CHECK_SPENDING": 0.03930128559577985
+   },
+   "threshold": 0.37246879592497256,
+   "expected": {
+    "raw_prediction": "WITHDRAW_MONEY",
+    "confidence": 0.37246879592497256,
+    "final_intent": "WITHDRAW_MONEY",
+    "status": "accepted",
+    "fallback_applied": false,
+    "action": "ROUTE_WITHDRAW_MONEY"
+   }
+  },
+  {
+   "name": "'I owe Mary $50' @ confidence + 1ulp",
+   "probabilities": {
+    "TRANSFER_MONEY": 0.3588352144981175,
+    "CHECK_BALANCE": 0.014766680933095844,
+    "VIEW_TRANSACTIONS": 0.03208934580084791,
+    "WITHDRAW_MONEY": 0.37246879592497256,
+    "BILL_PAY": 0.033808048264951464,
+    "HELP_SUPPORT": 0.086470080122938,
+    "MANAGE_CONTACTS": 0.04453508021419907,
+    "VIEW_GROUP": 0.01772546864509789,
+    "CHECK_SPENDING": 0.03930128559577985
+   },
+   "threshold": 0.3724687959249726,
+   "expected": {
+    "raw_prediction": "WITHDRAW_MONEY",
+    "confidence": 0.37246879592497256,
+    "final_intent": "UNKNOWN_INTENT",
+    "status": "fallback_applied",
+    "fallback_applied": true,
+    "action": "FALLBACK_HELP_OR_CLARIFY"
+   }
+  },
+  {
+   "name": "'I owe Mary $50' @ confidence - 1ulp",
+   "probabilities": {
+    "TRANSFER_MONEY": 0.3588352144981175,
+    "CHECK_BALANCE": 0.014766680933095844,
+    "VIEW_TRANSACTIONS": 0.03208934580084791,
+    "WITHDRAW_MONEY": 0.37246879592497256,
+    "BILL_PAY": 0.033808048264951464,
+    "HELP_SUPPORT": 0.086470080122938,
+    "MANAGE_CONTACTS": 0.04453508021419907,
+    "VIEW_GROUP": 0.01772546864509789,
+    "CHECK_SPENDING": 0.03930128559577985
+   },
+   "threshold": 0.3724687959249725,
+   "expected": {
+    "raw_prediction": "WITHDRAW_MONEY",
+    "confidence": 0.37246879592497256,
+    "final_intent": "WITHDRAW_MONEY",
+    "status": "accepted",
+    "fallback_applied": false,
+    "action": "ROUTE_WITHDRAW_MONEY"
    }
   },
   {

@@ -1,0 +1,5 @@
+Gate,Pool,Open threshold,Menu threshold,"Open, correct","Menu, intent offered","Menu, intent missing",Not understood,Wrong workflow,Wrong money workflow,Unsupported: not understood,Unsupported: menu,Unsupported accepted,Unsupported into money workflow,"Value / 1,000",Annual value
+Two-way gate (Section 5),Validation,0.940,0.94,82.5%,0.0%,0.0%,17.5%,0.0%,0.0%,90.0%,0.0%,10.0%,0.0%,$61.4,"$112,009"
+Two-way gate (Section 5),Test,0.940,0.94,94.2%,0.0%,0.0%,5.8%,0.0%,0.0%,88.0%,0.0%,12.0%,0.0%,$76.1,"$138,928"
+Three-tier gate,Validation,0.963,0.45,79.2%,20.0%,0.8%,0.0%,0.0%,0.0%,29.3%,68.0%,2.7%,0.0%,$80.6,"$147,153"
+Three-tier gate,Test,0.963,0.45,93.3%,6.7%,0.0%,0.0%,0.0%,0.0%,24.0%,69.3%,6.7%,0.0%,$83.5,"$152,351"

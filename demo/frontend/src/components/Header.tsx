@@ -1,13 +1,28 @@
 import type { ModelSummary } from "../types";
 
+export const COMPARE_ALL = "__compare__";
+
 interface Props {
   models: ModelSummary[];
   selectedModel: string;
   onSelectModel: (id: string) => void;
 }
 
+function label(m: ModelSummary) {
+  return `${m.name} — ${m.available ? "Available" : m.status === "coming_soon" ? "Coming Soon" : "Not available"}`;
+}
+
 export function Header({ models, selectedModel, onSelectModel }: Props) {
+  const primary = models.filter((m) => (m.group ?? "primary") === "primary");
   const current = models.find((m) => m.id === selectedModel);
+  const status =
+    selectedModel === COMPARE_ALL
+      ? `Comparing ${primary.filter((m) => m.available).length} live models side by side`
+      : current?.available
+        ? `Live model: ${current.name}`
+        : current
+          ? current.error ?? "Model not available"
+          : "Model status loading…";
   return (
     <header className="bg-navy-900 text-white">
       <div className="mx-auto flex max-w-7xl flex-col gap-5 px-4 py-6 sm:px-6 md:flex-row md:items-center md:justify-between lg:px-8">
@@ -25,7 +40,7 @@ export function Header({ models, selectedModel, onSelectModel }: Props) {
           </div>
           <div>
             <h1 className="text-2xl font-semibold tracking-tight sm:text-3xl">Sole Smart Actions</h1>
-            <p className="text-sm text-slate-300">Natural Language Intent Classification</p>
+            <p className="text-sm text-slate-300">Natural-language intent classification · four models</p>
           </div>
         </div>
 
@@ -41,19 +56,22 @@ export function Header({ models, selectedModel, onSelectModel }: Props) {
               className="w-full appearance-none rounded-lg border border-white/15 bg-navy-800 py-2 pr-9 pl-3 text-sm font-medium text-white md:w-[31rem]"
             >
               {models.length === 0 && <option value={selectedModel}>Bag of Words + Logistic Regression</option>}
-              {models.map((m) => (
-                <option key={m.id} value={m.id} disabled={!m.available}>
-                  {m.name} — {m.available ? "Available" : m.status === "error" ? "Failed to load" : "Coming Soon"}
-                </option>
-              ))}
+              {primary.length > 0 && (
+                <optgroup label="Primary comparison (Dataset V5)">
+                  {primary.map((m) => (
+                    <option key={m.id} value={m.id} disabled={!m.available}>
+                      {label(m)}
+                    </option>
+                  ))}
+                  <option value={COMPARE_ALL}>Compare All Models</option>
+                </optgroup>
+              )}
             </select>
             <svg aria-hidden viewBox="0 0 20 20" className="pointer-events-none absolute top-1/2 right-3 h-4 w-4 -translate-y-1/2 text-slate-400">
               <path d="M5 7l5 5 5-5" fill="none" stroke="currentColor" strokeWidth="2" />
             </svg>
           </div>
-          <p className="text-xs text-slate-400">
-            {current?.available ? `Live model: ${current.name}` : "Model status loading…"}
-          </p>
+          <p className="max-w-[31rem] text-xs text-slate-400 md:text-right">{status}</p>
         </div>
       </div>
     </header>

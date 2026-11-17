@@ -1,0 +1,7 @@
+{
+  "glove.6B.100d.txt.gz": {
+    "sha256": "22d27d5f0080da2a57f48e6691af7b18aa39e96a54ef6fad02d9456a117239e1",
+    "source": "https://huggingface.co/datasets/SLU-CSCI4750/glove.6B.100d.txt/resolve/1947a5a81ebbd83f2c831b58f308d1f11d6c6954/glove.6B.100d.txt.gz",
+    "revision": "1947a5a81ebbd83f2c831b58f308d1f11d6c6954"
+  }
+}

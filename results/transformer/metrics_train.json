@@ -1,0 +1,333 @@
+{
+  "model_name": "transformer",
+  "experiment_id": "primary",
+  "split": "train",
+  "n_samples": 2160,
+  "class_order": [
+    "TRANSFER_MONEY",
+    "CHECK_BALANCE",
+    "VIEW_TRANSACTIONS",
+    "WITHDRAW_MONEY",
+    "BILL_PAY",
+    "HELP_SUPPORT",
+    "MANAGE_CONTACTS",
+    "VIEW_GROUP",
+    "CHECK_SPENDING"
+  ],
+  "accuracy": 0.9986111111111111,
+  "macro_precision": 0.9986168263079637,
+  "weighted_precision": 0.9986168263079637,
+  "macro_recall": 0.9986111111111112,
+  "weighted_recall": 0.9986111111111111,
+  "macro_f1": 0.9986110990797449,
+  "weighted_f1": 0.9986110990797449,
+  "balanced_accuracy": 0.9986111111111112,
+  "log_loss": 0.003980400093648758,
+  "macro_roc_auc_ovr": 0.9999980709876541,
+  "weighted_roc_auc_ovr": 0.9999980709876544,
+  "macro_average_precision": 0.9999847896537162,
+  "top2_accuracy": 1.0,
+  "top3_accuracy": 1.0,
+  "mean_confidence": 0.9986578737420064,
+  "expected_calibration_error": 0.0003802749569769104,
+  "per_class": [
+    {
+      "intent": "TRANSFER_MONEY",
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 240,
+      "roc_auc_ovr": 0.9999999999999999,
+      "average_precision": 0.9999999999999999
+    },
+    {
+      "intent": "CHECK_BALANCE",
+      "precision": 0.99581589958159,
+      "recall": 0.9916666666666667,
+      "f1": 0.9937369519832986,
+      "support": 240,
+      "roc_auc_ovr": 0.9999826388888888,
+      "average_precision": 0.9998631068834468
+    },
+    {
+      "intent": "VIEW_TRANSACTIONS",
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 240,
+      "roc_auc_ovr": 1.0,
+      "average_precision": 1.0
+    },
+    {
+      "intent": "WITHDRAW_MONEY",
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 240,
+      "roc_auc_ovr": 1.0,
+      "average_precision": 1.0
+    },
+    {
+      "intent": "BILL_PAY",
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 240,
+      "roc_auc_ovr": 1.0,
+      "average_precision": 0.9999999999999999
+    },
+    {
+      "intent": "HELP_SUPPORT",
+      "precision": 1.0,
+      "recall": 0.9958333333333333,
+      "f1": 0.9979123173277662,
+      "support": 240,
+      "roc_auc_ovr": 1.0,
+      "average_precision": 1.0
+    },
+    {
+      "intent": "MANAGE_CONTACTS",
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 240,
+      "roc_auc_ovr": 1.0,
+      "average_precision": 0.9999999999999999
+    },
+    {
+      "intent": "VIEW_GROUP",
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 240,
+      "roc_auc_ovr": 0.9999999999999999,
+      "average_precision": 0.9999999999999999
+    },
+    {
+      "intent": "CHECK_SPENDING",
+      "precision": 0.9917355371900827,
+      "recall": 1.0,
+      "f1": 0.995850622406639,
+      "support": 240,
+      "roc_auc_ovr": 1.0,
+      "average_precision": 0.9999999999999999
+    }
+  ],
+  "confusion_matrix": [
+    [
+      240,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      238,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      2
+    ],
+    [
+      0,
+      0,
+      240,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      240,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      240,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      1,
+      0,
+      0,
+      0,
+      239,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      240,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      240,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      240
+    ]
+  ],
+  "confusion_matrix_normalized": [
+    [
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.9916666666666667,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.008333333333333333
+    ],
+    [
+      0.0,
+      0.0,
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.004166666666666667,
+      0.0,
+      0.0,
+      0.0,
+      0.9958333333333333,
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      1.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      1.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "core8_breakdown": {
+    "n_samples": 1920,
+    "accuracy": 0.9984375,
+    "macro_precision": 0.9994769874476988,
+    "weighted_precision": 0.9994769874476988,
+    "macro_recall": 0.9984375000000001,
+    "weighted_recall": 0.9984375,
+    "macro_f1": 0.9989561586638831,
+    "weighted_f1": 0.9989561586638831,
+    "predicted_outside_core": 2,
+    "undefined_metrics": {}
+  },
+  "undefined_metrics": {},
+  "correct": 2157,
+  "definition": "raw classifier metrics: argmax over the nine intents, no confidence threshold; accuracy = correct / 2160 train commands"
+}

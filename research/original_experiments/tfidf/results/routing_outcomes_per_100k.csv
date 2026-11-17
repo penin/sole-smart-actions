@@ -1,0 +1,5 @@
+model,routed_to_correct_screen,sent_to_wrong_screen,sent_to_fallback,out_of_scope_wrongly_accepted_pct
+Keyword rules (benchmark),75900.0,7000.0,17000.0,2.3
+BoW + LR,92600.0,3700.0,3700.0,72.0
+TF-IDF (word) + LR,94800.0,3000.0,2200.0,64.3
+TF-IDF (word + char) + LR,97000.0,1500.0,1500.0,47.3

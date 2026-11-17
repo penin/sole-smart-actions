@@ -85,7 +85,8 @@ def _reference(cfg: dict) -> dict:
             "unknown_to_financial": int(default_row["unknown_to_financial"]),
             "audit": load_json(base / "metrics" / "dataset_audit.json"),
             "params": cfgref["selected_params"], "dataset": cfgref["dataset"],
-            "model_path": resolve_path(cfgref["model_artifacts"]["tuned"])}
+            # Historical records keep the path used at the time; the config may point to where it lives now.
+            "model_path": resolve_path(c.get("reference_model_path") or cfgref["model_artifacts"]["tuned"])}
 
 
 def _current(ctx: dict) -> dict:

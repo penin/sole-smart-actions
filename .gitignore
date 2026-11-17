@@ -80,15 +80,21 @@ tmp/
 temp/
 ~$*
 
-# ---------------------------------------------------------------- Large ML artifacts (future models)
-# The current baseline models (~23 KB each) are committed normally. Future large checkpoints
-# (transformers, DistilBERT) should use Git LFS instead: see README "Large model files".
+# ---------------------------------------------------------------- ML artifacts and downloads
+# Trained models live in artifacts/; large binaries (*.safetensors, *.h5) go through Git LFS (.gitattributes).
+# Pretrained downloads are fetched by `python -m scripts.download_pretrained` (pinned + checksummed), not committed.
+data/external/*
+!data/external/CHECKSUMS.json
+!data/external/README.md
+# Local reproduction runs (python -m scripts.reproduce_all) and interrupted writes
+reproduction/
+*.staging/
+*.part
 *.pt
 *.pth
 *.ckpt
-*.safetensors
 *.onnx
-*.h5
 checkpoints/
 wandb/
 mlruns/
+lightning_logs/

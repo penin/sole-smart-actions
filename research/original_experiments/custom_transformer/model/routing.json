@@ -1,0 +1,32 @@
+{
+  "model": "Custom Transformer",
+  "classes": [
+    "TRANSFER_MONEY",
+    "CHECK_BALANCE",
+    "VIEW_TRANSACTIONS",
+    "WITHDRAW_MONEY",
+    "BILL_PAY",
+    "HELP_SUPPORT",
+    "MANAGE_CONTACTS",
+    "VIEW_GROUP"
+  ],
+  "money_moving": [
+    "TRANSFER_MONEY",
+    "WITHDRAW_MONEY",
+    "BILL_PAY"
+  ],
+  "temperature": 2.302019046419807,
+  "threshold": 0.958,
+  "max_length": 16,
+  "architecture": {
+    "num_heads": 4,
+    "num_blocks": 1,
+    "dropout": 0.2,
+    "learning_rate": 0.001,
+    "ff_dim": 256,
+    "head_dim": 64,
+    "embedding_dim": 100,
+    "vocabulary_size": 367
+  },
+  "epochs": 27
+}

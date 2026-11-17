@@ -1,0 +1,50 @@
+{
+  "model_name": "bow_logreg",
+  "experiment_id": "bow_logreg_v5",
+  "model_version": "1.0.0",
+  "created_utc": "2026-11-12T02:55:40+00:00",
+  "dataset": {
+    "dataset_path": "Sole_Smart_Actions_Intent_Training_v5_Deduplicated.xlsx",
+    "dataset_version": "v5_deduplicated",
+    "file_sha256": "8dc9c89cbb8af41fd7cb25b2841e2f1a0c986641c4a6108c2f804d09f9345516",
+    "content_sha256": "8277d2569ed2373b3b30062761c54d41ea50a63895c19716b34c35293eaffabe",
+    "n_rows": 3000
+  },
+  "packages": {
+    "python": "3.13.15",
+    "scikit-learn": "1.9.1",
+    "pandas": "3.1.1",
+    "numpy": "2.5.4",
+    "scipy": "1.18.1",
+    "matplotlib": "3.11.2",
+    "seaborn": "0.13.2",
+    "openpyxl": "3.1.5",
+    "joblib": "1.6.0",
+    "PyYAML": "6.0.3",
+    "pytest": "9.2.0"
+  },
+  "random_seed": 42,
+  "variant": "tuned",
+  "params": {
+    "ngram_range": [
+      1,
+      2
+    ],
+    "C": 10.0,
+    "binary": true
+  },
+  "training_seconds": 0.17450060000010126,
+  "validation_macro_f1": 0.9165472598977884,
+  "class_order": [
+    "TRANSFER_MONEY",
+    "CHECK_BALANCE",
+    "VIEW_TRANSACTIONS",
+    "WITHDRAW_MONEY",
+    "BILL_PAY",
+    "HELP_SUPPORT",
+    "MANAGE_CONTACTS",
+    "VIEW_GROUP",
+    "CHECK_SPENDING"
+  ],
+  "rejection_threshold": 0.34152482478950635
+}

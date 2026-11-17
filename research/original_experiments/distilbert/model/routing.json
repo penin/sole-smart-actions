@@ -1,0 +1,23 @@
+{
+  "model": "Fine-tuned DistilBERT",
+  "classes": [
+    "TRANSFER_MONEY",
+    "CHECK_BALANCE",
+    "VIEW_TRANSACTIONS",
+    "WITHDRAW_MONEY",
+    "BILL_PAY",
+    "HELP_SUPPORT",
+    "MANAGE_CONTACTS",
+    "VIEW_GROUP"
+  ],
+  "money_moving": [
+    "TRANSFER_MONEY",
+    "WITHDRAW_MONEY",
+    "BILL_PAY"
+  ],
+  "temperature": 1.0750452170258833,
+  "open_threshold": 0.963,
+  "menu_threshold": 0.45,
+  "menu_size": 3,
+  "max_tokens": 24
+}

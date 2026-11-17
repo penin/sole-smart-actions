@@ -15,9 +15,9 @@ SAMPLES = json.loads((paths.FRONTEND_DATA / "sampleCommands.json").read_text(enc
 SAMPLE_TEXTS = [t for c in SAMPLES["categories"] for t in c["commands"]]
 
 
-def test_default_model_is_v5(model):
-    assert model.model_path == paths.PROJECT_ROOT / "models_v5" / "bow_logreg_v5_tuned_v1.0.0.joblib"
-    assert model.id == "bow_logreg"
+def test_default_model_is_primary_bow(model, registry):
+    assert model.model_path == paths.ARTIFACTS_DIR / "bow" / "model.joblib"
+    assert registry.get(None).id == "bow" and registry.get("bow_logreg").id == "bow"  # old id still works
 
 
 def test_existing_model_and_vectorizer_load(model):
@@ -32,13 +32,21 @@ def test_classes_come_from_loaded_classifier(model):
     assert len(model.class_order) == 9 and "UNKNOWN_INTENT" not in model.class_order
 
 
-@pytest.mark.parametrize("which, expected", [("v5", 0.34152482), ("v4", 0.19572296)])
-def test_default_threshold_matches_project_configuration(which, expected):
+@pytest.mark.parametrize("which, expected", [("v5_history", 0.34152482), ("v4_history", 0.19572296)])
+def test_historical_default_threshold_matches_bundle(which, expected):
     from conftest import MODEL_SPECS
-    m = BowLogRegModel(MODEL_SPECS[which][0], metrics_dir=MODEL_SPECS[which][1])
+    m = BowLogRegModel(**MODEL_SPECS[which][0])
     m.load()
     assert m.default_threshold == load_bundle(m.model_path)["rejection_threshold"] == pytest.approx(expected, abs=1e-7)
-    assert "bundle" in m.threshold_source  # config/inference.yaml has threshold: null
+    assert "bundle" in m.threshold_source  # config/history/bow_v4_inference.yaml has threshold: null
+
+
+def test_primary_threshold_comes_from_validation_calibration(model):
+    meta = json.loads((paths.RESULTS_DIR / "bow" / "experiment_metadata.json").read_text(encoding="utf-8"))
+    assert model.default_threshold == meta["threshold_calibration"]["threshold"]
+    assert meta["threshold_calibration"]["uses_unknown_labels"] is False
+    # The primary BoW model is the historical V5 model reproduced exactly, so the thresholds coincide.
+    assert model.default_threshold == pytest.approx(0.34152482, abs=1e-7)
 
 
 @pytest.mark.parametrize("text", SAMPLE_TEXTS + ["", "SEND $50 TO JONE!!!", "x" * 2000])
@@ -53,7 +61,7 @@ def test_predictions_match_existing_inference_pipeline(any_model, text):
 def test_predictions_match_saved_test_predictions(any_model):
     """Probabilities for the held-out test rows equal those saved by that model's evaluation run."""
     model = any_model
-    saved = pd.read_csv(model.results_dir / "predictions" / "test_predictions.csv")
+    saved = pd.read_csv(model.predictions_dir / "test_predictions.csv")
     for _, row in saved.iloc[::9].iterrows():
         got = model.predict(row["text"]).probabilities
         np.testing.assert_allclose([got[c] for c in model.class_order],

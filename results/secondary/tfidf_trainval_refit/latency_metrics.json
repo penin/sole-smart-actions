@@ -1,0 +1,20 @@
+{
+  "scope": "single command, end to end (preprocessing/tokenization + model + softmax)",
+  "device": "cpu",
+  "p50_ms": 1.0118499922100455,
+  "p95_ms": 1.1234999867156152,
+  "batch_size": 1,
+  "warmup_calls": 20,
+  "measured_calls": 300,
+  "mean_ms": 1.0227130010025576,
+  "median_ms": 1.0118499922100455,
+  "p99_ms": 1.2908080487977713,
+  "min_ms": 0.936600030399859,
+  "max_ms": 1.5347999869845808,
+  "throughput_predictions_per_s": 988.2887855894893,
+  "hardware": {
+    "cpu": "Intel(R) Core(TM) i9-14900HX",
+    "gpu": "NVIDIA GeForce RTX 4080 Laptop GPU",
+    "cuda_available": true
+  }
+}

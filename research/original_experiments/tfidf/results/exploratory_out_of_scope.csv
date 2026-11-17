@@ -1,0 +1,3 @@
+setup,threshold,in_scope_routed_correctly,in_scope_sent_to_fallback,in_scope_wrong_screen,unseen_unknown_rejected
+Gate only (benchmark set-up),0.415,0.9704,0.0148,0.0148,0.6
+Gate + 150 UNKNOWN training examples,0.368,0.9667,0.0296,0.0037,1.0

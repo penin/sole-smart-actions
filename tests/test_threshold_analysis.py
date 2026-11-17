@@ -140,12 +140,13 @@ def test_helpers():
 
 # ------------------------------------------------------------------ integrity on the real project
 def test_refuses_to_write_into_v1_folders():
-    for d in ["results/metrics", "results/predictions", "results/reports", "results/figures", "models"]:
+    for d in ["results/history/bow_v4/metrics", "results/history/bow_v4/predictions", "results/history/bow_v4/reports",
+              "results/history/bow_v4/figures", "artifacts/history/bow_v4"]:
         with pytest.raises(ValueError):
             assert_safe_output_dir(PROJECT_ROOT / d)
         with pytest.raises(ValueError):
             assert_safe_output_dir(PROJECT_ROOT / d / "sub")
-    assert_safe_output_dir(PROJECT_ROOT / "results" / "threshold_analysis")
+    assert_safe_output_dir(PROJECT_ROOT / "results" / "history" / "bow_v4" / "threshold_analysis")
 
 
 @pytest.fixture(scope="module")
@@ -159,14 +160,14 @@ def test_analysis_does_not_modify_v1_artifacts(analysis):
     before, ctx = analysis
     assert v1_manifest() == before
     assert ctx["v1_unchanged"] is True
-    model = PROJECT_ROOT / "models" / "bow_logreg_v1_tuned_v1.0.0.joblib"
-    assert ctx["payload"]["model_sha256"] == before["models/bow_logreg_v1_tuned_v1.0.0.joblib"]
+    model = PROJECT_ROOT / "artifacts" / "history" / "bow_v4" / "bow_logreg_v1_tuned_v1.0.0.joblib"
+    assert ctx["payload"]["model_sha256"] == before["artifacts/history/bow_v4/bow_logreg_v1_tuned_v1.0.0.joblib"]
     assert model.exists()
 
 
 def test_analysis_reproduces_v1_and_uses_saved_probabilities(analysis):
     _, ctx = analysis
-    v1 = load_json(PROJECT_ROOT / "results/metrics/rejection_metrics.json")["primary_frozen_threshold_test_plus_unknown"]
+    v1 = load_json(PROJECT_ROOT / "results/history/bow_v4/metrics/rejection_metrics.json")["primary_frozen_threshold_test_plus_unknown"]
     row0 = ctx["table"][ctx["table"]["is_baseline_v1"]].iloc[0]
     assert row0["threshold"] == pytest.approx(v1["threshold"])
     assert row0["known_coverage"] == pytest.approx(v1["known_intent_coverage"])

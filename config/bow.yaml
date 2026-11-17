@@ -1,0 +1,33 @@
+# Bag of Words + Logistic Regression (team baseline). Methodology identical to config/history/bow_v5.yaml,
+# so the primary run must reproduce the historical V5 model exactly.
+model:
+  name: bow
+  display_name: Bag of Words + Logistic Regression
+  family: classical
+  original_author: penin
+  seed: 42
+
+preprocessing:
+  unicode_form: NFKC
+  lowercase: true
+  collapse_whitespace: true
+  token_pattern: '(?u)\$|\b\w+\b'
+
+estimator:
+  solver: lbfgs
+  max_iter: 5000
+
+tuning:
+  selection_metric: validation_macro_f1
+  tie_breakers: [validation_log_loss]
+  grid:
+    ngram_range: [[1, 1], [1, 2]]
+    C: [0.1, 1.0, 10.0]
+    binary: [false, true]
+
+smoke:
+  tuning:
+    grid:
+      ngram_range: [[1, 1]]
+      C: [1.0]
+      binary: [false]

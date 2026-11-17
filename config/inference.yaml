@@ -1,6 +1,0 @@
-# Inference settings for `python -m sole_intent.predict --config config/inference.yaml`.
-# Precedence: --threshold on the command line > inference.threshold here > threshold stored in the model bundle.
-inference:
-  model_path: models/bow_logreg_v1_tuned_v1.0.0.joblib
-  # null keeps the frozen Baseline V1 threshold stored in the bundle (0.19572, reported as 0.196).
-  threshold: null

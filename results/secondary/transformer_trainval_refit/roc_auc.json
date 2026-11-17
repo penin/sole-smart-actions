@@ -1,0 +1,18 @@
+{
+  "split": "test",
+  "method": "one-vs-rest, per class; macro = unweighted mean over the 9 intents",
+  "macro_roc_auc_ovr": 0.9992129629629629,
+  "weighted_roc_auc_ovr": 0.999212962962963,
+  "per_class": {
+    "TRANSFER_MONEY": 0.9994444444444445,
+    "CHECK_BALANCE": 1.0,
+    "VIEW_TRANSACTIONS": 0.9970833333333333,
+    "WITHDRAW_MONEY": 0.9995833333333334,
+    "BILL_PAY": 1.0,
+    "HELP_SUPPORT": 0.9972222222222222,
+    "MANAGE_CONTACTS": 0.9995833333333333,
+    "VIEW_GROUP": 1.0,
+    "CHECK_SPENDING": 1.0
+  },
+  "validation_macro_roc_auc_ovr": 0.9999845679012345
+}
